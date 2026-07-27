@@ -6757,23 +6757,16 @@ Card
   position: relative;
   width: 100%;
   overflow: hidden;
-  --tw-bg-opacity: 1;
-  background-color: rgb(16 42 80 / var(--tw-bg-opacity, 1));
-  background-image: url("/assets/images/dashboard-bg.jpg");
+  background: linear-gradient(
+      180deg,
+      rgba(15, 23, 41, 0.8) 0%,
+      rgba(52, 80, 143, 0.8) 100%
+    ),
+    linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    url(../images/reports-analytics-bg.png);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-}
-
-/* ========================================
-   DARK BLUE OVERLAY
-======================================== */
-
-.reports-overlay {
-  position: absolute;
-  inset: 0px;
-  z-index: 0;
-  background-color: rgb(7 29 60 / 0.85);
 }
 
 /* ========================================
@@ -6804,6 +6797,8 @@ Card
 
 .report-analytics-card {
   position: relative;
+  display: flex;
+  flex-direction: column;
   overflow: hidden;
   border-radius: 22px;
   border-width: 1px;
@@ -6981,8 +6976,8 @@ Card
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-top: 18px;
-  padding-bottom: 18px;
+  padding-top: 20px;
+  padding-bottom: 50px;
 }
 
 .donut-chart {
@@ -6990,19 +6985,34 @@ Card
   height: 122px;
   width: 122px;
   border-radius: 9999px;
-  background:
-        conic-gradient(
-            #ff5b5b 0deg 90deg,
-            #05c6d1 90deg 190deg,
-            #ffb000 190deg 270deg,
-            #1da1f2 270deg 360deg
-        );
+  background: conic-gradient(
+    from 0deg,
+    #ff5b5b 0deg 30deg,
+    #1da1f2 30deg 55deg,
+    #ffb000 55deg 65deg,
+    #05c6d1 65deg 90deg,
+
+    #ff5b5b 90deg 120deg,
+    #1da1f2 120deg 150deg,
+    #ffb000 150deg 160deg,
+    #05c6d1 160deg 180deg,
+
+    #ff5b5b 180deg 210deg,
+    #1da1f2 210deg 240deg,
+    #ffb000 240deg 250deg,
+    #05c6d1 250deg 270deg,
+
+    #ff5b5b 270deg 300deg,
+    #1da1f2 300deg 330deg,
+    #ffb000 330deg 340deg,
+    #05c6d1 340deg 360deg
+);
 }
 
 .donut-chart::before {
   content: "";
   position: absolute;
-  inset: 8px;
+  inset: 16px;
   border-radius: 9999px;
   --tw-bg-opacity: 1;
   background-color: rgb(23 45 77 / var(--tw-bg-opacity, 1));
@@ -7027,12 +7037,6 @@ Card
 /* ========================================
    COST LEGEND
 ======================================== */
-
-.cost-content {
-  position: absolute;
-  right: 15px;
-  top: 92px;
-}
 
 .cost-legend {
   display: flex;
@@ -7087,24 +7091,22 @@ Card
 ======================================== */
 
 .cost-total {
-  position: absolute;
-  bottom: 15px;
-  left: 15px;
-  right: 15px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   border-top-width: 1px;
   border-color: rgb(255 255 255 / 0.1);
   padding-top: 10px;
-  font-size: 5px;
+  font-size: 14px;
+  line-height: 20px;
   --tw-text-opacity: 1;
   color: rgb(126 143 168 / var(--tw-text-opacity, 1));
 }
 
 .cost-total strong {
-  font-size: 6px;
+  font-size: 14px;
   font-weight: 500;
+  line-height: 20px;
   --tw-text-opacity: 1;
   color: rgb(220 228 239 / var(--tw-text-opacity, 1));
 }
@@ -7128,7 +7130,7 @@ Card
 }
 
 .diesel-metric span {
-  font-size: 6px;
+  font-size: 14px;
   --tw-text-opacity: 1;
   color: rgb(130 147 170 / var(--tw-text-opacity, 1));
 }
@@ -7145,28 +7147,25 @@ Card
 ======================================== */
 
 .optimization-status {
-  position: absolute;
-  bottom: 15px;
-  left: 15px;
-  right: 15px;
+  margin-top: auto;
 }
 
 .optimization-header {
-  margin-bottom: 7px;
+  margin-bottom: 16px;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
 .optimization-header span {
-  font-size: 5px;
+  font-size: 14px;
+  line-height: 20px;
   --tw-text-opacity: 1;
   color: rgb(126 143 168 / var(--tw-text-opacity, 1));
 }
 
 .optimization-header strong {
-  font-size: 5px;
-  font-weight: 500;
+  font-weight: 700;
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
 }
@@ -7176,7 +7175,7 @@ Card
 ======================================== */
 
 .optimization-progress {
-  height: 2px;
+  height: 6px;
   width: 100%;
   overflow: hidden;
   border-radius: 9999px;
@@ -7186,7 +7185,7 @@ Card
 .optimization-progress span {
   display: block;
   height: 100%;
-  width: 78%;
+  width: 90%;
   border-radius: 9999px;
   --tw-bg-opacity: 1;
   background-color: rgb(255 91 91 / var(--tw-bg-opacity, 1));

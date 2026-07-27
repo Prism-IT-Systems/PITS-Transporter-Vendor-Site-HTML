@@ -4149,27 +4149,18 @@ Card
 .reports-analytics-section {
     @apply relative
     w-full
-    overflow-hidden
-    bg-[#102a50];
-
-    background-image: url("/assets/images/dashboard-bg.jpg");
+    overflow-hidden;
+     background: linear-gradient(
+      180deg,
+      rgba(15, 23, 41, 0.8) 0%,
+      rgba(52, 80, 143, 0.8) 100%
+    ),
+    linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    url(../images/reports-analytics-bg.png);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
-
-
-/* ========================================
-   DARK BLUE OVERLAY
-======================================== */
-
-.reports-overlay {
-    @apply absolute
-    inset-0
-    z-0
-    bg-[#071d3c]/85;
-}
-
 
 /* ========================================
    CONTAINER
@@ -4195,7 +4186,7 @@ Card
    ANALYTICS CARD
 ======================================== */
 .report-analytics-card {
-  @apply relative overflow-hidden border bg-[rgb(23_45_77_/_0.9)] shadow-[0_10px_30px_rgba(0,0,0,0.2)] backdrop-blur px-[22px] py-[27px] rounded-[22px] border-[rgb(255_255_255_/_0.1)];
+  @apply relative overflow-hidden flex flex-col border bg-[rgb(23_45_77_/_0.9)] shadow-[0_10px_30px_rgba(0,0,0,0.2)] backdrop-blur px-[22px] py-[27px] rounded-[22px] border-[rgb(255_255_255_/_0.1)];
 }
 
 /* ========================================
@@ -4292,7 +4283,7 @@ Card
     @apply flex
     items-center
     justify-between
-    py-[18px];
+    pt-[20px] pb-[50px];
 }
 
 .donut-chart {
@@ -4301,13 +4292,28 @@ Card
     w-[122px]
     rounded-full;
 
-    background:
-        conic-gradient(
-            #ff5b5b 0deg 90deg,
-            #05c6d1 90deg 190deg,
-            #ffb000 190deg 270deg,
-            #1da1f2 270deg 360deg
-        );
+  background: conic-gradient(
+    from 0deg,
+    #ff5b5b 0deg 30deg,
+    #1da1f2 30deg 55deg,
+    #ffb000 55deg 65deg,
+    #05c6d1 65deg 90deg,
+
+    #ff5b5b 90deg 120deg,
+    #1da1f2 120deg 150deg,
+    #ffb000 150deg 160deg,
+    #05c6d1 160deg 180deg,
+
+    #ff5b5b 180deg 210deg,
+    #1da1f2 210deg 240deg,
+    #ffb000 240deg 250deg,
+    #05c6d1 250deg 270deg,
+
+    #ff5b5b 270deg 300deg,
+    #1da1f2 300deg 330deg,
+    #ffb000 330deg 340deg,
+    #05c6d1 340deg 360deg
+);
 }
 
 
@@ -4315,7 +4321,7 @@ Card
     content: "";
 
     @apply absolute
-    inset-[8px]
+    inset-[16px]
     rounded-full
     bg-[#172d4d];
 }
@@ -4330,31 +4336,21 @@ Card
     justify-center;
 }
 
-
 .donut-center span {
     @apply text-[9px]
     font-semibold
     text-white;
 }
 
-
 /* ========================================
    COST LEGEND
 ======================================== */
-
-.cost-content {
-    @apply absolute
-    right-[15px]
-    top-[92px];
-}
-
 
 .cost-legend {
     @apply flex
     flex-col
     gap-[8px];
 }
-
 
 .legend-item {
     @apply grid
@@ -4363,28 +4359,23 @@ Card
     gap-[5px];
 }
 
-
 .legend-dot {
     @apply h-[4px]
     w-[4px]
     rounded-full;
 }
 
-
 .fuel-dot {
     @apply bg-[#1da1f2];
 }
-
 
 .maintenance-dot {
     @apply bg-[#05c6d1];
 }
 
-
 .expenses-dot {
     @apply bg-[#ffb000];
 }
-
 
 .legend-label {
     @apply text-[14px]
@@ -4396,33 +4387,27 @@ Card
     text-[#d4dce7] leading-[20px];
 }
 
-
 /* ========================================
    COST TOTAL
 ======================================== */
 
 .cost-total {
-    @apply absolute
-    bottom-[15px]
-    left-[15px]
-    right-[15px]
+    @apply
     flex
     items-center
     justify-between
     border-t
     border-white/10
     pt-[10px]
-    text-[5px]
+    text-[14px] leading-[20px]
     text-[#7e8fa8];
 }
 
-
 .cost-total strong {
-    @apply text-[6px]
-    font-medium
+    @apply text-[14px]
+    font-medium leading-[20px]
     text-[#dce4ef];
 }
-
 
 /* ========================================
    DIESEL METRICS
@@ -4435,7 +4420,6 @@ Card
     gap-[9px];
 }
 
-
 .diesel-metric {
     @apply flex
     items-center
@@ -4443,12 +4427,10 @@ Card
     gap-4;
 }
 
-
 .diesel-metric span {
-    @apply text-[6px]
+    @apply text-[14px]
     text-[#8293aa];
 }
-
 
 .diesel-metric strong {
     @apply text-[6px]
@@ -4456,61 +4438,50 @@ Card
     text-white;
 }
 
-
 /* ========================================
    OPTIMIZATION STATUS
 ======================================== */
 
 .optimization-status {
-    @apply absolute
-    bottom-[15px]
-    left-[15px]
-    right-[15px];
+    @apply mt-auto;
 }
 
-
 .optimization-header {
-    @apply mb-[7px]
+    @apply mb-[16px]
     flex
     items-center
     justify-between;
 }
 
-
 .optimization-header span {
-    @apply text-[5px]
+    @apply text-[14px] leading-[20px]
     text-[#7e8fa8];
 }
 
-
 .optimization-header strong {
-    @apply text-[5px]
-    font-medium
+    @apply font-bold
     text-white;
 }
-
 
 /* ========================================
    PROGRESS BAR
 ======================================== */
 
 .optimization-progress {
-    @apply h-[2px]
+    @apply h-[6px]
     w-full
     overflow-hidden
     rounded-full
     bg-white/10;
 }
 
-
 .optimization-progress span {
     @apply block
     h-full
-    w-[78%]
+    w-[90%]
     rounded-full
     bg-[#ff5b5b];
 }
-
 
 /* ========================================
    TABLET
@@ -4533,7 +4504,6 @@ Card
     }
 
 }
-
 
 /* ========================================
    MOBILE
@@ -4604,7 +4574,6 @@ Card
 }
 
 
-
 /* ========================================
    REPORTS EXPORT SECTION
 ======================================== */
@@ -4625,7 +4594,6 @@ Card
     @apply mx-auto
     max-w-[1144px];
 }
-
 
 /* ========================================
    MAIN BANNER
@@ -4648,7 +4616,6 @@ Card
         0 10px 30px rgba(15, 23, 42, 0.08);
 }
 
-
 /* ========================================
    BACKGROUND PATTERN
 ======================================== */
@@ -4659,7 +4626,6 @@ Card
     inset-0
     opacity-40;
 }
-
 
 /* Circular network pattern */
 
@@ -4714,7 +4680,6 @@ Card
     items-start;
 }
 
-
 /* ========================================
    BADGE
 ======================================== */
@@ -4731,7 +4696,6 @@ Card
     text-white;
 }
 
-
 /* ========================================
    TITLE
 ======================================== */
@@ -4745,7 +4709,6 @@ Card
     tracking-[-0.5px]
     text-white;
 }
-
 
 /* ========================================
    DESCRIPTION
