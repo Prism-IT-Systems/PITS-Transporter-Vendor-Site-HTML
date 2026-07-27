@@ -523,8 +523,13 @@
 }
 
 .footer-links a:hover{
-    @apply text-white;
+    @apply text-[#FF5E58];
 }
+
+.footer-link.active {
+  @apply text-[#FF5E58] font-medium;
+}
+
 
 /* Contact */
 

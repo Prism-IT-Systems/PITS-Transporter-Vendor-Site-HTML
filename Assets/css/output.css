@@ -1447,7 +1447,13 @@ p {
 
 .footer-links a:hover {
   --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity, 1));
+  color: rgb(255 94 88 / var(--tw-text-opacity, 1));
+}
+
+.footer-link.active {
+  font-weight: 500;
+  --tw-text-opacity: 1;
+  color: rgb(255 94 88 / var(--tw-text-opacity, 1));
 }
 
 /* Contact */

@@ -400,3 +400,48 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
 });
+
+// active link js //
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    // Get current page
+    let currentPage = window.location.pathname.split("/").pop();
+
+    // If no page name, use index.html
+    if (currentPage === "") {
+        currentPage = "index.html";
+    }
+
+    // Header navigation links
+    const navigationLinks = document.querySelectorAll(".navigation-link");
+
+    navigationLinks.forEach(function (link) {
+
+        const linkPage = link.getAttribute("href").split("/").pop();
+
+        if (linkPage === currentPage) {
+            link.classList.add("active");
+        } else {
+            link.classList.remove("active");
+        }
+
+    });
+
+
+    // Footer links
+    const footerLinks = document.querySelectorAll(".footer-link");
+
+    footerLinks.forEach(function (link) {
+
+        const linkPage = link.getAttribute("href").split("/").pop();
+
+        if (linkPage === currentPage) {
+            link.classList.add("active");
+        } else {
+            link.classList.remove("active");
+        }
+
+    });
+
+});
