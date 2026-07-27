@@ -214,7 +214,7 @@
     }
 
     .login-btn:hover{
-        @apply text-white;
+        @apply text-[#FF5E58];
     }
 
     /* DEMO BUTTON */
@@ -237,8 +237,7 @@
     }
 
     .demo-btn:hover{
-        @apply bg-[#3B73F2]
-        -translate-y-[2px];
+        @apply bg-[#0F1729];
     }
 
     /* RESPONSIVE */
@@ -522,14 +521,13 @@
     @apply text-[#9CA3AF] text-[18px] transition-all duration-300;
 }
 
-.footer-links a:hover{
+.footer-links a:hover {
     @apply text-[#FF5E58];
 }
 
-.footer-link.active {
+.footer-link.active  {
   @apply text-[#FF5E58] font-medium;
 }
-
 
 /* Contact */
 
@@ -4883,12 +4881,10 @@ Card
         color 0.25s ease;
 }
 
-
 .reports-excel-button:hover {
     @apply bg-white
     text-[#111c31];
 }
-
 
 /* ========================================
    TABLET
@@ -4978,5 +4974,4 @@ Card
     .reports-excel-button {
         @apply text-[7px];
     }
-
 }
