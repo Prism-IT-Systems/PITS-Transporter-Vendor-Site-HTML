@@ -4605,15 +4605,13 @@ Card
 .reports-export-banner {
     @apply relative
     flex
-    min-h-[205px]
     w-full
     items-center
     justify-between
     overflow-hidden
-    rounded-[9px]
+    rounded-[25px]
     bg-[#0d172b]
-    px-[22px]
-    py-[18px];
+     pt-[47px] pr-[47px] pb-[47px] pl-[60px];
 
     box-shadow:
         0 10px 30px rgba(15, 23, 42, 0.08);
