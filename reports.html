@@ -1,0 +1,1151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+
+    <!-- Remix Icon -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" />
+
+    <!-- Swiper -->
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+
+    <!-- Lenis -->
+    <link rel="stylesheet"
+        href="https://unpkg.com/lenis@1.3.23/dist/lenis.css">
+
+    <!-- Tailwind Output CSS -->
+     <link href="./Assets/css/output.css" rel="stylesheet">
+</head>
+
+<body>
+
+<!--Header Section start-->
+<header class="main-header">
+    <div class="container">
+
+        <div class="header-inner">
+
+            <a href="#" class="header-logo">
+                <img src="./Assets/images/Laravel.svg" alt="Logo">
+            </a>
+
+            <nav class="main-navigation" id="mobileMenu">
+
+                <div class="menu-circle"></div>
+
+                <ul class="navigation-links">
+                    <li><a href="#" class="navigation-link active">Home</a></li>
+                    <li><a href="#" class="navigation-link">Features</a></li>
+                    <li><a href="#" class="navigation-link">Resources</a></li>
+                    <li><a href="#" class="navigation-link">Contact</a></li>
+                </ul>
+
+                <div class="mobile-header-right">
+                    <a href="#" class="login-btn">Login</a>
+                    <a href="#" class="demo-btn">Book Demo</a>
+                </div>
+
+            </nav>
+
+            <div class="header-right">
+                <a href="#" class="login-btn">Login</a>
+                <a href="#" class="demo-btn">Book Demo</a>
+            </div>
+
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+        </div>
+
+    </div>
+</header>
+
+<!-- Add this after header -->
+<div class="menu-overlay" id="menuOverlay"></div>
+<!--Header section End-->
+
+<!--Hero section Start-->
+<section class="hero-section sub-hero reports-hero">
+    <div class="container">
+
+        <div class="hero-content">
+
+            <span class="hero-tag">
+                Reports
+            </span>
+
+            <div class="hero-info">
+                <div class="hero-text">
+
+                    <h1 class="hero-title">
+                       <span>Reports</span> & Analytics
+                    </h1>
+
+                    <p class="hero-description">
+                      Transform your transportation data into meaningful insights with powerful reports, real-time analytics, and data-driven decision-making tools.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</section>
+<!--Hero Section End-->
+
+<!--Reports section start-->
+<section class="reports-section">
+
+    <div class="container">
+
+        <div class="reports-grid">
+
+            <!-- Report Card 1 -->
+            <div class="report-card">
+
+                <div class="report-icon">
+                    <svg
+                        width="14"
+                        height="14"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                    >
+                        <path
+                            d="M7 3H5C3.89543 3 3 3.89543 3 5V19C3 20.1046 3.89543 21 5 21H19C20.1046 21 21 20.1046 21 19V17"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                        />
+                        <path
+                            d="M8 16L11 13L14 15L21 8"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        />
+                        <path
+                            d="M17 3H21V7"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        />
+                    </svg>
+                </div>
+
+                <h3 class="report-title">
+                    Vehicle Reports
+                </h3>
+
+                <p class="report-description">
+                    Analyze vehicle activity,
+                    performance, maintenance
+                    records, and usage history.
+                </p>
+
+                <div class="report-footer">
+                    <span>248 reports</span>
+
+                    <a href="#" class="report-arrow" aria-label="View Vehicle Reports">
+                        →
+                    </a>
+                </div>
+
+            </div>
+
+
+            <!-- Report Card 2 -->
+            <div class="report-card">
+
+                <div class="report-icon">
+                    <svg
+                        width="14"
+                        height="14"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                    >
+                        <path
+                            d="M16 21V19C16 16.7909 14.2091 15 12 15H6C3.79086 15 2 16.7909 2 19V21"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                        />
+                        <circle
+                            cx="9"
+                            cy="7"
+                            r="4"
+                            stroke="currentColor"
+                            stroke-width="2"
+                        />
+                        <path
+                            d="M22 21V19C21.9986 17.1771 20.765 15.5857 19 15.13"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                        />
+                        <path
+                            d="M16 3.13C17.7699 3.58317 19.0077 5.17799 19.0077 7.005C19.0077 8.83201 17.7699 10.4268 16 10.88"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                        />
+                    </svg>
+                </div>
+
+                <h3 class="report-title">
+                    Driver Reports
+                </h3>
+
+                <p class="report-description">
+                    Monitor driver assignments,
+                    activity, and operational
+                    performance.
+                </p>
+
+                <div class="report-footer">
+                    <span>316 reports</span>
+
+                    <a href="#" class="report-arrow" aria-label="View Driver Reports">
+                        →
+                    </a>
+                </div>
+
+            </div>
+
+
+            <!-- Report Card 3 -->
+            <div class="report-card">
+
+                <div class="report-icon">
+                    <svg
+                        width="14"
+                        height="14"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                    >
+                        <path
+                            d="M4 19V5"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                        />
+                        <path
+                            d="M4 19H20"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                        />
+                        <path
+                            d="M7 15L11 11L14 13L19 7"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        />
+                    </svg>
+                </div>
+
+                <h3 class="report-title">
+                    Fuel Reports
+                </h3>
+
+                <p class="report-description">
+                    Track diesel consumption,
+                    expenses, and fuel efficiency.
+                </p>
+
+                <div class="report-footer">
+                    <span>240 reports</span>
+
+                    <a href="#" class="report-arrow" aria-label="View Fuel Reports">
+                        →
+                    </a>
+                </div>
+
+            </div>
+
+
+            <!-- Report Card 4 -->
+            <div class="report-card">
+
+                <div class="report-icon">
+                    <svg
+                        width="14"
+                        height="14"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                    >
+                        <path
+                            d="M12 3L20 6V11C20 16.5 16.5 20.5 12 22C7.5 20.5 4 16.5 4 11V6L12 3Z"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linejoin="round"
+                        />
+                        <path
+                            d="M8 12L11 15L16 9"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        />
+                    </svg>
+                </div>
+
+                <h3 class="report-title">
+                    Maintenance Reports
+                </h3>
+
+                <p class="report-description">
+                    Analyze vehicle activity,
+                    performance, maintenance
+                    records, and usage history.
+                </p>
+
+                <div class="report-footer">
+                    <span>268 reports</span>
+
+                    <a href="#" class="report-arrow" aria-label="View Maintenance Reports">
+                        →
+                    </a>
+                </div>
+
+            </div>
+
+
+            <!-- Report Card 5 -->
+            <div class="report-card">
+
+                <div class="report-icon">
+                    <svg
+                        width="14"
+                        height="14"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                    >
+                        <path
+                            d="M7 3H5C3.89543 3 3 3.89543 3 5V19C3 20.1046 3.89543 21 5 21H19C20.1046 21 21 20.1046 21 19V17"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                        />
+                        <path
+                            d="M8 16L11 13L14 15L21 8"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        />
+                        <path
+                            d="M17 3H21V7"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        />
+                    </svg>
+                </div>
+
+                <h3 class="report-title">
+                    Vehicle Reports
+                </h3>
+
+                <p class="report-description">
+                    Analyze vehicle activity,
+                    performance, maintenance
+                    records, and usage history.
+                </p>
+
+                <div class="report-footer">
+                    <span>248 reports</span>
+
+                    <a href="#" class="report-arrow" aria-label="View Vehicle Reports">
+                        →
+                    </a>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+<!--Reports section end-->
+
+<section class="reports-analytics-section">
+
+    <!-- Background Overlay -->
+    <div class="reports-overlay"></div>
+
+    <div class="container">
+
+        <div class="reports-dashboard">
+
+            <!-- ========================================
+                 CARD 1 - OVERALL UTILIZATION
+            ========================================= -->
+
+            <div class="report-analytics-card utilization-card">
+
+                <!-- Card Header -->
+                <div class="report-card-header">
+
+                    <div>
+                        <span class="report-eyebrow">
+                            Fleet Performance Overview
+                        </span>
+
+                        <h3 class="report-card-title">
+                            Overall Utilization
+                        </h3>
+                    </div>
+
+                    <span class="report-header-icon">
+                        <svg
+                            width="12"
+                            height="12"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <path
+                                d="M4 19V5"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                            />
+
+                            <path
+                                d="M4 19H20"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                            />
+
+                            <path
+                                d="M7 15L11 11L14 13L19 7"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            />
+                        </svg>
+                    </span>
+
+                </div>
+
+
+                <!-- Bar Chart -->
+                <div class="utilization-chart">
+
+                    <div class="utilization-bar bar-one"></div>
+
+                    <div class="utilization-bar bar-two"></div>
+
+                    <div class="utilization-bar bar-three"></div>
+
+                    <div class="utilization-bar bar-four"></div>
+
+                </div>
+
+
+                <!-- Bottom Statistics -->
+                <div class="utilization-stats">
+
+                    <div class="utilization-stat">
+
+                        <span class="stat-label">
+                            Active Vehicles
+                        </span>
+
+                        <div class="stat-value-row">
+
+                            <span class="stat-value">
+                                342
+                            </span>
+                        </div>
+                    </div>
+
+
+                    <div class="utilization-stat">
+
+                        <span class="stat-label">
+                            Drivers
+                        </span>
+
+                        <div class="stat-value-row">
+
+                            <span class="stat-value">
+                                124
+                            </span>
+                        </div>
+                    </div>
+
+
+                    <div class="utilization-stat">
+
+                        <span class="stat-label">
+                            Total Vendors
+                        </span>
+
+                        <div class="stat-value-row">
+
+                            <span class="stat-value highlight">
+                                1,284
+                            </span>
+                        </div>
+                    </div>
+
+
+                    <div class="utilization-stat">
+
+                        <span class="stat-label">
+                            Companies
+                        </span>
+
+                        <div class="stat-value-row">
+
+                            <span class="stat-value">
+                                426
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ========================================
+                 CARD 2 - COST BREAKDOWN
+            ========================================= -->
+
+            <div class="report-analytics-card cost-card">
+
+                <!-- Card Header -->
+                <div class="report-card-header">
+
+                    <div>
+
+                        <span class="report-eyebrow">
+                            Expense Analysis
+                        </span>
+
+                        <h3 class="report-card-title">
+                            Cost Breakdown
+                        </h3>
+
+                    </div>
+
+                    <span class="report-header-icon">
+                        $
+                    </span>
+
+                </div>
+
+
+                <!-- Donut Chart -->
+                <div class="cost-chart-wrapper">
+
+                    <div class="donut-chart">
+
+                        <div class="donut-center">
+                            <span>
+                                100%
+                            </span>
+                        </div>
+
+                    </div>
+                     <!-- Legend -->
+                <div class="cost-content">
+
+                    <div class="cost-legend">
+
+                        <div class="legend-item">
+
+                            <span class="legend-dot fuel-dot"></span>
+
+                            <span class="legend-label">
+                                Fuel Cost
+                            </span>
+
+                            <span class="legend-value">
+                                $534.8K
+                            </span>
+                        </div>
+
+                        <div class="legend-item">
+                            <span class="legend-dot maintenance-dot"></span>
+                            <span class="legend-label">
+                                Maintenance
+                            </span>
+                            <span class="legend-value">
+                                $92.3K
+                            </span>
+                        </div>
+                        <div class="legend-item">
+
+                            <span class="legend-dot expenses-dot"></span>
+
+                            <span class="legend-label">
+                                Operating
+                            </span>
+
+                            <span class="legend-value">
+                                $168K
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                </div>
+
+
+                <!-- Bottom Total -->
+                <div class="cost-total">
+
+                    <span>
+                        Total this month
+                    </span>
+
+                    <strong>
+                        $433.7K
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <!-- ========================================
+                 CARD 3 - DIESEL OPTIMIZATION
+            ========================================= -->
+
+            <div class="report-analytics-card diesel-card">
+
+                <!-- Card Header -->
+                <div class="report-card-header">
+
+                    <div>
+
+                        <span class="report-eyebrow">
+                            Diesel Logs
+                        </span>
+
+                        <h3 class="report-card-title">
+                            Diesel Cost Optimization
+                        </h3>
+
+                    </div>
+
+                    <span class="report-header-icon">
+                        <svg
+                            width="12"
+                            height="12"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <path
+                                d="M12 3V21"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                            />
+
+                            <path
+                                d="M17 7C17 5.34315 14.7614 4 12 4C9.23858 4 7 5.34315 7 7C7 8.65685 9.23858 10 12 10C14.7614 10 17 11.3431 17 13C17 14.6569 14.7614 16 12 16C9.23858 16 7 14.6569 7 13"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                            />
+                        </svg>
+                    </span>
+
+                </div>
+
+
+                <!-- Diesel Metrics -->
+                <div class="diesel-metrics">
+
+                    <div class="diesel-metric">
+
+                        <span>
+                            Total Fuel Cost
+                        </span>
+
+                        <strong>
+                            $42.1K
+                        </strong>
+
+                    </div>
+
+
+                    <div class="diesel-metric">
+
+                        <span>
+                            Average Mileage
+                        </span>
+
+                        <strong>
+                            4.2 KM/L
+                        </strong>
+
+                    </div>
+
+
+                    <div class="diesel-metric">
+
+                        <span>
+                            Savings This Month
+                        </span>
+
+                        <strong>
+                            $12K
+                        </strong>
+
+                    </div>
+
+
+                    <div class="diesel-metric">
+
+                        <span>
+                            Cost Reduction
+                        </span>
+
+                        <strong>
+                            18.4%
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Optimization Status -->
+                <div class="optimization-status">
+
+                    <div class="optimization-header">
+
+                        <span>
+                            Overall Status
+                        </span>
+
+                        <strong>
+                            On track
+                        </strong>
+
+                    </div>
+
+                    <div class="optimization-progress">
+
+                        <span></span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!--Reports export section start-->
+<section class="reports-export-section">
+
+    <div class="container">
+
+        <div class="reports-export-banner">
+
+            <!-- ========================================
+                 BACKGROUND PATTERN
+            ========================================= -->
+
+            <div class="reports-export-pattern"></div>
+
+
+            <!-- ========================================
+                 LEFT CONTENT
+            ========================================= -->
+
+            <div class="reports-export-content">
+
+                <span class="reports-export-badge">
+                    Export Center
+                </span>
+
+                <h2 class="reports-export-title">
+                    Export Reports Anytime
+                </h2>
+
+                <p class="reports-export-description">
+                    Download detailed transportation reports in Excel
+                    for analysis, sharing, and business planning.
+                </p>
+
+            </div>
+
+
+            <!-- ========================================
+                 RIGHT EXPORT PANEL
+            ========================================= -->
+
+            <div class="reports-export-panel">
+
+                <!-- Panel Header -->
+
+                <div class="reports-panel-header">
+
+                    <span class="reports-panel-title">
+                        Scheduled exports
+                    </span>
+
+                    <span class="reports-auto-badge">
+                        Auto
+                    </span>
+
+                </div>
+
+
+                <!-- Report Item 1 -->
+
+                <div class="reports-export-item">
+
+                    <div class="reports-item-content">
+
+                        <span class="reports-item-title">
+                            Weekly Fleet Summary
+                        </span>
+
+                        <span class="reports-item-date">
+                            Every Mon - 08:00
+                        </span>
+
+                    </div>
+
+                    <button
+                        type="button"
+                        class="reports-excel-button"
+                    >
+                        Excel
+                    </button>
+
+                </div>
+
+
+                <!-- Report Item 2 -->
+
+                <div class="reports-export-item">
+
+                    <div class="reports-item-content">
+
+                        <span class="reports-item-title">
+                            Monthly Expense Report
+                        </span>
+
+                        <span class="reports-item-date">
+                            1st day of month - 08:00
+                        </span>
+
+                    </div>
+
+                    <button
+                        type="button"
+                        class="reports-excel-button"
+                    >
+                        Excel
+                    </button>
+
+                </div>
+
+
+                <!-- Report Item 3 -->
+
+                <div class="reports-export-item">
+
+                    <div class="reports-item-content">
+
+                        <span class="reports-item-title">
+                            Driver Scorecard
+                        </span>
+
+                        <span class="reports-item-date">
+                            Every Fri - 15:00
+                        </span>
+
+                    </div>
+
+                    <button
+                        type="button"
+                        class="reports-excel-button"
+                    >
+                        Excel
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+<!--Reports export section end-->
+
+<!--footer section start-->
+<footer class="footer">
+
+    <!-- Newsletter -->
+    <div class="footer-newsletter">
+        <div class="container">
+
+            <div class="newsletter-wrapper">
+
+                <div class="newsletter-content">
+                    <h2>Stay ahead of the curve</h2>
+                    <p>
+                        Fleet management insights, product updates, and industry news.
+                    </p>
+                </div>
+
+                <form class="newsletter-form">
+
+                    <input
+                        type="email"
+                        placeholder="Enter your email"
+                    >
+
+                    <button type="submit">
+                        Subscribe
+
+                       <i class="ri-arrow-right-line"></i>
+
+                    </button>
+
+                </form>
+
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Footer Main -->
+
+    <div class="footer-main">
+
+        <div class="container">
+
+            <div class="footer-grid">
+
+                <!-- Left -->
+
+                <div class="footer-about">
+
+                    <a href="#" class="footer-logo">
+                        <img src="./Assets/images/Laravel.svg" alt="footer-logo">
+                    </a>
+
+                    <p>
+                        The intelligent transportation platform that puts fleet directors
+                        in complete control of their operations.
+                    </p>
+
+                    <div class="footer-social">
+
+                        <a href="#">
+                            <i class="ri-facebook-fill"></i>
+                        </a>
+
+                        <a href="#">
+                            <i class="ri-instagram-line"></i>
+                        </a>
+
+                        <a href="#">
+                            <i class="ri-twitter-line"></i>
+                        </a>
+
+                        <a href="#">
+                            <i class="ri-linkedin-fill"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <!-- Product -->
+
+                <div class="footer-links">
+
+                    <h3>Product</h3>
+
+                    <ul>
+
+                        <li><a href="#">Features</a></li>
+
+                        <li><a href="#">Modules</a></li>
+
+                        <li><a href="#">Solutions</a></li>
+
+                        <li><a href="#">Reports</a></li>
+
+                        <li><a href="#">Contact</a></li>
+
+                    </ul>
+
+                </div>
+
+                <!-- Resources -->
+
+                <div class="footer-links">
+
+                    <h3>Resources</h3>
+
+                    <ul>
+
+                        <li><a href="#">Documentation</a></li>
+
+                        <li><a href="#">FAQ</a></li>
+
+                        <li><a href="#">Privacy Policy</a></li>
+
+                    </ul>
+
+                </div>
+
+                <!-- Support -->
+
+                <div class="footer-links">
+
+                    <h3>Support</h3>
+
+                    <ul>
+
+                        <li><a href="#">Help Center</a></li>
+
+                        <li><a href="#">Status</a></li>
+
+                        <li><a href="#">Security</a></li>
+
+                    </ul>
+
+                </div>
+
+                <!-- Contact -->
+
+                <div class="footer-contact">
+
+                    <div class="contact-item">
+
+                        <div class="icon">
+                            <i class="ri-mail-line"></i>
+                        </div>
+
+                        <div>
+
+                            <span>Email</span>
+
+                            <a href="#">
+                                hello@fleetwave.io
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                    <div class="contact-item">
+
+                        <div class="icon">
+                            <i class="ri-phone-fill"></i>
+                        </div>
+
+                        <div>
+
+                            <span>Call</span>
+
+                            <a href="#">
+                                +1 (512) 555-0142
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                    <div class="contact-item">
+
+                        <div class="icon">
+                            <i class="ri-map-pin-line"></i>
+                        </div>
+
+                        <div>
+
+                            <span>Location</span>
+
+                            <p>India</p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Bottom -->
+
+    <div class="footer-bottom">
+
+        <div class="container">
+
+            <div class="bottom-wrapper">
+
+                <p>
+                    © 2026 All rights reserved.
+                </p>
+
+                <ul>
+
+                    <li><a href="#">Privacy Policy</a></li>
+
+                    <li><a href="#">Terms of Service</a></li>
+
+                    <li><a href="#">Cookie Policy</a></li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</footer>
+<!--footer section end-->
+
+<script src="./Assets/js/custom.js"></script>
+</body>
+</html>
