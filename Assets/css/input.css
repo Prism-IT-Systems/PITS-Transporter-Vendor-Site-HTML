@@ -2021,36 +2021,45 @@ Card
   background: rgba(255, 255, 255, 0.2);
   transition: background 0.25s ease, transform 0.2s ease;
 }
+
 .nav-btn:hover {
   background: rgba(255, 255, 255, 0.45);
 }
+
 .nav-btn:focus-visible {
   outline: 3px solid var(--navy);
 }
+
 .nav-dots-mini {
   @apply flex flex-col gap-1.5;
 }
+
 .nav-dots-mini span {
   @apply w-1.5 h-1.5 block rounded-[50%];
   background: #0f1729;
 }
 
 /* ---------- RIGHT PANEL ---------- */
+
 .feature-right {
   @apply relative flex-1 overflow-hidden;
   background: #0a0a0a;
 }
+
 .slide {
   @apply absolute opacity-0 invisible transition-opacity duration-[0.6s] ease-[ease] bg-cover bg-center inset-0 before:content-[""] before:absolute before:inset-0 motion-reduce:transition-none;
 }
+
 .slide.active {
   @apply opacity-100 visible z-[1];
 }
+
 .slide::before {
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75));
 }
+
 .slide-content {
-  @apply relative z-[2] h-full flex flex-col justify-center max-w-screen-sm pl-[60px] pr-[100px] py-[60px] gap-[16px];
+  @apply relative z-[2] h-full flex flex-col justify-center max-w-[677px] pl-[60px] pr-[100px] py-[60px] gap-[16px];
 }
 
 .feature-left .heading-wrapper {
@@ -2519,7 +2528,6 @@ Card
     @apply h-6 w-6;
 }
 
-
 /* =========================================
    DIVIDER
 ========================================= */
@@ -2607,7 +2615,6 @@ Card
     }
 }
 
-
 @media (max-width: 767px) {
 
     .modules-section {
@@ -2638,7 +2645,6 @@ Card
         @apply min-h-[170px];
     }
 }
-
 
 @media (max-width: 480px) {
 
@@ -2810,7 +2816,6 @@ Card
         transform: translateY(-12px) rotate(-3deg);
     }
 }
-
 
 @keyframes module-float-two {
     0%,
@@ -4873,7 +4878,6 @@ Card
     leading-none
     text-[#d5dce7]
     cursor-pointer;
-
     transition:
         background-color 0.25s ease,
         color 0.25s ease;
@@ -4972,4 +4976,106 @@ Card
     .reports-excel-button {
         @apply text-[7px];
     }
+}
+
+/* Documentation Page CSS */
+
+.documentation-hero {
+     background: linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(../images/documentation-hero-bg.png);
+}
+
+/* =========================================
+   Quick Start Section
+========================================= */
+
+.quick-start-section {
+    @apply bg-[#f6f6f6] pb-[0];
+}
+
+/* =========================================
+   Cards Grid
+========================================= */
+
+.quick-start-grid {
+    @apply grid grid-cols-1 bg-white shadow-[0_10px_40px_rgba(16,24,40,0.08)] md:grid-cols-3;
+}
+
+/* =========================================
+   Individual Card
+========================================= */
+
+.quick-start-card {
+    @apply min-h-[280px] border-b border-[#e4e7ec] px-[25px] py-[25px] sm:px-8 lg:px-7;
+}
+
+/* Vertical Dividers */
+
+.quick-start-card + .quick-start-card {
+    @apply border-l-0 md:border-l md:border-b-0 md:border-[#e4e7ec];
+}
+
+/* Remove bottom border from last card on mobile */
+
+.quick-start-card:last-child {
+    @apply border-b-0 md:border-b-0;
+}
+
+/* =========================================
+   Icon
+========================================= */
+
+.quick-start-icon {
+    @apply mb-5 flex h-10 w-10 items-center justify-start text-[30px] leading-none text-[#ff5b5b];
+}
+
+/* =========================================
+   Card Title
+========================================= */
+
+.quick-start-card-title {
+    @apply m-0 text-[22px] font-bold leading-7 tracking-[-0.3px] text-[#101828];
+}
+
+/* =========================================
+   List
+========================================= */
+
+.quick-start-list {
+    @apply mt-5 mb-0 list-disc pl-6 text-base leading-[1.9] text-[#667085];
+}
+
+/* =========================================
+   List Items
+========================================= */
+
+.quick-start-list li {
+    @apply pl-1;
+}
+
+/* =========================================
+   Responsive
+========================================= */
+
+@media (max-width: 767px) {
+
+    .quick-start-section {
+        @apply py-14;
+    }
+
+    .quick-start-header {
+        @apply mb-10;
+    }
+
+    .quick-start-title {
+        @apply text-[34px] leading-[1.15] tracking-[-1px];
+    }
+
+    .quick-start-description {
+        @apply mt-4 text-base leading-6;
+    }
+
+    .quick-start-card {
+        @apply min-h-0 px-6 py-8;
+    }
+
 }
