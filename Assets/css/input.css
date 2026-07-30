@@ -5395,3 +5395,178 @@ Card
         @apply h-[360px];
     }
 }
+
+/* Help banner section */
+
+.help-banner{
+    @apply relative
+    overflow-hidden
+    rounded-[32px]
+    h-[360px]
+    flex
+    items-center
+    justify-center
+    text-center
+    mx-auto
+    p-6
+    bg-cover
+    bg-center
+    bg-no-repeat;
+    background-image:url("../images/help-banner.jpg");
+}
+
+.help-banner__overlay{
+    @apply absolute
+    inset-0
+    bg-[#0F172A]/75;
+}
+
+.help-banner__overlay::after{
+    content:'';
+    @apply absolute
+    inset-0;
+    background:linear-gradient(
+        180deg,
+        rgba(15,23,42,.55),
+        rgba(15,23,42,.78)
+    );
+}
+
+.help-banner__content{
+    @apply relative
+    z-10
+    max-w-4xl
+    flex
+    flex-col
+    items-center;
+}
+
+.help-banner__badge{
+
+    @apply inline-flex
+    items-center
+    justify-center
+    px-5
+    py-2
+    rounded-full
+    bg-[#FF5C55]
+    text-white
+    text-[15px]
+    font-semibold
+    mb-8;
+}
+
+.help-banner__title{
+
+    @apply text-white
+    text-[64px]
+    leading-none
+    font-bold
+    tracking-[-1px]
+    mb-6;
+}
+
+.help-banner__description{
+
+    @apply text-white/70
+    text-[28px]
+    leading-relaxed
+    font-normal
+    max-w-5xl
+    mb-10;
+}
+
+.help-banner__button{
+
+    @apply inline-flex
+    items-center
+    gap-3
+    px-10
+    py-5
+    rounded-2xl
+    border
+    border-[#FF5C55]
+    text-[#FF5C55]
+    text-[28px]
+    font-semibold
+    transition-all
+    duration-300;
+}
+
+.help-banner__button:hover{
+
+    @apply bg-[#FF5C55]
+    text-white;
+}
+
+.help-banner__button svg{
+
+    @apply w-6
+    h-6;
+}
+
+@media (max-width:1024px){
+
+.help-banner{
+
+    @apply h-[300px];
+}
+
+.help-banner__title{
+
+    @apply text-[48px];
+}
+
+.help-banner__description{
+
+    @apply text-[22px];
+}
+
+.help-banner__button{
+
+    @apply text-xl
+    px-8
+    py-4;
+}
+
+}
+
+@media (max-width:768px){
+
+.help-banner{
+
+    @apply h-auto
+    py-16
+    rounded-3xl;
+}
+
+.help-banner__badge{
+
+    @apply mb-5
+    text-sm
+    px-4
+    py-2;
+}
+
+.help-banner__title{
+
+    @apply text-4xl
+    leading-tight
+    mb-4;
+}
+
+.help-banner__description{
+
+    @apply text-base
+    leading-7
+    mb-8;
+}
+
+.help-banner__button{
+
+    @apply text-base
+    px-7
+    py-4;
+}
+
+}
