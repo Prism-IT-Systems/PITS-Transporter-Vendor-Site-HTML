@@ -1623,13 +1623,28 @@ p {
 }
 
 .hero-tag {
+  position: relative;
   display: inline-flex;
+  padding-left: 15px;
   font-size: 10px;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 3px;
   --tw-text-opacity: 1;
   color: rgb(255 90 95 / var(--tw-text-opacity, 1));
+}
+
+.hero-tag::before {
+  content: "";
+  position: absolute;
+  left: 0px;
+  top: 50%;
+  height: 15px;
+  width: 2px;
+  --tw-translate-y: -50%;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
 }
 
 .hero-inner {
@@ -3866,6 +3881,16 @@ Card
 
 /* ---------- RESPONSIVE ---------- */
 
+@media (max-width: 1024px) {
+  .ts-feature-section {
+    flex-direction: column;
+  }
+
+  .feature-right {
+    min-height: 523px;
+  }
+}
+
 @media (max-width: 900px) {
   .feature-section {
     height: auto;
@@ -3887,10 +3912,6 @@ Card
 
   .slide-nav {
     display: none;
-  }
-
-  .feature-right {
-    min-height: 520px;
   }
 
   .slide-content {
@@ -7741,7 +7762,9 @@ Card
 ========================================= */
 
 .quick-start-card {
-  min-height: 280px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
   border-bottom-width: 1px;
   --tw-border-opacity: 1;
   border-color: rgb(228 231 236 / var(--tw-border-opacity, 1));
@@ -7749,20 +7772,6 @@ Card
   padding-right: 25px;
   padding-top: 25px;
   padding-bottom: 25px;
-}
-
-@media (min-width: 640px) {
-  .quick-start-card {
-    padding-left: 2rem;
-    padding-right: 2rem;
-  }
-}
-
-@media (min-width: 1024px) {
-  .quick-start-card {
-    padding-left: 1.75rem;
-    padding-right: 1.75rem;
-  }
 }
 
 /* Vertical Dividers */
@@ -7797,13 +7806,12 @@ Card
 ========================================= */
 
 .quick-start-icon {
-  margin-bottom: 1.25rem;
   display: flex;
   height: 2.5rem;
   width: 2.5rem;
   align-items: center;
   justify-content: flex-start;
-  font-size: 30px;
+  font-size: 40px;
   line-height: 1;
   --tw-text-opacity: 1;
   color: rgb(255 91 91 / var(--tw-text-opacity, 1));
@@ -7815,12 +7823,13 @@ Card
 
 .quick-start-card-title {
   margin: 0px;
+  display: flex;
+  align-items: center;
   font-size: 22px;
-  font-weight: 700;
-  line-height: 1.75rem;
-  letter-spacing: -0.3px;
+  font-weight: 600;
+  line-height: 29px;
   --tw-text-opacity: 1;
-  color: rgb(16 24 40 / var(--tw-text-opacity, 1));
+  color: rgb(15 23 41 / var(--tw-text-opacity, 1));
 }
 
 /* =========================================
@@ -7828,23 +7837,14 @@ Card
 ========================================= */
 
 .quick-start-list {
-  margin-top: 1.25rem;
   margin-bottom: 0px;
   list-style-type: disc;
   padding-left: 1.5rem;
   font-size: 1rem;
-  line-height: 1.5rem;
-  line-height: 1.9;
+  font-weight: 400;
+  line-height: 1.75rem;
   --tw-text-opacity: 1;
-  color: rgb(102 112 133 / var(--tw-text-opacity, 1));
-}
-
-/* =========================================
-   List Items
-========================================= */
-
-.quick-start-list li {
-  padding-left: 0.25rem;
+  color: rgb(107 114 128 / var(--tw-text-opacity, 1));
 }
 
 /* =========================================
@@ -7894,10 +7894,13 @@ Card
 
 .popular-guides-section .container {
   display: flex;
+  gap: 24px;
 }
 
 .popular-guides-section .heading-wrapper.heading-wrap-left {
   margin: 0;
+  width: 100%;
+  max-width: 100% !important;
 }
 
 /* =========================================
@@ -8072,7 +8075,7 @@ Card
 
 .popular-guides-image-wrapper {
   position: relative;
-  height: 518px;
+  height: 100%;
   width: 100%;
   overflow: hidden;
   border-radius: 15px;
@@ -8222,6 +8225,10 @@ Card
   .popular-guides-floating-card {
     right: -1.25rem;
   }
+
+  .popular-guides-section .container {
+    flex-direction: column;
+  }
 }
 
 /* =========================================
@@ -8346,7 +8353,6 @@ Card
   margin-left: auto;
   margin-right: auto;
   display: flex;
-  height: 360px;
   align-items: center;
   justify-content: center;
   overflow: hidden;
@@ -8354,15 +8360,27 @@ Card
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  padding: 1.5rem;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
   text-align: center;
-  background-image:url("../images/help-banner.jpg");
+  background-image:url("../images/help-banner-bg.png");
+}
+
+.help-banner .heading-tag {
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.help-banner .cta-content {
+  align-items: center;
 }
 
 .help-banner__overlay {
   position: absolute;
   inset: 0px;
-  background-color: rgb(15 23 42 / 0.75);
+  background-color: rgb(15 23 42 / 0.55);
 }
 
 .help-banner__overlay::after{
@@ -8456,10 +8474,6 @@ Card
 }
 
 @media (max-width:1024px){
-  .help-banner {
-    height: 300px;
-  }
-
   .help-banner__title {
     font-size: 48px;
   }

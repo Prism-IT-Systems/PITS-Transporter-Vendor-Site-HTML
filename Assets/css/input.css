@@ -637,7 +637,12 @@
 }
 
 .hero-tag{
-    @apply inline-flex uppercase tracking-[3px] text-[10px] font-semibold text-[#FF5A5F];
+    @apply relative inline-flex uppercase tracking-[3px] text-[10px] pl-[15px] font-semibold text-[#FF5A5F];
+}
+
+.hero-tag::before {
+    content: "";
+    @apply absolute left-0 top-[50%] -translate-y-1/2 w-[2px] h-[15px] bg-white;
 }
 
 .hero-inner{
@@ -2124,6 +2129,17 @@ Card
 
 /* ---------- RESPONSIVE ---------- */
 
+@media (max-width: 1024px) {
+   .ts-feature-section {
+    @apply flex-col;
+   }
+
+      .feature-right {
+    @apply min-h-[523px];
+  }
+}
+
+
 @media (max-width: 900px) {
   .feature-section {
     @apply flex-col h-auto max-h-[none];
@@ -2136,9 +2152,6 @@ Card
   }
   .slide-nav {
     @apply hidden;
-  }
-  .feature-right {
-    @apply min-h-[520px];
   }
   .slide-content {
     @apply max-w-full px-[30px] py-[50px];
@@ -5005,7 +5018,7 @@ Card
 ========================================= */
 
 .quick-start-card {
-    @apply min-h-[280px] border-b border-[#e4e7ec] px-[25px] py-[25px] sm:px-8 lg:px-7;
+    @apply border-b border-[#e4e7ec] px-[25px] py-[25px] flex flex-col gap-[16px];
 }
 
 /* Vertical Dividers */
@@ -5025,7 +5038,7 @@ Card
 ========================================= */
 
 .quick-start-icon {
-    @apply mb-5 flex h-10 w-10 items-center justify-start text-[30px] leading-none text-[#ff5b5b];
+    @apply flex h-10 w-10 items-center justify-start text-[40px] leading-none text-[#ff5b5b];
 }
 
 /* =========================================
@@ -5033,7 +5046,7 @@ Card
 ========================================= */
 
 .quick-start-card-title {
-    @apply m-0 text-[22px] font-bold leading-7 tracking-[-0.3px] text-[#101828];
+    @apply m-0  font-semibold text-[22px] leading-[29px] flex items-center text-[#0F1729];
 }
 
 /* =========================================
@@ -5041,15 +5054,7 @@ Card
 ========================================= */
 
 .quick-start-list {
-    @apply mt-5 mb-0 list-disc pl-6 text-base leading-[1.9] text-[#667085];
-}
-
-/* =========================================
-   List Items
-========================================= */
-
-.quick-start-list li {
-    @apply pl-1;
+    @apply mb-0 list-disc pl-6  font-normal text-base leading-7 text-gray-500;
 }
 
 /* =========================================
@@ -5089,11 +5094,11 @@ Card
 }
 
 .popular-guides-section .container {
-    @apply flex ;
+    @apply flex gap-[24px];
 }
 
 .popular-guides-section .heading-wrapper.heading-wrap-left {
-    @apply m-[0];
+    @apply m-[0] !max-w-full w-full;
 }
 
 /* =========================================
@@ -5199,7 +5204,7 @@ Card
 }
 
 .popular-guides-image-wrapper {
-    @apply relative h-[518px] w-full overflow-hidden rounded-[15px];
+    @apply relative h-full w-full overflow-hidden rounded-[15px];
 }
 
 .popular-guides-image {
@@ -5306,6 +5311,10 @@ Card
     .popular-guides-floating-card {
         @apply -right-5;
     }
+
+    .popular-guides-section .container {
+        @apply flex-col;
+    }
 }
 
 
@@ -5402,23 +5411,31 @@ Card
     @apply relative
     overflow-hidden
     rounded-[32px]
-    h-[360px]
     flex
     items-center
     justify-center
     text-center
     mx-auto
-    p-6
+    py-[50px] px-6
     bg-cover
     bg-center
     bg-no-repeat;
-    background-image:url("../images/help-banner.jpg");
+    background-image:url("../images/help-banner-bg.png");
 }
+
+.help-banner .heading-tag {
+    @apply w-fit;
+}
+
+.help-banner .cta-content  {
+    @apply items-center;
+}
+
 
 .help-banner__overlay{
     @apply absolute
     inset-0
-    bg-[#0F172A]/75;
+    bg-[#0F172A]/55;
 }
 
 .help-banner__overlay::after{
@@ -5506,11 +5523,6 @@ Card
 }
 
 @media (max-width:1024px){
-
-.help-banner{
-
-    @apply h-[300px];
-}
 
 .help-banner__title{
 
