@@ -1875,9 +1875,13 @@ p {
   width: 670px;
   flex-direction: column;
   gap: 16px;
-  padding-top: 28px;
-  padding-bottom: 28px;
-  padding-right: 38px;
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
+
+.home-hero .hero-content {
+  padding-top: 26px !important;
+  padding-bottom: 26px !important;
 }
 
 .sub-hero .hero-content {
@@ -6556,6 +6560,7 @@ Card
   display: flex;
   flex-direction: column;
   justify-content: center;
+  gap: 10px;
   overflow: hidden;
   border-radius: 12px;
   padding-left: 25px;
@@ -6568,21 +6573,11 @@ Card
 /* Question Icon */
 
 .faq-question-icon {
-  position: relative;
-  z-index: 10;
-  margin-bottom: 20px;
-  display: flex;
-  height: 45px;
-  width: 45px;
-  align-items: center;
-  justify-content: center;
-  --tw-bg-opacity: 1;
-  background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
-  font-size: 32px;
+  font-size: 50px;
   font-weight: 700;
   line-height: 1;
   --tw-text-opacity: 1;
-  color: rgb(255 87 87 / var(--tw-text-opacity, 1));
+  color: rgb(255 255 255 / var(--tw-text-opacity, 1));
 }
 
 /* Card Heading */

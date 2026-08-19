@@ -629,7 +629,12 @@
 }
 
 .hero-content{
-    @apply w-[670px] pr-[38px] flex flex-col gap-[16px] py-[28px] relative z-[2];
+    @apply w-[670px] flex flex-col gap-[16px] relative z-[2] py-[70px];
+}
+
+
+.home-hero .hero-content {
+    @apply !py-[26px];
 }
 
 .sub-hero .hero-content {
@@ -3060,8 +3065,7 @@ Card
 }
 
 .contact-card__icon {
-    @apply w-[48px] h-[48px] rounded-[8px] flex items-center justify-center text-[20px]
-    bg-[#FF5E58] text-[#0F1729];
+    @apply w-[48px] h-[48px] rounded-[8px] flex items-center justify-center text-[20px] bg-[#FF5E58] text-[#0F1729];
 }
 
 .contact-card--dark .contact-card__icon {
@@ -3732,7 +3736,7 @@ Card
     px-[25px]
     py-[48px]
     flex
-    flex-col
+    flex-col gap-[10px]
     justify-center;
     background: linear-gradient(0deg, rgba(255, 94, 88, 0.5), rgba(255, 94, 88, 0.5)), url(../images/faq-bg.png);
 }
@@ -3740,19 +3744,7 @@ Card
 /* Question Icon */
 
 .faq-question-icon {
-    @apply relative
-    z-10
-    w-[45px]
-    h-[45px]
-    bg-white
-    text-[#ff5757]
-    flex
-    items-center
-    justify-center
-    text-[32px]
-    font-bold
-    leading-none
-    mb-[20px];
+   @apply text-[50px] font-bold leading-none text-white;
 }
 
 
