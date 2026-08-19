@@ -4635,6 +4635,10 @@ Card
         0 10px 30px rgba(15, 23, 42, 0.08);
 }
 
+.reports-export-banner .heading-wrapper  {
+    @apply !mx-[0] !max-w-[562px] !mb-[0];
+}
+
 /* ========================================
    BACKGROUND PATTERN
 ======================================== */
@@ -4751,12 +4755,10 @@ Card
 .reports-export-panel {
     @apply relative
     z-10
-    w-[290px]
     shrink-0
-    rounded-[9px]
+    rounded-[22px]
     bg-[#ff5757]
-    p-[8px];
-
+    p-[20px];
     box-shadow:
         0 8px 20px rgba(255, 87, 87, 0.15);
 }
@@ -4813,10 +4815,8 @@ Card
     bg-[#111c31]
     px-[9px]
     py-[6px];
-
     box-shadow:
         0 2px 5px rgba(0, 0, 0, 0.12);
-
     transition:
         transform 0.25s ease,
         background-color 0.25s ease;
@@ -5540,7 +5540,6 @@ Card
     px-8
     py-4;
 }
-
 }
 
 @media (max-width:768px){
@@ -5580,5 +5579,1069 @@ Card
     px-7
     py-4;
 }
+}
+
+
+/* Demo page CSS */
+
+.demo-hero {
+     background: linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(../images/demo-banner-bg.png);
+}
+
+
+/* =========================================================
+   SCHEDULE / FORM SECTION
+========================================================= */
+
+.schedule-section {
+    @apply w-full box-border bg-[#f7f7f8] px-6 py-24;
+}
+
+.schedule-container {
+    @apply mx-auto grid w-full max-w-[1188px] grid-cols-2 gap-8;
+}
+
+
+/* =========================================================
+   LEFT PROCESS CARD
+========================================================= */
+
+.process-card {
+    @apply relative min-h-[674px] overflow-hidden rounded-[10px] bg-cover bg-center;
+    
+    /*
+      Replace this image with your actual background image.
+    */
+    background-image:
+        url("https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1200&q=80");
+}
+
+
+/* Dark image overlay */
+.process-overlay {
+    @apply absolute inset-0 bg-[#061124]/80;
+}
+
+
+/* =========================================================
+   PROCESS CONTENT
+========================================================= */
+
+.process-content {
+    @apply relative z-10 flex h-full flex-col items-center
+           justify-between bg-[#0c1529]/95
+           px-14 py-9; 
+    margin: 35px 58px;
+}
+
+
+.process-step {
+    @apply flex w-full flex-col items-center text-center;
+}
+
+/* =========================================================
+   STEP NUMBER
+========================================================= */
+
+.step-number {
+    @apply mb-4 flex h-[59px] w-[59px]
+           items-center justify-center
+           rounded-full
+           border-2 border-[#ff5b5b]
+           bg-white
+           text-[22px] font-normal
+           leading-none text-[#ff5b5b];
+}
+
+
+/* =========================================================
+   STEP HEADING
+========================================================= */
+
+.process-step h3 {
+    @apply m-0 text-[23px] font-semibold
+           leading-[1.25] tracking-[-0.3px]
+           text-white;
+}
+
+
+/* =========================================================
+   STEP DESCRIPTION
+========================================================= */
+
+.process-step p {
+    @apply mt-4 mb-0 max-w-[330px]
+           text-[16px] font-normal
+           leading-[1.45] text-white/95;
+}
+
+
+/* =========================================================
+   RIGHT FORM CARD
+========================================================= */
+
+.schedule-form-card {
+    @apply rounded-[9px] bg-white
+           px-[26px] py-[43px]
+           shadow-[0_8px_20px_rgba(0,0,0,0.10)];
+}
+
+
+/* =========================================================
+   FORM HEADER
+========================================================= */
+
+.form-header h2 {
+    @apply m-0 text-[16px] font-semibold
+           leading-[1.3] text-[#111827];
+}
+
+.form-header p {
+    @apply mt-2 mb-0 text-[11px]
+           leading-[1.4] text-[#8a91a0];
+}
+
+
+/* =========================================================
+   FORM
+========================================================= */
+
+.schedule-form {
+    @apply mt-5;
+}
+
+
+/* Two-column rows */
+
+.form-grid {
+    @apply grid grid-cols-2 gap-[10px];
+}
+
+
+/* =========================================================
+   FORM GROUP
+========================================================= */
+
+.form-group {
+    @apply mb-[10px] min-w-0;
+}
+
+.form-full {
+    @apply w-full;
+}
+
+
+/* =========================================================
+   LABEL
+========================================================= */
+
+.form-group label {
+    @apply mb-[5px] block
+           text-[9px] font-semibold
+           uppercase tracking-[0.25px]
+           leading-none text-[#1d2738];
+}
+
+
+/* =========================================================
+   INPUT
+========================================================= */
+
+.form-group input {
+    @apply h-[40px] w-full
+           box-border
+           rounded-[6px]
+           border border-transparent
+           bg-[#f0f0f2]
+           px-[11px]
+           text-[11px]
+           leading-none
+           text-[#252d3b]
+           outline-none
+           transition-all duration-200;
+}
+
+.form-group input::placeholder {
+    @apply text-[#8a91a0];
+}
+
+.form-group input:focus {
+    @apply border-[#ff5b5b] bg-white;
+}
+
+
+/* =========================================================
+   SELECT
+========================================================= */
+
+.select-wrapper {
+    @apply relative w-full;
+}
+
+.select-wrapper select {
+    @apply h-[40px] w-full
+           appearance-none
+           rounded-[6px]
+           border border-transparent
+           bg-[#f0f0f2]
+           px-[11px]
+           pr-[35px]
+           text-[11px]
+           font-normal
+           text-[#273142]
+           outline-none
+           transition-all duration-200;
+}
+
+.select-wrapper select:focus {
+    @apply border-[#ff5b5b] bg-white;
+}
+
+
+/* Dropdown arrow */
+
+.select-arrow {
+    @apply pointer-events-none
+           absolute right-[11px]
+           top-1/2
+           flex h-4 w-4
+           -translate-y-1/2
+           items-center justify-center
+           text-[#737b89];
+}
+
+.select-arrow svg {
+    @apply h-[15px] w-[15px];
+}
+
+
+/* =========================================================
+   TEXTAREA
+========================================================= */
+
+.form-group textarea {
+    @apply block h-[94px] w-full
+           resize-none
+           box-border
+           rounded-[6px]
+           border border-transparent
+           bg-[#f0f0f2]
+           px-[11px]
+           py-[10px]
+           text-[11px]
+           leading-[1.4]
+           text-[#252d3b]
+           outline-none
+           transition-all duration-200;
+}
+
+.form-group textarea::placeholder {
+    @apply text-[#8a91a0];
+}
+
+.form-group textarea:focus {
+    @apply border-[#ff5b5b] bg-white;
+}
+
+
+/* =========================================================
+   SUBMIT BUTTON
+========================================================= */
+
+.schedule-button {
+    @apply mt-0 flex h-[38px] w-full
+           items-center justify-center
+           rounded-[5px]
+           border-0
+           bg-[#ff5b5b]
+           px-4
+           text-[11px]
+           font-semibold
+           text-white
+           outline-none
+           cursor-pointer
+           transition-all duration-200;
+}
+
+.schedule-button:hover {
+    @apply bg-[#f34f4f];
+}
+
+.schedule-button:active {
+    @apply scale-[0.99];
+}
+
+
+/* =========================================================
+   FORM NOTE
+========================================================= */
+
+.form-note {
+    @apply mt-3 mb-0
+           text-center
+           text-[10px]
+           leading-[1.4]
+           text-[#7e8694];
+}
+
+.form-note span {
+    @apply mx-1 text-[#9ca3af];
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1024px) {
+
+    .schedule-section {
+        @apply px-5 py-16;
+    }
+
+    .schedule-container {
+        @apply gap-5;
+    }
+
+    .process-content {
+        @apply mx-7 px-6;
+    }
+
+    .process-step h3 {
+        @apply text-[20px];
+    }
+
+    .process-step p {
+        @apply text-[14px];
+    }
+
+    .schedule-form-card {
+        @apply px-5 py-8;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 767px) {
+
+    .schedule-section {
+        @apply px-4 py-12;
+    }
+
+    .schedule-container {
+        @apply grid-cols-1 gap-6;
+    }
+
+
+    /* LEFT CARD */
+
+    .process-card {
+        @apply min-h-[570px];
+    }
+
+    .process-content {
+        @apply mx-5 my-5 px-5 py-7;
+    }
+
+    .step-number {
+        @apply h-[52px] w-[52px] text-[19px];
+    }
+
+    .process-step h3 {
+        @apply text-[19px];
+    }
+
+    .process-step p {
+        @apply mt-3 max-w-[260px] text-[13px];
+    }
+
+
+    /* FORM */
+
+    .schedule-form-card {
+        @apply px-5 py-7;
+    }
+
+    .form-grid {
+        @apply grid-cols-1 gap-0;
+    }
+
+    .form-group {
+        @apply mb-4;
+    }
+
+    .form-group input,
+    .select-wrapper select {
+        @apply h-[44px];
+    }
+
+    .form-group textarea {
+        @apply h-[110px];
+    }
+
+    .schedule-button {
+        @apply h-[44px];
+    }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+    .schedule-section {
+        @apply px-3;
+    }
+
+    .process-card {
+        @apply min-h-[540px];
+    }
+
+    .process-content {
+        @apply mx-3 my-3 px-4 py-6;
+    }
+
+    .schedule-form-card {
+        @apply rounded-[8px] px-4 py-6;
+    }
+
+    .form-header h2 {
+        @apply text-[17px];
+    }
+
+    .form-header p {
+        @apply text-[11px];
+    }
+}
+
+
+/* =========================================================
+   PRODUCT PREVIEW SECTION
+========================================================= */
+
+@layer components {
+
+    .product-preview-section {
+        @apply w-full bg-white py-20 lg:py-24;
+    }
+
+    .product-preview-container {
+        @apply mx-auto w-full max-w-[1280px] px-6 sm:px-8 lg:px-10;
+    }
+
+
+    /* =====================================================
+       HEADER
+    ====================================================== */
+
+    .product-preview-header {
+        @apply flex flex-col items-center text-center mb-12 lg:mb-14;
+    }
+
+    .preview-badge {
+        @apply inline-flex items-center justify-center
+        rounded-full
+        bg-[#ff5b59]
+        px-4 py-2
+        text-[11px]
+        font-semibold
+        leading-none
+        text-white
+        mb-4;
+    }
+
+    .preview-title {
+        @apply m-0
+        text-[36px]
+        sm:text-[42px]
+        lg:text-[48px]
+        font-bold
+        leading-[1.1]
+        tracking-[-1.5px]
+        text-[#111827];
+    }
+
+    .preview-title span {
+        @apply text-[#ff5b59];
+    }
+
+    .preview-description {
+        @apply mt-4
+        max-w-[680px]
+        text-[15px]
+        sm:text-[16px]
+        leading-6
+        text-[#737d90];
+    }
+
+
+    /* =====================================================
+       MAIN GRID
+    ====================================================== */
+
+    .product-preview-grid {
+        @apply grid
+        grid-cols-1
+        lg:grid-cols-[minmax(0,2.65fr)_minmax(280px,1fr)]
+        gap-5;
+    }
+
+
+    /* =====================================================
+       LEFT DASHBOARD
+    ====================================================== */
+
+    .dashboard-preview {
+        @apply relative
+        overflow-hidden
+        rounded-[10px]
+        bg-[#101d35]
+        border
+        border-[#263550]
+        min-h-[600px]
+        lg:min-h-[630px]
+        shadow-sm;
+    }
+
+    .dashboard-topbar {
+        @apply flex
+        h-[56px]
+        items-center
+        justify-between
+        border-b
+        border-[#243149]
+        bg-[#17243a]
+        px-6;
+    }
+
+    .dashboard-brand {
+        @apply flex
+        items-center
+        gap-3
+        text-[8px]
+        font-medium
+        text-[#aab5c7];
+    }
+
+    .dashboard-logo {
+        @apply flex
+        h-5
+        w-5
+        items-center
+        justify-center
+        text-[13px]
+        text-[#9ca8bc];
+    }
+
+    .dashboard-user {
+        @apply flex
+        items-center
+        gap-1
+        text-[7px]
+        text-[#8995aa];
+    }
+
+
+    /* =====================================================
+       DASHBOARD CONTENT
+    ====================================================== */
+
+    .dashboard-content {
+        @apply px-6 py-4;
+    }
+
+    .dashboard-page-title {
+        @apply mb-7
+        text-[10px]
+        font-medium
+        text-[#9eabc0];
+    }
+
+
+    /* =====================================================
+       STATS
+    ====================================================== */
+
+    .dashboard-stats {
+        @apply grid
+        grid-cols-2
+        sm:grid-cols-4
+        gap-3
+        mb-4;
+    }
+
+    .dashboard-stat {
+        @apply flex
+        min-h-[50px]
+        items-center
+        gap-2.5
+        rounded-[5px]
+        bg-[#1c2a43]
+        px-3
+        py-2;
+    }
+
+    .stat-icon {
+        @apply text-[12px]
+        font-medium;
+    }
+
+    .stat-blue {
+        @apply text-[#3b82f6];
+    }
+
+    .stat-green {
+        @apply text-[#22c55e];
+    }
+
+    .stat-yellow {
+        @apply text-[#eab308];
+    }
+
+    .stat-purple {
+        @apply text-[#a855f7];
+    }
+
+    .dashboard-stat small {
+        @apply block
+        text-[6px]
+        leading-3
+        text-[#687792];
+    }
+
+    .dashboard-stat strong {
+        @apply block
+        text-[9px]
+        font-medium
+        leading-3
+        text-[#d8dfeb];
+    }
+
+
+    /* =====================================================
+       DASHBOARD CARDS
+    ====================================================== */
+
+    .dashboard-main-grid {
+        @apply grid
+        grid-cols-1
+        sm:grid-cols-2
+        lg:grid-cols-3
+        gap-3
+        mb-4;
+    }
+
+    .dashboard-card {
+        @apply min-h-[92px]
+        rounded-[5px]
+        bg-[#1c2a43]
+        px-3
+        py-2.5;
+    }
+
+    .dashboard-card h4 {
+        @apply m-0
+        mb-2
+        text-[7px]
+        font-medium
+        leading-3
+        text-[#aab6c9];
+    }
+
+    .quick-actions {
+        @apply flex
+        flex-col;
+    }
+
+    .quick-btn {
+        @apply w-full
+        h-[19px]
+        rounded-[1px]
+        border-0
+        mb-1
+        text-[6px]
+        font-medium
+        text-white
+        cursor-pointer;
+    }
+
+    .quick-blue {
+        @apply bg-[#3677d9];
+    }
+
+    .quick-green {
+        @apply bg-[#1faa62];
+    }
+
+    .quick-yellow {
+        @apply bg-[#d9a817];
+    }
+
+    .dashboard-list {
+        @apply flex
+        flex-col
+        gap-1;
+    }
+
+    .dashboard-list span {
+        @apply text-[5px]
+        leading-3
+        text-[#65738b];
+    }
+
+    .empty-text {
+        @apply m-0
+        text-[6px]
+        text-[#62718a];
+    }
+
+    .document-list {
+        @apply flex
+        flex-col
+        gap-1;
+    }
+
+    .document-list span {
+        @apply text-[5px]
+        leading-3
+        text-[#65738b];
+    }
+
+    .document-list b {
+        @apply font-medium
+        text-[#ff5555];
+    }
+
+    .document-list a {
+        @apply text-[5px]
+        text-[#4f9cff]
+        no-underline;
+    }
+
+
+    /* =====================================================
+       MODULES
+    ====================================================== */
+
+    .dashboard-modules {
+        @apply grid
+        grid-cols-2
+        sm:grid-cols-3
+        lg:grid-cols-4
+        gap-3;
+    }
+
+    .module-item {
+        @apply flex
+        min-h-[45px]
+        items-center
+        gap-2
+        rounded-[5px]
+        bg-[#1c2a43]
+        px-3
+        py-2;
+    }
+
+    .module-icon {
+        @apply shrink-0
+        text-[12px];
+    }
+
+    .module-item strong {
+        @apply block
+        truncate
+        text-[6px]
+        font-medium
+        leading-3
+        text-[#b7c1d1];
+    }
+
+    .module-item small {
+        @apply block
+        truncate
+        text-[5px]
+        leading-3
+        text-[#64738c];
+    }
+
+    .module-green {
+        @apply text-[#22c55e];
+    }
+
+    .module-blue {
+        @apply text-[#3b82f6];
+    }
+
+    .module-purple {
+        @apply text-[#a855f7];
+    }
+
+    .module-yellow {
+        @apply text-[#eab308];
+    }
+
+    .module-cyan {
+        @apply text-[#06b6d4];
+    }
+
+    .module-gray {
+        @apply text-[#8793a6];
+    }
+
+    .module-red {
+        @apply text-[#ef4444];
+    }
+
+
+    /* =====================================================
+       RIGHT COLUMN
+    ====================================================== */
+
+    .preview-side {
+        @apply grid
+        grid-cols-1
+        gap-5;
+    }
+
+
+    /* =====================================================
+       IMAGE CARD
+    ====================================================== */
+
+    .preview-image-card {
+        @apply relative
+        overflow-hidden
+        rounded-[10px]
+        h-[300px]
+        lg:h-[310px]
+        bg-[#d9d9d9];
+    }
+
+    .preview-image-card img {
+        @apply block
+        h-full
+        w-full
+        object-cover;
+    }
+
+    .image-overlay {
+        @apply absolute
+        inset-0
+        flex
+        items-center
+        justify-center
+        gap-3
+        pointer-events-none;
+    }
+
+    .glass-panel {
+        @apply flex
+        min-w-[82px]
+        min-h-[130px]
+        flex-col
+        justify-between
+        rounded-[6px]
+        border
+        border-white/30
+        bg-white/10
+        p-3
+        text-white
+        backdrop-blur-[3px];
+    }
+
+    .glass-panel strong {
+        @apply text-[12px]
+        font-medium
+        leading-5;
+    }
+
+    .glass-panel small {
+        @apply inline-flex
+        w-fit
+        rounded-[3px]
+        bg-[#3d87df]
+        px-3
+        py-1
+        text-[7px]
+        font-medium;
+    }
+
+    .glass-panel-large {
+        @apply min-w-[130px]
+        min-h-[170px]
+        gap-3;
+    }
+
+    .glass-line {
+        @apply block
+        h-[2px]
+        w-[65px]
+        rounded-full
+        bg-white/50;
+    }
+
+    .glass-line.short {
+        @apply w-[42px];
+    }
+
+    .glass-circle {
+        @apply flex
+        h-6
+        w-6
+        items-center
+        justify-center
+        rounded-full
+        border
+        border-white/30
+        text-[10px]
+        text-white;
+    }
+
+
+    /* =====================================================
+       AUTOMATED REPORTS
+    ====================================================== */
+
+    .reports-card {
+        @apply flex
+        min-h-[300px]
+        lg:min-h-[307px]
+        flex-col
+        justify-center
+        rounded-[10px]
+        bg-[#ff5959]
+        px-7
+        py-8
+        text-[#08152d];
+    }
+
+    .reports-icon {
+        @apply mb-4
+        text-[27px]
+        font-bold
+        leading-none;
+    }
+
+    .reports-card h3 {
+        @apply m-0
+        text-[21px]
+        font-semibold
+        leading-7
+        tracking-[-0.3px];
+    }
+
+    .reports-card p {
+        @apply mt-3
+        mb-0
+        max-w-[290px]
+        text-[14px]
+        leading-5
+        text-[#07152d];
+    }
+
+
+    /* =====================================================
+       RESPONSIVE
+    ====================================================== */
+
+    @media (max-width: 1023px) {
+
+        .dashboard-preview {
+            @apply min-h-0;
+        }
+
+        .preview-image-card {
+            @apply h-[360px];
+        }
+
+        .reports-card {
+            @apply min-h-[260px];
+        }
+    }
+
+
+    @media (max-width: 767px) {
+
+        .product-preview-section {
+            @apply py-14;
+        }
+
+        .product-preview-container {
+            @apply px-4;
+        }
+
+        .product-preview-header {
+            @apply mb-9;
+        }
+
+        .preview-title {
+            @apply text-[32px]
+            tracking-[-1px];
+        }
+
+        .preview-description {
+            @apply text-[14px]
+            leading-5;
+        }
+
+        .desktop-break {
+            @apply hidden;
+        }
+
+        .dashboard-content {
+            @apply px-4;
+        }
+
+        .dashboard-topbar {
+            @apply px-4;
+        }
+
+        .dashboard-modules {
+            @apply grid-cols-2;
+        }
+
+        .preview-image-card {
+            @apply h-[300px];
+        }
+
+        .reports-card {
+            @apply min-h-[240px]
+            px-6;
+        }
+    }
+
+
+    @media (max-width: 480px) {
+
+        .preview-title {
+            @apply text-[28px];
+        }
+
+        .dashboard-stats {
+            @apply grid-cols-2;
+        }
+
+        .dashboard-main-grid {
+            @apply grid-cols-1;
+        }
+
+        .dashboard-modules {
+            @apply grid-cols-1;
+        }
+
+        .preview-image-card {
+            @apply h-[280px];
+        }
+
+        .glass-panel-large {
+            @apply min-w-[105px]
+            min-h-[145px];
+        }
+    }
 
 }

@@ -1,0 +1,1026 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+
+    <!-- Remix Icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" />
+
+    <!-- Swiper -->
+    <link rel="stylesheet"href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+
+    <!-- Lenis -->
+    <link rel="stylesheet"href="https://unpkg.com/lenis@1.3.23/dist/lenis.css">
+
+    <!-- Tailwind Output CSS -->
+    <link href="./Assets/css/output.css" rel="stylesheet">
+</head>
+<body>
+
+<!--Header Section start-->
+<header class="main-header">
+    <div class="container">
+        <div class="header-inner">
+            <a href="#" class="header-logo">
+                <img src="./Assets/images/Laravel.svg" alt="Logo">
+            </a>
+
+            <nav class="main-navigation" id="mobileMenu">
+                <div class="menu-circle"></div>
+
+                <ul class="navigation-links">
+                    <li><a href="index.html" class="navigation-link">Home</a></li>
+                    <li><a href="features.html" class="navigation-link">Features</a></li>
+                    <li><a href="reports.html" class="navigation-link">Resources</a></li>
+                    <li><a href="contact.html" class="navigation-link">Contact</a></li>
+                </ul>
+
+                <div class="mobile-header-right">
+                    <a href="#" class="login-btn">Login</a>
+                    <a href="#" class="demo-btn">Book Demo</a>
+                </div>
+            </nav>
+
+            <div class="header-right">
+                <a href="#" class="login-btn">Login</a>
+                <a href="#" class="demo-btn">Book Demo</a>
+            </div>
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </div>
+</header>
+
+<!-- Add this after header -->
+<div class="menu-overlay" id="menuOverlay"></div>
+<!--Header section End-->
+
+<!--Hero section Start-->
+<section class="hero-section sub-hero demo-hero">
+    <div class="container">
+
+        <div class="hero-content">
+
+            <span class="hero-tag">
+              DEMO
+            </span>
+
+            <div class="hero-info">
+                <div class="hero-text">
+
+                    <h1 class="hero-title">
+                      Transform Your Transportation Operations with <span>Smart Management</span>
+                    </h1>
+
+                    <p class="hero-description">
+                     Optimize fleet performance, automate complex scheduling, and gain real-time visibility with LogiTrack's enterprise-grade activity management system.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</section>
+<!--Hero Section End-->
+
+<section class="schedule-section">
+    <div class="schedule-container">
+
+        <!-- =====================================================
+             LEFT — PROCESS / WHY SECTION
+        ====================================================== -->
+        <div class="process-card">
+
+            <div class="process-overlay"></div>
+
+            <div class="process-content">
+
+                <!-- STEP 1 -->
+                <div class="process-step">
+                    <div class="step-number">1</div>
+
+                    <h3>Submit Request</h3>
+
+                    <p>
+                        Fill the form and tell us about your fleet's
+                        specific goals and challenges.
+                    </p>
+                </div>
+
+                <!-- STEP 2 -->
+                <div class="process-step">
+                    <div class="step-number">2</div>
+
+                    <h3>Consultation</h3>
+
+                    <p>
+                        A brief call to align on your workflow and
+                        technical requirements.
+                    </p>
+                </div>
+
+                <!-- STEP 3 -->
+                <div class="process-step">
+                    <div class="step-number">3</div>
+
+                    <h3>Live Demo</h3>
+
+                    <p>
+                        A personalized walkthrough of the platform
+                        with your data parameters.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+
+
+        <!-- =====================================================
+             RIGHT — FORM
+        ====================================================== -->
+        <div class="schedule-form-card">
+
+            <div class="form-header">
+                <h2>Schedule Now</h2>
+
+                <p>
+                    Fill out the form below and an expert will reach
+                    out within 2 hours.
+                </p>
+            </div>
+
+
+            <form class="schedule-form">
+
+                <!-- ROW 1 -->
+                <div class="form-grid">
+
+                    <div class="form-group">
+                        <label for="full-name">FULL NAME</label>
+
+                        <input
+                            id="full-name"
+                            type="text"
+                            placeholder="John Doe"
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="company-name">COMPANY NAME</label>
+
+                        <input
+                            id="company-name"
+                            type="text"
+                            placeholder="LogiTech Inc."
+                        >
+                    </div>
+
+                </div>
+
+
+                <!-- ROW 2 -->
+                <div class="form-grid">
+
+                    <div class="form-group">
+                        <label for="email">WORK EMAIL</label>
+
+                        <input
+                            id="email"
+                            type="email"
+                            placeholder="john@company.com"
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">PHONE NUMBER</label>
+
+                        <input
+                            id="phone"
+                            type="tel"
+                            placeholder="+1 (555) 000-0000"
+                        >
+                    </div>
+
+                </div>
+
+
+                <!-- BUSINESS TYPE -->
+                <div class="form-group form-full">
+                    <label for="business-type">
+                        BUSINESS TYPE
+                    </label>
+
+                    <div class="select-wrapper">
+
+                        <select id="business-type">
+                            <option selected disabled>
+                                Choose Business Type
+                            </option>
+
+                            <option>
+                                Logistics
+                            </option>
+
+                            <option>
+                                Transportation
+                            </option>
+
+                            <option>
+                                Fleet Management
+                            </option>
+
+                            <option>
+                                Delivery Services
+                            </option>
+                        </select>
+
+                        <span class="select-arrow">
+                            <svg
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="1.8"
+                            >
+                                <path
+                                    d="m6 9 6 6 6-6"
+                                />
+                            </svg>
+                        </span>
+
+                    </div>
+                </div>
+
+
+                <!-- ROW 3 -->
+                <div class="form-grid">
+
+                    <div class="form-group">
+                        <label for="vehicles">VEHICLES</label>
+
+                        <input
+                            id="vehicles"
+                            type="text"
+                            placeholder="50+"
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="drivers">DRIVERS</label>
+
+                        <input
+                            id="drivers"
+                            type="text"
+                            placeholder="100+"
+                        >
+                    </div>
+
+                </div>
+
+
+                <!-- REQUIREMENT -->
+                <div class="form-group form-full">
+                    <label for="requirement">
+                        REQUIREMENT
+                    </label>
+
+                    <div class="select-wrapper">
+
+                        <select id="requirement">
+                            <option selected>
+                                Primary: Real-time Tracking
+                            </option>
+
+                            <option>
+                                Vehicle Management
+                            </option>
+
+                            <option>
+                                Driver Management
+                            </option>
+
+                            <option>
+                                Fleet Analytics
+                            </option>
+
+                            <option>
+                                Maintenance Management
+                            </option>
+                        </select>
+
+                        <span class="select-arrow">
+                            <svg
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="1.8"
+                            >
+                                <path
+                                    d="m6 9 6 6 6-6"
+                                />
+                            </svg>
+                        </span>
+
+                    </div>
+                </div>
+
+
+                <!-- MESSAGE -->
+                <div class="form-group form-full">
+
+                    <label for="message">
+                        MESSAGE (OPTIONAL)
+                    </label>
+
+                    <textarea
+                        id="message"
+                        placeholder="Tell us about your specific challenges..."
+                    ></textarea>
+
+                </div>
+
+
+                <!-- SUBMIT -->
+                <button
+                    type="submit"
+                    class="schedule-button"
+                >
+                    Schedule My Demo
+                </button>
+
+                <!-- FOOTER NOTE -->
+                <p class="form-note">
+                    No credit card required
+                    <span>•</span>
+                    Quick setup
+                    <span>•</span>
+                    Personalized product walkthrough
+                </p>
+
+            </form>
+
+        </div>
+
+    </div>
+</section>
+
+
+<section class="product-preview-section">
+
+    <div class="product-preview-container">
+
+        <!-- =========================
+             SECTION HEADER
+        ========================== -->
+        <div class="product-preview-header">
+
+            <span class="preview-badge">
+                More Scalable
+            </span>
+
+            <h2 class="preview-title">
+                Experience
+                <span>Complete Visibility</span>
+            </h2>
+
+            <p class="preview-description">
+                Take complete control of your transport operations with advanced features that
+                <br class="desktop-break">
+                streamline planning
+            </p>
+
+        </div>
+
+
+        <!-- =========================
+             PRODUCT PREVIEW GRID
+        ========================== -->
+        <div class="product-preview-grid">
+
+            <!-- =========================
+                 LEFT DASHBOARD PREVIEW
+            ========================== -->
+            <div class="dashboard-preview">
+
+                <!-- Dashboard Header -->
+                <div class="dashboard-topbar">
+
+                    <div class="dashboard-brand">
+                        <div class="dashboard-logo">
+                            ♧
+                        </div>
+
+                        <span>Dashboard</span>
+                    </div>
+
+                    <div class="dashboard-user">
+                        Admin User
+                        <span>⌄</span>
+                    </div>
+
+                </div>
+
+
+                <!-- Dashboard Content -->
+                <div class="dashboard-content">
+
+                    <div class="dashboard-page-title">
+                        Transportation Dashboard
+                    </div>
+
+
+                    <!-- Stats -->
+                    <div class="dashboard-stats">
+
+                        <div class="dashboard-stat">
+                            <div class="stat-icon stat-blue">▣</div>
+                            <div>
+                                <small>Total Vehicles</small>
+                                <strong>24</strong>
+                            </div>
+                        </div>
+
+                        <div class="dashboard-stat">
+                            <div class="stat-icon stat-green">♙</div>
+                            <div>
+                                <small>Total Drivers</small>
+                                <strong>19</strong>
+                            </div>
+                        </div>
+
+                        <div class="dashboard-stat">
+                            <div class="stat-icon stat-yellow">▥</div>
+                            <div>
+                                <small>Total Vendors</small>
+                                <strong>6</strong>
+                            </div>
+                        </div>
+
+                        <div class="dashboard-stat">
+                            <div class="stat-icon stat-purple">▦</div>
+                            <div>
+                                <small>Total Companies</small>
+                                <strong>3</strong>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <!-- Dashboard Cards -->
+                    <div class="dashboard-main-grid">
+
+                        <!-- Quick Actions -->
+                        <div class="dashboard-card quick-actions">
+                            <h4>Quick Actions</h4>
+
+                            <button class="quick-btn quick-blue">
+                                Add Diesel Log
+                            </button>
+
+                            <button class="quick-btn quick-green">
+                                Add Vehicle
+                            </button>
+
+                            <button class="quick-btn quick-yellow">
+                                Add Driver
+                            </button>
+                        </div>
+
+
+                        <!-- Recent Diesel Logs -->
+                        <div class="dashboard-card">
+                            <h4>Recent Diesel Logs</h4>
+
+                            <div class="dashboard-list">
+                                <span>GJ-01-AB-8890 - ₹25,000.00</span>
+                                <span>MH-12-RT-4589 - ₹25,000.00</span>
+                                <span>TY-54-ET-6435 - ₹25,000.00</span>
+                                <span>GJ-19-5935 - ₹32,500.00</span>
+                                <span>N/A - ₹45,000.00</span>
+                            </div>
+                        </div>
+
+
+                        <!-- Driver License -->
+                        <div class="dashboard-card">
+                            <h4>Driver Licenses Expiring Soon Items</h4>
+                            <p class="empty-text">No expiring items</p>
+                        </div>
+
+
+                        <!-- Documents -->
+                        <div class="dashboard-card">
+                            <h4>Expiring Soon Documents</h4>
+
+                            <div class="document-list">
+                                <span>RJ-14-CL-7880 <b>Expires: 3/05/2026</b></span>
+                                <span>GJ-12-ZX-3900 <b>Expires: 3/06/2026</b></span>
+                                <span>RJ-14-GH-3616 <b>Expires: 4/06/2026</b></span>
+                                <a href="#">View All Vehicle Documents →</a>
+                            </div>
+                        </div>
+
+
+                        <div class="dashboard-card">
+                            <h4>Expiring Soon Batteries</h4>
+                            <p class="empty-text">No expiring items</p>
+                        </div>
+
+
+                        <div class="dashboard-card">
+                            <h4>Expiring Soon Office Documents</h4>
+                            <p class="empty-text">No expiring items</p>
+                        </div>
+
+                    </div>
+
+
+                    <!-- Modules -->
+                    <div class="dashboard-modules">
+
+                        <div class="module-item">
+                            <span class="module-icon module-green">♙</span>
+                            <div>
+                                <strong>Register</strong>
+                                <small>Create new account</small>
+                            </div>
+                        </div>
+
+                        <div class="module-item">
+                            <span class="module-icon module-blue">♙</span>
+                            <div>
+                                <strong>User Permissions</strong>
+                                <small>Manage user permissions</small>
+                            </div>
+                        </div>
+
+                        <div class="module-item">
+                            <span class="module-icon module-blue">▣</span>
+                            <div>
+                                <strong>Diesel Logs</strong>
+                                <small>Manage fuel expenses</small>
+                            </div>
+                        </div>
+
+                        <div class="module-item">
+                            <span class="module-icon module-purple">▣</span>
+                            <div>
+                                <strong>Vehicles</strong>
+                                <small>Manage vehicle master</small>
+                            </div>
+                        </div>
+
+                        <div class="module-item">
+                            <span class="module-icon module-cyan">♙</span>
+                            <div>
+                                <strong>Drivers</strong>
+                                <small>Manage drivers master</small>
+                            </div>
+                        </div>
+
+                        <div class="module-item">
+                            <span class="module-icon module-yellow">▭</span>
+                            <div>
+                                <strong>Vendors</strong>
+                                <small>Manage vendors master</small>
+                            </div>
+                        </div>
+
+                        <div class="module-item">
+                            <span class="module-icon module-purple">▦</span>
+                            <div>
+                                <strong>Companies</strong>
+                                <small>Manage companies master</small>
+                            </div>
+                        </div>
+
+                        <div class="module-item">
+                            <span class="module-icon module-green">▥</span>
+                            <div>
+                                <strong>Reports</strong>
+                                <small>View analytics & reports</small>
+                            </div>
+                        </div>
+
+                        <div class="module-item">
+                            <span class="module-icon module-yellow">⌕</span>
+                            <div>
+                                <strong>Global Search</strong>
+                                <small>Search across all modules</small>
+                            </div>
+                        </div>
+
+                        <div class="module-item">
+                            <span class="module-icon module-purple">▱</span>
+                            <div>
+                                <strong>Export Data</strong>
+                                <small>Download CSV reports</small>
+                            </div>
+                        </div>
+
+                        <div class="module-item">
+                            <span class="module-icon module-blue">▣</span>
+                            <div>
+                                <strong>Vehicles Documents</strong>
+                                <small>Manage Vehicles Documents</small>
+                            </div>
+                        </div>
+
+                        <div class="module-item">
+                            <span class="module-icon module-purple">▭</span>
+                            <div>
+                                <strong>Batteries</strong>
+                                <small>Manage Batteries</small>
+                            </div>
+                        </div>
+
+                        <div class="module-item">
+                            <span class="module-icon module-cyan">◎</span>
+                            <div>
+                                <strong>Tyres</strong>
+                                <small>Manage Tyres</small>
+                            </div>
+                        </div>
+
+                        <div class="module-item">
+                            <span class="module-icon module-gray">⚒</span>
+                            <div>
+                                <strong>Repair & Maintenance</strong>
+                                <small>Manage Repair master</small>
+                            </div>
+                        </div>
+
+                        <div class="module-item">
+                            <span class="module-icon module-green">♟</span>
+                            <div>
+                                <strong>Driver Pay</strong>
+                                <small>Manage Driver Pay</small>
+                            </div>
+                        </div>
+
+                        <div class="module-item">
+                            <span class="module-icon module-blue">▤</span>
+                            <div>
+                                <strong>Office Document</strong>
+                                <small>Manage Office Document</small>
+                            </div>
+                        </div>
+
+                        <div class="module-item">
+                            <span class="module-icon module-red">▣</span>
+                            <div>
+                                <strong>Challan</strong>
+                                <small>Manage Challan</small>
+                            </div>
+                        </div>
+
+                        <div class="module-item">
+                            <span class="module-icon module-blue">▣</span>
+                            <div>
+                                <strong>Refer Unit Work</strong>
+                                <small>Manage Refer Unit Work</small>
+                            </div>
+                        </div>
+
+                        <div class="module-item">
+                            <span class="module-icon module-red">⌁</span>
+                            <div>
+                                <strong>Cabin Body Work</strong>
+                                <small>Manage Cabin body Work</small>
+                            </div>
+                        </div>
+
+                        <div class="module-item">
+                            <span class="module-icon module-blue">▥</span>
+                            <div>
+                                <strong>Tolls</strong>
+                                <small>Manage Tolls</small>
+                            </div>
+                        </div>
+
+                        <div class="module-item">
+                            <span class="module-icon module-yellow">♧</span>
+                            <div>
+                                <strong>Attachments</strong>
+                                <small>Manage Attachment Files</small>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+
+            <!-- =========================
+                 RIGHT COLUMN
+            ========================== -->
+            <div class="preview-side">
+
+                <!-- Image Card -->
+                <div class="preview-image-card">
+                    <img
+                        src="images/request-demo.jpg"
+                        alt="Request Demo"
+                    >
+
+                    <div class="image-overlay">
+                        <div class="glass-panel">
+                            <strong>Request<br>Demo</strong>
+                            <span></span>
+                            <small>Submit</small>
+                        </div>
+
+                        <div class="glass-panel glass-panel-large">
+                            <span class="glass-line"></span>
+                            <span class="glass-line short"></span>
+                            <span class="glass-circle">◷</span>
+                            <span class="glass-line"></span>
+                            <span class="glass-circle">♧</span>
+                            <span class="glass-line"></span>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Automated Reports -->
+                <div class="reports-card">
+
+                    <div class="reports-icon">
+                        ▮✦
+                    </div>
+
+                    <h3>
+                        Automated Reports
+                    </h3>
+
+                    <p>
+                        Generate comprehensive CO2, fuel, and
+                        performance reports in seconds.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!--footer section start-->
+<footer class="footer">
+
+    <!-- Newsletter -->
+    <div class="footer-newsletter">
+        <div class="container">
+
+            <div class="newsletter-wrapper">
+
+                <div class="newsletter-content">
+                    <h2>Stay ahead of the curve</h2>
+                    <p>
+                        Fleet management insights, product updates, and industry news.
+                    </p>
+                </div>
+
+                <form class="newsletter-form">
+
+                    <input
+                        type="email"
+                        placeholder="Enter your email"
+                    >
+
+                    <button type="submit">
+                        Subscribe
+
+                       <i class="ri-arrow-right-line"></i>
+
+                    </button>
+
+                </form>
+
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Footer Main -->
+
+    <div class="footer-main">
+
+        <div class="container">
+
+            <div class="footer-grid">
+
+                <!-- Left -->
+
+                <div class="footer-about">
+
+                    <a href="#" class="footer-logo">
+                        <img src="./Assets/images/Laravel.svg" alt="footer-logo">
+                    </a>
+
+                    <p>
+                        The intelligent transportation platform that puts fleet directors
+                        in complete control of their operations.
+                    </p>
+
+                    <div class="footer-social">
+
+                        <a href="#">
+                            <i class="ri-facebook-fill"></i>
+                        </a>
+
+                        <a href="#">
+                            <i class="ri-instagram-line"></i>
+                        </a>
+
+                        <a href="#">
+                            <i class="ri-twitter-line"></i>
+                        </a>
+
+                        <a href="#">
+                            <i class="ri-linkedin-fill"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <!-- Product -->
+
+                <div class="footer-links">
+
+                    <h3>Product</h3>
+
+                       <ul>
+        <li>
+            <a href="features.html" class="footer-link">Features</a>
+        </li>
+
+        <li>
+            <a href="modules.html" class="footer-link">Modules</a>
+        </li>
+
+        <li>
+            <a href="solutions.html" class="footer-link">Solutions</a>
+        </li>
+
+        <li>
+            <a href="reports.html" class="footer-link">Reports</a>
+        </li>
+
+        <li>
+            <a href="contact.html" class="footer-link">Contact</a>
+        </li>
+    </ul>
+
+                </div>
+
+                <!-- Resources -->
+
+                <div class="footer-links">
+
+                    <h3>Resources</h3>
+
+                    <ul>
+
+                        <li><a href="documentation.html" class="footer-link">Documentation</a></li>
+
+                        <li><a href="faq.html" class="footer-link">FAQ</a></li>
+
+                        <li><a href="#" class="footer-link">Privacy Policy</a></li>
+
+                    </ul>
+
+                </div>
+
+                <!-- Support -->
+
+                <div class="footer-links">
+
+                    <h3>Support</h3>
+
+                    <ul>
+
+                        <li><a href="#" class="footer-link">Help Center</a></li>
+
+                        <li><a href="#" class="footer-link">Status</a></li>
+
+                        <li><a href="#" class="footer-link">Security</a></li>
+
+                    </ul>
+
+                </div>
+
+                <!-- Contact -->
+
+                <div class="footer-contact">
+
+                    <div class="contact-item">
+
+                        <div class="icon">
+                            <i class="ri-mail-line"></i>
+                        </div>
+
+                        <div>
+
+                            <span>Email</span>
+
+                            <a href="#">
+                                hello@fleetwave.io
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                    <div class="contact-item">
+
+                        <div class="icon">
+                            <i class="ri-phone-fill"></i>
+                        </div>
+
+                        <div>
+
+                            <span>Call</span>
+
+                            <a href="#">
+                                +1 (512) 555-0142
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                    <div class="contact-item">
+
+                        <div class="icon">
+                            <i class="ri-map-pin-line"></i>
+                        </div>
+
+                        <div>
+
+                            <span>Location</span>
+
+                            <p>India</p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Bottom -->
+
+    <div class="footer-bottom">
+
+        <div class="container">
+
+            <div class="bottom-wrapper">
+
+                <p>
+                    © 2026 All rights reserved.
+                </p>
+
+                <ul>
+
+                    <li><a href="#">Privacy Policy</a></li>
+
+                    <li><a href="#">Terms of Service</a></li>
+
+                    <li><a href="#">Cookie Policy</a></li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </div>
+
+  </footer>
+<!--footer section end-->
+
+<script src="./Assets/js/custom.js"></script>
+</body>
+</html>
