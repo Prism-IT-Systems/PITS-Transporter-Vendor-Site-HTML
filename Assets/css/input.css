@@ -4622,15 +4622,12 @@ Card
 
 .reports-export-banner {
     @apply relative
-    flex
+    grid grid-cols-[1.5fr_1fr] items-center
     w-full
-    items-center
-    justify-between
     overflow-hidden
-    rounded-[25px]
-    bg-[#0d172b]
-     pt-[47px] pr-[47px] pb-[47px] pl-[60px];
-
+     pt-[47px] pr-[47px] pb-[47px] pl-[60px]
+     rounded-[24.9231px] border-[0.95858px] border-solid border-[rgba(40,51,69,0.36)];
+    background: url(../images/Vecotr-bg-reports.png), #0f1729;
     box-shadow:
         0 10px 30px rgba(15, 23, 42, 0.08);
 }
@@ -4773,15 +4770,12 @@ Card
     items-center
     justify-between
     px-[5px]
-    pb-[6px];
+    pb-[16px];
 }
 
 
 .reports-panel-title {
-    @apply text-[6px]
-    font-medium
-    leading-none
-    text-white;
+    @apply  not-italic font-normal text-[13.4201px] leading-[19px] text-[#0F1729];
 }
 
 
@@ -4790,14 +4784,10 @@ Card
 ======================================== */
 
 .reports-auto-badge {
-    @apply rounded-[3px]
+    @apply rounded-full
     bg-white
-    px-[5px]
-    py-[2px]
-    text-[5px]
-    font-medium
-    leading-none
-    text-[#ff5757];
+    px-[10.5444px] py-[2.87574px]
+    font-semibold text-[11.503px] leading-[15px] text-[#0F1729];
 }
 
 
@@ -4807,14 +4797,13 @@ Card
 
 .reports-export-item {
     @apply flex
-    min-h-[39px]
     items-center
     justify-between
     gap-3
-    rounded-[6px]
-    bg-[#111c31]
-    px-[9px]
-    py-[6px];
+    rounded-[17px]
+    bg-[#0F1729]
+    px-[12.46px]
+    py-[12.46px];
     box-shadow:
         0 2px 5px rgba(0, 0, 0, 0.12);
     transition:
@@ -4828,15 +4817,6 @@ Card
 .reports-export-item + .reports-export-item {
     @apply mt-[5px];
 }
-
-
-/* Hover */
-
-.reports-export-item:hover {
-    @apply -translate-y-[1px]
-    bg-[#16243c];
-}
-
 
 /* ========================================
    ITEM CONTENT
@@ -4854,11 +4834,7 @@ Card
 ======================================== */
 
 .reports-item-title {
-    @apply truncate
-    text-[6px]
-    font-medium
-    leading-[9px]
-    text-white;
+    @apply font-medium text-[13.4201px] leading-[19px] text-white;
 }
 
 
@@ -4867,10 +4843,8 @@ Card
 ======================================== */
 
 .reports-item-date {
-    @apply mt-[1px]
-    text-[5px]
-    leading-[7px]
-    text-[#718098];
+    @apply mt-[8px]
+    font-normal text-[12px] leading-[15px] text-[#9AA6B4];
 }
 
 
@@ -4880,20 +4854,15 @@ Card
 
 .reports-excel-button {
     @apply shrink-0
-    rounded-[3px]
-    border
-    border-white/10
-    bg-[#26344b]
-    px-[6px]
-    py-[3px]
-    text-[5px]
+    px-[17px]
+    py-[8px]
+    text-[12px]
     font-medium
     leading-none
     text-[#d5dce7]
-    cursor-pointer;
-    transition:
-        background-color 0.25s ease,
-        color 0.25s ease;
+    cursor-pointer
+   shadow-[0px_0.95858px_2.87574px_rgba(0,0,0,0.1),0px_0.95858px_1.91716px_-0.95858px_rgba(0,0,0,0.1)] rounded-full;
+  background: rgba(255, 255, 255, 0.12);
 }
 
 .reports-excel-button:hover {
@@ -4970,10 +4939,6 @@ Card
 
     .reports-auto-badge {
         @apply text-[7px];
-    }
-
-    .reports-export-item {
-        @apply min-h-[45px];
     }
 
     .reports-item-title {

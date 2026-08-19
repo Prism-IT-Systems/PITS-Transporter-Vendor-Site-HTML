@@ -8119,18 +8119,20 @@ Card
 
 .reports-export-banner {
   position: relative;
-  display: flex;
+  display: grid;
   width: 100%;
+  grid-template-columns: 1.5fr 1fr;
   align-items: center;
-  justify-content: space-between;
   overflow: hidden;
-  border-radius: 25px;
-  --tw-bg-opacity: 1;
-  background-color: rgb(13 23 43 / var(--tw-bg-opacity, 1));
+  border-radius: 24.9231px;
+  border-width: 0.95858px;
+  border-style: solid;
+  border-color: rgba(40,51,69,0.36);
   padding-top: 47px;
   padding-right: 47px;
   padding-bottom: 47px;
   padding-left: 60px;
+  background: url(../images/Vecotr-bg-reports.png), #0f1729;
   box-shadow:
         0 10px 30px rgba(15, 23, 42, 0.08);
 }
@@ -8277,15 +8279,16 @@ Card
   justify-content: space-between;
   padding-left: 5px;
   padding-right: 5px;
-  padding-bottom: 6px;
+  padding-bottom: 16px;
 }
 
 .reports-panel-title {
-  font-size: 6px;
-  font-weight: 500;
-  line-height: 1;
+  font-size: 13.4201px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 19px;
   --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity, 1));
+  color: rgb(15 23 41 / var(--tw-text-opacity, 1));
 }
 
 /* ========================================
@@ -8293,18 +8296,18 @@ Card
 ======================================== */
 
 .reports-auto-badge {
-  border-radius: 3px;
+  border-radius: 9999px;
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
-  padding-left: 5px;
-  padding-right: 5px;
-  padding-top: 2px;
-  padding-bottom: 2px;
-  font-size: 5px;
-  font-weight: 500;
-  line-height: 1;
+  padding-left: 10.5444px;
+  padding-right: 10.5444px;
+  padding-top: 2.87574px;
+  padding-bottom: 2.87574px;
+  font-size: 11.503px;
+  font-weight: 600;
+  line-height: 15px;
   --tw-text-opacity: 1;
-  color: rgb(255 87 87 / var(--tw-text-opacity, 1));
+  color: rgb(15 23 41 / var(--tw-text-opacity, 1));
 }
 
 /* ========================================
@@ -8313,17 +8316,16 @@ Card
 
 .reports-export-item {
   display: flex;
-  min-height: 39px;
   align-items: center;
   justify-content: space-between;
   gap: 0.75rem;
-  border-radius: 6px;
+  border-radius: 17px;
   --tw-bg-opacity: 1;
-  background-color: rgb(17 28 49 / var(--tw-bg-opacity, 1));
-  padding-left: 9px;
-  padding-right: 9px;
-  padding-top: 6px;
-  padding-bottom: 6px;
+  background-color: rgb(15 23 41 / var(--tw-bg-opacity, 1));
+  padding-left: 12.46px;
+  padding-right: 12.46px;
+  padding-top: 12.46px;
+  padding-bottom: 12.46px;
   box-shadow:
         0 2px 5px rgba(0, 0, 0, 0.12);
   transition:
@@ -8335,15 +8337,6 @@ Card
 
 .reports-export-item + .reports-export-item {
   margin-top: 5px;
-}
-
-/* Hover */
-
-.reports-export-item:hover {
-  --tw-translate-y: -1px;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-  --tw-bg-opacity: 1;
-  background-color: rgb(22 36 60 / var(--tw-bg-opacity, 1));
 }
 
 /* ========================================
@@ -8361,12 +8354,9 @@ Card
 ======================================== */
 
 .reports-item-title {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  font-size: 6px;
+  font-size: 13.4201px;
   font-weight: 500;
-  line-height: 9px;
+  line-height: 19px;
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
 }
@@ -8376,11 +8366,12 @@ Card
 ======================================== */
 
 .reports-item-date {
-  margin-top: 1px;
-  font-size: 5px;
-  line-height: 7px;
+  margin-top: 8px;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 15px;
   --tw-text-opacity: 1;
-  color: rgb(113 128 152 / var(--tw-text-opacity, 1));
+  color: rgb(154 166 180 / var(--tw-text-opacity, 1));
 }
 
 /* ========================================
@@ -8390,23 +8381,20 @@ Card
 .reports-excel-button {
   flex-shrink: 0;
   cursor: pointer;
-  border-radius: 3px;
-  border-width: 1px;
-  border-color: rgb(255 255 255 / 0.1);
-  --tw-bg-opacity: 1;
-  background-color: rgb(38 52 75 / var(--tw-bg-opacity, 1));
-  padding-left: 6px;
-  padding-right: 6px;
-  padding-top: 3px;
-  padding-bottom: 3px;
-  font-size: 5px;
+  border-radius: 9999px;
+  padding-left: 17px;
+  padding-right: 17px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  font-size: 12px;
   font-weight: 500;
   line-height: 1;
   --tw-text-opacity: 1;
   color: rgb(213 220 231 / var(--tw-text-opacity, 1));
-  transition:
-        background-color 0.25s ease,
-        color 0.25s ease;
+  --tw-shadow: 0px 0.95858px 2.87574px rgba(0,0,0,0.1),0px 0.95858px 1.91716px -0.95858px rgba(0,0,0,0.1);
+  --tw-shadow-colored: 0px 0.95858px 2.87574px var(--tw-shadow-color), 0px 0.95858px 1.91716px -0.95858px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  background: rgba(255, 255, 255, 0.12);
 }
 
 .reports-excel-button:hover {
@@ -8489,10 +8477,6 @@ Card
 
   .reports-auto-badge {
     font-size: 7px;
-  }
-
-  .reports-export-item {
-    min-height: 45px;
   }
 
   .reports-item-title {
