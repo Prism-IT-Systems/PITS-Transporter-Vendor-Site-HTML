@@ -2296,7 +2296,7 @@ Card
 /* Main-section start */
 
 .ms-step-section{
-    @apply relative bg-white overflow-hidden pt-0 pb-24;
+    @apply relative bg-white overflow-hidden pt-0 pb-[100px];
 }
 
 .ms-step-bg{
@@ -5643,7 +5643,7 @@ Card
    STEP NUMBER
 ========================================================= */
 
-.step-number {
+.process-card .step-number {
     @apply mb-4 flex h-[59px] w-[59px]
            items-center justify-center
            rounded-full

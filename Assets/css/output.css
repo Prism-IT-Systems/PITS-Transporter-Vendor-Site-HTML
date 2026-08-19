@@ -4966,7 +4966,7 @@ Card
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
   padding-top: 0px;
-  padding-bottom: 6rem;
+  padding-bottom: 100px;
 }
 
 .ms-step-bg {
@@ -9411,7 +9411,7 @@ Card
    STEP NUMBER
 ========================================================= */
 
-.step-number {
+.process-card .step-number {
   margin-bottom: 1rem;
   display: flex;
   height: 59px;
