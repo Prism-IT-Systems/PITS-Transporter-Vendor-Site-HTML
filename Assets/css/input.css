@@ -700,7 +700,7 @@
 }
 
 .btn-secondary{
-    @apply inline-flex items-center justify-center px-7 py-4 rounded-lg border border-[#FF5A5F] text-[#FF5A5F] font-medium transition-all duration-300 hover:bg-[#fff];
+    @apply inline-flex items-center justify-center gap-[12px] px-7 py-4 rounded-lg border border-[#FF5A5F] text-[#FF5A5F] font-medium transition-all duration-300 hover:bg-[#fff];
 }
 
 .hero-image{
@@ -4217,7 +4217,7 @@ Card
   --tw-text-opacity: 1;
 }
 .report-header-icon {
-  @apply flex h-4 w-4 shrink-0 items-center justify-center text-[9px] text-[rgb(255_87_87_/_var(--tw-text-opacity,1))];
+  @apply flex h-[20px] w-[20px] shrink-0 items-center justify-center text-[9px] text-[rgb(255_87_87_/_var(--tw-text-opacity,1))];
   --tw-text-opacity: 1;
 }
 
