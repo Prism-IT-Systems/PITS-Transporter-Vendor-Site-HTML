@@ -1,0 +1,2270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+
+    <!-- Remix Icon -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" />
+
+    <!-- Swiper -->
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+
+    <!-- Lenis -->
+    <link rel="stylesheet"
+        href="https://unpkg.com/lenis@1.3.23/dist/lenis.css">
+
+    <!-- Tailwind Output CSS -->
+     <link href="./Assets/css/output.css" rel="stylesheet">
+</head>
+<body>
+
+<!--Header Section start-->
+<header class="main-header">
+    <div class="container">
+
+        <div class="header-inner">
+
+            <a href="#" class="header-logo">
+                <img src="./Assets/images/Laravel.svg" alt="Logo">
+            </a>
+
+            <nav class="main-navigation" id="mobileMenu">
+
+                <div class="menu-circle"></div>
+
+                <ul class="navigation-links">
+                    <li><a href="index.html" class="navigation-link active">Home</a></li>
+                    <li><a href="features.html" class="navigation-link">Features</a></li>
+                    <li><a href="reports.html" class="navigation-link">Resources</a></li>
+                    <li><a href="contact.html" class="navigation-link">Contact</a></li>
+                </ul>
+
+                <div class="mobile-header-right">
+                    <a href="#" class="login-btn">Login</a>
+                    <a href="#" class="demo-btn">Book Demo</a>
+                </div>
+
+            </nav>
+
+            <div class="header-right">
+                <a href="#" class="login-btn">Login</a>
+                <a href="#" class="demo-btn">Book Demo</a>
+            </div>
+
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+        </div>
+
+    </div>
+</header>
+
+<!-- Add this after header -->
+<div class="menu-overlay" id="menuOverlay"></div>
+<!--Header section End-->
+
+<section id="overview" class="dl-overview-section">
+    <div class="dl-overview-glow"></div>
+    <div class="dl-overview-pattern"></div>
+
+    <div class="container">
+        <div class="dl-overview-grid">
+
+            <!-- Left Content -->
+            <div class="dl-overview-content">
+
+                <div class="dl-overview-badge">
+                    <span class="dl-status-dot"></span>
+                    <span>Enterprise Fleet Management</span>
+                    <span class="dl-badge-divider">|</span>
+                    <span class="dl-badge-highlight">Diesel Logs Module</span>
+                </div>
+
+                <h1 class="dl-overview-title">
+                    Smart Transportation &amp;
+                    <span class="dl-gradient-text">Diesel Logs</span>
+                    Platform
+                </h1>
+
+                <p class="dl-overview-description">
+                    Managing diesel purchases for multiple vehicles manually
+                    causes costly errors and lost receipts. Consolidate petrol
+                    pump vendor bills, record vehicle-wise fuel logs,
+                    automatically compute liters × rate, upload paperless
+                    slips, and audit monthly fleet fuel expenses effortlessly.
+                </p>
+
+                <!-- Action Buttons -->
+                <div class="dl-overview-actions">
+
+                    <button type="button" class="btn-primary">
+                        <span>Try Live Fuel Calculator</span>
+                        <i class="ri-arrow-right-line"></i>
+                    </button>
+
+                    <button type="button" class="dl-btn-demo">
+                        <span class="dl-play-icon">
+                            <i class="ri-play-fill"></i>
+                        </span>
+                        <span>Watch Demo Video (04:18)</span>
+                    </button>
+                </div>
+
+                <!-- Statistics -->
+                <div class="dl-overview-stats">
+
+                    <div class="dl-stat-item">
+                        <div class="dl-stat-number">150+</div>
+                        <div class="dl-stat-label">Enterprise Fleets</div>
+                    </div>
+
+                    <div class="dl-stat-item">
+                        <div class="dl-stat-number dl-stat-red">100%</div>
+                        <div class="dl-stat-label">Auto Calculation</div>
+                    </div>
+
+                    <div class="dl-stat-item">
+                        <div class="dl-stat-number dl-stat-green">23%</div>
+                        <div class="dl-stat-label">Fuel Spend Saved</div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Right Image / Fuel Dashboard -->
+            <div class="dl-overview-visual">
+
+                <div class="dl-visual-card">
+
+                    <img
+                        src="Assets/images/hero_fleet_dispatch_1792482270822.jpg"
+                        alt="Transportation Fleet Dispatch Logistics Center"
+                        class="dl-visual-image"
+                    >
+
+                    <div class="dl-visual-overlay"></div>
+
+                    <!-- Image Top Information -->
+                    <div class="dl-visual-topbar">
+
+                        <div class="dl-live-label">
+                            <span class="dl-live-dot"></span>
+                            <span>Live Fuel Telemetry</span>
+                        </div>
+
+                        <div class="dl-fuel-rate">
+                            ₹90.00 / Liter
+                        </div>
+
+                    </div>
+
+                    <!-- Fuel Slip Information -->
+                    <div class="dl-fuel-slip">
+
+                        <div class="dl-slip-header">
+                            <span class="dl-slip-title">
+                                Recent Pump Slip #INV-BPCL-9921
+                            </span>
+
+                            <span class="dl-slip-status">
+                                Saved &amp; Verified
+                            </span>
+                        </div>
+
+                        <div class="dl-slip-stats">
+
+                            <div class="dl-slip-stat">
+                                <span class="dl-slip-label">Vehicles</span>
+                                <span class="dl-slip-value">3 Trucks</span>
+                            </div>
+
+                            <div class="dl-slip-stat">
+                                <span class="dl-slip-label">Total Diesel</span>
+                                <span class="dl-slip-value dl-slip-red">150 L</span>
+                            </div>
+
+                            <div class="dl-slip-stat">
+                                <span class="dl-slip-label">Total Bill</span>
+                                <span class="dl-slip-value dl-slip-green">₹13,500</span>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<section class="dl-trusted-section">
+    <div class="dl-trusted-heading">
+        <span>
+            Trusted by 150+ Enterprise Transportation &amp; Logistics Fleets
+        </span>
+    </div>
+
+    <div class="dl-trusted-marquee">
+        <!-- Left fade -->
+        <div class="dl-trusted-fade dl-trusted-fade-left"></div>
+
+        <!-- Right fade -->
+        <div class="dl-trusted-fade dl-trusted-fade-right"></div>
+
+        <div class="dl-trusted-track">
+
+            <!-- First group -->
+            <div class="dl-trusted-group">
+                <div class="dl-trusted-item">
+                    <span class="dl-trusted-dot"></span>
+                    <span class="dl-trusted-name">Apex Logistics</span>
+                </div>
+
+                <div class="dl-trusted-item">
+                    <span class="dl-trusted-dot"></span>
+                    <span class="dl-trusted-name">Meridian Transport</span>
+                </div>
+
+                <div class="dl-trusted-item">
+                    <span class="dl-trusted-dot"></span>
+                    <span class="dl-trusted-name">Global Freight Co</span>
+                </div>
+
+                <div class="dl-trusted-item">
+                    <span class="dl-trusted-dot"></span>
+                    <span class="dl-trusted-name">NorthStar Fleet</span>
+                </div>
+
+                <div class="dl-trusted-item">
+                    <span class="dl-trusted-dot"></span>
+                    <span class="dl-trusted-name">Titan Cargo</span>
+                </div>
+
+                <div class="dl-trusted-item">
+                    <span class="dl-trusted-dot"></span>
+                    <span class="dl-trusted-name">Pacific Routes</span>
+                </div>
+
+                <div class="dl-trusted-item">
+                    <span class="dl-trusted-dot"></span>
+                    <span class="dl-trusted-name">Atlas Distribution</span>
+                </div>
+
+                <div class="dl-trusted-item">
+                    <span class="dl-trusted-dot"></span>
+                    <span class="dl-trusted-name">Summit Hauling</span>
+                </div>
+
+                <div class="dl-trusted-item">
+                    <span class="dl-trusted-dot"></span>
+                    <span class="dl-trusted-name">BlueDart Express</span>
+                </div>
+
+                <div class="dl-trusted-item">
+                    <span class="dl-trusted-dot"></span>
+                    <span class="dl-trusted-name">TCI Freight Lines</span>
+                </div>
+
+                <div class="dl-trusted-item">
+                    <span class="dl-trusted-dot"></span>
+                    <span class="dl-trusted-name">VRL Logistics Fleet</span>
+                </div>
+
+                <div class="dl-trusted-item">
+                    <span class="dl-trusted-dot"></span>
+                    <span class="dl-trusted-name">Safexpress Network</span>
+                </div>
+            </div>
+
+            <!-- Duplicate group for seamless looping -->
+            <div class="dl-trusted-group" aria-hidden="true">
+                <div class="dl-trusted-item">
+                    <span class="dl-trusted-dot"></span>
+                    <span class="dl-trusted-name">Apex Logistics</span>
+                </div>
+
+                <div class="dl-trusted-item">
+                    <span class="dl-trusted-dot"></span>
+                    <span class="dl-trusted-name">Meridian Transport</span>
+                </div>
+
+                <div class="dl-trusted-item">
+                    <span class="dl-trusted-dot"></span>
+                    <span class="dl-trusted-name">Global Freight Co</span>
+                </div>
+
+                <div class="dl-trusted-item">
+                    <span class="dl-trusted-dot"></span>
+                    <span class="dl-trusted-name">NorthStar Fleet</span>
+                </div>
+
+                <div class="dl-trusted-item">
+                    <span class="dl-trusted-dot"></span>
+                    <span class="dl-trusted-name">Titan Cargo</span>
+                </div>
+
+                <div class="dl-trusted-item">
+                    <span class="dl-trusted-dot"></span>
+                    <span class="dl-trusted-name">Pacific Routes</span>
+                </div>
+
+                <div class="dl-trusted-item">
+                    <span class="dl-trusted-dot"></span>
+                    <span class="dl-trusted-name">Atlas Distribution</span>
+                </div>
+
+                <div class="dl-trusted-item">
+                    <span class="dl-trusted-dot"></span>
+                    <span class="dl-trusted-name">Summit Hauling</span>
+                </div>
+
+                <div class="dl-trusted-item">
+                    <span class="dl-trusted-dot"></span>
+                    <span class="dl-trusted-name">BlueDart Express</span>
+                </div>
+
+                <div class="dl-trusted-item">
+                    <span class="dl-trusted-dot"></span>
+                    <span class="dl-trusted-name">TCI Freight Lines</span>
+                </div>
+
+                <div class="dl-trusted-item">
+                    <span class="dl-trusted-dot"></span>
+                    <span class="dl-trusted-name">VRL Logistics Fleet</span>
+                </div>
+
+                <div class="dl-trusted-item">
+                    <span class="dl-trusted-dot"></span>
+                    <span class="dl-trusted-name">Safexpress Network</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<section class="dl-demo-section">
+    <div class="dl-demo-glow"></div>
+
+    <div class="dl-container">
+
+        <!-- Section Heading -->
+        <div class="heading-wrapper">
+
+            <span class="heading-tag">
+               nteractive Video Demonstration
+            </span>
+
+            <h2 class="heading-title">
+             Watch How
+                <span>Diesel Logs Management</span>
+                Works
+            </h2>
+
+            <p>
+               Learn How to Manage Diesel Purchases Step by Step. Watch our
+                demonstration video to understand how to add diesel bills,
+                add vehicle-wise fuel entries, calculate expenses, manage
+                existing records, and generate reports.
+            </p>
+        </div>
+
+        <!-- Demo Content -->
+        <div class="dl-demo-grid">
+
+            <!-- Video Preview -->
+            <div class="dl-demo-video-column">
+
+                <div class="dl-video-card">
+
+                    <!-- Video Browser Header -->
+                    <div class="dl-video-toolbar">
+
+                        <div class="dl-video-toolbar-left">
+                            <span class="dl-window-dot dl-dot-red"></span>
+                            <span class="dl-window-dot dl-dot-yellow"></span>
+                            <span class="dl-window-dot dl-dot-green"></span>
+
+                            <span class="dl-video-filename">
+                                fleetwave_diesel_module_demo.mp4
+                            </span>
+                        </div>
+
+                        <span class="dl-video-quality">
+                            Full HD · 04:18
+                        </span>
+
+                    </div>
+
+                    <!-- Video Thumbnail -->
+                    <div class="dl-video-preview">
+
+                        <img
+                            src="Assets/images/dashboard.png"
+                            alt="Diesel Logs Management demonstration video preview"
+                            class="dl-video-thumbnail"
+                        >
+
+                        <div class="dl-video-overlay"></div>
+
+                        <button
+                            type="button"
+                            class="dl-video-play"
+                            aria-label="Play demonstration video"
+                        >
+                            <i class="ri-play-fill"></i>
+                            <span class="dl-video-ping"></span>
+                        </button>
+
+                        <!-- Video Information -->
+                        <div class="dl-video-meta">
+
+                            <div class="dl-video-meta-left">
+                                <span class="dl-video-timestamp">
+                                    Timestamp: 00:15
+                                </span>
+
+                                <span class="dl-video-current-chapter">
+                                    Creating a New Diesel Bill
+                                </span>
+                            </div>
+
+                            <a
+                                href="https://www.awesomescreenshot.com/video/57578799?key=a86d64bc1d6f974919df1b7615fb9eb2"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="dl-video-external"
+                            >
+                                <span>External Link</span>
+                                <i class="ri-external-link-line"></i>
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                    <!-- Video Footer -->
+                    <div class="dl-video-footer">
+
+                        <div class="dl-video-footer-left">
+
+                            <button
+                                type="button"
+                                class="dl-watch-button"
+                            >
+                                <i class="ri-play-circle-line"></i>
+                                <span>Watch Full Walkthrough</span>
+                            </button>
+
+                            <span class="dl-video-footer-note">
+                                Click to launch video playback in pop-up modal
+                            </span>
+
+                        </div>
+
+                        <a
+                            href="https://www.awesomescreenshot.com/video/57578799?key=a86d64bc1d6f974919df1b7615fb9eb2"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="dl-video-source"
+                        >
+                            <span>Direct Source</span>
+                            <i class="ri-arrow-right-up-line"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+</section>
+
+<section id="simulator" class="dl-simulator-section">
+    <div class="dl-container">
+
+        <!-- Section Heading -->
+        <div class="dl-simulator-header">
+             <div class="heading-wrapper heading-wrap-left">
+
+            <span class="heading-tag">
+                Vendor Bill Entry View
+            </span>
+
+            <h2 class="heading-title">
+              Interactive <span>Diesel Purchases</span> Calculator
+            </h2>
+
+            <p>
+              Experience the exact example from the documentation: 3 trucks refuel at Bharat Petroleum.
+                    Modify quantities, change common fuel rate, add new vehicles, review real-time amounts,
+                    and export the real CSV!
+            </p>
+           <!-- Feature Filters -->
+            
+        </div>
+
+
+            <div class="dl-view-switcher">
+                <button type="button" class="dl-view-tab dl-view-tab-active">
+                    <i class="ri-file-list-3-line"></i>
+                    Vendor Bill Entry View
+                </button>
+
+                <button type="button" class="dl-view-tab">
+                    <i class="ri-truck-line"></i>
+                    Vehicle Diesel Records View
+                </button>
+            </div>
+        </div>
+        <!-- Summary Statistics -->
+        <div class="dl-stats-grid">
+
+            <div class="dl-stat-card">
+                <div class="dl-stat-label">
+                    <span>Total Entries</span>
+                    <i class="ri-list-check"></i>
+                </div>
+                <div class="dl-stat-value">
+                    3 <span>Vehicles</span>
+                </div>
+                <p class="dl-stat-note">Multi-vehicle consolidated</p>
+            </div>
+
+            <div class="dl-stat-card">
+                <div class="dl-stat-label">
+                    <span>Total Diesel Pumped</span>
+                    <i class="ri-gas-station-line dl-red-icon"></i>
+                </div>
+                <div class="dl-stat-value dl-red-text">
+                    150 <span>Liters</span>
+                </div>
+                <p class="dl-stat-note">50L + 60L + 40L baseline</p>
+            </div>
+
+            <div class="dl-stat-card">
+                <div class="dl-stat-label">
+                    <span>Common Diesel Rate</span>
+                    <i class="ri-price-tag-3-line dl-green-icon"></i>
+                </div>
+                <div class="dl-stat-value dl-green-text">
+                    ₹90 <span>/ Liter</span>
+                </div>
+                <p class="dl-stat-note">Auto-applied across bill</p>
+            </div>
+
+            <div class="dl-stat-card dl-stat-card-total">
+                <div class="dl-stat-label">
+                    <span>Overall Bill Amount</span>
+                    <span class="dl-status-dot"></span>
+                </div>
+                <div class="dl-stat-value dl-stat-total-value">₹13,500</div>
+                <p class="dl-stat-note dl-green-text">Auto: Liters × Rate</p>
+            </div>
+
+        </div>
+
+        <!-- Calculator Panel -->
+        <div class="dl-calculator-panel">
+
+            <!-- Bill Information -->
+            <div class="dl-bill-master">
+
+                <div class="dl-bill-master-header">
+                    <div class="dl-bill-heading">
+                        <span>Step 1: Diesel Bill Master Information</span>
+                        <span class="dl-heading-separator">·</span>
+                        <span class="dl-invoice-number">Invoice #INV-BPCL-9921</span>
+                    </div>
+
+                    <div class="dl-receipt-actions">
+                        <a href="#" class="dl-secondary-button"
+                           onclick="return false;">
+                            <i class="ri-attachment-line"></i>
+                            <span>View Slip (fuel_slip_bpcl_oct18.pdf)</span>
+                        </a>
+
+                        <label for="dl-receipt-upload" class="dl-secondary-button dl-upload-button">
+                            <i class="ri-upload-2-line"></i>
+                            <span>Replace Receipt</span>
+                            <input id="dl-receipt-upload" type="file"
+                                   accept=".pdf,.jpg,.jpeg,.png">
+                        </label>
+                    </div>
+                </div>
+
+                <div class="dl-bill-fields">
+
+                    <div class="dl-form-group">
+                        <label for="dl-supplier">Diesel Supplier / Pump</label>
+                        <select id="dl-supplier" class="dl-form-control">
+                            <option>Bharat Petroleum Highway Express</option>
+                            <option>Indian Oil Super Fuel Hub</option>
+                            <option>Hindustan Petroleum Highway Depot</option>
+                            <option>Shell Transport Point</option>
+                        </select>
+                    </div>
+
+                    <div class="dl-form-group">
+                        <label for="dl-company">Operating Fleet Company</label>
+                        <input id="dl-company" class="dl-form-control"
+                               type="text" value="Apex Logistics Corp">
+                    </div>
+
+                    <div class="dl-form-group">
+                        <label for="dl-invoice">Invoice / Slip Number</label>
+                        <input id="dl-invoice" class="dl-form-control"
+                               type="text" value="INV-BPCL-9921">
+                    </div>
+
+                    <div class="dl-form-group dl-rate-group">
+                        <div class="dl-rate-label">
+                            <label for="dl-common-rate">Common Diesel Rate (₹/L)</label>
+                            <span id="dl-rate-display">₹90/L</span>
+                        </div>
+                        <div class="dl-rate-controls">
+                            <input id="dl-common-rate" class="dl-form-control"
+                                   type="number" min="70" max="130"
+                                   step="0.5" value="90">
+                            <input id="dl-rate-range" type="range"
+                                   min="75" max="115" step="1" value="90">
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="dl-bill-options">
+                    <label class="dl-checkbox-label">
+                        <input type="checkbox" checked>
+                        <span>Auto-apply common rate changes to all existing vehicle entries</span>
+                    </label>
+                    <span class="dl-formula-note">
+                        Formula: Liters × Rate per Liter = Total Amount
+                    </span>
+                </div>
+
+            </div>
+
+            <!-- Table Toolbar -->
+            <div class="dl-table-toolbar">
+
+                <div class="dl-search-box">
+                    <i class="ri-search-line"></i>
+                    <input type="search"
+                           placeholder="Search truck number, name, notes...">
+                </div>
+
+                <div class="dl-toolbar-actions">
+                    <button type="button" class="dl-action-button">
+                        <i class="ri-add-line dl-red-icon"></i>
+                        Add Another Entry
+                    </button>
+
+                    <button type="button" class="dl-action-button">
+                        <i class="ri-file-excel-line dl-green-icon"></i>
+                        Export CSV
+                    </button>
+
+                    <button type="button" class="dl-primary-button">
+                        <i class="ri-save-3-line"></i>
+                        Save All Logs
+                    </button>
+                </div>
+
+            </div>
+
+            <!-- Vehicle Records Table -->
+            <div class="dl-table-wrapper">
+                <table class="dl-vehicle-table">
+                    <thead>
+                        <tr>
+                            <th>Vehicle Details</th>
+                            <th>Date</th>
+                            <th class="dl-text-right">Diesel Qty (L)</th>
+                            <th class="dl-text-right">Rate (₹/L)</th>
+                            <th class="dl-text-right">Total Amount (₹)</th>
+                            <th>Odometer</th>
+                            <th>Notes</th>
+                            <th class="dl-text-center">Action</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <!-- Vehicle 1 -->
+                        <tr>
+                            <td>
+                                <div class="dl-vehicle-name">
+                                    <i class="ri-truck-fill"></i>
+                                    <span>MH-12-RN-4821</span>
+                                </div>
+                                <div class="dl-vehicle-meta">
+                                    Truck 1 (Tata Prima 3530.K) ·
+                                    <span>Ramesh Kumar</span>
+                                </div>
+                            </td>
+
+                            <td>
+                                <input class="dl-table-input dl-date-input"
+                                       type="date" value="2026-10-18">
+                            </td>
+
+                            <td class="dl-text-right">
+                                <input class="dl-table-input dl-quantity-input"
+                                       type="number" min="1" max="1000" value="50">
+                            </td>
+
+                            <td class="dl-text-right">
+                                <div class="dl-inline-rate">
+                                    <span>₹</span>
+                                    <input class="dl-table-input dl-rate-input"
+                                           type="number" min="1" max="200"
+                                           step="0.5" value="90">
+                                </div>
+                            </td>
+
+                            <td class="dl-text-right">
+                                <div class="dl-row-total">₹4,500</div>
+                                <div class="dl-row-formula">50L × ₹90</div>
+                            </td>
+
+                            <td>
+                                <div class="dl-odometer-field">
+                                    <input class="dl-table-input dl-odometer-input"
+                                           type="number" value="84210">
+                                    <span>km</span>
+                                </div>
+                            </td>
+
+                            <td>
+                                <input class="dl-table-input dl-notes-input"
+                                       type="text"
+                                       value="Highway refill - NH 48 Pune corridor">
+                            </td>
+
+                            <td class="dl-text-center">
+                                <button type="button" class="dl-delete-button"
+                                        title="Remove vehicle entry">
+                                    <i class="ri-delete-bin-line"></i>
+                                </button>
+                            </td>
+                        </tr>
+
+                        <!-- Vehicle 2 -->
+                        <tr>
+                            <td>
+                                <div class="dl-vehicle-name">
+                                    <i class="ri-truck-fill"></i>
+                                    <span>MH-14-BT-9102</span>
+                                </div>
+                                <div class="dl-vehicle-meta">
+                                    Truck 2 (Ashok Leyland 4220) ·
+                                    <span>Vikram Singh</span>
+                                </div>
+                            </td>
+
+                            <td>
+                                <input class="dl-table-input dl-date-input"
+                                       type="date" value="2026-10-18">
+                            </td>
+
+                            <td class="dl-text-right">
+                                <input class="dl-table-input dl-quantity-input"
+                                       type="number" min="1" max="1000" value="60">
+                            </td>
+
+                            <td class="dl-text-right">
+                                <div class="dl-inline-rate">
+                                    <span>₹</span>
+                                    <input class="dl-table-input dl-rate-input"
+                                           type="number" min="1" max="200"
+                                           step="0.5" value="90">
+                                </div>
+                            </td>
+
+                            <td class="dl-text-right">
+                                <div class="dl-row-total">₹5,400</div>
+                                <div class="dl-row-formula">60L × ₹90</div>
+                            </td>
+
+                            <td>
+                                <div class="dl-odometer-field">
+                                    <input class="dl-table-input dl-odometer-input"
+                                           type="number" value="112450">
+                                    <span>km</span>
+                                </div>
+                            </td>
+
+                            <td>
+                                <input class="dl-table-input dl-notes-input"
+                                       type="text"
+                                       value="Full tank for return freight journey">
+                            </td>
+
+                            <td class="dl-text-center">
+                                <button type="button" class="dl-delete-button"
+                                        title="Remove vehicle entry">
+                                    <i class="ri-delete-bin-line"></i>
+                                </button>
+                            </td>
+                        </tr>
+
+                        <!-- Vehicle 3 -->
+                        <tr>
+                            <td>
+                                <div class="dl-vehicle-name">
+                                    <i class="ri-truck-fill"></i>
+                                    <span>GJ-06-ZZ-3341</span>
+                                </div>
+                                <div class="dl-vehicle-meta">
+                                    Truck 3 (Eicher Pro 6028) ·
+                                    <span>Dilip Patel</span>
+                                </div>
+                            </td>
+
+                            <td>
+                                <input class="dl-table-input dl-date-input"
+                                       type="date" value="2026-10-18">
+                            </td>
+
+                            <td class="dl-text-right">
+                                <input class="dl-table-input dl-quantity-input"
+                                       type="number" min="1" max="1000" value="40">
+                            </td>
+
+                            <td class="dl-text-right">
+                                <div class="dl-inline-rate">
+                                    <span>₹</span>
+                                    <input class="dl-table-input dl-rate-input"
+                                           type="number" min="1" max="200"
+                                           step="0.5" value="90">
+                                </div>
+                            </td>
+
+                            <td class="dl-text-right">
+                                <div class="dl-row-total">₹3,600</div>
+                                <div class="dl-row-formula">40L × ₹90</div>
+                            </td>
+
+                            <td>
+                                <div class="dl-odometer-field">
+                                    <input class="dl-table-input dl-odometer-input"
+                                           type="number" value="68900">
+                                    <span>km</span>
+                                </div>
+                            </td>
+
+                            <td>
+                                <input class="dl-table-input dl-notes-input"
+                                       type="text"
+                                       value="Interstate transit replenishment">
+                            </td>
+
+                            <td class="dl-text-center">
+                                <button type="button" class="dl-delete-button"
+                                        title="Remove vehicle entry">
+                                    <i class="ri-delete-bin-line"></i>
+                                </button>
+                            </td>
+                        </tr>
+                    </tbody>
+
+                    <tfoot>
+                        <tr>
+                            <td>
+                                <span class="dl-footer-label">
+                                    Bill Total (3 Vehicles)
+                                </span>
+                            </td>
+                            <td class="dl-footer-period">Period: 2026-10-15</td>
+                            <td class="dl-text-right dl-footer-liters">150 Liters</td>
+                            <td class="dl-text-right dl-footer-average">Avg ₹90.00</td>
+                            <td class="dl-text-right dl-footer-total">₹13,500</td>
+                            <td colspan="3" class="dl-text-right">
+                                <button type="button" class="dl-primary-button">
+                                    Save All Logs
+                                </button>
+                            </td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+
+            <!-- Information Footer -->
+            <div class="dl-calculator-footer">
+
+                <div class="dl-documentation-note">
+                    <i class="ri-information-line"></i>
+                    <span>
+                        <strong>Documentation Rule:</strong>
+                        Each purchase remains recorded separately in the database,
+                        even though all entries belong to the same vendor bill.
+                    </span>
+                </div>
+
+                <div class="dl-supported-formats">
+                    Supported Receipt Formats: PDF, JPG, JPEG, PNG
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<!--dl feature section start-->
+<section id="features" class="dl-features-section">
+
+    <div class="container">
+
+        <!-- Section Heading -->
+     <div class="heading-wrapper">
+
+            <span class="heading-tag">
+                Complete solution
+            </span>
+
+            <h2 class="heading-title">
+              Everything Your <span>Diesel Fleet Needs</span>
+            </h2>
+
+            <p>
+               A comprehensive suite of tools designed to handle every aspect of diesel fuel purchasing, vehicle attribution, vendor invoices, and compliance auditing.
+            </p>
+           <!-- Feature Filters -->
+            <div class="dl-features-filters">
+
+                <button type="button"
+                    class="dl-filter-btn is-active"
+                    data-filter="all">
+                    All Features (12)
+                </button>
+
+                <button type="button"
+                    class="dl-filter-btn"
+                    data-filter="billing">
+                    Billing &amp; Auto-Calculation
+                </button>
+
+                <button type="button"
+                    class="dl-filter-btn"
+                    data-filter="records">
+                    Vehicle Records &amp; Digital Slips
+                </button>
+
+                <button type="button"
+                    class="dl-filter-btn"
+                    data-filter="analytics">
+                    Analytics, Vendors &amp; CSV Export
+                </button>
+
+            </div>
+        </div>
+
+        <!-- Feature Cards -->
+        <div class="dl-features-grid">
+
+            <!-- Feature 4.1 -->
+            <article class="dl-feature-card" data-category="billing">
+                <div class="dl-feature-card-content">
+                    <div class="dl-feature-icon">
+                        <i class="ri-bill-line"></i>
+                    </div>
+
+                    <div class="dl-feature-card-heading">
+                        <span class="dl-feature-number">4.1</span>
+                        <h3>Diesel Bill Management</h3>
+                    </div>
+
+                    <p>
+                        Create and maintain bills received from petrol
+                        pumps or diesel suppliers in one unified hub.
+                    </p>
+                </div>
+         -
+            </article>
+
+            <!-- Feature 4.2 -->
+            <article class="dl-feature-card" data-category="billing records">
+                <div class="dl-feature-card-content">
+                    <div class="dl-feature-icon">
+                        <i class="ri-truck-line"></i>
+                    </div>
+
+                    <div class="dl-feature-card-heading">
+                        <h3>Multiple Vehicle Entries</h3>
+                    </div>
+
+                    <p>
+                        Add multiple fuel purchase entries under one
+                        consolidated vendor bill without clutter.
+                    </p>
+                </div>
+            </article>
+
+            <!-- Feature 4.3 -->
+            <article class="dl-feature-card" data-category="billing">
+                <div class="dl-feature-card-content">
+                    <div class="dl-feature-icon">
+                        <i class="ri-calculator-line"></i>
+                    </div>
+
+                    <div class="dl-feature-card-heading">
+                        <h3>Automatic Amount &amp; Total Calculation</h3>
+                    </div>
+
+                    <p>
+                        Instant calculation: Liters × Rate per Liter =
+                        Amount, with real-time bill summary aggregation.
+                    </p>
+                </div>
+            </article>
+
+            <!-- Feature 4.4 -->
+            <article class="dl-feature-card" data-category="records">
+                <div class="dl-feature-card-content">
+                    <div class="dl-feature-icon">
+                        <i class="ri-steering-2-line"></i>
+                    </div>
+
+                    <div class="dl-feature-card-heading">
+                        <h3>Vehicle-Wise Diesel Records</h3>
+                    </div>
+
+                    <p>
+                        Review historical fuel purchase records, odometer
+                        consumption, and expenses for any single truck.
+                    </p>
+                </div>
+            </article>
+
+            <!-- Feature 4.5 -->
+            <article class="dl-feature-card" data-category="analytics">
+                <div class="dl-feature-card-content">
+                    <div class="dl-feature-icon">
+                        <i class="ri-store-2-line"></i>
+                    </div>
+
+                    <div class="dl-feature-card-heading">
+                        <h3>Diesel Vendor Management</h3>
+                    </div>
+
+                    <p>
+                        Link bills to authorized petrol pumps and fuel
+                        suppliers to monitor vendor payout accounts.
+                    </p>
+                </div>
+
+            </article>
+
+            <!-- Feature 4.6 -->
+            <article class="dl-feature-card" data-category="records billing">
+                <div class="dl-feature-card-content">
+                    <div class="dl-feature-icon">
+                        <i class="ri-file-upload-line"></i>
+                    </div>
+
+                    <div class="dl-feature-card-heading">
+                        <h3>Digital Bill &amp; Receipt Management</h3>
+                    </div>
+
+                    <p>
+                        Attach PDF, JPG, PNG slips and fuel pump invoices
+                        directly to bills for paperless record keeping.
+                    </p>
+                </div>
+
+            </article>
+
+            <!-- Feature 4.7 -->
+            <article class="dl-feature-card" data-category="billing">
+                <div class="dl-feature-card-content">
+                    <div class="dl-feature-icon">
+                        <i class="ri-edit-line"></i>
+                    </div>
+
+                    <div class="dl-feature-card-heading">
+                        <h3>Diesel Bill Editing &amp; Corrections</h3>
+                    </div>
+
+                    <p>
+                        Permitted users can modify quantities, correct
+                        slip numbers, or add/remove vehicles without
+                        deleting bills.
+                    </p>
+                </div>
+            </article>
+
+            <!-- Feature 4.8 -->
+            <article class="dl-feature-card" data-category="records analytics">
+                <div class="dl-feature-card-content">
+                    <div class="dl-feature-icon">
+                        <i class="ri-filter-3-line"></i>
+                    </div>
+
+                    <div class="dl-feature-card-heading">
+                        <h3>Search &amp; Filter Options</h3>
+                    </div>
+
+                    <p>
+                        Quickly find fuel records filtered by vendor,
+                        vehicle registration, invoice ID, or date range.
+                    </p>
+                </div>
+            </article>
+
+            <!-- Feature 4.9 -->
+            <article class="dl-feature-card" data-category="analytics">
+                <div class="dl-feature-card-content">
+                    <div class="dl-feature-icon">
+                        <i class="ri-pie-chart-2-line"></i>
+                    </div>
+
+                    <div class="dl-feature-card-heading">
+                        <h3>Diesel Expense Summary</h3>
+                    </div>
+
+                    <p>
+                        Real-time KPI totals: number of bills, vehicle
+                        entries, total liters pumped, and gross expenditures.
+                    </p>
+                </div>
+            </article>
+
+            <!-- Feature 4.10 -->
+            <article class="dl-feature-card" data-category="analytics billing">
+                <div class="dl-feature-card-content">
+                    <div class="dl-feature-icon">
+                        <i class="ri-wallet-3-line"></i>
+                    </div>
+
+                    <div class="dl-feature-card-heading">
+                        <h3>Diesel Payment Information</h3>
+                    </div>
+
+                    <p>
+                        Correlate diesel purchase bills with accounts
+                        payable, credit limits, and payment disbursements.
+                    </p>
+                </div>
+            </article>
+
+            <!-- Feature 4.11 -->
+            <article class="dl-feature-card" data-category="analytics">
+                <div class="dl-feature-card-content">
+                    <div class="dl-feature-icon">
+                        <i class="ri-file-excel-2-line"></i>
+                    </div>
+
+                    <div class="dl-feature-card-heading">
+                        <h3>Diesel Reports &amp; Data Export</h3>
+                    </div>
+
+                    <p>
+                        Export complete vehicle diesel records into CSV
+                        format for Microsoft Excel or accounting software.
+                    </p>
+                </div>
+
+            </article>
+
+            <!-- Feature 4.12 -->
+            <article class="dl-feature-card" data-category="analytics records">
+                <div class="dl-feature-card-content">
+                    <div class="dl-feature-icon">
+                        <i class="ri-dashboard-3-line"></i>
+                    </div>
+
+                    <div class="dl-feature-card-heading">
+                        <h3>Odometer &amp; Fuel Mileage Audits</h3>
+                    </div>
+
+                    <p>
+                        Track odometer readings between fill-ups to detect
+                        unusual fuel consumption and optimize mileage.
+                    </p>
+                </div>
+            </article>
+
+        </div>
+    </div>
+</section>
+<!--dl feature section end-->
+
+<!--workflow section start-->
+<section class="dl-workflow-section">
+    <div class="container">
+
+        <!-- Section Heading -->
+
+        <div class="heading-wrapper heading-wrap-left">
+
+            <span class="heading-tag">
+                Complete solution
+            </span>
+
+            <h2 class="heading-title">
+              Everything Your <span>Diesel Fleet Needs</span>
+            </h2>
+
+            <p>
+               A comprehensive suite of tools designed to handle every aspect of diesel fuel purchasing, vehicle attribution, vendor invoices, and compliance auditing.
+            </p>
+           <!-- Feature Filters -->
+            
+        </div>
+
+        <!-- Workflow Grid -->
+        <div class="dl-workflow-grid">
+
+            <!-- Workflow Step 01 -->
+            <article class="dl-workflow-card">
+                <div class="dl-workflow-card-content">
+
+                    <div class="dl-workflow-card-top">
+                        <span class="dl-workflow-number">01</span>
+
+                        <div class="dl-workflow-icon">
+                            <i class="ri-file-add-line"></i>
+                        </div>
+                    </div>
+
+                    <h3 class="dl-workflow-card-title">
+                        Create a Diesel Bill
+                    </h3>
+
+                    <p class="dl-workflow-card-description">
+                        Start by creating a new diesel bill and entering the
+                        basic purchase details.
+                    </p>
+
+                    <ul class="dl-workflow-checklist">
+                        <li>
+                            <i class="ri-check-line"></i>
+                            <span>Select diesel supplier and operating company</span>
+                        </li>
+                        <li>
+                            <i class="ri-check-line"></i>
+                            <span>Enter invoice or slip number and billing period</span>
+                        </li>
+                        <li>
+                            <i class="ri-check-line"></i>
+                            <span>Upload a digital copy of the original diesel bill or receipt</span>
+                        </li>
+                        <li>
+                            <i class="ri-check-line"></i>
+                            <span>Set a common diesel rate to auto-apply to entries</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="dl-workflow-card-footer">
+                    <span>Workflow Phase 01</span>
+                </div>
+            </article>
+
+            <!-- Workflow Step 02 -->
+            <article class="dl-workflow-card">
+                <div class="dl-workflow-card-content">
+
+                    <div class="dl-workflow-card-top">
+                        <span class="dl-workflow-number">02</span>
+
+                        <div class="dl-workflow-icon">
+                            <i class="ri-truck-line"></i>
+                        </div>
+                    </div>
+
+                    <h3 class="dl-workflow-card-title">
+                        Add Vehicle-Wise Diesel Entries
+                    </h3>
+
+                    <p class="dl-workflow-card-description">
+                        Add details for each vehicle that refueled under
+                        the supplier bill.
+                    </p>
+
+                    <ul class="dl-workflow-checklist">
+                        <li>
+                            <i class="ri-check-line"></i>
+                            <span>Select vehicle registration number and date</span>
+                        </li>
+                        <li>
+                            <i class="ri-check-line"></i>
+                            <span>Enter diesel quantity in liters and rate per liter</span>
+                        </li>
+                        <li>
+                            <i class="ri-check-line"></i>
+                            <span>Input odometer reading and optional operational notes</span>
+                        </li>
+                        <li>
+                            <i class="ri-check-line"></i>
+                            <span>Use "Add Another Entry" for multiple fleet vehicles</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="dl-workflow-card-footer">
+                    <span>Workflow Phase 02</span>
+                </div>
+            </article>
+
+            <!-- Workflow Step 03 -->
+            <article class="dl-workflow-card">
+                <div class="dl-workflow-card-content">
+
+                    <div class="dl-workflow-card-top">
+                        <span class="dl-workflow-number">03</span>
+
+                        <div class="dl-workflow-icon">
+                            <i class="ri-calculator-line"></i>
+                        </div>
+                    </div>
+
+                    <h3 class="dl-workflow-card-title">
+                        Automatic Diesel Calculation
+                    </h3>
+
+                    <p class="dl-workflow-card-description">
+                        The system computes expenses automatically without
+                        manual calculations.
+                    </p>
+
+                    <ul class="dl-workflow-checklist">
+                        <li>
+                            <i class="ri-check-line"></i>
+                            <span>Formula: Diesel Amount = Liters × Rate per Liter</span>
+                        </li>
+                        <li>
+                            <i class="ri-check-line"></i>
+                            <span>Example: 60 Liters × ₹90/L = ₹5,400</span>
+                        </li>
+                        <li>
+                            <i class="ri-check-line"></i>
+                            <span>Aggregate total entries, liters, and bill amount</span>
+                        </li>
+                        <li>
+                            <i class="ri-check-line"></i>
+                            <span>Update calculations in real time as quantities are entered</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="dl-workflow-card-footer">
+                    <span>Workflow Phase 03</span>
+                </div>
+            </article>
+
+            <!-- Workflow Step 04 -->
+            <article class="dl-workflow-card">
+                <div class="dl-workflow-card-content">
+
+                    <div class="dl-workflow-card-top">
+                        <span class="dl-workflow-number">04</span>
+
+                        <div class="dl-workflow-icon">
+                            <i class="ri-save-3-line"></i>
+                        </div>
+                    </div>
+
+                    <h3 class="dl-workflow-card-title">
+                        Save and Manage the Bill
+                    </h3>
+
+                    <p class="dl-workflow-card-description">
+                        Review the bill summary and save all vendor and
+                        vehicle logs in one click.
+                    </p>
+
+                    <ul class="dl-workflow-checklist">
+                        <li>
+                            <i class="ri-check-line"></i>
+                            <span>Click "Save All Logs" to save data securely</span>
+                        </li>
+                        <li>
+                            <i class="ri-check-line"></i>
+                            <span>Review purchase details and attached slips anytime</span>
+                        </li>
+                        <li>
+                            <i class="ri-check-line"></i>
+                            <span>Allow authorized users to add, update, or remove entries</span>
+                        </li>
+                        <li>
+                            <i class="ri-check-line"></i>
+                            <span>Recalculate totals automatically after edits</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="dl-workflow-card-footer">
+                    <span>Workflow Phase 04</span>
+                </div>
+            </article>
+
+            <!-- Workflow Step 05 -->
+            <article class="dl-workflow-card">
+                <div class="dl-workflow-card-content">
+
+                    <div class="dl-workflow-card-top">
+                        <span class="dl-workflow-number">05</span>
+
+                        <div class="dl-workflow-icon">
+                            <i class="ri-download-cloud-2-line"></i>
+                        </div>
+                    </div>
+
+                    <h3 class="dl-workflow-card-title">
+                        Search, Track and Export Records
+                    </h3>
+
+                    <p class="dl-workflow-card-description">
+                        Access records from the Diesel Bills List or
+                        Vehicle Diesel Entries view.
+                    </p>
+
+                    <ul class="dl-workflow-checklist">
+                        <li>
+                            <i class="ri-check-line"></i>
+                            <span>Filter records by vendor, vehicle, invoice, or date range</span>
+                        </li>
+                        <li>
+                            <i class="ri-check-line"></i>
+                            <span>Export complete datasets in CSV format for Excel or Tally</span>
+                        </li>
+                        <li>
+                            <i class="ri-check-line"></i>
+                            <span>Share fuel expense statements with accounts teams and owners</span>
+                        </li>
+                        <li>
+                            <i class="ri-check-line"></i>
+                            <span>Gain full visibility into fleet diesel expenditure</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="dl-workflow-card-footer">
+                    <span>Workflow Phase 05</span>
+                </div>
+            </article>
+
+        </div>
+        </div>
+        <div class="et-container">
+        <div class="workflow-bottom">
+
+            <!-- Security Card -->
+            <div class="security-card">
+                <img src="./Assets/images/workflow-img.png" alt="workflow-img">
+
+                <div class="security-content">
+                    <h3>Enterprise-Grade Security</h3>
+
+                    <p>
+                        Protect sensitive business information with encrypted data storage, secure user authentication, and controlled system access.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Right Side -->
+            <div class="workflow-info">
+
+                <div class="stats-card">
+                    <h3>98%</h3>
+
+                    <h4>Customer Satisfaction</h4>
+
+                    <p>
+                        Provide accurate ETAs, live shipment updates, and faster response times that improve customer trust and retention.
+                    </p>
+                </div>
+
+                <div class="workflow-content">
+                    <p>
+                        Explore a powerful collection of intelligent modules built to streamline your daily transport operations. Manage vehicles, drivers, trips, and business performance seamlessly through one unified platform.
+                    </p>
+
+                    <a href="#" class="workflow-btn">
+                        Explore All Modules <i class="ri-arrow-right-line"></i>
+                    </a>
+                </div>
+
+                <div class="info-card">
+                    <div class="info-icon">
+                       <i class="ri-bar-chart-2-fill"></i>
+                    </div>
+
+                    <span>
+                        Visualize business performance instantly
+                    </span>
+                </div>
+
+                <div class="info-card">
+                    <div class="info-icon">
+                       <i class="ri-lock-unlock-line"></i>
+                    </div>
+
+                    <span>
+                        Access your business securely from anywhere
+                    </span>
+                </div>
+
+            </div>
+
+        </div>
+    
+    </div>
+</section>
+<!--workflow section end-->
+
+<!--results section end-->
+<section class="results-section">
+
+    <div class="container">
+
+        <!-- Heading -->
+       <div class="heading-wrapper">
+
+            <span class="heading-tag">
+                Proven Results
+            </span>
+
+            <h2 class="heading-title heading-light">
+                <span>Operational Excellence</span> by the Numbers
+            </h2>
+
+            <p>
+                Streamline fleet management, reduce operational complexity, and gain real-time visibility across your transportation operations from day one.
+            </p>
+
+        </div>
+
+        <!-- Cards -->
+
+        <div class="results-grid">
+
+            <div class="result-card">
+
+                <div class="result-icon">
+                   <i class="ri-line-chart-line"></i>
+                </div>
+
+                <h3>
+                    Reduce Operational Costs
+                </h3>
+
+                <p>
+                    Cut fuel waste, prevent unnecessary maintenance, and
+                    streamline vendor payments to reduce total fleet spend.
+                </p>
+
+            </div>
+
+            <div class="result-card">
+
+                <div class="result-icon">
+                    <i class="ri-flashlight-line"></i>
+                </div>
+
+                <h3>
+                    Improve Fleet Productivity
+                </h3>
+
+                <p>
+                    Eliminate manual processes and give dispatchers
+                    real-time visibility to keep every vehicle earning.
+                </p>
+
+            </div>
+
+            <div class="result-card">
+
+                <div class="result-icon">
+                    <i class="ri-shield-line"></i>
+                </div>
+
+                <h3>
+                    Prevent Document Expiry
+                </h3>
+
+                <p>
+                    Automated alerts ensure no vehicle ever goes off-road
+                    due to an expired permit, fitness, or insurance.
+                </p>
+
+            </div>
+
+            <div class="result-card">
+
+                <div class="result-icon">
+                  <i class="ri-eye-line"></i>
+                </div>
+
+                <h3>
+                    Real-Time Visibility
+                </h3>
+
+                <p>
+                    Know exactly where every vehicle is, what it is doing,
+                    and how it is performing at any moment.
+                </p>
+
+            </div>
+
+            <div class="result-card">
+
+                <div class="result-icon">
+                    <i class="ri-pulse-ai-fill"></i>
+                </div>
+
+                <h3>
+                    Smart Reporting &amp; Analytics
+                </h3>
+
+                <p>
+                    Go beyond spreadsheets with custom dashboards that
+                    surface the insights your business actually needs.
+                </p>
+
+            </div>
+
+            <div class="result-card">
+
+                <div class="result-icon">
+                   <i class="ri-pie-chart-2-line"></i>
+                </div>
+
+                <h3>
+                    Faster Operational Decisions
+                </h3>
+
+                <p>
+                    Consolidated data and instant alerts mean your team can
+                    respond in seconds instead of hours.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+</section>
+<!--results section end-->
+
+<!--transport-section start-->
+<section class="transport-section">
+    <div class="container">
+
+        <!-- Left Content -->
+    <div class="transport-container">   
+        <div class="heading-wrapper heading-wrap-left">
+                <span class="heading-tag">
+                   Transportation Management
+                </span>
+
+                <h2 class="heading-title">
+                   Manage Your Transportation <span> Operations Efficiently </span>
+                </h2>
+
+                <p>
+                    Track vehicles, manage drivers, monitor fuel usage, handle maintenance schedules, and streamline daily transportation operations from one centralized cloud platform.
+                </p>
+
+            </div>
+        <!-- Right Side -->
+        <div class="transport-image-wrapper">
+            <img src="./Assets/images/tms-img.png" alt="Transportation Dashboard" class="transport-image">
+            <!-- Decorative Shape -->
+            <div class="transport-shape"></div>
+            <!-- Floating Card -->
+            <div class="transport-card">
+                <ul class="transport-list">
+                    <li>
+                        <i class="ri-checkbox-circle-line"></i>
+                        <span>Real-time fleet and vehicle monitoring</span>
+                    </li>
+
+                    <li>
+                        <i class="ri-checkbox-circle-line"></i>
+                        <span>Driver management and attendance tracking</span>
+                    </li>
+
+                    <li>
+                        <i class="ri-checkbox-circle-line"></i>
+                        <span>Fuel logs and expense management</span>
+                    </li>
+
+                    <li>
+                        <i class="ri-checkbox-circle-line"></i>
+                        <span>Maintenance alerts and service scheduling</span>
+                    </li>
+
+                    <li>
+                        <i class="ri-checkbox-circle-line"></i>
+                        <span>Vehicle documents and compliance tracking</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+     </div>
+    </div>
+</section>
+<!--transport section end-->
+
+<!--dl-faq section end-->
+<section id="faq" class="dl-faq-section">
+    <div class="container">
+        <div class="heading-wrapper">
+
+            <span class="heading-tag">
+                Got Questions?
+            </span>
+
+            <h2 class="heading-title">
+              Frequently Asked <span>Questions</span>
+            </h2>
+
+            <p>
+              Everything you need to know about setting up, calculating,
+                and managing diesel logs in your fleet operations.
+            </p>
+           <!-- Feature Filters -->
+             <div class="dl-faq-filters">
+                <button class="dl-faq-filter active" type="button">All</button>
+                <button class="dl-faq-filter" type="button">Billing</button>
+                <button class="dl-faq-filter" type="button">Calculations</button>
+                <button class="dl-faq-filter" type="button">Receipts</button>
+                <button class="dl-faq-filter" type="button">Corrections</button>
+                <button class="dl-faq-filter" type="button">Vehicle Tracking</button>
+                <button class="dl-faq-filter" type="button">Vendors</button>
+                <button class="dl-faq-filter" type="button">Reports</button>
+            </div>
+        </div>
+
+        <!-- FAQ List -->
+        <div class="dl-faq-list">
+
+            <!-- FAQ 1: Open by default -->
+            <div class="dl-faq-item active">
+                <button
+                    class="dl-faq-question"
+                    type="button"
+                    aria-expanded="true"
+                    aria-controls="dl-faq-answer-1"
+                >
+                    <span class="dl-faq-question-content">
+                        <span class="dl-faq-number">Q1</span>
+                        <span class="dl-faq-question-text">
+                            Can I add multiple vehicles under one diesel bill?
+                        </span>
+                    </span>
+
+                    <span class="dl-faq-arrow">
+                        <i class="ri-arrow-down-s-line"></i>
+                    </span>
+                </button>
+
+                <div class="dl-faq-answer" id="dl-faq-answer-1">
+                    <div class="dl-faq-answer-content">
+                        <p>
+                            Yes. The system allows you to add multiple vehicle
+                            diesel entries under one vendor bill while maintaining
+                            separate records for each purchase. You can simply
+                            click "Add Another Entry" to include as many vehicles
+                            as needed on a single supplier invoice.
+                        </p>
+
+                        <div class="dl-faq-topic">
+                            <span>Topic: Billing</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ 2 -->
+            <div class="dl-faq-item">
+                <button
+                    class="dl-faq-question"
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="dl-faq-answer-2"
+                >
+                    <span class="dl-faq-question-content">
+                        <span class="dl-faq-number">Q2</span>
+                        <span class="dl-faq-question-text">
+                            Do I need to calculate diesel amounts manually?
+                        </span>
+                    </span>
+
+                    <span class="dl-faq-arrow">
+                        <i class="ri-arrow-down-s-line"></i>
+                    </span>
+                </button>
+
+                <div class="dl-faq-answer" id="dl-faq-answer-2">
+                    <div class="dl-faq-answer-content">
+                        <p>
+                            Diesel amounts can be calculated using the recorded
+                            fuel quantity and rate, helping simplify purchase
+                            tracking and reduce manual calculations.
+                        </p>
+                        <div class="dl-faq-topic">
+                            <span>Topic: Calculations</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ 3 -->
+            <div class="dl-faq-item">
+                <button
+                    class="dl-faq-question"
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="dl-faq-answer-3"
+                >
+                    <span class="dl-faq-question-content">
+                        <span class="dl-faq-number">Q3</span>
+                        <span class="dl-faq-question-text">
+                            Can I upload diesel bills and receipts?
+                        </span>
+                    </span>
+
+                    <span class="dl-faq-arrow">
+                        <i class="ri-arrow-down-s-line"></i>
+                    </span>
+                </button>
+
+                <div class="dl-faq-answer" id="dl-faq-answer-3">
+                    <div class="dl-faq-answer-content">
+                        <p>
+                            Keep your diesel purchase documentation organized
+                            alongside your fuel records, where receipt uploads
+                            are supported by your system configuration.
+                        </p>
+                        <div class="dl-faq-topic">
+                            <span>Topic: Receipts</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ 4 -->
+            <div class="dl-faq-item">
+                <button
+                    class="dl-faq-question"
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="dl-faq-answer-4"
+                >
+                    <span class="dl-faq-question-content">
+                        <span class="dl-faq-number">Q4</span>
+                        <span class="dl-faq-question-text">
+                            Can I change a diesel bill after saving it?
+                        </span>
+                    </span>
+
+                    <span class="dl-faq-arrow">
+                        <i class="ri-arrow-down-s-line"></i>
+                    </span>
+                </button>
+
+                <div class="dl-faq-answer" id="dl-faq-answer-4">
+                    <div class="dl-faq-answer-content">
+                        <p>
+                            If editing is enabled for your account, you can
+                            update the relevant diesel bill details after
+                            saving. Check your access permissions if editing
+                            options are unavailable.
+                        </p>
+                        <div class="dl-faq-topic">
+                            <span>Topic: Corrections</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ 5 -->
+            <div class="dl-faq-item">
+                <button
+                    class="dl-faq-question"
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="dl-faq-answer-5"
+                >
+                    <span class="dl-faq-question-content">
+                        <span class="dl-faq-number">Q5</span>
+                        <span class="dl-faq-question-text">
+                            Can I check diesel purchases for a particular vehicle?
+                        </span>
+                    </span>
+
+                    <span class="dl-faq-arrow">
+                        <i class="ri-arrow-down-s-line"></i>
+                    </span>
+                </button>
+
+                <div class="dl-faq-answer" id="dl-faq-answer-5">
+                    <div class="dl-faq-answer-content">
+                        <p>
+                            Vehicle-specific diesel records help you review
+                            purchases associated with an individual vehicle
+                            and monitor its fuel expenses.
+                        </p>
+                        <div class="dl-faq-topic">
+                            <span>Topic: Vehicle Tracking</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ 6 -->
+            <div class="dl-faq-item">
+                <button
+                    class="dl-faq-question"
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="dl-faq-answer-6"
+                >
+                    <span class="dl-faq-question-content">
+                        <span class="dl-faq-number">Q6</span>
+                        <span class="dl-faq-question-text">
+                            Can I maintain diesel purchases from different suppliers?
+                        </span>
+                    </span>
+
+                    <span class="dl-faq-arrow">
+                        <i class="ri-arrow-down-s-line"></i>
+                    </span>
+                </button>
+
+                <div class="dl-faq-answer" id="dl-faq-answer-6">
+                    <div class="dl-faq-answer-content">
+                        <p>
+                            Record diesel purchases against the relevant
+                            supplier to keep vendor invoices and fuel
+                            purchasing information organized.
+                        </p>
+                        <div class="dl-faq-topic">
+                            <span>Topic: Vendors</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ 7 -->
+            <div class="dl-faq-item">
+                <button
+                    class="dl-faq-question"
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="dl-faq-answer-7"
+                >
+                    <span class="dl-faq-question-content">
+                        <span class="dl-faq-number">Q7</span>
+                        <span class="dl-faq-question-text">
+                            Can I download diesel expense reports?
+                        </span>
+                    </span>
+
+                    <span class="dl-faq-arrow">
+                        <i class="ri-arrow-down-s-line"></i>
+                    </span>
+                </button>
+
+                <div class="dl-faq-answer" id="dl-faq-answer-7">
+                    <div class="dl-faq-answer-content">
+                        <p>
+                            Review your available reporting and export options
+                            to download diesel expense information in the
+                            formats supported by your system.
+                        </p>
+                        <div class="dl-faq-topic">
+                            <span>Topic: Reports</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- FAQ Call to Action -->
+        <div class="dl-faq-cta">
+            <div class="dl-faq-cta-content">
+                <h3>Ready to Simplify Diesel Purchasing?</h3>
+                <p>
+                    Spend less time managing diesel records and more time
+                    managing your fleet business. Get full transparency on
+                    liters, rates, and vendor invoices today.
+                </p>
+            </div>
+
+            <button class="dl-faq-cta-button" type="button">
+                Get Started Now
+            </button>
+        </div>
+
+    </div>
+</section>
+<!--dl-faq section end-->
+
+<!--footer section start-->
+<footer class="footer">
+
+    <!-- Newsletter -->
+    <div class="footer-newsletter">
+        <div class="container">
+
+            <div class="newsletter-wrapper">
+
+                <div class="newsletter-content">
+                    <h2>Stay ahead of the curve</h2>
+                    <p>
+                        Fleet management insights, product updates, and industry news.
+                    </p>
+                </div>
+
+                <form class="newsletter-form">
+
+                    <input
+                        type="email"
+                        placeholder="Enter your email"
+                    >
+
+                    <button type="submit">
+                        Subscribe
+
+                       <i class="ri-arrow-right-line"></i>
+
+                    </button>
+
+                </form>
+
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Footer Main -->
+
+    <div class="footer-main">
+
+        <div class="container">
+
+            <div class="footer-grid">
+
+                <!-- Left -->
+
+                <div class="footer-about">
+
+                    <a href="#" class="footer-logo">
+                        <img src="./Assets/images/Laravel.svg" alt="footer-logo">
+                    </a>
+
+                    <p>
+                        The intelligent transportation platform that puts fleet directors
+                        in complete control of their operations.
+                    </p>
+
+                    <div class="footer-social">
+
+                        <a href="#">
+                            <i class="ri-facebook-fill"></i>
+                        </a>
+
+                        <a href="#">
+                            <i class="ri-instagram-line"></i>
+                        </a>
+
+                        <a href="#">
+                            <i class="ri-twitter-line"></i>
+                        </a>
+
+                        <a href="#">
+                            <i class="ri-linkedin-fill"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <!-- Product -->
+
+                <div class="footer-links">
+
+                    <h3>Product</h3>
+
+                      <ul>
+        <li>
+            <a href="features.html" class="footer-link">Features</a>
+        </li>
+
+        <li>
+            <a href="modules.html" class="footer-link">Modules</a>
+        </li>
+
+        <li>
+            <a href="solutions.html" class="footer-link">Solutions</a>
+        </li>
+
+        <li>
+            <a href="reports.html" class="footer-link">Reports</a>
+        </li>
+
+        <li>
+            <a href="contact.html" class="footer-link">Contact</a>
+        </li>
+    </ul>
+
+                </div>
+
+                <!-- Resources -->
+
+                <div class="footer-links">
+
+                    <h3>Resources</h3>
+
+                    <ul>
+
+                        <li><a href="documentation.html" class="footer-link">Documentation</a></li>
+
+                        <li><a href="faq.html" class="footer-link">FAQ</a></li>
+
+                        <li><a href="privacy-policy.html" class="footer-link">Privacy Policy</a></li>
+
+                    </ul>
+
+                </div>
+
+                <!-- Support -->
+
+                <div class="footer-links">
+
+                    <h3>Support</h3>
+
+                    <ul>
+
+                        <li><a href="#" class="footer-link">Help Center</a></li>
+
+                        <li><a href="#" class="footer-link">Status</a></li>
+
+                        <li><a href="#" class="footer-link">Security</a></li>
+
+                    </ul>
+
+                </div>
+
+                <!-- Contact -->
+
+                <div class="footer-contact">
+
+                    <div class="contact-item">
+
+                        <div class="icon">
+                            <i class="ri-mail-line"></i>
+                        </div>
+
+                        <div>
+
+                            <span>Email</span>
+
+                            <a href="#">
+                                hello@fleetwave.io
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                    <div class="contact-item">
+
+                        <div class="icon">
+                            <i class="ri-phone-fill"></i>
+                        </div>
+
+                        <div>
+
+                            <span>Call</span>
+
+                            <a href="#">
+                                +1 (512) 555-0142
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                    <div class="contact-item">
+
+                        <div class="icon">
+                            <i class="ri-map-pin-line"></i>
+                        </div>
+
+                        <div>
+
+                            <span>Location</span>
+
+                            <p>India</p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Bottom -->
+
+    <div class="footer-bottom">
+
+        <div class="container">
+
+            <div class="bottom-wrapper">
+
+                <p>
+                    © 2026 All rights reserved.
+                </p>
+
+                <ul>
+
+                    <li><a href="#">Privacy Policy</a></li>
+
+                    <li><a href="#">Terms of Service</a></li>
+
+                    <li><a href="#">Cookie Policy</a></li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</footer>
+<!--footer section end-->
+
+<script src="./Assets/js/custom.js"></script>
+</body>
+</html>

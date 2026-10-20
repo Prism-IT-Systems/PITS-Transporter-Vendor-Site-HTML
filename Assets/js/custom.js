@@ -445,3 +445,63 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
 });
+
+
+
+// js //
+document.addEventListener("DOMContentLoaded", function () {
+    const filterButtons = document.querySelectorAll(
+        ".dl-filter-btn"
+    );
+
+    const featureCards = document.querySelectorAll(
+        ".dl-feature-card"
+    );
+
+    filterButtons.forEach(function (button) {
+        button.addEventListener("click", function () {
+            const selectedFilter = button.dataset.filter;
+
+            filterButtons.forEach(function (filterButton) {
+                const isActive = filterButton === button;
+
+                filterButton.classList.toggle("is-active", isActive);
+                filterButton.setAttribute(
+                    "aria-pressed",
+                    String(isActive)
+                );
+            });
+
+            featureCards.forEach(function (card) {
+                const categories = (
+                    card.dataset.category || ""
+                ).split(/\s+/);
+
+                const shouldShow =
+                    selectedFilter === "all" ||
+                    categories.includes(selectedFilter);
+
+                card.classList.toggle(
+                    "is-hidden",
+                    !shouldShow
+                );
+
+                if (shouldShow) {
+                    card.classList.remove("is-entering");
+
+                    // Restart the entry animation.
+                    void card.offsetWidth;
+
+                    card.classList.add("is-entering");
+                }
+            });
+        });
+    });
+
+    filterButtons.forEach(function (button) {
+        button.setAttribute(
+            "aria-pressed",
+            String(button.classList.contains("is-active"))
+        );
+    });
+});
