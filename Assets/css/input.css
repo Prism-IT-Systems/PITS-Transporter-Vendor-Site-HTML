@@ -2466,8 +2466,94 @@ Card
 } 
 
 .modules-section .heading-wrapper {
-    max-width: 900px;
+    max-width: 990px;
     width: 100%;
+}
+
+/* Hide cards that do not match the selected category */
+.module-card[hidden] {
+    display: none !important;
+}
+
+/* Module card content layout */
+.module-card-content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+/* View Details button */
+.module-card-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    margin-top: 22px;
+    padding: 13px 16px;
+    border-top: 1px solid #e2e8f0;
+    border-radius: 0 0 10px 10px;
+    background: transparent;
+    color: #173b68;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background-color 0.25s ease,
+                color 0.25s ease,
+                border-color 0.25s ease;
+}
+
+.module-card-btn::after {
+    content: "\2192";
+    font-size: 17px;
+    transition: transform 0.25s ease;
+}
+
+.module-card-btn:hover {
+    background-color: #173b68;
+    border-top-color: #173b68;
+    color: #ffffff;
+}
+
+.module-card-btn:hover::after {
+    transform: translateX(4px);
+}
+
+.module-card-btn:focus-visible {
+    outline: 2px solid #dda619;
+    outline-offset: 3px;
+}
+
+/* Keep the button aligned at the bottom */
+.module-card-content > .module-card-btn {
+    margin-top: auto;
+    padding-top: 15px;
+}
+
+/* Optional: smooth appearance for filtered cards */
+.module-card {
+    animation: moduleCardFadeIn 0.3s ease both;
+}
+
+@keyframes moduleCardFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .module-card,
+    .module-card-btn,
+    .module-card-btn::after {
+        animation: none;
+        transition: none;
+    }
 }
 
 .solution-hero .btn-solution {
@@ -2808,6 +2894,10 @@ Card
 
 .module-hero-title {
     @apply m-0 max-w-[650px] text-[48px] font-bold leading-[1.08] tracking-[-1.5px] text-white;
+}
+
+.dl-simulator-header .heading-wrapper.heading-wrap-left {
+    @apply !mx-[0];
 }
 
 .module-hero-title span {

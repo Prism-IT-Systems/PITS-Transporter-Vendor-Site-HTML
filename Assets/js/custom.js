@@ -511,3 +511,81 @@ document.addEventListener("DOMContentLoaded", function () {
         );
     });
 });
+
+
+
+
+/* ========================================
+   MODULE CATEGORY FILTER - FIXED
+======================================== */
+
+(function () {
+    function initModuleTabs() {
+        const buttons = document.querySelectorAll(
+            ".modules-section .module-filter-btn"
+        );
+
+        const cards = document.querySelectorAll(
+            ".modules-section .modules-grid .module-card"
+        );
+
+        if (!buttons.length || !cards.length) {
+            console.warn("Module tabs: buttons or cards not found.");
+            return;
+        }
+
+        function applyFilter(category) {
+            buttons.forEach(function (button) {
+                const active = button.dataset.filter === category;
+
+                button.classList.toggle("is-active", active);
+                button.setAttribute("aria-pressed", String(active));
+            });
+
+            cards.forEach(function (card) {
+                const categories = (card.getAttribute("data-category") || "")
+                    .trim()
+                    .split(/\s+/);
+
+                card.hidden = !(
+                    category === "all" ||
+                    categories.includes(category)
+                );
+            });
+
+            console.log("Module filter selected:", category);
+        }
+
+        // Use event delegation to handle every tab click
+        document.addEventListener("click", function (event) {
+            const button = event.target.closest(
+                ".modules-section .module-filter-btn"
+            );
+
+            if (!button || !Array.from(buttons).includes(button)) {
+                return;
+            }
+
+            event.preventDefault();
+            applyFilter(button.dataset.filter);
+        });
+
+        // Initialize without simulating a click
+        const activeButton =
+            document.querySelector(
+                ".modules-section .module-filter-btn.is-active"
+            ) || buttons[0];
+
+        applyFilter(activeButton.dataset.filter);
+    }
+
+    if (document.readyState === "loading") {
+        document.addEventListener(
+            "DOMContentLoaded",
+            initModuleTabs,
+            { once: true }
+        );
+    } else {
+        initModuleTabs();
+    }
+})();
