@@ -12,6 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
         mobileMenu.classList.add("active");
         menuOverlay.classList.add("active");
         document.body.classList.add("menu-open");
+        menuToggle.setAttribute("aria-expanded", "true");
     }
 
     function closeMenu() {
@@ -19,7 +20,14 @@ document.addEventListener("DOMContentLoaded", function () {
         mobileMenu.classList.remove("active");
         menuOverlay.classList.remove("active");
         document.body.classList.remove("menu-open");
+        menuToggle.setAttribute("aria-expanded", "false");
     }
+
+    if (!menuToggle || !mobileMenu || !menuOverlay) {
+        return;
+    }
+
+    menuToggle.setAttribute("aria-expanded", "false");
 
     menuToggle.addEventListener("click", function () {
         if (mobileMenu.classList.contains("active")) {
@@ -48,8 +56,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
 });
-
-// Swiper pagination js //
 
 // ========================================
 // Feature Slider

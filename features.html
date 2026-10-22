@@ -2,29 +2,45 @@
 <html lang="en">
 
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Features | TransportDesk Fleet Management Platform</title>
+    <meta name="description" content="Explore TransportDesk features for fleet tracking, driver management, fuel logs, maintenance, and operational visibility in one platform.">
+    <link rel="canonical" href="http://transportdesk.net/features.html">
+    <meta name="robots" content="index, follow">
 
-    <title>Document</title>
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="TransportDesk">
+    <meta property="og:title" content="Features | TransportDesk Fleet Management Platform">
+    <meta property="og:description" content="Explore TransportDesk features for fleet tracking, driver management, fuel logs, maintenance, and operational visibility in one platform.">
+    <meta property="og:url" content="http://transportdesk.net/features.html">
+    <meta property="og:image" content="http://transportdesk.net/Assets/images/Hero-section-bg.webp">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Features | TransportDesk Fleet Management Platform">
+    <meta name="twitter:description" content="Explore TransportDesk features for fleet tracking, driver management, fuel logs, maintenance, and operational visibility in one platform.">
+    <meta name="twitter:image" content="http://transportdesk.net/Assets/images/Hero-section-bg.webp">
+
+    <link rel="icon" href="./Assets/images/favicon.ico" sizes="any">
+    <link rel="icon" type="image/png" href="./Assets/images/favicon-32.png" sizes="32x32">
+    <link rel="apple-touch-icon" href="./Assets/images/apple-touch-icon.png">
+
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
 
     <!-- Remix Icon -->
     <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" />
-
-    <!-- Swiper -->
-    <link rel="stylesheet"
-        href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
-
-    <!-- Lenis -->
-    <link rel="stylesheet"
-        href="https://unpkg.com/lenis@1.3.23/dist/lenis.css">
+        href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css"
+        media="print" onload="this.media='all'" />
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" /></noscript>
 
     <!-- Tailwind Output CSS -->
-     <link href="./Assets/css/output.css" rel="stylesheet">
+    <link href="./Assets/css/output.min.css" rel="stylesheet">
 </head>
-
 <body>
+
+<a class="skip-link" href="#main-content">Skip to main content</a>
+
 
 <!--Header Section start-->
 <header class="main-header">
@@ -32,8 +48,8 @@
 
         <div class="header-inner">
 
-            <a href="#" class="header-logo">
-                 <img src="Assets/images/transportdesk-logo.svg" alt="Logo">
+            <a href="index.html" class="header-logo">
+                 <img src="Assets/images/transportdesk-logo.svg" alt="TransportDesk" width="252" height="84">
             </a>
 
             <nav class="main-navigation" id="mobileMenu">
@@ -42,24 +58,24 @@
 
                   <ul class="navigation-links">
                     <li><a href="index.html" class="navigation-link">Home</a></li>
-                    <li><a href="features.html" class="navigation-link">Features</a></li>
+                    <li><a href="features.html" class="navigation-link active" aria-current="page">Features</a></li>
                     <li><a href="reports.html" class="navigation-link">Resources</a></li>
                     <li><a href="contact.html" class="navigation-link">Contact</a></li>
                 </ul>
 
                 <div class="mobile-header-right">
                     <a href="#" class="login-btn">Login</a>
-                    <a href="#" class="demo-btn">Book Demo</a>
+                    <a href="demo.html" class="demo-btn">Book Demo</a>
                 </div>
 
             </nav>
 
             <div class="header-right">
                 <a href="#" class="login-btn">Login</a>
-                <a href="#" class="demo-btn">Book Demo</a>
+                <a href="demo.html" class="demo-btn">Book Demo</a>
             </div>
 
-            <button class="menu-toggle" id="menuToggle" aria-label="Toggle Menu">
+            <button class="menu-toggle" id="menuToggle" type="button" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobileMenu">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -74,6 +90,8 @@
 <div class="menu-overlay" id="menuOverlay"></div>
 <!--Header section End-->
 
+
+<main id="main-content">
 <!--Hero section Start-->
 <section class="hero-section sub-hero features-hero">
     <div class="container">
@@ -235,7 +253,10 @@
     <div class="slide active" style="background-image:url('https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1400&q=80');">
       <div class="slide-content">
         <div class="slide-icon">
-          <img src="Assets/images/slider-icon.png">
+          <picture>
+                    <source srcset="Assets/images/slider-icon.webp" type="image/webp">
+                    <img src="Assets/images/slider-icon.png" alt="" loading="lazy" decoding="async" aria-hidden="true">
+                </picture>
         </div>
         <h2>Smart Listing &amp; Organization</h2>
         <p>Access all transporter records in a structured list view with easy navigation, filtering, and organized data management.</p>
@@ -250,7 +271,10 @@
     <div class="slide" style="background-image:url('https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?auto=format&fit=crop&w=1400&q=80');">
       <div class="slide-content">
         <div class="slide-icon">
-         <img src="Assets/images/slider-icon.png">
+         <picture>
+                    <source srcset="Assets/images/slider-icon.webp" type="image/webp">
+                    <img src="Assets/images/slider-icon.png" alt="" loading="lazy" decoding="async" aria-hidden="true">
+                </picture>
         </div>
         <h2>Real-Time Fleet Tracking</h2>
         <p>Monitor every vehicle's live location, speed, and route progress from a single dashboard.</p>
@@ -265,7 +289,10 @@
     <div class="slide" style="background-image:url('https://images.unsplash.com/photo-1553413077-190dd305871c?auto=format&fit=crop&w=1400&q=80');">
       <div class="slide-content">
         <div class="slide-icon">
-          <img src="Assets/images/slider-icon.png">
+          <picture>
+                    <source srcset="Assets/images/slider-icon.webp" type="image/webp">
+                    <img src="Assets/images/slider-icon.png" alt="" loading="lazy" decoding="async" aria-hidden="true">
+                </picture>
         </div>
         <h2>Automated Compliance Checks</h2>
         <p>Stay ahead of regulations with automatic document verification and renewal reminders.</p>
@@ -321,6 +348,8 @@
 </section>
 <!--Banner section end-->
 
+</main>
+
 <!--footer section start-->
 <footer class="footer">
 
@@ -341,7 +370,7 @@
 
                     <input
                         type="email"
-                        placeholder="Enter your email"
+                        placeholder="Enter your email" aria-label="Email address for newsletter"
                     >
 
                     <button type="submit">
@@ -371,7 +400,7 @@
                 <div class="footer-about">
 
                     <a href="#" class="footer-logo">
-                        <img src="Assets/images/transportdesk-logo-dark.svg" alt="footer-logo">
+                        <img src="Assets/images/transportdesk-logo-dark.svg" alt="TransportDesk" width="252" height="84">
                     </a>
 
                     <p>
@@ -381,21 +410,13 @@
 
                     <div class="footer-social">
 
-                        <a href="#">
-                            <i class="ri-facebook-fill"></i>
-                        </a>
+                        <a href="#" aria-label="Facebook"><i class="ri-facebook-fill"></i></a>
 
-                        <a href="#">
-                            <i class="ri-instagram-line"></i>
-                        </a>
+                        <a href="#" aria-label="Instagram"><i class="ri-instagram-line"></i></a>
 
-                        <a href="#">
-                            <i class="ri-twitter-line"></i>
-                        </a>
+                        <a href="#" aria-label="Twitter"><i class="ri-twitter-line"></i></a>
 
-                        <a href="#">
-                            <i class="ri-linkedin-fill"></i>
-                        </a>
+                        <a href="#" aria-label="LinkedIn"><i class="ri-linkedin-fill"></i></a>
 
                     </div>
 
@@ -545,7 +566,7 @@
 
                 <ul>
 
-                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="privacy-policy.html">Privacy Policy</a></li>
 
                     <li><a href="#">Terms of Service</a></li>
 
@@ -562,6 +583,6 @@
 </footer>
 <!--footer section end-->
 
-<script src="./Assets/js/custom.js"></script>
+<script src="./Assets/js/custom.min.js" defer></script>
 </body>
 </html>
