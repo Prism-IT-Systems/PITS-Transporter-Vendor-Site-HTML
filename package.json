@@ -3,7 +3,11 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "dev": "tailwindcss -i ./Assets/css/input.css -o ./Assets/css/output.css --watch"
+    "dev": "tailwindcss -i ./Assets/css/input.css -o ./Assets/css/output.css --watch",
+    "build:css": "tailwindcss -i ./Assets/css/input.css -o ./Assets/css/output.css --minify",
+    "build:css:fallback": "python scripts/patch-output-css.py",
+    "optimize:images": "python scripts/convert-webp.py",
+    "optimize:html": "python scripts/optimize-html.py"
   },
   "keywords": [],
   "author": "",
