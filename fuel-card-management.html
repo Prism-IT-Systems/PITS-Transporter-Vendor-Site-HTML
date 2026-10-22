@@ -1,0 +1,1114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Fuel Card Management Module | TransportDesk Fleet Solutions</title>
+    <meta name="description"
+        content="Organize fuel-card transactions imported from card providers. Upload statements, review transactions, link vehicles and export filtered records.">
+
+    <!-- Remix Icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" />
+
+    <!-- Swiper -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+
+    <!-- Lenis -->
+    <link rel="stylesheet" href="https://unpkg.com/lenis@1.3.23/dist/lenis.css">
+
+    <!-- Tailwind Output CSS -->
+    <link href="./Assets/css/output.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <!--Header Section start-->
+    <header class="main-header">
+        <div class="container">
+
+            <div class="header-inner">
+
+                <a href="index.html" class="header-logo">
+                    <img src="Assets/images/transportdesk-logo.svg" alt="Logo">
+                </a>
+
+                <nav class="main-navigation" id="mobileMenu">
+
+                    <div class="menu-circle"></div>
+
+                    <ul class="navigation-links">
+                        <li><a href="index.html" class="navigation-link">Home</a></li>
+                        <li><a href="features.html" class="navigation-link">Features</a></li>
+                        <li><a href="modules.html" class="navigation-link active">Modules</a></li>
+                        <li><a href="reports.html" class="navigation-link">Resources</a></li>
+                        <li><a href="contact.html" class="navigation-link">Contact</a></li>
+                    </ul>
+
+                    <div class="mobile-header-right">
+                        <a href="#" class="login-btn">Login</a>
+                        <a href="#" class="demo-btn">Book Demo</a>
+                    </div>
+
+                </nav>
+
+                <div class="header-right">
+                    <a href="#" class="login-btn">Login</a>
+                    <a href="#" class="demo-btn">Book Demo</a>
+                </div>
+
+                <button class="menu-toggle" id="menuToggle" aria-label="Toggle Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+            </div>
+
+        </div>
+    </header>
+
+    <!-- Add this after header -->
+    <div class="menu-overlay" id="menuOverlay"></div>
+    <!--Header section End-->
+
+
+    <section id="overview" class="dl-overview-section">
+        <div class="dl-overview-glow"></div>
+        <div class="dl-overview-pattern"></div>
+        <div class="container">
+            <div class="dl-overview-grid">
+                <div class="dl-overview-content">
+                    <div class="dl-overview-badge">
+                        <span class="dl-status-dot"></span>
+                        <span>Fleet Management</span>
+                        <span class="dl-badge-divider">|</span>
+                        <span class="dl-badge-highlight">Fuel Card Management Module</span>
+                    </div>
+                    <h1 class="dl-overview-title">Fuel Card <span class="dl-gradient-text">Management</span> Module</h1>
+                    <p class="dl-overview-description">Instead of manually typing every fuel purchase, upload a
+                        statement, review transaction details, connect transactions to vehicles and export the records
+                        for reporting.</p>
+                    <div class="dl-overview-actions">
+                        <button type="button" class="btn-primary"
+                            onclick="document.getElementById('simulator').scrollIntoView({behavior:'smooth'})">
+                            <span>See Practical Example</span><i class="ri-arrow-right-line"></i></button>
+                        <button type="button" class="dl-btn-demo"
+                            onclick="document.getElementById('demo').scrollIntoView({behavior:'smooth'})">
+                            <span class="dl-play-icon"><i class="ri-play-fill"></i></span><span>Watch Demo
+                                Video</span></button>
+                    </div>
+                    <div class="dl-overview-stats">
+                        <div class="dl-stat-item">
+                            <div class="dl-stat-number ">6</div>
+                            <div class="dl-stat-label">Simple Steps</div>
+                        </div>
+                        <div class="dl-stat-item">
+                            <div class="dl-stat-number dl-stat-red">12</div>
+                            <div class="dl-stat-label">Key Features</div>
+                        </div>
+                        <div class="dl-stat-item">
+                            <div class="dl-stat-number dl-stat-green">10 MB</div>
+                            <div class="dl-stat-label">Max Statement Size</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="dl-overview-visual">
+                    <div class="dl-visual-card">
+                        <img src="Assets/images/hero_fleet_dispatch_1792482270822.jpg"
+                            alt="Transportation Fleet Dispatch Logistics Center" class="dl-visual-image">
+                        <div class="dl-visual-overlay"></div>
+                        <div class="dl-visual-topbar">
+                            <div class="dl-live-label"><span class="dl-live-dot"></span><span>Fuel Card Transaction
+                                    Example</span></div>
+                            <div class="dl-fuel-rate">SALE</div>
+                        </div>
+                        <div class="dl-fuel-slip">
+                            <div class="dl-slip-header">
+                                <span class="dl-slip-title">IOCL · DIESEL · GJ15SV1900</span>
+                                <span class="dl-slip-status">Example</span>
+                            </div>
+                            <div class="dl-slip-stats">
+                                <div class="dl-slip-stat"><span class="dl-slip-label">Litres</span><span
+                                        class="dl-slip-value ">13.230</span></div>
+                                <div class="dl-slip-stat"><span class="dl-slip-label">Rate</span><span
+                                        class="dl-slip-value dl-slip-red">₹97.58</span></div>
+                                <div class="dl-slip-stat"><span class="dl-slip-label">Amount</span><span
+                                        class="dl-slip-value dl-slip-green">₹1,291.00</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="dl-trusted-section">
+        <div class="dl-trusted-heading"><span>Fuel-Card Statements, Vehicle Links and Transaction Details in One
+                Place</span></div>
+        <div class="dl-trusted-marquee">
+            <div class="dl-trusted-fade dl-trusted-fade-left"></div>
+            <div class="dl-trusted-fade dl-trusted-fade-right"></div>
+            <div class="dl-trusted-track">
+                <div class="dl-trusted-group">
+                    <div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span
+                            class="dl-trusted-name">Statement Import</span></div>
+                    <div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">BPCL
+                            SmartFleet</span></div>
+                    <div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">HPCL
+                            Drive Track Plus</span></div>
+                    <div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">IOCL
+                            Statements</span></div>
+                    <div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span
+                            class="dl-trusted-name">Column Mapping</span></div>
+                    <div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">Fuel
+                            Card Vendors</span></div>
+                    <div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span
+                            class="dl-trusted-name">Transaction Details</span></div>
+                    <div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">Smart
+                            Filters</span></div>
+                    <div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span
+                            class="dl-trusted-name">Summary Totals</span></div>
+                    <div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span
+                            class="dl-trusted-name">Unlinked Vehicle Alerts</span></div>
+                    <div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">Link
+                            Matching</span></div>
+                    <div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">CSV
+                            Export</span></div>
+                </div>
+                <div class="dl-trusted-group" aria-hidden="true">
+                    <div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span
+                            class="dl-trusted-name">Statement Import</span></div>
+                    <div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">BPCL
+                            SmartFleet</span></div>
+                    <div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">HPCL
+                            Drive Track Plus</span></div>
+                    <div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">IOCL
+                            Statements</span></div>
+                    <div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span
+                            class="dl-trusted-name">Column Mapping</span></div>
+                    <div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">Fuel
+                            Card Vendors</span></div>
+                    <div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span
+                            class="dl-trusted-name">Transaction Details</span></div>
+                    <div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">Smart
+                            Filters</span></div>
+                    <div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span
+                            class="dl-trusted-name">Summary Totals</span></div>
+                    <div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span
+                            class="dl-trusted-name">Unlinked Vehicle Alerts</span></div>
+                    <div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">Link
+                            Matching</span></div>
+                    <div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">CSV
+                            Export</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="demo" class="dl-demo-section">
+        <div class="dl-demo-glow"></div>
+        <div class="dl-container">
+            <div class="heading-wrapper">
+                <span class="heading-tag">Interactive Video Demonstration</span>
+                <h2 class="heading-title">Watch How <span>Fuel Card Management</span> Works</h2>
+                <p>Watch the demonstration to learn how to upload a fuel-card statement, match its columns, review
+                    imported transactions, link vehicles and export filtered records.</p>
+
+            </div>
+            <div class="dl-demo-grid">
+                <div class="dl-demo-video-column">
+                    <div class="dl-video-card">
+                        <div class="dl-video-toolbar">
+                            <div class="dl-video-toolbar-left">
+                                <span class="dl-window-dot dl-dot-red"></span><span
+                                    class="dl-window-dot dl-dot-yellow"></span><span
+                                    class="dl-window-dot dl-dot-green"></span>
+                                <span class="dl-video-filename">Fuel Card Management Module Demo</span>
+                            </div>
+                        </div>
+                        <div class="dl-video-preview">
+                            <img src="Assets/images/dashboard.png"
+                                alt="Fuel Card Management Module demonstration video preview"
+                                class="dl-video-thumbnail">
+                            <div class="dl-video-overlay"></div>
+                            <button type="button" class="dl-video-play" aria-label="Play demonstration video"><i
+                                    class="ri-play-fill"></i><span class="dl-video-ping"></span></button>
+                            <div class="dl-video-meta">
+                                <div class="dl-video-meta-left">
+                                    <span class="dl-video-current-chapter">[Place Fuel Card Management Demo Video
+                                        Here]</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="dl-video-footer">
+                            <div class="dl-video-footer-left">
+                                <button type="button" class="dl-watch-button"><i
+                                        class="ri-play-circle-line"></i><span>Watch Full Walkthrough</span></button>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="simulator" class="dl-simulator-section">
+        <div class="dl-container">
+            <div class="dl-simulator-header">
+                <div class="heading-wrapper heading-wrap-left">
+                    <span class="heading-tag">Practical Example</span>
+                    <h2 class="heading-title">Practical Example: <span>Importing Fuel Card Transactions</span></h2>
+                    <p>A fleet accounts user imports a July 2026 fuel-card statement, reviews a diesel sale, checks
+                        vehicle matching, and filters the transaction list. The following values are taken from the
+                        example screens; the demonstration does not create or charge a fuel card.</p>
+
+                </div>
+            </div>
+            <div class="dl-calculator-panel">
+                <div class="dl-bill-master">
+                    <div class="dl-bill-master-header">
+                        <div class="dl-bill-heading"><span>Step 1: Open Fuel Card Transactions</span></div>
+                    </div>
+                </div>
+                <div class="dl-calculator-footer">
+                    <div class="dl-documentation-note"><i class="ri-information-line"></i><span>Open the Fuel Card
+                            Transactions page. The list shows date, provider / vehicle, card / product, litres, rate,
+                            amount and category. Each row has a View action. Summary figures above the table show
+                            Records, Total Litres and Total Amount for the listed records.</span></div>
+                </div>
+
+
+
+            </div>
+            <br>
+            <div class="dl-calculator-panel">
+                <div class="dl-bill-master">
+                    <div class="dl-bill-master-header">
+                        <div class="dl-bill-heading"><span>Step 2: Filter the List</span></div>
+                    </div>
+                </div>
+                <div class="dl-calculator-footer">
+                    <div class="dl-documentation-note"><i class="ri-information-line"></i><span>Use Provider, Category,
+                            Product, Vehicle, Card Number, From and To date fields, then click Filter. Use Reset to
+                            clear filters, or Export to download the records. Example: filter Provider = IOCL, Product =
+                            Diesel and Vehicle = GJ15SV1900.</span></div>
+                </div>
+
+
+
+            </div>
+            <br>
+            <div class="dl-calculator-panel">
+                <div class="dl-bill-master">
+                    <div class="dl-bill-master-header">
+                        <div class="dl-bill-heading"><span>Step 3: Import a Provider Statement</span></div>
+                    </div>
+                </div>
+                <div class="dl-calculator-footer">
+                    <div class="dl-documentation-note"><i class="ri-information-line"></i><span>Click Import Statements.
+                            Choose a statement in .xlsx, .xls or .csv format (maximum 10 MB), then click Continue.
+                            Supported layouts include BPCL SmartFleet, HPCL Drive Track Plus and IOCL; other compatible
+                            formats can require column mapping. Card providers are registered in Vendors with type Fuel
+                            Card.</span></div>
+                </div>
+
+
+
+            </div>
+            <br>
+            <div class="dl-calculator-panel">
+                <div class="dl-bill-master">
+                    <div class="dl-bill-master-header">
+                        <div class="dl-bill-heading"><span>Step 4: Open a Transaction</span></div>
+                    </div>
+                </div>
+                <div class="dl-calculator-footer">
+                    <div class="dl-documentation-note"><i class="ri-information-line"></i><span>Click the View (eye)
+                            icon on a fuel sale row. The detail window can display the following fields:</span></div>
+                </div>
+                <div class="dl-table-wrapper">
+                    <table class="dl-vehicle-table">
+                        <thead>
+                            <tr>
+                                <th>Field</th>
+                                <th>Example / Explanation</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Transaction ID</td>
+                                <td>iocl:1388754583</td>
+                            </tr>
+                            <tr>
+                                <td>Provider / Vendor</td>
+                                <td>IOCL / IOCL Card</td>
+                            </tr>
+                            <tr>
+                                <td>Category</td>
+                                <td>SALE</td>
+                            </tr>
+                            <tr>
+                                <td>Date</td>
+                                <td>31-07-2026 22:24:02</td>
+                            </tr>
+                            <tr>
+                                <td>Vehicle</td>
+                                <td>GJ15SV1900</td>
+                            </tr>
+                            <tr>
+                                <td>Card Number</td>
+                                <td>7118011219471357</td>
+                            </tr>
+                            <tr>
+                                <td>Product</td>
+                                <td>DIESEL</td>
+                            </tr>
+                            <tr>
+                                <td>Mode / Type</td>
+                                <td>CARD / Sale</td>
+                            </tr>
+                            <tr>
+                                <td>Litres</td>
+                                <td>13.230</td>
+                            </tr>
+                            <tr>
+                                <td>Rate</td>
+                                <td>₹97.58</td>
+                            </tr>
+                            <tr>
+                                <td>Amount</td>
+                                <td>₹1,291.00</td>
+                            </tr>
+                            <tr>
+                                <td>Credit / Debit</td>
+                                <td>Debit</td>
+                            </tr>
+                            <tr>
+                                <td>Station</td>
+                                <td>VISHWANATH PETROLEUM</td>
+                            </tr>
+                            <tr>
+                                <td>City / State</td>
+                                <td>DIST-ANAND / GUJARAT</td>
+                            </tr>
+                            <tr>
+                                <td>Internal Note</td>
+                                <td>Optional note saved with this imported transaction</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+
+            </div>
+            <br>
+            <div class="dl-calculator-panel">
+                <div class="dl-bill-master">
+                    <div class="dl-bill-master-header">
+                        <div class="dl-bill-heading"><span>Step 5: Save an Internal Note</span></div>
+                    </div>
+                </div>
+                <div class="dl-calculator-footer">
+                    <div class="dl-documentation-note"><i class="ri-information-line"></i><span>In the detail window,
+                            add an internal note if needed and click Save note. For example: “Fuel purchase checked
+                            against vehicle log.” This lets users add context to an imported entry without manually
+                            re-entering the original transaction.</span></div>
+                </div>
+
+
+
+            </div>
+            <br>
+            <div class="dl-calculator-panel">
+                <div class="dl-bill-master">
+                    <div class="dl-bill-master-header">
+                        <div class="dl-bill-heading"><span>Step 6: Understand Other Transaction Categories</span></div>
+                    </div>
+                </div>
+                <div class="dl-calculator-footer">
+                    <div class="dl-documentation-note"><i class="ri-information-line"></i><span>The list also includes
+                            transactions such as RECHARGE. In the example list, a BPCL RECHARGE shows ₹40,000.00 and
+                            zero litres, so it should not be described as diesel filled into a vehicle. SALE rows show
+                            fuel purchase details when supplied by the statement.</span></div>
+                </div>
+
+
+
+            </div>
+            <br>
+            <div class="dl-calculator-panel">
+                <div class="dl-bill-master">
+                    <div class="dl-bill-master-header">
+                        <div class="dl-bill-heading"><span>Step 7: Review Unlinked Vehicles</span></div>
+                    </div>
+                </div>
+                <div class="dl-calculator-footer">
+                    <div class="dl-documentation-note"><i class="ri-information-line"></i><span>An alert above the list
+                            identifies imported transactions that are not linked to fleet vehicles. Use Show unlinked to
+                            inspect them, then Link matching after matching vehicles have been added or corrected. An
+                            orange link indicator by a vehicle number helps highlight the matching status; do not assume
+                            every imported number is already linked.</span></div>
+                </div>
+
+
+
+            </div>
+            <br>
+            <div class="dl-calculator-panel">
+                <div class="dl-bill-master">
+                    <div class="dl-bill-master-header">
+                        <div class="dl-bill-heading"><span>Final Result</span></div>
+                    </div>
+                </div>
+                <div class="dl-calculator-footer">
+                    <div class="dl-documentation-note"><i class="ri-information-line"></i><span>After the import, the
+                            accounts team can review each fuel-card transaction with provider, vehicle, card, quantity,
+                            rate, amount and station details; add notes; resolve unmatched vehicle links; and export
+                            filtered records. Figures shown in the screenshots are live examples, not values every
+                            account will display.</span></div>
+                </div>
+
+
+
+            </div>
+            <br>
+
+            <div class="dl-calculator-footer">
+                <div class="dl-supported-formats">Figures shown are examples, not values every account will display.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="features" class="dl-features-section">
+        <div class="container">
+            <div class="heading-wrapper">
+                <span class="heading-tag">Complete solution</span>
+                <h2 class="heading-title">Key Module <span>Features</span></h2>
+                <p>Everything you need to import, review, link and export fuel-card transactions.</p>
+                <div class="dl-features-filters"><button type="button" class="dl-filter-btn is-active"
+                        data-filter="all">All Features (12)</button><button type="button" class="dl-filter-btn"
+                        data-filter="import">Import &amp; Setup</button><button type="button" class="dl-filter-btn"
+                        data-filter="review">Review &amp; Filter</button><button type="button" class="dl-filter-btn"
+                        data-filter="link">Link, Notes &amp; Export</button></div>
+            </div>
+            <div class="dl-features-grid">
+                <article class="dl-feature-card" data-category="import">
+                    <div class="dl-feature-card-content">
+                        <div class="dl-feature-icon"><i class="ri-file-upload-line"></i></div>
+                        <div class="dl-feature-card-heading">
+                            <h3>Statement Import</h3>
+                        </div>
+                        <p>Import fuel-card transaction statements instead of entering every transaction manually.</p>
+                    </div>
+                </article>
+                <article class="dl-feature-card" data-category="import">
+                    <div class="dl-feature-card-content">
+                        <div class="dl-feature-icon"><i class="ri-gas-station-line"></i></div>
+                        <div class="dl-feature-card-heading">
+                            <h3>Supported Provider Formats</h3>
+                        </div>
+                        <p>Recognize supported BPCL, HPCL and IOCL statement formats.</p>
+                    </div>
+                </article>
+                <article class="dl-feature-card" data-category="import">
+                    <div class="dl-feature-card-content">
+                        <div class="dl-feature-icon"><i class="ri-layout-column-line"></i></div>
+                        <div class="dl-feature-card-heading">
+                            <h3>Column Mapping</h3>
+                        </div>
+                        <p>Map columns for other compatible statement layouts.</p>
+                    </div>
+                </article>
+                <article class="dl-feature-card" data-category="import">
+                    <div class="dl-feature-card-content">
+                        <div class="dl-feature-icon"><i class="ri-bank-card-line"></i></div>
+                        <div class="dl-feature-card-heading">
+                            <h3>Fuel Card Vendors</h3>
+                        </div>
+                        <p>Maintain fuel-card providers through Fuel Card-type vendor records.</p>
+                    </div>
+                </article>
+                <article class="dl-feature-card" data-category="review">
+                    <div class="dl-feature-card-content">
+                        <div class="dl-feature-icon"><i class="ri-list-check-2"></i></div>
+                        <div class="dl-feature-card-heading">
+                            <h3>Transaction Listing</h3>
+                        </div>
+                        <p>View transaction date, provider, vehicle, card, product, litres, rate, amount and category.
+                        </p>
+                    </div>
+                </article>
+                <article class="dl-feature-card" data-category="review">
+                    <div class="dl-feature-card-content">
+                        <div class="dl-feature-icon"><i class="ri-map-pin-2-line"></i></div>
+                        <div class="dl-feature-card-heading">
+                            <h3>Station and Transaction Details</h3>
+                        </div>
+                        <p>Review additional station, location, transaction ID and debit/credit details when present.
+                        </p>
+                    </div>
+                </article>
+                <article class="dl-feature-card" data-category="review">
+                    <div class="dl-feature-card-content">
+                        <div class="dl-feature-icon"><i class="ri-filter-3-line"></i></div>
+                        <div class="dl-feature-card-heading">
+                            <h3>Smart Filters</h3>
+                        </div>
+                        <p>Filter by provider, category, product, vehicle, card number and date range.</p>
+                    </div>
+                </article>
+                <article class="dl-feature-card" data-category="review">
+                    <div class="dl-feature-card-content">
+                        <div class="dl-feature-icon"><i class="ri-pie-chart-2-line"></i></div>
+                        <div class="dl-feature-card-heading">
+                            <h3>Summary Totals</h3>
+                        </div>
+                        <p>View summary totals for filtered fuel-sale transactions: count, litres and amount.</p>
+                    </div>
+                </article>
+                <article class="dl-feature-card" data-category="link">
+                    <div class="dl-feature-card-content">
+                        <div class="dl-feature-icon"><i class="ri-link-unlink"></i></div>
+                        <div class="dl-feature-card-heading">
+                            <h3>Unlinked Vehicle Detection</h3>
+                        </div>
+                        <p>Detect imported records that have not been linked to a fleet vehicle.</p>
+                    </div>
+                </article>
+                <article class="dl-feature-card" data-category="link">
+                    <div class="dl-feature-card-content">
+                        <div class="dl-feature-icon"><i class="ri-links-line"></i></div>
+                        <div class="dl-feature-card-heading">
+                            <h3>Link Matching</h3>
+                        </div>
+                        <p>Run Link Matching after an appropriate vehicle record is added or corrected.</p>
+                    </div>
+                </article>
+                <article class="dl-feature-card" data-category="link">
+                    <div class="dl-feature-card-content">
+                        <div class="dl-feature-icon"><i class="ri-sticky-note-line"></i></div>
+                        <div class="dl-feature-card-heading">
+                            <h3>Internal Notes</h3>
+                        </div>
+                        <p>Update notes on imported transactions where permitted.</p>
+                    </div>
+                </article>
+                <article class="dl-feature-card" data-category="link">
+                    <div class="dl-feature-card-content">
+                        <div class="dl-feature-icon"><i class="ri-file-excel-2-line"></i></div>
+                        <div class="dl-feature-card-heading">
+                            <h3>CSV Export</h3>
+                        </div>
+                        <p>Export filtered transactions to CSV for accounts and reports.</p>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="dl-workflow-section">
+        <div class="container">
+            <div class="heading-wrapper heading-wrap-left">
+                <span class="heading-tag">Step-by-Step Workflow</span>
+                <h2 class="heading-title">How Does the <span>Fuel Card Module</span> Work?</h2>
+                <p>Six simple steps take you from opening Fuel Cards to exporting filtered records.</p>
+
+            </div>
+            <div class="dl-workflow-grid">
+                <article class="dl-workflow-card">
+                    <div class="dl-workflow-card-content">
+                        <div class="dl-workflow-card-top"><span class="dl-workflow-number">01</span>
+                            <div class="dl-workflow-icon"><i class="ri-layout-grid-line"></i></div>
+                        </div>
+                        <h3 class="dl-workflow-card-title">Open Fuel Cards</h3>
+                        <p class="dl-workflow-card-description">Open Fuel Cards to see the imported transactions. The
+                            list displays date, provider and vehicle, card or product, litres, rate, amount and
+                            category. Use provider, category, product, vehicle, card number and date filters to find an
+                            entry.</p>
+                    </div>
+                    <div class="dl-workflow-card-footer"><span>Step 01</span></div>
+                </article>
+                <article class="dl-workflow-card">
+                    <div class="dl-workflow-card-content">
+                        <div class="dl-workflow-card-top"><span class="dl-workflow-number">02</span>
+                            <div class="dl-workflow-icon"><i class="ri-store-2-line"></i></div>
+                        </div>
+                        <h3 class="dl-workflow-card-title">Prepare the Card Provider</h3>
+                        <p class="dl-workflow-card-description">Card companies are maintained in Vendors using the Fuel
+                            Card vendor type. Make sure the relevant fuel-card provider exists before importing its
+                            statement.</p>
+                    </div>
+                    <div class="dl-workflow-card-footer"><span>Step 02</span></div>
+                </article>
+                <article class="dl-workflow-card">
+                    <div class="dl-workflow-card-content">
+                        <div class="dl-workflow-card-top"><span class="dl-workflow-number">03</span>
+                            <div class="dl-workflow-icon"><i class="ri-file-upload-line"></i></div>
+                        </div>
+                        <h3 class="dl-workflow-card-title">Upload a Statement</h3>
+                        <p class="dl-workflow-card-description">Click Import Statements and select the statement file.
+                            The upload page accepts XLSX, XLS and CSV files up to 10 MB. The system recognizes supported
+                            BPCL SmartFleet, HPCL Drive Track Plus and IOCL statement layouts.</p>
+                    </div>
+                    <div class="dl-workflow-card-footer"><span>Step 03</span></div>
+                </article>
+                <article class="dl-workflow-card">
+                    <div class="dl-workflow-card-content">
+                        <div class="dl-workflow-card-top"><span class="dl-workflow-number">04</span>
+                            <div class="dl-workflow-icon"><i class="ri-layout-column-line"></i></div>
+                        </div>
+                        <h3 class="dl-workflow-card-title">Review Column Mapping</h3>
+                        <p class="dl-workflow-card-description">For statements that need mapping, match columns in the
+                            uploaded file with the corresponding transaction fields. Review the sample rows before
+                            confirming the import. A statement from a different provider may need manual column mapping.
+                        </p>
+                    </div>
+                    <div class="dl-workflow-card-footer"><span>Step 04</span></div>
+                </article>
+                <article class="dl-workflow-card">
+                    <div class="dl-workflow-card-content">
+                        <div class="dl-workflow-card-top"><span class="dl-workflow-number">05</span>
+                            <div class="dl-workflow-icon"><i class="ri-list-check-2"></i></div>
+                        </div>
+                        <h3 class="dl-workflow-card-title">Review Imported Entries</h3>
+                        <p class="dl-workflow-card-description">After importing, open the Fuel Cards list to review fuel
+                            sale transactions, amounts, quantities, card numbers, provider names and other saved
+                            details. Transaction details can include station, location, reference ID and debit/credit
+                            information, depending on the statement.</p>
+                    </div>
+                    <div class="dl-workflow-card-footer"><span>Step 05</span></div>
+                </article>
+                <article class="dl-workflow-card">
+                    <div class="dl-workflow-card-content">
+                        <div class="dl-workflow-card-top"><span class="dl-workflow-number">06</span>
+                            <div class="dl-workflow-icon"><i class="ri-links-line"></i></div>
+                        </div>
+                        <h3 class="dl-workflow-card-title">Match Vehicles and Export</h3>
+                        <p class="dl-workflow-card-description">The system attempts to link imported registration
+                            numbers to fleet vehicles. If a vehicle is missing, the unlinked alert helps users review
+                            the entries and use Link Matching when the vehicle record becomes available. Filter the
+                            transactions and download an Excel-friendly CSV when needed.</p>
+                    </div>
+                    <div class="dl-workflow-card-footer"><span>Step 06</span></div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="benefits" class="results-section">
+        <div class="container">
+            <div class="heading-wrapper">
+                <span class="heading-tag">Proven Advantages</span>
+                <h2 class="heading-title heading-light">Business <span>Benefits</span></h2>
+                <p>Spend less time re-keying statements and more time reviewing fuel expenses.</p>
+
+            </div>
+            <div class="results-grid">
+                <div class="result-card">
+                    <div class="result-icon"><i class="ri-time-line"></i></div>
+                    <h3>Less Manual Entry</h3>
+                    <p>Reduce repeated manual data entry for large fuel-card statements.</p>
+                </div>
+                <div class="result-card">
+                    <div class="result-icon"><i class="ri-truck-line"></i></div>
+                    <h3>Vehicle-Wise Fuel Review</h3>
+                    <p>Review card-based fuel purchases for individual vehicles.</p>
+                </div>
+                <div class="result-card">
+                    <div class="result-icon"><i class="ri-folder-shield-2-line"></i></div>
+                    <h3>Organized References</h3>
+                    <p>Keep supplier, card and transaction references organized.</p>
+                </div>
+                <div class="result-card">
+                    <div class="result-icon"><i class="ri-link-unlink"></i></div>
+                    <h3>Fix Missing Vehicle Links</h3>
+                    <p>Identify records with missing vehicle links and fix them later.</p>
+                </div>
+                <div class="result-card">
+                    <div class="result-icon"><i class="ri-file-chart-line"></i></div>
+                    <h3>Support Accounts Reporting</h3>
+                    <p>Use filters and CSV export to assist accounts and fuel-expense reporting.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="transport-section">
+        <div class="container">
+            <div class="transport-container">
+                <div class="heading-wrapper heading-wrap-left">
+                    <span class="heading-tag">Introduction</span>
+                    <h2 class="heading-title">Fuel-Card Transactions in <span>One Place</span></h2>
+                    <p>The Fuel Card Management Module helps transport and fleet businesses organize fuel-card
+                        transactions imported from card providers. Instead of manually typing every fuel purchase, users
+                        can upload a statement, review transaction details, connect transactions to vehicles and export
+                        the records for reporting.</p>
+
+                </div>
+                <div class="transport-image-wrapper">
+                    <img src="./Assets/images/tms-img.png" alt="Transportation Dashboard" class="transport-image">
+                    <div class="transport-shape"></div>
+                    <div class="transport-card">
+                        <ul class="transport-list">
+                            <li><i class="ri-checkbox-circle-line"></i><span>Upload a statement</span></li>
+                            <li><i class="ri-checkbox-circle-line"></i><span>Review transaction details</span></li>
+                            <li><i class="ri-checkbox-circle-line"></i><span>Connect transactions to vehicles</span>
+                            </li>
+                            <li><i class="ri-checkbox-circle-line"></i><span>Export the records for reporting</span>
+                            </li>
+                            <li><i class="ri-checkbox-circle-line"></i><span>Export fuel records for reporting</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="faq" class="dl-faq-section">
+        <div class="container">
+            <div class="heading-wrapper">
+                <span class="heading-tag">Got Questions?</span>
+                <h2 class="heading-title">Frequently Asked <span>Questions</span></h2>
+                <p>Common questions about importing, matching and exporting fuel-card transactions.</p>
+                <div class="dl-faq-filters"><button class="dl-faq-filter active" type="button">All</button><button
+                        class="dl-faq-filter" type="button">Import</button><button class="dl-faq-filter"
+                        type="button">Providers</button><button class="dl-faq-filter"
+                        type="button">Scope</button><button class="dl-faq-filter" type="button">Vehicle
+                        Linking</button><button class="dl-faq-filter" type="button">Reports</button></div>
+            </div>
+            <div class="dl-faq-list">
+                <div class="dl-faq-item active" data-category="import">
+                    <button class="dl-faq-question" type="button" aria-expanded="true" aria-controls="dl-faq-answer-1">
+                        <span class="dl-faq-question-content"><span class="dl-faq-number">Q1</span><span
+                                class="dl-faq-question-text">Can I import an Excel statement?</span></span>
+                        <span class="dl-faq-arrow"><i class="ri-arrow-down-s-line"></i></span>
+                    </button>
+                    <div class="dl-faq-answer" id="dl-faq-answer-1">
+                        <div class="dl-faq-answer-content">
+                            <p>Yes. The upload form supports XLSX, XLS and CSV statements up to 10 MB.</p>
+                            <div class="dl-faq-topic"><span>Topic: Import</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="dl-faq-item" data-category="providers">
+                    <button class="dl-faq-question" type="button" aria-expanded="false" aria-controls="dl-faq-answer-2">
+                        <span class="dl-faq-question-content"><span class="dl-faq-number">Q2</span><span
+                                class="dl-faq-question-text">Which providers are recognized?</span></span>
+                        <span class="dl-faq-arrow"><i class="ri-arrow-down-s-line"></i></span>
+                    </button>
+                    <div class="dl-faq-answer" id="dl-faq-answer-2">
+                        <div class="dl-faq-answer-content">
+                            <p>Supported BPCL SmartFleet, HPCL Drive Track Plus and IOCL layouts are recognized
+                                automatically. Other compatible layouts may require column mapping.</p>
+                            <div class="dl-faq-topic"><span>Topic: Providers</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="dl-faq-item" data-category="scope">
+                    <button class="dl-faq-question" type="button" aria-expanded="false" aria-controls="dl-faq-answer-3">
+                        <span class="dl-faq-question-content"><span class="dl-faq-number">Q3</span><span
+                                class="dl-faq-question-text">Does this module create physical fuel cards?</span></span>
+                        <span class="dl-faq-arrow"><i class="ri-arrow-down-s-line"></i></span>
+                    </button>
+                    <div class="dl-faq-answer" id="dl-faq-answer-3">
+                        <div class="dl-faq-answer-content">
+                            <p>The reviewed functionality manages imported fuel-card transactions; it does not establish
+                                issuing or recharging physical cards.</p>
+                            <div class="dl-faq-topic"><span>Topic: Scope</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="dl-faq-item" data-category="vehicle linking">
+                    <button class="dl-faq-question" type="button" aria-expanded="false" aria-controls="dl-faq-answer-4">
+                        <span class="dl-faq-question-content"><span class="dl-faq-number">Q4</span><span
+                                class="dl-faq-question-text">What if a vehicle is not found?</span></span>
+                        <span class="dl-faq-arrow"><i class="ri-arrow-down-s-line"></i></span>
+                    </button>
+                    <div class="dl-faq-answer" id="dl-faq-answer-4">
+                        <div class="dl-faq-answer-content">
+                            <p>An imported entry can remain unlinked and be matched later when the vehicle is registered
+                                or corrected.</p>
+                            <div class="dl-faq-topic"><span>Topic: Vehicle Linking</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="dl-faq-item" data-category="reports">
+                    <button class="dl-faq-question" type="button" aria-expanded="false" aria-controls="dl-faq-answer-5">
+                        <span class="dl-faq-question-content"><span class="dl-faq-number">Q5</span><span
+                                class="dl-faq-question-text">Can I download records?</span></span>
+                        <span class="dl-faq-arrow"><i class="ri-arrow-down-s-line"></i></span>
+                    </button>
+                    <div class="dl-faq-answer" id="dl-faq-answer-5">
+                        <div class="dl-faq-answer-content">
+                            <p>Yes. Filtered transactions can be exported as CSV.</p>
+                            <div class="dl-faq-topic"><span>Topic: Reports</span></div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="dl-faq-cta">
+                <div class="dl-faq-cta-content">
+                    <h3>Simplify Your Fuel Card Tracking</h3>
+                    <p>Keep card-based fuel purchase statements, vehicle links and transaction details in one place.
+                        Import statements, review expenses and download reports without rebuilding the records manually.
+                    </p>
+                </div>
+                <button class="dl-faq-cta-button" type="button"
+                    onclick="document.getElementById('simulator').scrollIntoView({behavior:'smooth'})">See Practical
+                    Example</button>
+            </div>
+        </div>
+    </section>
+
+    <!--footer section start-->
+    <footer class="footer">
+
+        <!-- Newsletter -->
+        <div class="footer-newsletter">
+            <div class="container">
+
+                <div class="newsletter-wrapper">
+
+                    <div class="newsletter-content">
+                        <h2>Stay ahead of the curve</h2>
+                        <p>
+                            Fleet management insights, product updates, and industry news.
+                        </p>
+                    </div>
+
+                    <form class="newsletter-form">
+
+                        <input type="email" placeholder="Enter your email">
+
+                        <button type="submit">
+                            Subscribe
+
+                            <i class="ri-arrow-right-line"></i>
+
+                        </button>
+
+                    </form>
+
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Footer Main -->
+
+        <div class="footer-main">
+
+            <div class="container">
+
+                <div class="footer-grid">
+
+                    <!-- Left -->
+
+                    <div class="footer-about">
+
+                        <a href="index.html" class="footer-logo">
+                            <img src="Assets/images/transportdesk-logo-dark.svg" alt="footer-logo">
+                        </a>
+
+                        <p>
+                            The intelligent transportation platform that puts fleet directors
+                            in complete control of their operations.
+                        </p>
+
+                        <div class="footer-social">
+
+                            <a href="#">
+                                <i class="ri-facebook-fill"></i>
+                            </a>
+
+                            <a href="#">
+                                <i class="ri-instagram-line"></i>
+                            </a>
+
+                            <a href="#">
+                                <i class="ri-twitter-line"></i>
+                            </a>
+
+                            <a href="#">
+                                <i class="ri-linkedin-fill"></i>
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                    <!-- Product -->
+
+                    <div class="footer-links">
+
+                        <h3>Product</h3>
+
+                        <ul>
+                            <li>
+                                <a href="features.html" class="footer-link">Features</a>
+                            </li>
+
+                            <li>
+                                <a href="modules.html" class="footer-link">Modules</a>
+                            </li>
+
+                            <li>
+                                <a href="solutions.html" class="footer-link">Solutions</a>
+                            </li>
+
+                            <li>
+                                <a href="reports.html" class="footer-link">Reports</a>
+                            </li>
+
+                            <li>
+                                <a href="contact.html" class="footer-link">Contact</a>
+                            </li>
+                        </ul>
+
+                    </div>
+
+                    <!-- Resources -->
+
+                    <div class="footer-links">
+
+                        <h3>Resources</h3>
+
+                        <ul>
+
+                            <li><a href="documentation.html" class="footer-link">Documentation</a></li>
+
+                            <li><a href="faq.html" class="footer-link">FAQ</a></li>
+
+                            <li><a href="privacy-policy.html" class="footer-link">Privacy Policy</a></li>
+
+                        </ul>
+
+                    </div>
+
+                    <!-- Support -->
+
+                    <div class="footer-links">
+
+                        <h3>Support</h3>
+
+                        <ul>
+
+                            <li><a href="#" class="footer-link">Help Center</a></li>
+
+                            <li><a href="#" class="footer-link">Status</a></li>
+
+                            <li><a href="#" class="footer-link">Security</a></li>
+
+                        </ul>
+
+                    </div>
+
+                    <!-- Contact -->
+
+                    <div class="footer-contact">
+
+                        <div class="contact-item">
+
+                            <div class="icon">
+                                <i class="ri-mail-line"></i>
+                            </div>
+
+                            <div>
+
+                                <span>Email</span>
+
+                                <a href="#">
+                                    hello@transportdesk.net
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                        <div class="contact-item">
+
+                            <div class="icon">
+                                <i class="ri-phone-fill"></i>
+                            </div>
+
+                            <div>
+
+                                <span>Call</span>
+
+                                <a href="#">
+                                    +1 (512) 555-0142
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                        <div class="contact-item">
+
+                            <div class="icon">
+                                <i class="ri-map-pin-line"></i>
+                            </div>
+
+                            <div>
+
+                                <span>Location</span>
+
+                                <p>India</p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Bottom -->
+
+        <div class="footer-bottom">
+
+            <div class="container">
+
+                <div class="bottom-wrapper">
+
+                    <p>
+                        © 2026 All rights reserved.
+                    </p>
+
+                    <ul>
+
+                        <li><a href="#">Privacy Policy</a></li>
+
+                        <li><a href="#">Terms of Service</a></li>
+
+                        <li><a href="#">Cookie Policy</a></li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </footer>
+    <!--footer section end-->
+
+    <script src="./Assets/js/custom.js"></script>
+</body>
+
+</html>

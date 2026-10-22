@@ -1,0 +1,887 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Tyre Management Module</title>
+
+    <!-- Remix Icon -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" />
+
+    <!-- Swiper -->
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+
+    <!-- Lenis -->
+    <link rel="stylesheet"
+        href="https://unpkg.com/lenis@1.3.23/dist/lenis.css">
+
+    <!-- Tailwind Output CSS -->
+     <link href="./Assets/css/output.css" rel="stylesheet">
+</head>
+<body>
+
+<!--Header Section start-->
+<header class="main-header">
+    <div class="container">
+
+        <div class="header-inner">
+
+            <a href="index.html" class="header-logo">
+                <img src="Assets/images/transportdesk-logo.svg" alt="Logo">
+            </a>
+
+            <nav class="main-navigation" id="mobileMenu">
+
+                <div class="menu-circle"></div>
+
+                <ul class="navigation-links">
+                    <li><a href="index.html" class="navigation-link active">Home</a></li>
+                    <li><a href="features.html" class="navigation-link">Features</a></li>
+                    <li><a href="reports.html" class="navigation-link">Resources</a></li>
+                    <li><a href="contact.html" class="navigation-link">Contact</a></li>
+                </ul>
+
+                <div class="mobile-header-right">
+                    <a href="#" class="login-btn">Login</a>
+                    <a href="#" class="demo-btn">Book Demo</a>
+                </div>
+
+            </nav>
+
+            <div class="header-right">
+                <a href="#" class="login-btn">Login</a>
+                <a href="#" class="demo-btn">Book Demo</a>
+            </div>
+
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+        </div>
+
+    </div>
+</header>
+
+<!-- Add this after header -->
+<div class="menu-overlay" id="menuOverlay"></div>
+<!--Header section End-->
+
+<section id="overview" class="dl-overview-section">
+    <div class="dl-overview-glow"></div>
+    <div class="dl-overview-pattern"></div>
+    <div class="container">
+        <div class="dl-overview-grid">
+            <div class="dl-overview-content">
+                <div class="dl-overview-badge">
+                    <span class="dl-status-dot"></span>
+                    <span>Enterprise Fleet Management</span>
+                    <span class="dl-badge-divider">|</span>
+                    <span class="dl-badge-highlight">Tyre Management Module</span>
+                </div>
+                <h1 class="dl-overview-title"><span class="dl-gradient-text">Tyre Management</span> Module</h1>
+                <p class="dl-overview-description">Managing tyres across multiple vehicles can be difficult when tyre numbers, purchase invoices, fitting dates and vehicle details are kept in separate registers. The Tyre Management Module keeps these records together in a simple digital system.</p><p class="dl-overview-description">Users can record a new tyre, select the vehicle and supplier, enter the tyre type and size, save fitting details and store its purchase invoice. The module also makes it easy to search previous records and update incorrect information.</p>
+                <div class="dl-overview-actions">
+                    <a href="#simulator" class="btn-primary">
+                        <span>Try Live Tyre Record Demo</span>
+                        <i class="ri-arrow-right-line"></i>
+                    </a>
+                    <a href="#demo" class="dl-btn-demo">
+                        <span class="dl-play-icon"><i class="ri-play-fill"></i></span>
+                        <span>Watch Demo Video</span>
+                    </a>
+                </div>
+                <div class="dl-overview-stats"><div class="dl-stat-item"><div class="dl-stat-number">12</div><div class="dl-stat-label">Key Features</div></div><div class="dl-stat-item"><div class="dl-stat-number dl-stat-red">6</div><div class="dl-stat-label">Simple Steps</div></div><div class="dl-stat-item"><div class="dl-stat-number dl-stat-green">₹18,500</div><div class="dl-stat-label">Example Tyre Amount</div></div></div>
+            </div>
+            <div class="dl-overview-visual">
+                <div class="dl-visual-card">
+                    <img src="Assets/images/hero_fleet_dispatch_1792482270822.jpg"
+                         alt="Transportation Fleet Dispatch Logistics Center" class="dl-visual-image">
+                    <div class="dl-visual-overlay"></div>
+                    <div class="dl-visual-topbar">
+                        <div class="dl-live-label"><span class="dl-live-dot"></span><span>Tyre Record Preview</span></div>
+                        <div class="dl-fuel-rate">TYR-2026-015</div>
+                    </div>
+                    <div class="dl-fuel-slip">
+                        <div class="dl-slip-header">
+                            <span class="dl-slip-title">GJ 05 AB 1234 · ABC Tyre Traders</span>
+                            <span class="dl-slip-status">Example Record</span>
+                        </div>
+                        <div class="dl-slip-stats"><div class="dl-slip-stat"><span class="dl-slip-label">Tyre Size</span><span class="dl-slip-value">10.00 R20</span></div><div class="dl-slip-stat"><span class="dl-slip-label">Fitted At</span><span class="dl-slip-value dl-slip-red">85,000 KM</span></div><div class="dl-slip-stat"><span class="dl-slip-label">Amount</span><span class="dl-slip-value dl-slip-green">₹18,500</span></div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="dl-trusted-section">
+    <div class="dl-trusted-heading"><span>Manage Tyre Records, Vehicle Fittings &amp; Purchase Details in One Place</span></div>
+    <div class="dl-trusted-marquee">
+        <div class="dl-trusted-fade dl-trusted-fade-left"></div>
+        <div class="dl-trusted-fade dl-trusted-fade-right"></div>
+        <div class="dl-trusted-track">
+            <div class="dl-trusted-group"><div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">Tyre Record Management</span></div><div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">Vehicle Assignment</span></div><div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">New and Old Tyre Numbers</span></div><div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">Tyre Type Management</span></div><div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">Tyre Size Details</span></div><div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">Vendor-Wise Purchase Details</span></div><div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">Fitting Date and Kilometre Reading</span></div><div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">Tyre Purchase Amount</span></div><div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">Digital Invoice Storage</span></div><div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">Tyre Details and Editing</span></div><div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">Search, Sort and Payment Status Filters</span></div><div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">Access Permissions and Record Removal</span></div></div>
+            <div class="dl-trusted-group" aria-hidden="true"><div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">Tyre Record Management</span></div><div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">Vehicle Assignment</span></div><div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">New and Old Tyre Numbers</span></div><div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">Tyre Type Management</span></div><div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">Tyre Size Details</span></div><div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">Vendor-Wise Purchase Details</span></div><div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">Fitting Date and Kilometre Reading</span></div><div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">Tyre Purchase Amount</span></div><div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">Digital Invoice Storage</span></div><div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">Tyre Details and Editing</span></div><div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">Search, Sort and Payment Status Filters</span></div><div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">Access Permissions and Record Removal</span></div></div>
+        </div>
+    </div>
+</section>
+
+<section id="demo" class="dl-demo-section">
+    <div class="dl-demo-glow"></div>
+    <div class="dl-container">
+        <div class="heading-wrapper">
+            <span class="heading-tag">Video Demonstration</span>
+            <h2 class="heading-title">Watch How <span>Tyre Management</span> Works</h2>
+            <p>Learn how to add a tyre, link it to a vehicle, record the old tyre number, upload an invoice and find the tyre again using the search options. The demonstration can show the complete flow, from creating the tyre record to viewing, editing and searching it.</p>
+        </div>
+        <div class="dl-demo-grid">
+            <div class="dl-demo-video-column">
+                <div class="dl-video-card">
+                    <div class="dl-video-toolbar">
+                        <div class="dl-video-toolbar-left">
+                            <span class="dl-window-dot dl-dot-red"></span>
+                            <span class="dl-window-dot dl-dot-yellow"></span>
+                            <span class="dl-window-dot dl-dot-green"></span>
+                            <span class="dl-video-filename">tyre_management_module_demo</span>
+                        </div>
+                        <span class="dl-video-quality">Demo Video</span>
+                    </div>
+                    <div class="dl-video-preview">
+                        <img src="Assets/images/dashboard.png" alt="tyre_management_module_demo preview" class="dl-video-thumbnail">
+                        <div class="dl-video-overlay"></div>
+                        <button type="button" class="dl-video-play" aria-label="Play demonstration video">
+                            <i class="ri-play-fill"></i>
+                            <span class="dl-video-ping"></span>
+                        </button>
+                        <div class="dl-video-meta">
+                            <div class="dl-video-meta-left">
+                                <span class="dl-video-current-chapter">[Demo Video Will Be Displayed Here]</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="simulator" class="dl-simulator-section">
+    <div class="dl-container">
+        <div class="dl-simulator-header">
+            <div class="heading-wrapper heading-wrap-left">
+                <span class="heading-tag">Practical Example</span>
+                <h2 class="heading-title">Recording a <span>New Tyre</span></h2>
+                <p>Suppose a transport company replaces a worn tyre on one of its trucks. The user creates a new tyre record with the following sample details. After saving, the user can open the record to see which vehicle received the new tyre, when it was fitted, the kilometre reading and the related supplier invoice. The example is illustrative.</p>
+            </div>
+            <div class="dl-view-switcher" id="ty-tabs"><button type="button" class="dl-view-tab dl-view-tab-active" data-view="add"><i class="ri-add-circle-line"></i> Add Tyre</button><button type="button" class="dl-view-tab" data-view="list"><i class="ri-list-check-2"></i> Tyres List</button></div>
+        </div>
+        <div class="dl-stats-grid"><div class="dl-stat-card"><div class="dl-stat-label"><span>Tyres Recorded</span><i class="ri-record-circle-line"></i></div><div class="dl-stat-value" id="ty-s-count">0</div><p class="dl-stat-note">In the Tyres list</p></div><div class="dl-stat-card"><div class="dl-stat-label"><span>Total Purchase Amount</span><i class="ri-money-rupee-circle-line dl-red-icon"></i></div><div class="dl-stat-value dl-red-text" id="ty-s-amt">₹0</div><p class="dl-stat-note">Sum of tyre amounts</p></div><div class="dl-stat-card"><div class="dl-stat-label"><span>Vehicles Fitted</span><i class="ri-truck-line dl-green-icon"></i></div><div class="dl-stat-value dl-green-text" id="ty-s-veh">0</div><p class="dl-stat-note">Vehicles with a tyre record</p></div><div class="dl-stat-card dl-stat-card-total"><div class="dl-stat-label"><span>Invoices Attached</span><span class="dl-status-dot"></span></div><div class="dl-stat-value dl-stat-total-value" id="ty-s-inv">0</div><p class="dl-stat-note dl-green-text">Stored with tyre records</p></div></div>
+        <div class="dl-calculator-panel" id="ty-view-add"><div class="dl-bill-master"><div class="dl-bill-master-header"><div class="dl-bill-heading"><span>Add Tyre</span><span class="dl-heading-separator">·</span><span class="dl-invoice-number">Sample details</span></div></div>
+<div class="dl-bill-fields"><div class="dl-form-group"><label for="ty-veh">Vehicle</label><select id="ty-veh" class="dl-form-control"><option>GJ 05 AB 1234</option><option>MH-12-RN-4821</option><option>MH-14-BT-9102</option></select></div><div class="dl-form-group"><label for="ty-vendor">Vendor</label><select id="ty-vendor" class="dl-form-control"><option>ABC Tyre Traders</option><option>No vendor</option></select></div><div class="dl-form-group"><label for="ty-type">Tyre Type</label><select id="ty-type" class="dl-form-control"><option>Commercial Truck Tyre</option></select></div><div class="dl-form-group"><label for="ty-new">New Tyre Number</label><input id="ty-new" class="dl-form-control" type="text" value="TYR-2026-015" ></div><div class="dl-form-group"><label for="ty-old">Old Tyre Number</label><input id="ty-old" class="dl-form-control" type="text" value="TYR-2024-089" ></div><div class="dl-form-group"><label for="ty-size">Tyre Size</label><input id="ty-size" class="dl-form-control" type="text" value="10.00 R20" ></div><div class="dl-form-group"><label for="ty-date">Fitting Date</label><input id="ty-date" class="dl-form-control" type="date" value="2026-10-15" ></div><div class="dl-form-group"><label for="ty-km">Kilometre Reading (KM)</label><input id="ty-km" class="dl-form-control" type="number" value="85000" min="0"></div><div class="dl-form-group"><label for="ty-amt">Amount (₹)</label><input id="ty-amt" class="dl-form-control" type="number" value="18500" min="0" step="0.01"></div></div><div class="dl-bill-options"><label for="ty-inv" class="dl-secondary-button dl-upload-button"><i class="ri-upload-2-line"></i><span id="ty-inv-name">Upload Invoice (Sample invoice.pdf)</span><input id="ty-inv" type="file" accept=".pdf,.jpg,.jpeg,.png"></label><span class="dl-formula-note">PDF, JPG, JPEG or PNG · up to 2 MB</span></div></div><div class="dl-table-toolbar"><div class="dl-supported-formats" id="ty-msg">Click Save Tyre to store the record.</div><div class="dl-toolbar-actions"><button type="button" class="dl-primary-button" id="ty-save"><i class="ri-save-3-line"></i> Save Tyre</button></div></div><div class="dl-calculator-footer"><div class="dl-documentation-note"><i class="ri-information-line"></i><span>Suppose a transport company replaces a worn tyre on one of its trucks. After saving, the user can open the record to see which vehicle received the new tyre, when it was fitted, the kilometre reading and the related supplier invoice.</span></div></div></div><div class="dl-calculator-panel" id="ty-view-list" hidden><div class="dl-table-toolbar"><div class="dl-search-box"><i class="ri-search-line"></i><input type="search" id="ty-search" placeholder="Search by tyre number or vehicle number..."></div><div class="dl-toolbar-actions"><select id="ty-sort" class="dl-form-control"><option value="date">Sort: Fitting Date</option><option value="vendor">Sort: Vendor</option></select></div></div><div class="dl-table-wrapper"><table class="dl-vehicle-table"><thead><tr><th>Tyre Number</th><th>Vehicle</th><th>Vendor</th><th>Size</th><th>Fitting</th><th class="dl-text-right">Amount</th><th>Action</th></tr></thead><tbody id="ty-body"></tbody></table></div><div class="dl-calculator-footer"><div class="dl-documentation-note" id="ty-detail"><i class="ri-information-line"></i><span>Open a saved tyre to see its vehicle, vendor, type, identifiers, size, amount, fitting information and invoice.</span></div><div class="dl-supported-formats">Demo only: nothing is stored.</div></div></div>
+    </div>
+</section>
+
+<section id="features" class="dl-features-section">
+    <div class="container">
+        <div class="heading-wrapper">
+            <span class="heading-tag">Key Module Features</span>
+            <h2 class="heading-title">Everything You Need for <span>Tyre Management</span></h2>
+            <div class="dl-features-filters"><button type="button" class="dl-filter-btn is-active" data-filter="all">All Features (12)</button><button type="button" class="dl-filter-btn" data-filter="records">Tyre Records &amp; Vehicles</button><button type="button" class="dl-filter-btn" data-filter="details">Tyre Details &amp; Purchase</button><button type="button" class="dl-filter-btn" data-filter="access">Invoices, Search &amp; Access</button></div>
+        </div>
+        <div class="dl-features-grid">
+            <article class="dl-feature-card" data-category="records">
+                <div class="dl-feature-card-content">
+                    <div class="dl-feature-icon"><i class="ri-record-circle-line"></i></div>
+                    <div class="dl-feature-card-heading">
+                        <span class="dl-feature-number">4.1</span>
+                        <h3>Tyre Record Management</h3>
+                    </div>
+                    <p>Add and maintain an individual record for each tyre. Each record brings vehicle, tyre identification, purchase, fitting and invoice information together.</p>
+                </div>
+            </article>
+            <article class="dl-feature-card" data-category="records">
+                <div class="dl-feature-card-content">
+                    <div class="dl-feature-icon"><i class="ri-truck-line"></i></div>
+                    <div class="dl-feature-card-heading">
+                        <span class="dl-feature-number">4.2</span>
+                        <h3>Vehicle Assignment</h3>
+                    </div>
+                    <p>Link a tyre to the vehicle where it is fitted. This helps users identify the vehicle associated with a recorded tyre.</p>
+                </div>
+            </article>
+            <article class="dl-feature-card" data-category="records">
+                <div class="dl-feature-card-content">
+                    <div class="dl-feature-icon"><i class="ri-refresh-line"></i></div>
+                    <div class="dl-feature-card-heading">
+                        <span class="dl-feature-number">4.3</span>
+                        <h3>New and Old Tyre Numbers</h3>
+                    </div>
+                    <p>Save the current tyre number and, where relevant, the old tyre number being replaced. This provides a simple replacement reference without maintaining a separate replacement-history workflow.</p>
+                </div>
+            </article>
+            <article class="dl-feature-card" data-category="details">
+                <div class="dl-feature-card-content">
+                    <div class="dl-feature-icon"><i class="ri-list-settings-line"></i></div>
+                    <div class="dl-feature-card-heading">
+                        <span class="dl-feature-number">4.4</span>
+                        <h3>Tyre Type Management</h3>
+                    </div>
+                    <p>Add and maintain tyre types and choose the appropriate type when adding a tyre. The available tyre type list can be updated as business needs change.</p>
+                </div>
+            </article>
+            <article class="dl-feature-card" data-category="details">
+                <div class="dl-feature-card-content">
+                    <div class="dl-feature-icon"><i class="ri-ruler-line"></i></div>
+                    <div class="dl-feature-card-heading">
+                        <span class="dl-feature-number">4.5</span>
+                        <h3>Tyre Size Details</h3>
+                    </div>
+                    <p>Record a tyre size to make it easier to identify the correct specification for a vehicle.</p>
+                </div>
+            </article>
+            <article class="dl-feature-card" data-category="details">
+                <div class="dl-feature-card-content">
+                    <div class="dl-feature-icon"><i class="ri-store-2-line"></i></div>
+                    <div class="dl-feature-card-heading">
+                        <span class="dl-feature-number">4.6</span>
+                        <h3>Vendor-Wise Purchase Details</h3>
+                    </div>
+                    <p>Associate tyre purchases with a tyre supplier. This keeps supplier details connected to the relevant tyre records.</p>
+                </div>
+            </article>
+            <article class="dl-feature-card" data-category="details">
+                <div class="dl-feature-card-content">
+                    <div class="dl-feature-icon"><i class="ri-calendar-check-line"></i></div>
+                    <div class="dl-feature-card-heading">
+                        <span class="dl-feature-number">4.7</span>
+                        <h3>Fitting Date and Kilometre Reading</h3>
+                    </div>
+                    <p>Record the date when a tyre was fitted and the vehicle kilometre reading at that time. These details can be referred to when reviewing fitting records.</p>
+                </div>
+            </article>
+            <article class="dl-feature-card" data-category="details">
+                <div class="dl-feature-card-content">
+                    <div class="dl-feature-icon"><i class="ri-money-rupee-circle-line"></i></div>
+                    <div class="dl-feature-card-heading">
+                        <span class="dl-feature-number">4.8</span>
+                        <h3>Tyre Purchase Amount</h3>
+                    </div>
+                    <p>Save the amount paid or billed for the tyre to keep its purchase cost with the record.</p>
+                </div>
+            </article>
+            <article class="dl-feature-card" data-category="access">
+                <div class="dl-feature-card-content">
+                    <div class="dl-feature-icon"><i class="ri-file-upload-line"></i></div>
+                    <div class="dl-feature-card-heading">
+                        <span class="dl-feature-number">4.9</span>
+                        <h3>Digital Invoice Storage</h3>
+                    </div>
+                    <p>Upload an invoice in PDF, JPG, JPEG or PNG format (up to 2 MB). When an invoice is available, authorized users can view or download it from the tyre details page.</p>
+                </div>
+            </article>
+            <article class="dl-feature-card" data-category="records">
+                <div class="dl-feature-card-content">
+                    <div class="dl-feature-icon"><i class="ri-edit-line"></i></div>
+                    <div class="dl-feature-card-heading">
+                        <span class="dl-feature-number">4.10</span>
+                        <h3>Tyre Details and Editing</h3>
+                    </div>
+                    <p>Open the details of a saved tyre and edit its vehicle, vendor, type, identifiers, size, amount, fitting information or invoice when changes are required.</p>
+                </div>
+            </article>
+            <article class="dl-feature-card" data-category="access">
+                <div class="dl-feature-card-content">
+                    <div class="dl-feature-icon"><i class="ri-filter-3-line"></i></div>
+                    <div class="dl-feature-card-heading">
+                        <span class="dl-feature-number">4.11</span>
+                        <h3>Search, Sort and Payment Status Filters</h3>
+                    </div>
+                    <p>Search tyre records by tyre number or vehicle number. Sort by fitting date or vendor and use payment status filters to narrow the list.</p>
+                </div>
+            </article>
+            <article class="dl-feature-card" data-category="access">
+                <div class="dl-feature-card-content">
+                    <div class="dl-feature-icon"><i class="ri-lock-line"></i></div>
+                    <div class="dl-feature-card-heading">
+                        <span class="dl-feature-number">4.12</span>
+                        <h3>Access Permissions and Record Removal</h3>
+                    </div>
+                    <p>Tyre viewing, creating, editing and deleting are controlled by user permissions. Authorized users can remove records when necessary.</p>
+                </div>
+            </article>
+        </div>
+    </div>
+</section>
+
+<section class="dl-workflow-section">
+    <div class="container">
+        <div class="heading-wrapper heading-wrap-left">
+            <span class="heading-tag">Step by Step</span>
+            <h2 class="heading-title">How Does the <span>Tyre Management Module</span> Work?</h2>
+        </div>
+        <div class="dl-workflow-grid">
+            <article class="dl-workflow-card">
+                <div class="dl-workflow-card-content">
+                    <div class="dl-workflow-card-top">
+                        <span class="dl-workflow-number">01</span>
+                        <div class="dl-workflow-icon"><i class="ri-folder-open-line"></i></div>
+                    </div>
+                    <h3 class="dl-workflow-card-title">Step 1: Open the Tyre Module</h3>
+                    <p class="dl-workflow-card-description">Open the Tyres section to view existing records.</p>
+                    <ul class="dl-workflow-checklist"><li><i class="ri-check-line"></i><span>Select Add Tyre to create a new entry.</span></li></ul>
+                </div>
+                <div class="dl-workflow-card-footer"><span>Step 01</span></div>
+            </article>
+            <article class="dl-workflow-card">
+                <div class="dl-workflow-card-content">
+                    <div class="dl-workflow-card-top">
+                        <span class="dl-workflow-number">02</span>
+                        <div class="dl-workflow-icon"><i class="ri-truck-line"></i></div>
+                    </div>
+                    <h3 class="dl-workflow-card-title">Step 2: Select Vehicle and Vendor</h3>
+                    <p class="dl-workflow-card-description">Choose the vehicle on which the tyre is fitted.</p>
+                    <ul class="dl-workflow-checklist"><li><i class="ri-check-line"></i><span>Select the tyre supplier, if applicable, so the purchase can be linked to the correct vendor.</span></li></ul>
+                </div>
+                <div class="dl-workflow-card-footer"><span>Step 02</span></div>
+            </article>
+            <article class="dl-workflow-card">
+                <div class="dl-workflow-card-content">
+                    <div class="dl-workflow-card-top">
+                        <span class="dl-workflow-number">03</span>
+                        <div class="dl-workflow-icon"><i class="ri-record-circle-line"></i></div>
+                    </div>
+                    <h3 class="dl-workflow-card-title">Step 3: Enter Tyre Information</h3>
+                    <p class="dl-workflow-card-description">Select a tyre type, enter the new tyre number and size, and record the old tyre number if an existing tyre is being replaced.</p>
+                    <ul class="dl-workflow-checklist"><li><i class="ri-check-line"></i><span>This keeps the identification details together.</span></li></ul>
+                </div>
+                <div class="dl-workflow-card-footer"><span>Step 03</span></div>
+            </article>
+            <article class="dl-workflow-card">
+                <div class="dl-workflow-card-content">
+                    <div class="dl-workflow-card-top">
+                        <span class="dl-workflow-number">04</span>
+                        <div class="dl-workflow-icon"><i class="ri-calendar-check-line"></i></div>
+                    </div>
+                    <h3 class="dl-workflow-card-title">Step 4: Record Fitting and Cost Details</h3>
+                    <p class="dl-workflow-card-description">Enter the fitting date, vehicle kilometre reading at fitting, and tyre purchase amount.</p>
+                    <ul class="dl-workflow-checklist"><li><i class="ri-check-line"></i><span>These details provide a useful reference for future checks.</span></li></ul>
+                </div>
+                <div class="dl-workflow-card-footer"><span>Step 04</span></div>
+            </article>
+            <article class="dl-workflow-card">
+                <div class="dl-workflow-card-content">
+                    <div class="dl-workflow-card-top">
+                        <span class="dl-workflow-number">05</span>
+                        <div class="dl-workflow-icon"><i class="ri-save-3-line"></i></div>
+                    </div>
+                    <h3 class="dl-workflow-card-title">Step 5: Upload Invoice and Save</h3>
+                    <p class="dl-workflow-card-description">Attach a photo or PDF of the purchase invoice if available.</p>
+                    <ul class="dl-workflow-checklist"><li><i class="ri-check-line"></i><span>Click Save Tyre to store the record.</span></li></ul>
+                </div>
+                <div class="dl-workflow-card-footer"><span>Step 05</span></div>
+            </article>
+            <article class="dl-workflow-card">
+                <div class="dl-workflow-card-content">
+                    <div class="dl-workflow-card-top">
+                        <span class="dl-workflow-number">06</span>
+                        <div class="dl-workflow-icon"><i class="ri-search-line"></i></div>
+                    </div>
+                    <h3 class="dl-workflow-card-title">Step 6: Find and Manage Records</h3>
+                    <p class="dl-workflow-card-description">Open the Tyres list to search by tyre number or vehicle number, view full details, check payment status filters, or edit an entry when permitted.</p>
+                    <ul class="dl-workflow-checklist"></ul>
+                </div>
+                <div class="dl-workflow-card-footer"><span>Step 06</span></div>
+            </article>
+        </div>
+    </div>
+</section>
+
+<section class="results-section">
+    <div class="container">
+        <div class="heading-wrapper">
+            <span class="heading-tag">Benefits</span>
+            <h2 class="heading-title heading-light">Benefits of <span>Tyre Management</span></h2>
+        </div>
+        <div class="results-grid">
+            <div class="result-card">
+                <div class="result-icon"><i class="ri-folder-line"></i></div>
+                <h3>Organized Tyre Records</h3>
+                <p>Keep identification, purchase and fitting information in one place.</p>
+            </div>
+            <div class="result-card">
+                <div class="result-icon"><i class="ri-truck-line"></i></div>
+                <h3>Clear Vehicle Association</h3>
+                <p>See which vehicle is linked to each tyre record.</p>
+            </div>
+            <div class="result-card">
+                <div class="result-icon"><i class="ri-refresh-line"></i></div>
+                <h3>Easy Replacement Reference</h3>
+                <p>Record both the new and old tyre numbers.</p>
+            </div>
+            <div class="result-card">
+                <div class="result-icon"><i class="ri-file-list-3-line"></i></div>
+                <h3>Better Purchase Documentation</h3>
+                <p>Store tyre costs and supplier invoices for reference.</p>
+            </div>
+            <div class="result-card">
+                <div class="result-icon"><i class="ri-search-line"></i></div>
+                <h3>Faster Record Lookup</h3>
+                <p>Search by tyre or vehicle number instead of checking registers.</p>
+            </div>
+            <div class="result-card">
+                <div class="result-icon"><i class="ri-edit-line"></i></div>
+                <h3>Simple Corrections</h3>
+                <p>Update existing records with the appropriate user permissions.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="faq" class="dl-faq-section">
+    <div class="container">
+        <div class="heading-wrapper">
+            <span class="heading-tag">Got Questions?</span>
+            <h2 class="heading-title">Frequently Asked <span>Questions</span></h2>
+            <div class="dl-faq-filters"><button class="dl-faq-filter active" type="button">All</button><button class="dl-faq-filter" type="button">Vehicles</button><button class="dl-faq-filter" type="button">Tyre Numbers</button><button class="dl-faq-filter" type="button">Fitting</button><button class="dl-faq-filter" type="button">Invoices</button><button class="dl-faq-filter" type="button">Search</button><button class="dl-faq-filter" type="button">Corrections</button><button class="dl-faq-filter" type="button">Tracking</button></div>
+        </div>
+        <div class="dl-faq-list">
+            <div class="dl-faq-item active">
+                <button class="dl-faq-question" type="button" aria-expanded="true" aria-controls="dl-faq-answer-1">
+                    <span class="dl-faq-question-content">
+                        <span class="dl-faq-number">Q1</span>
+                        <span class="dl-faq-question-text">Can I add a tyre for a particular vehicle?</span>
+                    </span>
+                    <span class="dl-faq-arrow"><i class="ri-arrow-down-s-line"></i></span>
+                </button>
+                <div class="dl-faq-answer" id="dl-faq-answer-1">
+                    <div class="dl-faq-answer-content">
+                        <p>Yes. Select the vehicle when creating a tyre record.</p>
+                        <div class="dl-faq-topic"><span>Topic: Vehicles</span></div>
+                    </div>
+                </div>
+            </div>
+            <div class="dl-faq-item">
+                <button class="dl-faq-question" type="button" aria-expanded="false" aria-controls="dl-faq-answer-2">
+                    <span class="dl-faq-question-content">
+                        <span class="dl-faq-number">Q2</span>
+                        <span class="dl-faq-question-text">Can I record the old tyre number?</span>
+                    </span>
+                    <span class="dl-faq-arrow"><i class="ri-arrow-down-s-line"></i></span>
+                </button>
+                <div class="dl-faq-answer" id="dl-faq-answer-2">
+                    <div class="dl-faq-answer-content">
+                        <p>Yes. The form includes an old tyre number field for replacement reference.</p>
+                        <div class="dl-faq-topic"><span>Topic: Tyre Numbers</span></div>
+                    </div>
+                </div>
+            </div>
+            <div class="dl-faq-item">
+                <button class="dl-faq-question" type="button" aria-expanded="false" aria-controls="dl-faq-answer-3">
+                    <span class="dl-faq-question-content">
+                        <span class="dl-faq-number">Q3</span>
+                        <span class="dl-faq-question-text">Can I save the tyre fitting date and kilometre reading?</span>
+                    </span>
+                    <span class="dl-faq-arrow"><i class="ri-arrow-down-s-line"></i></span>
+                </button>
+                <div class="dl-faq-answer" id="dl-faq-answer-3">
+                    <div class="dl-faq-answer-content">
+                        <p>Yes. Both fitting date and vehicle kilometre reading can be recorded.</p>
+                        <div class="dl-faq-topic"><span>Topic: Fitting</span></div>
+                    </div>
+                </div>
+            </div>
+            <div class="dl-faq-item">
+                <button class="dl-faq-question" type="button" aria-expanded="false" aria-controls="dl-faq-answer-4">
+                    <span class="dl-faq-question-content">
+                        <span class="dl-faq-number">Q4</span>
+                        <span class="dl-faq-question-text">Can I upload a purchase invoice?</span>
+                    </span>
+                    <span class="dl-faq-arrow"><i class="ri-arrow-down-s-line"></i></span>
+                </button>
+                <div class="dl-faq-answer" id="dl-faq-answer-4">
+                    <div class="dl-faq-answer-content">
+                        <p>Yes. You can upload a supported image or PDF file and access it later.</p>
+                        <div class="dl-faq-topic"><span>Topic: Invoices</span></div>
+                    </div>
+                </div>
+            </div>
+            <div class="dl-faq-item">
+                <button class="dl-faq-question" type="button" aria-expanded="false" aria-controls="dl-faq-answer-5">
+                    <span class="dl-faq-question-content">
+                        <span class="dl-faq-number">Q5</span>
+                        <span class="dl-faq-question-text">Can I search tyres by vehicle number?</span>
+                    </span>
+                    <span class="dl-faq-arrow"><i class="ri-arrow-down-s-line"></i></span>
+                </button>
+                <div class="dl-faq-answer" id="dl-faq-answer-5">
+                    <div class="dl-faq-answer-content">
+                        <p>Yes. The Tyres list includes vehicle number and tyre number search options.</p>
+                        <div class="dl-faq-topic"><span>Topic: Search</span></div>
+                    </div>
+                </div>
+            </div>
+            <div class="dl-faq-item">
+                <button class="dl-faq-question" type="button" aria-expanded="false" aria-controls="dl-faq-answer-6">
+                    <span class="dl-faq-question-content">
+                        <span class="dl-faq-number">Q6</span>
+                        <span class="dl-faq-question-text">Can I edit a saved tyre record?</span>
+                    </span>
+                    <span class="dl-faq-arrow"><i class="ri-arrow-down-s-line"></i></span>
+                </button>
+                <div class="dl-faq-answer" id="dl-faq-answer-6">
+                    <div class="dl-faq-answer-content">
+                        <p>Yes. Users with edit permission can update saved information.</p>
+                        <div class="dl-faq-topic"><span>Topic: Corrections</span></div>
+                    </div>
+                </div>
+            </div>
+            <div class="dl-faq-item">
+                <button class="dl-faq-question" type="button" aria-expanded="false" aria-controls="dl-faq-answer-7">
+                    <span class="dl-faq-question-content">
+                        <span class="dl-faq-number">Q7</span>
+                        <span class="dl-faq-question-text">Does it automatically track tread wear or tyre mileage performance?</span>
+                    </span>
+                    <span class="dl-faq-arrow"><i class="ri-arrow-down-s-line"></i></span>
+                </button>
+                <div class="dl-faq-answer" id="dl-faq-answer-7">
+                    <div class="dl-faq-answer-content">
+                        <p>Not in the supplied module code. It stores the kilometre reading at fitting, but automated wear or lifetime calculations are not shown.</p>
+                        <div class="dl-faq-topic"><span>Topic: Tracking</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="dl-faq-cta">
+            <div class="dl-faq-cta-content">
+                <h3>Simplify Your Tyre Record Management</h3>
+                <p>The Tyre Management Module gives transport companies and fleet operators a simple way to organize tyre details, vehicle fittings, supplier information, invoices and purchase costs. With searchable records and straightforward editing, important tyre information stays easy to access.</p>
+                <p><strong>Keep your tyre information organized and spend less time searching through manual records.</strong></p>
+            </div>
+            <button class="dl-faq-cta-button" type="button">Get Started Now</button>
+        </div>
+    </div>
+</section>
+
+<!--footer section start-->
+<footer class="footer">
+
+    <!-- Newsletter -->
+    <div class="footer-newsletter">
+        <div class="container">
+
+            <div class="newsletter-wrapper">
+
+                <div class="newsletter-content">
+                    <h2>Stay ahead of the curve</h2>
+                    <p>
+                        Fleet management insights, product updates, and industry news.
+                    </p>
+                </div>
+
+                <form class="newsletter-form">
+
+                    <input
+                        type="email"
+                        placeholder="Enter your email"
+                    >
+
+                    <button type="submit">
+                        Subscribe
+
+                       <i class="ri-arrow-right-line"></i>
+
+                    </button>
+
+                </form>
+
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Footer Main -->
+
+    <div class="footer-main">
+
+        <div class="container">
+
+            <div class="footer-grid">
+
+                <!-- Left -->
+
+                <div class="footer-about">
+
+                    <a href="index.html" class="footer-logo">
+                         <img src="Assets/images/transportdesk-logo-dark.svg" alt="footer-logo">
+                    </a>
+
+                    <p>
+                        The intelligent transportation platform that puts fleet directors
+                        in complete control of their operations.
+                    </p>
+
+                    <div class="footer-social">
+
+                        <a href="#">
+                            <i class="ri-facebook-fill"></i>
+                        </a>
+
+                        <a href="#">
+                            <i class="ri-instagram-line"></i>
+                        </a>
+
+                        <a href="#">
+                            <i class="ri-twitter-line"></i>
+                        </a>
+
+                        <a href="#">
+                            <i class="ri-linkedin-fill"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <!-- Product -->
+
+                <div class="footer-links">
+
+                    <h3>Product</h3>
+
+                    <ul>
+        <li>
+            <a href="features.html" class="footer-link">Features</a>
+        </li>
+
+        <li>
+            <a href="modules.html" class="footer-link">Modules</a>
+        </li>
+
+        <li>
+            <a href="solutions.html" class="footer-link">Solutions</a>
+        </li>
+
+        <li>
+            <a href="reports.html" class="footer-link">Reports</a>
+        </li>
+
+        <li>
+            <a href="contact.html" class="footer-link">Contact</a>
+        </li>
+    </ul>
+
+                </div>
+
+                <!-- Resources -->
+
+                <div class="footer-links">
+
+                    <h3>Resources</h3>
+
+                    <ul>
+
+                        <li><a href="documentation.html" class="footer-link">Documentation</a></li>
+
+                        <li><a href="faq.html" class="footer-link">FAQ</a></li>
+
+                        <li><a href="privacy-policy.html" class="footer-link">Privacy Policy</a></li>
+
+                    </ul>
+
+                </div>
+
+                <!-- Support -->
+
+                <div class="footer-links">
+
+                    <h3>Support</h3>
+
+                    <ul>
+
+                        <li><a href="#" class="footer-link">Help Center</a></li>
+
+                        <li><a href="#" class="footer-link">Status</a></li>
+
+                        <li><a href="#" class="footer-link">Security</a></li>
+
+                    </ul>
+
+                </div>
+
+                <!-- Contact -->
+
+                <div class="footer-contact">
+
+                    <div class="contact-item">
+
+                        <div class="icon">
+                            <i class="ri-mail-line"></i>
+                        </div>
+
+                        <div>
+
+                            <span>Email</span>
+
+                            <a href="#">
+                               jay@prismitsystems.com
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                    <div class="contact-item">
+
+                        <div class="icon">
+                            <i class="ri-phone-fill"></i>
+                        </div>
+
+                        <div>
+
+                            <span>Call</span>
+                          <div class="footer-contact-num">
+                            <a href="#">
+                                6355 258 003
+                            </a>
+
+                             <a href="#">
+                               +1 562-312-0282
+                            </a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="contact-item">
+
+                        <div class="icon">
+                            <i class="ri-map-pin-line"></i>
+                        </div>
+
+                        <div>
+
+                            <span>Location (India)</span>
+                            <div class="footer-location">
+                            <p>The Galleria Business Hub, Adajan Gam, Pal Gam, Surat, Gujarat, India 394510</p>
+                            </div>
+                        </div>
+
+                    </div>
+                     <div class="contact-item">
+
+                        <div class="icon">
+                            <i class="ri-map-pin-line"></i>
+                        </div>
+
+                        <div>
+
+                            <span>Location (USA)</span>
+                            <div class="footer-location">
+                             <p>Norwalk, California, 90650. USA</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Bottom -->
+
+    <div class="footer-bottom">
+
+        <div class="container">
+
+            <div class="bottom-wrapper">
+
+                <p>
+                    © 2026 All rights reserved.
+                </p>
+
+                <ul>
+
+                    <li><a href="#">Privacy Policy</a></li>
+
+                    <li><a href="#">Terms of Service</a></li>
+
+                    <li><a href="#">Cookie Policy</a></li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</footer>
+<!--footer section end-->
+
+<script>
+(function () {
+    if (!document.getElementById('ty-body')) return;
+    var $ = function (id) { return document.getElementById(id); };
+    function esc(s) { return String(s == null ? '' : s).replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); }
+    function money(n) { return '₹' + Number(n || 0).toLocaleString('en-IN', { minimumFractionDigits: 0, maximumFractionDigits: 2 }); }
+    function dmy(d) { return d ? d.split('-').reverse().join('-') : '—'; }
+    function show(tabs, map, view) {
+        Array.prototype.forEach.call($(tabs).querySelectorAll('.dl-view-tab'), function (x) { x.classList.toggle('dl-view-tab-active', x.getAttribute('data-view') === view); });
+        Object.keys(map).forEach(function (k) { $(map[k]).hidden = k !== view; });
+    }
+
+    var T = [], seq = 0;
+    function render() {
+        var q = $('ty-search').value.trim().toLowerCase();
+        var l = T.filter(function (t) { return !q || (t.no + ' ' + t.veh).toLowerCase().indexOf(q) > -1; });
+        l.sort($('ty-sort').value === 'vendor' ? function (a, b) { return a.vendor.localeCompare(b.vendor); } : function (a, b) { return (b.date || '').localeCompare(a.date || ''); });
+        $('ty-body').innerHTML = l.length ? l.map(function (t) {
+            return '<tr><td><div class="dl-vehicle-name"><i class="ri-record-circle-fill"></i><span>' + esc(t.no) + '</span></div><div class="dl-vehicle-meta">Old: ' + (esc(t.old) || '—') + '</div></td><td>' + esc(t.veh) + '</td><td>' + esc(t.vendor) + '</td><td>' + esc(t.size) + '</td><td>' + dmy(t.date) + ' · ' + Number(t.km).toLocaleString('en-IN') + ' KM</td><td class="dl-text-right">' + money(t.amt) +
+                '</td><td class="dl-text-center"><button type="button" class="dl-secondary-button ty-view" data-id="' + t.id + '">View</button> <button type="button" class="dl-delete-button ty-del" data-id="' + t.id + '" title="Delete"><i class="ri-delete-bin-line"></i></button></td></tr>';
+        }).join('') : '<tr><td colspan="7">' + (T.length ? 'No matching tyre.' : 'No tyres yet. Use Add Tyre and select Save Tyre.') + '</td></tr>';
+        var vs = {}; T.forEach(function (t) { vs[t.veh] = 1; });
+        $('ty-s-count').textContent = T.length;
+        $('ty-s-amt').textContent = money(T.reduce(function (s, t) { return s + t.amt; }, 0));
+        $('ty-s-veh').textContent = Object.keys(vs).length;
+        $('ty-s-inv').textContent = T.filter(function (t) { return t.inv; }).length;
+    }
+    var map = { add: 'ty-view-add', list: 'ty-view-list' };
+    $('ty-inv').addEventListener('change', function () {
+        var f = this.files[0];
+        if (f && f.size > 2 * 1024 * 1024) { this.value = ''; $('ty-msg').textContent = 'Invoice must be 2 MB or smaller.'; return; }
+        if (f) $('ty-inv-name').textContent = f.name;
+    });
+    $('ty-save').addEventListener('click', function () {
+        var no = $('ty-new').value.trim();
+        if (!no) { $('ty-msg').textContent = 'Enter the new tyre number first.'; return; }
+        T.push({ id: ++seq, no: no, old: $('ty-old').value.trim(), veh: $('ty-veh').value, vendor: $('ty-vendor').value, type: $('ty-type').value, size: $('ty-size').value, date: $('ty-date').value, km: parseFloat($('ty-km').value) || 0, amt: parseFloat($('ty-amt').value) || 0, inv: $('ty-inv-name').textContent.replace('Upload Invoice ', '').replace(/[()]/g, '') });
+        $('ty-msg').textContent = 'Tyre saved.'; render(); show('ty-tabs', map, 'list');
+    });
+    ['ty-search', 'ty-sort'].forEach(function (id) { $(id).addEventListener('input', render); });
+    $('ty-body').addEventListener('click', function (e) {
+        var d = e.target.closest('.ty-del'), v = e.target.closest('.ty-view');
+        if (d) { T = T.filter(function (t) { return t.id !== +d.getAttribute('data-id'); }); render(); return; }
+        if (!v) return;
+        var t = T.filter(function (t) { return t.id === +v.getAttribute('data-id'); })[0];
+        $('ty-detail').innerHTML = '<i class="ri-information-line"></i><span><strong>' + esc(t.no) + '</strong> fitted on ' + esc(t.veh) + ' · Vendor: ' + esc(t.vendor) + ' · Type: ' + esc(t.type) + ' · Old tyre: ' + (esc(t.old) || '—') + ' · Size: ' + esc(t.size) + ' · Fitted ' + dmy(t.date) + ' at ' + Number(t.km).toLocaleString('en-IN') + ' KM · Amount: ' + money(t.amt) + ' · Invoice: ' + (esc(t.inv) || 'none') + '</span>';
+    });
+
+    $('ty-tabs').addEventListener('click', function (e) { var t = e.target.closest('.dl-view-tab'); if (t) show('ty-tabs', map, t.getAttribute('data-view')); });
+    render();
+})();
+</script>
+<script src="./Assets/js/custom.js"></script>
+</body>
+</html>

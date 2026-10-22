@@ -1,0 +1,2067 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Attachment Management Module | TransportDesk Fleet Solutions</title>
+    <meta name="description" content="Upload, group, label and manage business files with TransportDesk Attachment Management Module. Save multiple files as one attachment entry, preview, download individually or as a ZIP, and update or remove files anytime.">
+
+    <!-- Remix Icon -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" />
+
+    <!-- Swiper -->
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+
+    <!-- Lenis -->
+    <link rel="stylesheet"
+        href="https://unpkg.com/lenis@1.3.23/dist/lenis.css">
+
+    <!-- Tailwind Output CSS -->
+     <link href="./Assets/css/output.css" rel="stylesheet">
+</head>
+<body>
+
+<!--Header Section start-->
+<header class="main-header">
+    <div class="container">
+
+        <div class="header-inner">
+
+            <a href="index.html" class="header-logo">
+                <img src="Assets/images/transportdesk-logo.svg" alt="Logo">
+            </a>
+
+            <nav class="main-navigation" id="mobileMenu">
+
+                <div class="menu-circle"></div>
+
+                <ul class="navigation-links">
+                    <li><a href="index.html" class="navigation-link">Home</a></li>
+                    <li><a href="features.html" class="navigation-link">Features</a></li>
+                    <li><a href="modules.html" class="navigation-link active">Modules</a></li>
+                    <li><a href="reports.html" class="navigation-link">Resources</a></li>
+                    <li><a href="contact.html" class="navigation-link">Contact</a></li>
+                </ul>
+
+                <div class="mobile-header-right">
+                    <a href="#" class="login-btn">Login</a>
+                    <a href="#" class="demo-btn">Book Demo</a>
+                </div>
+
+            </nav>
+
+            <div class="header-right">
+                <a href="#" class="login-btn">Login</a>
+                <a href="#" class="demo-btn">Book Demo</a>
+            </div>
+
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+        </div>
+
+    </div>
+</header>
+
+<!-- Add this after header -->
+<div class="menu-overlay" id="menuOverlay"></div>
+<!--Header section End-->
+
+
+<section id="overview" class="dl-overview-section">
+    <div class="dl-overview-glow"></div>
+    <div class="dl-overview-pattern"></div>
+
+    <div class="container">
+        <div class="dl-overview-grid">
+
+            <!-- Left Content -->
+            <div class="dl-overview-content">
+
+                <div class="dl-overview-badge">
+                    <span class="dl-status-dot"></span>
+                    <span>Enterprise Fleet Management</span>
+                    <span class="dl-badge-divider">|</span>
+                    <span class="dl-badge-highlight">Attachment Module</span>
+                </div>
+
+                <h1 class="dl-overview-title">
+                    Smart Document &amp;
+                    <span class="dl-gradient-text">Attachment</span>
+                    Management Platform
+                </h1>
+
+                <p class="dl-overview-description">
+                    Keep important digital files organized in one convenient
+                    place. Instead of searching through separate folders, upload
+                    documents, group several files together, add a meaningful
+                    label, and access saved attachments whenever you need them.
+                </p>
+
+                <!-- Action Buttons -->
+                <div class="dl-overview-actions">
+
+                    <button type="button" class="btn-primary" onclick="document.getElementById('simulator').scrollIntoView({behavior: 'smooth'})">
+                        <span>Try Live Attachment Demo</span>
+                        <i class="ri-arrow-right-line"></i>
+                    </button>
+
+                    <button type="button" class="dl-btn-demo">
+                        <span class="dl-play-icon">
+                            <i class="ri-play-fill"></i>
+                        </span>
+                        <span>Watch Demo Video (5–7 min)</span>
+                    </button>
+                </div>
+
+                <!-- Statistics -->
+                <div class="dl-overview-stats">
+
+                    <div class="dl-stat-item">
+                        <div class="dl-stat-number">150+</div>
+                        <div class="dl-stat-label">Enterprise Fleets</div>
+                    </div>
+
+                    <div class="dl-stat-item">
+                        <div class="dl-stat-number dl-stat-red">Multi</div>
+                        <div class="dl-stat-label">Files per Attachment</div>
+                    </div>
+
+                    <div class="dl-stat-item">
+                        <div class="dl-stat-number dl-stat-green">1 ZIP</div>
+                        <div class="dl-stat-label">Download All Files</div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Right Image / Attachment Dashboard -->
+            <div class="dl-overview-visual">
+
+                <div class="dl-visual-card">
+
+                    <img
+                        src="Assets/images/hero_fleet_dispatch_1792482270822.jpg"
+                        alt="Transportation Fleet Dispatch Logistics Center"
+                        class="dl-visual-image"
+                    >
+
+                    <div class="dl-visual-overlay"></div>
+
+                    <!-- Image Top Information -->
+                    <div class="dl-visual-topbar">
+
+                        <div class="dl-live-label">
+                            <span class="dl-live-dot"></span>
+                            <span>Attachment Storage</span>
+                        </div>
+
+                        <div class="dl-fuel-rate">
+                            3 Files · 1 Entry
+                        </div>
+
+                    </div>
+
+                    <!-- Attachment Information -->
+                    <div class="dl-fuel-slip">
+
+                        <div class="dl-slip-header">
+                            <span class="dl-slip-title">
+                                Recent Attachment: Truck Insurance Documents
+                            </span>
+
+                            <span class="dl-slip-status">
+                                Saved
+                            </span>
+                        </div>
+
+                        <div class="dl-slip-stats">
+
+                            <div class="dl-slip-stat">
+                                <span class="dl-slip-label">Files</span>
+                                <span class="dl-slip-value">3 Files</span>
+                            </div>
+
+                            <div class="dl-slip-stat">
+                                <span class="dl-slip-label">Types</span>
+                                <span class="dl-slip-value dl-slip-red">PDF · JPG</span>
+                            </div>
+
+                            <div class="dl-slip-stat">
+                                <span class="dl-slip-label">Combined Size</span>
+                                <span class="dl-slip-value dl-slip-green">2.4 MB</span>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<section class="dl-trusted-section">
+    <div class="dl-trusted-heading">
+        <span>
+            Trusted by 150+ Enterprise Transportation &amp; Logistics Fleets
+        </span>
+    </div>
+
+    <div class="dl-trusted-marquee">
+        <!-- Left fade -->
+        <div class="dl-trusted-fade dl-trusted-fade-left"></div>
+
+        <!-- Right fade -->
+        <div class="dl-trusted-fade dl-trusted-fade-right"></div>
+
+        <div class="dl-trusted-track">
+
+            <!-- First group -->
+            <div class="dl-trusted-group">
+                <div class="dl-trusted-item">
+                    <span class="dl-trusted-dot"></span>
+                    <span class="dl-trusted-name">Apex Logistics</span>
+                </div>
+
+                <div class="dl-trusted-item">
+                    <span class="dl-trusted-dot"></span>
+                    <span class="dl-trusted-name">Meridian Transport</span>
+                </div>
+
+                <div class="dl-trusted-item">
+                    <span class="dl-trusted-dot"></span>
+                    <span class="dl-trusted-name">Global Freight Co</span>
+                </div>
+
+                <div class="dl-trusted-item">
+                    <span class="dl-trusted-dot"></span>
+                    <span class="dl-trusted-name">NorthStar Fleet</span>
+                </div>
+
+                <div class="dl-trusted-item">
+                    <span class="dl-trusted-dot"></span>
+                    <span class="dl-trusted-name">Titan Cargo</span>
+                </div>
+
+                <div class="dl-trusted-item">
+                    <span class="dl-trusted-dot"></span>
+                    <span class="dl-trusted-name">Pacific Routes</span>
+                </div>
+
+                <div class="dl-trusted-item">
+                    <span class="dl-trusted-dot"></span>
+                    <span class="dl-trusted-name">Atlas Distribution</span>
+                </div>
+
+                <div class="dl-trusted-item">
+                    <span class="dl-trusted-dot"></span>
+                    <span class="dl-trusted-name">Summit Hauling</span>
+                </div>
+
+                <div class="dl-trusted-item">
+                    <span class="dl-trusted-dot"></span>
+                    <span class="dl-trusted-name">BlueDart Express</span>
+                </div>
+
+                <div class="dl-trusted-item">
+                    <span class="dl-trusted-dot"></span>
+                    <span class="dl-trusted-name">TCI Freight Lines</span>
+                </div>
+
+                <div class="dl-trusted-item">
+                    <span class="dl-trusted-dot"></span>
+                    <span class="dl-trusted-name">VRL Logistics Fleet</span>
+                </div>
+
+                <div class="dl-trusted-item">
+                    <span class="dl-trusted-dot"></span>
+                    <span class="dl-trusted-name">Safexpress Network</span>
+                </div>
+            </div>
+
+            <!-- Duplicate group for seamless looping -->
+            <div class="dl-trusted-group" aria-hidden="true">
+                <div class="dl-trusted-item">
+                    <span class="dl-trusted-dot"></span>
+                    <span class="dl-trusted-name">Apex Logistics</span>
+                </div>
+
+                <div class="dl-trusted-item">
+                    <span class="dl-trusted-dot"></span>
+                    <span class="dl-trusted-name">Meridian Transport</span>
+                </div>
+
+                <div class="dl-trusted-item">
+                    <span class="dl-trusted-dot"></span>
+                    <span class="dl-trusted-name">Global Freight Co</span>
+                </div>
+
+                <div class="dl-trusted-item">
+                    <span class="dl-trusted-dot"></span>
+                    <span class="dl-trusted-name">NorthStar Fleet</span>
+                </div>
+
+                <div class="dl-trusted-item">
+                    <span class="dl-trusted-dot"></span>
+                    <span class="dl-trusted-name">Titan Cargo</span>
+                </div>
+
+                <div class="dl-trusted-item">
+                    <span class="dl-trusted-dot"></span>
+                    <span class="dl-trusted-name">Pacific Routes</span>
+                </div>
+
+                <div class="dl-trusted-item">
+                    <span class="dl-trusted-dot"></span>
+                    <span class="dl-trusted-name">Atlas Distribution</span>
+                </div>
+
+                <div class="dl-trusted-item">
+                    <span class="dl-trusted-dot"></span>
+                    <span class="dl-trusted-name">Summit Hauling</span>
+                </div>
+
+                <div class="dl-trusted-item">
+                    <span class="dl-trusted-dot"></span>
+                    <span class="dl-trusted-name">BlueDart Express</span>
+                </div>
+
+                <div class="dl-trusted-item">
+                    <span class="dl-trusted-dot"></span>
+                    <span class="dl-trusted-name">TCI Freight Lines</span>
+                </div>
+
+                <div class="dl-trusted-item">
+                    <span class="dl-trusted-dot"></span>
+                    <span class="dl-trusted-name">VRL Logistics Fleet</span>
+                </div>
+
+                <div class="dl-trusted-item">
+                    <span class="dl-trusted-dot"></span>
+                    <span class="dl-trusted-name">Safexpress Network</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<section class="dl-demo-section">
+    <div class="dl-demo-glow"></div>
+
+    <div class="dl-container">
+
+        <!-- Section Heading -->
+        <div class="heading-wrapper">
+
+            <span class="heading-tag">
+                Interactive Video Demonstration
+            </span>
+
+            <h2 class="heading-title">
+                Watch How
+                <span>Attachment Management</span>
+                Works
+            </h2>
+
+            <p>
+                Welcome to the Attachment Management Module. In this video you
+                will see how to upload documents, group several files together,
+                add a meaningful label, and access saved attachments when needed,
+                step by step.
+            </p>
+        </div>
+
+        <!-- Demo Content -->
+        <div class="dl-demo-grid">
+
+            <!-- Video Preview -->
+            <div class="dl-demo-video-column">
+
+                <div class="dl-video-card">
+
+                    <!-- Video Browser Header -->
+                    <div class="dl-video-toolbar">
+
+                        <div class="dl-video-toolbar-left">
+                            <span class="dl-window-dot dl-dot-red"></span>
+                            <span class="dl-window-dot dl-dot-yellow"></span>
+                            <span class="dl-window-dot dl-dot-green"></span>
+
+                            <span class="dl-video-filename">
+                                transportdesk_attachment_module_demo.mp4
+                            </span>
+                        </div>
+
+                        <span class="dl-video-quality">
+                            Full HD · 5–7 min
+                        </span>
+
+                    </div>
+
+                    <!-- Video Thumbnail -->
+                    <div class="dl-video-preview">
+
+                        <img
+                            src="Assets/images/dashboard.png"
+                            alt="Attachment Management demonstration video preview"
+                            class="dl-video-thumbnail"
+                        >
+
+                        <div class="dl-video-overlay"></div>
+
+                        <button
+                            type="button"
+                            class="dl-video-play"
+                            aria-label="Play demonstration video"
+                        >
+                            <i class="ri-play-fill"></i>
+                            <span class="dl-video-ping"></span>
+                        </button>
+
+                        <!-- Video Information -->
+                        <div class="dl-video-meta">
+
+                            <div class="dl-video-meta-left">
+                                <span class="dl-video-timestamp">
+                                    Scene 5 of 8
+                                </span>
+
+                                <span class="dl-video-current-chapter">
+                                    Uploading and Saving an Attachment
+                                </span>
+                            </div>
+
+                            <a
+                                href="#"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="dl-video-external"
+                            >
+                                <span>External Link</span>
+                                <i class="ri-external-link-line"></i>
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                    <!-- Video Footer -->
+                    <div class="dl-video-footer">
+
+                        <div class="dl-video-footer-left">
+
+                            <button
+                                type="button"
+                                class="dl-watch-button"
+                            >
+                                <i class="ri-play-circle-line"></i>
+                                <span>Watch Full Walkthrough</span>
+                            </button>
+
+                            <span class="dl-video-footer-note">
+                                Click to launch video playback in pop-up modal
+                            </span>
+
+                        </div>
+
+                        <a
+                            href="#"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="dl-video-source"
+                        >
+                            <span>Direct Source</span>
+                            <i class="ri-arrow-right-up-line"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+</section>
+
+<section id="simulator" class="dl-simulator-section">
+    <div class="dl-container">
+
+        <!-- Section Heading -->
+        <div class="dl-simulator-header">
+            <div class="heading-wrapper heading-wrap-left">
+
+                <span class="heading-tag">
+                    Upload Attachment View
+                </span>
+
+                <h2 class="heading-title">
+                    Interactive <span>Attachment Management</span> Demo
+                </h2>
+
+                <p>
+                    Try the module yourself: enter a label, choose one or several
+                    files, upload and save them as a single attachment, then preview,
+                    download, add, remove or delete files. Files stay in your browser
+                    only and are never uploaded anywhere.
+                </p>
+
+            </div>
+
+            <div class="dl-view-switcher">
+                <button type="button" class="dl-view-tab dl-view-tab-active" data-at-view="upload">
+                    <i class="ri-upload-cloud-2-line"></i>
+                    Upload Attachment View
+                </button>
+
+                <button type="button" class="dl-view-tab" data-at-view="list">
+                    <i class="ri-folder-open-line"></i>
+                    Saved Attachments View
+                </button>
+            </div>
+        </div>
+
+        <!-- Summary Statistics -->
+        <div class="dl-stats-grid">
+
+            <div class="dl-stat-card">
+                <div class="dl-stat-label">
+                    <span>Total Attachments</span>
+                    <i class="ri-folder-3-line"></i>
+                </div>
+                <div class="dl-stat-value">
+                    <span id="at-stat-entries" style="font:inherit;color:inherit">0</span> <span>Entries</span>
+                </div>
+                <p class="dl-stat-note">Saved attachment groups</p>
+            </div>
+
+            <div class="dl-stat-card">
+                <div class="dl-stat-label">
+                    <span>Total Files</span>
+                    <i class="ri-attachment-2 dl-red-icon"></i>
+                </div>
+                <div class="dl-stat-value dl-red-text">
+                    <span id="at-stat-files" style="font:inherit;color:inherit">0</span> <span>Files</span>
+                </div>
+                <p class="dl-stat-note">Across all attachments</p>
+            </div>
+
+            <div class="dl-stat-card">
+                <div class="dl-stat-label">
+                    <span>Combined File Size</span>
+                    <i class="ri-hard-drive-2-line dl-green-icon"></i>
+                </div>
+                <div class="dl-stat-value dl-green-text">
+                    <span id="at-stat-size" style="font:inherit;color:inherit">0 KB</span>
+                </div>
+                <p class="dl-stat-note">Recorded automatically</p>
+            </div>
+
+            <div class="dl-stat-card dl-stat-card-total">
+                <div class="dl-stat-label">
+                    <span>Selected to Upload</span>
+                    <span class="dl-status-dot"></span>
+                </div>
+                <div class="dl-stat-value dl-stat-total-value" id="at-stat-selected">0 Files</div>
+                <p class="dl-stat-note dl-green-text">Saved as a single entry</p>
+            </div>
+
+        </div>
+
+        <!-- Panel -->
+        <div class="dl-calculator-panel">
+
+            <!-- ===== UPLOAD VIEW ===== -->
+            <div id="at-view-upload">
+
+                <div class="dl-bill-master">
+
+                    <div class="dl-bill-master-header">
+                        <div class="dl-bill-heading">
+                            <span id="at-form-title">Step 1: Attachment Information</span>
+                            <span class="dl-heading-separator">·</span>
+                            <span class="dl-invoice-number">Upload Attachment</span>
+                        </div>
+
+                        <div class="dl-receipt-actions">
+                            <label for="at-file-input" class="dl-secondary-button dl-upload-button">
+                                <i class="ri-upload-2-line"></i>
+                                <span>Choose Files</span>
+                                <input id="at-file-input" type="file" multiple>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="dl-bill-fields">
+
+                        <div class="dl-form-group">
+                            <label for="at-label">Attachment Label</label>
+                            <input id="at-label" class="dl-form-control" type="text"
+                                   placeholder="e.g. Truck Insurance Documents" maxlength="80">
+                        </div>
+
+                        <div class="dl-form-group">
+                            <label for="at-label-preset">Quick Label Examples</label>
+                            <select id="at-label-preset" class="dl-form-control">
+                                <option value="">Select an example label</option>
+                                <option>Truck Insurance Documents</option>
+                                <option>October Office Bills</option>
+                            </select>
+                        </div>
+
+                    </div>
+
+                    <div class="dl-bill-options">
+                        <span class="dl-formula-note" id="at-message">
+                            Enter a clear label, choose one or several files, then click Upload &amp; Save.
+                        </span>
+                    </div>
+
+                </div>
+
+                <!-- Toolbar -->
+                <div class="dl-table-toolbar">
+
+                    <div class="dl-search-box">
+                        <span style="padding-left:.5rem">Selected files appear below as a single attachment entry</span>
+                    </div>
+
+                    <div class="dl-toolbar-actions">
+                        <button type="button" class="dl-action-button" id="at-clear">
+                            <i class="ri-close-circle-line dl-red-icon"></i>
+                            Clear Selection
+                        </button>
+
+                        <button type="button" class="dl-primary-button" id="at-save">
+                            <i class="ri-save-3-line"></i>
+                            Upload &amp; Save
+                        </button>
+                    </div>
+
+                </div>
+
+                <!-- Selected files table -->
+                <div class="dl-table-wrapper">
+                    <table class="dl-vehicle-table">
+                        <thead>
+                            <tr>
+                                <th>File Name</th>
+                                <th>Type</th>
+                                <th class="dl-text-right">Size</th>
+                                <th class="dl-text-center">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody id="at-selected-body"></tbody>
+                        <tfoot>
+                            <tr>
+                                <td><span class="dl-footer-label" id="at-sel-label">Attachment Total (0 Files)</span></td>
+                                <td class="dl-footer-period" id="at-sel-types">Types: —</td>
+                                <td class="dl-text-right dl-footer-total" id="at-sel-size">0 KB</td>
+                                <td class="dl-text-right">
+                                    <button type="button" class="dl-primary-button" id="at-save2">Upload &amp; Save</button>
+                                </td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+            </div>
+
+            <!-- ===== LIST VIEW ===== -->
+            <div id="at-view-list" hidden>
+
+                <div class="dl-table-toolbar">
+
+                    <div class="dl-search-box">
+                        <i class="ri-search-line"></i>
+                        <input type="search" id="at-search" placeholder="Search attachment label or file name...">
+                    </div>
+
+                    <div class="dl-toolbar-actions">
+                        <button type="button" class="dl-primary-button" id="at-go-upload">
+                            <i class="ri-add-line"></i>
+                            Upload Attachment
+                        </button>
+                    </div>
+
+                </div>
+
+                <div class="dl-table-wrapper">
+                    <table class="dl-vehicle-table">
+                        <thead>
+                            <tr>
+                                <th>Attachment Label</th>
+                                <th>Files (Original Names)</th>
+                                <th class="dl-text-right">Combined Size</th>
+                                <th>Uploaded</th>
+                                <th class="dl-text-center">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody id="at-list-body"></tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Information Footer -->
+            <div class="dl-calculator-footer">
+
+                <div class="dl-documentation-note">
+                    <i class="ri-information-line"></i>
+                    <span>
+                        <strong>Documentation Rule:</strong>
+                        Selected files are saved together as a single attachment entry,
+                        rather than a separate record for every file.
+                    </span>
+                </div>
+
+                <div class="dl-supported-formats">
+                    Preview works when the browser supports the file type
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<!--dl feature section start-->
+<section id="features" class="dl-features-section">
+    <div class="container">
+
+        <!-- Section Heading -->
+        <div class="heading-wrapper">
+            <span class="heading-tag">
+                Complete solution
+            </span>
+
+            <h2 class="heading-title">
+                Everything Your <span>Attachments Need</span>
+            </h2>
+
+            <p>
+                A comprehensive set of tools to upload, label, group, preview, download and maintain digital files in one convenient place.
+            </p>
+
+            <!-- Feature Filters -->
+            <div class="dl-features-filters">
+                <button type="button"
+                    class="dl-filter-btn is-active"
+                    data-filter="all">
+                    All Features (12)
+                </button>
+
+                <button type="button"
+                    class="dl-filter-btn"
+                    data-filter="upload">
+                    Upload &amp; Labels
+                </button>
+
+                <button type="button"
+                    class="dl-filter-btn"
+                    data-filter="access">
+                    View &amp; Download
+                </button>
+
+                <button type="button"
+                    class="dl-filter-btn"
+                    data-filter="manage">
+                    Update &amp; Remove
+                </button>
+            </div>
+        </div>
+
+        <!-- Feature Cards -->
+        <div class="dl-features-grid">
+
+            <!-- Feature 4.1 -->
+            <article class="dl-feature-card" data-category="upload">
+                <div class="dl-feature-card-content">
+                    <div class="dl-feature-icon">
+                        <i class="ri-upload-cloud-2-line"></i>
+                    </div>
+                    <div class="dl-feature-card-heading">
+                        <h3>Attachment Upload</h3>
+                    </div>
+                    <p>
+                        Upload documents from your device and keep important digital files organized in one convenient place instead of searching through separate folders.
+                    </p>
+                </div>
+            </article>
+
+            <!-- Feature 4.2 -->
+            <article class="dl-feature-card" data-category="upload">
+                <div class="dl-feature-card-content">
+                    <div class="dl-feature-icon">
+                        <i class="ri-price-tag-3-line"></i>
+                    </div>
+                    <div class="dl-feature-card-heading">
+                        <h3>Meaningful Labels</h3>
+                    </div>
+                    <p>
+                        Add a clear label such as “Truck Insurance Documents” or “October Office Bills” so users can recognize the files later.
+                    </p>
+                </div>
+            </article>
+
+            <!-- Feature 4.3 -->
+            <article class="dl-feature-card" data-category="upload">
+                <div class="dl-feature-card-content">
+                    <div class="dl-feature-icon">
+                        <i class="ri-attachment-2"></i>
+                    </div>
+                    <div class="dl-feature-card-heading">
+                        <h3>Multiple Files, One Entry</h3>
+                    </div>
+                    <p>
+                        Choose one or several files at once. Selected files are saved together as a single attachment entry, with no separate record needed for every file.
+                    </p>
+                </div>
+            </article>
+
+            <!-- Feature 4.4 -->
+            <article class="dl-feature-card" data-category="upload">
+                <div class="dl-feature-card-content">
+                    <div class="dl-feature-icon">
+                        <i class="ri-information-line"></i>
+                    </div>
+                    <div class="dl-feature-card-heading">
+                        <h3>Automatic File Details</h3>
+                    </div>
+                    <p>
+                        The system stores the files and records their original names, types and combined file size for every attachment.
+                    </p>
+                </div>
+            </article>
+
+            <!-- Feature 4.5 -->
+            <article class="dl-feature-card" data-category="access">
+                <div class="dl-feature-card-content">
+                    <div class="dl-feature-icon">
+                        <i class="ri-folder-open-line"></i>
+                    </div>
+                    <div class="dl-feature-card-heading">
+                        <h3>Attachments List Page</h3>
+                    </div>
+                    <p>
+                        Open the Attachments page to view all saved attachment groups, with the Upload Attachment option always at hand for adding a new record.
+                    </p>
+                </div>
+            </article>
+
+            <!-- Feature 4.6 -->
+            <article class="dl-feature-card" data-category="access">
+                <div class="dl-feature-card-content">
+                    <div class="dl-feature-icon">
+                        <i class="ri-eye-line"></i>
+                    </div>
+                    <div class="dl-feature-card-heading">
+                        <h3>File Preview</h3>
+                    </div>
+                    <p>
+                        Open an attachment to preview an individual file directly when the browser supports it.
+                    </p>
+                </div>
+            </article>
+
+            <!-- Feature 4.7 -->
+            <article class="dl-feature-card" data-category="access">
+                <div class="dl-feature-card-content">
+                    <div class="dl-feature-icon">
+                        <i class="ri-download-2-line"></i>
+                    </div>
+                    <div class="dl-feature-card-heading">
+                        <h3>Individual File Download</h3>
+                    </div>
+                    <p>
+                        Download any file from an attachment separately whenever only one document is needed.
+                    </p>
+                </div>
+            </article>
+
+            <!-- Feature 4.8 -->
+            <article class="dl-feature-card" data-category="access">
+                <div class="dl-feature-card-content">
+                    <div class="dl-feature-icon">
+                        <i class="ri-file-zip-line"></i>
+                    </div>
+                    <div class="dl-feature-card-heading">
+                        <h3>Download All as ZIP</h3>
+                    </div>
+                    <p>
+                        Download all files in an attachment as one ZIP package, ready to share or archive in a single step.
+                    </p>
+                </div>
+            </article>
+
+            <!-- Feature 4.9 -->
+            <article class="dl-feature-card" data-category="manage">
+                <div class="dl-feature-card-content">
+                    <div class="dl-feature-icon">
+                        <i class="ri-edit-line"></i>
+                    </div>
+                    <div class="dl-feature-card-heading">
+                        <h3>Change Attachment Label</h3>
+                    </div>
+                    <p>
+                        Authorized users can rename an attachment label at any time so records stay clear and easy to recognize.
+                    </p>
+                </div>
+            </article>
+
+            <!-- Feature 4.10 -->
+            <article class="dl-feature-card" data-category="manage">
+                <div class="dl-feature-card-content">
+                    <div class="dl-feature-icon">
+                        <i class="ri-add-circle-line"></i>
+                    </div>
+                    <div class="dl-feature-card-heading">
+                        <h3>Add More Files</h3>
+                    </div>
+                    <p>
+                        Authorized users can add more files to an existing attachment entry when new documents become available.
+                    </p>
+                </div>
+            </article>
+
+            <!-- Feature 4.11 -->
+            <article class="dl-feature-card" data-category="manage">
+                <div class="dl-feature-card-content">
+                    <div class="dl-feature-icon">
+                        <i class="ri-file-reduce-line"></i>
+                    </div>
+                    <div class="dl-feature-card-heading">
+                        <h3>Remove Selected Files</h3>
+                    </div>
+                    <p>
+                        Remove individual files from an attachment without affecting the other files saved in the same entry.
+                    </p>
+                </div>
+            </article>
+
+            <!-- Feature 4.12 -->
+            <article class="dl-feature-card" data-category="manage">
+                <div class="dl-feature-card-content">
+                    <div class="dl-feature-icon">
+                        <i class="ri-delete-bin-6-line"></i>
+                    </div>
+                    <div class="dl-feature-card-heading">
+                        <h3>Delete Attachment Entry</h3>
+                    </div>
+                    <p>
+                        Delete an entire attachment entry when it is no longer required, keeping the module clean and organized.
+                    </p>
+                </div>
+            </article>
+
+        </div>
+    </div>
+</section>
+<!--dl feature section end-->
+
+<!--workflow section start-->
+<section class="dl-workflow-section">
+    <div class="container">
+
+        <!-- Section Heading -->
+        <div class="heading-wrapper heading-wrap-left">
+            <span class="heading-tag">
+                Step-by-Step Workflow
+            </span>
+
+            <h2 class="heading-title">
+                How Does the <span>Attachment Module</span> Work?
+            </h2>
+
+            <p>
+                The module follows a simple process that lets users store and manage important files without searching through separate folders.
+            </p>
+        </div>
+
+        <!-- Workflow Grid -->
+        <div class="dl-workflow-grid">
+
+            <!-- Workflow Step 01 -->
+            <article class="dl-workflow-card">
+                <div class="dl-workflow-card-content">
+                    <div class="dl-workflow-card-top">
+                        <span class="dl-workflow-number">01</span>
+                        <div class="dl-workflow-icon">
+                            <i class="ri-folder-open-line"></i>
+                        </div>
+                    </div>
+                    <h3 class="dl-workflow-card-title">
+                        Open Attachment Management
+                    </h3>
+                    <p class="dl-workflow-card-description">
+                        Open the application dashboard, select the module from the sidebar, and open its list page.
+                    </p>
+                    <ul class="dl-workflow-checklist">
+                        <li>
+                            <i class="ri-check-line"></i>
+                            <span>Open the Attachments page to view saved attachment groups</span>
+                        </li>
+                        <li>
+                            <i class="ri-check-line"></i>
+                            <span>Use the Upload Attachment option to add a new record</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="dl-workflow-card-footer">
+                    <span>Workflow Phase 01</span>
+                </div>
+            </article>
+
+            <!-- Workflow Step 02 -->
+            <article class="dl-workflow-card">
+                <div class="dl-workflow-card-content">
+                    <div class="dl-workflow-card-top">
+                        <span class="dl-workflow-number">02</span>
+                        <div class="dl-workflow-icon">
+                            <i class="ri-price-tag-3-line"></i>
+                        </div>
+                    </div>
+                    <h3 class="dl-workflow-card-title">
+                        Enter an Attachment Label
+                    </h3>
+                    <p class="dl-workflow-card-description">
+                        Give the attachment a clear name so it can be recognized later.
+                    </p>
+                    <ul class="dl-workflow-checklist">
+                        <li>
+                            <i class="ri-check-line"></i>
+                            <span>Enter a clear label, such as “Truck Insurance Documents”</span>
+                        </li>
+                        <li>
+                            <i class="ri-check-line"></i>
+                            <span>Or use a label such as “October Office Bills”</span>
+                        </li>
+                        <li>
+                            <i class="ri-check-line"></i>
+                            <span>The label helps users recognize the files later</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="dl-workflow-card-footer">
+                    <span>Workflow Phase 02</span>
+                </div>
+            </article>
+
+            <!-- Workflow Step 03 -->
+            <article class="dl-workflow-card">
+                <div class="dl-workflow-card-content">
+                    <div class="dl-workflow-card-top">
+                        <span class="dl-workflow-number">03</span>
+                        <div class="dl-workflow-icon">
+                            <i class="ri-attachment-2"></i>
+                        </div>
+                    </div>
+                    <h3 class="dl-workflow-card-title">
+                        Select One or More Files
+                    </h3>
+                    <p class="dl-workflow-card-description">
+                        Choose the documents you want to store together.
+                    </p>
+                    <ul class="dl-workflow-checklist">
+                        <li>
+                            <i class="ri-check-line"></i>
+                            <span>Choose one or several files from your device</span>
+                        </li>
+                        <li>
+                            <i class="ri-check-line"></i>
+                            <span>Selected files are saved together as a single attachment entry</span>
+                        </li>
+                        <li>
+                            <i class="ri-check-line"></i>
+                            <span>No separate record is needed for every file</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="dl-workflow-card-footer">
+                    <span>Workflow Phase 03</span>
+                </div>
+            </article>
+
+            <!-- Workflow Step 04 -->
+            <article class="dl-workflow-card">
+                <div class="dl-workflow-card-content">
+                    <div class="dl-workflow-card-top">
+                        <span class="dl-workflow-number">04</span>
+                        <div class="dl-workflow-icon">
+                            <i class="ri-save-3-line"></i>
+                        </div>
+                    </div>
+                    <h3 class="dl-workflow-card-title">
+                        Upload and Save
+                    </h3>
+                    <p class="dl-workflow-card-description">
+                        Submit the form and let the system store your files.
+                    </p>
+                    <ul class="dl-workflow-checklist">
+                        <li>
+                            <i class="ri-check-line"></i>
+                            <span>Submit the form to upload the files</span>
+                        </li>
+                        <li>
+                            <i class="ri-check-line"></i>
+                            <span>Original names, types and combined file size are recorded</span>
+                        </li>
+                        <li>
+                            <i class="ri-check-line"></i>
+                            <span>The attachment appears on the list page</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="dl-workflow-card-footer">
+                    <span>Workflow Phase 04</span>
+                </div>
+            </article>
+
+            <!-- Workflow Step 05 -->
+            <article class="dl-workflow-card">
+                <div class="dl-workflow-card-content">
+                    <div class="dl-workflow-card-top">
+                        <span class="dl-workflow-number">05</span>
+                        <div class="dl-workflow-icon">
+                            <i class="ri-download-cloud-2-line"></i>
+                        </div>
+                    </div>
+                    <h3 class="dl-workflow-card-title">
+                        View, Download, Update or Remove
+                    </h3>
+                    <p class="dl-workflow-card-description">
+                        Open any saved attachment and manage it whenever needed.
+                    </p>
+                    <ul class="dl-workflow-checklist">
+                        <li>
+                            <i class="ri-check-line"></i>
+                            <span>Preview an individual file when the browser supports it</span>
+                        </li>
+                        <li>
+                            <i class="ri-check-line"></i>
+                            <span>Download any file separately, or all files as one ZIP package</span>
+                        </li>
+                        <li>
+                            <i class="ri-check-line"></i>
+                            <span>Change a label, add more files, or remove selected files</span>
+                        </li>
+                        <li>
+                            <i class="ri-check-line"></i>
+                            <span>Delete an entire attachment entry when no longer required</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="dl-workflow-card-footer">
+                    <span>Workflow Phase 05</span>
+                </div>
+            </article>
+
+        </div>
+    </div>
+
+    <div class="et-container">
+        <div class="workflow-bottom">
+
+            <!-- Security Card -->
+            <div class="security-card">
+                <img src="./Assets/images/workflow-img.png" alt="workflow-img">
+                <div class="security-content">
+                    <h3>Enterprise-Grade Security</h3>
+                    <p>
+                        Protect sensitive business information with encrypted data storage, secure user authentication, and controlled system access.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Right Side -->
+            <div class="workflow-info">
+
+                <div class="stats-card">
+                    <h3>98%</h3>
+                    <h4>Customer Satisfaction</h4>
+                    <p>
+                        Provide accurate ETAs, live shipment updates, and faster response times that improve customer trust and retention.
+                    </p>
+                </div>
+
+                <div class="workflow-content">
+                    <p>
+                        Explore a powerful collection of intelligent modules built to streamline your daily transport operations. Manage vehicles, drivers, trips, and business performance seamlessly through one unified platform.
+                    </p>
+
+                    <a href="#" class="workflow-btn">
+                        Explore All Modules <i class="ri-arrow-right-line"></i>
+                    </a>
+                </div>
+
+                <div class="info-card">
+                    <div class="info-icon">
+                        <i class="ri-bar-chart-2-fill"></i>
+                    </div>
+                    <span>
+                        Visualize business performance instantly
+                    </span>
+                </div>
+
+                <div class="info-card">
+                    <div class="info-icon">
+                        <i class="ri-lock-unlock-line"></i>
+                    </div>
+                    <span>
+                        Access your business securely from anywhere
+                    </span>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+<!--workflow section end-->
+
+<!--results section start-->
+<section id="benefits" class="results-section">
+    <div class="container">
+
+        <!-- Heading -->
+        <div class="heading-wrapper">
+            <span class="heading-tag">
+                Proven Advantages
+            </span>
+
+            <h2 class="heading-title heading-light">
+                Benefits of Using <span>Attachment Management</span>
+            </h2>
+
+            <p>
+                Keep important digital files organized in one place, find them quickly, and share them easily whenever your team needs them.
+            </p>
+        </div>
+
+        <!-- Cards -->
+        <div class="results-grid">
+
+            <div class="result-card">
+                <div class="result-icon">
+                    <i class="ri-folder-shield-2-line"></i>
+                </div>
+                <h3>
+                    Keep Files Organized
+                </h3>
+                <p>
+                    Keep important digital files organized in one convenient place instead of searching through separate folders.
+                </p>
+            </div>
+
+            <div class="result-card">
+                <div class="result-icon">
+                    <i class="ri-stack-line"></i>
+                </div>
+                <h3>
+                    Group Related Files
+                </h3>
+                <p>
+                    Upload documents and group several files together under one attachment entry.
+                </p>
+            </div>
+
+            <div class="result-card">
+                <div class="result-icon">
+                    <i class="ri-price-tag-3-line"></i>
+                </div>
+                <h3>
+                    Recognize Records Instantly
+                </h3>
+                <p>
+                    Add a meaningful label so users can identify the right attachment whenever it is needed.
+                </p>
+            </div>
+
+            <div class="result-card">
+                <div class="result-icon">
+                    <i class="ri-search-eye-line"></i>
+                </div>
+                <h3>
+                    Access Files When Needed
+                </h3>
+                <p>
+                    Open saved attachments from the list page and preview files without hunting through folders.
+                </p>
+            </div>
+
+            <div class="result-card">
+                <div class="result-icon">
+                    <i class="ri-file-zip-line"></i>
+                </div>
+                <h3>
+                    Share Everything in One Step
+                </h3>
+                <p>
+                    Download all files in an attachment as a single ZIP package for quick sharing or archiving.
+                </p>
+            </div>
+
+            <div class="result-card">
+                <div class="result-icon">
+                    <i class="ri-edit-box-line"></i>
+                </div>
+                <h3>
+                    Maintain Records Easily
+                </h3>
+                <p>
+                    Change labels, add more files, remove selected files, or delete entries when no longer required.
+                </p>
+            </div>
+
+        </div>
+    </div>
+</section>
+<!--results section end-->
+
+<!--transport-section start-->
+<section class="transport-section">
+    <div class="container">
+        <div class="transport-container">
+
+            <!-- Left Content -->
+            <div class="heading-wrapper heading-wrap-left">
+                <span class="heading-tag">
+                    Transportation Management
+                </span>
+
+                <h2 class="heading-title">
+                    Manage Your Transportation <span> Operations Efficiently </span>
+                </h2>
+
+                <p>
+                    Track vehicles, manage drivers, monitor fuel usage, handle maintenance schedules, and keep every important document and attachment organized from one centralized cloud platform.
+                </p>
+            </div>
+
+            <!-- Right Side -->
+            <div class="transport-image-wrapper">
+                <img src="./Assets/images/tms-img.png" alt="Transportation Dashboard" class="transport-image">
+
+                <!-- Decorative Shape -->
+                <div class="transport-shape"></div>
+
+                <!-- Floating Card -->
+                <div class="transport-card">
+                    <ul class="transport-list">
+                        <li>
+                            <i class="ri-checkbox-circle-line"></i>
+                            <span>Real-time fleet and vehicle monitoring</span>
+                        </li>
+                        <li>
+                            <i class="ri-checkbox-circle-line"></i>
+                            <span>Driver management and attendance tracking</span>
+                        </li>
+                        <li>
+                            <i class="ri-checkbox-circle-line"></i>
+                            <span>Fuel logs and expense management</span>
+                        </li>
+                        <li>
+                            <i class="ri-checkbox-circle-line"></i>
+                            <span>Maintenance alerts and service scheduling</span>
+                        </li>
+                        <li>
+                            <i class="ri-checkbox-circle-line"></i>
+                            <span>Attachments, vehicle documents and compliance files</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+<!--transport section end-->
+
+<!--dl-faq section start-->
+<section id="faq" class="dl-faq-section">
+    <div class="container">
+
+        <div class="heading-wrapper">
+            <span class="heading-tag">
+                Got Questions?
+            </span>
+
+            <h2 class="heading-title">
+                Frequently Asked <span>Questions</span>
+            </h2>
+
+            <p>
+                Everything you need to know about uploading, labeling, downloading and managing attachments in your fleet operations.
+            </p>
+
+            <!-- Feature Filters -->
+            <div class="dl-faq-filters">
+                <button class="dl-faq-filter active" type="button">All</button>
+                <button class="dl-faq-filter" type="button">Uploading</button>
+                <button class="dl-faq-filter" type="button">Labels</button>
+                <button class="dl-faq-filter" type="button">Downloads</button>
+                <button class="dl-faq-filter" type="button">Corrections</button>
+            </div>
+        </div>
+
+        <!-- FAQ List -->
+        <div class="dl-faq-list">
+
+            <!-- FAQ 1 -->
+            <div class="dl-faq-item active" data-category="uploading">
+                <button
+                    class="dl-faq-question"
+                    type="button"
+                    aria-expanded="true"
+                    aria-controls="dl-faq-answer-1"
+                >
+                    <span class="dl-faq-question-content">
+                        <span class="dl-faq-number">Q1</span>
+                        <span class="dl-faq-question-text">
+                            Can I upload more than one file at a time?
+                        </span>
+                    </span>
+                    <span class="dl-faq-arrow">
+                        <i class="ri-arrow-down-s-line"></i>
+                    </span>
+                </button>
+                <div class="dl-faq-answer" id="dl-faq-answer-1">
+                    <div class="dl-faq-answer-content">
+                        <p>
+                            Yes. Choose one or several files from your device. The selected files are saved together as a single attachment entry, rather than requiring a separate record for every file.
+                        </p>
+                        <div class="dl-faq-topic">
+                            <span>Topic: Uploading</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ 2 -->
+            <div class="dl-faq-item" data-category="labels">
+                <button
+                    class="dl-faq-question"
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="dl-faq-answer-2"
+                >
+                    <span class="dl-faq-question-content">
+                        <span class="dl-faq-number">Q2</span>
+                        <span class="dl-faq-question-text">
+                            Why do I need to add a label?
+                        </span>
+                    </span>
+                    <span class="dl-faq-arrow">
+                        <i class="ri-arrow-down-s-line"></i>
+                    </span>
+                </button>
+                <div class="dl-faq-answer" id="dl-faq-answer-2">
+                    <div class="dl-faq-answer-content">
+                        <p>
+                            A clear label, such as “Truck Insurance Documents” or “October Office Bills”, helps users recognize the files later. Authorized users can change the label at any time.
+                        </p>
+                        <div class="dl-faq-topic">
+                            <span>Topic: Labels</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ 3 -->
+            <div class="dl-faq-item" data-category="uploading">
+                <button
+                    class="dl-faq-question"
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="dl-faq-answer-3"
+                >
+                    <span class="dl-faq-question-content">
+                        <span class="dl-faq-number">Q3</span>
+                        <span class="dl-faq-question-text">
+                            What information does the system store about my files?
+                        </span>
+                    </span>
+                    <span class="dl-faq-arrow">
+                        <i class="ri-arrow-down-s-line"></i>
+                    </span>
+                </button>
+                <div class="dl-faq-answer" id="dl-faq-answer-3">
+                    <div class="dl-faq-answer-content">
+                        <p>
+                            When you submit the form, the system stores the files and records their original names, types and combined file size. The attachment then appears on the list page.
+                        </p>
+                        <div class="dl-faq-topic">
+                            <span>Topic: Uploading</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ 4 -->
+            <div class="dl-faq-item" data-category="downloads">
+                <button
+                    class="dl-faq-question"
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="dl-faq-answer-4"
+                >
+                    <span class="dl-faq-question-content">
+                        <span class="dl-faq-number">Q4</span>
+                        <span class="dl-faq-question-text">
+                            Can I preview a file without downloading it?
+                        </span>
+                    </span>
+                    <span class="dl-faq-arrow">
+                        <i class="ri-arrow-down-s-line"></i>
+                    </span>
+                </button>
+                <div class="dl-faq-answer" id="dl-faq-answer-4">
+                    <div class="dl-faq-answer-content">
+                        <p>
+                            Yes. Open the attachment to preview an individual file when the browser supports it. You can also download any file separately.
+                        </p>
+                        <div class="dl-faq-topic">
+                            <span>Topic: Downloads</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ 5 -->
+            <div class="dl-faq-item" data-category="downloads">
+                <button
+                    class="dl-faq-question"
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="dl-faq-answer-5"
+                >
+                    <span class="dl-faq-question-content">
+                        <span class="dl-faq-number">Q5</span>
+                        <span class="dl-faq-question-text">
+                            Can I download all files of an attachment together?
+                        </span>
+                    </span>
+                    <span class="dl-faq-arrow">
+                        <i class="ri-arrow-down-s-line"></i>
+                    </span>
+                </button>
+                <div class="dl-faq-answer" id="dl-faq-answer-5">
+                    <div class="dl-faq-answer-content">
+                        <p>
+                            Yes. All files in an attachment can be downloaded as one ZIP package in a single step.
+                        </p>
+                        <div class="dl-faq-topic">
+                            <span>Topic: Downloads</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ 6 -->
+            <div class="dl-faq-item" data-category="corrections">
+                <button
+                    class="dl-faq-question"
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="dl-faq-answer-6"
+                >
+                    <span class="dl-faq-question-content">
+                        <span class="dl-faq-number">Q6</span>
+                        <span class="dl-faq-question-text">
+                            Can I add or remove files after saving?
+                        </span>
+                    </span>
+                    <span class="dl-faq-arrow">
+                        <i class="ri-arrow-down-s-line"></i>
+                    </span>
+                </button>
+                <div class="dl-faq-answer" id="dl-faq-answer-6">
+                    <div class="dl-faq-answer-content">
+                        <p>
+                            Yes. Authorized users can change an attachment label, add more files, or remove selected files from an existing attachment entry.
+                        </p>
+                        <div class="dl-faq-topic">
+                            <span>Topic: Corrections</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ 7 -->
+            <div class="dl-faq-item" data-category="corrections">
+                <button
+                    class="dl-faq-question"
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="dl-faq-answer-7"
+                >
+                    <span class="dl-faq-question-content">
+                        <span class="dl-faq-number">Q7</span>
+                        <span class="dl-faq-question-text">
+                            Can I delete an attachment I no longer need?
+                        </span>
+                    </span>
+                    <span class="dl-faq-arrow">
+                        <i class="ri-arrow-down-s-line"></i>
+                    </span>
+                </button>
+                <div class="dl-faq-answer" id="dl-faq-answer-7">
+                    <div class="dl-faq-answer-content">
+                        <p>
+                            Yes. Authorized users can delete an entire attachment entry when it is no longer required.
+                        </p>
+                        <div class="dl-faq-topic">
+                            <span>Topic: Corrections</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- FAQ Call to Action / Conclusion -->
+        <div class="dl-faq-cta">
+            <div class="dl-faq-cta-content">
+                <h3>Ready to Organize Your Files?</h3>
+                <p>
+                    That is how the Attachment Management Module works. You can now maintain these records in one place, review the information whenever needed, and use the available tools to keep your daily work organized.
+                </p>
+            </div>
+
+            <button class="dl-faq-cta-button" type="button" onclick="document.getElementById('simulator').scrollIntoView({behavior: 'smooth'})">
+                Try Live Demo Now
+            </button>
+        </div>
+
+    </div>
+</section>
+<!--dl-faq section end-->
+
+<!--footer section start-->
+<footer class="footer">
+
+    <!-- Newsletter -->
+    <div class="footer-newsletter">
+        <div class="container">
+
+            <div class="newsletter-wrapper">
+
+                <div class="newsletter-content">
+                    <h2>Stay ahead of the curve</h2>
+                    <p>
+                        Fleet management insights, product updates, and industry news.
+                    </p>
+                </div>
+
+                <form class="newsletter-form">
+
+                    <input
+                        type="email"
+                        placeholder="Enter your email"
+                    >
+
+                    <button type="submit">
+                        Subscribe
+
+                       <i class="ri-arrow-right-line"></i>
+
+                    </button>
+
+                </form>
+
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Footer Main -->
+
+    <div class="footer-main">
+
+        <div class="container">
+
+            <div class="footer-grid">
+
+                <!-- Left -->
+
+                <div class="footer-about">
+
+                    <a href="index.html" class="footer-logo">
+                         <img src="Assets/images/transportdesk-logo-dark.svg" alt="footer-logo">
+                    </a>
+
+                    <p>
+                        The intelligent transportation platform that puts fleet directors
+                        in complete control of their operations.
+                    </p>
+
+                    <div class="footer-social">
+
+                        <a href="#">
+                            <i class="ri-facebook-fill"></i>
+                        </a>
+
+                        <a href="#">
+                            <i class="ri-instagram-line"></i>
+                        </a>
+
+                        <a href="#">
+                            <i class="ri-twitter-line"></i>
+                        </a>
+
+                        <a href="#">
+                            <i class="ri-linkedin-fill"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <!-- Product -->
+
+                <div class="footer-links">
+
+                    <h3>Product</h3>
+
+                      <ul>
+        <li>
+            <a href="features.html" class="footer-link">Features</a>
+        </li>
+
+        <li>
+            <a href="modules.html" class="footer-link">Modules</a>
+        </li>
+
+        <li>
+            <a href="solutions.html" class="footer-link">Solutions</a>
+        </li>
+
+        <li>
+            <a href="reports.html" class="footer-link">Reports</a>
+        </li>
+
+        <li>
+            <a href="contact.html" class="footer-link">Contact</a>
+        </li>
+    </ul>
+
+                </div>
+
+                <!-- Resources -->
+
+                <div class="footer-links">
+
+                    <h3>Resources</h3>
+
+                    <ul>
+
+                        <li><a href="documentation.html" class="footer-link">Documentation</a></li>
+
+                        <li><a href="faq.html" class="footer-link">FAQ</a></li>
+
+                        <li><a href="privacy-policy.html" class="footer-link">Privacy Policy</a></li>
+
+                    </ul>
+
+                </div>
+
+                <!-- Support -->
+
+                <div class="footer-links">
+
+                    <h3>Support</h3>
+
+                    <ul>
+
+                        <li><a href="#" class="footer-link">Help Center</a></li>
+
+                        <li><a href="#" class="footer-link">Status</a></li>
+
+                        <li><a href="#" class="footer-link">Security</a></li>
+
+                    </ul>
+
+                </div>
+
+                <!-- Contact -->
+
+                <div class="footer-contact">
+
+                    <div class="contact-item">
+
+                        <div class="icon">
+                            <i class="ri-mail-line"></i>
+                        </div>
+
+                        <div>
+
+                            <span>Email</span>
+
+                            <a href="#">
+                                hello@transportdesk.net
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                    <div class="contact-item">
+
+                        <div class="icon">
+                            <i class="ri-phone-fill"></i>
+                        </div>
+
+                        <div>
+
+                            <span>Call</span>
+
+                            <a href="#">
+                                +1 (512) 555-0142
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                    <div class="contact-item">
+
+                        <div class="icon">
+                            <i class="ri-map-pin-line"></i>
+                        </div>
+
+                        <div>
+
+                            <span>Location</span>
+
+                            <p>India</p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Bottom -->
+
+    <div class="footer-bottom">
+
+        <div class="container">
+
+            <div class="bottom-wrapper">
+
+                <p>
+                    © 2026 All rights reserved.
+                </p>
+
+                <ul>
+
+                    <li><a href="#">Privacy Policy</a></li>
+
+                    <li><a href="#">Terms of Service</a></li>
+
+                    <li><a href="#">Cookie Policy</a></li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</footer>
+<!--footer section end-->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+<script src="./Assets/js/custom.js"></script>
+<script>
+(function () {
+  var $ = function (id) { return document.getElementById(id); };
+  if (!$('at-file-input')) return;
+
+  var uid = 100;
+  var records = [
+    { id: 1, label: 'Truck Insurance Documents', date: '2026-10-18', files: [
+      { id: 1, name: 'policy_certificate.pdf', size: 1258291, blob: null },
+      { id: 2, name: 'rc_book_front.jpg', size: 786432, blob: null },
+      { id: 3, name: 'rc_book_back.jpg', size: 471859, blob: null } ] },
+    { id: 2, name: '', label: 'October Office Bills', date: '2026-10-20', files: [
+      { id: 4, name: 'electricity_bill_oct.pdf', size: 312000, blob: null },
+      { id: 5, name: 'internet_bill_oct.pdf', size: 204800, blob: null } ] }
+  ];
+  var selected = [];
+  var editingId = null;
+
+  function esc(s) { return String(s).replace(/[&<>"']/g, function (c) { return ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'})[c]; }); }
+  function ext(n) { var m = /\.([^.]+)$/.exec(n); return m ? m[1].toUpperCase() : 'FILE'; }
+  function fmt(b) { if (b < 1024) return b + ' B'; if (b < 1048576) return (b / 1024).toFixed(1) + ' KB'; return (b / 1048576).toFixed(2) + ' MB'; }
+  function icon(n) {
+    var e = ext(n).toLowerCase();
+    if (e === 'pdf') return 'ri-file-pdf-2-line';
+    if (['jpg','jpeg','png','gif','webp','svg'].indexOf(e) > -1) return 'ri-image-line';
+    if (['doc','docx'].indexOf(e) > -1) return 'ri-file-word-line';
+    if (['xls','xlsx','csv'].indexOf(e) > -1) return 'ri-file-excel-line';
+    if (e === 'zip') return 'ri-file-zip-line';
+    return 'ri-file-line';
+  }
+  function msg(t) { $('at-message').textContent = t; }
+  function sum(files) { return files.reduce(function (a, f) { return a + f.size; }, 0); }
+  function types(files) { var s = []; files.forEach(function (f) { var t = ext(f.name); if (s.indexOf(t) < 0) s.push(t); }); return s; }
+  function iconBtn(cls, act, id, fid, title, ic) {
+    return '<button type="button" class="dl-delete-button" style="margin-right:.25rem" data-act="' + act + '" data-id="' + id + '"' + (fid ? ' data-fid="' + fid + '"' : '') + ' title="' + title + '"><i class="' + ic + '"></i></button>';
+  }
+
+  function renderSelected() {
+    var body = $('at-selected-body');
+    if (!selected.length) {
+      body.innerHTML = '<tr><td colspan="4" class="dl-text-center">No files selected yet. Click “Choose Files”.</td></tr>';
+    } else {
+      body.innerHTML = selected.map(function (f, i) {
+        return '<tr><td><div class="dl-vehicle-name"><i class="' + icon(f.name) + '"></i><span>' + esc(f.name) + '</span></div></td>' +
+          '<td>' + esc(ext(f.name)) + '</td><td class="dl-text-right">' + fmt(f.size) + '</td>' +
+          '<td class="dl-text-center"><button type="button" class="dl-delete-button" data-sel="' + i + '" title="Remove file"><i class="ri-delete-bin-line"></i></button></td></tr>';
+      }).join('');
+    }
+    $('at-sel-label').textContent = 'Attachment Total (' + selected.length + ' Files)';
+    $('at-sel-types').textContent = 'Types: ' + (selected.length ? types(selected).join(', ') : '—');
+    $('at-sel-size').textContent = fmt(sum(selected));
+    $('at-stat-selected').textContent = selected.length + (selected.length === 1 ? ' File' : ' Files');
+  }
+
+  function renderList() {
+    var q = ($('at-search').value || '').toLowerCase();
+    var rows = records.filter(function (r) {
+      return !q || r.label.toLowerCase().indexOf(q) > -1 || r.files.some(function (f) { return f.name.toLowerCase().indexOf(q) > -1; });
+    });
+    $('at-list-body').innerHTML = rows.length ? rows.map(function (r) {
+      var files = r.files.map(function (f) {
+        return '<div style="display:flex;align-items:center;gap:.5rem;margin:.2rem 0"><i class="' + icon(f.name) + '"></i><span>' + esc(f.name) + ' <small>(' + fmt(f.size) + ')</small></span>' +
+          '<span style="margin-left:auto;white-space:nowrap">' +
+          iconBtn('', 'view', r.id, f.id, 'Preview file', 'ri-eye-line') +
+          iconBtn('', 'dl', r.id, f.id, 'Download file', 'ri-download-2-line') +
+          iconBtn('', 'rmfile', r.id, f.id, 'Remove file', 'ri-close-line') + '</span></div>';
+      }).join('') || '<em>No files</em>';
+      return '<tr><td><div class="dl-vehicle-name"><i class="ri-folder-3-fill"></i><span>' + esc(r.label) + '</span></div>' +
+        '<div class="dl-vehicle-meta">' + r.files.length + ' file(s) · ' + esc(types(r.files).join(', ')) + '</div></td>' +
+        '<td>' + files + '</td><td class="dl-text-right"><div class="dl-row-total">' + fmt(sum(r.files)) + '</div></td>' +
+        '<td>' + esc(r.date) + '</td><td class="dl-text-center" style="white-space:nowrap">' +
+        iconBtn('', 'zip', r.id, 0, 'Download all as ZIP', 'ri-file-zip-line') +
+        iconBtn('', 'addfiles', r.id, 0, 'Add more files', 'ri-add-circle-line') +
+        iconBtn('', 'rename', r.id, 0, 'Change label', 'ri-edit-line') +
+        iconBtn('', 'delete', r.id, 0, 'Delete attachment entry', 'ri-delete-bin-line') + '</td></tr>';
+    }).join('') : '<tr><td colspan="5" class="dl-text-center">No attachments found.</td></tr>';
+
+    var tf = records.reduce(function (a, r) { return a + r.files.length; }, 0);
+    $('at-stat-entries').textContent = records.length;
+    $('at-stat-files').textContent = tf;
+    $('at-stat-size').textContent = fmt(records.reduce(function (a, r) { return a + sum(r.files); }, 0));
+  }
+
+  function setView(v) {
+    $('at-view-upload').hidden = v !== 'upload';
+    $('at-view-list').hidden = v !== 'list';
+    document.querySelectorAll('[data-at-view]').forEach(function (b) {
+      b.classList.toggle('dl-view-tab-active', b.getAttribute('data-at-view') === v);
+    });
+  }
+
+  function find(id) { return records.filter(function (r) { return r.id === id; })[0]; }
+  function placeholder(f) { return new Blob(['Demo placeholder for ' + f.name + ' (sample record, no real file stored).'], { type: 'text/plain' }); }
+  function save(blob, name) {
+    var a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = name;
+    document.body.appendChild(a); a.click(); a.remove();
+    setTimeout(function () { URL.revokeObjectURL(a.href); }, 2000);
+  }
+
+  $('at-file-input').addEventListener('change', function (e) {
+    Array.prototype.forEach.call(e.target.files, function (f) {
+      selected.push({ id: ++uid, name: f.name, size: f.size, blob: f });
+    });
+    e.target.value = '';
+    msg(selected.length + ' file(s) selected. They will be saved together as a single attachment entry.');
+    renderSelected();
+  });
+
+  $('at-label-preset').addEventListener('change', function (e) { if (e.target.value) $('at-label').value = e.target.value; });
+  $('at-clear').addEventListener('click', function () { selected = []; renderSelected(); msg('Selection cleared.'); });
+
+  $('at-selected-body').addEventListener('click', function (e) {
+    var b = e.target.closest('[data-sel]'); if (!b) return;
+    selected.splice(+b.getAttribute('data-sel'), 1); renderSelected();
+  });
+
+  function doSave() {
+    var label = $('at-label').value.trim();
+    if (!label) { msg('Please enter an attachment label first.'); $('at-label').focus(); return; }
+    if (!selected.length) { msg('Please choose at least one file.'); return; }
+    records.unshift({ id: ++uid, label: label, date: new Date().toISOString().slice(0, 10), files: selected.slice() });
+    selected = []; $('at-label').value = ''; $('at-label-preset').value = '';
+    renderSelected(); renderList();
+    msg('Saved! Original names, types and combined size were recorded. The attachment now appears on the list page.');
+    setView('list');
+  }
+  $('at-save').addEventListener('click', doSave);
+  $('at-save2').addEventListener('click', doSave);
+  $('at-go-upload').addEventListener('click', function () { setView('upload'); });
+  $('at-search').addEventListener('input', renderList);
+  document.querySelectorAll('[data-at-view]').forEach(function (b) {
+    b.addEventListener('click', function () { setView(b.getAttribute('data-at-view')); });
+  });
+
+  $('at-list-body').addEventListener('click', function (e) {
+    var b = e.target.closest('[data-act]'); if (!b) return;
+    var r = find(+b.getAttribute('data-id')); if (!r) return;
+    var f = r.files.filter(function (x) { return x.id === +b.getAttribute('data-fid'); })[0];
+    var act = b.getAttribute('data-act');
+
+    if (act === 'view' && f) {
+      if (f.blob) { window.open(URL.createObjectURL(f.blob), '_blank'); }
+      else { alert('Sample record: no real file is stored for ' + f.name + '. Upload your own file to try the preview.'); }
+    } else if (act === 'dl' && f) {
+      save(f.blob || placeholder(f), f.name);
+    } else if (act === 'zip') {
+      if (!window.JSZip) { alert('ZIP library could not be loaded.'); return; }
+      var z = new JSZip();
+      r.files.forEach(function (x) { z.file(x.name, x.blob || placeholder(x)); });
+      z.generateAsync({ type: 'blob' }).then(function (c) { save(c, r.label.replace(/\s+/g, '_') + '.zip'); });
+    } else if (act === 'rename') {
+      var n = prompt('Change attachment label:', r.label);
+      if (n && n.trim()) { r.label = n.trim(); renderList(); }
+    } else if (act === 'rmfile' && f) {
+      if (confirm('Remove "' + f.name + '" from this attachment?')) { r.files = r.files.filter(function (x) { return x !== f; }); renderList(); }
+    } else if (act === 'delete') {
+      if (confirm('Delete the entire attachment "' + r.label + '"?')) { records = records.filter(function (x) { return x !== r; }); renderList(); }
+    } else if (act === 'addfiles') {
+      editingId = r.id; var inp = document.createElement('input'); inp.type = 'file'; inp.multiple = true;
+      inp.onchange = function () {
+        Array.prototype.forEach.call(inp.files, function (x) { r.files.push({ id: ++uid, name: x.name, size: x.size, blob: x }); });
+        renderList();
+      };
+      inp.click();
+    }
+  });
+
+  renderSelected(); renderList();
+})();
+</script>
+</body>
+</html>

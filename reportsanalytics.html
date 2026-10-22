@@ -1,0 +1,982 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Reports &amp; Analytics Module</title>
+
+    <!-- Remix Icon -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" />
+
+    <!-- Swiper -->
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+
+    <!-- Lenis -->
+    <link rel="stylesheet"
+        href="https://unpkg.com/lenis@1.3.23/dist/lenis.css">
+
+    <!-- Tailwind Output CSS -->
+     <link href="./Assets/css/output.css" rel="stylesheet">
+</head>
+<body>
+
+<!--Header Section start-->
+<header class="main-header">
+    <div class="container">
+
+        <div class="header-inner">
+
+            <a href="index.html" class="header-logo">
+                <img src="Assets/images/transportdesk-logo.svg" alt="Logo">
+            </a>
+
+            <nav class="main-navigation" id="mobileMenu">
+
+                <div class="menu-circle"></div>
+
+                <ul class="navigation-links">
+                    <li><a href="index.html" class="navigation-link active">Home</a></li>
+                    <li><a href="features.html" class="navigation-link">Features</a></li>
+                    <li><a href="reports.html" class="navigation-link">Resources</a></li>
+                    <li><a href="contact.html" class="navigation-link">Contact</a></li>
+                </ul>
+
+                <div class="mobile-header-right">
+                    <a href="#" class="login-btn">Login</a>
+                    <a href="#" class="demo-btn">Book Demo</a>
+                </div>
+
+            </nav>
+
+            <div class="header-right">
+                <a href="#" class="login-btn">Login</a>
+                <a href="#" class="demo-btn">Book Demo</a>
+            </div>
+
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+        </div>
+
+    </div>
+</header>
+
+<!-- Add this after header -->
+<div class="menu-overlay" id="menuOverlay"></div>
+<!--Header section End-->
+
+<section id="overview" class="dl-overview-section">
+    <div class="dl-overview-glow"></div>
+    <div class="dl-overview-pattern"></div>
+    <div class="container">
+        <div class="dl-overview-grid">
+            <div class="dl-overview-content">
+                <div class="dl-overview-badge">
+                    <span class="dl-status-dot"></span>
+                    <span>Enterprise Fleet Management</span>
+                    <span class="dl-badge-divider">|</span>
+                    <span class="dl-badge-highlight">Reports &amp; Analytics Module</span>
+                </div>
+                <h1 class="dl-overview-title"><span class="dl-gradient-text">Reports &amp; Analytics</span> Module</h1>
+                <p class="dl-overview-description">The Reports &amp; Analytics Module helps businesses review important information recorded in different parts of the system. Instead of checking each diesel bill, vehicle expense, driver record, or vendor payment separately, users can open dedicated reports to find the information they need.</p><p class="dl-overview-description">It is designed for fleet operators, transport businesses, accounts teams, and managers who need simple, organized views of operational records, expenses, document validity, and payments.</p>
+                <div class="dl-overview-actions">
+                    <a href="#simulator" class="btn-primary">
+                        <span>Try Live Report Viewer</span>
+                        <i class="ri-arrow-right-line"></i>
+                    </a>
+                    <a href="#demo" class="dl-btn-demo">
+                        <span class="dl-play-icon"><i class="ri-play-fill"></i></span>
+                        <span>Watch Demo Video</span>
+                    </a>
+                </div>
+                <div class="dl-overview-stats"><div class="dl-stat-item"><div class="dl-stat-number">7</div><div class="dl-stat-label">Report Types</div></div><div class="dl-stat-item"><div class="dl-stat-number dl-stat-red">10</div><div class="dl-stat-label">Vehicle Categories</div></div><div class="dl-stat-item"><div class="dl-stat-number dl-stat-green">4</div><div class="dl-stat-label">Master Data Exports</div></div></div>
+            </div>
+            <div class="dl-overview-visual">
+                <div class="dl-visual-card">
+                    <img src="Assets/images/hero_fleet_dispatch_1792482270822.jpg"
+                         alt="Transportation Fleet Dispatch Logistics Center" class="dl-visual-image">
+                    <div class="dl-visual-overlay"></div>
+                    <div class="dl-visual-topbar">
+                        <div class="dl-live-label"><span class="dl-live-dot"></span><span>Reports Dashboard</span></div>
+                        <div class="dl-fuel-rate">PDF · CSV</div>
+                    </div>
+                    <div class="dl-fuel-slip">
+                        <div class="dl-slip-header">
+                            <span class="dl-slip-title">Reports &amp; Analytics Overview</span>
+                            <span class="dl-slip-status">7 Report Types</span>
+                        </div>
+                        <div class="dl-slip-stats"><div class="dl-slip-stat"><span class="dl-slip-label">Vehicle Reports</span><span class="dl-slip-value">10 Categories</span></div><div class="dl-slip-stat"><span class="dl-slip-label">Expiring Docs</span><span class="dl-slip-value dl-slip-red">Tracked</span></div><div class="dl-slip-stat"><span class="dl-slip-label">Downloads</span><span class="dl-slip-value dl-slip-green">PDF · CSV</span></div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="dl-trusted-section">
+    <div class="dl-trusted-heading"><span>Everything You Need to Review Your Business Records</span></div>
+    <div class="dl-trusted-marquee">
+        <div class="dl-trusted-fade dl-trusted-fade-left"></div>
+        <div class="dl-trusted-fade dl-trusted-fade-right"></div>
+        <div class="dl-trusted-track">
+            <div class="dl-trusted-group"><div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">Vehicle Reports</span></div><div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">Category-Wise Vehicle Reports</span></div><div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">Vendor Reports</span></div><div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">Driver Reports</span></div><div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">Expiring &amp; Expired Documents</span></div><div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">Unpaid by Vendor</span></div><div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">Payments Report</span></div><div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">Manager Float Report</span></div><div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">Dashboard Overview</span></div><div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">Export Master Data</span></div><div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">PDF &amp; CSV Downloads</span></div></div>
+            <div class="dl-trusted-group" aria-hidden="true"><div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">Vehicle Reports</span></div><div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">Category-Wise Vehicle Reports</span></div><div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">Vendor Reports</span></div><div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">Driver Reports</span></div><div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">Expiring &amp; Expired Documents</span></div><div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">Unpaid by Vendor</span></div><div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">Payments Report</span></div><div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">Manager Float Report</span></div><div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">Dashboard Overview</span></div><div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">Export Master Data</span></div><div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">PDF &amp; CSV Downloads</span></div></div>
+        </div>
+    </div>
+</section>
+
+<section id="demo" class="dl-demo-section">
+    <div class="dl-demo-glow"></div>
+    <div class="dl-container">
+        <div class="heading-wrapper">
+            <span class="heading-tag">Learn How to Find, Filter and Download Reports</span>
+            <h2 class="heading-title">Watch How <span>Reports &amp; Analytics</span> Works</h2>
+            <p>Watch our demonstration to see how to open Reports &amp; Analytics, select the report you need, apply filters, review results, and download supported PDF or CSV files.</p>
+        </div>
+        <div class="dl-demo-grid">
+            <div class="dl-demo-video-column">
+                <div class="dl-video-card">
+                    <div class="dl-video-toolbar">
+                        <div class="dl-video-toolbar-left">
+                            <span class="dl-window-dot dl-dot-red"></span>
+                            <span class="dl-window-dot dl-dot-yellow"></span>
+                            <span class="dl-window-dot dl-dot-green"></span>
+                            <span class="dl-video-filename">reports_analytics_module_demo</span>
+                        </div>
+                        <span class="dl-video-quality">Demo Video</span>
+                    </div>
+                    <div class="dl-video-preview">
+                        <img src="Assets/images/dashboard.png" alt="reports_analytics_module_demo preview" class="dl-video-thumbnail">
+                        <div class="dl-video-overlay"></div>
+                        <button type="button" class="dl-video-play" aria-label="Play demonstration video">
+                            <i class="ri-play-fill"></i>
+                            <span class="dl-video-ping"></span>
+                        </button>
+                        <div class="dl-video-meta">
+                            <div class="dl-video-meta-left">
+                                <span class="dl-video-current-chapter">[Demo Video Will Be Displayed Here]</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="simulator" class="dl-simulator-section">
+    <div class="dl-container">
+        <div class="dl-simulator-header">
+            <div class="heading-wrapper heading-wrap-left">
+                <span class="heading-tag">Practical Example</span>
+                <h2 class="heading-title">Reviewing <span>Vehicle Expenses</span></h2>
+                <p>Suppose a transport company wants to check the diesel and repair records for one truck during a particular period. Open Reports &amp; Analytics and select Category-Wise Vehicle Reports, select the required truck, choose Diesel Report and set the date range, then review the results and download the PDF or CSV if required. Change the category to Repair Report to review that vehicle's repair records separately. The records shown below are sample data for demonstration only.</p>
+            </div>
+            <div class="dl-view-switcher" id="ra-tabs">
+                <button type="button" class="dl-view-tab dl-view-tab-active" data-view="viewer"><i class="ri-bar-chart-2-line"></i> Category-Wise Vehicle Report</button>
+                <button type="button" class="dl-view-tab" data-view="all"><i class="ri-list-check-2"></i> All Reports &amp; Exports</button>
+            </div>
+        </div>
+
+        <div class="dl-stats-grid">
+            <div class="dl-stat-card">
+                <div class="dl-stat-label"><span>Vehicle</span><i class="ri-truck-line"></i></div>
+                <div class="dl-stat-value" id="ra-s-vehicle" style="font-size:1.4rem">GJ19Y5403</div>
+                <p class="dl-stat-note">Selected vehicle</p>
+            </div>
+            <div class="dl-stat-card">
+                <div class="dl-stat-label"><span>Category</span><i class="ri-list-check dl-red-icon"></i></div>
+                <div class="dl-stat-value dl-red-text" id="ra-s-cat" style="font-size:1.4rem">Diesel</div>
+                <p class="dl-stat-note">Selected report category</p>
+            </div>
+            <div class="dl-stat-card">
+                <div class="dl-stat-label"><span>Records Found</span><i class="ri-file-list-3-line dl-green-icon"></i></div>
+                <div class="dl-stat-value dl-green-text"><span id="ra-s-count">0</span> <span>Records</span></div>
+                <p class="dl-stat-note">Within the selected date range</p>
+            </div>
+            <div class="dl-stat-card dl-stat-card-total">
+                <div class="dl-stat-label"><span>Total Amount</span><span class="dl-status-dot"></span></div>
+                <div class="dl-stat-value dl-stat-total-value" id="ra-s-total">₹0</div>
+                <p class="dl-stat-note dl-green-text">Sample data</p>
+            </div>
+        </div>
+
+        <div class="dl-calculator-panel" id="ra-view-viewer">
+            <div class="dl-bill-master">
+                <div class="dl-bill-master-header">
+                    <div class="dl-bill-heading">
+                        <span>Category-Wise Vehicle Reports</span>
+                        <span class="dl-heading-separator">·</span>
+                        <span class="dl-invoice-number">Select vehicle, category and date range</span>
+                    </div>
+                </div>
+                <div class="dl-bill-fields">
+                    <div class="dl-form-group">
+                        <label for="ra-vehicle">Vehicle</label>
+                        <select id="ra-vehicle" class="dl-form-control">
+                            <option>GJ19Y5403</option><option>MH-12-RN-4821</option><option>MH-14-BT-9102</option>
+                        </select>
+                    </div>
+                    <div class="dl-form-group">
+                        <label for="ra-cat">Category</label>
+                        <select id="ra-cat" class="dl-form-control"><option>Diesel</option><option>Tyre</option><option>Battery</option><option>Repair</option><option>Reefer Unit</option><option>Cabin/Body</option><option>Toll</option><option>Challan</option><option>Driver Pay</option><option>Documents</option></select>
+                    </div>
+                    <div class="dl-form-group">
+                        <label for="ra-from">From Date</label>
+                        <input id="ra-from" class="dl-form-control" type="date" value="2026-10-01">
+                    </div>
+                    <div class="dl-form-group">
+                        <label for="ra-to">To Date</label>
+                        <input id="ra-to" class="dl-form-control" type="date" value="2026-10-31">
+                    </div>
+                </div>
+                <div class="dl-bill-options">
+                    <span class="dl-formula-note">Available filters and downloads depend on the type of report.</span>
+                </div>
+            </div>
+
+            <div class="dl-table-toolbar">
+                <div class="dl-search-box">
+                    <i class="ri-search-line"></i>
+                    <input type="search" id="ra-search" placeholder="Search results...">
+                </div>
+                <div class="dl-toolbar-actions">
+                    <button type="button" class="dl-action-button" id="ra-pdf"><i class="ri-file-pdf-line dl-red-icon"></i> Download PDF</button>
+                    <button type="button" class="dl-primary-button" id="ra-csv"><i class="ri-file-excel-line"></i> Download CSV</button>
+                </div>
+            </div>
+
+            <div class="dl-table-wrapper">
+                <table class="dl-vehicle-table">
+                    <thead><tr id="ra-head"></tr></thead>
+                    <tbody id="ra-body"></tbody>
+                </table>
+            </div>
+
+            <div class="dl-calculator-footer">
+                <div class="dl-documentation-note">
+                    <i class="ri-information-line"></i>
+                    <span>This helps the company locate useful vehicle information without manually checking many separate entries.</span>
+                </div>
+                <div class="dl-supported-formats">Sample data for demonstration · CSV opens in Excel · PDF uses your browser's Save as PDF</div>
+            </div>
+        </div>
+
+        <div class="dl-calculator-panel" id="ra-view-all" hidden>
+            <div class="dl-table-wrapper">
+                <table class="dl-vehicle-table">
+                    <thead><tr><th>Report</th><th>What you select</th><th>Download options</th></tr></thead>
+                    <tbody><tr><td><div class="dl-vehicle-name"><span>Vehicle Reports</span></div></td><td>Select a vehicle</td><td>PDF, CSV</td></tr><tr><td><div class="dl-vehicle-name"><span>Category-Wise Vehicle Reports</span></div></td><td>Vehicle, category (Diesel, Tyre, Battery, Repair, Reefer Unit, Cabin/Body, Toll, Challan, Driver Pay, Documents) and date range</td><td>View or export the selected category report</td></tr><tr><td><div class="dl-vehicle-name"><span>Vendor Reports</span></div></td><td>Select a vendor</td><td>PDF, CSV</td></tr><tr><td><div class="dl-vehicle-name"><span>Driver Reports</span></div></td><td>Select a driver</td><td>PDF, CSV</td></tr><tr><td><div class="dl-vehicle-name"><span>Expiring Documents</span></div></td><td>Driver licences, vehicle documents, batteries and office documents</td><td>Dedicated PDF downloads for supported document groups</td></tr><tr><td><div class="dl-vehicle-name"><span>Unpaid by Vendor</span></div></td><td>Vendor-related unpaid amounts recorded by the system</td><td>Depends on the selected report</td></tr><tr><td><div class="dl-vehicle-name"><span>Payments</span></div></td><td>Company and date filters</td><td>Depends on the selected report</td></tr><tr><td><div class="dl-vehicle-name"><span>Manager Float</span></div></td><td>Manager-related float records and balances</td><td>Depends on the selected report</td></tr><tr><td><div class="dl-vehicle-name"><span>Export Master Data</span></div></td><td>Diesel Entries, Vehicles, Drivers and Vendors</td><td>Downloads from the main Reports page</td></tr></tbody>
+                </table>
+            </div>
+            <div class="dl-calculator-footer">
+                <div class="dl-documentation-note">
+                    <i class="ri-information-line"></i>
+                    <span><strong>Note:</strong> Does every report have the same filters and export options? No. Available filters and downloads depend on the type of report.</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="features" class="dl-features-section">
+    <div class="container">
+        <div class="heading-wrapper">
+            <span class="heading-tag">Key Module Features</span>
+            <h2 class="heading-title">Everything You Need for <span>Reports &amp; Analytics</span></h2>
+            <div class="dl-features-filters"><button type="button" class="dl-filter-btn is-active" data-filter="all">All Features (11)</button><button type="button" class="dl-filter-btn" data-filter="vehicle">Vehicle &amp; Driver Reports</button><button type="button" class="dl-filter-btn" data-filter="accounts">Vendors, Payments &amp; Accounts</button><button type="button" class="dl-filter-btn" data-filter="overview">Documents, Dashboard &amp; Exports</button></div>
+        </div>
+        <div class="dl-features-grid">
+            <article class="dl-feature-card" data-category="vehicle">
+                <div class="dl-feature-card-content">
+                    <div class="dl-feature-icon"><i class="ri-truck-line"></i></div>
+                    <div class="dl-feature-card-heading">
+                        <span class="dl-feature-number">4.1</span>
+                        <h3>Vehicle Reports</h3>
+                    </div>
+                    <p>Select a vehicle to review its available operating records and expense-related information in a single report. The vehicle report includes relevant fleet categories and supports PDF and CSV export.</p>
+                </div>
+            </article>
+            <article class="dl-feature-card" data-category="vehicle">
+                <div class="dl-feature-card-content">
+                    <div class="dl-feature-icon"><i class="ri-list-check-2"></i></div>
+                    <div class="dl-feature-card-heading">
+                        <span class="dl-feature-number">4.2</span>
+                        <h3>Category-Wise Vehicle Reports</h3>
+                    </div>
+                    <p>When you need only one type of vehicle record, choose the vehicle and category. Available categories include Diesel, Tyre, Battery, Repair, Reefer Unit, Cabin/Body, Toll, Challan, Driver Pay, and Documents. Apply a date range where needed, then view or export the selected category report.</p>
+                </div>
+            </article>
+            <article class="dl-feature-card" data-category="accounts">
+                <div class="dl-feature-card-content">
+                    <div class="dl-feature-icon"><i class="ri-store-2-line"></i></div>
+                    <div class="dl-feature-card-heading">
+                        <span class="dl-feature-number">4.3</span>
+                        <h3>Vendor Reports</h3>
+                    </div>
+                    <p>Select a vendor to review the records associated with that supplier. This helps businesses examine vendor-related activity without searching individual records across different sections. The vendor report includes PDF and CSV export options.</p>
+                </div>
+            </article>
+            <article class="dl-feature-card" data-category="vehicle">
+                <div class="dl-feature-card-content">
+                    <div class="dl-feature-icon"><i class="ri-user-3-line"></i></div>
+                    <div class="dl-feature-card-heading">
+                        <span class="dl-feature-number">4.4</span>
+                        <h3>Driver Reports</h3>
+                    </div>
+                    <p>Select a driver to view a report of the driver-related information available in the system. This helps managers and accounts teams review records associated with an individual driver. The report includes PDF and CSV export options.</p>
+                </div>
+            </article>
+            <article class="dl-feature-card" data-category="overview">
+                <div class="dl-feature-card-content">
+                    <div class="dl-feature-icon"><i class="ri-alarm-warning-line"></i></div>
+                    <div class="dl-feature-card-heading">
+                        <span class="dl-feature-number">4.5</span>
+                        <h3>Expiring and Expired Documents</h3>
+                    </div>
+                    <p>Review documents that are approaching their expiry date or have already expired. The reporting area covers driver licences, vehicle documents, batteries, and office documents. Dedicated PDF downloads are available for the supported document groups.</p>
+                </div>
+            </article>
+            <article class="dl-feature-card" data-category="accounts">
+                <div class="dl-feature-card-content">
+                    <div class="dl-feature-icon"><i class="ri-bill-line"></i></div>
+                    <div class="dl-feature-card-heading">
+                        <span class="dl-feature-number">4.6</span>
+                        <h3>Unpaid by Vendor</h3>
+                    </div>
+                    <p>Use the Unpaid by Vendor report to review vendor-related unpaid amounts recorded by the system. It helps the accounts team identify supplier bills that still require payment attention.</p>
+                </div>
+            </article>
+            <article class="dl-feature-card" data-category="accounts">
+                <div class="dl-feature-card-content">
+                    <div class="dl-feature-icon"><i class="ri-bank-card-line"></i></div>
+                    <div class="dl-feature-card-heading">
+                        <span class="dl-feature-number">4.7</span>
+                        <h3>Payments Report</h3>
+                    </div>
+                    <p>View recorded payment information and use the available company and date filters to find relevant payments. This is useful for checking payment history and preparing internal accounts reviews.</p>
+                </div>
+            </article>
+            <article class="dl-feature-card" data-category="accounts">
+                <div class="dl-feature-card-content">
+                    <div class="dl-feature-icon"><i class="ri-wallet-3-line"></i></div>
+                    <div class="dl-feature-card-heading">
+                        <span class="dl-feature-number">4.8</span>
+                        <h3>Manager Float Report</h3>
+                    </div>
+                    <p>Open the Manager Float report to review manager-related float records and balances presented by the system. This gives the business a dedicated place to examine manager float information.</p>
+                </div>
+            </article>
+            <article class="dl-feature-card" data-category="overview">
+                <div class="dl-feature-card-content">
+                    <div class="dl-feature-icon"><i class="ri-dashboard-3-line"></i></div>
+                    <div class="dl-feature-card-heading">
+                        <span class="dl-feature-number">4.9</span>
+                        <h3>Dashboard Overview</h3>
+                    </div>
+                    <p>The dashboard shows counts of vehicles, drivers, vendors, and companies. It also displays recent diesel entries and document-related items requiring attention, including expiring or expired vehicle documents and relevant driver, battery, and office document dates.</p>
+                </div>
+            </article>
+            <article class="dl-feature-card" data-category="overview">
+                <div class="dl-feature-card-content">
+                    <div class="dl-feature-icon"><i class="ri-database-2-line"></i></div>
+                    <div class="dl-feature-card-heading">
+                        <span class="dl-feature-number">4.10</span>
+                        <h3>Export Master Data</h3>
+                    </div>
+                    <p>The Reports &amp; Analytics page includes export options for Diesel Entries, Vehicles, Drivers, and Vendors. These downloads make it easier to keep copies of important records and work with them outside the application.</p>
+                </div>
+            </article>
+            <article class="dl-feature-card" data-category="overview vehicle">
+                <div class="dl-feature-card-content">
+                    <div class="dl-feature-icon"><i class="ri-file-download-line"></i></div>
+                    <div class="dl-feature-card-heading">
+                        <span class="dl-feature-number">4.11</span>
+                        <h3>PDF and CSV Report Downloads</h3>
+                    </div>
+                    <p>Supported detailed reports provide PDF or CSV downloads. PDF is useful for viewing or sharing a fixed-format report; CSV is useful when the information needs to be opened or examined in Excel. Export availability depends on the selected report.</p>
+                </div>
+            </article>
+        </div>
+    </div>
+</section>
+
+<section class="dl-workflow-section">
+    <div class="container">
+        <div class="heading-wrapper heading-wrap-left">
+            <span class="heading-tag">Step by Step</span>
+            <h2 class="heading-title">How Does the <span>Reports &amp; Analytics Module</span> Work?</h2>
+        </div>
+        <div class="dl-workflow-grid">
+            <article class="dl-workflow-card">
+                <div class="dl-workflow-card-content">
+                    <div class="dl-workflow-card-top">
+                        <span class="dl-workflow-number">01</span>
+                        <div class="dl-workflow-icon"><i class="ri-pages-line"></i></div>
+                    </div>
+                    <h3 class="dl-workflow-card-title">Step 1: Open Reports &amp; Analytics</h3>
+                    <p class="dl-workflow-card-description">Go to the Reports &amp; Analytics page.</p>
+                    <ul class="dl-workflow-checklist"><li><i class="ri-check-line"></i><span>You will find separate options for Vehicle Reports, Vendor Reports, Driver Reports, Expiring Documents, Unpaid by Vendor, Payments, and Manager Float.</span></li></ul>
+                </div>
+                <div class="dl-workflow-card-footer"><span>Step 01</span></div>
+            </article>
+            <article class="dl-workflow-card">
+                <div class="dl-workflow-card-content">
+                    <div class="dl-workflow-card-top">
+                        <span class="dl-workflow-number">02</span>
+                        <div class="dl-workflow-icon"><i class="ri-file-list-3-line"></i></div>
+                    </div>
+                    <h3 class="dl-workflow-card-title">Step 2: Choose the Required Report</h3>
+                    <p class="dl-workflow-card-description">Select the type of information you want to check.</p>
+                    <ul class="dl-workflow-checklist"><li><i class="ri-check-line"></i><span>For example, choose Vehicle Reports to review one vehicle, Vendor Reports to examine a supplier, or Expiring Documents to see documents needing attention.</span></li></ul>
+                </div>
+                <div class="dl-workflow-card-footer"><span>Step 02</span></div>
+            </article>
+            <article class="dl-workflow-card">
+                <div class="dl-workflow-card-content">
+                    <div class="dl-workflow-card-top">
+                        <span class="dl-workflow-number">03</span>
+                        <div class="dl-workflow-icon"><i class="ri-filter-3-line"></i></div>
+                    </div>
+                    <h3 class="dl-workflow-card-title">Step 3: Select the Record and Apply Filters</h3>
+                    <p class="dl-workflow-card-description">Choose an available vehicle, driver, or vendor, depending on the report.</p>
+                    <ul class="dl-workflow-checklist"><li><i class="ri-check-line"></i><span>Where date and other filters are provided, select the required values to narrow the report to relevant entries.</span></li></ul>
+                </div>
+                <div class="dl-workflow-card-footer"><span>Step 03</span></div>
+            </article>
+            <article class="dl-workflow-card">
+                <div class="dl-workflow-card-content">
+                    <div class="dl-workflow-card-top">
+                        <span class="dl-workflow-number">04</span>
+                        <div class="dl-workflow-icon"><i class="ri-eye-line"></i></div>
+                    </div>
+                    <h3 class="dl-workflow-card-title">Step 4: Review the Results</h3>
+                    <p class="dl-workflow-card-description">The selected report displays related records and report details.</p>
+                    <ul class="dl-workflow-checklist"><li><i class="ri-check-line"></i><span>You can review purchases, expenses, payments, or expiry information according to the report selected.</span></li></ul>
+                </div>
+                <div class="dl-workflow-card-footer"><span>Step 04</span></div>
+            </article>
+            <article class="dl-workflow-card">
+                <div class="dl-workflow-card-content">
+                    <div class="dl-workflow-card-top">
+                        <span class="dl-workflow-number">05</span>
+                        <div class="dl-workflow-icon"><i class="ri-download-cloud-2-line"></i></div>
+                    </div>
+                    <h3 class="dl-workflow-card-title">Step 5: Download or Share the Results</h3>
+                    <p class="dl-workflow-card-description">Use PDF or CSV export on reports that provide those options.</p>
+                    <ul class="dl-workflow-checklist"><li><i class="ri-check-line"></i><span>CSV files can be opened in Excel, making it easier to use the data for internal checking and accounting.</span></li></ul>
+                </div>
+                <div class="dl-workflow-card-footer"><span>Step 05</span></div>
+            </article>
+        </div>
+    </div>
+</section>
+
+<section class="results-section">
+    <div class="container">
+        <div class="heading-wrapper">
+            <span class="heading-tag">Benefits</span>
+            <h2 class="heading-title heading-light">Benefits of Using <span>Reports &amp; Analytics</span></h2>
+        </div>
+        <div class="results-grid">
+            <div class="result-card">
+                <div class="result-icon"><i class="ri-search-line"></i></div>
+                <h3>Find Information Faster</h3>
+                <p>Open dedicated reports instead of searching across unrelated records.</p>
+            </div>
+            <div class="result-card">
+                <div class="result-icon"><i class="ri-truck-line"></i></div>
+                <h3>Review Vehicle Activity</h3>
+                <p>Look at vehicle records as a whole or category by category.</p>
+            </div>
+            <div class="result-card">
+                <div class="result-icon"><i class="ri-calendar-check-line"></i></div>
+                <h3>Keep Track of Document Dates</h3>
+                <p>Identify documents that are near expiry or already expired.</p>
+            </div>
+            <div class="result-card">
+                <div class="result-icon"><i class="ri-bank-line"></i></div>
+                <h3>Support Accounts Work</h3>
+                <p>Review vendor-related unpaid amounts, payment records, and manager float information.</p>
+            </div>
+            <div class="result-card">
+                <div class="result-icon"><i class="ri-download-2-line"></i></div>
+                <h3>Prepare Reports Easily</h3>
+                <p>Download supported PDF and CSV reports for review or accounting.</p>
+            </div>
+            <div class="result-card">
+                <div class="result-icon"><i class="ri-dashboard-3-line"></i></div>
+                <h3>Improve Daily Visibility</h3>
+                <p>Use dashboard summaries to see key record counts and recent diesel activity.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="faq" class="dl-faq-section">
+    <div class="container">
+        <div class="heading-wrapper">
+            <span class="heading-tag">Got Questions?</span>
+            <h2 class="heading-title">Frequently Asked <span>Questions</span></h2>
+            <div class="dl-faq-filters"><button class="dl-faq-filter active" type="button">All</button><button class="dl-faq-filter" type="button">Vehicle Reports</button><button class="dl-faq-filter" type="button">Documents</button><button class="dl-faq-filter" type="button">Vendors</button><button class="dl-faq-filter" type="button">Payments</button><button class="dl-faq-filter" type="button">Downloads</button></div>
+        </div>
+        <div class="dl-faq-list">
+            <div class="dl-faq-item active">
+                <button class="dl-faq-question" type="button" aria-expanded="true" aria-controls="dl-faq-answer-1">
+                    <span class="dl-faq-question-content">
+                        <span class="dl-faq-number">Q1</span>
+                        <span class="dl-faq-question-text">Can I see reports for an individual vehicle?</span>
+                    </span>
+                    <span class="dl-faq-arrow"><i class="ri-arrow-down-s-line"></i></span>
+                </button>
+                <div class="dl-faq-answer" id="dl-faq-answer-1">
+                    <div class="dl-faq-answer-content">
+                        <p>Yes. Select a vehicle in Vehicle Reports, or choose a particular category in Category-Wise Vehicle Reports.</p>
+                        <div class="dl-faq-topic"><span>Topic: Vehicle Reports</span></div>
+                    </div>
+                </div>
+            </div>
+            <div class="dl-faq-item">
+                <button class="dl-faq-question" type="button" aria-expanded="false" aria-controls="dl-faq-answer-2">
+                    <span class="dl-faq-question-content">
+                        <span class="dl-faq-number">Q2</span>
+                        <span class="dl-faq-question-text">Which vehicle report categories are available?</span>
+                    </span>
+                    <span class="dl-faq-arrow"><i class="ri-arrow-down-s-line"></i></span>
+                </button>
+                <div class="dl-faq-answer" id="dl-faq-answer-2">
+                    <div class="dl-faq-answer-content">
+                        <p>Diesel, Tyre, Battery, Repair, Reefer Unit, Cabin/Body, Toll, Challan, Driver Pay, and Documents.</p>
+                        <div class="dl-faq-topic"><span>Topic: Vehicle Reports</span></div>
+                    </div>
+                </div>
+            </div>
+            <div class="dl-faq-item">
+                <button class="dl-faq-question" type="button" aria-expanded="false" aria-controls="dl-faq-answer-3">
+                    <span class="dl-faq-question-content">
+                        <span class="dl-faq-number">Q3</span>
+                        <span class="dl-faq-question-text">Can I find documents that are about to expire?</span>
+                    </span>
+                    <span class="dl-faq-arrow"><i class="ri-arrow-down-s-line"></i></span>
+                </button>
+                <div class="dl-faq-answer" id="dl-faq-answer-3">
+                    <div class="dl-faq-answer-content">
+                        <p>Yes. The Expiring Documents report includes relevant vehicle, driver, battery, and office document information.</p>
+                        <div class="dl-faq-topic"><span>Topic: Documents</span></div>
+                    </div>
+                </div>
+            </div>
+            <div class="dl-faq-item">
+                <button class="dl-faq-question" type="button" aria-expanded="false" aria-controls="dl-faq-answer-4">
+                    <span class="dl-faq-question-content">
+                        <span class="dl-faq-number">Q4</span>
+                        <span class="dl-faq-question-text">Can I review vendor unpaid amounts?</span>
+                    </span>
+                    <span class="dl-faq-arrow"><i class="ri-arrow-down-s-line"></i></span>
+                </button>
+                <div class="dl-faq-answer" id="dl-faq-answer-4">
+                    <div class="dl-faq-answer-content">
+                        <p>Yes. Use the Unpaid by Vendor report to review unpaid amounts recorded for suppliers.</p>
+                        <div class="dl-faq-topic"><span>Topic: Vendors</span></div>
+                    </div>
+                </div>
+            </div>
+            <div class="dl-faq-item">
+                <button class="dl-faq-question" type="button" aria-expanded="false" aria-controls="dl-faq-answer-5">
+                    <span class="dl-faq-question-content">
+                        <span class="dl-faq-number">Q5</span>
+                        <span class="dl-faq-question-text">Can I filter payment records?</span>
+                    </span>
+                    <span class="dl-faq-arrow"><i class="ri-arrow-down-s-line"></i></span>
+                </button>
+                <div class="dl-faq-answer" id="dl-faq-answer-5">
+                    <div class="dl-faq-answer-content">
+                        <p>Yes. The Payments report includes company and date-based filters.</p>
+                        <div class="dl-faq-topic"><span>Topic: Payments</span></div>
+                    </div>
+                </div>
+            </div>
+            <div class="dl-faq-item">
+                <button class="dl-faq-question" type="button" aria-expanded="false" aria-controls="dl-faq-answer-6">
+                    <span class="dl-faq-question-content">
+                        <span class="dl-faq-number">Q6</span>
+                        <span class="dl-faq-question-text">Can I download reports?</span>
+                    </span>
+                    <span class="dl-faq-arrow"><i class="ri-arrow-down-s-line"></i></span>
+                </button>
+                <div class="dl-faq-answer" id="dl-faq-answer-6">
+                    <div class="dl-faq-answer-content">
+                        <p>Supported reports can be downloaded as PDF or CSV; the main Reports page also provides exports for diesel entries, vehicles, drivers, and vendors.</p>
+                        <div class="dl-faq-topic"><span>Topic: Downloads</span></div>
+                    </div>
+                </div>
+            </div>
+            <div class="dl-faq-item">
+                <button class="dl-faq-question" type="button" aria-expanded="false" aria-controls="dl-faq-answer-7">
+                    <span class="dl-faq-question-content">
+                        <span class="dl-faq-number">Q7</span>
+                        <span class="dl-faq-question-text">Does every report have the same filters and export options?</span>
+                    </span>
+                    <span class="dl-faq-arrow"><i class="ri-arrow-down-s-line"></i></span>
+                </button>
+                <div class="dl-faq-answer" id="dl-faq-answer-7">
+                    <div class="dl-faq-answer-content">
+                        <p>No. Available filters and downloads depend on the type of report.</p>
+                        <div class="dl-faq-topic"><span>Topic: Downloads</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="dl-faq-cta">
+            <div class="dl-faq-cta-content">
+                <h3>Simplify Business Reporting</h3>
+                <p>The Reports &amp; Analytics Module brings together practical reporting options for vehicles, drivers, vendors, document expiry, and financial records. It helps businesses find the right information, review what has been recorded, and download supported reports without extra manual effort.</p>
+                <p><strong>Make better use of your business records with clear, accessible reports.</strong></p>
+            </div>
+            <button class="dl-faq-cta-button" type="button">Get Started Now</button>
+        </div>
+    </div>
+</section>
+
+<!--footer section start-->
+<footer class="footer">
+
+    <!-- Newsletter -->
+    <div class="footer-newsletter">
+        <div class="container">
+
+            <div class="newsletter-wrapper">
+
+                <div class="newsletter-content">
+                    <h2>Stay ahead of the curve</h2>
+                    <p>
+                        Fleet management insights, product updates, and industry news.
+                    </p>
+                </div>
+
+                <form class="newsletter-form">
+
+                    <input
+                        type="email"
+                        placeholder="Enter your email"
+                    >
+
+                    <button type="submit">
+                        Subscribe
+
+                       <i class="ri-arrow-right-line"></i>
+
+                    </button>
+
+                </form>
+
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Footer Main -->
+
+    <div class="footer-main">
+
+        <div class="container">
+
+            <div class="footer-grid">
+
+                <!-- Left -->
+
+                <div class="footer-about">
+
+                    <a href="index.html" class="footer-logo">
+                         <img src="Assets/images/transportdesk-logo-dark.svg" alt="footer-logo">
+                    </a>
+
+                    <p>
+                        The intelligent transportation platform that puts fleet directors
+                        in complete control of their operations.
+                    </p>
+
+                    <div class="footer-social">
+
+                        <a href="#">
+                            <i class="ri-facebook-fill"></i>
+                        </a>
+
+                        <a href="#">
+                            <i class="ri-instagram-line"></i>
+                        </a>
+
+                        <a href="#">
+                            <i class="ri-twitter-line"></i>
+                        </a>
+
+                        <a href="#">
+                            <i class="ri-linkedin-fill"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <!-- Product -->
+
+                <div class="footer-links">
+
+                    <h3>Product</h3>
+
+                    <ul>
+        <li>
+            <a href="features.html" class="footer-link">Features</a>
+        </li>
+
+        <li>
+            <a href="modules.html" class="footer-link">Modules</a>
+        </li>
+
+        <li>
+            <a href="solutions.html" class="footer-link">Solutions</a>
+        </li>
+
+        <li>
+            <a href="reports.html" class="footer-link">Reports</a>
+        </li>
+
+        <li>
+            <a href="contact.html" class="footer-link">Contact</a>
+        </li>
+    </ul>
+
+                </div>
+
+                <!-- Resources -->
+
+                <div class="footer-links">
+
+                    <h3>Resources</h3>
+
+                    <ul>
+
+                        <li><a href="documentation.html" class="footer-link">Documentation</a></li>
+
+                        <li><a href="faq.html" class="footer-link">FAQ</a></li>
+
+                        <li><a href="privacy-policy.html" class="footer-link">Privacy Policy</a></li>
+
+                    </ul>
+
+                </div>
+
+                <!-- Support -->
+
+                <div class="footer-links">
+
+                    <h3>Support</h3>
+
+                    <ul>
+
+                        <li><a href="#" class="footer-link">Help Center</a></li>
+
+                        <li><a href="#" class="footer-link">Status</a></li>
+
+                        <li><a href="#" class="footer-link">Security</a></li>
+
+                    </ul>
+
+                </div>
+
+                <!-- Contact -->
+
+                <div class="footer-contact">
+
+                    <div class="contact-item">
+
+                        <div class="icon">
+                            <i class="ri-mail-line"></i>
+                        </div>
+
+                        <div>
+
+                            <span>Email</span>
+
+                            <a href="#">
+                               jay@prismitsystems.com
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                    <div class="contact-item">
+
+                        <div class="icon">
+                            <i class="ri-phone-fill"></i>
+                        </div>
+
+                        <div>
+
+                            <span>Call</span>
+                          <div class="footer-contact-num">
+                            <a href="#">
+                                6355 258 003
+                            </a>
+
+                             <a href="#">
+                               +1 562-312-0282
+                            </a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="contact-item">
+
+                        <div class="icon">
+                            <i class="ri-map-pin-line"></i>
+                        </div>
+
+                        <div>
+
+                            <span>Location (India)</span>
+                            <div class="footer-location">
+                            <p>The Galleria Business Hub, Adajan Gam, Pal Gam, Surat, Gujarat, India 394510</p>
+                            </div>
+                        </div>
+
+                    </div>
+                     <div class="contact-item">
+
+                        <div class="icon">
+                            <i class="ri-map-pin-line"></i>
+                        </div>
+
+                        <div>
+
+                            <span>Location (USA)</span>
+                            <div class="footer-location">
+                             <p>Norwalk, California, 90650. USA</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Bottom -->
+
+    <div class="footer-bottom">
+
+        <div class="container">
+
+            <div class="bottom-wrapper">
+
+                <p>
+                    © 2026 All rights reserved.
+                </p>
+
+                <ul>
+
+                    <li><a href="#">Privacy Policy</a></li>
+
+                    <li><a href="#">Terms of Service</a></li>
+
+                    <li><a href="#">Cookie Policy</a></li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</footer>
+<!--footer section end-->
+
+<script>
+
+(function () {
+    var body = document.getElementById('ra-body');
+    if (!body) return;
+    var D = {
+        'GJ19Y5403': {
+            'Diesel': [['2026-10-04', 'Bharat Petroleum Highway Express', 60, 90], ['2026-10-12', 'Indian Oil Super Fuel Hub', 45, 90], ['2026-10-20', 'Hindustan Petroleum Highway Depot', 50, 91]],
+            'Repair': [['2026-10-19', 'Maroon Auto Tech Pvt Ltd', 1180, 1620]]
+        },
+        'MH-12-RN-4821': { 'Diesel': [['2026-10-08', 'Shell Transport Point', 40, 89.5], ['2026-10-18', 'Bharat Petroleum Highway Express', 50, 90]] },
+        'MH-14-BT-9102': { 'Diesel': [['2026-10-18', 'Bharat Petroleum Highway Express', 60, 90]] }
+    };
+    var $ = function (id) { return document.getElementById(id); };
+    function money(n) { return '₹' + Number(n || 0).toLocaleString('en-IN', { maximumFractionDigits: 2 }); }
+    var current = { head: [], rows: [] };
+    function render() {
+        var v = $('ra-vehicle').value, c = $('ra-cat').value, f = $('ra-from').value, t = $('ra-to').value, q = $('ra-search').value.toLowerCase();
+        var src = ((D[v] || {})[c] || []).filter(function (r) { return (!f || r[0] >= f) && (!t || r[0] <= t); });
+        var head, rows, total = 0;
+        if (c === 'Diesel') {
+            head = ['Date', 'Vendor', 'Diesel Qty (L)', 'Rate (₹/L)', 'Amount (₹)'];
+            rows = src.map(function (r) { var a = r[2] * r[3]; total += a; return [r[0], r[1], r[2], r[3], a]; });
+        } else if (c === 'Repair') {
+            head = ['Service Date', 'Vendor', 'Spare Parts (₹)', 'Labour (₹)', 'Total (₹)'];
+            rows = src.map(function (r) { var a = r[2] + r[3]; total += a; return [r[0], r[1], r[2], r[3], a]; });
+        } else {
+            head = ['Date', 'Details', 'Amount (₹)'];
+            rows = [];
+        }
+        rows = rows.filter(function (r) { return r.join(' ').toLowerCase().indexOf(q) > -1; });
+        current = { head: head, rows: rows };
+        $('ra-head').innerHTML = head.map(function (h, i) { return '<th' + (i > 1 ? ' class="dl-text-right"' : '') + '>' + h + '</th>'; }).join('');
+        if (!rows.length) {
+            body.innerHTML = '<tr><td colspan="' + head.length + '">No sample records for ' + c + ' on ' + v + ' in this date range.</td></tr>';
+        } else {
+            body.innerHTML = rows.map(function (r) {
+                return '<tr>' + r.map(function (x, i) { return '<td' + (i > 1 ? ' class="dl-text-right"' : '') + '>' + (typeof x === 'number' && (i === head.length - 1 || head[i].indexOf('₹') > -1) ? money(x) : x) + '</td>'; }).join('') + '</tr>';
+            }).join('');
+        }
+        $('ra-s-vehicle').textContent = v;
+        $('ra-s-cat').textContent = c;
+        $('ra-s-count').textContent = rows.length;
+        $('ra-s-total').textContent = money(total);
+    }
+    ['ra-vehicle', 'ra-cat', 'ra-from', 'ra-to', 'ra-search'].forEach(function (id) {
+        $(id).addEventListener('input', render);
+        $(id).addEventListener('change', render);
+    });
+    $('ra-csv').addEventListener('click', function () {
+        var lines = [current.head].concat(current.rows).map(function (r) {
+            return r.map(function (x) { return '"' + String(x).replace(/"/g, '""') + '"'; }).join(',');
+        });
+        var blob = new Blob([lines.join('\n')], { type: 'text/csv;charset=utf-8;' });
+        var a = document.createElement('a');
+        a.href = URL.createObjectURL(blob);
+        a.download = ($('ra-vehicle').value + '_' + $('ra-cat').value + '_report.csv').replace(/[^\w.\-]+/g, '_');
+        document.body.appendChild(a); a.click(); document.body.removeChild(a);
+    });
+    $('ra-pdf').addEventListener('click', function () { window.print(); });
+    $('ra-tabs').addEventListener('click', function (e) {
+        var t = e.target.closest('.dl-view-tab'); if (!t) return;
+        Array.prototype.forEach.call(this.querySelectorAll('.dl-view-tab'), function (x) { x.classList.toggle('dl-view-tab-active', x === t); });
+        $('ra-view-viewer').hidden = t.getAttribute('data-view') !== 'viewer';
+        $('ra-view-all').hidden = t.getAttribute('data-view') !== 'all';
+    });
+    render();
+})();
+
+</script>
+<script src="./Assets/js/custom.js"></script>
+</body>
+</html>

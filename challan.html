@@ -1,0 +1,1437 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Challan Management Module | TransportDesk Fleet Solutions</title>
+    <meta name="description" content="Record traffic challans by vehicle and driver, attach digital challan slips, review duplicate warnings and search records with the TransportDesk Challan Management Module.">
+
+    <!-- Remix Icon -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" />
+
+    <!-- Swiper -->
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+
+    <!-- Lenis -->
+    <link rel="stylesheet"
+        href="https://unpkg.com/lenis@1.3.23/dist/lenis.css">
+
+    <!-- Tailwind Output CSS -->
+     <link href="./Assets/css/output.css" rel="stylesheet">
+</head>
+<body>
+
+<!--Header Section start-->
+<header class="main-header">
+    <div class="container">
+
+        <div class="header-inner">
+
+            <a href="index.html" class="header-logo">
+                <img src="Assets/images/transportdesk-logo.svg" alt="Logo">
+            </a>
+
+            <nav class="main-navigation" id="mobileMenu">
+
+                <div class="menu-circle"></div>
+
+                <ul class="navigation-links">
+                    <li><a href="index.html" class="navigation-link">Home</a></li>
+                    <li><a href="features.html" class="navigation-link">Features</a></li>
+                    <li><a href="modules.html" class="navigation-link active">Modules</a></li>
+                    <li><a href="reports.html" class="navigation-link">Resources</a></li>
+                    <li><a href="contact.html" class="navigation-link">Contact</a></li>
+                </ul>
+
+                <div class="mobile-header-right">
+                    <a href="#" class="login-btn">Login</a>
+                    <a href="#" class="demo-btn">Book Demo</a>
+                </div>
+
+            </nav>
+
+            <div class="header-right">
+                <a href="#" class="login-btn">Login</a>
+                <a href="#" class="demo-btn">Book Demo</a>
+            </div>
+
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+        </div>
+
+    </div>
+</header>
+
+<!-- Add this after header -->
+<div class="menu-overlay" id="menuOverlay"></div>
+<!--Header section End-->
+
+
+<section id="overview" class="dl-overview-section">
+    <div class="dl-overview-glow"></div>
+    <div class="dl-overview-pattern"></div>
+    <div class="container">
+        <div class="dl-overview-grid">
+
+            <div class="dl-overview-content">
+                <div class="dl-overview-badge">
+                    <span class="dl-status-dot"></span>
+                    <span>Enterprise Fleet Management</span>
+                    <span class="dl-badge-divider">|</span>
+                    <span class="dl-badge-highlight">Challan Module</span>
+                </div>
+
+                <h1 class="dl-overview-title">
+                    Smart Transportation &amp;
+                    <span class="dl-gradient-text">Challan</span>
+                    Management Platform
+                </h1>
+
+                <p class="dl-overview-description">
+                    When businesses manage several vehicles and drivers, keeping track
+                    of traffic challans can be difficult. Record each challan against
+                    a vehicle and driver, attach the slip, review duplicate warnings,
+                    and find records whenever you need them.
+                </p>
+
+                <div class="dl-overview-actions">
+                    <button type="button" class="btn-primary" onclick="document.getElementById('simulator').scrollIntoView({behavior: 'smooth'})">
+                        <span>Try Live Challan Demo</span>
+                        <i class="ri-arrow-right-line"></i>
+                    </button>
+                    <button type="button" class="dl-btn-demo">
+                        <span class="dl-play-icon"><i class="ri-play-fill"></i></span>
+                        <span>Watch Demo Video (5–7 min)</span>
+                    </button>
+                </div>
+
+                <div class="dl-overview-stats">
+                    <div class="dl-stat-item">
+                        <div class="dl-stat-number">150+</div>
+                        <div class="dl-stat-label">Enterprise Fleets</div>
+                    </div>
+                    <div class="dl-stat-item">
+                        <div class="dl-stat-number dl-stat-red">2 MB</div>
+                        <div class="dl-stat-label">Slip Upload Limit</div>
+                    </div>
+                    <div class="dl-stat-item">
+                        <div class="dl-stat-number dl-stat-green">3 Ways</div>
+                        <div class="dl-stat-label">Number · Vehicle · Driver Search</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="dl-overview-visual">
+                <div class="dl-visual-card">
+                    <img src="Assets/images/hero_fleet_dispatch_1792482270822.jpg" alt="Transportation Fleet Dispatch Logistics Center" class="dl-visual-image">
+                    <div class="dl-visual-overlay"></div>
+
+                    <div class="dl-visual-topbar">
+                        <div class="dl-live-label">
+                            <span class="dl-live-dot"></span>
+                            <span>Challan Tracker</span>
+                        </div>
+                        <div class="dl-fuel-rate">GJ 05 AB 1234</div>
+                    </div>
+
+                    <div class="dl-fuel-slip">
+                        <div class="dl-slip-header">
+                            <span class="dl-slip-title">Recent Challan #CH-2026-0412</span>
+                            <span class="dl-slip-status">Saved &amp; Attached</span>
+                        </div>
+                        <div class="dl-slip-stats">
+                            <div class="dl-slip-stat">
+                                <span class="dl-slip-label">Driver</span>
+                                <span class="dl-slip-value">Ramesh Kumar</span>
+                            </div>
+                            <div class="dl-slip-stat">
+                                <span class="dl-slip-label">Reason</span>
+                                <span class="dl-slip-value dl-slip-red">Over speeding</span>
+                            </div>
+                            <div class="dl-slip-stat">
+                                <span class="dl-slip-label">Fine</span>
+                                <span class="dl-slip-value dl-slip-green">₹1,000</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<section class="dl-trusted-section">
+    <div class="dl-trusted-heading">
+        <span>Trusted by 150+ Enterprise Transportation &amp; Logistics Fleets</span>
+    </div>
+    <div class="dl-trusted-marquee">
+        <div class="dl-trusted-fade dl-trusted-fade-left"></div>
+        <div class="dl-trusted-fade dl-trusted-fade-right"></div>
+        <div class="dl-trusted-track">
+            <!-- First group -->
+            <div class="dl-trusted-group">
+                <div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">Apex Logistics</span></div>
+                <div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">Meridian Transport</span></div>
+                <div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">Global Freight Co</span></div>
+                <div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">NorthStar Fleet</span></div>
+                <div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">Titan Cargo</span></div>
+                <div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">Pacific Routes</span></div>
+                <div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">Atlas Distribution</span></div>
+                <div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">Summit Hauling</span></div>
+                <div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">BlueDart Express</span></div>
+                <div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">TCI Freight Lines</span></div>
+                <div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">VRL Logistics Fleet</span></div>
+                <div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">Safexpress Network</span></div>
+            </div>
+
+            <!-- Duplicate group for seamless looping -->
+            <div class="dl-trusted-group" aria-hidden="true">
+                <div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">Apex Logistics</span></div>
+                <div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">Meridian Transport</span></div>
+                <div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">Global Freight Co</span></div>
+                <div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">NorthStar Fleet</span></div>
+                <div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">Titan Cargo</span></div>
+                <div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">Pacific Routes</span></div>
+                <div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">Atlas Distribution</span></div>
+                <div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">Summit Hauling</span></div>
+                <div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">BlueDart Express</span></div>
+                <div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">TCI Freight Lines</span></div>
+                <div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">VRL Logistics Fleet</span></div>
+                <div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">Safexpress Network</span></div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<section class="dl-demo-section">
+    <div class="dl-demo-glow"></div>
+    <div class="dl-container">
+
+        <div class="heading-wrapper">
+            <span class="heading-tag">Interactive Video Demonstration</span>
+            <h2 class="heading-title">
+                Watch How <span>Challan Management</span> Works
+            </h2>
+            <p>
+                Welcome to the Challan Management Module. Paper slips may be misplaced,
+                and it may take time to identify which driver or vehicle was involved.
+                In this video, you will see how the module works, step by step.
+            </p>
+        </div>
+
+        <div class="dl-demo-grid">
+            <div class="dl-demo-video-column">
+                <div class="dl-video-card">
+
+                    <div class="dl-video-toolbar">
+                        <div class="dl-video-toolbar-left">
+                            <span class="dl-window-dot dl-dot-red"></span>
+                            <span class="dl-window-dot dl-dot-yellow"></span>
+                            <span class="dl-window-dot dl-dot-green"></span>
+                            <span class="dl-video-filename">transportdesk_challan_module_demo.mp4</span>
+                        </div>
+                        <span class="dl-video-quality">Full HD · 5–7 min</span>
+                    </div>
+
+                    <div class="dl-video-preview">
+                        <img src="Assets/images/dashboard.png" alt="Challan Management demonstration video preview" class="dl-video-thumbnail">
+                        <div class="dl-video-overlay"></div>
+                        <button type="button" class="dl-video-play" aria-label="Play demonstration video">
+                            <i class="ri-play-fill"></i>
+                            <span class="dl-video-ping"></span>
+                        </button>
+                        <div class="dl-video-meta">
+                            <div class="dl-video-meta-left">
+                                <span class="dl-video-timestamp">Scene 4 of 8</span>
+                                <span class="dl-video-current-chapter">Entering Challan Information</span>
+                            </div>
+                            <a href="#" target="_blank" rel="noopener noreferrer" class="dl-video-external">
+                                <span>External Link</span>
+                                <i class="ri-external-link-line"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="dl-video-footer">
+                        <div class="dl-video-footer-left">
+                            <button type="button" class="dl-watch-button">
+                                <i class="ri-play-circle-line"></i>
+                                <span>Watch Full Walkthrough</span>
+                            </button>
+                            <span class="dl-video-footer-note">Click to launch video playback in pop-up modal</span>
+                        </div>
+                        <a href="#" target="_blank" rel="noopener noreferrer" class="dl-video-source">
+                            <span>Direct Source</span>
+                            <i class="ri-arrow-right-up-line"></i>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section id="simulator" class="dl-simulator-section">
+    <div class="dl-container">
+
+        <div class="dl-simulator-header">
+            <div class="heading-wrapper heading-wrap-left">
+                <span class="heading-tag">Add Challan View</span>
+                <h2 class="heading-title">
+                    Interactive <span>Challan Management</span> Demo
+                </h2>
+                <p>
+                    Try the module yourself: choose a vehicle and driver, enter the challan
+                    details, attach the slip, review the duplicate warning, then save, search,
+                    view and edit records. Everything stays in your browser, and the records
+                    shown are illustrative.
+                </p>
+            </div>
+
+            <div class="dl-view-switcher">
+                <button type="button" class="dl-view-tab dl-view-tab-active" data-ch-view="form">
+                    <i class="ri-file-add-line"></i>
+                    Add Challan View
+                </button>
+                <button type="button" class="dl-view-tab" data-ch-view="list">
+                    <i class="ri-list-check-2"></i>
+                    Challans List View
+                </button>
+            </div>
+        </div>
+
+        <div class="dl-stats-grid">
+            <div class="dl-stat-card">
+                <div class="dl-stat-label"><span>Total Challans</span><i class="ri-file-list-3-line"></i></div>
+                <div class="dl-stat-value"><span id="ch-s-total" style="font:inherit;color:inherit">0</span> <span>Records</span></div>
+                <p class="dl-stat-note">Saved challan records</p>
+            </div>
+            <div class="dl-stat-card">
+                <div class="dl-stat-label"><span>Vehicles Involved</span><i class="ri-truck-line dl-red-icon"></i></div>
+                <div class="dl-stat-value dl-red-text"><span id="ch-s-veh" style="font:inherit;color:inherit">0</span> <span>Vehicles</span></div>
+                <p class="dl-stat-note">With a recorded challan</p>
+            </div>
+            <div class="dl-stat-card">
+                <div class="dl-stat-label"><span>Drivers Involved</span><i class="ri-user-3-line dl-green-icon"></i></div>
+                <div class="dl-stat-value dl-green-text"><span id="ch-s-drv" style="font:inherit;color:inherit">0</span> <span>Drivers</span></div>
+                <p class="dl-stat-note">Linked to challans</p>
+            </div>
+            <div class="dl-stat-card dl-stat-card-total">
+                <div class="dl-stat-label"><span>Total Fine Amount</span><span class="dl-status-dot"></span></div>
+                <div class="dl-stat-value dl-stat-total-value" id="ch-s-amt">₹0</div>
+                <p class="dl-stat-note dl-green-text">Across all challans</p>
+            </div>
+        </div>
+
+        <div class="dl-calculator-panel">
+
+            <!-- ===== FORM VIEW ===== -->
+            <div id="ch-view-form">
+                <div class="dl-bill-master">
+                    <div class="dl-bill-master-header">
+                        <div class="dl-bill-heading">
+                            <span>Step 1: Challan Information</span>
+                            <span class="dl-heading-separator">·</span>
+                            <span class="dl-invoice-number" id="ch-form-mode">Add Challan</span>
+                        </div>
+                        <div class="dl-receipt-actions">
+                            <button type="button" class="dl-secondary-button" id="ch-fill">
+                                <i class="ri-magic-line"></i><span>Fill Example</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="dl-bill-fields">
+                        <div class="dl-form-group">
+                            <label for="ch-vehicle">Vehicle</label>
+                            <select id="ch-vehicle" class="dl-form-control">
+                                <option value="">Select vehicle</option>
+                                <option>GJ 05 AB 1234</option>
+                                <option>GJ 06 CD 5678</option>
+                                <option>GJ 01 EF 9012</option>
+                                <option>GJ 05 GH 3456</option>
+                            </select>
+                        </div>
+                        <div class="dl-form-group">
+                            <label for="ch-driver">Driver</label>
+                            <select id="ch-driver" class="dl-form-control">
+                                <option value="">Select driver</option>
+                                <option>Ramesh Kumar</option>
+                                <option>Vikram Singh</option>
+                                <option>Dilip Patel</option>
+                            </select>
+                        </div>
+                        <div class="dl-form-group">
+                            <label for="ch-no">Challan Number</label>
+                            <input id="ch-no" class="dl-form-control" type="text" placeholder="e.g. CH-2026-0420">
+                        </div>
+                        <div class="dl-form-group">
+                            <label for="ch-date">Challan Date</label>
+                            <input id="ch-date" class="dl-form-control" type="date">
+                        </div>
+                        <div class="dl-form-group">
+                            <label for="ch-fine">Fine Amount (₹)</label>
+                            <input id="ch-fine" class="dl-form-control" type="number" min="0" step="1" placeholder="1000">
+                        </div>
+                        <div class="dl-form-group">
+                            <label for="ch-reason">Reason for Challan</label>
+                            <input id="ch-reason" class="dl-form-control" type="text" maxlength="200" placeholder="e.g. Over speeding">
+                        </div>
+                        <div class="dl-form-group">
+                            <label for="ch-slip">Challan Slip (optional)</label>
+                            <input id="ch-slip" class="dl-form-control" type="file" accept=".jpg,.jpeg,.png,.pdf">
+                        </div>
+                    </div>
+
+                    <div class="dl-bill-options">
+                        <span class="dl-formula-note" id="ch-msg">The current form supports JPG, JPEG, PNG and PDF files up to 2 MB.</span>
+                    </div>
+
+                    <!-- Duplicate warning -->
+                    <div class="dl-documentation-note" id="ch-warn" hidden style="margin:1rem 0">
+                    
+                        <span id="ch-warn-text"></span>
+                        <button type="button" class="dl-secondary-button" id="ch-warn-link" style="margin-left:.5rem"><i class="ri-link"></i><span>View Existing Record</span></button>
+                        <button type="button" class="dl-primary-button" id="ch-save-anyway" style="margin-left:.5rem">Save Anyway</button>
+                    </div>
+                </div>
+
+                <div class="dl-table-toolbar">
+                    <div class="dl-search-box">
+                        <span style="padding-left:.5rem">A similar saved challan triggers a warning with a link to the existing record</span>
+                    </div>
+                    <div class="dl-toolbar-actions">
+                        <button type="button" class="dl-action-button" id="ch-reset">
+                            <i class="ri-refresh-line dl-red-icon"></i>Reset Form
+                        </button>
+                        <button type="button" class="dl-primary-button" id="ch-save">
+                            <i class="ri-save-3-line"></i><span id="ch-save-label">Save Challan</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ===== LIST VIEW ===== -->
+            <div id="ch-view-list" hidden>
+                <div class="dl-table-toolbar">
+                    <div class="dl-search-box">
+                        <i class="ri-search-line"></i>
+                        <input type="search" id="ch-search" placeholder="Search challan number, vehicle or driver...">
+                    </div>
+                    <div class="dl-toolbar-actions">
+                        <button type="button" class="dl-primary-button" id="ch-go-add">
+                            <i class="ri-add-line"></i>Add Challan
+                        </button>
+                    </div>
+                </div>
+
+                <div class="dl-table-wrapper">
+                    <table class="dl-vehicle-table">
+                        <thead>
+                            <tr>
+                                <th>Challan No.</th>
+                                <th>Vehicle</th>
+                                <th>Driver</th>
+                                <th>Date</th>
+                                <th class="dl-text-right">Fine</th>
+                                <th>Reason</th>
+                                <th class="dl-text-center">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody id="ch-body"></tbody>
+                        <tfoot>
+                            <tr>
+                                <td colspan="4"><span class="dl-footer-label" id="ch-count">0 records</span></td>
+                                <td class="dl-text-right dl-footer-total" id="ch-foot-amt">₹0</td>
+                                <td colspan="2"></td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+
+                <div class="dl-bill-master" id="ch-detail" hidden>
+                    <div class="dl-bill-master-header">
+                        <div class="dl-bill-heading">
+                            <span>Challan Details</span>
+                            <span class="dl-heading-separator">·</span>
+                            <span class="dl-invoice-number" id="ch-d-no"></span>
+                        </div>
+                        <div class="dl-receipt-actions" id="ch-d-docs"></div>
+                    </div>
+                    <div class="dl-bill-fields" id="ch-d-fields"></div>
+                </div>
+            </div>
+
+            <div class="dl-calculator-footer">
+                <div class="dl-documentation-note">
+                   
+                    <span><strong>Duplicate Check:</strong> If a similar challan is already saved, review the existing record before deciding whether to use Save Anyway.</span>
+                </div>
+                <div class="dl-supported-formats">Supported Slips: JPG, JPEG, PNG, PDF (up to 2 MB)</div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!--dl feature section start-->
+<section id="features" class="dl-features-section">
+    <div class="container">
+        <div class="heading-wrapper">
+            <span class="heading-tag">Complete solution</span>
+            <h2 class="heading-title">Everything Your <span>Challans Need</span></h2>
+            <p>
+                A set of tools to record challans against vehicles and drivers, attach slips, review duplicates and find records quickly.
+            </p>
+            <div class="dl-features-filters">
+                <button type="button" class="dl-filter-btn is-active" data-filter="all">All Features (10)</button>
+                <button type="button" class="dl-filter-btn" data-filter="records">Records &amp; Details</button>
+                <button type="button" class="dl-filter-btn" data-filter="slips">Slips &amp; Duplicate Check</button>
+                <button type="button" class="dl-filter-btn" data-filter="manage">Search &amp; Edit</button>
+            </div>
+        </div>
+
+        <div class="dl-features-grid">
+
+            <!-- Feature 4.1 -->
+            <article class="dl-feature-card" data-category="records">
+                <div class="dl-feature-card-content">
+                    <div class="dl-feature-icon"><i class="ri-folder-shield-2-line"></i></div>
+                    <div class="dl-feature-card-heading"><h3>Central Challan Records</h3></div>
+                    <p>
+                        Keep every traffic challan recorded in one place, so paper slips are not misplaced and previous records are always available on the Challans page.
+                    </p>
+                </div>
+            </article>
+
+            <!-- Feature 4.2 -->
+            <article class="dl-feature-card" data-category="records">
+                <div class="dl-feature-card-content">
+                    <div class="dl-feature-icon"><i class="ri-truck-line"></i></div>
+                    <div class="dl-feature-card-heading"><h3>Vehicle Selection</h3></div>
+                    <p>
+                        Select the vehicle for which the challan was issued from the available vehicle list.
+                    </p>
+                </div>
+            </article>
+
+            <!-- Feature 4.3 -->
+            <article class="dl-feature-card" data-category="records">
+                <div class="dl-feature-card-content">
+                    <div class="dl-feature-icon"><i class="ri-user-3-line"></i></div>
+                    <div class="dl-feature-card-heading"><h3>Driver Selection</h3></div>
+                    <p>
+                        Select the related driver from the available driver list, making it easier to identify who was involved.
+                    </p>
+                </div>
+            </article>
+
+            <!-- Feature 4.4 -->
+            <article class="dl-feature-card" data-category="records">
+                <div class="dl-feature-card-content">
+                    <div class="dl-feature-icon"><i class="ri-file-list-3-line"></i></div>
+                    <div class="dl-feature-card-heading"><h3>Challan Information</h3></div>
+                    <p>
+                        Enter the challan number, challan date, fine amount and the reason for the challan to identify what happened and when.
+                    </p>
+                </div>
+            </article>
+
+            <!-- Feature 4.5 -->
+            <article class="dl-feature-card" data-category="slips">
+                <div class="dl-feature-card-content">
+                    <div class="dl-feature-icon"><i class="ri-file-upload-line"></i></div>
+                    <div class="dl-feature-card-heading"><h3>Digital Challan Slip Upload</h3></div>
+                    <p>
+                        Upload a digital challan slip as a PDF or image. The current form supports JPG, JPEG, PNG and PDF files up to 2 MB.
+                    </p>
+                </div>
+            </article>
+
+            <!-- Feature 4.6 -->
+            <article class="dl-feature-card" data-category="slips">
+                <div class="dl-feature-card-content">
+                    <div class="dl-feature-icon"><i class="ri-file-copy-2-line"></i></div>
+                    <div class="dl-feature-card-heading"><h3>Duplicate Challan Warning</h3></div>
+                    <p>
+                        If a similar challan is already saved, the system can show a warning and a link to the existing record.
+                    </p>
+                </div>
+            </article>
+
+            <!-- Feature 4.7 -->
+            <article class="dl-feature-card" data-category="slips">
+                <div class="dl-feature-card-content">
+                    <div class="dl-feature-icon"><i class="ri-shield-check-line"></i></div>
+                    <div class="dl-feature-card-heading"><h3>Save Anyway Decision</h3></div>
+                    <p>
+                        Review the existing record first, then decide whether to use Save Anyway.
+                    </p>
+                </div>
+            </article>
+
+            <!-- Feature 4.8 -->
+            <article class="dl-feature-card" data-category="slips">
+                <div class="dl-feature-card-content">
+                    <div class="dl-feature-icon"><i class="ri-download-2-line"></i></div>
+                    <div class="dl-feature-card-heading"><h3>View or Download Attachment</h3></div>
+                    <p>
+                        Open the saved challan and view or download its attached slip whenever it is needed.
+                    </p>
+                </div>
+            </article>
+
+            <!-- Feature 4.9 -->
+            <article class="dl-feature-card" data-category="manage">
+                <div class="dl-feature-card-content">
+                    <div class="dl-feature-icon"><i class="ri-search-2-line"></i></div>
+                    <div class="dl-feature-card-heading"><h3>Search Challans</h3></div>
+                    <p>
+                        Search records by challan number, vehicle or driver to find a challan quickly.
+                    </p>
+                </div>
+            </article>
+
+            <!-- Feature 4.10 -->
+            <article class="dl-feature-card" data-category="manage">
+                <div class="dl-feature-card-content">
+                    <div class="dl-feature-icon"><i class="ri-edit-line"></i></div>
+                    <div class="dl-feature-card-heading"><h3>Edit Records</h3></div>
+                    <p>
+                        Authorized users can open a challan’s details and edit the record when a correction is needed.
+                    </p>
+                </div>
+            </article>
+
+        </div>
+    </div>
+</section>
+<!--dl feature section end-->
+
+<!--workflow section start-->
+<section class="dl-workflow-section">
+    <div class="container">
+        <div class="heading-wrapper heading-wrap-left">
+            <span class="heading-tag">Step-by-Step Workflow</span>
+            <h2 class="heading-title">How Does the <span>Challan Module</span> Work?</h2>
+            <p>
+                Follow a simple process to record a challan, attach its slip, check for duplicates and manage it later.
+            </p>
+        </div>
+
+        <div class="dl-workflow-grid">
+
+            <!-- Workflow Step 01 -->
+            <article class="dl-workflow-card">
+                <div class="dl-workflow-card-content">
+                    <div class="dl-workflow-card-top">
+                        <span class="dl-workflow-number">01</span>
+                        <div class="dl-workflow-icon"><i class="ri-folder-open-line"></i></div>
+                    </div>
+                    <h3 class="dl-workflow-card-title">Open the Challans Section</h3>
+                    <p class="dl-workflow-card-description">Open the Challans page to see previously recorded challans.</p>
+                    <ul class="dl-workflow-checklist">
+                        <li>
+                            <i class="ri-check-line"></i>
+                            <span>Open the module from the dashboard sidebar</span>
+                        </li>
+                        <li>
+                            <i class="ri-check-line"></i>
+                            <span>Review the saved challans on the list page</span>
+                        </li>
+                        <li>
+                            <i class="ri-check-line"></i>
+                            <span>Select Add Challan to create a new record</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="dl-workflow-card-footer"><span>Workflow Phase 01</span></div>
+            </article>
+
+            <!-- Workflow Step 02 -->
+            <article class="dl-workflow-card">
+                <div class="dl-workflow-card-content">
+                    <div class="dl-workflow-card-top">
+                        <span class="dl-workflow-number">02</span>
+                        <div class="dl-workflow-icon"><i class="ri-truck-line"></i></div>
+                    </div>
+                    <h3 class="dl-workflow-card-title">Choose Vehicle and Driver</h3>
+                    <p class="dl-workflow-card-description">Link the challan to the right vehicle and driver.</p>
+                    <ul class="dl-workflow-checklist">
+                        <li>
+                            <i class="ri-check-line"></i>
+                            <span>Select the vehicle for which the challan was issued</span>
+                        </li>
+                        <li>
+                            <i class="ri-check-line"></i>
+                            <span>Select the related driver from the available lists</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="dl-workflow-card-footer"><span>Workflow Phase 02</span></div>
+            </article>
+
+            <!-- Workflow Step 03 -->
+            <article class="dl-workflow-card">
+                <div class="dl-workflow-card-content">
+                    <div class="dl-workflow-card-top">
+                        <span class="dl-workflow-number">03</span>
+                        <div class="dl-workflow-icon"><i class="ri-file-list-3-line"></i></div>
+                    </div>
+                    <h3 class="dl-workflow-card-title">Enter Challan Information</h3>
+                    <p class="dl-workflow-card-description">Record the details that describe the challan.</p>
+                    <ul class="dl-workflow-checklist">
+                        <li>
+                            <i class="ri-check-line"></i>
+                            <span>Enter the challan number and challan date</span>
+                        </li>
+                        <li>
+                            <i class="ri-check-line"></i>
+                            <span>Enter the fine amount</span>
+                        </li>
+                        <li>
+                            <i class="ri-check-line"></i>
+                            <span>Enter the reason for the challan</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="dl-workflow-card-footer"><span>Workflow Phase 03</span></div>
+            </article>
+
+            <!-- Workflow Step 04 -->
+            <article class="dl-workflow-card">
+                <div class="dl-workflow-card-content">
+                    <div class="dl-workflow-card-top">
+                        <span class="dl-workflow-number">04</span>
+                        <div class="dl-workflow-icon"><i class="ri-attachment-2"></i></div>
+                    </div>
+                    <h3 class="dl-workflow-card-title">Attach the Challan Slip</h3>
+                    <p class="dl-workflow-card-description">Upload a digital copy of the slip, if you have one.</p>
+                    <ul class="dl-workflow-checklist">
+                        <li>
+                            <i class="ri-check-line"></i>
+                            <span>Upload a PDF or image of the challan slip</span>
+                        </li>
+                        <li>
+                            <i class="ri-check-line"></i>
+                            <span>JPG, JPEG, PNG and PDF files up to 2 MB are supported</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="dl-workflow-card-footer"><span>Workflow Phase 04</span></div>
+            </article>
+
+            <!-- Workflow Step 05 -->
+            <article class="dl-workflow-card">
+                <div class="dl-workflow-card-content">
+                    <div class="dl-workflow-card-top">
+                        <span class="dl-workflow-number">05</span>
+                        <div class="dl-workflow-icon"><i class="ri-file-copy-2-line"></i></div>
+                    </div>
+                    <h3 class="dl-workflow-card-title">Review Duplicate Warning</h3>
+                    <p class="dl-workflow-card-description">Check whether a similar challan already exists.</p>
+                    <ul class="dl-workflow-checklist">
+                        <li>
+                            <i class="ri-check-line"></i>
+                            <span>The system can show a warning for a similar saved challan</span>
+                        </li>
+                        <li>
+                            <i class="ri-check-line"></i>
+                            <span>A link to the existing record is provided</span>
+                        </li>
+                        <li>
+                            <i class="ri-check-line"></i>
+                            <span>Review it before deciding whether to use Save Anyway</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="dl-workflow-card-footer"><span>Workflow Phase 05</span></div>
+            </article>
+
+            <!-- Workflow Step 06 -->
+            <article class="dl-workflow-card">
+                <div class="dl-workflow-card-content">
+                    <div class="dl-workflow-card-top">
+                        <span class="dl-workflow-number">06</span>
+                        <div class="dl-workflow-icon"><i class="ri-save-3-line"></i></div>
+                    </div>
+                    <h3 class="dl-workflow-card-title">Save and Manage</h3>
+                    <p class="dl-workflow-card-description">Save the challan and manage it whenever needed.</p>
+                    <ul class="dl-workflow-checklist">
+                        <li>
+                            <i class="ri-check-line"></i>
+                            <span>Open its details after saving</span>
+                        </li>
+                        <li>
+                            <i class="ri-check-line"></i>
+                            <span>View or download the attachment</span>
+                        </li>
+                        <li>
+                            <i class="ri-check-line"></i>
+                            <span>Search by challan number, vehicle or driver</span>
+                        </li>
+                        <li>
+                            <i class="ri-check-line"></i>
+                            <span>Edit records when authorized</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="dl-workflow-card-footer"><span>Workflow Phase 06</span></div>
+            </article>
+
+        </div>
+    </div>
+
+    <div class="et-container">
+        <div class="workflow-bottom">
+            <div class="security-card">
+                <img src="./Assets/images/workflow-img.png" alt="workflow-img">
+                <div class="security-content">
+                    <h3>Enterprise-Grade Security</h3>
+                    <p>Protect sensitive business information with encrypted data storage, secure user authentication, and controlled system access.</p>
+                </div>
+            </div>
+            <div class="workflow-info">
+                <div class="stats-card">
+                    <h3>98%</h3>
+                    <h4>Customer Satisfaction</h4>
+                    <p>Provide accurate ETAs, live shipment updates, and faster response times that improve customer trust and retention.</p>
+                </div>
+                <div class="workflow-content">
+                    <p>Explore a powerful collection of intelligent modules built to streamline your daily transport operations. Manage vehicles, drivers, trips, and business performance seamlessly through one unified platform.</p>
+                    <a href="#" class="workflow-btn">Explore All Modules <i class="ri-arrow-right-line"></i></a>
+                </div>
+                <div class="info-card">
+                    <div class="info-icon"><i class="ri-bar-chart-2-fill"></i></div>
+                    <span>Visualize business performance instantly</span>
+                </div>
+                <div class="info-card">
+                    <div class="info-icon"><i class="ri-lock-unlock-line"></i></div>
+                    <span>Access your business securely from anywhere</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--workflow section end-->
+
+<!--results section start-->
+<section id="benefits" class="results-section">
+    <div class="container">
+        <div class="heading-wrapper">
+            <span class="heading-tag">Proven Advantages</span>
+            <h2 class="heading-title heading-light">Benefits of <span>Challan Management</span></h2>
+            <p>
+                Maintain these records in one place, review the information whenever needed, and keep your daily work organized.
+            </p>
+        </div>
+        <div class="results-grid">
+
+            <div class="result-card">
+                <div class="result-icon"><i class="ri-folder-shield-2-line"></i></div>
+                <h3>Keep Challans in One Place</h3>
+                <p>Maintain traffic challan records for all vehicles and drivers instead of relying on paper slips.</p>
+            </div>
+
+            <div class="result-card">
+                <div class="result-icon"><i class="ri-file-lost-line"></i></div>
+                <h3>Avoid Misplaced Slips</h3>
+                <p>Attach a digital copy of the challan slip so it is available whenever you need it.</p>
+            </div>
+
+            <div class="result-card">
+                <div class="result-icon"><i class="ri-user-search-line"></i></div>
+                <h3>Identify Vehicle and Driver Quickly</h3>
+                <p>See which driver or vehicle was involved without spending time searching.</p>
+            </div>
+
+            <div class="result-card">
+                <div class="result-icon"><i class="ri-file-copy-2-line"></i></div>
+                <h3>Review Possible Duplicates</h3>
+                <p>Get a warning and a link to an existing record when a similar challan is already saved.</p>
+            </div>
+
+            <div class="result-card">
+                <div class="result-icon"><i class="ri-search-eye-line"></i></div>
+                <h3>Find Records Easily</h3>
+                <p>Search by challan number, vehicle or driver to open the right record.</p>
+            </div>
+
+            <div class="result-card">
+                <div class="result-icon"><i class="ri-edit-box-line"></i></div>
+                <h3>Correct Records When Authorized</h3>
+                <p>Authorized users can edit saved challans to keep information accurate.</p>
+            </div>
+
+        </div>
+    </div>
+</section>
+<!--results section end-->
+
+<!--transport-section start-->
+<section class="transport-section">
+    <div class="container">
+        <div class="transport-container">
+            <div class="heading-wrapper heading-wrap-left">
+                <span class="heading-tag">Transportation Management</span>
+                <h2 class="heading-title">Manage Your Transportation <span> Operations Efficiently </span></h2>
+                <p>
+                    Track vehicles, manage drivers, monitor fuel usage, handle maintenance schedules, and keep traffic challans organized from one centralized cloud platform.
+                </p>
+            </div>
+            <div class="transport-image-wrapper">
+                <img src="./Assets/images/tms-img.png" alt="Transportation Dashboard" class="transport-image">
+                <div class="transport-shape"></div>
+                <div class="transport-card">
+                    <ul class="transport-list">
+                        <li><i class="ri-checkbox-circle-line"></i><span>Real-time fleet and vehicle monitoring</span></li>
+                        <li><i class="ri-checkbox-circle-line"></i><span>Driver management and attendance tracking</span></li>
+                        <li><i class="ri-checkbox-circle-line"></i><span>Challan records and slips</span></li>
+                        <li><i class="ri-checkbox-circle-line"></i><span>Maintenance alerts and service scheduling</span></li>
+                        <li><i class="ri-checkbox-circle-line"></i><span>Vehicle documents and compliance tracking</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--transport section end-->
+
+<!--dl-faq section start-->
+<section id="faq" class="dl-faq-section">
+    <div class="container">
+        <div class="heading-wrapper">
+            <span class="heading-tag">Got Questions?</span>
+            <h2 class="heading-title">Frequently Asked <span>Questions</span></h2>
+            <p>
+                Everything you need to know about recording, attaching and searching challans in your fleet operations.
+            </p>
+            <div class="dl-faq-filters">
+                <button class="dl-faq-filter active" type="button">All</button>
+                <button class="dl-faq-filter" type="button">Records</button>
+                <button class="dl-faq-filter" type="button">Slips</button>
+                <button class="dl-faq-filter" type="button">Duplicates</button>
+                <button class="dl-faq-filter" type="button">Search</button>
+            </div>
+        </div>
+
+        <div class="dl-faq-list">
+
+            <!-- FAQ 1 -->
+            <div class="dl-faq-item active" data-category="records">
+                <button class="dl-faq-question" type="button" aria-expanded="true" aria-controls="dl-faq-answer-1">
+                    <span class="dl-faq-question-content">
+                        <span class="dl-faq-number">Q1</span>
+                        <span class="dl-faq-question-text">Can I link a challan to a vehicle and driver?</span>
+                    </span>
+                    <span class="dl-faq-arrow"><i class="ri-arrow-down-s-line"></i></span>
+                </button>
+                <div class="dl-faq-answer" id="dl-faq-answer-1">
+                    <div class="dl-faq-answer-content">
+                        <p>Yes. Select the vehicle for which the challan was issued and the related driver from the available lists.</p>
+                        <div class="dl-faq-topic"><span>Topic: Records</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ 2 -->
+            <div class="dl-faq-item" data-category="records">
+                <button class="dl-faq-question" type="button" aria-expanded="false" aria-controls="dl-faq-answer-2">
+                    <span class="dl-faq-question-content">
+                        <span class="dl-faq-number">Q2</span>
+                        <span class="dl-faq-question-text">What details can I record for a challan?</span>
+                    </span>
+                    <span class="dl-faq-arrow"><i class="ri-arrow-down-s-line"></i></span>
+                </button>
+                <div class="dl-faq-answer" id="dl-faq-answer-2">
+                    <div class="dl-faq-answer-content">
+                        <p>You can enter the challan number, challan date, fine amount and the reason for the challan.</p>
+                        <div class="dl-faq-topic"><span>Topic: Records</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ 3 -->
+            <div class="dl-faq-item" data-category="slips">
+                <button class="dl-faq-question" type="button" aria-expanded="false" aria-controls="dl-faq-answer-3">
+                    <span class="dl-faq-question-content">
+                        <span class="dl-faq-number">Q3</span>
+                        <span class="dl-faq-question-text">Can I upload the challan slip?</span>
+                    </span>
+                    <span class="dl-faq-arrow"><i class="ri-arrow-down-s-line"></i></span>
+                </button>
+                <div class="dl-faq-answer" id="dl-faq-answer-3">
+                    <div class="dl-faq-answer-content">
+                        <p>Yes. If you have a digital challan slip, you can upload a PDF or image. The current form supports JPG, JPEG, PNG and PDF files up to 2 MB.</p>
+                        <div class="dl-faq-topic"><span>Topic: Slips</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ 4 -->
+            <div class="dl-faq-item" data-category="duplicates">
+                <button class="dl-faq-question" type="button" aria-expanded="false" aria-controls="dl-faq-answer-4">
+                    <span class="dl-faq-question-content">
+                        <span class="dl-faq-number">Q4</span>
+                        <span class="dl-faq-question-text">What happens if a similar challan is already saved?</span>
+                    </span>
+                    <span class="dl-faq-arrow"><i class="ri-arrow-down-s-line"></i></span>
+                </button>
+                <div class="dl-faq-answer" id="dl-faq-answer-4">
+                    <div class="dl-faq-answer-content">
+                        <p>The system can show a warning and a link to the existing record. Review it before deciding whether to use Save Anyway.</p>
+                        <div class="dl-faq-topic"><span>Topic: Duplicates</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ 5 -->
+            <div class="dl-faq-item" data-category="slips">
+                <button class="dl-faq-question" type="button" aria-expanded="false" aria-controls="dl-faq-answer-5">
+                    <span class="dl-faq-question-content">
+                        <span class="dl-faq-number">Q5</span>
+                        <span class="dl-faq-question-text">Can I view or download the attachment later?</span>
+                    </span>
+                    <span class="dl-faq-arrow"><i class="ri-arrow-down-s-line"></i></span>
+                </button>
+                <div class="dl-faq-answer" id="dl-faq-answer-5">
+                    <div class="dl-faq-answer-content">
+                        <p>Yes. After saving, you can open the challan’s details and view or download the attachment.</p>
+                        <div class="dl-faq-topic"><span>Topic: Slips</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ 6 -->
+            <div class="dl-faq-item" data-category="search">
+                <button class="dl-faq-question" type="button" aria-expanded="false" aria-controls="dl-faq-answer-6">
+                    <span class="dl-faq-question-content">
+                        <span class="dl-faq-number">Q6</span>
+                        <span class="dl-faq-question-text">How can I find an existing challan?</span>
+                    </span>
+                    <span class="dl-faq-arrow"><i class="ri-arrow-down-s-line"></i></span>
+                </button>
+                <div class="dl-faq-answer" id="dl-faq-answer-6">
+                    <div class="dl-faq-answer-content">
+                        <p>Search by challan number, vehicle or driver.</p>
+                        <div class="dl-faq-topic"><span>Topic: Search</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ 7 -->
+            <div class="dl-faq-item" data-category="search">
+                <button class="dl-faq-question" type="button" aria-expanded="false" aria-controls="dl-faq-answer-7">
+                    <span class="dl-faq-question-content">
+                        <span class="dl-faq-number">Q7</span>
+                        <span class="dl-faq-question-text">Can I edit a saved challan?</span>
+                    </span>
+                    <span class="dl-faq-arrow"><i class="ri-arrow-down-s-line"></i></span>
+                </button>
+                <div class="dl-faq-answer" id="dl-faq-answer-7">
+                    <div class="dl-faq-answer-content">
+                        <p>Yes, when you are authorized to do so.</p>
+                        <div class="dl-faq-topic"><span>Topic: Search</span></div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="dl-faq-cta">
+            <div class="dl-faq-cta-content">
+                <h3>Ready to Organize Your Challans?</h3>
+                <p>
+                    That is how the Challan Management Module works. You can now maintain these records in one place, review the information whenever needed, and use the available tools to keep your daily work organized.
+                </p>
+            </div>
+            <button class="dl-faq-cta-button" type="button" onclick="document.getElementById('simulator').scrollIntoView({behavior: 'smooth'})">
+                Try Live Demo Now
+            </button>
+        </div>
+    </div>
+</section>
+<!--dl-faq section end-->
+
+<!--footer section start-->
+<footer class="footer">
+
+    <!-- Newsletter -->
+    <div class="footer-newsletter">
+        <div class="container">
+
+            <div class="newsletter-wrapper">
+
+                <div class="newsletter-content">
+                    <h2>Stay ahead of the curve</h2>
+                    <p>
+                        Fleet management insights, product updates, and industry news.
+                    </p>
+                </div>
+
+                <form class="newsletter-form">
+
+                    <input
+                        type="email"
+                        placeholder="Enter your email"
+                    >
+
+                    <button type="submit">
+                        Subscribe
+
+                       <i class="ri-arrow-right-line"></i>
+
+                    </button>
+
+                </form>
+
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Footer Main -->
+
+    <div class="footer-main">
+
+        <div class="container">
+
+            <div class="footer-grid">
+
+                <!-- Left -->
+
+                <div class="footer-about">
+
+                    <a href="index.html" class="footer-logo">
+                         <img src="Assets/images/transportdesk-logo-dark.svg" alt="footer-logo">
+                    </a>
+
+                    <p>
+                        The intelligent transportation platform that puts fleet directors
+                        in complete control of their operations.
+                    </p>
+
+                    <div class="footer-social">
+
+                        <a href="#">
+                            <i class="ri-facebook-fill"></i>
+                        </a>
+
+                        <a href="#">
+                            <i class="ri-instagram-line"></i>
+                        </a>
+
+                        <a href="#">
+                            <i class="ri-twitter-line"></i>
+                        </a>
+
+                        <a href="#">
+                            <i class="ri-linkedin-fill"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <!-- Product -->
+
+                <div class="footer-links">
+
+                    <h3>Product</h3>
+
+                      <ul>
+        <li>
+            <a href="features.html" class="footer-link">Features</a>
+        </li>
+
+        <li>
+            <a href="modules.html" class="footer-link">Modules</a>
+        </li>
+
+        <li>
+            <a href="solutions.html" class="footer-link">Solutions</a>
+        </li>
+
+        <li>
+            <a href="reports.html" class="footer-link">Reports</a>
+        </li>
+
+        <li>
+            <a href="contact.html" class="footer-link">Contact</a>
+        </li>
+    </ul>
+
+                </div>
+
+                <!-- Resources -->
+
+                <div class="footer-links">
+
+                    <h3>Resources</h3>
+
+                    <ul>
+
+                        <li><a href="documentation.html" class="footer-link">Documentation</a></li>
+
+                        <li><a href="faq.html" class="footer-link">FAQ</a></li>
+
+                        <li><a href="privacy-policy.html" class="footer-link">Privacy Policy</a></li>
+
+                    </ul>
+
+                </div>
+
+                <!-- Support -->
+
+                <div class="footer-links">
+
+                    <h3>Support</h3>
+
+                    <ul>
+
+                        <li><a href="#" class="footer-link">Help Center</a></li>
+
+                        <li><a href="#" class="footer-link">Status</a></li>
+
+                        <li><a href="#" class="footer-link">Security</a></li>
+
+                    </ul>
+
+                </div>
+
+                <!-- Contact -->
+
+                <div class="footer-contact">
+
+                    <div class="contact-item">
+
+                        <div class="icon">
+                            <i class="ri-mail-line"></i>
+                        </div>
+
+                        <div>
+
+                            <span>Email</span>
+
+                            <a href="#">
+                                hello@transportdesk.net
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                    <div class="contact-item">
+
+                        <div class="icon">
+                            <i class="ri-phone-fill"></i>
+                        </div>
+
+                        <div>
+
+                            <span>Call</span>
+
+                            <a href="#">
+                                +1 (512) 555-0142
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                    <div class="contact-item">
+
+                        <div class="icon">
+                            <i class="ri-map-pin-line"></i>
+                        </div>
+
+                        <div>
+
+                            <span>Location</span>
+
+                            <p>India</p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Bottom -->
+
+    <div class="footer-bottom">
+
+        <div class="container">
+
+            <div class="bottom-wrapper">
+
+                <p>
+                    © 2026 All rights reserved.
+                </p>
+
+                <ul>
+
+                    <li><a href="#">Privacy Policy</a></li>
+
+                    <li><a href="#">Terms of Service</a></li>
+
+                    <li><a href="#">Cookie Policy</a></li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</footer>
+<!--footer section end-->
+
+<script src="./Assets/js/custom.js"></script>
+<script>
+(function () {
+  var $ = function (id) { return document.getElementById(id); };
+  if (!$('ch-vehicle')) return;
+  var uid = 100, editing = null, pendingDup = null;
+  var records = [
+    { id: 1, no: 'CH-2026-0412', vehicle: 'GJ 05 AB 1234', driver: 'Ramesh Kumar', date: '2026-10-05', fine: 1000, reason: 'Over speeding', slip: 'challan_0412.pdf' },
+    { id: 2, no: 'CH-2026-0398', vehicle: 'GJ 06 CD 5678', driver: 'Vikram Singh', date: '2026-09-22', fine: 500, reason: 'Signal violation', slip: 'challan_0398.jpg' },
+    { id: 3, no: 'CH-2026-0377', vehicle: 'GJ 01 EF 9012', driver: 'Dilip Patel', date: '2026-09-02', fine: 2000, reason: 'Overloading', slip: null },
+    { id: 4, no: 'CH-2026-0351', vehicle: 'GJ 05 AB 1234', driver: 'Ramesh Kumar', date: '2026-08-14', fine: 500, reason: 'Parking in a no-parking zone', slip: 'challan_0351.png' }
+  ];
+  function esc(s) { return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) { return ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'})[c]; }); }
+  function inr(n) { return '₹' + Number(n || 0).toLocaleString('en-IN'); }
+  function dmy(s) { var p = s.split('-'); return p[2] + '-' + p[1] + '-' + p[0]; }
+  function msg(t) { $('ch-msg').textContent = t; }
+  function uniq(k) { var o = {}; records.forEach(function (r) { o[r[k]] = 1; }); return Object.keys(o).length; }
+  function find(id) { return records.filter(function (r) { return r.id === id; })[0]; }
+
+  function filtered() {
+    var q = $('ch-search').value.trim().toLowerCase();
+    return records.filter(function (r) { return !q || (r.no + ' ' + r.vehicle + ' ' + r.driver).toLowerCase().indexOf(q) > -1; })
+      .sort(function (a, b) { return a.date < b.date ? 1 : -1; });
+  }
+  function btn(act, id, title, ic) { return '<button type="button" class="dl-delete-button" style="margin-right:.25rem" data-act="' + act + '" data-id="' + id + '" title="' + title + '"><i class="' + ic + '"></i></button>'; }
+  function renderList() {
+    var rows = filtered();
+    $('ch-body').innerHTML = rows.length ? rows.map(function (r) {
+      return '<tr><td><div class="dl-vehicle-name"><i class="ri-file-paper-2-fill"></i><span>' + esc(r.no) + '</span></div></td><td>' + esc(r.vehicle) + '</td><td>' + esc(r.driver) + '</td><td>' + dmy(r.date) + '</td>' +
+        '<td class="dl-text-right"><div class="dl-row-total">' + inr(r.fine) + '</div></td><td>' + esc(r.reason) + '</td>' +
+        '<td class="dl-text-center" style="white-space:nowrap">' + btn('view', r.id, 'View details', 'ri-eye-line') + btn('edit', r.id, 'Edit challan', 'ri-edit-line') + '</td></tr>';
+    }).join('') : '<tr><td colspan="7" class="dl-text-center">No challans found.</td></tr>';
+    $('ch-count').textContent = rows.length + (rows.length === 1 ? ' record' : ' records');
+    $('ch-foot-amt').textContent = inr(rows.reduce(function (a, r) { return a + r.fine; }, 0));
+    $('ch-s-total').textContent = records.length; $('ch-s-veh').textContent = uniq('vehicle'); $('ch-s-drv').textContent = uniq('driver');
+    $('ch-s-amt').textContent = inr(records.reduce(function (a, r) { return a + r.fine; }, 0));
+  }
+  function setView(v) {
+    $('ch-view-form').hidden = v !== 'form'; $('ch-view-list').hidden = v !== 'list';
+    document.querySelectorAll('[data-ch-view]').forEach(function (b) { b.classList.toggle('dl-view-tab-active', b.getAttribute('data-ch-view') === v); });
+  }
+  function resetForm() {
+    ['ch-vehicle', 'ch-driver', 'ch-no', 'ch-date', 'ch-fine', 'ch-reason', 'ch-slip'].forEach(function (i) { $(i).value = ''; });
+    editing = null; pendingDup = null; $('ch-warn').hidden = true;
+    $('ch-form-mode').textContent = 'Add Challan'; $('ch-save-label').textContent = 'Save Challan';
+  }
+  function readForm() {
+    return { vehicle: $('ch-vehicle').value, driver: $('ch-driver').value, no: $('ch-no').value.trim(), date: $('ch-date').value, fine: parseFloat($('ch-fine').value), reason: $('ch-reason').value.trim() };
+  }
+  function commit(v, file) {
+    if (editing) {
+      var r = find(editing); Object.keys(v).forEach(function (k) { r[k] = v[k]; }); if (file) r.slip = file; msg('Challan updated.');
+    } else { v.id = ++uid; v.slip = file; records.unshift(v); msg('Challan saved.'); }
+    resetForm(); renderList(); setView('list');
+  }
+  function doSave(force) {
+    var v = readForm();
+    if (!v.vehicle || !v.driver || !v.no || !v.date || isNaN(v.fine) || !v.reason) { msg('Please select vehicle and driver, and enter challan number, date, fine amount and reason.'); return; }
+    var f = $('ch-slip').files[0];
+    if (f) {
+      if (!/\.(jpe?g|png|pdf)$/i.test(f.name)) { msg('Only JPG, JPEG, PNG or PDF files are supported.'); return; }
+      if (f.size > 2 * 1048576) { msg('The challan slip must be 2 MB or smaller.'); return; }
+    }
+    var file = f ? { name: f.name, blob: f } : (editing ? null : null);
+    if (!force) {
+      var dup = records.filter(function (r) {
+        return r.id !== editing && (r.no.toLowerCase() === v.no.toLowerCase() || (r.vehicle === v.vehicle && r.date === v.date && r.fine === v.fine));
+      })[0];
+      if (dup) {
+        pendingDup = dup;
+        $('ch-warn-text').textContent = 'A similar challan (' + dup.no + ', ' + dup.vehicle + ', ' + dmy(dup.date) + ') is already saved. Review it before deciding whether to use Save Anyway.';
+        $('ch-warn').hidden = false; $('ch-warn').scrollIntoView({ behavior: 'smooth', block: 'nearest' }); return;
+      }
+    }
+    commit(v, file);
+  }
+  $('ch-save').addEventListener('click', function () { doSave(false); });
+  $('ch-save-anyway').addEventListener('click', function () { doSave(true); });
+  $('ch-warn-link').addEventListener('click', function () { if (pendingDup) { setView('list'); showDetail(pendingDup); } });
+  $('ch-fill').addEventListener('click', function () {
+    $('ch-vehicle').value = 'GJ 05 AB 1234'; $('ch-driver').value = 'Ramesh Kumar'; $('ch-no').value = 'CH-2026-0420';
+    $('ch-date').value = '2026-10-20'; $('ch-fine').value = 1500; $('ch-reason').value = 'Lane violation';
+    msg('Example loaded. Attach a slip if you like, then click Save Challan. To see the duplicate warning, change the number to CH-2026-0412.');
+  });
+  $('ch-reset').addEventListener('click', function () { resetForm(); msg('Form reset.'); });
+
+  function showDetail(r) {
+    $('ch-d-no').textContent = r.no; $('ch-detail').hidden = false;
+    var items = [['Challan Number', r.no], ['Vehicle', r.vehicle], ['Driver', r.driver], ['Challan Date', dmy(r.date)], ['Fine Amount', inr(r.fine)], ['Reason', r.reason]];
+    $('ch-d-fields').innerHTML = items.map(function (i) { return '<div class="dl-form-group"><label>' + i[0] + '</label><div class="dl-form-control" style="display:flex;align-items:center">' + esc(i[1]) + '</div></div>'; }).join('');
+    var n = r.slip ? (typeof r.slip === 'string' ? r.slip : r.slip.name) : null;
+    $('ch-d-docs').innerHTML = n
+      ? '<button type="button" class="dl-secondary-button" data-doc="view" data-id="' + r.id + '"><i class="ri-eye-line"></i><span>View Slip (' + esc(n) + ')</span></button><button type="button" class="dl-secondary-button" data-doc="dl" data-id="' + r.id + '"><i class="ri-download-2-line"></i><span>Download</span></button>'
+      : '<span class="dl-formula-note">No slip attached</span>';
+    $('ch-detail').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  }
+  $('ch-d-docs').addEventListener('click', function (e) {
+    var b = e.target.closest('[data-doc]'); if (!b) return;
+    var r = find(+b.getAttribute('data-id')), s = r.slip, name = typeof s === 'string' ? s : s.name;
+    var blob = (s && s.blob) || new Blob(['Demo placeholder for ' + name + ' (sample record, no real file stored).'], { type: 'text/plain' });
+    if (b.getAttribute('data-doc') === 'view') {
+      if (s && s.blob) window.open(URL.createObjectURL(blob), '_blank');
+      else alert('Sample record: no real file is stored for "' + name + '". Save a challan with your own slip to try the preview.');
+    } else {
+      var a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = name; document.body.appendChild(a); a.click(); a.remove();
+    }
+  });
+  $('ch-body').addEventListener('click', function (e) {
+    var b = e.target.closest('[data-act]'); if (!b) return;
+    var r = find(+b.getAttribute('data-id')), a = b.getAttribute('data-act');
+    if (a === 'view') showDetail(r);
+    else if (a === 'edit') {
+      editing = r.id; $('ch-vehicle').value = r.vehicle; $('ch-driver').value = r.driver; $('ch-no').value = r.no;
+      $('ch-date').value = r.date; $('ch-fine').value = r.fine; $('ch-reason').value = r.reason; $('ch-warn').hidden = true;
+      $('ch-form-mode').textContent = 'Edit Challan'; $('ch-save-label').textContent = 'Update Challan';
+      msg('Editing ' + r.no + '. Choose a new slip only if you want to replace the attachment.'); setView('form');
+    }
+  });
+  $('ch-search').addEventListener('input', renderList);
+  $('ch-go-add').addEventListener('click', function () { setView('form'); });
+  document.querySelectorAll('[data-ch-view]').forEach(function (b) { b.addEventListener('click', function () { setView(b.getAttribute('data-ch-view')); }); });
+  renderList();
+})();
+</script>
+</body>
+</html>

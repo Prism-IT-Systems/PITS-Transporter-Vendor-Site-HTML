@@ -1,0 +1,2394 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Vehicle Management Module | TransportDesk Fleet Solutions</title>
+    <meta name="description" content="Manage vehicle details, documents, expiry dates and records in one place. Register vehicles, upload RC, Fitness, Permit, PUC, Tax, Insurance and Claim documents, track expiry and keep renewal history with the TransportDesk Vehicle Management Module.">
+
+    <!-- Remix Icon -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" />
+
+    <!-- Swiper -->
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+
+    <!-- Lenis -->
+    <link rel="stylesheet"
+        href="https://unpkg.com/lenis@1.3.23/dist/lenis.css">
+
+    <!-- Tailwind Output CSS -->
+     <link href="./Assets/css/output.css" rel="stylesheet">
+    <!-- Vehicle module additions (status pills) -->
+    <style>
+        .vm-status{display:inline-block;padding:.2rem .65rem;border-radius:999px;font-size:.75rem;font-weight:600;white-space:nowrap}
+        .vm-valid{background:#dcfce7;color:#15803d}
+        .vm-soon{background:#fef3c7;color:#b45309}
+        .vm-expired{background:#fee2e2;color:#b91c1c}
+        .vm-history{background:#e5e7eb;color:#4b5563}
+        tr.vm-history-row{opacity:.6}
+        .vm-hidden{display:none!important}
+    </style>
+
+</head>
+<body>
+
+<!--Header Section start-->
+<header class="main-header">
+    <div class="container">
+
+        <div class="header-inner">
+
+            <a href="index.html" class="header-logo">
+                <img src="Assets/images/transportdesk-logo.svg" alt="Logo">
+            </a>
+
+            <nav class="main-navigation" id="mobileMenu">
+
+                <div class="menu-circle"></div>
+
+                <ul class="navigation-links">
+                    <li><a href="index.html" class="navigation-link">Home</a></li>
+                    <li><a href="features.html" class="navigation-link">Features</a></li>
+                    <li><a href="modules.html" class="navigation-link active">Modules</a></li>
+                    <li><a href="reports.html" class="navigation-link">Resources</a></li>
+                    <li><a href="contact.html" class="navigation-link">Contact</a></li>
+                </ul>
+
+                <div class="mobile-header-right">
+                    <a href="#" class="login-btn">Login</a>
+                    <a href="#" class="demo-btn">Book Demo</a>
+                </div>
+
+            </nav>
+
+            <div class="header-right">
+                <a href="#" class="login-btn">Login</a>
+                <a href="#" class="demo-btn">Book Demo</a>
+            </div>
+
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+        </div>
+
+    </div>
+</header>
+
+<!-- Add this after header -->
+<div class="menu-overlay" id="menuOverlay"></div>
+<!--Header section End-->
+
+<section id="overview" class="dl-overview-section">
+    <div class="dl-overview-glow"></div>
+    <div class="dl-overview-pattern"></div>
+
+    <div class="container">
+        <div class="dl-overview-grid">
+
+            <!-- Left Content -->
+            <div class="dl-overview-content">
+
+                <div class="dl-overview-badge">
+                    <span class="dl-status-dot"></span>
+                    <span>Enterprise Fleet Management</span>
+                    <span class="dl-badge-divider">|</span>
+                    <span class="dl-badge-highlight">Vehicle Management Module</span>
+                </div>
+
+                <h1 class="dl-overview-title">
+                    Smart Transportation &amp;
+                    <span class="dl-gradient-text">Vehicle Management</span>
+                    Platform
+                </h1>
+
+                <p class="dl-overview-description">
+                    Managing several company vehicles can be difficult when
+                    registration information, ownership details, certificates,
+                    and expiry dates are kept in separate files. The Vehicle
+                    Management Module brings these records together in one
+                    system. Users can register vehicles, update their
+                    information, attach important documents, and review
+                    document validity.
+                </p>
+
+                <!-- Action Buttons -->
+                <div class="dl-overview-actions">
+
+                    <button type="button" class="btn-primary">
+                        <span>Try Live Vehicle Simulator</span>
+                        <i class="ri-arrow-right-line"></i>
+                    </button>
+
+                    <button type="button" class="dl-btn-demo">
+                        <span class="dl-play-icon">
+                            <i class="ri-play-fill"></i>
+                        </span>
+                        <span>Watch Demo Video</span>
+                    </button>
+                </div>
+
+                <!-- Statistics -->
+                <div class="dl-overview-stats">
+
+                    <div class="dl-stat-item">
+                        <div class="dl-stat-number">8</div>
+                        <div class="dl-stat-label">Document Types</div>
+                    </div>
+
+                    <div class="dl-stat-item">
+                        <div class="dl-stat-number dl-stat-red">30 Days</div>
+                        <div class="dl-stat-label">Expiry Highlight</div>
+                    </div>
+
+                    <div class="dl-stat-item">
+                        <div class="dl-stat-number dl-stat-green">12</div>
+                        <div class="dl-stat-label">Core Features</div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Right Image / Fuel Dashboard -->
+            <div class="dl-overview-visual">
+
+                <div class="dl-visual-card">
+
+                    <img
+                        src="Assets/images/hero_fleet_dispatch_1792482270822.jpg"
+                        alt="Fleet vehicles managed from one system"
+                        class="dl-visual-image"
+                    >
+
+                    <div class="dl-visual-overlay"></div>
+
+                    <!-- Image Top Information -->
+                    <div class="dl-visual-topbar">
+
+                        <div class="dl-live-label">
+                            <span class="dl-live-dot"></span>
+                            <span>Vehicle Profile Overview</span>
+                        </div>
+
+                        <div class="dl-fuel-rate">
+                            GJ 05 AB 1234
+                        </div>
+
+                    </div>
+
+                    <!-- Fuel Slip Information -->
+                    <div class="dl-fuel-slip">
+
+                        <div class="dl-slip-header">
+                            <span class="dl-slip-title">
+                                Sample Vehicle Record · ABC Transport
+                            </span>
+
+                            <span class="dl-slip-status">
+                                Profile Saved
+                            </span>
+                        </div>
+
+                        <div class="dl-slip-stats">
+
+                            <div class="dl-slip-stat">
+                                <span class="dl-slip-label">Company</span>
+                                <span class="dl-slip-value">ABC Transport</span>
+                            </div>
+
+                            <div class="dl-slip-stat">
+                                <span class="dl-slip-label">Documents</span>
+                                <span class="dl-slip-value dl-slip-red">4 Types</span>
+                            </div>
+
+                            <div class="dl-slip-stat">
+                                <span class="dl-slip-label">Year</span>
+                                <span class="dl-slip-value dl-slip-green">2026</span>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<section class="dl-trusted-section">
+    <div class="dl-trusted-heading">
+        <span>
+            Track RC, Fitness, Permits, PUC, Tax, Insurance, Claim &amp; VLTD Records in One Place
+        </span>
+    </div>
+
+    <div class="dl-trusted-marquee">
+        <!-- Left fade -->
+        <div class="dl-trusted-fade dl-trusted-fade-left"></div>
+
+        <!-- Right fade -->
+        <div class="dl-trusted-fade dl-trusted-fade-right"></div>
+
+        <div class="dl-trusted-track">
+
+            <!-- First group -->
+            <div class="dl-trusted-group">
+                <div class="dl-trusted-item">
+                    <span class="dl-trusted-dot"></span>
+                    <span class="dl-trusted-name">RC Documents</span>
+                </div>
+
+                <div class="dl-trusted-item">
+                    <span class="dl-trusted-dot"></span>
+                    <span class="dl-trusted-name">Fitness Certificate</span>
+                </div>
+
+                <div class="dl-trusted-item">
+                    <span class="dl-trusted-dot"></span>
+                    <span class="dl-trusted-name">Local Permit</span>
+                </div>
+
+                <div class="dl-trusted-item">
+                    <span class="dl-trusted-dot"></span>
+                    <span class="dl-trusted-name">National Permit</span>
+                </div>
+
+                <div class="dl-trusted-item">
+                    <span class="dl-trusted-dot"></span>
+                    <span class="dl-trusted-name">PUC Certificate</span>
+                </div>
+
+                <div class="dl-trusted-item">
+                    <span class="dl-trusted-dot"></span>
+                    <span class="dl-trusted-name">Vehicle Tax Records</span>
+                </div>
+
+                <div class="dl-trusted-item">
+                    <span class="dl-trusted-dot"></span>
+                    <span class="dl-trusted-name">Insurance Policies</span>
+                </div>
+
+                <div class="dl-trusted-item">
+                    <span class="dl-trusted-dot"></span>
+                    <span class="dl-trusted-name">Claim Records</span>
+                </div>
+
+                <div class="dl-trusted-item">
+                    <span class="dl-trusted-dot"></span>
+                    <span class="dl-trusted-name">VLTD Certificate</span>
+                </div>
+
+                <div class="dl-trusted-item">
+                    <span class="dl-trusted-dot"></span>
+                    <span class="dl-trusted-name">Chassis &amp; Engine Numbers</span>
+                </div>
+
+                <div class="dl-trusted-item">
+                    <span class="dl-trusted-dot"></span>
+                    <span class="dl-trusted-name">Expiry Date Tracking</span>
+                </div>
+
+                <div class="dl-trusted-item">
+                    <span class="dl-trusted-dot"></span>
+                    <span class="dl-trusted-name">Renewal History</span>
+                </div>
+            </div>
+
+            <!-- Duplicate group for seamless looping -->
+            <div class="dl-trusted-group" aria-hidden="true">
+                <div class="dl-trusted-item">
+                    <span class="dl-trusted-dot"></span>
+                    <span class="dl-trusted-name">RC Documents</span>
+                </div>
+
+                <div class="dl-trusted-item">
+                    <span class="dl-trusted-dot"></span>
+                    <span class="dl-trusted-name">Fitness Certificate</span>
+                </div>
+
+                <div class="dl-trusted-item">
+                    <span class="dl-trusted-dot"></span>
+                    <span class="dl-trusted-name">Local Permit</span>
+                </div>
+
+                <div class="dl-trusted-item">
+                    <span class="dl-trusted-dot"></span>
+                    <span class="dl-trusted-name">National Permit</span>
+                </div>
+
+                <div class="dl-trusted-item">
+                    <span class="dl-trusted-dot"></span>
+                    <span class="dl-trusted-name">PUC Certificate</span>
+                </div>
+
+                <div class="dl-trusted-item">
+                    <span class="dl-trusted-dot"></span>
+                    <span class="dl-trusted-name">Vehicle Tax Records</span>
+                </div>
+
+                <div class="dl-trusted-item">
+                    <span class="dl-trusted-dot"></span>
+                    <span class="dl-trusted-name">Insurance Policies</span>
+                </div>
+
+                <div class="dl-trusted-item">
+                    <span class="dl-trusted-dot"></span>
+                    <span class="dl-trusted-name">Claim Records</span>
+                </div>
+
+                <div class="dl-trusted-item">
+                    <span class="dl-trusted-dot"></span>
+                    <span class="dl-trusted-name">VLTD Certificate</span>
+                </div>
+
+                <div class="dl-trusted-item">
+                    <span class="dl-trusted-dot"></span>
+                    <span class="dl-trusted-name">Chassis &amp; Engine Numbers</span>
+                </div>
+
+                <div class="dl-trusted-item">
+                    <span class="dl-trusted-dot"></span>
+                    <span class="dl-trusted-name">Expiry Date Tracking</span>
+                </div>
+
+                <div class="dl-trusted-item">
+                    <span class="dl-trusted-dot"></span>
+                    <span class="dl-trusted-name">Renewal History</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<section class="dl-demo-section">
+    <div class="dl-demo-glow"></div>
+
+    <div class="dl-container">
+
+        <!-- Section Heading -->
+        <div class="heading-wrapper">
+
+            <span class="heading-tag">
+                Interactive Video Demonstration
+            </span>
+
+            <h2 class="heading-title">
+             Watch How
+                <span>Vehicle Management</span>
+                Works
+            </h2>
+
+            <p>
+               Learn how to add a vehicle, enter its details, upload certificates,
+                manage documents, and check expiry information with our step-by-step
+                demonstration. The demo can show the full process from creating a
+                vehicle record to reviewing and renewing its documents.
+            </p>
+        </div>
+
+        <!-- Demo Content -->
+        <div class="dl-demo-grid">
+
+            <!-- Video Preview -->
+            <div class="dl-demo-video-column">
+
+                <div class="dl-video-card">
+
+                    <!-- Video Browser Header -->
+                    <div class="dl-video-toolbar">
+
+                        <div class="dl-video-toolbar-left">
+                            <span class="dl-window-dot dl-dot-red"></span>
+                            <span class="dl-window-dot dl-dot-yellow"></span>
+                            <span class="dl-window-dot dl-dot-green"></span>
+
+                            <span class="dl-video-filename">
+                                vehicle_management_module_demo.mp4
+                            </span>
+                        </div>
+
+                        <span class="dl-video-quality">
+                            Demo Video
+                        </span>
+
+                    </div>
+
+                    <!-- Video Thumbnail -->
+                    <div class="dl-video-preview">
+
+                        <img
+                            src="Assets/images/dashboard.png"
+                            alt="Vehicle Management demonstration video preview"
+                            class="dl-video-thumbnail"
+                        >
+
+                        <div class="dl-video-overlay"></div>
+
+                        <button
+                            type="button"
+                            class="dl-video-play"
+                            aria-label="Play demonstration video"
+                        >
+                            <i class="ri-play-fill"></i>
+                            <span class="dl-video-ping"></span>
+                        </button>
+
+                        <!-- Video Information -->
+                        <div class="dl-video-meta">
+
+                            <div class="dl-video-meta-left">
+                                <span class="dl-video-timestamp">
+                                    Timestamp: 00:00
+                                </span>
+
+                                <span class="dl-video-current-chapter">
+                                    Creating a New Vehicle Record
+                                </span>
+                            </div>
+
+                            <a
+                                href="#"
+                                class="dl-video-external"
+                            >
+                                <span>External Link</span>
+                                <i class="ri-external-link-line"></i>
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                    <!-- Video Footer -->
+                    <div class="dl-video-footer">
+
+                        <div class="dl-video-footer-left">
+
+                            <button
+                                type="button"
+                                class="dl-watch-button"
+                            >
+                                <i class="ri-play-circle-line"></i>
+                                <span>Watch Full Walkthrough</span>
+                            </button>
+
+                            <span class="dl-video-footer-note">
+                                Demo video will be displayed here
+                            </span>
+
+                        </div>
+
+                        <a
+                            href="#"
+                            class="dl-video-source"
+                        >
+                            <span>Direct Source</span>
+                            <i class="ri-arrow-right-up-line"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+</section>
+
+
+<section id="simulator" class="dl-simulator-section">
+    <div class="dl-container">
+
+        <!-- Section Heading -->
+        <div class="dl-simulator-header">
+             <div class="heading-wrapper heading-wrap-left">
+
+            <span class="heading-tag">
+                Practical Example
+            </span>
+
+            <h2 class="heading-title">
+              Practical Example: <span>Adding a Company Truck</span>
+            </h2>
+
+            <p>
+              Suppose ABC Transport purchases a new truck. The office user opens Add Vehicle and enters the
+                    vehicle information below. Change a validity date to see the expiry status update, or renew
+                    a document to see the earlier record preserved in history.
+            </p>
+        </div>
+
+            <div class="dl-view-switcher">
+                <button type="button" class="dl-view-tab dl-view-tab-active">
+                    <i class="ri-truck-line"></i>
+                    Vehicle Profile View
+                </button>
+
+                <button type="button" class="dl-view-tab">
+                    <i class="ri-file-list-3-line"></i>
+                    Vehicle Documents View
+                </button>
+            </div>
+        </div>
+        <!-- Summary Statistics -->
+        <div class="dl-stats-grid">
+
+            <div class="dl-stat-card">
+                <div class="dl-stat-label">
+                    <span>Total Documents</span>
+                    <i class="ri-list-check"></i>
+                </div>
+                <div class="dl-stat-value">
+                    <b id="vm-total" style="font:inherit">4</b> <span>Documents</span>
+                </div>
+                <p class="dl-stat-note" id="vm-types">RC, Insurance, Fitness, PUC</p>
+            </div>
+
+            <div class="dl-stat-card">
+                <div class="dl-stat-label">
+                    <span>Needs Attention</span>
+                    <i class="ri-alarm-warning-line dl-red-icon"></i>
+                </div>
+                <div class="dl-stat-value dl-red-text">
+                    <b id="vm-attn" style="font:inherit">1</b> <span>Documents</span>
+                </div>
+                <p class="dl-stat-note">Expired or 30 days or less remaining</p>
+            </div>
+
+            <div class="dl-stat-card">
+                <div class="dl-stat-label">
+                    <span>Valid Documents</span>
+                    <i class="ri-shield-check-line dl-green-icon"></i>
+                </div>
+                <div class="dl-stat-value dl-green-text">
+                    <b id="vm-valid" style="font:inherit">3</b> <span>Valid</span>
+                </div>
+                <p class="dl-stat-note">More than 30 days remaining</p>
+            </div>
+
+            <div class="dl-stat-card dl-stat-card-total">
+                <div class="dl-stat-label">
+                    <span>Vehicle Record</span>
+                    <span class="dl-status-dot"></span>
+                </div>
+                <div class="dl-stat-value dl-stat-total-value" id="vm-plate-card">GJ 05 AB 1234</div>
+                <p class="dl-stat-note dl-green-text">ABC Transport · Heavy Commercial Truck</p>
+            </div>
+
+        </div>
+
+        <!-- Calculator Panel -->
+        <div class="dl-calculator-panel">
+
+            <!-- Vehicle Information -->
+            <div class="dl-bill-master" data-vm="profile">
+
+                <div class="dl-bill-master-header">
+                    <div class="dl-bill-heading">
+                        <span>Step 2: Basic Vehicle Information</span>
+                        <span class="dl-heading-separator">·</span>
+                        <span class="dl-invoice-number">Vehicle #GJ 05 AB 1234</span>
+                    </div>
+
+                    <div class="dl-receipt-actions">
+                        <a href="#" class="dl-secondary-button"
+                           onclick="return false;">
+                            <i class="ri-attachment-line"></i>
+                            <span id="vm-vltd-view">View VLTD Certificate (not uploaded)</span>
+                        </a>
+
+                        <label for="vm-vltd-upload" class="dl-secondary-button dl-upload-button">
+                            <i class="ri-upload-2-line"></i>
+                            <span>Upload VLTD Certificate</span>
+                            <input id="vm-vltd-upload" type="file"
+                                   accept=".pdf,.jpg,.jpeg,.png">
+                        </label>
+                    </div>
+                </div>
+
+                <div class="dl-bill-fields">
+
+                    <div class="dl-form-group">
+                        <label for="vm-vehicle-no">Vehicle Registration Number</label>
+                        <input id="vm-vehicle-no" class="dl-form-control" type="text" value="GJ 05 AB 1234">
+                    </div>
+
+                    <div class="dl-form-group">
+                        <label for="vm-owner">Owner</label>
+                        <input id="vm-owner" class="dl-form-control" type="text" value="ABC Transport Owner">
+                    </div>
+
+                    <div class="dl-form-group">
+                        <label for="vm-company">Company / Firm</label>
+                        <input id="vm-company" class="dl-form-control" type="text" value="ABC Transport">
+                    </div>
+
+                    <div class="dl-form-group">
+                        <label for="vm-model">Model</label>
+                        <input id="vm-model" class="dl-form-control" type="text" value="Heavy Commercial Truck">
+                    </div>
+
+                    <div class="dl-form-group">
+                        <label for="vm-year">Manufacturing Year</label>
+                        <input id="vm-year" class="dl-form-control" type="number" value="2026">
+                    </div>
+
+                    <div class="dl-form-group">
+                        <label for="vm-chassis">Chassis Number</label>
+                        <input id="vm-chassis" class="dl-form-control" type="text" value="Demo-Chassis-001">
+                    </div>
+
+                    <div class="dl-form-group">
+                        <label for="vm-engine">Engine Number</label>
+                        <input id="vm-engine" class="dl-form-control" type="text" value="Demo-Engine-001">
+                    </div>
+
+                    <div class="dl-form-group">
+                        <label for="vm-status">Vehicle Status</label>
+                        <select id="vm-status" class="dl-form-control"><option>Active</option><option>Inactive</option></select>
+                    </div>
+
+                </div>
+
+                <div class="dl-bill-options">
+                    <label class="dl-checkbox-label">
+                        <input id="vm-highlight" type="checkbox" checked>
+                        <span>Highlight documents with 30 days or less remaining</span>
+                    </label>
+                    <span class="dl-formula-note">
+                        Rule: Validity date passed = Expired · 30 days or less = Expiring Soon
+                    </span>
+                </div>
+
+            </div>
+
+            <!-- Table Toolbar -->
+            <div class="dl-table-toolbar" data-vm="docs">
+
+                <div class="dl-search-box">
+                    <i class="ri-search-line"></i>
+                    <input type="search" id="vm-search"
+                           placeholder="Search vehicle number or document type...">
+                </div>
+
+                <div class="dl-toolbar-actions">
+                    <button type="button" class="dl-action-button" id="vm-add">
+                        <i class="ri-add-line dl-red-icon"></i>
+                        Add Document
+                    </button>
+
+                    <button type="button" class="dl-primary-button vm-save">
+                        <i class="ri-save-3-line"></i>
+                        Save Vehicle
+                    </button>
+                </div>
+
+            </div>
+
+            <!-- Vehicle Documents Table -->
+            <div class="dl-table-wrapper" data-vm="docs">
+                <table class="dl-vehicle-table">
+                    <thead>
+                        <tr>
+                            <th>Document</th>
+                            <th>Document No.</th>
+                            <th>Valid From</th>
+                            <th>Valid Until</th>
+                            <th>Status</th>
+                            <th>Attachment</th>
+                            <th>Notes</th>
+                            <th class="dl-text-center">Action</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="vm-docs-body">
+                        <!-- RC -->
+                        <tr>
+                            <td>
+                                <div class="dl-vehicle-name">
+                                    <i class="ri-file-text-fill"></i>
+                                    <span class="vm-type">RC</span>
+                                </div>
+                                <div class="dl-vehicle-meta">
+                                    <span class="vm-plate">GJ 05 AB 1234</span> ·
+                                    <span class="vm-comp">ABC Transport</span>
+                                </div>
+                            </td>
+                            <td>
+                                <input class="dl-table-input vm-no" type="text" value="Demo-RC-001">
+                            </td>
+                            <td>
+                                <input class="dl-table-input dl-date-input vm-from" type="date" value="2026-08-23" data-offset="-60">
+                            </td>
+                            <td>
+                                <input class="dl-table-input dl-date-input vm-until" type="date" value="2041-08-04" data-offset="5400">
+                            </td>
+                            <td><span class="vm-status vm-valid">Valid</span></td>
+                            <td>
+                                <label class="dl-secondary-button dl-upload-button">
+                                    <i class="ri-upload-2-line"></i>
+                                    <span class="vm-file-name">Attach</span>
+                                    <input type="file" accept=".pdf,.jpg,.jpeg,.png">
+                                </label>
+                            </td>
+                            <td>
+                                <input class="dl-table-input dl-notes-input vm-notes" type="text" placeholder="Add notes" value="">
+                            </td>
+                            <td class="dl-text-center">
+                                <button type="button" class="dl-secondary-button vm-renew" title="Renew document">
+                                    <i class="ri-refresh-line"></i>
+                                    <span>Renew</span>
+                                </button>
+                            </td>
+                        </tr>
+                        <!-- Insurance -->
+                        <tr>
+                            <td>
+                                <div class="dl-vehicle-name">
+                                    <i class="ri-file-text-fill"></i>
+                                    <span class="vm-type">Insurance</span>
+                                </div>
+                                <div class="dl-vehicle-meta">
+                                    <span class="vm-plate">GJ 05 AB 1234</span> ·
+                                    <span class="vm-comp">ABC Transport</span>
+                                </div>
+                            </td>
+                            <td>
+                                <input class="dl-table-input vm-no" type="text" value="Demo-INS-001">
+                            </td>
+                            <td>
+                                <input class="dl-table-input dl-date-input vm-from" type="date" value="2025-11-09" data-offset="-347">
+                            </td>
+                            <td>
+                                <input class="dl-table-input dl-date-input vm-until" type="date" value="2026-11-09" data-offset="18">
+                            </td>
+                            <td><span class="vm-status vm-valid">Valid</span></td>
+                            <td>
+                                <label class="dl-secondary-button dl-upload-button">
+                                    <i class="ri-upload-2-line"></i>
+                                    <span class="vm-file-name">Attach</span>
+                                    <input type="file" accept=".pdf,.jpg,.jpeg,.png">
+                                </label>
+                            </td>
+                            <td>
+                                <input class="dl-table-input dl-notes-input vm-notes" type="text" placeholder="Add notes" value="">
+                            </td>
+                            <td class="dl-text-center">
+                                <button type="button" class="dl-secondary-button vm-renew" title="Renew document">
+                                    <i class="ri-refresh-line"></i>
+                                    <span>Renew</span>
+                                </button>
+                            </td>
+                        </tr>
+                        <!-- Fitness -->
+                        <tr>
+                            <td>
+                                <div class="dl-vehicle-name">
+                                    <i class="ri-file-text-fill"></i>
+                                    <span class="vm-type">Fitness</span>
+                                </div>
+                                <div class="dl-vehicle-meta">
+                                    <span class="vm-plate">GJ 05 AB 1234</span> ·
+                                    <span class="vm-comp">ABC Transport</span>
+                                </div>
+                            </td>
+                            <td>
+                                <input class="dl-table-input vm-no" type="text" value="Demo-FIT-001">
+                            </td>
+                            <td>
+                                <input class="dl-table-input dl-date-input vm-from" type="date" value="2026-08-23" data-offset="-60">
+                            </td>
+                            <td>
+                                <input class="dl-table-input dl-date-input vm-until" type="date" value="2028-08-22" data-offset="670">
+                            </td>
+                            <td><span class="vm-status vm-valid">Valid</span></td>
+                            <td>
+                                <label class="dl-secondary-button dl-upload-button">
+                                    <i class="ri-upload-2-line"></i>
+                                    <span class="vm-file-name">Attach</span>
+                                    <input type="file" accept=".pdf,.jpg,.jpeg,.png">
+                                </label>
+                            </td>
+                            <td>
+                                <input class="dl-table-input dl-notes-input vm-notes" type="text" placeholder="Add notes" value="">
+                            </td>
+                            <td class="dl-text-center">
+                                <button type="button" class="dl-secondary-button vm-renew" title="Renew document">
+                                    <i class="ri-refresh-line"></i>
+                                    <span>Renew</span>
+                                </button>
+                            </td>
+                        </tr>
+                        <!-- PUC -->
+                        <tr>
+                            <td>
+                                <div class="dl-vehicle-name">
+                                    <i class="ri-file-text-fill"></i>
+                                    <span class="vm-type">PUC</span>
+                                </div>
+                                <div class="dl-vehicle-meta">
+                                    <span class="vm-plate">GJ 05 AB 1234</span> ·
+                                    <span class="vm-comp">ABC Transport</span>
+                                </div>
+                            </td>
+                            <td>
+                                <input class="dl-table-input vm-no" type="text" value="Demo-PUC-001">
+                            </td>
+                            <td>
+                                <input class="dl-table-input dl-date-input vm-from" type="date" value="2026-05-10" data-offset="-165">
+                            </td>
+                            <td>
+                                <input class="dl-table-input dl-date-input vm-until" type="date" value="2027-05-10" data-offset="200">
+                            </td>
+                            <td><span class="vm-status vm-valid">Valid</span></td>
+                            <td>
+                                <label class="dl-secondary-button dl-upload-button">
+                                    <i class="ri-upload-2-line"></i>
+                                    <span class="vm-file-name">Attach</span>
+                                    <input type="file" accept=".pdf,.jpg,.jpeg,.png">
+                                </label>
+                            </td>
+                            <td>
+                                <input class="dl-table-input dl-notes-input vm-notes" type="text" placeholder="Add notes" value="">
+                            </td>
+                            <td class="dl-text-center">
+                                <button type="button" class="dl-secondary-button vm-renew" title="Renew document">
+                                    <i class="ri-refresh-line"></i>
+                                    <span>Renew</span>
+                                </button>
+                            </td>
+                        </tr>
+                    </tbody>
+
+                    <tfoot>
+                        <tr>
+                            <td>
+                                <span class="dl-footer-label" id="vm-f-label">
+                                    Vehicle Documents (4 Types)
+                                </span>
+                            </td>
+                            <td class="dl-footer-period">Expiry window: 30 days</td>
+                            <td class="dl-text-right dl-footer-liters" id="vm-f-valid">3 Valid</td>
+                            <td class="dl-text-right dl-footer-average" id="vm-f-soon">1 Expiring Soon</td>
+                            <td class="dl-text-right dl-footer-total" id="vm-f-exp">0 Expired</td>
+                            <td colspan="3" class="dl-text-right">
+                                <button type="button" class="dl-primary-button vm-save">
+                                    Save Vehicle
+                                </button>
+                            </td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+
+            <!-- Information Footer -->
+            <div class="dl-calculator-footer">
+
+                <div class="dl-documentation-note">
+                    <i class="ri-information-line"></i>
+                    <span>
+                        <strong>Documentation Rule:</strong>
+                        A renewal creates a new document record while preserving
+                        the earlier one in history.
+                    </span>
+                </div>
+
+                <div class="dl-supported-formats">
+                    VLTD Certificate Formats: PDF or image files
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+
+
+<!--dl feature section start-->
+<section id="features" class="dl-features-section">
+
+    <div class="container">
+
+        <!-- Section Heading -->
+     <div class="heading-wrapper">
+
+            <span class="heading-tag">
+                Complete solution
+            </span>
+
+            <h2 class="heading-title">
+              Vehicle Management <span>Features</span>
+            </h2>
+
+            <p>
+               Manage Vehicle Details, Documents, Expiry Dates &amp; Records in One Place.
+            </p>
+           <!-- Feature Filters -->
+            <div class="dl-features-filters">
+
+                <button type="button"
+                    class="dl-filter-btn is-active"
+                    data-filter="all">
+                    All Features (12)
+                </button>
+
+                <button type="button"
+                    class="dl-filter-btn"
+                    data-filter="profile">
+                    Vehicle Profile &amp; Specs
+                </button>
+
+                <button type="button"
+                    class="dl-filter-btn"
+                    data-filter="documents">
+                    Documents &amp; Certificates
+                </button>
+
+                <button type="button"
+                    class="dl-filter-btn"
+                    data-filter="tracking">
+                    Expiry, Search &amp; Integration
+                </button>
+
+            </div>
+        </div>
+
+        <!-- Feature Cards -->
+        <div class="dl-features-grid">
+
+            <!-- Feature 4.1 -->
+            <article class="dl-feature-card" data-category="profile">
+                <div class="dl-feature-card-content">
+                    <div class="dl-feature-icon">
+                        <i class="ri-truck-line"></i>
+                    </div>
+
+                    <div class="dl-feature-card-heading">
+                        <h3>Vehicle Registration and Profile</h3>
+                    </div>
+
+                    <p>
+                        Create a separate record for each vehicle with its vehicle number, owner, company, model, year, chassis number, and engine number. Important identifiers such as the vehicle number, chassis number, and engine number are checked for duplicates when new records are created.
+                    </p>
+                </div>
+            </article>
+
+            <!-- Feature 4.2 -->
+            <article class="dl-feature-card" data-category="profile">
+                <div class="dl-feature-card-content">
+                    <div class="dl-feature-icon">
+                        <i class="ri-building-line"></i>
+                    </div>
+
+                    <div class="dl-feature-card-heading">
+                        <h3>Owner and Company Information</h3>
+                    </div>
+
+                    <p>
+                        Connect a vehicle with the company or firm that manages it, and maintain the owner name. This helps businesses see which vehicle belongs to which company record.
+                    </p>
+                </div>
+            </article>
+
+            <!-- Feature 4.3 -->
+            <article class="dl-feature-card" data-category="profile">
+                <div class="dl-feature-card-content">
+                    <div class="dl-feature-icon">
+                        <i class="ri-ruler-2-line"></i>
+                    </div>
+
+                    <div class="dl-feature-card-heading">
+                        <h3>Vehicle Specifications</h3>
+                    </div>
+
+                    <p>
+                        Record information such as the vehicle model, manufacturing year, gross vehicle weight (GVW), and unladen weight. This keeps basic identification and weight details available in the same vehicle profile.
+                    </p>
+                </div>
+            </article>
+
+            <!-- Feature 4.4 -->
+            <article class="dl-feature-card" data-category="documents">
+                <div class="dl-feature-card-content">
+                    <div class="dl-feature-icon">
+                        <i class="ri-folder-3-line"></i>
+                    </div>
+
+                    <div class="dl-feature-card-heading">
+                        <h3>Vehicle Documents Management</h3>
+                    </div>
+
+                    <p>
+                        Maintain documents for RC, Fitness, Local Permit, National Permit, PUC, Tax, Insurance, and Claim. Document records can hold the document number, validity period, notes, and uploaded attachment. Some documents also support related expense or insurer information.
+                    </p>
+                </div>
+            </article>
+
+            <!-- Feature 4.5 -->
+            <article class="dl-feature-card" data-category="documents tracking">
+                <div class="dl-feature-card-content">
+                    <div class="dl-feature-icon">
+                        <i class="ri-calendar-check-line"></i>
+                    </div>
+
+                    <div class="dl-feature-card-heading">
+                        <h3>Document Expiry Tracking</h3>
+                    </div>
+
+                    <p>
+                        Review the expiry date of each vehicle document. The documents listing identifies expired records and highlights documents that are nearing expiry, helping users plan renewals before documents become outdated.
+                    </p>
+                </div>
+            </article>
+
+            <!-- Feature 4.6 -->
+            <article class="dl-feature-card" data-category="documents tracking">
+                <div class="dl-feature-card-content">
+                    <div class="dl-feature-icon">
+                        <i class="ri-refresh-line"></i>
+                    </div>
+
+                    <div class="dl-feature-card-heading">
+                        <h3>Document Renewal and History</h3>
+                    </div>
+
+                    <p>
+                        Renew an existing vehicle document by entering the new validity dates and, if needed, a new attachment. The previous record remains available in history instead of being overwritten, so users can review older document versions.
+                    </p>
+                </div>
+            </article>
+
+            <!-- Feature 4.7 -->
+            <article class="dl-feature-card" data-category="documents">
+                <div class="dl-feature-card-content">
+                    <div class="dl-feature-icon">
+                        <i class="ri-shield-check-line"></i>
+                    </div>
+
+                    <div class="dl-feature-card-heading">
+                        <h3>Insurance Details</h3>
+                    </div>
+
+                    <p>
+                        Insurance-related records can include insurer/vendor information and policy-related financial details. Insurance data is maintained with the corresponding vehicle document, making it easier to review the policy record when needed.
+                    </p>
+                </div>
+            </article>
+
+            <!-- Feature 4.8 -->
+            <article class="dl-feature-card" data-category="documents">
+                <div class="dl-feature-card-content">
+                    <div class="dl-feature-icon">
+                        <i class="ri-radar-line"></i>
+                    </div>
+
+                    <div class="dl-feature-card-heading">
+                        <h3>VLTD Certificate Management</h3>
+                    </div>
+
+                    <p>
+                        Record the Vehicle Location Tracking Device (VLTD) certificate number and upload the supporting certificate in PDF or image form. Where a certificate file is saved, the module provides ways to view or download it.
+                    </p>
+                </div>
+            </article>
+
+            <!-- Feature 4.9 -->
+            <article class="dl-feature-card" data-category="tracking">
+                <div class="dl-feature-card-content">
+                    <div class="dl-feature-icon">
+                        <i class="ri-search-line"></i>
+                    </div>
+
+                    <div class="dl-feature-card-heading">
+                        <h3>Search and Vehicle List</h3>
+                    </div>
+
+                    <p>
+                        Search the Vehicles list by vehicle number to find the required record. The vehicle listing shows records in pages, making it easier to navigate when the business has many vehicles.
+                    </p>
+                </div>
+            </article>
+
+            <!-- Feature 4.10 -->
+            <article class="dl-feature-card" data-category="profile tracking">
+                <div class="dl-feature-card-content">
+                    <div class="dl-feature-icon">
+                        <i class="ri-edit-line"></i>
+                    </div>
+
+                    <div class="dl-feature-card-heading">
+                        <h3>View, Edit and Status Management</h3>
+                    </div>
+
+                    <p>
+                        Open a vehicle record to review saved information. Users with the required permissions can edit details and manage whether the vehicle is active. Deletion is also permission-controlled and should be used carefully because vehicle records may be connected to other business information.
+                    </p>
+                </div>
+            </article>
+
+            <!-- Feature 4.11 -->
+            <article class="dl-feature-card" data-category="documents tracking">
+                <div class="dl-feature-card-content">
+                    <div class="dl-feature-icon">
+                        <i class="ri-filter-3-line"></i>
+                    </div>
+
+                    <div class="dl-feature-card-heading">
+                        <h3>Vehicle Documents Search and Filters</h3>
+                    </div>
+
+                    <p>
+                        Use the documents page to find records by vehicle number and document type. Documents are grouped by vehicle so it is easier to review multiple document types for the same vehicle.
+                    </p>
+                </div>
+            </article>
+
+            <!-- Feature 4.12 -->
+            <article class="dl-feature-card" data-category="tracking">
+                <div class="dl-feature-card-content">
+                    <div class="dl-feature-icon">
+                        <i class="ri-gas-station-line"></i>
+                    </div>
+
+                    <div class="dl-feature-card-heading">
+                        <h3>Connection with Diesel Records</h3>
+                    </div>
+
+                    <p>
+                        Vehicles can be linked to Diesel Logs entries. Once a vehicle exists in the system, it can be selected when recording diesel purchases, helping maintain a consistent vehicle reference across modules. The Vehicle Module itself does not calculate diesel expenses; those are recorded in Diesel Logs.
+                    </p>
+                </div>
+            </article>
+
+
+        </div>
+    </div>
+</section>
+<!--dl feature section end-->
+
+
+<!--workflow section start-->
+<section class="dl-workflow-section">
+    <div class="container">
+
+        <!-- Section Heading -->
+
+        <div class="heading-wrapper heading-wrap-left">
+
+            <span class="heading-tag">
+                Step-by-Step Workflow
+            </span>
+
+            <h2 class="heading-title">
+              How Does the <span>Vehicle Module</span> Work?
+            </h2>
+
+            <p>
+               Follow six simple steps to add a vehicle, attach its documents, and keep expiry dates and renewals under control.
+            </p>
+            
+        </div>
+
+        <!-- Workflow Grid -->
+        <div class="dl-workflow-grid">
+
+            <!-- Workflow Step 01 -->
+            <article class="dl-workflow-card">
+                <div class="dl-workflow-card-content">
+
+                    <div class="dl-workflow-card-top">
+                        <span class="dl-workflow-number">01</span>
+
+                        <div class="dl-workflow-icon">
+                            <i class="ri-list-check"></i>
+                        </div>
+                    </div>
+
+                    <h3 class="dl-workflow-card-title">
+                        Open the Vehicles Page
+                    </h3>
+
+                    <p class="dl-workflow-card-description">
+                        Open Vehicles to view the existing vehicle list.
+                    </p>
+
+                    <ul class="dl-workflow-checklist">
+                        <li>
+                            <i class="ri-check-line"></i>
+                            <span>Look for a vehicle using its vehicle number</span>
+                        </li>
+                        <li>
+                            <i class="ri-check-line"></i>
+                            <span>Open a vehicle to view its details</span>
+                        </li>
+                        <li>
+                            <i class="ri-check-line"></i>
+                            <span>Choose Add Vehicle to register a new vehicle</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="dl-workflow-card-footer">
+                    <span>Workflow Phase 01</span>
+                </div>
+            </article>
+
+            <!-- Workflow Step 02 -->
+            <article class="dl-workflow-card">
+                <div class="dl-workflow-card-content">
+
+                    <div class="dl-workflow-card-top">
+                        <span class="dl-workflow-number">02</span>
+
+                        <div class="dl-workflow-icon">
+                            <i class="ri-file-edit-line"></i>
+                        </div>
+                    </div>
+
+                    <h3 class="dl-workflow-card-title">
+                        Add Basic Vehicle Information
+                    </h3>
+
+                    <p class="dl-workflow-card-description">
+                        Enter the details that help identify the vehicle correctly.
+                    </p>
+
+                    <ul class="dl-workflow-checklist">
+                        <li>
+                            <i class="ri-check-line"></i>
+                            <span>Vehicle registration number, owner, and company (firm)</span>
+                        </li>
+                        <li>
+                            <i class="ri-check-line"></i>
+                            <span>Model, manufacturing year, chassis number, and engine number</span>
+                        </li>
+                        <li>
+                            <i class="ri-check-line"></i>
+                            <span>Optionally record gross vehicle weight (GVW) and unladen weight</span>
+                        </li>
+                        <li>
+                            <i class="ri-check-line"></i>
+                            <span>Optionally add internal notes</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="dl-workflow-card-footer">
+                    <span>Workflow Phase 02</span>
+                </div>
+            </article>
+
+            <!-- Workflow Step 03 -->
+            <article class="dl-workflow-card">
+                <div class="dl-workflow-card-content">
+
+                    <div class="dl-workflow-card-top">
+                        <span class="dl-workflow-number">03</span>
+
+                        <div class="dl-workflow-icon">
+                            <i class="ri-folder-upload-line"></i>
+                        </div>
+                    </div>
+
+                    <h3 class="dl-workflow-card-title">
+                        Add Vehicle Certificates and Documents
+                    </h3>
+
+                    <p class="dl-workflow-card-description">
+                        Enter documents such as RC, Fitness, Local Permit, National Permit, PUC, Tax, Insurance, and Claim.
+                    </p>
+
+                    <ul class="dl-workflow-checklist">
+                        <li>
+                            <i class="ri-check-line"></i>
+                            <span>Record each document number and its validity dates</span>
+                        </li>
+                        <li>
+                            <i class="ri-check-line"></i>
+                            <span>Upload a supporting file when available</span>
+                        </li>
+                        <li>
+                            <i class="ri-check-line"></i>
+                            <span>RC information can also include its recorded address</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="dl-workflow-card-footer">
+                    <span>Workflow Phase 03</span>
+                </div>
+            </article>
+
+            <!-- Workflow Step 04 -->
+            <article class="dl-workflow-card">
+                <div class="dl-workflow-card-content">
+
+                    <div class="dl-workflow-card-top">
+                        <span class="dl-workflow-number">04</span>
+
+                        <div class="dl-workflow-icon">
+                            <i class="ri-save-3-line"></i>
+                        </div>
+                    </div>
+
+                    <h3 class="dl-workflow-card-title">
+                        Save the Vehicle
+                    </h3>
+
+                    <p class="dl-workflow-card-description">
+                        Review the entered information and save the record.
+                    </p>
+
+                    <ul class="dl-workflow-checklist">
+                        <li>
+                            <i class="ri-check-line"></i>
+                            <span>The system stores the vehicle profile</span>
+                        </li>
+                        <li>
+                            <i class="ri-check-line"></i>
+                            <span>Associated document information is saved with it</span>
+                        </li>
+                        <li>
+                            <i class="ri-check-line"></i>
+                            <span>Users can access the record later</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="dl-workflow-card-footer">
+                    <span>Workflow Phase 04</span>
+                </div>
+            </article>
+
+            <!-- Workflow Step 05 -->
+            <article class="dl-workflow-card">
+                <div class="dl-workflow-card-content">
+
+                    <div class="dl-workflow-card-top">
+                        <span class="dl-workflow-number">05</span>
+
+                        <div class="dl-workflow-icon">
+                            <i class="ri-edit-box-line"></i>
+                        </div>
+                    </div>
+
+                    <h3 class="dl-workflow-card-title">
+                        View, Update and Maintain Records
+                    </h3>
+
+                    <p class="dl-workflow-card-description">
+                        Find the vehicle from the list, open its information, and make changes when required.
+                    </p>
+
+                    <ul class="dl-workflow-checklist">
+                        <li>
+                            <i class="ri-check-line"></i>
+                            <span>Authorized users can update vehicle details</span>
+                        </li>
+                        <li>
+                            <i class="ri-check-line"></i>
+                            <span>Change the vehicle's active status</span>
+                        </li>
+                        <li>
+                            <i class="ri-check-line"></i>
+                            <span>Manage the vehicle's documents</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="dl-workflow-card-footer">
+                    <span>Workflow Phase 05</span>
+                </div>
+            </article>
+
+            <!-- Workflow Step 06 -->
+            <article class="dl-workflow-card">
+                <div class="dl-workflow-card-content">
+
+                    <div class="dl-workflow-card-top">
+                        <span class="dl-workflow-number">06</span>
+
+                        <div class="dl-workflow-icon">
+                            <i class="ri-calendar-check-line"></i>
+                        </div>
+                    </div>
+
+                    <h3 class="dl-workflow-card-title">
+                        Check Document Expiry and Renewals
+                    </h3>
+
+                    <p class="dl-workflow-card-description">
+                        Use the Vehicle Documents section to check document validity.
+                    </p>
+
+                    <ul class="dl-workflow-checklist">
+                        <li>
+                            <i class="ri-check-line"></i>
+                            <span>Expired documents are identified</span>
+                        </li>
+                        <li>
+                            <i class="ri-check-line"></i>
+                            <span>Documents with 30 days or less remaining can be highlighted</span>
+                        </li>
+                        <li>
+                            <i class="ri-check-line"></i>
+                            <span>A renewal creates a new document record</span>
+                        </li>
+                        <li>
+                            <i class="ri-check-line"></i>
+                            <span>The earlier record is preserved in history</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="dl-workflow-card-footer">
+                    <span>Workflow Phase 06</span>
+                </div>
+            </article>
+
+
+        </div>
+        </div>
+        <div class="et-container">
+        <div class="workflow-bottom">
+
+            <!-- Security Card -->
+            <div class="security-card">
+                <img src="./Assets/images/workflow-img.png" alt="workflow-img">
+
+                <div class="security-content">
+                    <h3>Permission-Controlled Access</h3>
+
+                    <p>
+                        Users with the required permissions can edit vehicle details and manage whether a vehicle is active. Deletion is also permission-controlled and should be used carefully because vehicle records may be connected to other business information.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Right Side -->
+            <div class="workflow-info">
+
+                <div class="stats-card">
+                    <h3>30 Days</h3>
+
+                    <h4>Expiry Highlight Window</h4>
+
+                    <p>
+                        Documents approaching expiry can be highlighted when they have 30 days or less remaining, helping users plan renewals before documents become outdated.
+                    </p>
+                </div>
+
+                <div class="workflow-content">
+                    <p>
+                        Explore a powerful collection of intelligent modules built to streamline your daily transport operations. Manage vehicles, drivers, trips, and business performance seamlessly through one unified platform.
+                    </p>
+
+                    <a href="#" class="workflow-btn">
+                        Explore All Modules <i class="ri-arrow-right-line"></i>
+                    </a>
+                </div>
+
+                <div class="info-card">
+                    <div class="info-icon">
+                       <i class="ri-bar-chart-2-fill"></i>
+                    </div>
+
+                    <span>
+                        Find vehicles quickly by vehicle number
+                    </span>
+                </div>
+
+                <div class="info-card">
+                    <div class="info-icon">
+                       <i class="ri-lock-unlock-line"></i>
+                    </div>
+
+                    <span>
+                        Keep older document versions in renewal history
+                    </span>
+                </div>
+
+            </div>
+
+        </div>
+    
+    </div>
+</section>
+<!--workflow section end-->
+
+
+<!--results section start-->
+<section id="benefits" class="results-section">
+
+    <div class="container">
+
+        <!-- Heading -->
+       <div class="heading-wrapper">
+
+            <span class="heading-tag">
+                Proven Advantages
+            </span>
+
+            <h2 class="heading-title heading-light">
+                Benefits of <span>Vehicle Management</span>
+            </h2>
+
+            <p>
+                Keep vehicle records together, reduce paperwork, and stay aware of document expiry dates and renewals in one system.
+            </p>
+
+        </div>
+
+        <!-- Cards -->
+
+        <div class="results-grid">
+
+            <div class="result-card">
+
+                <div class="result-icon">
+                    <i class="ri-folder-shield-2-line"></i>
+                </div>
+
+                <h3>
+                    Keep Vehicle Information Together
+                </h3>
+
+                <p>
+                    Store identification, ownership, specification, and certificate information in one record.
+                </p>
+
+            </div>
+
+            <div class="result-card">
+
+                <div class="result-icon">
+                    <i class="ri-draft-line"></i>
+                </div>
+
+                <h3>
+                    Reduce Paperwork
+                </h3>
+
+                <p>
+                    Access uploaded vehicle documents without searching through physical files.
+                </p>
+
+            </div>
+
+            <div class="result-card">
+
+                <div class="result-icon">
+                    <i class="ri-calendar-check-line"></i>
+                </div>
+
+                <h3>
+                    Stay Aware of Expiry Dates
+                </h3>
+
+                <p>
+                    See expired and upcoming document expiry information more easily.
+                </p>
+
+            </div>
+
+            <div class="result-card">
+
+                <div class="result-icon">
+                    <i class="ri-history-line"></i>
+                </div>
+
+                <h3>
+                    Maintain Renewal History
+                </h3>
+
+                <p>
+                    Keep older document records when a new renewal is entered.
+                </p>
+
+            </div>
+
+            <div class="result-card">
+
+                <div class="result-icon">
+                    <i class="ri-search-eye-line"></i>
+                </div>
+
+                <h3>
+                    Find Vehicles Quickly
+                </h3>
+
+                <p>
+                    Use vehicle number search to locate a particular record.
+                </p>
+
+            </div>
+
+            <div class="result-card">
+
+                <div class="result-icon">
+                    <i class="ri-links-line"></i>
+                </div>
+
+                <h3>
+                    Support Connected Modules
+                </h3>
+
+                <p>
+                    Use the same vehicle record when entering related diesel purchases.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+</section>
+<!--results section end-->
+
+
+
+<!--transport-section start-->
+<section class="transport-section">
+    <div class="container">
+
+        <!-- Left Content -->
+    <div class="transport-container">   
+        <div class="heading-wrapper heading-wrap-left">
+                <span class="heading-tag">
+                   Transportation Management
+                </span>
+
+                <h2 class="heading-title">
+                   Manage Your Transportation <span> Operations Efficiently </span>
+                </h2>
+
+                <p>
+                    Track vehicles, manage drivers, monitor fuel usage, handle maintenance schedules, and streamline daily transportation operations from one centralized cloud platform.
+                </p>
+
+            </div>
+        <!-- Right Side -->
+        <div class="transport-image-wrapper">
+            <img src="./Assets/images/tms-img.png" alt="Transportation Dashboard" class="transport-image">
+            <!-- Decorative Shape -->
+            <div class="transport-shape"></div>
+            <!-- Floating Card -->
+            <div class="transport-card">
+                <ul class="transport-list">
+                    <li>
+                        <i class="ri-checkbox-circle-line"></i>
+                        <span>Real-time fleet and vehicle monitoring</span>
+                    </li>
+
+                    <li>
+                        <i class="ri-checkbox-circle-line"></i>
+                        <span>Driver management and attendance tracking</span>
+                    </li>
+
+                    <li>
+                        <i class="ri-checkbox-circle-line"></i>
+                        <span>Fuel logs and expense management</span>
+                    </li>
+
+                    <li>
+                        <i class="ri-checkbox-circle-line"></i>
+                        <span>Maintenance alerts and service scheduling</span>
+                    </li>
+
+                    <li>
+                        <i class="ri-checkbox-circle-line"></i>
+                        <span>Vehicle documents and compliance tracking</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+     </div>
+    </div>
+</section>
+<!--transport section end-->
+
+
+
+<!--dl-faq section end-->
+<section id="faq" class="dl-faq-section">
+    <div class="container">
+        <div class="heading-wrapper">
+
+            <span class="heading-tag">
+                Got Questions?
+            </span>
+
+            <h2 class="heading-title">
+              Frequently Asked <span>Questions</span>
+            </h2>
+
+            <p>
+              Everything you need to know about registering vehicles, managing documents,
+                and tracking expiry in your fleet operations.
+            </p>
+           <!-- Feature Filters -->
+             <div class="dl-faq-filters">
+                <button class="dl-faq-filter active" type="button">All</button>
+                <button class="dl-faq-filter" type="button">Registration</button>
+                <button class="dl-faq-filter" type="button">Requirements</button>
+                <button class="dl-faq-filter" type="button">Documents</button>
+                <button class="dl-faq-filter" type="button">Expiry</button>
+                <button class="dl-faq-filter" type="button">Renewals</button>
+                <button class="dl-faq-filter" type="button">Editing</button>
+                <button class="dl-faq-filter" type="button">Diesel Logs</button>
+            </div>
+        </div>
+
+        <!-- FAQ List -->
+        <div class="dl-faq-list">
+
+            <!-- FAQ 1 -->
+            <div class="dl-faq-item active" data-category="registration">
+                <button
+                    class="dl-faq-question"
+                    type="button"
+                    aria-expanded="true"
+                    aria-controls="dl-faq-answer-1"
+                >
+                    <span class="dl-faq-question-content">
+                        <span class="dl-faq-number">Q1</span>
+                        <span class="dl-faq-question-text">
+                            Can I register several vehicles?
+                        </span>
+                    </span>
+
+                    <span class="dl-faq-arrow">
+                        <i class="ri-arrow-down-s-line"></i>
+                    </span>
+                </button>
+
+                <div class="dl-faq-answer" id="dl-faq-answer-1">
+                    <div class="dl-faq-answer-content">
+                        <p>
+                            Yes. Add a separate vehicle profile for every vehicle you manage.
+                        </p>
+
+                        <div class="dl-faq-topic">
+                            <span>Topic: Registration</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ 2 -->
+            <div class="dl-faq-item" data-category="requirements">
+                <button
+                    class="dl-faq-question"
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="dl-faq-answer-2"
+                >
+                    <span class="dl-faq-question-content">
+                        <span class="dl-faq-number">Q2</span>
+                        <span class="dl-faq-question-text">
+                            What information is required for a new vehicle?
+                        </span>
+                    </span>
+
+                    <span class="dl-faq-arrow">
+                        <i class="ri-arrow-down-s-line"></i>
+                    </span>
+                </button>
+
+                <div class="dl-faq-answer" id="dl-faq-answer-2">
+                    <div class="dl-faq-answer-content">
+                        <p>
+                            Vehicle number, owner, company, model, year, chassis number, and engine number are required in the new-vehicle workflow.
+                        </p>
+
+                        <div class="dl-faq-topic">
+                            <span>Topic: Requirements</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ 3 -->
+            <div class="dl-faq-item" data-category="documents">
+                <button
+                    class="dl-faq-question"
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="dl-faq-answer-3"
+                >
+                    <span class="dl-faq-question-content">
+                        <span class="dl-faq-number">Q3</span>
+                        <span class="dl-faq-question-text">
+                            Can I upload documents for each vehicle?
+                        </span>
+                    </span>
+
+                    <span class="dl-faq-arrow">
+                        <i class="ri-arrow-down-s-line"></i>
+                    </span>
+                </button>
+
+                <div class="dl-faq-answer" id="dl-faq-answer-3">
+                    <div class="dl-faq-answer-content">
+                        <p>
+                            Yes. The module supports vehicle documents and supporting attachments for relevant document types.
+                        </p>
+
+                        <div class="dl-faq-topic">
+                            <span>Topic: Documents</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ 4 -->
+            <div class="dl-faq-item" data-category="expiry">
+                <button
+                    class="dl-faq-question"
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="dl-faq-answer-4"
+                >
+                    <span class="dl-faq-question-content">
+                        <span class="dl-faq-number">Q4</span>
+                        <span class="dl-faq-question-text">
+                            Can I check when documents expire?
+                        </span>
+                    </span>
+
+                    <span class="dl-faq-arrow">
+                        <i class="ri-arrow-down-s-line"></i>
+                    </span>
+                </button>
+
+                <div class="dl-faq-answer" id="dl-faq-answer-4">
+                    <div class="dl-faq-answer-content">
+                        <p>
+                            Yes. The documents section identifies expired documents and documents approaching their expiry dates.
+                        </p>
+
+                        <div class="dl-faq-topic">
+                            <span>Topic: Expiry</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ 5 -->
+            <div class="dl-faq-item" data-category="renewals">
+                <button
+                    class="dl-faq-question"
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="dl-faq-answer-5"
+                >
+                    <span class="dl-faq-question-content">
+                        <span class="dl-faq-number">Q5</span>
+                        <span class="dl-faq-question-text">
+                            Will a document renewal remove the old record?
+                        </span>
+                    </span>
+
+                    <span class="dl-faq-arrow">
+                        <i class="ri-arrow-down-s-line"></i>
+                    </span>
+                </button>
+
+                <div class="dl-faq-answer" id="dl-faq-answer-5">
+                    <div class="dl-faq-answer-content">
+                        <p>
+                            No. The renewal flow creates another document record and keeps the earlier version as history.
+                        </p>
+
+                        <div class="dl-faq-topic">
+                            <span>Topic: Renewals</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ 6 -->
+            <div class="dl-faq-item" data-category="editing">
+                <button
+                    class="dl-faq-question"
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="dl-faq-answer-6"
+                >
+                    <span class="dl-faq-question-content">
+                        <span class="dl-faq-number">Q6</span>
+                        <span class="dl-faq-question-text">
+                            Can I edit a vehicle after it is saved?
+                        </span>
+                    </span>
+
+                    <span class="dl-faq-arrow">
+                        <i class="ri-arrow-down-s-line"></i>
+                    </span>
+                </button>
+
+                <div class="dl-faq-answer" id="dl-faq-answer-6">
+                    <div class="dl-faq-answer-content">
+                        <p>
+                            Yes. Users with the required permission can update existing vehicle details.
+                        </p>
+
+                        <div class="dl-faq-topic">
+                            <span>Topic: Editing</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ 7 -->
+            <div class="dl-faq-item" data-category="diesel logs">
+                <button
+                    class="dl-faq-question"
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="dl-faq-answer-7"
+                >
+                    <span class="dl-faq-question-content">
+                        <span class="dl-faq-number">Q7</span>
+                        <span class="dl-faq-question-text">
+                            Does the module work with Diesel Logs?
+                        </span>
+                    </span>
+
+                    <span class="dl-faq-arrow">
+                        <i class="ri-arrow-down-s-line"></i>
+                    </span>
+                </button>
+
+                <div class="dl-faq-answer" id="dl-faq-answer-7">
+                    <div class="dl-faq-answer-content">
+                        <p>
+                            Yes. A saved vehicle can be selected for diesel purchase entries in the Diesel Logs module.
+                        </p>
+
+                        <div class="dl-faq-topic">
+                            <span>Topic: Diesel Logs</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div>
+
+        <!-- FAQ Call to Action / Conclusion -->
+        <div class="dl-faq-cta">
+            <div class="dl-faq-cta-content">
+                <h3>Simplify Your Vehicle Management</h3>
+                <p>
+                    The Vehicle Management Module makes it easier to register vehicles, organize certificates, monitor document validity, and maintain vehicle information in one place. From adding a new truck to reviewing older documents and recording renewals, users can manage important vehicle details with less paperwork. <strong>Keep your vehicle records organized and easy to access.</strong>
+                </p>
+            </div>
+
+            <button class="dl-faq-cta-button" type="button" onclick="document.getElementById('simulator').scrollIntoView({behavior: 'smooth'})">
+                Try Live Vehicle Simulator
+            </button>
+        </div>
+
+    </div>
+</section>
+<!--dl-faq section end-->
+
+<!--footer section start-->
+<footer class="footer">
+
+    <!-- Newsletter -->
+    <div class="footer-newsletter">
+        <div class="container">
+
+            <div class="newsletter-wrapper">
+
+                <div class="newsletter-content">
+                    <h2>Stay ahead of the curve</h2>
+                    <p>
+                        Fleet management insights, product updates, and industry news.
+                    </p>
+                </div>
+
+                <form class="newsletter-form">
+
+                    <input
+                        type="email"
+                        placeholder="Enter your email"
+                    >
+
+                    <button type="submit">
+                        Subscribe
+
+                       <i class="ri-arrow-right-line"></i>
+
+                    </button>
+
+                </form>
+
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Footer Main -->
+
+    <div class="footer-main">
+
+        <div class="container">
+
+            <div class="footer-grid">
+
+                <!-- Left -->
+
+                <div class="footer-about">
+
+                    <a href="index.html" class="footer-logo">
+                         <img src="Assets/images/transportdesk-logo-dark.svg" alt="footer-logo">
+                    </a>
+
+                    <p>
+                        The intelligent transportation platform that puts fleet directors
+                        in complete control of their operations.
+                    </p>
+
+                    <div class="footer-social">
+
+                        <a href="#">
+                            <i class="ri-facebook-fill"></i>
+                        </a>
+
+                        <a href="#">
+                            <i class="ri-instagram-line"></i>
+                        </a>
+
+                        <a href="#">
+                            <i class="ri-twitter-line"></i>
+                        </a>
+
+                        <a href="#">
+                            <i class="ri-linkedin-fill"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <!-- Product -->
+
+                <div class="footer-links">
+
+                    <h3>Product</h3>
+
+                      <ul>
+        <li>
+            <a href="features.html" class="footer-link">Features</a>
+        </li>
+
+        <li>
+            <a href="modules.html" class="footer-link">Modules</a>
+        </li>
+
+        <li>
+            <a href="solutions.html" class="footer-link">Solutions</a>
+        </li>
+
+        <li>
+            <a href="reports.html" class="footer-link">Reports</a>
+        </li>
+
+        <li>
+            <a href="contact.html" class="footer-link">Contact</a>
+        </li>
+    </ul>
+
+                </div>
+
+                <!-- Resources -->
+
+                <div class="footer-links">
+
+                    <h3>Resources</h3>
+
+                    <ul>
+
+                        <li><a href="documentation.html" class="footer-link">Documentation</a></li>
+
+                        <li><a href="faq.html" class="footer-link">FAQ</a></li>
+
+                        <li><a href="privacy-policy.html" class="footer-link">Privacy Policy</a></li>
+
+                    </ul>
+
+                </div>
+
+                <!-- Support -->
+
+                <div class="footer-links">
+
+                    <h3>Support</h3>
+
+                    <ul>
+
+                        <li><a href="#" class="footer-link">Help Center</a></li>
+
+                        <li><a href="#" class="footer-link">Status</a></li>
+
+                        <li><a href="#" class="footer-link">Security</a></li>
+
+                    </ul>
+
+                </div>
+
+                <!-- Contact -->
+
+                <div class="footer-contact">
+
+                    <div class="contact-item">
+
+                        <div class="icon">
+                            <i class="ri-mail-line"></i>
+                        </div>
+
+                        <div>
+
+                            <span>Email</span>
+
+                            <a href="#">
+                                hello@transportdesk.net
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                    <div class="contact-item">
+
+                        <div class="icon">
+                            <i class="ri-phone-fill"></i>
+                        </div>
+
+                        <div>
+
+                            <span>Call</span>
+
+                            <a href="#">
+                                +1 (512) 555-0142
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                    <div class="contact-item">
+
+                        <div class="icon">
+                            <i class="ri-map-pin-line"></i>
+                        </div>
+
+                        <div>
+
+                            <span>Location</span>
+
+                            <p>India</p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Bottom -->
+
+    <div class="footer-bottom">
+
+        <div class="container">
+
+            <div class="bottom-wrapper">
+
+                <p>
+                    © 2026 All rights reserved.
+                </p>
+
+                <ul>
+
+                    <li><a href="#">Privacy Policy</a></li>
+
+                    <li><a href="#">Terms of Service</a></li>
+
+                    <li><a href="#">Cookie Policy</a></li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</footer>
+<!--footer section end-->
+
+<script src="./Assets/js/custom.js"></script>
+<script>
+(function () {
+    var $ = function (s, r) { return (r || document).querySelector(s); };
+    var $$ = function (s, r) { return Array.prototype.slice.call((r || document).querySelectorAll(s)); };
+    var tbody = $('#vm-docs-body');
+    if (!tbody) return;
+    var DAY = 864e5, today = new Date();
+    today.setHours(0, 0, 0, 0);
+    var pad = function (n) { return String(n).padStart(2, '0'); };
+    var iso = function (d) { return d.getFullYear() + '-' + pad(d.getMonth() + 1) + '-' + pad(d.getDate()); };
+    var parse = function (v) { var p = v.split('-'); return new Date(+p[0], +p[1] - 1, +p[2]); };
+    var plus = function (n) { return iso(new Date(today.getTime() + n * DAY)); };
+    var setText = function (s, t) { var e = $(s); if (e) e.textContent = t; };
+
+    // Keep the sample dates relative to today so the demo always shows live statuses
+    $$('input[data-offset]', tbody).forEach(function (i) { i.value = plus(+i.getAttribute('data-offset')); });
+
+    function refresh() {
+        var rows = $$('tr:not(.vm-history-row)', tbody), v = 0, s = 0, e = 0, names = [];
+        var hl = $('#vm-highlight') ? $('#vm-highlight').checked : true;
+        rows.forEach(function (r) {
+            var u = $('.vm-until', r).value, st = 'valid', txt = 'Valid';
+            names.push($('.vm-type', r).textContent);
+            if (u) {
+                var days = Math.round((parse(u) - today) / DAY);
+                if (days < 0) { st = 'expired'; txt = 'Expired'; }
+                else if (hl && days <= 30) { st = 'soon'; txt = 'Expiring Soon · ' + days + 'd'; }
+            }
+            var pill = $('.vm-status', r);
+            pill.className = 'vm-status vm-' + st;
+            pill.textContent = txt;
+            if (st === 'expired') e++; else if (st === 'soon') s++; else v++;
+        });
+        setText('#vm-total', rows.length);
+        setText('#vm-attn', s + e);
+        setText('#vm-valid', v);
+        setText('#vm-types', names.join(', '));
+        setText('#vm-f-label', 'Vehicle Documents (' + rows.length + ' Types)');
+        setText('#vm-f-valid', v + ' Valid');
+        setText('#vm-f-soon', s + ' Expiring Soon');
+        setText('#vm-f-exp', e + ' Expired');
+        filter();
+    }
+
+    function filter() {
+        var q = ($('#vm-search') ? $('#vm-search').value : '').toLowerCase().trim();
+        $$('tr', tbody).forEach(function (r) {
+            var hay = r.textContent + ' ' + $$('input[type="text"]', r).map(function (i) { return i.value; }).join(' ');
+            r.classList.toggle('vm-hidden', !!q && hay.toLowerCase().indexOf(q) === -1);
+        });
+    }
+
+    // Live changes
+    tbody.addEventListener('input', function (ev) { if (ev.target.type === 'date') refresh(); });
+    tbody.addEventListener('change', function (ev) {
+        if (ev.target.type === 'file') {
+            var n = $('.vm-file-name', ev.target.parentNode);
+            if (n) n.textContent = ev.target.files[0] ? ev.target.files[0].name.slice(0, 14) : 'Attach';
+        }
+    });
+    if ($('#vm-highlight')) $('#vm-highlight').addEventListener('change', refresh);
+    if ($('#vm-search')) $('#vm-search').addEventListener('input', filter);
+
+    // Renewal: new record for the active row, earlier one kept as history
+    tbody.addEventListener('click', function (ev) {
+        var b = ev.target.closest('.vm-renew');
+        if (!b) return;
+        var row = b.closest('tr'), hist = row.cloneNode(true);
+        hist.classList.add('vm-history-row');
+        $$('input', hist).forEach(function (i) { i.disabled = true; });
+        var pill = $('.vm-status', hist);
+        pill.className = 'vm-status vm-history';
+        pill.textContent = 'History';
+        $('.vm-renew', hist).parentNode.innerHTML = '&mdash;';
+        row.parentNode.insertBefore(hist, row.nextSibling);
+        $('.vm-from', row).value = plus(0);
+        $('.vm-until', row).value = plus(365);
+        refresh();
+    });
+
+    // Add Document: next document type from the list in the documentation
+    var extra = ['Local Permit', 'National Permit', 'Tax', 'Claim'], add = $('#vm-add');
+    if (add) add.addEventListener('click', function () {
+        if (!extra.length) return;
+        var r = $('tr:not(.vm-history-row)', tbody).cloneNode(true);
+        $('.vm-type', r).textContent = extra.shift();
+        $('.vm-no', r).value = '';
+        $$('input[data-offset]', r).forEach(function (i) { i.removeAttribute('data-offset'); });
+        $('.vm-from', r).value = plus(0);
+        $('.vm-until', r).value = plus(365);
+        $('.vm-notes', r).value = '';
+        $('.vm-file-name', r).textContent = 'Attach';
+        tbody.appendChild(r);
+        if (!extra.length) { add.disabled = true; }
+        refresh();
+    });
+
+    // Keep vehicle number / company in sync across the table
+    function sync(id, cls, card) {
+        var i = $(id);
+        if (!i) return;
+        i.addEventListener('input', function () {
+            $$(cls, tbody).forEach(function (e) { e.textContent = i.value; });
+            if (card) setText(card, i.value);
+        });
+    }
+    sync('#vm-vehicle-no', '.vm-plate', '#vm-plate-card');
+    sync('#vm-company', '.vm-comp');
+
+    // VLTD certificate upload
+    var vl = $('#vm-vltd-upload');
+    if (vl) vl.addEventListener('change', function () {
+        setText('#vm-vltd-view', vl.files[0] ? 'View VLTD Certificate (' + vl.files[0].name + ')' : 'View VLTD Certificate (not uploaded)');
+    });
+
+    // Profile / Documents view tabs
+    var tabs = $$('.dl-view-tab'), prof = $('[data-vm="profile"]');
+    tabs.forEach(function (t, i) {
+        t.addEventListener('click', function () {
+            tabs.forEach(function (x) { x.classList.remove('dl-view-tab-active'); });
+            t.classList.add('dl-view-tab-active');
+            if (prof) prof.classList.toggle('vm-hidden', i === 1);
+        });
+    });
+
+    // Save feedback
+    $$('.vm-save').forEach(function (b) {
+        b.addEventListener('click', function () {
+            var o = b.innerHTML;
+            b.innerHTML = '<i class="ri-check-line"></i> Vehicle Saved';
+            setTimeout(function () { b.innerHTML = o; }, 1600);
+        });
+    });
+
+    refresh();
+})();
+</script>
+</body>
+</html>
