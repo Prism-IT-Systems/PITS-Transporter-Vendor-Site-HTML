@@ -1,0 +1,2007 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>User &amp; Permission Management Module | TransportDesk Fleet Solutions</title>
+    <meta name="description" content="Control user access, assign roles and manage module permissions in one place. Select a role, find a module, enable View, Create, Edit and Delete permissions, and save changes with the TransportDesk User &amp; Permission Management Module.">
+
+    <!-- Remix Icon -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" />
+
+    <!-- Swiper -->
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+
+    <!-- Lenis -->
+    <link rel="stylesheet"
+        href="https://unpkg.com/lenis@1.3.23/dist/lenis.css">
+
+    <!-- Tailwind Output CSS -->
+     <link href="./Assets/css/output.css" rel="stylesheet">
+    <!-- Module additions (pills / status) -->
+    <style>
+        .dx-pill{display:inline-block;margin:.1rem .2rem .1rem 0;padding:.15rem .6rem;border-radius:999px;font-size:.75rem;font-weight:600;white-space:nowrap;background:#f1f5f9;color:#334155}
+        .dx-status{display:inline-block;padding:.2rem .65rem;border-radius:999px;font-size:.75rem;font-weight:600;white-space:nowrap}
+        .dx-valid{background:#dcfce7;color:#15803d}
+        .dx-soon{background:#fef3c7;color:#b45309}
+        .dx-expired{background:#fee2e2;color:#b91c1c}
+        .dx-history{background:#e5e7eb;color:#4b5563}
+        .dx-muted{font-size:.8rem;opacity:.7}
+        tr.dx-history-row{opacity:.6}
+        .dx-hidden{display:none!important}
+    </style>
+
+</head>
+<body>
+
+<!--Header Section start-->
+<header class="main-header">
+    <div class="container">
+
+        <div class="header-inner">
+
+            <a href="index.html" class="header-logo">
+                <img src="Assets/images/transportdesk-logo.svg" alt="Logo">
+            </a>
+
+            <nav class="main-navigation" id="mobileMenu">
+
+                <div class="menu-circle"></div>
+
+                <ul class="navigation-links">
+                    <li><a href="index.html" class="navigation-link">Home</a></li>
+                    <li><a href="features.html" class="navigation-link">Features</a></li>
+                    <li><a href="modules.html" class="navigation-link active">Modules</a></li>
+                    <li><a href="reports.html" class="navigation-link">Resources</a></li>
+                    <li><a href="contact.html" class="navigation-link">Contact</a></li>
+                </ul>
+
+                <div class="mobile-header-right">
+                    <a href="#" class="login-btn">Login</a>
+                    <a href="#" class="demo-btn">Book Demo</a>
+                </div>
+
+            </nav>
+
+            <div class="header-right">
+                <a href="#" class="login-btn">Login</a>
+                <a href="#" class="demo-btn">Book Demo</a>
+            </div>
+
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+        </div>
+
+    </div>
+</header>
+
+<!-- Add this after header -->
+<div class="menu-overlay" id="menuOverlay"></div>
+<!--Header section End-->
+
+<section id="overview" class="dl-overview-section">
+    <div class="dl-overview-glow"></div>
+    <div class="dl-overview-pattern"></div>
+
+    <div class="container">
+        <div class="dl-overview-grid">
+
+            <!-- Left Content -->
+            <div class="dl-overview-content">
+
+                <div class="dl-overview-badge">
+                    <span class="dl-status-dot"></span>
+                    <span>Enterprise Fleet Management</span>
+                    <span class="dl-badge-divider">|</span>
+                    <span class="dl-badge-highlight">User &amp; Permission Management Module</span>
+                </div>
+
+                <h1 class="dl-overview-title">
+                    Smart Transportation &amp;
+                    <span class="dl-gradient-text">User &amp; Permission Management</span>
+                    Platform
+                </h1>
+
+                <p class="dl-overview-description">
+                    The User &amp; Permission Management Module helps businesses control which employees can access different parts of the software. Instead of giving every user full access, administrators can assign roles and choose the actions each role is allowed to perform. This keeps daily work organized and helps protect important business information.
+                </p>
+
+                <!-- Action Buttons -->
+                <div class="dl-overview-actions">
+
+                    <button type="button" class="btn-primary">
+                        <span>Try Live Permission Simulator</span>
+                        <i class="ri-arrow-right-line"></i>
+                    </button>
+
+                    <button type="button" class="dl-btn-demo">
+                        <span class="dl-play-icon">
+                            <i class="ri-play-fill"></i>
+                        </span>
+                        <span>Watch Demo Video</span>
+                    </button>
+                </div>
+
+                <!-- Statistics -->
+                <div class="dl-overview-stats">
+
+                    <div class="dl-stat-item">
+                        <div class="dl-stat-number">4</div>
+                        <div class="dl-stat-label">User Roles</div>
+                    </div>
+
+                    <div class="dl-stat-item">
+                        <div class="dl-stat-number dl-stat-red">4</div>
+                        <div class="dl-stat-label">Actions per Module</div>
+                    </div>
+
+                    <div class="dl-stat-item">
+                        <div class="dl-stat-number dl-stat-green">11</div>
+                        <div class="dl-stat-label">Core Features</div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Right Image / Fuel Dashboard -->
+            <div class="dl-overview-visual">
+
+                <div class="dl-visual-card">
+
+                    <img
+                        src="Assets/images/hero_fleet_dispatch_1792482270822.jpg"
+                        alt="Role-based access control for fleet software"
+                        class="dl-visual-image"
+                    >
+
+                    <div class="dl-visual-overlay"></div>
+
+                    <!-- Image Top Information -->
+                    <div class="dl-visual-topbar">
+
+                        <div class="dl-live-label">
+                            <span class="dl-live-dot"></span>
+                            <span>Role Permission Overview</span>
+                        </div>
+
+                        <div class="dl-fuel-rate">
+                            Accountant
+                        </div>
+
+                    </div>
+
+                    <!-- Fuel Slip Information -->
+                    <div class="dl-fuel-slip">
+
+                        <div class="dl-slip-header">
+                            <span class="dl-slip-title">
+                                Sample Role · Accountant Access
+                            </span>
+
+                            <span class="dl-slip-status">
+                                Changes Saved
+                            </span>
+                        </div>
+
+                        <div class="dl-slip-stats">
+
+                            <div class="dl-slip-stat">
+                                <span class="dl-slip-label">Role</span>
+                                <span class="dl-slip-value">Accountant</span>
+                            </div>
+
+                            <div class="dl-slip-stat">
+                                <span class="dl-slip-label">Financial Info</span>
+                                <span class="dl-slip-value dl-slip-red">Review</span>
+                            </div>
+
+                            <div class="dl-slip-stat">
+                                <span class="dl-slip-label">Vehicle Records</span>
+                                <span class="dl-slip-value dl-slip-green">No Changes</span>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<section class="dl-trusted-section">
+    <div class="dl-trusted-heading">
+        <span>
+            Control User Access, Assign Roles &amp; Manage Module Permissions in One Place
+        </span>
+    </div>
+
+    <div class="dl-trusted-marquee">
+        <!-- Left fade -->
+        <div class="dl-trusted-fade dl-trusted-fade-left"></div>
+
+        <!-- Right fade -->
+        <div class="dl-trusted-fade dl-trusted-fade-right"></div>
+
+        <div class="dl-trusted-track">
+
+            <!-- First group -->
+            <div class="dl-trusted-group">
+                <div class="dl-trusted-item">
+                    <span class="dl-trusted-dot"></span>
+                    <span class="dl-trusted-name">Admin Role</span>
+                </div>
+
+                <div class="dl-trusted-item">
+                    <span class="dl-trusted-dot"></span>
+                    <span class="dl-trusted-name">Accountant Role</span>
+                </div>
+
+                <div class="dl-trusted-item">
+                    <span class="dl-trusted-dot"></span>
+                    <span class="dl-trusted-name">Maintenance Role</span>
+                </div>
+
+                <div class="dl-trusted-item">
+                    <span class="dl-trusted-dot"></span>
+                    <span class="dl-trusted-name">Manager Role</span>
+                </div>
+
+                <div class="dl-trusted-item">
+                    <span class="dl-trusted-dot"></span>
+                    <span class="dl-trusted-name">View Permission</span>
+                </div>
+
+                <div class="dl-trusted-item">
+                    <span class="dl-trusted-dot"></span>
+                    <span class="dl-trusted-name">Create Permission</span>
+                </div>
+
+                <div class="dl-trusted-item">
+                    <span class="dl-trusted-dot"></span>
+                    <span class="dl-trusted-name">Edit Permission</span>
+                </div>
+
+                <div class="dl-trusted-item">
+                    <span class="dl-trusted-dot"></span>
+                    <span class="dl-trusted-name">Delete Permission</span>
+                </div>
+
+                <div class="dl-trusted-item">
+                    <span class="dl-trusted-dot"></span>
+                    <span class="dl-trusted-name">Module Search</span>
+                </div>
+
+                <div class="dl-trusted-item">
+                    <span class="dl-trusted-dot"></span>
+                    <span class="dl-trusted-name">Permission Categories</span>
+                </div>
+
+                <div class="dl-trusted-item">
+                    <span class="dl-trusted-dot"></span>
+                    <span class="dl-trusted-name">Access Protection</span>
+                </div>
+
+                <div class="dl-trusted-item">
+                    <span class="dl-trusted-dot"></span>
+                    <span class="dl-trusted-name">Save Changes</span>
+                </div>
+            </div>
+
+            <!-- Duplicate group for seamless looping -->
+            <div class="dl-trusted-group" aria-hidden="true">
+                <div class="dl-trusted-item">
+                    <span class="dl-trusted-dot"></span>
+                    <span class="dl-trusted-name">Admin Role</span>
+                </div>
+
+                <div class="dl-trusted-item">
+                    <span class="dl-trusted-dot"></span>
+                    <span class="dl-trusted-name">Accountant Role</span>
+                </div>
+
+                <div class="dl-trusted-item">
+                    <span class="dl-trusted-dot"></span>
+                    <span class="dl-trusted-name">Maintenance Role</span>
+                </div>
+
+                <div class="dl-trusted-item">
+                    <span class="dl-trusted-dot"></span>
+                    <span class="dl-trusted-name">Manager Role</span>
+                </div>
+
+                <div class="dl-trusted-item">
+                    <span class="dl-trusted-dot"></span>
+                    <span class="dl-trusted-name">View Permission</span>
+                </div>
+
+                <div class="dl-trusted-item">
+                    <span class="dl-trusted-dot"></span>
+                    <span class="dl-trusted-name">Create Permission</span>
+                </div>
+
+                <div class="dl-trusted-item">
+                    <span class="dl-trusted-dot"></span>
+                    <span class="dl-trusted-name">Edit Permission</span>
+                </div>
+
+                <div class="dl-trusted-item">
+                    <span class="dl-trusted-dot"></span>
+                    <span class="dl-trusted-name">Delete Permission</span>
+                </div>
+
+                <div class="dl-trusted-item">
+                    <span class="dl-trusted-dot"></span>
+                    <span class="dl-trusted-name">Module Search</span>
+                </div>
+
+                <div class="dl-trusted-item">
+                    <span class="dl-trusted-dot"></span>
+                    <span class="dl-trusted-name">Permission Categories</span>
+                </div>
+
+                <div class="dl-trusted-item">
+                    <span class="dl-trusted-dot"></span>
+                    <span class="dl-trusted-name">Access Protection</span>
+                </div>
+
+                <div class="dl-trusted-item">
+                    <span class="dl-trusted-dot"></span>
+                    <span class="dl-trusted-name">Save Changes</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<section class="dl-demo-section">
+    <div class="dl-demo-glow"></div>
+
+    <div class="dl-container">
+
+        <!-- Section Heading -->
+        <div class="heading-wrapper">
+
+            <span class="heading-tag">
+                Interactive Video Demonstration
+            </span>
+
+            <h2 class="heading-title">
+             Watch How
+                <span>User Permissions</span>
+                Works
+            </h2>
+
+            <p>
+                Watch our step-by-step demonstration to learn how to select a role, find a module, enable the required permissions, and save changes.
+            </p>
+        </div>
+
+        <!-- Demo Content -->
+        <div class="dl-demo-grid">
+
+            <!-- Video Preview -->
+            <div class="dl-demo-video-column">
+
+                <div class="dl-video-card">
+
+                    <!-- Video Browser Header -->
+                    <div class="dl-video-toolbar">
+
+                        <div class="dl-video-toolbar-left">
+                            <span class="dl-window-dot dl-dot-red"></span>
+                            <span class="dl-window-dot dl-dot-yellow"></span>
+                            <span class="dl-window-dot dl-dot-green"></span>
+
+                            <span class="dl-video-filename">
+                                user_permissions_module_demo.mp4
+                            </span>
+                        </div>
+
+                        <span class="dl-video-quality">
+                            Demo Video
+                        </span>
+
+                    </div>
+
+                    <!-- Video Thumbnail -->
+                    <div class="dl-video-preview">
+
+                        <img
+                            src="Assets/images/dashboard.png"
+                            alt="User Permissions demonstration video preview"
+                            class="dl-video-thumbnail"
+                        >
+
+                        <div class="dl-video-overlay"></div>
+
+                        <button
+                            type="button"
+                            class="dl-video-play"
+                            aria-label="Play demonstration video"
+                        >
+                            <i class="ri-play-fill"></i>
+                            <span class="dl-video-ping"></span>
+                        </button>
+
+                        <!-- Video Information -->
+                        <div class="dl-video-meta">
+
+                            <div class="dl-video-meta-left">
+                                <span class="dl-video-timestamp">
+                                    Timestamp: 00:00
+                                </span>
+
+                                <span class="dl-video-current-chapter">
+                                    Selecting a Role
+                                </span>
+                            </div>
+
+                            <a
+                                href="#"
+                                class="dl-video-external"
+                            >
+                                <span>External Link</span>
+                                <i class="ri-external-link-line"></i>
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                    <!-- Video Footer -->
+                    <div class="dl-video-footer">
+
+                        <div class="dl-video-footer-left">
+
+                            <button
+                                type="button"
+                                class="dl-watch-button"
+                            >
+                                <i class="ri-play-circle-line"></i>
+                                <span>Watch Full Walkthrough</span>
+                            </button>
+
+                            <span class="dl-video-footer-note">
+                                Demo video will be displayed here
+                            </span>
+
+                        </div>
+
+                        <a
+                            href="#"
+                            class="dl-video-source"
+                        >
+                            <span>Direct Source</span>
+                            <i class="ri-arrow-right-up-line"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+</section>
+
+
+<section id="simulator" class="dl-simulator-section">
+    <div class="dl-container">
+
+        <!-- Section Heading -->
+        <div class="dl-simulator-header">
+             <div class="heading-wrapper heading-wrap-left">
+
+            <span class="heading-tag">
+                Practical Example
+            </span>
+
+            <h2 class="heading-title">
+              Practical Example: <span>Accountant Access</span>
+            </h2>
+
+            <p>
+                Suppose a company wants its accountant to review financial information but not change vehicle or driver records. Select the Accountant role, find the required modules, enable only the appropriate permissions, and save the changes. Actual options depend on which permissions are configured for each module.
+            </p>
+        </div>
+
+            <div class="dl-view-switcher">
+                <button type="button" class="dl-view-tab dl-view-tab-active">
+                    <i class="ri-user-settings-line"></i>
+                    Role Selection View
+                </button>
+
+                <button type="button" class="dl-view-tab">
+                    <i class="ri-grid-line"></i>
+                    Permission Matrix View
+                </button>
+            </div>
+        </div>
+        <!-- Summary Statistics -->
+        <div class="dl-stats-grid">
+
+            <div class="dl-stat-card">
+                <div class="dl-stat-label"><span>Total Modules</span><i class="ri-list-check"></i></div>
+                <div class="dl-stat-value"><b id="up-total" style="font:inherit">0</b> <span>Modules</span></div>
+                <p class="dl-stat-note">Across all categories</p>
+            </div>
+
+            <div class="dl-stat-card">
+                <div class="dl-stat-label"><span>Unassigned Modules</span><i class="ri-lock-line dl-red-icon"></i></div>
+                <div class="dl-stat-value dl-red-text"><b id="up-unassigned" style="font:inherit">0</b> <span>Unassigned</span></div>
+                <p class="dl-stat-note">No actions selected</p>
+            </div>
+
+            <div class="dl-stat-card">
+                <div class="dl-stat-label"><span>Assigned Modules</span><i class="ri-shield-check-line dl-green-icon"></i></div>
+                <div class="dl-stat-value dl-green-text"><b id="up-assigned" style="font:inherit">0</b> <span>Assigned</span></div>
+                <p class="dl-stat-note">At least one action enabled</p>
+            </div>
+
+            <div class="dl-stat-card dl-stat-card-total">
+                <div class="dl-stat-label"><span>Role Permissions</span><span class="dl-status-dot"></span></div>
+                <div class="dl-stat-value dl-stat-total-value" id="up-card-name">Accountant</div>
+                <p class="dl-stat-note dl-green-text" id="up-card-note">0 permissions enabled</p>
+            </div>
+
+        </div>
+
+        <!-- Calculator Panel -->
+        <div class="dl-calculator-panel">
+
+            <!-- Information Form -->
+            <div class="dl-bill-master" data-x="profile">
+
+                <div class="dl-bill-master-header">
+                    <div class="dl-bill-heading">
+                        <span id="up-step">Step 3: Select the Role</span>
+                        <span class="dl-heading-separator">·</span>
+                        <span class="dl-invoice-number">Admin: full access through permission checks</span>
+                    </div>
+                </div>
+
+                <div class="dl-bill-fields">
+
+                    <div class="dl-form-group">
+                        <label for="up-role">Select Role</label>
+                        <select id="up-role" class="dl-form-control"><option selected>Accountant</option><option>Maintenance</option><option>Manager</option></select>
+                    </div>
+
+                    <div class="dl-form-group">
+                        <label for="up-cat">Module Category</label>
+                        <select id="up-cat" class="dl-form-control"><option value="">All Categories</option><option>Overview</option><option>Fleet Management</option><option>Maintenance</option><option>Business</option><option>Lorry Receipts</option><option>Documents</option><option>Admin</option></select>
+                    </div>
+
+                </div>
+
+                <div class="dl-bill-options">
+                    <label class="dl-checkbox-label">
+                        <input id="up-hide" type="checkbox">
+                        <span>Hide unassigned modules</span>
+                    </label>
+                    <span class="dl-formula-note" id="up-note">
+                        Select a role, find a module, enable the required permissions, then click Save Changes
+                    </span>
+                </div>
+
+            </div>
+
+            <!-- Toolbar -->
+            <div class="dl-table-toolbar">
+
+                <div class="dl-search-box">
+                    <i class="ri-search-line"></i>
+                    <input type="search" id="up-search" placeholder="Search modules...">
+                </div>
+
+                <div class="dl-toolbar-actions">
+                    <button type="button" class="dl-action-button" id="up-reset">
+                        <i class="ri-refresh-line dl-red-icon"></i>
+                        <span>Reload Saved</span>
+                    </button>
+
+                    <button type="button" class="dl-primary-button" id="up-save">
+                        <i class="ri-save-3-line"></i>
+                        <span>Save Changes</span>
+                    </button>
+
+                </div>
+
+            </div>
+
+            <!-- Table -->
+            <div class="dl-table-wrapper">
+                <table class="dl-vehicle-table">
+                    <thead>
+                        <tr><th>Module</th><th>View</th><th>Create</th><th>Edit</th><th>Delete</th><th>Select All</th></tr>
+                    </thead>
+
+                    <tbody id="up-body"></tbody>
+
+                    <tfoot>
+                        <tr>
+                            <td><span class="dl-footer-label" id="up-f-label"></span></td>
+                            <td class="dl-footer-period" colspan="3">Dashboard access is included when saving</td>
+                            <td class="dl-text-right dl-footer-total" colspan="2" id="up-f-count"></td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+
+            <!-- Information Footer -->
+            <div class="dl-calculator-footer">
+
+                <div class="dl-documentation-note">
+                    <i class="ri-information-line"></i>
+                    <span>
+                        <strong>Documentation Rule:</strong>
+                        The Admin role passes the application’s permission checks. The permission screen itself lists Accountant, Maintenance and Manager for editing.
+                    </span>
+                </div>
+
+                <div class="dl-supported-formats">
+                    Categories: Overview, Fleet Management, Maintenance, Business, Lorry Receipts, Documents, Admin
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+
+
+<!--dl feature section start-->
+<section id="features" class="dl-features-section">
+
+    <div class="container">
+
+        <!-- Section Heading -->
+     <div class="heading-wrapper">
+
+            <span class="heading-tag">
+                Complete solution
+            </span>
+
+            <h2 class="heading-title">
+              Key Module <span>Features</span>
+            </h2>
+
+            <p>
+                Control User Access, Assign Roles &amp; Manage Module Permissions in One Place.
+            </p>
+           <!-- Feature Filters -->
+            <div class="dl-features-filters">
+
+                <button type="button"
+                    class="dl-filter-btn is-active"
+                    data-filter="all">
+                    All Features (11)
+                </button>
+
+                <button type="button"
+                    class="dl-filter-btn"
+                    data-filter="roles">
+                    Roles &amp; Accounts
+                </button>
+
+                <button type="button"
+                    class="dl-filter-btn"
+                    data-filter="modules">
+                    Modules &amp; Actions
+                </button>
+
+                <button type="button"
+                    class="dl-filter-btn"
+                    data-filter="review">
+                    Review &amp; Protection
+                </button>
+
+            </div>
+        </div>
+
+        <!-- Feature Cards -->
+        <div class="dl-features-grid">
+
+            <!-- Feature 4.1 -->
+            <article class="dl-feature-card" data-category="roles">
+                <div class="dl-feature-card-content">
+                    <div class="dl-feature-icon">
+                        <i class="ri-shield-user-line"></i>
+                    </div>
+
+                    <div class="dl-feature-card-heading">
+                        <h3>Role-Based Access</h3>
+                    </div>
+
+                    <p>
+                        Manage access by role rather than setting the same rules separately for each employee. Available user roles include Admin, Accountant, Maintenance and Manager.
+                    </p>
+                </div>
+            </article>
+
+            <!-- Feature 4.2 -->
+            <article class="dl-feature-card" data-category="modules">
+                <div class="dl-feature-card-content">
+                    <div class="dl-feature-icon">
+                        <i class="ri-apps-2-line"></i>
+                    </div>
+
+                    <div class="dl-feature-card-heading">
+                        <h3>Module-Wise Permissions</h3>
+                    </div>
+
+                    <p>
+                        Permissions are organized by software modules, making it easier to control access to areas such as fleet, maintenance, business, documents and administration, depending on the permissions configured in the system.
+                    </p>
+                </div>
+            </article>
+
+            <!-- Feature 4.3 -->
+            <article class="dl-feature-card" data-category="modules">
+                <div class="dl-feature-card-content">
+                    <div class="dl-feature-icon">
+                        <i class="ri-toggle-line"></i>
+                    </div>
+
+                    <div class="dl-feature-card-heading">
+                        <h3>Action-Level Controls</h3>
+                    </div>
+
+                    <p>
+                        Specify whether a role may view, create, edit or delete records where those actions are available. For example, a role can be allowed to view a module without being allowed to change its data.
+                    </p>
+                </div>
+            </article>
+
+            <!-- Feature 4.4 -->
+            <article class="dl-feature-card" data-category="modules">
+                <div class="dl-feature-card-content">
+                    <div class="dl-feature-icon">
+                        <i class="ri-search-line"></i>
+                    </div>
+
+                    <div class="dl-feature-card-heading">
+                        <h3>Search Modules Quickly</h3>
+                    </div>
+
+                    <p>
+                        Use the module search box to find the exact area whose permissions need to be changed, instead of manually checking every category.
+                    </p>
+                </div>
+            </article>
+
+            <!-- Feature 4.5 -->
+            <article class="dl-feature-card" data-category="modules">
+                <div class="dl-feature-card-content">
+                    <div class="dl-feature-icon">
+                        <i class="ri-folder-3-line"></i>
+                    </div>
+
+                    <div class="dl-feature-card-heading">
+                        <h3>Grouped Permission Categories</h3>
+                    </div>
+
+                    <p>
+                        Modules are arranged into categories such as Overview, Fleet Management, Maintenance, Business, Lorry Receipts, Documents and Admin to make navigation easier.
+                    </p>
+                </div>
+            </article>
+
+            <!-- Feature 4.6 -->
+            <article class="dl-feature-card" data-category="modules">
+                <div class="dl-feature-card-content">
+                    <div class="dl-feature-icon">
+                        <i class="ri-checkbox-multiple-line"></i>
+                    </div>
+
+                    <div class="dl-feature-card-heading">
+                        <h3>Select Multiple Permissions</h3>
+                    </div>
+
+                    <p>
+                        Use the available row-level or section-level selection controls to update several related options more quickly.
+                    </p>
+                </div>
+            </article>
+
+            <!-- Feature 4.7 -->
+            <article class="dl-feature-card" data-category="review">
+                <div class="dl-feature-card-content">
+                    <div class="dl-feature-icon">
+                        <i class="ri-eye-line"></i>
+                    </div>
+
+                    <div class="dl-feature-card-heading">
+                        <h3>Show Assigned Modules</h3>
+                    </div>
+
+                    <p>
+                        The screen includes an option for hiding unassigned modules so the administrator can focus on modules that already have selected permissions.
+                    </p>
+                </div>
+            </article>
+
+            <!-- Feature 4.8 -->
+            <article class="dl-feature-card" data-category="review roles">
+                <div class="dl-feature-card-content">
+                    <div class="dl-feature-icon">
+                        <i class="ri-history-line"></i>
+                    </div>
+
+                    <div class="dl-feature-card-heading">
+                        <h3>Review Existing Access</h3>
+                    </div>
+
+                    <p>
+                        When switching roles, the screen loads their currently assigned permissions. This helps administrators understand which activities the role is already allowed to perform.
+                    </p>
+                </div>
+            </article>
+
+            <!-- Feature 4.9 -->
+            <article class="dl-feature-card" data-category="modules review">
+                <div class="dl-feature-card-content">
+                    <div class="dl-feature-icon">
+                        <i class="ri-save-3-line"></i>
+                    </div>
+
+                    <div class="dl-feature-card-heading">
+                        <h3>Save Role Permission Changes</h3>
+                    </div>
+
+                    <p>
+                        After changes are reviewed, Save Changes updates the selected role permissions. Dashboard access is included by the permission-saving logic.
+                    </p>
+                </div>
+            </article>
+
+            <!-- Feature 4.10 -->
+            <article class="dl-feature-card" data-category="roles">
+                <div class="dl-feature-card-content">
+                    <div class="dl-feature-icon">
+                        <i class="ri-user-settings-line"></i>
+                    </div>
+
+                    <div class="dl-feature-card-heading">
+                        <h3>User Account and Role Updates</h3>
+                    </div>
+
+                    <p>
+                        Authorized staff can create users, update user details, and change a user’s assigned role through the separate User Management screens.
+                    </p>
+                </div>
+            </article>
+
+            <!-- Feature 4.11 -->
+            <article class="dl-feature-card" data-category="review">
+                <div class="dl-feature-card-content">
+                    <div class="dl-feature-icon">
+                        <i class="ri-lock-line"></i>
+                    </div>
+
+                    <div class="dl-feature-card-heading">
+                        <h3>Access Protection</h3>
+                    </div>
+
+                    <p>
+                        Protected routes check permissions before allowing actions. If a non-admin user lacks the required permission, access is denied.
+                    </p>
+                </div>
+            </article>
+
+
+        </div>
+    </div>
+</section>
+<!--dl feature section end-->
+
+
+<!--workflow section start-->
+<section class="dl-workflow-section">
+    <div class="container">
+
+        <!-- Section Heading -->
+
+        <div class="heading-wrapper heading-wrap-left">
+
+            <span class="heading-tag">
+                Step-by-Step Workflow
+            </span>
+
+            <h2 class="heading-title">
+              How Does the <span>Module</span> Work?
+            </h2>
+
+            <p>
+                Follow six simple steps to assign a role, choose the permitted modules and actions, and confirm that access is enforced.
+            </p>
+            
+        </div>
+
+        <!-- Workflow Grid -->
+        <div class="dl-workflow-grid">
+
+            <!-- Workflow Step 01 -->
+            <article class="dl-workflow-card">
+                <div class="dl-workflow-card-content">
+
+                    <div class="dl-workflow-card-top">
+                        <span class="dl-workflow-number">01</span>
+
+                        <div class="dl-workflow-icon">
+                            <i class="ri-user-add-line"></i>
+                        </div>
+                    </div>
+
+                    <h3 class="dl-workflow-card-title">
+                        Add a User and Assign a Role
+                    </h3>
+
+                    <p class="dl-workflow-card-description">
+                        From User Management, an authorized person creates an employee account.
+                    </p>
+
+                    <ul class="dl-workflow-checklist">
+                        <li>
+                            <i class="ri-check-line"></i>
+                            <span>Enter a name, email and password</span>
+                        </li>
+                        <li>
+                            <i class="ri-check-line"></i>
+                            <span>Assign a role such as Admin, Accountant, Maintenance or Manager</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="dl-workflow-card-footer">
+                    <span>Workflow Phase 01</span>
+                </div>
+            </article>
+
+            <!-- Workflow Step 02 -->
+            <article class="dl-workflow-card">
+                <div class="dl-workflow-card-content">
+
+                    <div class="dl-workflow-card-top">
+                        <span class="dl-workflow-number">02</span>
+
+                        <div class="dl-workflow-icon">
+                            <i class="ri-settings-3-line"></i>
+                        </div>
+                    </div>
+
+                    <h3 class="dl-workflow-card-title">
+                        Open User &amp; Permission Management
+                    </h3>
+
+                    <p class="dl-workflow-card-description">
+                        Go to the permissions page.
+                    </p>
+
+                    <ul class="dl-workflow-checklist">
+                        <li>
+                            <i class="ri-check-line"></i>
+                            <span>Decide what a particular role can do in the system</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="dl-workflow-card-footer">
+                    <span>Workflow Phase 02</span>
+                </div>
+            </article>
+
+            <!-- Workflow Step 03 -->
+            <article class="dl-workflow-card">
+                <div class="dl-workflow-card-content">
+
+                    <div class="dl-workflow-card-top">
+                        <span class="dl-workflow-number">03</span>
+
+                        <div class="dl-workflow-icon">
+                            <i class="ri-user-settings-line"></i>
+                        </div>
+                    </div>
+
+                    <h3 class="dl-workflow-card-title">
+                        Select the Role
+                    </h3>
+
+                    <p class="dl-workflow-card-description">
+                        Choose Accountant, Maintenance or Manager.
+                    </p>
+
+                    <ul class="dl-workflow-checklist">
+                        <li>
+                            <i class="ri-check-line"></i>
+                            <span>The page loads the permissions currently assigned to that role</span>
+                        </li>
+                        <li>
+                            <i class="ri-check-line"></i>
+                            <span>The Admin role has full access through the application’s permission checks</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="dl-workflow-card-footer">
+                    <span>Workflow Phase 03</span>
+                </div>
+            </article>
+
+            <!-- Workflow Step 04 -->
+            <article class="dl-workflow-card">
+                <div class="dl-workflow-card-content">
+
+                    <div class="dl-workflow-card-top">
+                        <span class="dl-workflow-number">04</span>
+
+                        <div class="dl-workflow-icon">
+                            <i class="ri-search-line"></i>
+                        </div>
+                    </div>
+
+                    <h3 class="dl-workflow-card-title">
+                        Choose Modules and Actions
+                    </h3>
+
+                    <p class="dl-workflow-card-description">
+                        Find the required module using the search field or module categories.
+                    </p>
+
+                    <ul class="dl-workflow-checklist">
+                        <li>
+                            <i class="ri-check-line"></i>
+                            <span>Enable or disable available actions such as View, Create, Edit and Delete</span>
+                        </li>
+                        <li>
+                            <i class="ri-check-line"></i>
+                            <span>Options depend on what is offered for that module</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="dl-workflow-card-footer">
+                    <span>Workflow Phase 04</span>
+                </div>
+            </article>
+
+            <!-- Workflow Step 05 -->
+            <article class="dl-workflow-card">
+                <div class="dl-workflow-card-content">
+
+                    <div class="dl-workflow-card-top">
+                        <span class="dl-workflow-number">05</span>
+
+                        <div class="dl-workflow-icon">
+                            <i class="ri-save-3-line"></i>
+                        </div>
+                    </div>
+
+                    <h3 class="dl-workflow-card-title">
+                        Review and Save
+                    </h3>
+
+                    <p class="dl-workflow-card-description">
+                        Check the selected options and click Save Changes.
+                    </p>
+
+                    <ul class="dl-workflow-checklist">
+                        <li>
+                            <i class="ri-check-line"></i>
+                            <span>The chosen permissions are saved for the role</span>
+                        </li>
+                        <li>
+                            <i class="ri-check-line"></i>
+                            <span>Users assigned to that role receive its access rules</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="dl-workflow-card-footer">
+                    <span>Workflow Phase 05</span>
+                </div>
+            </article>
+
+            <!-- Workflow Step 06 -->
+            <article class="dl-workflow-card">
+                <div class="dl-workflow-card-content">
+
+                    <div class="dl-workflow-card-top">
+                        <span class="dl-workflow-number">06</span>
+
+                        <div class="dl-workflow-icon">
+                            <i class="ri-shield-check-line"></i>
+                        </div>
+                    </div>
+
+                    <h3 class="dl-workflow-card-title">
+                        Check User Access
+                    </h3>
+
+                    <p class="dl-workflow-card-description">
+                        When a user opens a protected module or action, the system checks the user’s role and permissions.
+                    </p>
+
+                    <ul class="dl-workflow-checklist">
+                        <li>
+                            <i class="ri-check-line"></i>
+                            <span>Users without the required permission cannot complete that protected action</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="dl-workflow-card-footer">
+                    <span>Workflow Phase 06</span>
+                </div>
+            </article>
+
+
+        </div>
+        </div>
+        <div class="et-container">
+        <div class="workflow-bottom">
+
+            <!-- Security Card -->
+            <div class="security-card">
+                <img src="./Assets/images/workflow-img.png" alt="workflow-img">
+
+                <div class="security-content">
+                    <h3>Access Protection</h3>
+
+                    <p>
+                        Protected routes check permissions before allowing actions. If a non-admin user lacks the required permission, access is denied.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Right Side -->
+            <div class="workflow-info">
+
+                <div class="stats-card">
+                    <h3>4 Roles</h3>
+
+                    <h4>Available User Roles</h4>
+
+                    <p>
+                        Available user roles include Admin, Accountant, Maintenance and Manager.
+                    </p>
+                </div>
+
+                <div class="workflow-content">
+                    <p>
+                        Explore a powerful collection of intelligent modules built to streamline your daily transport operations. Manage vehicles, drivers, trips, and business performance seamlessly through one unified platform.
+                    </p>
+
+                    <a href="#" class="workflow-btn">
+                        Explore All Modules <i class="ri-arrow-right-line"></i>
+                    </a>
+                </div>
+
+                <div class="info-card">
+                    <div class="info-icon">
+                       <i class="ri-bar-chart-2-fill"></i>
+                    </div>
+
+                    <span>
+                        Search modules quickly by name or category
+                    </span>
+                </div>
+
+                <div class="info-card">
+                    <div class="info-icon">
+                       <i class="ri-lock-unlock-line"></i>
+                    </div>
+
+                    <span>
+                        Protected actions check permissions before proceeding
+                    </span>
+                </div>
+
+            </div>
+
+        </div>
+    
+    </div>
+</section>
+<!--workflow section end-->
+
+
+<!--results section start-->
+<section id="benefits" class="results-section">
+
+    <div class="container">
+
+        <!-- Heading -->
+       <div class="heading-wrapper">
+
+            <span class="heading-tag">
+                Proven Advantages
+            </span>
+
+            <h2 class="heading-title heading-light">
+                Benefits of <span>User &amp; Permission Management</span>
+            </h2>
+
+            <p>
+                Give employees the access their responsibilities require, and keep everything else protected.
+            </p>
+
+        </div>
+
+        <!-- Cards -->
+
+        <div class="results-grid">
+
+            <div class="result-card">
+
+                <div class="result-icon">
+                    <i class="ri-shield-check-line"></i>
+                </div>
+
+                <h3>
+                    Better Access Control
+                </h3>
+
+                <p>
+                    Give employees access relevant to their responsibilities.
+                </p>
+
+            </div>
+
+            <div class="result-card">
+
+                <div class="result-icon">
+                    <i class="ri-error-warning-line"></i>
+                </div>
+
+                <h3>
+                    Reduced Accidental Changes
+                </h3>
+
+                <p>
+                    Limit editing or deleting records to authorized roles.
+                </p>
+
+            </div>
+
+            <div class="result-card">
+
+                <div class="result-icon">
+                    <i class="ri-team-line"></i>
+                </div>
+
+                <h3>
+                    Simpler Administration
+                </h3>
+
+                <p>
+                    Update permissions for a role rather than separately for every user.
+                </p>
+
+            </div>
+
+            <div class="result-card">
+
+                <div class="result-icon">
+                    <i class="ri-user-star-line"></i>
+                </div>
+
+                <h3>
+                    Clearer Team Responsibilities
+                </h3>
+
+                <p>
+                    Give accountants, maintenance staff and managers access according to their duties.
+                </p>
+
+            </div>
+
+            <div class="result-card">
+
+                <div class="result-icon">
+                    <i class="ri-search-eye-line"></i>
+                </div>
+
+                <h3>
+                    Easy Permission Review
+                </h3>
+
+                <p>
+                    Use search, categories and selected-permission views to understand existing access.
+                </p>
+
+            </div>
+
+            <div class="result-card">
+
+                <div class="result-icon">
+                    <i class="ri-lock-line"></i>
+                </div>
+
+                <h3>
+                    Safer Daily Operations
+                </h3>
+
+                <p>
+                    Protected actions check permissions before proceeding.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+</section>
+<!--results section end-->
+
+
+
+<!--transport-section start-->
+<section class="transport-section">
+    <div class="container">
+
+        <!-- Left Content -->
+    <div class="transport-container">   
+        <div class="heading-wrapper heading-wrap-left">
+                <span class="heading-tag">
+                   Transportation Management
+                </span>
+
+                <h2 class="heading-title">
+                   Manage Your Transportation <span> Operations Efficiently </span>
+                </h2>
+
+                <p>
+                    Track vehicles, manage drivers, monitor fuel usage, handle maintenance schedules, and streamline daily transportation operations from one centralized cloud platform.
+                </p>
+
+            </div>
+        <!-- Right Side -->
+        <div class="transport-image-wrapper">
+            <img src="./Assets/images/tms-img.png" alt="Transportation Dashboard" class="transport-image">
+            <!-- Decorative Shape -->
+            <div class="transport-shape"></div>
+            <!-- Floating Card -->
+            <div class="transport-card">
+                <ul class="transport-list">
+                    <li>
+                        <i class="ri-checkbox-circle-line"></i>
+                        <span>Real-time fleet and vehicle monitoring</span>
+                    </li>
+
+                    <li>
+                        <i class="ri-checkbox-circle-line"></i>
+                        <span>Driver management and attendance tracking</span>
+                    </li>
+
+                    <li>
+                        <i class="ri-checkbox-circle-line"></i>
+                        <span>Fuel logs and expense management</span>
+                    </li>
+
+                    <li>
+                        <i class="ri-checkbox-circle-line"></i>
+                        <span>Maintenance alerts and service scheduling</span>
+                    </li>
+
+                    <li>
+                        <i class="ri-checkbox-circle-line"></i>
+                        <span>Vehicle documents and compliance tracking</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+     </div>
+    </div>
+</section>
+<!--transport section end-->
+
+
+
+<!--dl-faq section end-->
+<section id="faq" class="dl-faq-section">
+    <div class="container">
+        <div class="heading-wrapper">
+
+            <span class="heading-tag">
+                Got Questions?
+            </span>
+
+            <h2 class="heading-title">
+              Frequently Asked <span>Questions</span>
+            </h2>
+
+            <p>
+                Everything you need to know about roles, permissions and protected actions in your software.
+            </p>
+           <!-- Feature Filters -->
+             <div class="dl-faq-filters">
+                <button class="dl-faq-filter active" type="button">All</button>
+                <button class="dl-faq-filter" type="button">Access</button>
+                <button class="dl-faq-filter" type="button">View Only</button>
+                <button class="dl-faq-filter" type="button">Team Access</button>
+                <button class="dl-faq-filter" type="button">Search</button>
+                <button class="dl-faq-filter" type="button">Admin</button>
+                <button class="dl-faq-filter" type="button">Role Changes</button>
+            </div>
+        </div>
+
+        <!-- FAQ List -->
+        <div class="dl-faq-list">
+
+            <!-- FAQ 1 -->
+            <div class="dl-faq-item active" data-category="access">
+                <button
+                    class="dl-faq-question"
+                    type="button"
+                    aria-expanded="true"
+                    aria-controls="dl-faq-answer-1"
+                >
+                    <span class="dl-faq-question-content">
+                        <span class="dl-faq-number">Q1</span>
+                        <span class="dl-faq-question-text">
+                            Can different employees have different access?
+                        </span>
+                    </span>
+
+                    <span class="dl-faq-arrow">
+                        <i class="ri-arrow-down-s-line"></i>
+                    </span>
+                </button>
+
+                <div class="dl-faq-answer" id="dl-faq-answer-1">
+                    <div class="dl-faq-answer-content">
+                        <p>
+                            Yes. Users can be assigned different roles, and each role can have a different set of permissions.
+                        </p>
+
+                        <div class="dl-faq-topic">
+                            <span>Topic: Access</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ 2 -->
+            <div class="dl-faq-item" data-category="view only">
+                <button
+                    class="dl-faq-question"
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="dl-faq-answer-2"
+                >
+                    <span class="dl-faq-question-content">
+                        <span class="dl-faq-number">Q2</span>
+                        <span class="dl-faq-question-text">
+                            Can I allow someone to view records without editing them?
+                        </span>
+                    </span>
+
+                    <span class="dl-faq-arrow">
+                        <i class="ri-arrow-down-s-line"></i>
+                    </span>
+                </button>
+
+                <div class="dl-faq-answer" id="dl-faq-answer-2">
+                    <div class="dl-faq-answer-content">
+                        <p>
+                            Yes, where the module provides separate View and Edit permissions.
+                        </p>
+
+                        <div class="dl-faq-topic">
+                            <span>Topic: View Only</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ 3 -->
+            <div class="dl-faq-item" data-category="team access">
+                <button
+                    class="dl-faq-question"
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="dl-faq-answer-3"
+                >
+                    <span class="dl-faq-question-content">
+                        <span class="dl-faq-number">Q3</span>
+                        <span class="dl-faq-question-text">
+                            How do I change access for an entire team?
+                        </span>
+                    </span>
+
+                    <span class="dl-faq-arrow">
+                        <i class="ri-arrow-down-s-line"></i>
+                    </span>
+                </button>
+
+                <div class="dl-faq-answer" id="dl-faq-answer-3">
+                    <div class="dl-faq-answer-content">
+                        <p>
+                            Select the corresponding role on the User &amp; Permission Management page, adjust its permissions, and save.
+                        </p>
+
+                        <div class="dl-faq-topic">
+                            <span>Topic: Team Access</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ 4 -->
+            <div class="dl-faq-item" data-category="search">
+                <button
+                    class="dl-faq-question"
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="dl-faq-answer-4"
+                >
+                    <span class="dl-faq-question-content">
+                        <span class="dl-faq-number">Q4</span>
+                        <span class="dl-faq-question-text">
+                            Can I find a module quickly?
+                        </span>
+                    </span>
+
+                    <span class="dl-faq-arrow">
+                        <i class="ri-arrow-down-s-line"></i>
+                    </span>
+                </button>
+
+                <div class="dl-faq-answer" id="dl-faq-answer-4">
+                    <div class="dl-faq-answer-content">
+                        <p>
+                            Yes. Use the search field or browse the grouped module categories.
+                        </p>
+
+                        <div class="dl-faq-topic">
+                            <span>Topic: Search</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ 5 -->
+            <div class="dl-faq-item" data-category="admin">
+                <button
+                    class="dl-faq-question"
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="dl-faq-answer-5"
+                >
+                    <span class="dl-faq-question-content">
+                        <span class="dl-faq-number">Q5</span>
+                        <span class="dl-faq-question-text">
+                            Does an Admin need permissions selected here?
+                        </span>
+                    </span>
+
+                    <span class="dl-faq-arrow">
+                        <i class="ri-arrow-down-s-line"></i>
+                    </span>
+                </button>
+
+                <div class="dl-faq-answer" id="dl-faq-answer-5">
+                    <div class="dl-faq-answer-content">
+                        <p>
+                            The application’s permission middleware allows users with the Admin role to pass those checks. The permission screen itself lists Accountant, Maintenance and Manager for editing.
+                        </p>
+
+                        <div class="dl-faq-topic">
+                            <span>Topic: Admin</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ 6 -->
+            <div class="dl-faq-item" data-category="role changes">
+                <button
+                    class="dl-faq-question"
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="dl-faq-answer-6"
+                >
+                    <span class="dl-faq-question-content">
+                        <span class="dl-faq-number">Q6</span>
+                        <span class="dl-faq-question-text">
+                            Can I change a user’s role?
+                        </span>
+                    </span>
+
+                    <span class="dl-faq-arrow">
+                        <i class="ri-arrow-down-s-line"></i>
+                    </span>
+                </button>
+
+                <div class="dl-faq-answer" id="dl-faq-answer-6">
+                    <div class="dl-faq-answer-content">
+                        <p>
+                            Yes. Authorized users can edit an existing account and change its assigned role from User Management.
+                        </p>
+
+                        <div class="dl-faq-topic">
+                            <span>Topic: Role Changes</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div>
+
+        <!-- FAQ Call to Action / Conclusion -->
+        <div class="dl-faq-cta">
+            <div class="dl-faq-cta-content">
+                <h3>Simplify User Access Management</h3>
+                <p>
+                        The User &amp; Permission Management Module lets businesses decide who can see and use different parts of the software. With role-based settings, module-wise permissions and simple access controls, teams can work with the information and actions they need—without giving everyone unrestricted access.
+                    </p>
+            </div>
+
+            <button class="dl-faq-cta-button" type="button" onclick="document.getElementById('simulator').scrollIntoView({behavior: 'smooth'})">
+                Try Live Permission Simulator
+            </button>
+        </div>
+
+    </div>
+</section>
+<!--dl-faq section end-->
+
+<!--footer section start-->
+<footer class="footer">
+
+    <!-- Newsletter -->
+    <div class="footer-newsletter">
+        <div class="container">
+
+            <div class="newsletter-wrapper">
+
+                <div class="newsletter-content">
+                    <h2>Stay ahead of the curve</h2>
+                    <p>
+                        Fleet management insights, product updates, and industry news.
+                    </p>
+                </div>
+
+                <form class="newsletter-form">
+
+                    <input
+                        type="email"
+                        placeholder="Enter your email"
+                    >
+
+                    <button type="submit">
+                        Subscribe
+
+                       <i class="ri-arrow-right-line"></i>
+
+                    </button>
+
+                </form>
+
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Footer Main -->
+
+    <div class="footer-main">
+
+        <div class="container">
+
+            <div class="footer-grid">
+
+                <!-- Left -->
+
+                <div class="footer-about">
+
+                    <a href="index.html" class="footer-logo">
+                         <img src="Assets/images/transportdesk-logo-dark.svg" alt="footer-logo">
+                    </a>
+
+                    <p>
+                        The intelligent transportation platform that puts fleet directors
+                        in complete control of their operations.
+                    </p>
+
+                    <div class="footer-social">
+
+                        <a href="#">
+                            <i class="ri-facebook-fill"></i>
+                        </a>
+
+                        <a href="#">
+                            <i class="ri-instagram-line"></i>
+                        </a>
+
+                        <a href="#">
+                            <i class="ri-twitter-line"></i>
+                        </a>
+
+                        <a href="#">
+                            <i class="ri-linkedin-fill"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <!-- Product -->
+
+                <div class="footer-links">
+
+                    <h3>Product</h3>
+
+                      <ul>
+        <li>
+            <a href="features.html" class="footer-link">Features</a>
+        </li>
+
+        <li>
+            <a href="modules.html" class="footer-link">Modules</a>
+        </li>
+
+        <li>
+            <a href="solutions.html" class="footer-link">Solutions</a>
+        </li>
+
+        <li>
+            <a href="reports.html" class="footer-link">Reports</a>
+        </li>
+
+        <li>
+            <a href="contact.html" class="footer-link">Contact</a>
+        </li>
+    </ul>
+
+                </div>
+
+                <!-- Resources -->
+
+                <div class="footer-links">
+
+                    <h3>Resources</h3>
+
+                    <ul>
+
+                        <li><a href="documentation.html" class="footer-link">Documentation</a></li>
+
+                        <li><a href="faq.html" class="footer-link">FAQ</a></li>
+
+                        <li><a href="privacy-policy.html" class="footer-link">Privacy Policy</a></li>
+
+                    </ul>
+
+                </div>
+
+                <!-- Support -->
+
+                <div class="footer-links">
+
+                    <h3>Support</h3>
+
+                    <ul>
+
+                        <li><a href="#" class="footer-link">Help Center</a></li>
+
+                        <li><a href="#" class="footer-link">Status</a></li>
+
+                        <li><a href="#" class="footer-link">Security</a></li>
+
+                    </ul>
+
+                </div>
+
+                <!-- Contact -->
+
+                <div class="footer-contact">
+
+                    <div class="contact-item">
+
+                        <div class="icon">
+                            <i class="ri-mail-line"></i>
+                        </div>
+
+                        <div>
+
+                            <span>Email</span>
+
+                            <a href="#">
+                                hello@transportdesk.net
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                    <div class="contact-item">
+
+                        <div class="icon">
+                            <i class="ri-phone-fill"></i>
+                        </div>
+
+                        <div>
+
+                            <span>Call</span>
+
+                            <a href="#">
+                                +1 (512) 555-0142
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                    <div class="contact-item">
+
+                        <div class="icon">
+                            <i class="ri-map-pin-line"></i>
+                        </div>
+
+                        <div>
+
+                            <span>Location</span>
+
+                            <p>India</p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Bottom -->
+
+    <div class="footer-bottom">
+
+        <div class="container">
+
+            <div class="bottom-wrapper">
+
+                <p>
+                    © 2026 All rights reserved.
+                </p>
+
+                <ul>
+
+                    <li><a href="#">Privacy Policy</a></li>
+
+                    <li><a href="#">Terms of Service</a></li>
+
+                    <li><a href="#">Cookie Policy</a></li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</footer>
+<!--footer section end-->
+
+<script src="./Assets/js/custom.js"></script>
+<script>
+(function () {
+    var $ = function (s, r) { return (r || document).querySelector(s); };
+    var $$ = function (s, r) { return Array.prototype.slice.call((r || document).querySelectorAll(s)); };
+    var body = $('#up-body');
+    if (!body) return;
+    var A = ['view', 'create', 'edit', 'delete'];
+    var CATS = [['Overview', [['Dashboard', ['view']]]],
+        ['Fleet Management', [['Vehicles', A], ['Drivers', A]]],
+        ['Maintenance', [['Maintenance Records', A]]],
+        ['Business', [['Vendors', A], ['Diesel Logs', A], ['Payments', ['view', 'create', 'edit']]]],
+        ['Lorry Receipts', [['Lorry Receipts', A]]],
+        ['Documents', [['Vehicle Documents', A]]],
+        ['Admin', [['Users', A], ['User Permissions', ['view', 'edit']]]]];
+    var saved = {
+        Accountant: { Dashboard: ['view'], Vehicles: ['view'], Vendors: ['view'], 'Diesel Logs': ['view'], Payments: ['view', 'create', 'edit'] },
+        Maintenance: { Dashboard: ['view'], Vehicles: ['view'], 'Maintenance Records': ['view', 'create', 'edit'], 'Vehicle Documents': ['view'] },
+        Manager: { Dashboard: ['view'], Vehicles: ['view', 'create', 'edit'], Drivers: ['view', 'create', 'edit'], Vendors: ['view'], 'Diesel Logs': ['view'], 'Vehicle Documents': ['view', 'create', 'edit'], 'Lorry Receipts': ['view', 'create', 'edit'] }
+    };
+    var clone = function (o) { return JSON.parse(JSON.stringify(o)); };
+    var esc = function (s) { return String(s).replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); };
+    var role = $('#up-role').value, work = clone(saved[role]);
+    var DEFAULT_NOTE = $('#up-note').textContent;
+    var has = function (m, a) { return (work[m] || []).indexOf(a) > -1; };
+    var offered = function (m) { var r = []; CATS.forEach(function (c) { c[1].forEach(function (x) { if (x[0] === m) r = x[1]; }); }); return r; };
+    function toggle(m, a, on) {
+        var arr = (work[m] || []).filter(function (x) { return x !== a; });
+        if (on) arr.push(a);
+        if (arr.length) work[m] = arr; else delete work[m];
+    }
+    function render() {
+        var q = $('#up-search').value.toLowerCase().trim(), cat = $('#up-cat').value, hide = $('#up-hide').checked, html = '';
+        CATS.forEach(function (c) {
+            if (cat && c[0] !== cat) return;
+            var mods = c[1].filter(function (m) { return (!q || m[0].toLowerCase().indexOf(q) > -1) && (!hide || (work[m[0]] || []).length); });
+            if (!mods.length) return;
+            var all = mods.every(function (m) { return m[1].every(function (a) { return has(m[0], a); }); });
+            html += '<tr><td colspan="6"><strong>' + c[0] + '</strong> &nbsp; <label class="dl-checkbox-label"><input type="checkbox" data-sec="' + c[0] + '"' + (all ? ' checked' : '') + '><span>Select all in section</span></label></td></tr>';
+            mods.forEach(function (m) {
+                var n = m[0];
+                html += '<tr><td><div class="dl-vehicle-name"><i class="ri-apps-2-fill"></i><span>' + esc(n) + '</span></div></td>' +
+                    A.map(function (a) {
+                        return m[1].indexOf(a) > -1 ? '<td><input type="checkbox" data-mod="' + esc(n) + '" data-a="' + a + '"' + (has(n, a) ? ' checked' : '') + '></td>' : '<td><span class="dx-muted">—</span></td>';
+                    }).join('') +
+                    '<td><input type="checkbox" data-row="' + esc(n) + '"' + (m[1].every(function (a) { return has(n, a); }) ? ' checked' : '') + '></td></tr>';
+            });
+        });
+        body.innerHTML = html || '<tr><td colspan="6" class="dl-text-center">No modules match.</td></tr>';
+        var total = 0, assigned = Object.keys(work).length, actions = 0;
+        CATS.forEach(function (c) { total += c[1].length; });
+        Object.keys(work).forEach(function (k) { actions += work[k].length; });
+        $('#up-total').textContent = total;
+        $('#up-unassigned').textContent = total - assigned;
+        $('#up-assigned').textContent = assigned;
+        $('#up-card-name').textContent = role;
+        $('#up-card-note').textContent = actions + ' permissions enabled';
+        $('#up-f-label').textContent = role + ' · ' + assigned + ' modules assigned';
+        $('#up-f-count').textContent = actions + ' actions enabled';
+    }
+    body.addEventListener('change', function (ev) {
+        var t = ev.target;
+        if (t.hasAttribute('data-a')) toggle(t.getAttribute('data-mod'), t.getAttribute('data-a'), t.checked);
+        else if (t.hasAttribute('data-row')) { var n = t.getAttribute('data-row'); offered(n).forEach(function (a) { toggle(n, a, t.checked); }); }
+        else if (t.hasAttribute('data-sec')) {
+            CATS.forEach(function (c) { if (c[0] === t.getAttribute('data-sec')) c[1].forEach(function (m) { m[1].forEach(function (a) { toggle(m[0], a, t.checked); }); }); });
+        }
+        render();
+    });
+    function load() { role = $('#up-role').value; work = clone(saved[role]); render(); }
+    $('#up-role').addEventListener('change', load);
+    $('#up-reset').addEventListener('click', load);
+    ['#up-search', '#up-cat', '#up-hide'].forEach(function (s) { $(s).addEventListener('input', render); $(s).addEventListener('change', render); });
+    $('#up-save').addEventListener('click', function () {
+        if (!work.Dashboard) work.Dashboard = ['view'];
+        saved[role] = clone(work);
+        render();
+        var b = $('#up-save'), o = b.innerHTML;
+        b.innerHTML = '<i class="ri-check-line"></i> Changes Saved';
+        $('#up-note').textContent = 'Saved for the ' + role + ' role. Dashboard access is included. Users with this role receive these rules.';
+        setTimeout(function () { b.innerHTML = o; $('#up-note').textContent = DEFAULT_NOTE; }, 2200);
+    });
+    var tabs = $$('.dl-view-tab'), prof = $('[data-x="profile"]');
+    tabs.forEach(function (t, i) {
+        t.addEventListener('click', function () {
+            tabs.forEach(function (x) { x.classList.remove('dl-view-tab-active'); });
+            t.classList.add('dl-view-tab-active');
+            if (prof) prof.classList.toggle('dx-hidden', i === 1);
+        });
+    });
+    render();
+})();
+</script>
+</body>
+</html>

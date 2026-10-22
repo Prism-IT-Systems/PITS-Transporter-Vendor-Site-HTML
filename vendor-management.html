@@ -1,0 +1,2326 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Vendor Management Module | TransportDesk Fleet Solutions</title>
+    <meta name="description" content="Manage supplier profiles, vendor types, contacts and payment information in one place. Create vendor profiles, categorize suppliers, search and filter the vendor list, and get duplicate warnings with the TransportDesk Vendor Management Module.">
+
+    <!-- Remix Icon -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" />
+
+    <!-- Swiper -->
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+
+    <!-- Lenis -->
+    <link rel="stylesheet"
+        href="https://unpkg.com/lenis@1.3.23/dist/lenis.css">
+
+    <!-- Tailwind Output CSS -->
+     <link href="./Assets/css/output.css" rel="stylesheet">
+    <!-- Vendor module additions (pills) -->
+    <style>
+        .vd-pill{display:inline-block;margin:.1rem .2rem .1rem 0;padding:.15rem .6rem;border-radius:999px;font-size:.75rem;font-weight:600;white-space:nowrap;background:#f1f5f9;color:#334155}
+        .vd-status{display:inline-block;padding:.2rem .65rem;border-radius:999px;font-size:.75rem;font-weight:600}
+        .vd-active{background:#dcfce7;color:#15803d}
+        .vd-inactive{background:#e5e7eb;color:#4b5563}
+        .vd-muted{font-size:.8rem;opacity:.7}
+        .vd-hidden{display:none!important}
+    </style>
+
+</head>
+<body>
+
+<!--Header Section start-->
+<header class="main-header">
+    <div class="container">
+
+        <div class="header-inner">
+
+            <a href="index.html" class="header-logo">
+                <img src="Assets/images/transportdesk-logo.svg" alt="Logo">
+            </a>
+
+            <nav class="main-navigation" id="mobileMenu">
+
+                <div class="menu-circle"></div>
+
+                <ul class="navigation-links">
+                    <li><a href="index.html" class="navigation-link">Home</a></li>
+                    <li><a href="features.html" class="navigation-link">Features</a></li>
+                    <li><a href="modules.html" class="navigation-link active">Modules</a></li>
+                    <li><a href="reports.html" class="navigation-link">Resources</a></li>
+                    <li><a href="contact.html" class="navigation-link">Contact</a></li>
+                </ul>
+
+                <div class="mobile-header-right">
+                    <a href="#" class="login-btn">Login</a>
+                    <a href="#" class="demo-btn">Book Demo</a>
+                </div>
+
+            </nav>
+
+            <div class="header-right">
+                <a href="#" class="login-btn">Login</a>
+                <a href="#" class="demo-btn">Book Demo</a>
+            </div>
+
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+        </div>
+
+    </div>
+</header>
+
+<!-- Add this after header -->
+<div class="menu-overlay" id="menuOverlay"></div>
+<!--Header section End-->
+
+<section id="overview" class="dl-overview-section">
+    <div class="dl-overview-glow"></div>
+    <div class="dl-overview-pattern"></div>
+
+    <div class="container">
+        <div class="dl-overview-grid">
+
+            <!-- Left Content -->
+            <div class="dl-overview-content">
+
+                <div class="dl-overview-badge">
+                    <span class="dl-status-dot"></span>
+                    <span>Enterprise Fleet Management</span>
+                    <span class="dl-badge-divider">|</span>
+                    <span class="dl-badge-highlight">Vendor Management Module</span>
+                </div>
+
+                <h1 class="dl-overview-title">
+                    Smart Transportation &amp;
+                    <span class="dl-gradient-text">Vendor Management</span>
+                    Platform
+                </h1>
+
+                <p class="dl-overview-description">
+                    Businesses regularly work with suppliers for diesel, tyres,
+                    batteries, repairs, insurance, toll services and other vehicle
+                    needs. The Vendor Management Module brings supplier details into
+                    one convenient place. Create vendor profiles, categorize vendors
+                    by the services they provide, search existing suppliers and
+                    review the payment information linked to each vendor.
+                </p>
+
+                <!-- Action Buttons -->
+                <div class="dl-overview-actions">
+
+                    <button type="button" class="btn-primary">
+                        <span>Try Live Vendor Simulator</span>
+                        <i class="ri-arrow-right-line"></i>
+                    </button>
+
+                    <button type="button" class="dl-btn-demo">
+                        <span class="dl-play-icon">
+                            <i class="ri-play-fill"></i>
+                        </span>
+                        <span>Watch Demo Video</span>
+                    </button>
+                </div>
+
+                <!-- Statistics -->
+                <div class="dl-overview-stats">
+
+                    <div class="dl-stat-item">
+                        <div class="dl-stat-number">9</div>
+                        <div class="dl-stat-label">Vendor Types</div>
+                    </div>
+
+                    <div class="dl-stat-item">
+                        <div class="dl-stat-number dl-stat-red">12</div>
+                        <div class="dl-stat-label">Core Features</div>
+                    </div>
+
+                    <div class="dl-stat-item">
+                        <div class="dl-stat-number dl-stat-green">6</div>
+                        <div class="dl-stat-label">Simple Steps</div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Right Image / Fuel Dashboard -->
+            <div class="dl-overview-visual">
+
+                <div class="dl-visual-card">
+
+                    <img
+                        src="Assets/images/hero_fleet_dispatch_1792482270822.jpg"
+                        alt="Fleet suppliers managed from one system"
+                        class="dl-visual-image"
+                    >
+
+                    <div class="dl-visual-overlay"></div>
+
+                    <!-- Image Top Information -->
+                    <div class="dl-visual-topbar">
+
+                        <div class="dl-live-label">
+                            <span class="dl-live-dot"></span>
+                            <span>Vendor Profile Overview</span>
+                        </div>
+
+                        <div class="dl-fuel-rate">
+                            ABC Petroleum
+                        </div>
+
+                    </div>
+
+                    <!-- Fuel Slip Information -->
+                    <div class="dl-fuel-slip">
+
+                        <div class="dl-slip-header">
+                            <span class="dl-slip-title">
+                                Sample Vendor Record · Diesel Supplier
+                            </span>
+
+                            <span class="dl-slip-status">
+                                Profile Saved
+                            </span>
+                        </div>
+
+                        <div class="dl-slip-stats">
+
+                            <div class="dl-slip-stat">
+                                <span class="dl-slip-label">Contact</span>
+                                <span class="dl-slip-value">Mr. Shah</span>
+                            </div>
+
+                            <div class="dl-slip-stat">
+                                <span class="dl-slip-label">Vendor Types</span>
+                                <span class="dl-slip-value dl-slip-red">2 Types</span>
+                            </div>
+
+                            <div class="dl-slip-stat">
+                                <span class="dl-slip-label">Status</span>
+                                <span class="dl-slip-value dl-slip-green">Active</span>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<section class="dl-trusted-section">
+    <div class="dl-trusted-heading">
+        <span>
+            Organize Diesel, Tyre, Battery, Repairs, Insurance, Toll &amp; More Suppliers in One Place
+        </span>
+    </div>
+
+    <div class="dl-trusted-marquee">
+        <!-- Left fade -->
+        <div class="dl-trusted-fade dl-trusted-fade-left"></div>
+
+        <!-- Right fade -->
+        <div class="dl-trusted-fade dl-trusted-fade-right"></div>
+
+        <div class="dl-trusted-track">
+
+            <!-- First group -->
+            <div class="dl-trusted-group">
+                <div class="dl-trusted-item">
+                    <span class="dl-trusted-dot"></span>
+                    <span class="dl-trusted-name">Tyre Suppliers</span>
+                </div>
+
+                <div class="dl-trusted-item">
+                    <span class="dl-trusted-dot"></span>
+                    <span class="dl-trusted-name">Battery Suppliers</span>
+                </div>
+
+                <div class="dl-trusted-item">
+                    <span class="dl-trusted-dot"></span>
+                    <span class="dl-trusted-name">Diesel Suppliers</span>
+                </div>
+
+                <div class="dl-trusted-item">
+                    <span class="dl-trusted-dot"></span>
+                    <span class="dl-trusted-name">Fuel Card Providers</span>
+                </div>
+
+                <div class="dl-trusted-item">
+                    <span class="dl-trusted-dot"></span>
+                    <span class="dl-trusted-name">Repairs &amp; Workshops</span>
+                </div>
+
+                <div class="dl-trusted-item">
+                    <span class="dl-trusted-dot"></span>
+                    <span class="dl-trusted-name">RTO Services</span>
+                </div>
+
+                <div class="dl-trusted-item">
+                    <span class="dl-trusted-dot"></span>
+                    <span class="dl-trusted-name">Insurance Providers</span>
+                </div>
+
+                <div class="dl-trusted-item">
+                    <span class="dl-trusted-dot"></span>
+                    <span class="dl-trusted-name">Refrigeration Services</span>
+                </div>
+
+                <div class="dl-trusted-item">
+                    <span class="dl-trusted-dot"></span>
+                    <span class="dl-trusted-name">Toll Services</span>
+                </div>
+
+                <div class="dl-trusted-item">
+                    <span class="dl-trusted-dot"></span>
+                    <span class="dl-trusted-name">GST Information</span>
+                </div>
+
+                <div class="dl-trusted-item">
+                    <span class="dl-trusted-dot"></span>
+                    <span class="dl-trusted-name">Payment Overview</span>
+                </div>
+
+                <div class="dl-trusted-item">
+                    <span class="dl-trusted-dot"></span>
+                    <span class="dl-trusted-name">Duplicate Check</span>
+                </div>
+            </div>
+
+            <!-- Duplicate group for seamless looping -->
+            <div class="dl-trusted-group" aria-hidden="true">
+                <div class="dl-trusted-item">
+                    <span class="dl-trusted-dot"></span>
+                    <span class="dl-trusted-name">Tyre Suppliers</span>
+                </div>
+
+                <div class="dl-trusted-item">
+                    <span class="dl-trusted-dot"></span>
+                    <span class="dl-trusted-name">Battery Suppliers</span>
+                </div>
+
+                <div class="dl-trusted-item">
+                    <span class="dl-trusted-dot"></span>
+                    <span class="dl-trusted-name">Diesel Suppliers</span>
+                </div>
+
+                <div class="dl-trusted-item">
+                    <span class="dl-trusted-dot"></span>
+                    <span class="dl-trusted-name">Fuel Card Providers</span>
+                </div>
+
+                <div class="dl-trusted-item">
+                    <span class="dl-trusted-dot"></span>
+                    <span class="dl-trusted-name">Repairs &amp; Workshops</span>
+                </div>
+
+                <div class="dl-trusted-item">
+                    <span class="dl-trusted-dot"></span>
+                    <span class="dl-trusted-name">RTO Services</span>
+                </div>
+
+                <div class="dl-trusted-item">
+                    <span class="dl-trusted-dot"></span>
+                    <span class="dl-trusted-name">Insurance Providers</span>
+                </div>
+
+                <div class="dl-trusted-item">
+                    <span class="dl-trusted-dot"></span>
+                    <span class="dl-trusted-name">Refrigeration Services</span>
+                </div>
+
+                <div class="dl-trusted-item">
+                    <span class="dl-trusted-dot"></span>
+                    <span class="dl-trusted-name">Toll Services</span>
+                </div>
+
+                <div class="dl-trusted-item">
+                    <span class="dl-trusted-dot"></span>
+                    <span class="dl-trusted-name">GST Information</span>
+                </div>
+
+                <div class="dl-trusted-item">
+                    <span class="dl-trusted-dot"></span>
+                    <span class="dl-trusted-name">Payment Overview</span>
+                </div>
+
+                <div class="dl-trusted-item">
+                    <span class="dl-trusted-dot"></span>
+                    <span class="dl-trusted-name">Duplicate Check</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<section class="dl-demo-section">
+    <div class="dl-demo-glow"></div>
+
+    <div class="dl-container">
+
+        <!-- Section Heading -->
+        <div class="heading-wrapper">
+
+            <span class="heading-tag">
+                Interactive Video Demonstration
+            </span>
+
+            <h2 class="heading-title">
+             Watch How
+                <span>Vendor Management</span>
+                Works
+            </h2>
+
+            <p>
+                Watch a short demonstration to learn how to add a vendor, choose vendor types, save the contact details, search for a supplier, edit the profile and review available payment information.
+            </p>
+        </div>
+
+        <!-- Demo Content -->
+        <div class="dl-demo-grid">
+
+            <!-- Video Preview -->
+            <div class="dl-demo-video-column">
+
+                <div class="dl-video-card">
+
+                    <!-- Video Browser Header -->
+                    <div class="dl-video-toolbar">
+
+                        <div class="dl-video-toolbar-left">
+                            <span class="dl-window-dot dl-dot-red"></span>
+                            <span class="dl-window-dot dl-dot-yellow"></span>
+                            <span class="dl-window-dot dl-dot-green"></span>
+
+                            <span class="dl-video-filename">
+                                vendor_management_module_demo.mp4
+                            </span>
+                        </div>
+
+                        <span class="dl-video-quality">
+                            Demo Video
+                        </span>
+
+                    </div>
+
+                    <!-- Video Thumbnail -->
+                    <div class="dl-video-preview">
+
+                        <img
+                            src="Assets/images/dashboard.png"
+                            alt="Vendor Management demonstration video preview"
+                            class="dl-video-thumbnail"
+                        >
+
+                        <div class="dl-video-overlay"></div>
+
+                        <button
+                            type="button"
+                            class="dl-video-play"
+                            aria-label="Play demonstration video"
+                        >
+                            <i class="ri-play-fill"></i>
+                            <span class="dl-video-ping"></span>
+                        </button>
+
+                        <!-- Video Information -->
+                        <div class="dl-video-meta">
+
+                            <div class="dl-video-meta-left">
+                                <span class="dl-video-timestamp">
+                                    Timestamp: 00:00
+                                </span>
+
+                                <span class="dl-video-current-chapter">
+                                    Adding a New Vendor
+                                </span>
+                            </div>
+
+                            <a
+                                href="#"
+                                class="dl-video-external"
+                            >
+                                <span>External Link</span>
+                                <i class="ri-external-link-line"></i>
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                    <!-- Video Footer -->
+                    <div class="dl-video-footer">
+
+                        <div class="dl-video-footer-left">
+
+                            <button
+                                type="button"
+                                class="dl-watch-button"
+                            >
+                                <i class="ri-play-circle-line"></i>
+                                <span>Watch Full Walkthrough</span>
+                            </button>
+
+                            <span class="dl-video-footer-note">
+                                Demo video will be displayed here
+                            </span>
+
+                        </div>
+
+                        <a
+                            href="#"
+                            class="dl-video-source"
+                        >
+                            <span>Direct Source</span>
+                            <i class="ri-arrow-right-up-line"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+</section>
+
+
+<section id="simulator" class="dl-simulator-section">
+    <div class="dl-container">
+
+        <!-- Section Heading -->
+        <div class="dl-simulator-header">
+             <div class="heading-wrapper heading-wrap-left">
+
+            <span class="heading-tag">
+                Practical Example
+            </span>
+
+            <h2 class="heading-title">
+              Practical Example: <span>Adding a Diesel Supplier</span>
+            </h2>
+
+            <p>
+              Suppose ABC Transport starts purchasing fuel from a new supplier. An authorized office user
+                    creates a vendor profile with the example details below. Try searching, filtering by type,
+                    sorting, editing, or adding the same vendor again to see the duplicate check. The sample
+                    information is for illustration only.
+            </p>
+        </div>
+
+            <div class="dl-view-switcher">
+                <button type="button" class="dl-view-tab dl-view-tab-active">
+                    <i class="ri-store-2-line"></i>
+                    Vendor Profile View
+                </button>
+
+                <button type="button" class="dl-view-tab">
+                    <i class="ri-list-check-2"></i>
+                    Vendor List View
+                </button>
+            </div>
+        </div>
+        <!-- Summary Statistics -->
+        <div class="dl-stats-grid">
+
+            <div class="dl-stat-card">
+                <div class="dl-stat-label">
+                    <span>Total Vendors</span>
+                    <i class="ri-list-check"></i>
+                </div>
+                <div class="dl-stat-value">
+                    <b id="vd-total" style="font:inherit">4</b> <span>Vendors</span>
+                </div>
+                <p class="dl-stat-note">Across all vendor types</p>
+            </div>
+
+            <div class="dl-stat-card">
+                <div class="dl-stat-label">
+                    <span>Inactive Vendors</span>
+                    <i class="ri-pause-circle-line dl-red-icon"></i>
+                </div>
+                <div class="dl-stat-value dl-red-text">
+                    <b id="vd-inactive" style="font:inherit">1</b> <span>Inactive</span>
+                </div>
+                <p class="dl-stat-note">Not currently in use</p>
+            </div>
+
+            <div class="dl-stat-card">
+                <div class="dl-stat-label">
+                    <span>Active Vendors</span>
+                    <i class="ri-checkbox-circle-line dl-green-icon"></i>
+                </div>
+                <div class="dl-stat-value dl-green-text">
+                    <b id="vd-active" style="font:inherit">3</b> <span>Active</span>
+                </div>
+                <p class="dl-stat-note">Currently in use</p>
+            </div>
+
+            <div class="dl-stat-card dl-stat-card-total">
+                <div class="dl-stat-label">
+                    <span>Vendor Profile</span>
+                    <span class="dl-status-dot"></span>
+                </div>
+                <div class="dl-stat-value dl-stat-total-value" id="vd-card-name">ABC Petroleum</div>
+                <p class="dl-stat-note dl-green-text" id="vd-card-note">Diesel, Fuel Card · Active</p>
+            </div>
+
+        </div>
+
+        <!-- Calculator Panel -->
+        <div class="dl-calculator-panel">
+
+            <!-- Vendor Information -->
+            <div class="dl-bill-master" data-vd="profile">
+
+                <div class="dl-bill-master-header">
+                    <div class="dl-bill-heading">
+                        <span id="vd-step">Step 2: Add a New Vendor</span>
+                        <span class="dl-heading-separator">·</span>
+                        <span class="dl-invoice-number">Select Vendor Type(s)</span>
+                    </div>
+
+                    <div class="dl-receipt-actions">
+                        <button type="button" class="dl-secondary-button" id="vd-check">
+                            <i class="ri-file-search-line"></i>
+                            <span>Check for Duplicates</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="dl-bill-fields">
+
+                    <div class="dl-form-group">
+                        <label for="vd-name">Vendor Name</label>
+                        <input id="vd-name" class="dl-form-control" type="text" value="ABC Petroleum" placeholder="">
+                    </div>
+
+                    <div class="dl-form-group">
+                        <label for="vd-contact">Contact Person</label>
+                        <input id="vd-contact" class="dl-form-control" type="text" value="Mr. Shah" placeholder="">
+                    </div>
+
+                    <div class="dl-form-group">
+                        <label for="vd-phone">Phone</label>
+                        <input id="vd-phone" class="dl-form-control" type="text" value="Demo contact number" placeholder="">
+                    </div>
+
+                    <div class="dl-form-group">
+                        <label for="vd-email">Email</label>
+                        <input id="vd-email" class="dl-form-control" type="email" value="supplier@example.com" placeholder="">
+                    </div>
+
+                    <div class="dl-form-group">
+                        <label for="vd-gst">GST Number (optional)</label>
+                        <input id="vd-gst" class="dl-form-control" type="text" value="Sample GST reference" placeholder="">
+                    </div>
+
+                    <div class="dl-form-group">
+                        <label for="vd-address">Business Address</label>
+                        <input id="vd-address" class="dl-form-control" type="text" value="" placeholder="Optional">
+                    </div>
+
+                    <div class="dl-form-group">
+                        <label for="vd-status">Vendor Status</label>
+                        <select id="vd-status" class="dl-form-control"><option>Active</option><option>Inactive</option></select>
+                    </div>
+
+                </div>
+
+                <div class="dl-bill-options">
+                    <label class="dl-checkbox-label">
+                        <input type="checkbox" class="vd-type" value="Tyre">
+                        <span>Tyre</span>
+                    </label>
+                    <label class="dl-checkbox-label">
+                        <input type="checkbox" class="vd-type" value="Battery">
+                        <span>Battery</span>
+                    </label>
+                    <label class="dl-checkbox-label">
+                        <input type="checkbox" class="vd-type" checked value="Diesel">
+                        <span>Diesel</span>
+                    </label>
+                    <label class="dl-checkbox-label">
+                        <input type="checkbox" class="vd-type" checked value="Fuel Card">
+                        <span>Fuel Card</span>
+                    </label>
+                    <label class="dl-checkbox-label">
+                        <input type="checkbox" class="vd-type" value="Repairs">
+                        <span>Repairs</span>
+                    </label>
+                    <label class="dl-checkbox-label">
+                        <input type="checkbox" class="vd-type" value="RTO">
+                        <span>RTO</span>
+                    </label>
+                    <label class="dl-checkbox-label">
+                        <input type="checkbox" class="vd-type" value="Insurance">
+                        <span>Insurance</span>
+                    </label>
+                    <label class="dl-checkbox-label">
+                        <input type="checkbox" class="vd-type" value="Refrigeration">
+                        <span>Refrigeration</span>
+                    </label>
+                    <label class="dl-checkbox-label">
+                        <input type="checkbox" class="vd-type" value="Toll">
+                        <span>Toll</span>
+                    </label>
+                    <span class="dl-formula-note" id="vd-note">
+                        Choose at least one vendor type · One vendor can belong to several categories
+                    </span>
+                </div>
+
+            </div>
+
+            <!-- Table Toolbar -->
+            <div class="dl-table-toolbar">
+
+                <div class="dl-search-box">
+                    <i class="ri-search-line"></i>
+                    <input type="search" id="vd-search" placeholder="Search vendor name...">
+                </div>
+
+                <div class="dl-toolbar-actions">
+                    <select id="vd-filter" class="dl-form-control" aria-label="Filter by vendor type">
+                        <option value="">All Vendor Types</option><option>Tyre</option><option>Battery</option><option>Diesel</option><option>Fuel Card</option><option>Repairs</option><option>RTO</option><option>Insurance</option><option>Refrigeration</option><option>Toll</option>
+                    </select>
+
+                    <button type="button" class="dl-action-button" id="vd-sort">
+                        <i class="ri-sort-asc dl-red-icon"></i>
+                        <span>Sort: Recently Added</span>
+                    </button>
+
+                    <button type="button" class="dl-primary-button" id="vd-add">
+                        <i class="ri-save-3-line"></i>
+                        <span>Add Vendor</span>
+                    </button>
+                </div>
+
+            </div>
+
+            <!-- Vendor List Table -->
+            <div class="dl-table-wrapper">
+                <table class="dl-vehicle-table">
+                    <thead>
+                        <tr>
+                            <th>Vendor Details</th>
+                            <th>Phone</th>
+                            <th>Email</th>
+                            <th>GST Number</th>
+                            <th>Vendor Types</th>
+                            <th>Status</th>
+                            <th>Payments</th>
+                            <th class="dl-text-center">Action</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="vd-body">
+                        <tr data-id="4">
+                            <td>
+                                <div class="dl-vehicle-name">
+                                    <i class="ri-store-2-fill"></i>
+                                    <span>ABC Petroleum</span>
+                                </div>
+                                <div class="dl-vehicle-meta">Contact: <span>Mr. Shah</span></div>
+                            </td>
+                            <td>Demo contact number</td>
+                            <td>supplier@example.com</td>
+                            <td>Sample GST reference</td>
+                            <td><span class="vd-pill">Diesel</span><span class="vd-pill">Fuel Card</span></td>
+                            <td><span class="vd-status vd-active">Active</span></td>
+                            <td><span class="vd-muted">No linked payments yet</span></td>
+                            <td class="dl-text-center">
+                                <button type="button" class="dl-secondary-button vd-edit" title="Edit vendor"><i class="ri-edit-line"></i></button>
+                                <button type="button" class="dl-delete-button vd-del" title="Delete vendor"><i class="ri-delete-bin-line"></i></button>
+                            </td>
+                        </tr>
+                        <tr data-id="3">
+                            <td>
+                                <div class="dl-vehicle-name">
+                                    <i class="ri-store-2-fill"></i>
+                                    <span>Sample Insurance Agency</span>
+                                </div>
+                                <div class="dl-vehicle-meta">Contact: <span>Demo contact 3</span></div>
+                            </td>
+                            <td>Demo number 3</td>
+                            <td>insurance@example.com</td>
+                            <td>Sample GST 3</td>
+                            <td><span class="vd-pill">Insurance</span></td>
+                            <td><span class="vd-status vd-active">Active</span></td>
+                            <td><span class="vd-muted">No linked payments yet</span></td>
+                            <td class="dl-text-center">
+                                <button type="button" class="dl-secondary-button vd-edit" title="Edit vendor"><i class="ri-edit-line"></i></button>
+                                <button type="button" class="dl-delete-button vd-del" title="Delete vendor"><i class="ri-delete-bin-line"></i></button>
+                            </td>
+                        </tr>
+                        <tr data-id="2">
+                            <td>
+                                <div class="dl-vehicle-name">
+                                    <i class="ri-store-2-fill"></i>
+                                    <span>Sample Repairs Workshop</span>
+                                </div>
+                                <div class="dl-vehicle-meta">Contact: <span>Demo contact 2</span></div>
+                            </td>
+                            <td>Demo number 2</td>
+                            <td>repairs@example.com</td>
+                            <td>Sample GST 2</td>
+                            <td><span class="vd-pill">Repairs</span><span class="vd-pill">Battery</span></td>
+                            <td><span class="vd-status vd-inactive">Inactive</span></td>
+                            <td><span class="vd-muted">No linked payments yet</span></td>
+                            <td class="dl-text-center">
+                                <button type="button" class="dl-secondary-button vd-edit" title="Edit vendor"><i class="ri-edit-line"></i></button>
+                                <button type="button" class="dl-delete-button vd-del" title="Delete vendor"><i class="ri-delete-bin-line"></i></button>
+                            </td>
+                        </tr>
+                        <tr data-id="1">
+                            <td>
+                                <div class="dl-vehicle-name">
+                                    <i class="ri-store-2-fill"></i>
+                                    <span>Sample Tyre Traders</span>
+                                </div>
+                                <div class="dl-vehicle-meta">Contact: <span>Demo contact 1</span></div>
+                            </td>
+                            <td>Demo number 1</td>
+                            <td>tyres@example.com</td>
+                            <td>Sample GST 1</td>
+                            <td><span class="vd-pill">Tyre</span></td>
+                            <td><span class="vd-status vd-active">Active</span></td>
+                            <td><span class="vd-muted">No linked payments yet</span></td>
+                            <td class="dl-text-center">
+                                <button type="button" class="dl-secondary-button vd-edit" title="Edit vendor"><i class="ri-edit-line"></i></button>
+                                <button type="button" class="dl-delete-button vd-del" title="Delete vendor"><i class="ri-delete-bin-line"></i></button>
+                            </td>
+                        </tr>
+                    </tbody>
+
+                    <tfoot>
+                        <tr>
+                            <td>
+                                <span class="dl-footer-label" id="vd-f-label">
+                                    Vendor List (4 Vendors)
+                                </span>
+                            </td>
+                            <td class="dl-footer-period">Search by vendor name</td>
+                            <td class="dl-text-right dl-footer-liters" id="vd-f-active">3 Active</td>
+                            <td class="dl-text-right dl-footer-average" id="vd-f-inactive">1 Inactive</td>
+                            <td class="dl-text-right dl-footer-total" id="vd-f-shown">4 Shown</td>
+                            <td colspan="3" class="dl-text-right">
+                                <button type="button" class="dl-primary-button" id="vd-add2">
+                                    Add Vendor
+                                </button>
+                            </td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+
+            <!-- Information Footer -->
+            <div class="dl-calculator-footer">
+
+                <div class="dl-documentation-note">
+                    <i class="ri-information-line"></i>
+                    <span>
+                        <strong>Documentation Rule:</strong>
+                        Payments themselves are managed through the application’s
+                        separate payment workflow.
+                    </span>
+                </div>
+
+                <div class="dl-supported-formats">
+                    Vendor Types: Tyre, Battery, Diesel, Fuel Card, Repairs, RTO, Insurance, Refrigeration, Toll
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+
+
+<!--dl feature section start-->
+<section id="features" class="dl-features-section">
+
+    <div class="container">
+
+        <!-- Section Heading -->
+     <div class="heading-wrapper">
+
+            <span class="heading-tag">
+                Complete solution
+            </span>
+
+            <h2 class="heading-title">
+              Vendor Management <span>Features</span>
+            </h2>
+
+            <p>
+                Manage Supplier Profiles, Vendor Types, Contacts and Payment Information in One Place.
+            </p>
+           <!-- Feature Filters -->
+            <div class="dl-features-filters">
+
+                <button type="button"
+                    class="dl-filter-btn is-active"
+                    data-filter="all">
+                    All Features (12)
+                </button>
+
+                <button type="button"
+                    class="dl-filter-btn"
+                    data-filter="profile">
+                    Profiles &amp; Contacts
+                </button>
+
+                <button type="button"
+                    class="dl-filter-btn"
+                    data-filter="types">
+                    Types, Search &amp; Filters
+                </button>
+
+                <button type="button"
+                    class="dl-filter-btn"
+                    data-filter="control">
+                    Checks, Payments &amp; Access
+                </button>
+
+            </div>
+        </div>
+
+        <!-- Feature Cards -->
+        <div class="dl-features-grid">
+
+            <!-- Feature 4.1 -->
+            <article class="dl-feature-card" data-category="profile">
+                <div class="dl-feature-card-content">
+                    <div class="dl-feature-icon">
+                        <i class="ri-store-2-line"></i>
+                    </div>
+
+                    <div class="dl-feature-card-heading">
+                        <h3>Vendor Profile Management</h3>
+                    </div>
+
+                    <p>
+                        Store essential supplier details such as vendor name, contact person, phone, email, GST number and address. Staff can retrieve the information from a single saved profile.
+                    </p>
+                </div>
+            </article>
+
+            <!-- Feature 4.2 -->
+            <article class="dl-feature-card" data-category="types">
+                <div class="dl-feature-card-content">
+                    <div class="dl-feature-icon">
+                        <i class="ri-price-tag-3-line"></i>
+                    </div>
+
+                    <div class="dl-feature-card-heading">
+                        <h3>Multiple Vendor Categories</h3>
+                    </div>
+
+                    <p>
+                        Classify a supplier under one or more supported types: Tyre, Battery, Diesel, Fuel Card, Repairs, RTO, Insurance, Refrigeration and Toll. This makes it easier to identify the right supplier for different needs.
+                    </p>
+                </div>
+            </article>
+
+            <!-- Feature 4.3 -->
+            <article class="dl-feature-card" data-category="profile">
+                <div class="dl-feature-card-content">
+                    <div class="dl-feature-icon">
+                        <i class="ri-contacts-book-line"></i>
+                    </div>
+
+                    <div class="dl-feature-card-heading">
+                        <h3>Vendor Contact Information</h3>
+                    </div>
+
+                    <p>
+                        Keep the name of the contact person along with available phone, email and business address details, helping the team contact suppliers without checking separate records.
+                    </p>
+                </div>
+            </article>
+
+            <!-- Feature 4.4 -->
+            <article class="dl-feature-card" data-category="profile">
+                <div class="dl-feature-card-content">
+                    <div class="dl-feature-icon">
+                        <i class="ri-file-list-3-line"></i>
+                    </div>
+
+                    <div class="dl-feature-card-heading">
+                        <h3>GST Information</h3>
+                    </div>
+
+                    <p>
+                        Record a supplier GST number when available. This provides a useful reference for invoice and accounts-related work.
+                    </p>
+                </div>
+            </article>
+
+            <!-- Feature 4.5 -->
+            <article class="dl-feature-card" data-category="profile">
+                <div class="dl-feature-card-content">
+                    <div class="dl-feature-icon">
+                        <i class="ri-toggle-line"></i>
+                    </div>
+
+                    <div class="dl-feature-card-heading">
+                        <h3>Active and Inactive Vendor Status</h3>
+                    </div>
+
+                    <p>
+                        Mark vendors Active or Inactive depending on whether they are currently used. The profile keeps the status alongside other vendor information.
+                    </p>
+                </div>
+            </article>
+
+            <!-- Feature 4.6 -->
+            <article class="dl-feature-card" data-category="types">
+                <div class="dl-feature-card-content">
+                    <div class="dl-feature-icon">
+                        <i class="ri-search-line"></i>
+                    </div>
+
+                    <div class="dl-feature-card-heading">
+                        <h3>Vendor List and Search</h3>
+                    </div>
+
+                    <p>
+                        Browse a paginated vendor list and search by vendor name. The interface also offers name suggestions while searching.
+                    </p>
+                </div>
+            </article>
+
+            <!-- Feature 4.7 -->
+            <article class="dl-feature-card" data-category="types">
+                <div class="dl-feature-card-content">
+                    <div class="dl-feature-icon">
+                        <i class="ri-filter-3-line"></i>
+                    </div>
+
+                    <div class="dl-feature-card-heading">
+                        <h3>Filter by Vendor Type</h3>
+                    </div>
+
+                    <p>
+                        Filter the vendor list to find suppliers from a particular category, such as Diesel, Tyre or Insurance.
+                    </p>
+                </div>
+            </article>
+
+            <!-- Feature 4.8 -->
+            <article class="dl-feature-card" data-category="types">
+                <div class="dl-feature-card-content">
+                    <div class="dl-feature-icon">
+                        <i class="ri-sort-asc"></i>
+                    </div>
+
+                    <div class="dl-feature-card-heading">
+                        <h3>Sorting and Browsing</h3>
+                    </div>
+
+                    <p>
+                        Sort the list by vendor name or browse recently created records to find suppliers more quickly.
+                    </p>
+                </div>
+            </article>
+
+            <!-- Feature 4.9 -->
+            <article class="dl-feature-card" data-category="profile control">
+                <div class="dl-feature-card-content">
+                    <div class="dl-feature-icon">
+                        <i class="ri-edit-line"></i>
+                    </div>
+
+                    <div class="dl-feature-card-heading">
+                        <h3>Edit Vendor Details</h3>
+                    </div>
+
+                    <p>
+                        Authorized users can update supplier contact details, vendor categories, GST number, business address and active status as information changes.
+                    </p>
+                </div>
+            </article>
+
+            <!-- Feature 4.10 -->
+            <article class="dl-feature-card" data-category="control">
+                <div class="dl-feature-card-content">
+                    <div class="dl-feature-icon">
+                        <i class="ri-file-search-line"></i>
+                    </div>
+
+                    <div class="dl-feature-card-heading">
+                        <h3>Duplicate Vendor Check</h3>
+                    </div>
+
+                    <p>
+                        When adding or updating a supplier, the system checks for possible duplicates using details such as vendor name, phone and GST number, and can show a warning before a user proceeds.
+                    </p>
+                </div>
+            </article>
+
+            <!-- Feature 4.11 -->
+            <article class="dl-feature-card" data-category="control">
+                <div class="dl-feature-card-content">
+                    <div class="dl-feature-icon">
+                        <i class="ri-wallet-3-line"></i>
+                    </div>
+
+                    <div class="dl-feature-card-heading">
+                        <h3>Vendor Payment Overview</h3>
+                    </div>
+
+                    <p>
+                        The vendor detail page shows recent vendor-linked payments and outstanding payable information when records exist. Payments themselves are managed through the application’s separate payment workflow.
+                    </p>
+                </div>
+            </article>
+
+            <!-- Feature 4.12 -->
+            <article class="dl-feature-card" data-category="control">
+                <div class="dl-feature-card-content">
+                    <div class="dl-feature-icon">
+                        <i class="ri-lock-line"></i>
+                    </div>
+
+                    <div class="dl-feature-card-heading">
+                        <h3>Permission-Based Vendor Actions</h3>
+                    </div>
+
+                    <p>
+                        Viewing, creating, editing and deleting vendor records are controlled by the application’s permissions, so staff can access only the actions allowed to them.
+                    </p>
+                </div>
+            </article>
+
+
+        </div>
+    </div>
+</section>
+<!--dl feature section end-->
+
+
+<!--workflow section start-->
+<section class="dl-workflow-section">
+    <div class="container">
+
+        <!-- Section Heading -->
+
+        <div class="heading-wrapper heading-wrap-left">
+
+            <span class="heading-tag">
+                Step-by-Step Workflow
+            </span>
+
+            <h2 class="heading-title">
+              How Does the <span>Vendor Management Module</span> Work?
+            </h2>
+
+            <p>
+                Follow six simple steps to add a vendor, choose its types, and keep supplier records accurate and up to date.
+            </p>
+            
+        </div>
+
+        <!-- Workflow Grid -->
+        <div class="dl-workflow-grid">
+
+            <!-- Workflow Step 01 -->
+            <article class="dl-workflow-card">
+                <div class="dl-workflow-card-content">
+
+                    <div class="dl-workflow-card-top">
+                        <span class="dl-workflow-number">01</span>
+
+                        <div class="dl-workflow-icon">
+                            <i class="ri-store-2-line"></i>
+                        </div>
+                    </div>
+
+                    <h3 class="dl-workflow-card-title">
+                        Open the Vendor List
+                    </h3>
+
+                    <p class="dl-workflow-card-description">
+                        Open Vendor Management to see existing vendors.
+                    </p>
+
+                    <ul class="dl-workflow-checklist">
+                        <li>
+                            <i class="ri-check-line"></i>
+                            <span>Search suppliers by name</span>
+                        </li>
+                        <li>
+                            <i class="ri-check-line"></i>
+                            <span>Narrow the list using a vendor type</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="dl-workflow-card-footer">
+                    <span>Workflow Phase 01</span>
+                </div>
+            </article>
+
+            <!-- Workflow Step 02 -->
+            <article class="dl-workflow-card">
+                <div class="dl-workflow-card-content">
+
+                    <div class="dl-workflow-card-top">
+                        <span class="dl-workflow-number">02</span>
+
+                        <div class="dl-workflow-icon">
+                            <i class="ri-user-add-line"></i>
+                        </div>
+                    </div>
+
+                    <h3 class="dl-workflow-card-title">
+                        Add a New Vendor
+                    </h3>
+
+                    <p class="dl-workflow-card-description">
+                        Choose Add Vendor and enter the supplier name.
+                    </p>
+
+                    <ul class="dl-workflow-checklist">
+                        <li>
+                            <i class="ri-check-line"></i>
+                            <span>Contact person, phone number and email address, where available</span>
+                        </li>
+                        <li>
+                            <i class="ri-check-line"></i>
+                            <span>GST number and business address, where available</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="dl-workflow-card-footer">
+                    <span>Workflow Phase 02</span>
+                </div>
+            </article>
+
+            <!-- Workflow Step 03 -->
+            <article class="dl-workflow-card">
+                <div class="dl-workflow-card-content">
+
+                    <div class="dl-workflow-card-top">
+                        <span class="dl-workflow-number">03</span>
+
+                        <div class="dl-workflow-icon">
+                            <i class="ri-price-tag-3-line"></i>
+                        </div>
+                    </div>
+
+                    <h3 class="dl-workflow-card-title">
+                        Select Vendor Type
+                    </h3>
+
+                    <p class="dl-workflow-card-description">
+                        Choose at least one vendor type based on what the supplier provides.
+                    </p>
+
+                    <ul class="dl-workflow-checklist">
+                        <li>
+                            <i class="ri-check-line"></i>
+                            <span>One vendor can belong to several categories</span>
+                        </li>
+                        <li>
+                            <i class="ri-check-line"></i>
+                            <span>Example: Diesel and Repairs</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="dl-workflow-card-footer">
+                    <span>Workflow Phase 03</span>
+                </div>
+            </article>
+
+            <!-- Workflow Step 04 -->
+            <article class="dl-workflow-card">
+                <div class="dl-workflow-card-content">
+
+                    <div class="dl-workflow-card-top">
+                        <span class="dl-workflow-number">04</span>
+
+                        <div class="dl-workflow-icon">
+                            <i class="ri-toggle-line"></i>
+                        </div>
+                    </div>
+
+                    <h3 class="dl-workflow-card-title">
+                        Set Vendor Status
+                    </h3>
+
+                    <p class="dl-workflow-card-description">
+                        Mark the supplier as Active or Inactive.
+                    </p>
+
+                    <ul class="dl-workflow-checklist">
+                        <li>
+                            <i class="ri-check-line"></i>
+                            <span>Helps your business identify suppliers that are currently in use</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="dl-workflow-card-footer">
+                    <span>Workflow Phase 04</span>
+                </div>
+            </article>
+
+            <!-- Workflow Step 05 -->
+            <article class="dl-workflow-card">
+                <div class="dl-workflow-card-content">
+
+                    <div class="dl-workflow-card-top">
+                        <span class="dl-workflow-number">05</span>
+
+                        <div class="dl-workflow-icon">
+                            <i class="ri-save-3-line"></i>
+                        </div>
+                    </div>
+
+                    <h3 class="dl-workflow-card-title">
+                        Save Vendor Details
+                    </h3>
+
+                    <p class="dl-workflow-card-description">
+                        Review the information and save.
+                    </p>
+
+                    <ul class="dl-workflow-checklist">
+                        <li>
+                            <i class="ri-check-line"></i>
+                            <span>The system checks key fields</span>
+                        </li>
+                        <li>
+                            <i class="ri-check-line"></i>
+                            <span>It may warn you about a possible duplicate vendor before saving</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="dl-workflow-card-footer">
+                    <span>Workflow Phase 05</span>
+                </div>
+            </article>
+
+            <!-- Workflow Step 06 -->
+            <article class="dl-workflow-card">
+                <div class="dl-workflow-card-content">
+
+                    <div class="dl-workflow-card-top">
+                        <span class="dl-workflow-number">06</span>
+
+                        <div class="dl-workflow-icon">
+                            <i class="ri-folder-open-line"></i>
+                        </div>
+                    </div>
+
+                    <h3 class="dl-workflow-card-title">
+                        View and Manage Records
+                    </h3>
+
+                    <p class="dl-workflow-card-description">
+                        Open a saved vendor to see its profile.
+                    </p>
+
+                    <ul class="dl-workflow-checklist">
+                        <li>
+                            <i class="ri-check-line"></i>
+                            <span>Recent linked payments</span>
+                        </li>
+                        <li>
+                            <i class="ri-check-line"></i>
+                            <span>Outstanding payable information when relevant</span>
+                        </li>
+                        <li>
+                            <i class="ri-check-line"></i>
+                            <span>Authorized users can edit records or delete vendors as allowed</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="dl-workflow-card-footer">
+                    <span>Workflow Phase 06</span>
+                </div>
+            </article>
+
+
+        </div>
+        </div>
+        <div class="et-container">
+        <div class="workflow-bottom">
+
+            <!-- Security Card -->
+            <div class="security-card">
+                <img src="./Assets/images/workflow-img.png" alt="workflow-img">
+
+                <div class="security-content">
+                    <h3>Permission-Based Access</h3>
+
+                    <p>
+                        Viewing, creating, editing and deleting vendor records are controlled by the application’s permissions, so staff can access only the actions allowed to them.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Right Side -->
+            <div class="workflow-info">
+
+                <div class="stats-card">
+                    <h3>9 Types</h3>
+
+                    <h4>Supported Vendor Categories</h4>
+
+                    <p>
+                        Classify a supplier under one or more supported types: Tyre, Battery, Diesel, Fuel Card, Repairs, RTO, Insurance, Refrigeration and Toll.
+                    </p>
+                </div>
+
+                <div class="workflow-content">
+                    <p>
+                        Explore a powerful collection of intelligent modules built to streamline your daily transport operations. Manage vehicles, drivers, trips, and business performance seamlessly through one unified platform.
+                    </p>
+
+                    <a href="#" class="workflow-btn">
+                        Explore All Modules <i class="ri-arrow-right-line"></i>
+                    </a>
+                </div>
+
+                <div class="info-card">
+                    <div class="info-icon">
+                       <i class="ri-bar-chart-2-fill"></i>
+                    </div>
+
+                    <span>
+                        Find suppliers faster by name or type
+                    </span>
+                </div>
+
+                <div class="info-card">
+                    <div class="info-icon">
+                       <i class="ri-lock-unlock-line"></i>
+                    </div>
+
+                    <span>
+                        Get warnings about possible duplicate vendors
+                    </span>
+                </div>
+
+            </div>
+
+        </div>
+    
+    </div>
+</section>
+<!--workflow section end-->
+
+
+<!--results section start-->
+<section id="benefits" class="results-section">
+
+    <div class="container">
+
+        <!-- Heading -->
+       <div class="heading-wrapper">
+
+            <span class="heading-tag">
+                Proven Advantages
+            </span>
+
+            <h2 class="heading-title heading-light">
+                Benefits of <span>Vendor Management</span>
+            </h2>
+
+            <p>
+                Keep supplier records organized, find the right vendor faster, and review payment information from one profile.
+            </p>
+
+        </div>
+
+        <!-- Cards -->
+
+        <div class="results-grid">
+
+            <div class="result-card">
+
+                <div class="result-icon">
+                    <i class="ri-folder-shield-2-line"></i>
+                </div>
+
+                <h3>
+                    Keep Supplier Details Organized
+                </h3>
+
+                <p>
+                    Store contact and business details for different vendors in one place.
+                </p>
+
+            </div>
+
+            <div class="result-card">
+
+                <div class="result-icon">
+                    <i class="ri-search-eye-line"></i>
+                </div>
+
+                <h3>
+                    Find the Right Supplier Faster
+                </h3>
+
+                <p>
+                    Use categories and search to locate vendors for diesel, repairs, insurance and other services.
+                </p>
+
+            </div>
+
+            <div class="result-card">
+
+                <div class="result-icon">
+                    <i class="ri-file-copy-2-line"></i>
+                </div>
+
+                <h3>
+                    Reduce Duplicate Records
+                </h3>
+
+                <p>
+                    Receive warnings about potentially duplicate vendor profiles before saving.
+                </p>
+
+            </div>
+
+            <div class="result-card">
+
+                <div class="result-icon">
+                    <i class="ri-refresh-line"></i>
+                </div>
+
+                <h3>
+                    Maintain Up-to-Date Information
+                </h3>
+
+                <p>
+                    Change supplier contact details, categories and status when needed.
+                </p>
+
+            </div>
+
+            <div class="result-card">
+
+                <div class="result-icon">
+                    <i class="ri-wallet-3-line"></i>
+                </div>
+
+                <h3>
+                    View Related Payment Information
+                </h3>
+
+                <p>
+                    Access recent payment and outstanding payable details from the vendor profile when records are available.
+                </p>
+
+            </div>
+
+            <div class="result-card">
+
+                <div class="result-icon">
+                    <i class="ri-lock-line"></i>
+                </div>
+
+                <h3>
+                    Control Staff Access
+                </h3>
+
+                <p>
+                    Limit vendor actions using existing user permissions.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+</section>
+<!--results section end-->
+
+
+
+<!--transport-section start-->
+<section class="transport-section">
+    <div class="container">
+
+        <!-- Left Content -->
+    <div class="transport-container">   
+        <div class="heading-wrapper heading-wrap-left">
+                <span class="heading-tag">
+                   Transportation Management
+                </span>
+
+                <h2 class="heading-title">
+                   Manage Your Transportation <span> Operations Efficiently </span>
+                </h2>
+
+                <p>
+                    Track vehicles, manage drivers, monitor fuel usage, handle maintenance schedules, and streamline daily transportation operations from one centralized cloud platform.
+                </p>
+
+            </div>
+        <!-- Right Side -->
+        <div class="transport-image-wrapper">
+            <img src="./Assets/images/tms-img.png" alt="Transportation Dashboard" class="transport-image">
+            <!-- Decorative Shape -->
+            <div class="transport-shape"></div>
+            <!-- Floating Card -->
+            <div class="transport-card">
+                <ul class="transport-list">
+                    <li>
+                        <i class="ri-checkbox-circle-line"></i>
+                        <span>Real-time fleet and vehicle monitoring</span>
+                    </li>
+
+                    <li>
+                        <i class="ri-checkbox-circle-line"></i>
+                        <span>Driver management and attendance tracking</span>
+                    </li>
+
+                    <li>
+                        <i class="ri-checkbox-circle-line"></i>
+                        <span>Fuel logs and expense management</span>
+                    </li>
+
+                    <li>
+                        <i class="ri-checkbox-circle-line"></i>
+                        <span>Maintenance alerts and service scheduling</span>
+                    </li>
+
+                    <li>
+                        <i class="ri-checkbox-circle-line"></i>
+                        <span>Vehicle documents and compliance tracking</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+     </div>
+    </div>
+</section>
+<!--transport section end-->
+
+
+
+<!--dl-faq section end-->
+<section id="faq" class="dl-faq-section">
+    <div class="container">
+        <div class="heading-wrapper">
+
+            <span class="heading-tag">
+                Got Questions?
+            </span>
+
+            <h2 class="heading-title">
+              Frequently Asked <span>Questions</span>
+            </h2>
+
+            <p>
+                Everything you need to know about vendor types, GST details, duplicates and permissions in your vendor records.
+            </p>
+           <!-- Feature Filters -->
+             <div class="dl-faq-filters">
+                <button class="dl-faq-filter active" type="button">All</button>
+                <button class="dl-faq-filter" type="button">Types</button>
+                <button class="dl-faq-filter" type="button">GST</button>
+                <button class="dl-faq-filter" type="button">Status</button>
+                <button class="dl-faq-filter" type="button">Search</button>
+                <button class="dl-faq-filter" type="button">Editing</button>
+                <button class="dl-faq-filter" type="button">Duplicates</button>
+                <button class="dl-faq-filter" type="button">Payments</button>
+                <button class="dl-faq-filter" type="button">Permissions</button>
+            </div>
+        </div>
+
+        <!-- FAQ List -->
+        <div class="dl-faq-list">
+
+            <!-- FAQ 1 -->
+            <div class="dl-faq-item active" data-category="types">
+                <button
+                    class="dl-faq-question"
+                    type="button"
+                    aria-expanded="true"
+                    aria-controls="dl-faq-answer-1"
+                >
+                    <span class="dl-faq-question-content">
+                        <span class="dl-faq-number">Q1</span>
+                        <span class="dl-faq-question-text">
+                            Can I assign more than one type to a vendor?
+                        </span>
+                    </span>
+
+                    <span class="dl-faq-arrow">
+                        <i class="ri-arrow-down-s-line"></i>
+                    </span>
+                </button>
+
+                <div class="dl-faq-answer" id="dl-faq-answer-1">
+                    <div class="dl-faq-answer-content">
+                        <p>
+                            Yes. You can select multiple supported vendor types for the same supplier.
+                        </p>
+
+                        <div class="dl-faq-topic">
+                            <span>Topic: Types</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ 2 -->
+            <div class="dl-faq-item" data-category="gst">
+                <button
+                    class="dl-faq-question"
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="dl-faq-answer-2"
+                >
+                    <span class="dl-faq-question-content">
+                        <span class="dl-faq-number">Q2</span>
+                        <span class="dl-faq-question-text">
+                            Can I save a vendor without a GST number?
+                        </span>
+                    </span>
+
+                    <span class="dl-faq-arrow">
+                        <i class="ri-arrow-down-s-line"></i>
+                    </span>
+                </button>
+
+                <div class="dl-faq-answer" id="dl-faq-answer-2">
+                    <div class="dl-faq-answer-content">
+                        <p>
+                            Yes. The GST number is optional.
+                        </p>
+
+                        <div class="dl-faq-topic">
+                            <span>Topic: GST</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ 3 -->
+            <div class="dl-faq-item" data-category="status">
+                <button
+                    class="dl-faq-question"
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="dl-faq-answer-3"
+                >
+                    <span class="dl-faq-question-content">
+                        <span class="dl-faq-number">Q3</span>
+                        <span class="dl-faq-question-text">
+                            Can I mark a supplier as inactive?
+                        </span>
+                    </span>
+
+                    <span class="dl-faq-arrow">
+                        <i class="ri-arrow-down-s-line"></i>
+                    </span>
+                </button>
+
+                <div class="dl-faq-answer" id="dl-faq-answer-3">
+                    <div class="dl-faq-answer-content">
+                        <p>
+                            Yes. You can manage an Active or Inactive status for each vendor.
+                        </p>
+
+                        <div class="dl-faq-topic">
+                            <span>Topic: Status</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ 4 -->
+            <div class="dl-faq-item" data-category="search">
+                <button
+                    class="dl-faq-question"
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="dl-faq-answer-4"
+                >
+                    <span class="dl-faq-question-content">
+                        <span class="dl-faq-number">Q4</span>
+                        <span class="dl-faq-question-text">
+                            Can I find suppliers by type?
+                        </span>
+                    </span>
+
+                    <span class="dl-faq-arrow">
+                        <i class="ri-arrow-down-s-line"></i>
+                    </span>
+                </button>
+
+                <div class="dl-faq-answer" id="dl-faq-answer-4">
+                    <div class="dl-faq-answer-content">
+                        <p>
+                            Yes. The Vendor List supports filtering by vendor type and searching by name.
+                        </p>
+
+                        <div class="dl-faq-topic">
+                            <span>Topic: Search</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ 5 -->
+            <div class="dl-faq-item" data-category="editing">
+                <button
+                    class="dl-faq-question"
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="dl-faq-answer-5"
+                >
+                    <span class="dl-faq-question-content">
+                        <span class="dl-faq-number">Q5</span>
+                        <span class="dl-faq-question-text">
+                            Can I update vendor contact information later?
+                        </span>
+                    </span>
+
+                    <span class="dl-faq-arrow">
+                        <i class="ri-arrow-down-s-line"></i>
+                    </span>
+                </button>
+
+                <div class="dl-faq-answer" id="dl-faq-answer-5">
+                    <div class="dl-faq-answer-content">
+                        <p>
+                            Yes. Authorized users can edit a saved vendor profile.
+                        </p>
+
+                        <div class="dl-faq-topic">
+                            <span>Topic: Editing</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ 6 -->
+            <div class="dl-faq-item" data-category="duplicates">
+                <button
+                    class="dl-faq-question"
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="dl-faq-answer-6"
+                >
+                    <span class="dl-faq-question-content">
+                        <span class="dl-faq-number">Q6</span>
+                        <span class="dl-faq-question-text">
+                            Does the system help prevent duplicates?
+                        </span>
+                    </span>
+
+                    <span class="dl-faq-arrow">
+                        <i class="ri-arrow-down-s-line"></i>
+                    </span>
+                </button>
+
+                <div class="dl-faq-answer" id="dl-faq-answer-6">
+                    <div class="dl-faq-answer-content">
+                        <p>
+                            Yes. It checks for potential duplicate vendor details and may warn before saving.
+                        </p>
+
+                        <div class="dl-faq-topic">
+                            <span>Topic: Duplicates</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ 7 -->
+            <div class="dl-faq-item" data-category="payments">
+                <button
+                    class="dl-faq-question"
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="dl-faq-answer-7"
+                >
+                    <span class="dl-faq-question-content">
+                        <span class="dl-faq-number">Q7</span>
+                        <span class="dl-faq-question-text">
+                            Can I view payments made to a vendor?
+                        </span>
+                    </span>
+
+                    <span class="dl-faq-arrow">
+                        <i class="ri-arrow-down-s-line"></i>
+                    </span>
+                </button>
+
+                <div class="dl-faq-answer" id="dl-faq-answer-7">
+                    <div class="dl-faq-answer-content">
+                        <p>
+                            The vendor details page can show recent payments and outstanding payable information when linked records exist.
+                        </p>
+
+                        <div class="dl-faq-topic">
+                            <span>Topic: Payments</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ 8 -->
+            <div class="dl-faq-item" data-category="permissions">
+                <button
+                    class="dl-faq-question"
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="dl-faq-answer-8"
+                >
+                    <span class="dl-faq-question-content">
+                        <span class="dl-faq-number">Q8</span>
+                        <span class="dl-faq-question-text">
+                            Can all users delete vendor profiles?
+                        </span>
+                    </span>
+
+                    <span class="dl-faq-arrow">
+                        <i class="ri-arrow-down-s-line"></i>
+                    </span>
+                </button>
+
+                <div class="dl-faq-answer" id="dl-faq-answer-8">
+                    <div class="dl-faq-answer-content">
+                        <p>
+                            No. Deleting a vendor requires the relevant permission.
+                        </p>
+
+                        <div class="dl-faq-topic">
+                            <span>Topic: Permissions</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div>
+
+        <!-- FAQ Call to Action / Conclusion -->
+        <div class="dl-faq-cta">
+            <div class="dl-faq-cta-content">
+                <h3>Simplify Your Vendor Management</h3>
+                <p>
+                        Manage your supplier profiles, service categories, contact details and related payment information in one convenient system. With Vendor Management, your team can find suppliers faster, keep records updated and make everyday vendor administration easier.
+                    </p>
+            </div>
+
+            <button class="dl-faq-cta-button" type="button" onclick="document.getElementById('simulator').scrollIntoView({behavior: 'smooth'})">
+                Try Live Vendor Simulator
+            </button>
+        </div>
+
+    </div>
+</section>
+<!--dl-faq section end-->
+
+<!--footer section start-->
+<footer class="footer">
+
+    <!-- Newsletter -->
+    <div class="footer-newsletter">
+        <div class="container">
+
+            <div class="newsletter-wrapper">
+
+                <div class="newsletter-content">
+                    <h2>Stay ahead of the curve</h2>
+                    <p>
+                        Fleet management insights, product updates, and industry news.
+                    </p>
+                </div>
+
+                <form class="newsletter-form">
+
+                    <input
+                        type="email"
+                        placeholder="Enter your email"
+                    >
+
+                    <button type="submit">
+                        Subscribe
+
+                       <i class="ri-arrow-right-line"></i>
+
+                    </button>
+
+                </form>
+
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Footer Main -->
+
+    <div class="footer-main">
+
+        <div class="container">
+
+            <div class="footer-grid">
+
+                <!-- Left -->
+
+                <div class="footer-about">
+
+                    <a href="index.html" class="footer-logo">
+                         <img src="Assets/images/transportdesk-logo-dark.svg" alt="footer-logo">
+                    </a>
+
+                    <p>
+                        The intelligent transportation platform that puts fleet directors
+                        in complete control of their operations.
+                    </p>
+
+                    <div class="footer-social">
+
+                        <a href="#">
+                            <i class="ri-facebook-fill"></i>
+                        </a>
+
+                        <a href="#">
+                            <i class="ri-instagram-line"></i>
+                        </a>
+
+                        <a href="#">
+                            <i class="ri-twitter-line"></i>
+                        </a>
+
+                        <a href="#">
+                            <i class="ri-linkedin-fill"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <!-- Product -->
+
+                <div class="footer-links">
+
+                    <h3>Product</h3>
+
+                      <ul>
+        <li>
+            <a href="features.html" class="footer-link">Features</a>
+        </li>
+
+        <li>
+            <a href="modules.html" class="footer-link">Modules</a>
+        </li>
+
+        <li>
+            <a href="solutions.html" class="footer-link">Solutions</a>
+        </li>
+
+        <li>
+            <a href="reports.html" class="footer-link">Reports</a>
+        </li>
+
+        <li>
+            <a href="contact.html" class="footer-link">Contact</a>
+        </li>
+    </ul>
+
+                </div>
+
+                <!-- Resources -->
+
+                <div class="footer-links">
+
+                    <h3>Resources</h3>
+
+                    <ul>
+
+                        <li><a href="documentation.html" class="footer-link">Documentation</a></li>
+
+                        <li><a href="faq.html" class="footer-link">FAQ</a></li>
+
+                        <li><a href="privacy-policy.html" class="footer-link">Privacy Policy</a></li>
+
+                    </ul>
+
+                </div>
+
+                <!-- Support -->
+
+                <div class="footer-links">
+
+                    <h3>Support</h3>
+
+                    <ul>
+
+                        <li><a href="#" class="footer-link">Help Center</a></li>
+
+                        <li><a href="#" class="footer-link">Status</a></li>
+
+                        <li><a href="#" class="footer-link">Security</a></li>
+
+                    </ul>
+
+                </div>
+
+                <!-- Contact -->
+
+                <div class="footer-contact">
+
+                    <div class="contact-item">
+
+                        <div class="icon">
+                            <i class="ri-mail-line"></i>
+                        </div>
+
+                        <div>
+
+                            <span>Email</span>
+
+                            <a href="#">
+                                hello@transportdesk.net
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                    <div class="contact-item">
+
+                        <div class="icon">
+                            <i class="ri-phone-fill"></i>
+                        </div>
+
+                        <div>
+
+                            <span>Call</span>
+
+                            <a href="#">
+                                +1 (512) 555-0142
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                    <div class="contact-item">
+
+                        <div class="icon">
+                            <i class="ri-map-pin-line"></i>
+                        </div>
+
+                        <div>
+
+                            <span>Location</span>
+
+                            <p>India</p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Bottom -->
+
+    <div class="footer-bottom">
+
+        <div class="container">
+
+            <div class="bottom-wrapper">
+
+                <p>
+                    © 2026 All rights reserved.
+                </p>
+
+                <ul>
+
+                    <li><a href="#">Privacy Policy</a></li>
+
+                    <li><a href="#">Terms of Service</a></li>
+
+                    <li><a href="#">Cookie Policy</a></li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</footer>
+<!--footer section end-->
+
+<script src="./Assets/js/custom.js"></script>
+<script>
+(function () {
+    var $ = function (s, r) { return (r || document).querySelector(s); };
+    var $$ = function (s, r) { return Array.prototype.slice.call((r || document).querySelectorAll(s)); };
+    var body = $('#vd-body');
+    if (!body) return;
+    var vendors = [{"id": 1, "name": "Sample Tyre Traders", "contact": "Demo contact 1", "phone": "Demo number 1", "email": "tyres@example.com", "gst": "Sample GST 1", "types": ["Tyre"], "status": "Active"}, {"id": 2, "name": "Sample Repairs Workshop", "contact": "Demo contact 2", "phone": "Demo number 2", "email": "repairs@example.com", "gst": "Sample GST 2", "types": ["Repairs", "Battery"], "status": "Inactive"}, {"id": 3, "name": "Sample Insurance Agency", "contact": "Demo contact 3", "phone": "Demo number 3", "email": "insurance@example.com", "gst": "Sample GST 3", "types": ["Insurance"], "status": "Active"}, {"id": 4, "name": "ABC Petroleum", "contact": "Mr. Shah", "phone": "Demo contact number", "email": "supplier@example.com", "gst": "Sample GST reference", "types": ["Diesel", "Fuel Card"], "status": "Active"}], nextId = 5, editing = null, sortMode = 'recent';
+    var DEFAULT_NOTE = 'Choose at least one vendor type · One vendor can belong to several categories';
+    var esc = function (s) { return String(s).replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); };
+    var val = function (id) { return $(id).value.trim(); };
+    var note = function (t) { $('#vd-note').textContent = t || DEFAULT_NOTE; };
+
+    function formTypes() { return $$('.vd-type').filter(function (c) { return c.checked; }).map(function (c) { return c.value; }); }
+    function readForm() {
+        return { name: val('#vd-name'), contact: val('#vd-contact'), phone: val('#vd-phone'), email: val('#vd-email'),
+                 gst: val('#vd-gst'), address: val('#vd-address'), status: $('#vd-status').value, types: formTypes() };
+    }
+    function findDuplicate(v) {
+        var low = function (s) { return (s || '').toLowerCase(); };
+        return vendors.filter(function (o) {
+            return o.id !== editing && ((v.name && low(o.name) === low(v.name)) ||
+                   (v.phone && low(o.phone) === low(v.phone)) || (v.gst && low(o.gst) === low(v.gst)));
+        })[0];
+    }
+
+    function render() {
+        var q = $('#vd-search').value.toLowerCase().trim(), f = $('#vd-filter').value;
+        var list = vendors.filter(function (v) {
+            return (!q || v.name.toLowerCase().indexOf(q) > -1) && (!f || v.types.indexOf(f) > -1);
+        });
+        list.sort(sortMode === 'name' ? function (a, b) { return a.name.localeCompare(b.name); } : function (a, b) { return b.id - a.id; });
+        body.innerHTML = list.map(function (v) {
+            return '<tr data-id="' + v.id + '"><td><div class="dl-vehicle-name"><i class="ri-store-2-fill"></i><span>' + esc(v.name) +
+                '</span></div><div class="dl-vehicle-meta">Contact: <span>' + esc(v.contact) + '</span></div></td><td>' + esc(v.phone) +
+                '</td><td>' + esc(v.email) + '</td><td>' + esc(v.gst) + '</td><td>' +
+                v.types.map(function (t) { return '<span class="vd-pill">' + t + '</span>'; }).join('') +
+                '</td><td><span class="vd-status ' + (v.status === 'Active' ? 'vd-active' : 'vd-inactive') + '">' + v.status +
+                '</span></td><td><span class="vd-muted">No linked payments yet</span></td><td class="dl-text-center">' +
+                '<button type="button" class="dl-secondary-button vd-edit" title="Edit vendor"><i class="ri-edit-line"></i></button> ' +
+                '<button type="button" class="dl-delete-button vd-del" title="Delete vendor"><i class="ri-delete-bin-line"></i></button></td></tr>';
+        }).join('') || '<tr><td colspan="8" class="dl-text-center">No vendors match your search.</td></tr>';
+        var a = vendors.filter(function (v) { return v.status === 'Active'; }).length;
+        $('#vd-total').textContent = vendors.length;
+        $('#vd-active').textContent = a;
+        $('#vd-inactive').textContent = vendors.length - a;
+        $('#vd-f-label').textContent = 'Vendor List (' + vendors.length + ' Vendors)';
+        $('#vd-f-active').textContent = a + ' Active';
+        $('#vd-f-inactive').textContent = (vendors.length - a) + ' Inactive';
+        $('#vd-f-shown').textContent = list.length + ' Shown';
+    }
+
+    function card() {
+        var v = readForm();
+        $('#vd-card-name').textContent = v.name || 'New Vendor';
+        $('#vd-card-note').textContent = (v.types.join(', ') || 'No type selected') + ' · ' + v.status;
+    }
+
+    function save() {
+        var v = readForm();
+        if (!v.name) { note('Vendor name is required.'); return; }
+        if (!v.types.length) { note('Choose at least one vendor type.'); return; }
+        var dup = findDuplicate(v);
+        if (dup && !window.confirm('Possible duplicate vendor: "' + dup.name + '" has a matching name, phone or GST number. Proceed anyway?')) {
+            note('Duplicate warning: ' + dup.name + ' already has matching details.');
+            return;
+        }
+        if (editing !== null) {
+            vendors = vendors.map(function (o) { return o.id === editing ? Object.assign({ id: o.id }, v) : o; });
+            note('Vendor updated.');
+        } else {
+            v.id = nextId++;
+            vendors.push(v);
+            note('Vendor saved.');
+        }
+        editing = null;
+        $('#vd-add span').textContent = 'Add Vendor';
+        $('#vd-step').textContent = 'Step 2: Add a New Vendor';
+        render();
+        setTimeout(function () { note(); }, 2200);
+    }
+
+    body.addEventListener('click', function (ev) {
+        var tr = ev.target.closest('tr[data-id]');
+        if (!tr) return;
+        var id = +tr.getAttribute('data-id'), v = vendors.filter(function (o) { return o.id === id; })[0];
+        if (ev.target.closest('.vd-del')) {
+            if (window.confirm('Delete "' + v.name + '"? Deleting a vendor requires the relevant permission.')) {
+                vendors = vendors.filter(function (o) { return o.id !== id; });
+                render();
+            }
+        } else if (ev.target.closest('.vd-edit')) {
+            editing = id;
+            $('#vd-name').value = v.name; $('#vd-contact').value = v.contact; $('#vd-phone').value = v.phone;
+            $('#vd-email').value = v.email; $('#vd-gst').value = v.gst; $('#vd-address').value = v.address || '';
+            $('#vd-status').value = v.status;
+            $$('.vd-type').forEach(function (c) { c.checked = v.types.indexOf(c.value) > -1; });
+            $('#vd-add span').textContent = 'Update Vendor';
+            $('#vd-step').textContent = 'Editing: ' + v.name;
+            card();
+            var p = $('[data-vd="profile"]');
+            if (p) { p.classList.remove('vd-hidden'); p.scrollIntoView({ behavior: 'smooth', block: 'center' }); }
+        }
+    });
+
+    $('#vd-search').addEventListener('input', render);
+    $('#vd-filter').addEventListener('change', render);
+    $('#vd-sort').addEventListener('click', function () {
+        sortMode = sortMode === 'recent' ? 'name' : 'recent';
+        $('#vd-sort span').textContent = sortMode === 'name' ? 'Sort: Vendor Name A–Z' : 'Sort: Recently Added';
+        render();
+    });
+    $('#vd-add').addEventListener('click', save);
+    $('#vd-add2').addEventListener('click', save);
+    $('#vd-check').addEventListener('click', function () {
+        var dup = findDuplicate(readForm());
+        note(dup ? 'Possible duplicate: ' + dup.name + ' has matching name, phone or GST number.' : 'No duplicates found.');
+    });
+    $$('#vd-name,#vd-status,.vd-type').forEach(function (e) { e.addEventListener('input', card); e.addEventListener('change', card); });
+
+    var tabs = $$('.dl-view-tab'), prof = $('[data-vd="profile"]');
+    tabs.forEach(function (t, i) {
+        t.addEventListener('click', function () {
+            tabs.forEach(function (x) { x.classList.remove('dl-view-tab-active'); });
+            t.classList.add('dl-view-tab-active');
+            if (prof) prof.classList.toggle('vd-hidden', i === 1);
+        });
+    });
+    render();
+})();
+</script>
+</body>
+</html>

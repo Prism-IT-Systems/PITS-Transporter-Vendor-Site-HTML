@@ -1,0 +1,1056 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>LR Charge Types Management Module | TransportDesk Fleet Solutions</title>
+    <meta name="description"
+        content="Manage Lorry Receipt charges, deductions and billing settings in one place. Create reusable charge types, set display order and status, and use them while preparing Lorry Receipts.">
+
+    <!-- Remix Icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" />
+
+    <!-- Swiper -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+
+    <!-- Lenis -->
+    <link rel="stylesheet" href="https://unpkg.com/lenis@1.3.23/dist/lenis.css">
+
+    <!-- Tailwind Output CSS -->
+    <link href="./Assets/css/output.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <!--Header Section start-->
+    <header class="main-header">
+        <div class="container">
+
+            <div class="header-inner">
+
+                <a href="index.html" class="header-logo">
+                    <img src="Assets/images/transportdesk-logo.svg" alt="Logo">
+                </a>
+
+                <nav class="main-navigation" id="mobileMenu">
+
+                    <div class="menu-circle"></div>
+
+                    <ul class="navigation-links">
+                        <li><a href="index.html" class="navigation-link">Home</a></li>
+                        <li><a href="features.html" class="navigation-link">Features</a></li>
+                        <li><a href="modules.html" class="navigation-link active">Modules</a></li>
+                        <li><a href="reports.html" class="navigation-link">Resources</a></li>
+                        <li><a href="contact.html" class="navigation-link">Contact</a></li>
+                    </ul>
+
+                    <div class="mobile-header-right">
+                        <a href="#" class="login-btn">Login</a>
+                        <a href="#" class="demo-btn">Book Demo</a>
+                    </div>
+
+                </nav>
+
+                <div class="header-right">
+                    <a href="#" class="login-btn">Login</a>
+                    <a href="#" class="demo-btn">Book Demo</a>
+                </div>
+
+                <button class="menu-toggle" id="menuToggle" aria-label="Toggle Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+            </div>
+
+        </div>
+    </header>
+
+    <!-- Add this after header -->
+    <div class="menu-overlay" id="menuOverlay"></div>
+    <!--Header section End-->
+
+
+    <body>
+
+        <!--Header Section start-->
+        <header class="main-header">
+            <div class="container">
+
+                <div class="header-inner">
+
+                    <a href="index.html" class="header-logo">
+                        <img src="Assets/images/transportdesk-logo.svg" alt="Logo">
+                    </a>
+
+                    <nav class="main-navigation" id="mobileMenu">
+
+                        <div class="menu-circle"></div>
+
+                        <ul class="navigation-links">
+                            <li><a href="index.html" class="navigation-link">Home</a></li>
+                            <li><a href="features.html" class="navigation-link">Features</a></li>
+                            <li><a href="modules.html" class="navigation-link active">Modules</a></li>
+                            <li><a href="reports.html" class="navigation-link">Resources</a></li>
+                            <li><a href="contact.html" class="navigation-link">Contact</a></li>
+                        </ul>
+
+                        <div class="mobile-header-right">
+                            <a href="#" class="login-btn">Login</a>
+                            <a href="#" class="demo-btn">Book Demo</a>
+                        </div>
+
+                    </nav>
+
+                    <div class="header-right">
+                        <a href="#" class="login-btn">Login</a>
+                        <a href="#" class="demo-btn">Book Demo</a>
+                    </div>
+
+                    <button class="menu-toggle" id="menuToggle" aria-label="Toggle Menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+
+                </div>
+
+            </div>
+        </header>
+
+        <!-- Add this after header -->
+        <div class="menu-overlay" id="menuOverlay"></div>
+        <!--Header section End-->
+
+
+        <section id="overview" class="dl-overview-section">
+            <div class="dl-overview-glow"></div>
+            <div class="dl-overview-pattern"></div>
+            <div class="container">
+                <div class="dl-overview-grid">
+                    <div class="dl-overview-content">
+                        <div class="dl-overview-badge">
+                            <span class="dl-status-dot"></span>
+                            <span>Fleet Management</span>
+                            <span class="dl-badge-divider">|</span>
+                            <span class="dl-badge-highlight">LR Charge Types Management Module</span>
+                        </div>
+                        <h1 class="dl-overview-title">LR Charge Types <span class="dl-gradient-text">Management</span>
+                            Module</h1>
+                        <p class="dl-overview-description">Manage Lorry Receipt Charges, Deductions and Billing Settings
+                            in One Place. Define charge names once and use them consistently while preparing Lorry
+                            Receipts.</p>
+                        <div class="dl-overview-actions">
+                            <button type="button" class="btn-primary"
+                                onclick="document.getElementById('simulator').scrollIntoView({behavior:'smooth'})">
+                                <span>See Practical Example</span><i class="ri-arrow-right-line"></i></button>
+                            <button type="button" class="dl-btn-demo"
+                                onclick="document.getElementById('demo').scrollIntoView({behavior:'smooth'})">
+                                <span class="dl-play-icon"><i class="ri-play-fill"></i></span><span>Watch Demo
+                                    Video</span></button>
+                        </div>
+                        <div class="dl-overview-stats">
+                            <div class="dl-stat-item">
+                                <div class="dl-stat-number ">6</div>
+                                <div class="dl-stat-label">Simple Steps</div>
+                            </div>
+                            <div class="dl-stat-item">
+                                <div class="dl-stat-number dl-stat-red">12</div>
+                                <div class="dl-stat-label">Key Features</div>
+                            </div>
+                            <div class="dl-stat-item">
+                                <div class="dl-stat-number dl-stat-green">±</div>
+                                <div class="dl-stat-label">Add or Deduct</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dl-overview-visual">
+                        <div class="dl-visual-card">
+                            <img src="Assets/images/hero_fleet_dispatch_1792482270822.jpg"
+                                alt="Transportation Fleet Dispatch Logistics Center" class="dl-visual-image">
+                            <div class="dl-visual-overlay"></div>
+                            <div class="dl-visual-topbar">
+                                <div class="dl-live-label"><span class="dl-live-dot"></span><span>LR Charge Calculation
+                                        Example</span></div>
+                                <div class="dl-fuel-rate">₹9,850</div>
+                            </div>
+                            <div class="dl-fuel-slip">
+                                <div class="dl-slip-header">
+                                    <span class="dl-slip-title">Sample Lorry Receipt Charges</span>
+                                    <span class="dl-slip-status">Example</span>
+                                </div>
+                                <div class="dl-slip-stats">
+                                    <div class="dl-slip-stat"><span class="dl-slip-label">Freight</span><span
+                                            class="dl-slip-value ">₹12,000</span></div>
+                                    <div class="dl-slip-stat"><span class="dl-slip-label">Less Advance</span><span
+                                            class="dl-slip-value dl-slip-red">− ₹3,000</span></div>
+                                    <div class="dl-slip-stat"><span class="dl-slip-label">Final Total</span><span
+                                            class="dl-slip-value dl-slip-green">₹9,850</span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="dl-trusted-section">
+            <div class="dl-trusted-heading"><span>Lorry Receipt Charges, Deductions and Billing Settings in One
+                    Place</span></div>
+            <div class="dl-trusted-marquee">
+                <div class="dl-trusted-fade dl-trusted-fade-left"></div>
+                <div class="dl-trusted-fade dl-trusted-fade-right"></div>
+                <div class="dl-trusted-track">
+                    <div class="dl-trusted-group">
+                        <div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span
+                                class="dl-trusted-name">Custom Charge Types</span></div>
+                        <div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span
+                                class="dl-trusted-name">Charge Codes</span></div>
+                        <div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span
+                                class="dl-trusted-name">Additions &amp; Deductions</span></div>
+                        <div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span
+                                class="dl-trusted-name">Display Order</span></div>
+                        <div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span
+                                class="dl-trusted-name">Active &amp; Inactive Status</span></div>
+                        <div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span
+                                class="dl-trusted-name">Lorry Receipt Integration</span></div>
+                        <div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span
+                                class="dl-trusted-name">Party-Specific Default Rates</span></div>
+                        <div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span
+                                class="dl-trusted-name">View &amp; Sort Records</span></div>
+                        <div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span
+                                class="dl-trusted-name">Edit Charge Types</span></div>
+                        <div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span
+                                class="dl-trusted-name">Trash &amp; Restore</span></div>
+                        <div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span
+                                class="dl-trusted-name">Permission-Based Access</span></div>
+                        <div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span
+                                class="dl-trusted-name">Activity History</span></div>
+                    </div>
+                    <div class="dl-trusted-group" aria-hidden="true">
+                        <div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span
+                                class="dl-trusted-name">Custom Charge Types</span></div>
+                        <div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span
+                                class="dl-trusted-name">Charge Codes</span></div>
+                        <div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span
+                                class="dl-trusted-name">Additions &amp; Deductions</span></div>
+                        <div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span
+                                class="dl-trusted-name">Display Order</span></div>
+                        <div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span
+                                class="dl-trusted-name">Active &amp; Inactive Status</span></div>
+                        <div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span
+                                class="dl-trusted-name">Lorry Receipt Integration</span></div>
+                        <div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span
+                                class="dl-trusted-name">Party-Specific Default Rates</span></div>
+                        <div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span
+                                class="dl-trusted-name">View &amp; Sort Records</span></div>
+                        <div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span
+                                class="dl-trusted-name">Edit Charge Types</span></div>
+                        <div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span
+                                class="dl-trusted-name">Trash &amp; Restore</span></div>
+                        <div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span
+                                class="dl-trusted-name">Permission-Based Access</span></div>
+                        <div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span
+                                class="dl-trusted-name">Activity History</span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="demo" class="dl-demo-section">
+            <div class="dl-demo-glow"></div>
+            <div class="dl-container">
+                <div class="heading-wrapper">
+                    <span class="heading-tag">Interactive Video Demonstration</span>
+                    <h2 class="heading-title">Watch How <span>LR Charge Types</span> Work</h2>
+                    <p>Watch our demo video to learn how to create a charge type, select addition or deduction, arrange
+                        the order, and use the charge while preparing a Lorry Receipt.</p>
+
+                </div>
+                <div class="dl-demo-grid">
+                    <div class="dl-demo-video-column">
+                        <div class="dl-video-card">
+                            <div class="dl-video-toolbar">
+                                <div class="dl-video-toolbar-left">
+                                    <span class="dl-window-dot dl-dot-red"></span><span
+                                        class="dl-window-dot dl-dot-yellow"></span><span
+                                        class="dl-window-dot dl-dot-green"></span>
+                                    <span class="dl-video-filename">LR Charge Types Management Module Demo</span>
+                                </div>
+                            </div>
+                            <div class="dl-video-preview">
+                                <img src="Assets/images/dashboard.png"
+                                    alt="LR Charge Types Management Module demonstration video preview"
+                                    class="dl-video-thumbnail">
+                                <div class="dl-video-overlay"></div>
+                                <button type="button" class="dl-video-play" aria-label="Play demonstration video"><i
+                                        class="ri-play-fill"></i><span class="dl-video-ping"></span></button>
+                                <div class="dl-video-meta">
+                                    <div class="dl-video-meta-left">
+                                        <span class="dl-video-current-chapter">[Demo Video Will Be Displayed
+                                            Here]</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="dl-video-footer">
+                                <div class="dl-video-footer-left">
+                                    <button type="button" class="dl-watch-button"><i
+                                            class="ri-play-circle-line"></i><span>Watch Full Walkthrough</span></button>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="simulator" class="dl-simulator-section">
+            <div class="dl-container">
+                <div class="dl-simulator-header">
+                    <div class="heading-wrapper heading-wrap-left">
+                        <span class="heading-tag">Practical Example</span>
+                        <h2 class="heading-title">Practical Example: <span>Calculating LR Charges</span></h2>
+
+
+                    </div>
+                </div>
+                <div class="dl-calculator-panel">
+                    <div class="dl-bill-master">
+                        <div class="dl-bill-master-header">
+                            <div class="dl-bill-heading"><span>Sample Lorry Receipt Charges</span></div>
+                        </div>
+                    </div>
+                    <div class="dl-calculator-footer">
+                        <div class="dl-documentation-note"><i class="ri-information-line"></i><span>Suppose a company is
+                                preparing a Lorry Receipt with the following charges. The charge names and amounts below
+                                are only examples.</span></div>
+                    </div>
+                    <div class="dl-table-wrapper">
+                        <table class="dl-vehicle-table">
+                            <thead>
+                                <tr>
+                                    <th>Charge Type</th>
+                                    <th>Calculation</th>
+                                    <th>Amount</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Freight</td>
+                                    <td>Add</td>
+                                    <td>₹12,000</td>
+                                </tr>
+                                <tr>
+                                    <td>Hamali</td>
+                                    <td>Add</td>
+                                    <td>₹600</td>
+                                </tr>
+                                <tr>
+                                    <td>Other</td>
+                                    <td>Add</td>
+                                    <td>₹250</td>
+                                </tr>
+                                <tr>
+                                    <td>Less Advance</td>
+                                    <td>Deduct</td>
+                                    <td>− ₹3,000</td>
+                                </tr>
+                                <tr>
+                                    <td>Final Total</td>
+                                    <td></td>
+                                    <td>₹9,850</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="dl-calculator-footer">
+                        <div class="dl-documentation-note"><i class="ri-information-line"></i><span>The system uses the
+                                selected charge or deduction type to calculate the LR amount. In this example, ₹12,000 +
+                                ₹600 + ₹250 − ₹3,000 = ₹9,850.</span></div>
+                    </div>
+
+                </div>
+                <br>
+
+                <div class="dl-calculator-footer">
+                    <div class="dl-supported-formats">The charge names and amounts shown are examples only.</div>
+                </div>
+            </div>
+        </section>
+
+        <section id="features" class="dl-features-section">
+            <div class="container">
+                <div class="heading-wrapper">
+                    <span class="heading-tag">Complete solution</span>
+                    <h2 class="heading-title">Key <span>Features</span></h2>
+                    <p>Everything you need to define, order, apply and maintain LR charge types.</p>
+                    <div class="dl-features-filters"><button type="button" class="dl-filter-btn is-active"
+                            data-filter="all">All Features (12)</button><button type="button" class="dl-filter-btn"
+                            data-filter="setup">Charge Setup</button><button type="button" class="dl-filter-btn"
+                            data-filter="lr">LR &amp; Party Rates</button><button type="button" class="dl-filter-btn"
+                            data-filter="control">Records &amp; Control</button></div>
+                </div>
+                <div class="dl-features-grid">
+                    <article class="dl-feature-card" data-category="setup">
+                        <div class="dl-feature-card-content">
+                            <div class="dl-feature-icon"><i class="ri-price-tag-3-line"></i></div>
+                            <div class="dl-feature-card-heading">
+                                <h3>Custom Charge Types</h3>
+                            </div>
+                            <p>Create charge names that match the transport business, such as Freight, Hamali, Loading,
+                                Surcharge or Other.</p>
+                        </div>
+                    </article>
+                    <article class="dl-feature-card" data-category="setup">
+                        <div class="dl-feature-card-content">
+                            <div class="dl-feature-icon"><i class="ri-hashtag"></i></div>
+                            <div class="dl-feature-card-heading">
+                                <h3>Charge Codes</h3>
+                            </div>
+                            <p>Add an optional short code to identify a charge type. For example, FRT for Freight.</p>
+                        </div>
+                    </article>
+                    <article class="dl-feature-card" data-category="setup">
+                        <div class="dl-feature-card-content">
+                            <div class="dl-feature-icon"><i class="ri-exchange-funds-line"></i></div>
+                            <div class="dl-feature-card-heading">
+                                <h3>Additions and Deductions</h3>
+                            </div>
+                            <p>Mark a charge type as a deduction to subtract its amount from an LR total; leave it
+                                unchecked for additional charges.</p>
+                        </div>
+                    </article>
+                    <article class="dl-feature-card" data-category="setup">
+                        <div class="dl-feature-card-content">
+                            <div class="dl-feature-icon"><i class="ri-sort-asc"></i></div>
+                            <div class="dl-feature-card-heading">
+                                <h3>Display Order</h3>
+                            </div>
+                            <p>Use Sort Order to organize how charge types appear, making frequently used options easier
+                                to find.</p>
+                        </div>
+                    </article>
+                    <article class="dl-feature-card" data-category="setup">
+                        <div class="dl-feature-card-content">
+                            <div class="dl-feature-icon"><i class="ri-toggle-line"></i></div>
+                            <div class="dl-feature-card-heading">
+                                <h3>Active and Inactive Status</h3>
+                            </div>
+                            <p>Control whether a charge type is available for creating new Lorry Receipt entries,
+                                without deleting the record.</p>
+                        </div>
+                    </article>
+                    <article class="dl-feature-card" data-category="lr">
+                        <div class="dl-feature-card-content">
+                            <div class="dl-feature-icon"><i class="ri-file-list-3-line"></i></div>
+                            <div class="dl-feature-card-heading">
+                                <h3>Lorry Receipt Integration</h3>
+                            </div>
+                            <p>Use active charge types during LR creation and editing to build the freight and other
+                                charge breakdown.</p>
+                        </div>
+                    </article>
+                    <article class="dl-feature-card" data-category="lr">
+                        <div class="dl-feature-card-content">
+                            <div class="dl-feature-icon"><i class="ri-user-settings-line"></i></div>
+                            <div class="dl-feature-card-heading">
+                                <h3>Party-Specific Default Rates</h3>
+                            </div>
+                            <p>The system supports party charge rates linked to charge types, allowing default charge
+                                amounts to be stored for individual parties where configured.</p>
+                        </div>
+                    </article>
+                    <article class="dl-feature-card" data-category="control">
+                        <div class="dl-feature-card-content">
+                            <div class="dl-feature-icon"><i class="ri-eye-line"></i></div>
+                            <div class="dl-feature-card-heading">
+                                <h3>View and Sort Records</h3>
+                            </div>
+                            <p>View charge names, codes, order and status. Sort the list by name or use the default
+                                display order.</p>
+                        </div>
+                    </article>
+                    <article class="dl-feature-card" data-category="control">
+                        <div class="dl-feature-card-content">
+                            <div class="dl-feature-icon"><i class="ri-edit-line"></i></div>
+                            <div class="dl-feature-card-heading">
+                                <h3>Edit Charge Types</h3>
+                            </div>
+                            <p>Update existing settings when business billing practices change.</p>
+                        </div>
+                    </article>
+                    <article class="dl-feature-card" data-category="control">
+                        <div class="dl-feature-card-content">
+                            <div class="dl-feature-icon"><i class="ri-delete-bin-line"></i></div>
+                            <div class="dl-feature-card-heading">
+                                <h3>Trash and Restore</h3>
+                            </div>
+                            <p>Move a charge type to Trash instead of permanently removing it immediately, and restore
+                                it if needed.</p>
+                        </div>
+                    </article>
+                    <article class="dl-feature-card" data-category="control">
+                        <div class="dl-feature-card-content">
+                            <div class="dl-feature-icon"><i class="ri-shield-user-line"></i></div>
+                            <div class="dl-feature-card-heading">
+                                <h3>Permission-Based Access</h3>
+                            </div>
+                            <p>Separate permissions are checked for viewing, creating, editing and deleting charge
+                                types.</p>
+                        </div>
+                    </article>
+                    <article class="dl-feature-card" data-category="control">
+                        <div class="dl-feature-card-content">
+                            <div class="dl-feature-icon"><i class="ri-history-line"></i></div>
+                            <div class="dl-feature-card-heading">
+                                <h3>Activity History</h3>
+                            </div>
+                            <p>Creation, updates, deletion and restoration are logged; authorized users can access the
+                                Activity Log.</p>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="dl-workflow-section">
+            <div class="container">
+                <div class="heading-wrapper heading-wrap-left">
+                    <span class="heading-tag">Step-by-Step Workflow</span>
+                    <h2 class="heading-title">How Does the <span>Module</span> Work?</h2>
+                    <p>Six simple steps take you from opening LR Charge Types to using them in a Lorry Receipt.</p>
+
+                </div>
+                <div class="dl-workflow-grid">
+                    <article class="dl-workflow-card">
+                        <div class="dl-workflow-card-content">
+                            <div class="dl-workflow-card-top"><span class="dl-workflow-number">01</span>
+                                <div class="dl-workflow-icon"><i class="ri-layout-grid-line"></i></div>
+                            </div>
+                            <h3 class="dl-workflow-card-title">Open LR Charge Types</h3>
+                            <p class="dl-workflow-card-description">Open the LR Charge Types section to see the saved
+                                charge names. You can view the charge code, display order, status and available record
+                                actions.</p>
+                        </div>
+                        <div class="dl-workflow-card-footer"><span>Step 01</span></div>
+                    </article>
+                    <article class="dl-workflow-card">
+                        <div class="dl-workflow-card-content">
+                            <div class="dl-workflow-card-top"><span class="dl-workflow-number">02</span>
+                                <div class="dl-workflow-icon"><i class="ri-add-box-line"></i></div>
+                            </div>
+                            <h3 class="dl-workflow-card-title">Create a Charge Type</h3>
+                            <p class="dl-workflow-card-description">Click Add Charge Type. Enter a clear name such as
+                                Freight, Hamali or Loading Charge. You may also enter a short code so the charge can be
+                                recognized easily.</p>
+                        </div>
+                        <div class="dl-workflow-card-footer"><span>Step 02</span></div>
+                    </article>
+                    <article class="dl-workflow-card">
+                        <div class="dl-workflow-card-content">
+                            <div class="dl-workflow-card-top"><span class="dl-workflow-number">03</span>
+                                <div class="dl-workflow-icon"><i class="ri-exchange-funds-line"></i></div>
+                            </div>
+                            <h3 class="dl-workflow-card-title">Choose Charge or Deduction</h3>
+                            <p class="dl-workflow-card-description">Leave Deduction unchecked for a normal charge that
+                                increases the LR total. Select Deduction for an item such as Less Advance that should be
+                                subtracted from the total.</p>
+                        </div>
+                        <div class="dl-workflow-card-footer"><span>Step 03</span></div>
+                    </article>
+                    <article class="dl-workflow-card">
+                        <div class="dl-workflow-card-content">
+                            <div class="dl-workflow-card-top"><span class="dl-workflow-number">04</span>
+                                <div class="dl-workflow-icon"><i class="ri-sort-asc"></i></div>
+                            </div>
+                            <h3 class="dl-workflow-card-title">Set Order and Status</h3>
+                            <p class="dl-workflow-card-description">Enter a Sort Order to decide the position of the
+                                charge type in the list. Set the status to Active when the type should be available for
+                                new Lorry Receipts, or Inactive when it should not be used for new entries.</p>
+                        </div>
+                        <div class="dl-workflow-card-footer"><span>Step 04</span></div>
+                    </article>
+                    <article class="dl-workflow-card">
+                        <div class="dl-workflow-card-content">
+                            <div class="dl-workflow-card-top"><span class="dl-workflow-number">05</span>
+                                <div class="dl-workflow-icon"><i class="ri-save-3-line"></i></div>
+                            </div>
+                            <h3 class="dl-workflow-card-title">Save and Use in a Lorry Receipt</h3>
+                            <p class="dl-workflow-card-description">Save the charge type. When creating or editing a
+                                Lorry Receipt, active charge types are available for entering amounts. The LR calculates
+                                the total using added charges and applicable deductions.</p>
+                        </div>
+                        <div class="dl-workflow-card-footer"><span>Step 05</span></div>
+                    </article>
+                    <article class="dl-workflow-card">
+                        <div class="dl-workflow-card-content">
+                            <div class="dl-workflow-card-top"><span class="dl-workflow-number">06</span>
+                                <div class="dl-workflow-icon"><i class="ri-settings-3-line"></i></div>
+                            </div>
+                            <h3 class="dl-workflow-card-title">Maintain Charge Types</h3>
+                            <p class="dl-workflow-card-description">When required, edit the name, code, order, deduction
+                                setting or status. Unneeded charge types can be moved to Trash and restored later by
+                                authorized users.</p>
+                        </div>
+                        <div class="dl-workflow-card-footer"><span>Step 06</span></div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <section id="benefits" class="results-section">
+            <div class="container">
+                <div class="heading-wrapper">
+                    <span class="heading-tag">Proven Advantages</span>
+                    <h2 class="heading-title heading-light">Benefits of <span>LR Charge Types Management</span></h2>
+                    <p>Standardize your LR billing and keep charges and deductions clear and controlled.</p>
+
+                </div>
+                <div class="results-grid">
+                    <div class="result-card">
+                        <div class="result-icon"><i class="ri-file-shield-2-line"></i></div>
+                        <h3>Consistent LR Billing</h3>
+                        <p>Use standardized charge names across Lorry Receipts.</p>
+                    </div>
+                    <div class="result-card">
+                        <div class="result-icon"><i class="ri-flashlight-line"></i></div>
+                        <h3>Faster Data Entry</h3>
+                        <p>Reuse saved charge types instead of entering new charge descriptions each time.</p>
+                    </div>
+                    <div class="result-card">
+                        <div class="result-icon"><i class="ri-pie-chart-2-line"></i></div>
+                        <h3>Clear Charge Breakdown</h3>
+                        <p>Show the difference between added costs and deductions.</p>
+                    </div>
+                    <div class="result-card">
+                        <div class="result-icon"><i class="ri-settings-3-line"></i></div>
+                        <h3>Flexible Billing</h3>
+                        <p>Change charge names, sequence and availability as business needs evolve.</p>
+                    </div>
+                    <div class="result-card">
+                        <div class="result-icon"><i class="ri-lock-unlock-line"></i></div>
+                        <h3>Better Control</h3>
+                        <p>Use permission-based access and activity records to manage changes.</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="transport-section">
+            <div class="container">
+                <div class="transport-container">
+                    <div class="heading-wrapper heading-wrap-left">
+                        <span class="heading-tag">Introduction</span>
+                        <h2 class="heading-title">Reusable <span>LR Charge Types</span></h2>
+                        <p>Every Lorry Receipt (LR) may include more than just freight. There can be handling charges,
+                            additional service charges, or deductions such as an advance already paid. The LR Charge
+                            Types Module helps transport businesses define these charge names once and use them
+                            consistently while preparing Lorry Receipts. Users can create charge types, decide whether a
+                            charge increases or reduces the total, manage their display order, and keep the list up to
+                            date without changing each LR individually.</p>
+
+                    </div>
+                    <div class="transport-image-wrapper">
+                        <img src="./Assets/images/tms-img.png" alt="Transportation Dashboard" class="transport-image">
+                        <div class="transport-shape"></div>
+                        <div class="transport-card">
+                            <ul class="transport-list">
+                                <li><i class="ri-checkbox-circle-line"></i><span>Create charge types</span></li>
+                                <li><i class="ri-checkbox-circle-line"></i><span>Decide whether a charge increases or
+                                        reduces the total</span></li>
+                                <li><i class="ri-checkbox-circle-line"></i><span>Manage their display order</span></li>
+                                <li><i class="ri-checkbox-circle-line"></i><span>Keep the list up to date without
+                                        changing each LR individually</span></li>
+                                        <li><i class="ri-checkbox-circle-line"></i><span>Apply charge types consistently across all Lorry Receipts</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="faq" class="dl-faq-section">
+            <div class="container">
+                <div class="heading-wrapper">
+                    <span class="heading-tag">Got Questions?</span>
+                    <h2 class="heading-title">Frequently Asked <span>Questions</span></h2>
+                    <p>Common questions about creating, ordering and maintaining LR charge types.</p>
+                    <div class="dl-faq-filters"><button class="dl-faq-filter active" type="button">All</button><button
+                            class="dl-faq-filter" type="button">Charge Names</button><button class="dl-faq-filter"
+                            type="button">Deductions</button><button class="dl-faq-filter"
+                            type="button">Order</button><button class="dl-faq-filter"
+                            type="button">Status</button><button class="dl-faq-filter"
+                            type="button">Trash</button><button class="dl-faq-filter" type="button">Lorry
+                            Receipts</button><button class="dl-faq-filter" type="button">Party Rates</button></div>
+                </div>
+                <div class="dl-faq-list">
+                    <div class="dl-faq-item active" data-category="charge names">
+                        <button class="dl-faq-question" type="button" aria-expanded="true"
+                            aria-controls="dl-faq-answer-1">
+                            <span class="dl-faq-question-content"><span class="dl-faq-number">Q1</span><span
+                                    class="dl-faq-question-text">Can I create my own charge names?</span></span>
+                            <span class="dl-faq-arrow"><i class="ri-arrow-down-s-line"></i></span>
+                        </button>
+                        <div class="dl-faq-answer" id="dl-faq-answer-1">
+                            <div class="dl-faq-answer-content">
+                                <p>Yes. Authorized users can create charge types with names and optional short codes.
+                                </p>
+                                <div class="dl-faq-topic"><span>Topic: Charge Names</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dl-faq-item" data-category="deductions">
+                        <button class="dl-faq-question" type="button" aria-expanded="false"
+                            aria-controls="dl-faq-answer-2">
+                            <span class="dl-faq-question-content"><span class="dl-faq-number">Q2</span><span
+                                    class="dl-faq-question-text">What is a deduction charge?</span></span>
+                            <span class="dl-faq-arrow"><i class="ri-arrow-down-s-line"></i></span>
+                        </button>
+                        <div class="dl-faq-answer" id="dl-faq-answer-2">
+                            <div class="dl-faq-answer-content">
+                                <p>It is a charge type whose amount is subtracted from the LR total, such as Less
+                                    Advance.</p>
+                                <div class="dl-faq-topic"><span>Topic: Deductions</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dl-faq-item" data-category="order">
+                        <button class="dl-faq-question" type="button" aria-expanded="false"
+                            aria-controls="dl-faq-answer-3">
+                            <span class="dl-faq-question-content"><span class="dl-faq-number">Q3</span><span
+                                    class="dl-faq-question-text">Can I change the order of charge types?</span></span>
+                            <span class="dl-faq-arrow"><i class="ri-arrow-down-s-line"></i></span>
+                        </button>
+                        <div class="dl-faq-answer" id="dl-faq-answer-3">
+                            <div class="dl-faq-answer-content">
+                                <p>Yes. Enter the Sort Order value to control their display sequence.</p>
+                                <div class="dl-faq-topic"><span>Topic: Order</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dl-faq-item" data-category="status">
+                        <button class="dl-faq-question" type="button" aria-expanded="false"
+                            aria-controls="dl-faq-answer-4">
+                            <span class="dl-faq-question-content"><span class="dl-faq-number">Q4</span><span
+                                    class="dl-faq-question-text">Can I stop using a charge without deleting
+                                    it?</span></span>
+                            <span class="dl-faq-arrow"><i class="ri-arrow-down-s-line"></i></span>
+                        </button>
+                        <div class="dl-faq-answer" id="dl-faq-answer-4">
+                            <div class="dl-faq-answer-content">
+                                <p>Yes. Set the charge type to Inactive to keep it out of the active list for new LRs.
+                                </p>
+                                <div class="dl-faq-topic"><span>Topic: Status</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dl-faq-item" data-category="trash">
+                        <button class="dl-faq-question" type="button" aria-expanded="false"
+                            aria-controls="dl-faq-answer-5">
+                            <span class="dl-faq-question-content"><span class="dl-faq-number">Q5</span><span
+                                    class="dl-faq-question-text">What happens if a charge type is deleted?</span></span>
+                            <span class="dl-faq-arrow"><i class="ri-arrow-down-s-line"></i></span>
+                        </button>
+                        <div class="dl-faq-answer" id="dl-faq-answer-5">
+                            <div class="dl-faq-answer-content">
+                                <p>It is moved to Trash and can be restored by an authorized user.</p>
+                                <div class="dl-faq-topic"><span>Topic: Trash</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dl-faq-item" data-category="lorry receipts">
+                        <button class="dl-faq-question" type="button" aria-expanded="false"
+                            aria-controls="dl-faq-answer-6">
+                            <span class="dl-faq-question-content"><span class="dl-faq-number">Q6</span><span
+                                    class="dl-faq-question-text">Are charge types used in Lorry Receipts?</span></span>
+                            <span class="dl-faq-arrow"><i class="ri-arrow-down-s-line"></i></span>
+                        </button>
+                        <div class="dl-faq-answer" id="dl-faq-answer-6">
+                            <div class="dl-faq-answer-content">
+                                <p>Yes. Active charge types are available while creating or editing Lorry Receipts.</p>
+                                <div class="dl-faq-topic"><span>Topic: Lorry Receipts</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dl-faq-item" data-category="party rates">
+                        <button class="dl-faq-question" type="button" aria-expanded="false"
+                            aria-controls="dl-faq-answer-7">
+                            <span class="dl-faq-question-content"><span class="dl-faq-number">Q7</span><span
+                                    class="dl-faq-question-text">Can different parties have different default charge
+                                    amounts?</span></span>
+                            <span class="dl-faq-arrow"><i class="ri-arrow-down-s-line"></i></span>
+                        </button>
+                        <div class="dl-faq-answer" id="dl-faq-answer-7">
+                            <div class="dl-faq-answer-content">
+                                <p>The system includes party-specific rate records linked to charge types where those
+                                    rates are configured.</p>
+                                <div class="dl-faq-topic"><span>Topic: Party Rates</span></div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="dl-faq-cta">
+                    <div class="dl-faq-cta-content">
+                        <h3>Keep Your LR Billing Organized</h3>
+                        <p>With LR Charge Types Management, businesses can keep their freight charges, additional fees
+                            and deductions well organized. Create reusable charge types, apply them while making Lorry
+                            Receipts, and maintain a clearer, more consistent billing process.</p>
+                    </div>
+                    <button class="dl-faq-cta-button" type="button"
+                        onclick="document.getElementById('simulator').scrollIntoView({behavior:'smooth'})">See Practical
+                        Example</button>
+                </div>
+            </div>
+        </section>
+
+        <!--footer section start-->
+        <footer class="footer">
+
+            <!-- Newsletter -->
+            <div class="footer-newsletter">
+                <div class="container">
+
+                    <div class="newsletter-wrapper">
+
+                        <div class="newsletter-content">
+                            <h2>Stay ahead of the curve</h2>
+                            <p>
+                                Fleet management insights, product updates, and industry news.
+                            </p>
+                        </div>
+
+                        <form class="newsletter-form">
+
+                            <input type="email" placeholder="Enter your email">
+
+                            <button type="submit">
+                                Subscribe
+
+                                <i class="ri-arrow-right-line"></i>
+
+                            </button>
+
+                        </form>
+
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Footer Main -->
+
+            <div class="footer-main">
+
+                <div class="container">
+
+                    <div class="footer-grid">
+
+                        <!-- Left -->
+
+                        <div class="footer-about">
+
+                            <a href="index.html" class="footer-logo">
+                                <img src="Assets/images/transportdesk-logo-dark.svg" alt="footer-logo">
+                            </a>
+
+                            <p>
+                                The intelligent transportation platform that puts fleet directors
+                                in complete control of their operations.
+                            </p>
+
+                            <div class="footer-social">
+
+                                <a href="#">
+                                    <i class="ri-facebook-fill"></i>
+                                </a>
+
+                                <a href="#">
+                                    <i class="ri-instagram-line"></i>
+                                </a>
+
+                                <a href="#">
+                                    <i class="ri-twitter-line"></i>
+                                </a>
+
+                                <a href="#">
+                                    <i class="ri-linkedin-fill"></i>
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                        <!-- Product -->
+
+                        <div class="footer-links">
+
+                            <h3>Product</h3>
+
+                            <ul>
+                                <li>
+                                    <a href="features.html" class="footer-link">Features</a>
+                                </li>
+
+                                <li>
+                                    <a href="modules.html" class="footer-link">Modules</a>
+                                </li>
+
+                                <li>
+                                    <a href="solutions.html" class="footer-link">Solutions</a>
+                                </li>
+
+                                <li>
+                                    <a href="reports.html" class="footer-link">Reports</a>
+                                </li>
+
+                                <li>
+                                    <a href="contact.html" class="footer-link">Contact</a>
+                                </li>
+                            </ul>
+
+                        </div>
+
+                        <!-- Resources -->
+
+                        <div class="footer-links">
+
+                            <h3>Resources</h3>
+
+                            <ul>
+
+                                <li><a href="documentation.html" class="footer-link">Documentation</a></li>
+
+                                <li><a href="faq.html" class="footer-link">FAQ</a></li>
+
+                                <li><a href="privacy-policy.html" class="footer-link">Privacy Policy</a></li>
+
+                            </ul>
+
+                        </div>
+
+                        <!-- Support -->
+
+                        <div class="footer-links">
+
+                            <h3>Support</h3>
+
+                            <ul>
+
+                                <li><a href="#" class="footer-link">Help Center</a></li>
+
+                                <li><a href="#" class="footer-link">Status</a></li>
+
+                                <li><a href="#" class="footer-link">Security</a></li>
+
+                            </ul>
+
+                        </div>
+
+                        <!-- Contact -->
+
+                        <div class="footer-contact">
+
+                            <div class="contact-item">
+
+                                <div class="icon">
+                                    <i class="ri-mail-line"></i>
+                                </div>
+
+                                <div>
+
+                                    <span>Email</span>
+
+                                    <a href="#">
+                                        hello@transportdesk.net
+                                    </a>
+
+                                </div>
+
+                            </div>
+
+                            <div class="contact-item">
+
+                                <div class="icon">
+                                    <i class="ri-phone-fill"></i>
+                                </div>
+
+                                <div>
+
+                                    <span>Call</span>
+
+                                    <a href="#">
+                                        +1 (512) 555-0142
+                                    </a>
+
+                                </div>
+
+                            </div>
+
+                            <div class="contact-item">
+
+                                <div class="icon">
+                                    <i class="ri-map-pin-line"></i>
+                                </div>
+
+                                <div>
+
+                                    <span>Location</span>
+
+                                    <p>India</p>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Bottom -->
+
+            <div class="footer-bottom">
+
+                <div class="container">
+
+                    <div class="bottom-wrapper">
+
+                        <p>
+                            © 2026 All rights reserved.
+                        </p>
+
+                        <ul>
+
+                            <li><a href="#">Privacy Policy</a></li>
+
+                            <li><a href="#">Terms of Service</a></li>
+
+                            <li><a href="#">Cookie Policy</a></li>
+
+                        </ul>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </footer>
+        <!--footer section end-->
+
+        <script src="./Assets/js/custom.js"></script>
+    </body>
+
+</html>

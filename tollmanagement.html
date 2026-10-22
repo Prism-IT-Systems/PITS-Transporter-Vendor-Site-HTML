@@ -1,0 +1,958 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Toll Management Module</title>
+
+    <!-- Remix Icon -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" />
+
+    <!-- Swiper -->
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+
+    <!-- Lenis -->
+    <link rel="stylesheet"
+        href="https://unpkg.com/lenis@1.3.23/dist/lenis.css">
+
+    <!-- Tailwind Output CSS -->
+     <link href="./Assets/css/output.css" rel="stylesheet">
+</head>
+<body>
+
+<!--Header Section start-->
+<header class="main-header">
+    <div class="container">
+
+        <div class="header-inner">
+
+            <a href="index.html" class="header-logo">
+                <img src="Assets/images/transportdesk-logo.svg" alt="Logo">
+            </a>
+
+            <nav class="main-navigation" id="mobileMenu">
+
+                <div class="menu-circle"></div>
+
+                <ul class="navigation-links">
+                    <li><a href="index.html" class="navigation-link active">Home</a></li>
+                    <li><a href="features.html" class="navigation-link">Features</a></li>
+                    <li><a href="reports.html" class="navigation-link">Resources</a></li>
+                    <li><a href="contact.html" class="navigation-link">Contact</a></li>
+                </ul>
+
+                <div class="mobile-header-right">
+                    <a href="#" class="login-btn">Login</a>
+                    <a href="#" class="demo-btn">Book Demo</a>
+                </div>
+
+            </nav>
+
+            <div class="header-right">
+                <a href="#" class="login-btn">Login</a>
+                <a href="#" class="demo-btn">Book Demo</a>
+            </div>
+
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+        </div>
+
+    </div>
+</header>
+
+<!-- Add this after header -->
+<div class="menu-overlay" id="menuOverlay"></div>
+<!--Header section End-->
+
+<section id="overview" class="dl-overview-section">
+    <div class="dl-overview-glow"></div>
+    <div class="dl-overview-pattern"></div>
+    <div class="container">
+        <div class="dl-overview-grid">
+            <div class="dl-overview-content">
+                <div class="dl-overview-badge">
+                    <span class="dl-status-dot"></span>
+                    <span>Enterprise Fleet Management</span>
+                    <span class="dl-badge-divider">|</span>
+                    <span class="dl-badge-highlight">Toll Management Module</span>
+                </div>
+                <h1 class="dl-overview-title"><span class="dl-gradient-text">Toll Management</span> Module</h1>
+                <p class="dl-overview-description">Transport and fleet businesses often need to check toll charges for many vehicles. When FASTag statements and manually recorded toll payments are kept separately, finding an individual trip or checking total toll expenses can take time.</p><p class="dl-overview-description">The Toll Management Module brings toll records into one place. Users can enter toll transactions manually, import FASTag statements, connect transactions to fleet vehicles, search toll history and export transaction details for accounts and reporting.</p>
+                <div class="dl-overview-actions">
+                    <a href="#simulator" class="btn-primary">
+                        <span>Try Live Toll Demo</span>
+                        <i class="ri-arrow-right-line"></i>
+                    </a>
+                    <a href="#demo" class="dl-btn-demo">
+                        <span class="dl-play-icon"><i class="ri-play-fill"></i></span>
+                        <span>Watch Demo Video</span>
+                    </a>
+                </div>
+                <div class="dl-overview-stats"><div class="dl-stat-item"><div class="dl-stat-number">15</div><div class="dl-stat-label">Key Features</div></div><div class="dl-stat-item"><div class="dl-stat-number dl-stat-red">7</div><div class="dl-stat-label">Simple Steps</div></div><div class="dl-stat-item"><div class="dl-stat-number dl-stat-green">5</div><div class="dl-stat-label">Statement Formats</div></div></div>
+            </div>
+            <div class="dl-overview-visual">
+                <div class="dl-visual-card">
+                    <img src="Assets/images/hero_fleet_dispatch_1792482270822.jpg"
+                         alt="Transportation Fleet Dispatch Logistics Center" class="dl-visual-image">
+                    <div class="dl-visual-overlay"></div>
+                    <div class="dl-visual-topbar">
+                        <div class="dl-live-label"><span class="dl-live-dot"></span><span>Toll Transaction Preview</span></div>
+                        <div class="dl-fuel-rate">30-09-2026</div>
+                    </div>
+                    <div class="dl-fuel-slip">
+                        <div class="dl-slip-header">
+                            <span class="dl-slip-title">GJ19Y9990 · Navapur Border Checkpost</span>
+                            <span class="dl-slip-status">Example Entry</span>
+                        </div>
+                        <div class="dl-slip-stats"><div class="dl-slip-stat"><span class="dl-slip-label">Debit</span><span class="dl-slip-value">₹218.30</span></div><div class="dl-slip-stat"><span class="dl-slip-label">Credit</span><span class="dl-slip-value dl-slip-red">₹0.00</span></div><div class="dl-slip-stat"><span class="dl-slip-label">Net</span><span class="dl-slip-value dl-slip-green">₹218.30</span></div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="dl-trusted-section">
+    <div class="dl-trusted-heading"><span>Manage Toll Transactions, FASTag Statements &amp; Vehicle-Wise Toll Expenses in One Place</span></div>
+    <div class="dl-trusted-marquee">
+        <div class="dl-trusted-fade dl-trusted-fade-left"></div>
+        <div class="dl-trusted-fade dl-trusted-fade-right"></div>
+        <div class="dl-trusted-track">
+            <div class="dl-trusted-group"><div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">Manual Toll Entry</span></div><div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">Debit and Credit Transactions</span></div><div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">FASTag Statement Import</span></div><div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">Flexible Column Mapping</span></div><div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">Vehicle-Wise Toll Records</span></div><div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">Unlinked Vehicle Review</span></div><div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">Link Matching Vehicles</span></div><div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">Toll Vendor Details</span></div><div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">FASTag Account and Plaza Information</span></div><div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">Transaction References and Source</span></div><div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">Duplicate Checking</span></div><div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">Search, Filters and Sorting</span></div><div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">Toll Expense Summary</span></div><div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">CSV Reports</span></div><div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">Edit, View and Delete</span></div></div>
+            <div class="dl-trusted-group" aria-hidden="true"><div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">Manual Toll Entry</span></div><div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">Debit and Credit Transactions</span></div><div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">FASTag Statement Import</span></div><div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">Flexible Column Mapping</span></div><div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">Vehicle-Wise Toll Records</span></div><div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">Unlinked Vehicle Review</span></div><div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">Link Matching Vehicles</span></div><div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">Toll Vendor Details</span></div><div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">FASTag Account and Plaza Information</span></div><div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">Transaction References and Source</span></div><div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">Duplicate Checking</span></div><div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">Search, Filters and Sorting</span></div><div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">Toll Expense Summary</span></div><div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">CSV Reports</span></div><div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">Edit, View and Delete</span></div></div>
+        </div>
+    </div>
+</section>
+
+<section id="demo" class="dl-demo-section">
+    <div class="dl-demo-glow"></div>
+    <div class="dl-container">
+        <div class="heading-wrapper">
+            <span class="heading-tag">Video Demonstration</span>
+            <h2 class="heading-title">Watch How <span>Toll Management</span> Works</h2>
+            <p>Watch our step-by-step video to learn how to add toll transactions, import a FASTag statement, check vehicle records, link unmatched entries and export a report.</p>
+        </div>
+        <div class="dl-demo-grid">
+            <div class="dl-demo-video-column">
+                <div class="dl-video-card">
+                    <div class="dl-video-toolbar">
+                        <div class="dl-video-toolbar-left">
+                            <span class="dl-window-dot dl-dot-red"></span>
+                            <span class="dl-window-dot dl-dot-yellow"></span>
+                            <span class="dl-window-dot dl-dot-green"></span>
+                            <span class="dl-video-filename">toll_management_module_demo</span>
+                        </div>
+                        <span class="dl-video-quality">Demo Video</span>
+                    </div>
+                    <div class="dl-video-preview">
+                        <img src="Assets/images/dashboard.png" alt="toll_management_module_demo preview" class="dl-video-thumbnail">
+                        <div class="dl-video-overlay"></div>
+                        <button type="button" class="dl-video-play" aria-label="Play demonstration video">
+                            <i class="ri-play-fill"></i>
+                            <span class="dl-video-ping"></span>
+                        </button>
+                        <div class="dl-video-meta">
+                            <div class="dl-video-meta-left">
+                                <span class="dl-video-current-chapter">[Demo Video Will Be Displayed Here]</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="simulator" class="dl-simulator-section">
+    <div class="dl-container">
+        <div class="dl-simulator-header">
+            <div class="heading-wrapper heading-wrap-left">
+                <span class="heading-tag">Practical Example</span>
+                <h2 class="heading-title">Toll Charges for a <span>Truck</span></h2>
+                <p>Suppose a company vehicle passes through a toll plaza. The user opens Tolls, clicks Add Toll, and enters the details on the Add Toll Entry form. To add several transactions together, click Import FASTag, upload a supported statement, review the column mapping, and import the entries. The list can be filtered by Vehicle, Vendor, Date Range, Source, and Vehicle Link status. Use Search to apply the selection, Reset to clear it, or Export to download a CSV report.</p>
+            </div>
+            <div class="dl-view-switcher" id="tl-tabs"><button type="button" class="dl-view-tab dl-view-tab-active" data-view="add"><i class="ri-add-circle-line"></i> Add Toll Entry</button><button type="button" class="dl-view-tab" data-view="list"><i class="ri-list-check-2"></i> Tolls List &amp; FASTag Import</button><button type="button" class="dl-view-tab" data-view="ref"><i class="ri-table-line"></i> Field Reference</button></div>
+        </div>
+        <div class="dl-stats-grid"><div class="dl-stat-card"><div class="dl-stat-label"><span>Transactions</span><i class="ri-list-check"></i></div><div class="dl-stat-value" id="tl-s-count">0</div><p class="dl-stat-note">Matching the filters</p></div><div class="dl-stat-card"><div class="dl-stat-label"><span>Total Debit</span><i class="ri-arrow-up-circle-line dl-red-icon"></i></div><div class="dl-stat-value dl-red-text" id="tl-s-dr">₹0</div><p class="dl-stat-note">Toll charges</p></div><div class="dl-stat-card"><div class="dl-stat-label"><span>Total Credit</span><i class="ri-arrow-down-circle-line dl-green-icon"></i></div><div class="dl-stat-value dl-green-text" id="tl-s-cr">₹0</div><p class="dl-stat-note">Adjustments / refunds</p></div><div class="dl-stat-card dl-stat-card-total"><div class="dl-stat-label"><span>Net Toll Expense</span><span class="dl-status-dot"></span></div><div class="dl-stat-value dl-stat-total-value" id="tl-s-net">₹0</div><p class="dl-stat-note dl-green-text">Debit minus credit</p></div></div>
+        <div class="dl-calculator-panel" id="tl-view-add"><div class="dl-bill-master"><div class="dl-bill-master-header"><div class="dl-bill-heading"><span>Add Toll Entry</span><span class="dl-heading-separator">·</span><span class="dl-invoice-number">Example A · Add a Manual Toll Entry</span></div></div>
+<div class="dl-bill-fields"><div class="dl-form-group"><label for="tl-veh">Vehicle *</label><select id="tl-veh" class="dl-form-control"><option>GJ19Y9990</option><option>GJ19Y0371</option></select></div><div class="dl-form-group"><label for="tl-vendor">Vendor / Tag Provider *</label><select id="tl-vendor" class="dl-form-control"><option>FASTag</option></select></div><div class="dl-form-group"><label for="tl-tag">Tag Account No.</label><input id="tl-tag" class="dl-form-control" type="text" value="40702314" ></div><div class="dl-form-group"><label for="tl-date">Transaction Date *</label><input id="tl-date" class="dl-form-control" type="date" value="2026-09-30" ></div><div class="dl-form-group"><label for="tl-plaza">Plaza Code</label><input id="tl-plaza" class="dl-form-control" type="text" value="536142" ></div><div class="dl-form-group"><label for="tl-desc">Transaction Description</label><input id="tl-desc" class="dl-form-control" type="text" value="Navapur Border Checkpost - Lane 1" ></div><div class="dl-form-group"><label for="tl-amt">Amount (₹) *</label><input id="tl-amt" class="dl-form-control" type="number" value="218.30" min="0" step="0.01"></div><div class="dl-form-group"><label for="tl-type">Amount Type *</label><select id="tl-type" class="dl-form-control"><option>Debit (DR)</option><option>Credit (CR)</option></select></div><div class="dl-form-group"><label for="tl-rem">Remarks</label><input id="tl-rem" class="dl-form-control" type="text" value="Toll deducted during trip" ></div></div></div><div class="dl-table-toolbar"><div class="dl-supported-formats" id="tl-msg">After checking the fields, click Save Toll Entry. The values are examples, not saved transactions.</div><div class="dl-toolbar-actions"><button type="button" class="dl-primary-button" id="tl-save"><i class="ri-save-3-line"></i> Save Toll Entry</button></div></div><div class="dl-calculator-footer"><div class="dl-documentation-note"><i class="ri-information-line"></i><span>The new record appears on the Tolls list, where permitted users can view, edit, or delete it. The manual create/edit process checks for an existing matching transaction and can show a duplicate warning.</span></div></div></div><div class="dl-calculator-panel" id="tl-view-list" hidden><div class="dl-bill-master"><div class="dl-bill-master-header"><div class="dl-bill-heading"><span>Examples B &amp; C</span><span class="dl-heading-separator">·</span><span class="dl-invoice-number" id="tl-unl-note"></span></div><div class="dl-receipt-actions"><button type="button" class="dl-secondary-button" id="tl-import"><i class="ri-upload-2-line"></i><span>Import FASTag (sample statement)</span></button><button type="button" class="dl-secondary-button" id="tl-showunl"><i class="ri-eye-line"></i><span>Show unlinked</span></button><button type="button" class="dl-secondary-button" id="tl-link"><i class="ri-links-line"></i><span>Link matching</span></button></div></div><div class="dl-bill-fields"><div class="dl-form-group"><label for="tl-f-q">Vehicle / Tag</label><input id="tl-f-q" class="dl-form-control" type="search" value="" placeholder="Search..."></div><div class="dl-form-group"><label for="tl-f-vendor">Vendor</label><select id="tl-f-vendor" class="dl-form-control"><option>All vendors</option><option>FASTag</option></select></div><div class="dl-form-group"><label for="tl-f-src">Source</label><select id="tl-f-src" class="dl-form-control"><option>All sources</option><option>Import</option><option>Manual</option></select></div><div class="dl-form-group"><label for="tl-f-link">Vehicle Link</label><select id="tl-f-link" class="dl-form-control"><option>All</option><option>Unlinked only</option></select></div><div class="dl-form-group"><label for="tl-f-from">Date From</label><input id="tl-f-from" class="dl-form-control" type="date" value="" ></div><div class="dl-form-group"><label for="tl-f-to">Date To</label><input id="tl-f-to" class="dl-form-control" type="date" value="" ></div><div class="dl-form-group"><label for="tl-fleet">Add vehicle to fleet</label><input id="tl-fleet" class="dl-form-control" type="text" value="" placeholder="e.g. GJ19Y5403"></div></div><div class="dl-bill-options"><span class="dl-formula-note" id="tl-fleetlist"></span><div class="dl-toolbar-actions"><button type="button" class="dl-action-button" id="tl-addfleet"><i class="ri-add-line dl-red-icon"></i> Add Vehicle</button><button type="button" class="dl-action-button" id="tl-reset"><i class="ri-refresh-line"></i> Reset</button><button type="button" class="dl-primary-button" id="tl-export"><i class="ri-file-excel-line"></i> Export CSV</button></div></div></div><div class="dl-table-wrapper"><table class="dl-vehicle-table"><thead><tr><th>Vehicle</th><th>Tag / Activity</th><th>Description</th><th>Date</th><th>DR / CR</th><th class="dl-text-right">Net</th><th>Actions</th></tr></thead><tbody id="tl-body"></tbody></table></div><div class="dl-calculator-footer"><div class="dl-documentation-note"><i class="ri-information-line"></i><span>The Tolls page shows columns such as Vehicle, Tag / Activity, Description, Date, DR / CR, Net, and Actions. Imported FASTag rows are labeled Import. Debit increases the toll expense, while credit reduces the net toll expense. If a vehicle number is not found in the fleet, the imported entry may remain unlinked; after adding the vehicle, use Link matching. Sample values are for demonstration only.</span></div></div></div><div class="dl-calculator-panel" id="tl-view-ref" hidden><div class="dl-table-wrapper"><table class="dl-vehicle-table"><thead><tr><th>Field on Screen</th><th>Example Value</th><th>What the Field Means</th></tr></thead><tbody><tr><td><div class="dl-vehicle-name"><span>Vehicle *</span></div></td><td>GJ19Y9990</td><td>Select the vehicle that passed through the toll plaza.</td></tr><tr><td><div class="dl-vehicle-name"><span>Vendor / Tag Provider *</span></div></td><td>FASTag</td><td>Choose the toll provider/vendor.</td></tr><tr><td><div class="dl-vehicle-name"><span>Tag Account No.</span></div></td><td>40702314</td><td>Enter the FASTag or tag account reference, when available.</td></tr><tr><td><div class="dl-vehicle-name"><span>Transaction Date *</span></div></td><td>30-09-2026</td><td>Date of the toll transaction.</td></tr><tr><td><div class="dl-vehicle-name"><span>Plaza Code</span></div></td><td>536142</td><td>Code identifying the toll plaza, if available.</td></tr><tr><td><div class="dl-vehicle-name"><span>Transaction Description</span></div></td><td>Navapur Border Checkpost - Lane 1</td><td>Plaza name, lane, or other transaction details.</td></tr><tr><td><div class="dl-vehicle-name"><span>Amount *</span></div></td><td>₹218.30</td><td>Value of this toll transaction.</td></tr><tr><td><div class="dl-vehicle-name"><span>Amount Type *</span></div></td><td>Debit (DR)</td><td>Choose Debit for a toll charge; Credit (CR) for an adjustment/refund.</td></tr><tr><td><div class="dl-vehicle-name"><span>Remarks</span></div></td><td>Toll deducted during trip</td><td>Optional additional explanation.</td></tr></tbody></table></div><div class="dl-calculator-footer"><div class="dl-documentation-note"><i class="ri-information-line"></i><span>These scenarios illustrate the fields and workflows shown in the software; sample values are for demonstration only.</span></div></div></div>
+    </div>
+</section>
+
+<section id="features" class="dl-features-section">
+    <div class="container">
+        <div class="heading-wrapper">
+            <span class="heading-tag">Key Module Features</span>
+            <h2 class="heading-title">Everything You Need for <span>Toll Management</span></h2>
+            <div class="dl-features-filters"><button type="button" class="dl-filter-btn is-active" data-filter="all">All Features (15)</button><button type="button" class="dl-filter-btn" data-filter="entry">Manual Entries &amp; Details</button><button type="button" class="dl-filter-btn" data-filter="import">FASTag Import &amp; Vehicle Linking</button><button type="button" class="dl-filter-btn" data-filter="reports">Search, Summary &amp; CSV</button></div>
+        </div>
+        <div class="dl-features-grid">
+            <article class="dl-feature-card" data-category="entry">
+                <div class="dl-feature-card-content">
+                    <div class="dl-feature-icon"><i class="ri-edit-box-line"></i></div>
+                    <div class="dl-feature-card-heading">
+                        <span class="dl-feature-number">4.1</span>
+                        <h3>Manual Toll Entry</h3>
+                    </div>
+                    <p>Record a toll transaction for a chosen vehicle and Toll vendor, including the transaction date and amount.</p>
+                </div>
+            </article>
+            <article class="dl-feature-card" data-category="entry">
+                <div class="dl-feature-card-content">
+                    <div class="dl-feature-icon"><i class="ri-swap-line"></i></div>
+                    <div class="dl-feature-card-heading">
+                        <span class="dl-feature-number">4.2</span>
+                        <h3>Debit and Credit Transactions</h3>
+                    </div>
+                    <p>Record debit charges and credit adjustments separately. The listing can summarize debits, credits and net amounts.</p>
+                </div>
+            </article>
+            <article class="dl-feature-card" data-category="import">
+                <div class="dl-feature-card-content">
+                    <div class="dl-feature-icon"><i class="ri-file-upload-line"></i></div>
+                    <div class="dl-feature-card-heading">
+                        <span class="dl-feature-number">4.3</span>
+                        <h3>FASTag Statement Import</h3>
+                    </div>
+                    <p>Import transactions from supported statement files such as XLS, XLSX, CSV, TXT and HTML, subject to the statement parser's supported layout.</p>
+                </div>
+            </article>
+            <article class="dl-feature-card" data-category="import">
+                <div class="dl-feature-card-content">
+                    <div class="dl-feature-icon"><i class="ri-layout-column-line"></i></div>
+                    <div class="dl-feature-card-heading">
+                        <span class="dl-feature-number">4.4</span>
+                        <h3>Flexible Column Mapping</h3>
+                    </div>
+                    <p>Map bank or FASTag statement column names to the system fields, making imports easier when different providers use different headings.</p>
+                </div>
+            </article>
+            <article class="dl-feature-card" data-category="import">
+                <div class="dl-feature-card-content">
+                    <div class="dl-feature-icon"><i class="ri-truck-line"></i></div>
+                    <div class="dl-feature-card-heading">
+                        <span class="dl-feature-number">4.5</span>
+                        <h3>Vehicle-Wise Toll Records</h3>
+                    </div>
+                    <p>Associate a toll payment with the relevant vehicle and look up its toll transaction history.</p>
+                </div>
+            </article>
+            <article class="dl-feature-card" data-category="import">
+                <div class="dl-feature-card-content">
+                    <div class="dl-feature-icon"><i class="ri-link-unlink"></i></div>
+                    <div class="dl-feature-card-heading">
+                        <span class="dl-feature-number">4.6</span>
+                        <h3>Unlinked Vehicle Review</h3>
+                    </div>
+                    <p>Keep imported records when a vehicle registration number has not yet matched a fleet vehicle, and review these records separately.</p>
+                </div>
+            </article>
+            <article class="dl-feature-card" data-category="import">
+                <div class="dl-feature-card-content">
+                    <div class="dl-feature-icon"><i class="ri-links-line"></i></div>
+                    <div class="dl-feature-card-heading">
+                        <span class="dl-feature-number">4.7</span>
+                        <h3>Link Matching Vehicles</h3>
+                    </div>
+                    <p>Run a matching process to link unlinked toll transactions to existing vehicles when their vehicle numbers match.</p>
+                </div>
+            </article>
+            <article class="dl-feature-card" data-category="entry">
+                <div class="dl-feature-card-content">
+                    <div class="dl-feature-icon"><i class="ri-store-2-line"></i></div>
+                    <div class="dl-feature-card-heading">
+                        <span class="dl-feature-number">4.8</span>
+                        <h3>Toll Vendor Details</h3>
+                    </div>
+                    <p>Associate toll entries with a Toll-type vendor to keep related transactions organized.</p>
+                </div>
+            </article>
+            <article class="dl-feature-card" data-category="entry">
+                <div class="dl-feature-card-content">
+                    <div class="dl-feature-icon"><i class="ri-bank-card-line"></i></div>
+                    <div class="dl-feature-card-heading">
+                        <span class="dl-feature-number">4.9</span>
+                        <h3>FASTag Account and Plaza Information</h3>
+                    </div>
+                    <p>Store FASTag account details, plaza codes and transaction descriptions where available.</p>
+                </div>
+            </article>
+            <article class="dl-feature-card" data-category="entry">
+                <div class="dl-feature-card-content">
+                    <div class="dl-feature-icon"><i class="ri-hashtag"></i></div>
+                    <div class="dl-feature-card-heading">
+                        <span class="dl-feature-number">4.10</span>
+                        <h3>Transaction References and Source</h3>
+                    </div>
+                    <p>Retain transaction IDs, activity information and whether entries were imported or manually recorded where applicable.</p>
+                </div>
+            </article>
+            <article class="dl-feature-card" data-category="entry">
+                <div class="dl-feature-card-content">
+                    <div class="dl-feature-icon"><i class="ri-file-copy-line"></i></div>
+                    <div class="dl-feature-card-heading">
+                        <span class="dl-feature-number">4.11</span>
+                        <h3>Duplicate Checking</h3>
+                    </div>
+                    <p>The manual create/edit process checks for an existing matching transaction and can show a duplicate warning.</p>
+                </div>
+            </article>
+            <article class="dl-feature-card" data-category="reports">
+                <div class="dl-feature-card-content">
+                    <div class="dl-feature-icon"><i class="ri-filter-3-line"></i></div>
+                    <div class="dl-feature-card-heading">
+                        <span class="dl-feature-number">4.12</span>
+                        <h3>Search, Filters and Sorting</h3>
+                    </div>
+                    <p>Find records using vehicle, vendor, tag account, source, unlinked status and date filters, and sort transaction listings.</p>
+                </div>
+            </article>
+            <article class="dl-feature-card" data-category="reports">
+                <div class="dl-feature-card-content">
+                    <div class="dl-feature-icon"><i class="ri-pie-chart-2-line"></i></div>
+                    <div class="dl-feature-card-heading">
+                        <span class="dl-feature-number">4.13</span>
+                        <h3>Toll Expense Summary</h3>
+                    </div>
+                    <p>For filtered records, review transaction count and debit, credit and net totals.</p>
+                </div>
+            </article>
+            <article class="dl-feature-card" data-category="reports">
+                <div class="dl-feature-card-content">
+                    <div class="dl-feature-icon"><i class="ri-file-excel-2-line"></i></div>
+                    <div class="dl-feature-card-heading">
+                        <span class="dl-feature-number">4.14</span>
+                        <h3>CSV Reports</h3>
+                    </div>
+                    <p>Export filtered toll transactions to a CSV file containing vehicle, vendor, FASTag, plaza and transaction amounts.</p>
+                </div>
+            </article>
+            <article class="dl-feature-card" data-category="entry">
+                <div class="dl-feature-card-content">
+                    <div class="dl-feature-icon"><i class="ri-edit-line"></i></div>
+                    <div class="dl-feature-card-heading">
+                        <span class="dl-feature-number">4.15</span>
+                        <h3>Edit, View and Delete</h3>
+                    </div>
+                    <p>Authorized users can open transaction details and update or delete toll records according to their permissions.</p>
+                </div>
+            </article>
+        </div>
+    </div>
+</section>
+
+<section class="dl-workflow-section">
+    <div class="container">
+        <div class="heading-wrapper heading-wrap-left">
+            <span class="heading-tag">Step by Step</span>
+            <h2 class="heading-title">How Does the <span>Toll Management Module</span> Work?</h2>
+        </div>
+        <div class="dl-workflow-grid">
+            <article class="dl-workflow-card">
+                <div class="dl-workflow-card-content">
+                    <div class="dl-workflow-card-top">
+                        <span class="dl-workflow-number">01</span>
+                        <div class="dl-workflow-icon"><i class="ri-folder-open-line"></i></div>
+                    </div>
+                    <h3 class="dl-workflow-card-title">Step 1: Open Toll Management</h3>
+                    <p class="dl-workflow-card-description">Open the Toll Management section to view saved transactions.</p>
+                    <ul class="dl-workflow-checklist"><li><i class="ri-check-line"></i><span>You can review the listing, search for a vehicle or choose to add a new toll entry.</span></li></ul>
+                </div>
+                <div class="dl-workflow-card-footer"><span>Step 01</span></div>
+            </article>
+            <article class="dl-workflow-card">
+                <div class="dl-workflow-card-content">
+                    <div class="dl-workflow-card-top">
+                        <span class="dl-workflow-number">02</span>
+                        <div class="dl-workflow-icon"><i class="ri-edit-box-line"></i></div>
+                    </div>
+                    <h3 class="dl-workflow-card-title">Step 2: Add a Toll Transaction</h3>
+                    <p class="dl-workflow-card-description">Select the vehicle and Toll-type vendor.</p>
+                    <ul class="dl-workflow-checklist"><li><i class="ri-check-line"></i><span>Enter the transaction date, amount and whether it is a debit or credit.</span></li><li><i class="ri-check-line"></i><span>Add a FASTag account number, toll plaza code, description or remarks if available.</span></li></ul>
+                </div>
+                <div class="dl-workflow-card-footer"><span>Step 02</span></div>
+            </article>
+            <article class="dl-workflow-card">
+                <div class="dl-workflow-card-content">
+                    <div class="dl-workflow-card-top">
+                        <span class="dl-workflow-number">03</span>
+                        <div class="dl-workflow-icon"><i class="ri-save-3-line"></i></div>
+                    </div>
+                    <h3 class="dl-workflow-card-title">Step 3: Save and Review</h3>
+                    <p class="dl-workflow-card-description">Save the transaction and open its details whenever required.</p>
+                    <ul class="dl-workflow-checklist"><li><i class="ri-check-line"></i><span>Authorized users can edit or delete a manually managed record.</span></li></ul>
+                </div>
+                <div class="dl-workflow-card-footer"><span>Step 03</span></div>
+            </article>
+            <article class="dl-workflow-card">
+                <div class="dl-workflow-card-content">
+                    <div class="dl-workflow-card-top">
+                        <span class="dl-workflow-number">04</span>
+                        <div class="dl-workflow-icon"><i class="ri-file-upload-line"></i></div>
+                    </div>
+                    <h3 class="dl-workflow-card-title">Step 4: Import a FASTag Statement</h3>
+                    <p class="dl-workflow-card-description">Instead of adding many records individually, upload a supported FASTag statement.</p>
+                    <ul class="dl-workflow-checklist"><li><i class="ri-check-line"></i><span>The system reads the file and presents a column-mapping step to match statement fields to toll fields.</span></li></ul>
+                </div>
+                <div class="dl-workflow-card-footer"><span>Step 04</span></div>
+            </article>
+            <article class="dl-workflow-card">
+                <div class="dl-workflow-card-content">
+                    <div class="dl-workflow-card-top">
+                        <span class="dl-workflow-number">05</span>
+                        <div class="dl-workflow-icon"><i class="ri-layout-column-line"></i></div>
+                    </div>
+                    <h3 class="dl-workflow-card-title">Step 5: Match and Import Records</h3>
+                    <p class="dl-workflow-card-description">Review the suggested column mapping and process the import.</p>
+                    <ul class="dl-workflow-checklist"><li><i class="ri-check-line"></i><span>The system imports supported rows and attempts to associate the vehicle registration numbers with the vehicles already in your fleet.</span></li></ul>
+                </div>
+                <div class="dl-workflow-card-footer"><span>Step 05</span></div>
+            </article>
+            <article class="dl-workflow-card">
+                <div class="dl-workflow-card-content">
+                    <div class="dl-workflow-card-top">
+                        <span class="dl-workflow-number">06</span>
+                        <div class="dl-workflow-icon"><i class="ri-link-unlink"></i></div>
+                    </div>
+                    <h3 class="dl-workflow-card-title">Step 6: Review Unlinked Entries</h3>
+                    <p class="dl-workflow-card-description">Transactions that do not match an existing vehicle can remain visible as unlinked.</p>
+                    <ul class="dl-workflow-checklist"><li><i class="ri-check-line"></i><span>Once the vehicle record or registration number is corrected, use the available linking action to connect matching transactions.</span></li></ul>
+                </div>
+                <div class="dl-workflow-card-footer"><span>Step 06</span></div>
+            </article>
+            <article class="dl-workflow-card">
+                <div class="dl-workflow-card-content">
+                    <div class="dl-workflow-card-top">
+                        <span class="dl-workflow-number">07</span>
+                        <div class="dl-workflow-icon"><i class="ri-download-cloud-2-line"></i></div>
+                    </div>
+                    <h3 class="dl-workflow-card-title">Step 7: Filter and Export</h3>
+                    <p class="dl-workflow-card-description">Filter by vehicle, vendor, FASTag account, source, unlinked status or transaction dates.</p>
+                    <ul class="dl-workflow-checklist"><li><i class="ri-check-line"></i><span>Download the selected records as a CSV report for Excel.</span></li></ul>
+                </div>
+                <div class="dl-workflow-card-footer"><span>Step 07</span></div>
+            </article>
+        </div>
+    </div>
+</section>
+
+<section class="results-section">
+    <div class="container">
+        <div class="heading-wrapper">
+            <span class="heading-tag">Benefits</span>
+            <h2 class="heading-title heading-light">Benefits of <span>Toll Management</span></h2>
+        </div>
+        <div class="results-grid">
+            <div class="result-card">
+                <div class="result-icon"><i class="ri-time-line"></i></div>
+                <h3>Save Time</h3>
+                <p>Import many FASTag transactions together instead of manually entering each one.</p>
+            </div>
+            <div class="result-card">
+                <div class="result-icon"><i class="ri-truck-line"></i></div>
+                <h3>Improve Vehicle Tracking</h3>
+                <p>See toll expenses associated with individual trucks or vehicles.</p>
+            </div>
+            <div class="result-card">
+                <div class="result-icon"><i class="ri-bank-card-line"></i></div>
+                <h3>Keep FASTag Records Organized</h3>
+                <p>Maintain toll dates, amounts, accounts, transaction references and plaza information together.</p>
+            </div>
+            <div class="result-card">
+                <div class="result-icon"><i class="ri-link-unlink"></i></div>
+                <h3>Handle Unmatched Transactions</h3>
+                <p>Review imported toll records that are not yet connected to registered vehicles.</p>
+            </div>
+            <div class="result-card">
+                <div class="result-icon"><i class="ri-file-excel-2-line"></i></div>
+                <h3>Support Accounts and Reporting</h3>
+                <p>Filter toll history, review totals and download records for reporting.</p>
+            </div>
+            <div class="result-card">
+                <div class="result-icon"><i class="ri-lock-line"></i></div>
+                <h3>Control Who Can Edit</h3>
+                <p>Use module permissions to manage viewing, creating, editing and deleting toll transactions.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="faq" class="dl-faq-section">
+    <div class="container">
+        <div class="heading-wrapper">
+            <span class="heading-tag">Got Questions?</span>
+            <h2 class="heading-title">Frequently Asked <span>Questions</span></h2>
+            <div class="dl-faq-filters"><button class="dl-faq-filter active" type="button">All</button><button class="dl-faq-filter" type="button">Manual Entry</button><button class="dl-faq-filter" type="button">Import</button><button class="dl-faq-filter" type="button">Unlinked</button><button class="dl-faq-filter" type="button">Adjustments</button><button class="dl-faq-filter" type="button">Search</button><button class="dl-faq-filter" type="button">Reports</button><button class="dl-faq-filter" type="button">Integrations</button></div>
+        </div>
+        <div class="dl-faq-list">
+            <div class="dl-faq-item active">
+                <button class="dl-faq-question" type="button" aria-expanded="true" aria-controls="dl-faq-answer-1">
+                    <span class="dl-faq-question-content">
+                        <span class="dl-faq-number">Q1</span>
+                        <span class="dl-faq-question-text">Can I add a toll payment manually?</span>
+                    </span>
+                    <span class="dl-faq-arrow"><i class="ri-arrow-down-s-line"></i></span>
+                </button>
+                <div class="dl-faq-answer" id="dl-faq-answer-1">
+                    <div class="dl-faq-answer-content">
+                        <p>Yes. Select the vehicle, Toll vendor, transaction date and amount, then save the record.</p>
+                        <div class="dl-faq-topic"><span>Topic: Manual Entry</span></div>
+                    </div>
+                </div>
+            </div>
+            <div class="dl-faq-item">
+                <button class="dl-faq-question" type="button" aria-expanded="false" aria-controls="dl-faq-answer-2">
+                    <span class="dl-faq-question-content">
+                        <span class="dl-faq-number">Q2</span>
+                        <span class="dl-faq-question-text">Can I import FASTag statements?</span>
+                    </span>
+                    <span class="dl-faq-arrow"><i class="ri-arrow-down-s-line"></i></span>
+                </button>
+                <div class="dl-faq-answer" id="dl-faq-answer-2">
+                    <div class="dl-faq-answer-content">
+                        <p>Yes. Use the statement import page to upload a supported file and confirm its column mapping.</p>
+                        <div class="dl-faq-topic"><span>Topic: Import</span></div>
+                    </div>
+                </div>
+            </div>
+            <div class="dl-faq-item">
+                <button class="dl-faq-question" type="button" aria-expanded="false" aria-controls="dl-faq-answer-3">
+                    <span class="dl-faq-question-content">
+                        <span class="dl-faq-number">Q3</span>
+                        <span class="dl-faq-question-text">What if a transaction does not match a vehicle?</span>
+                    </span>
+                    <span class="dl-faq-arrow"><i class="ri-arrow-down-s-line"></i></span>
+                </button>
+                <div class="dl-faq-answer" id="dl-faq-answer-3">
+                    <div class="dl-faq-answer-content">
+                        <p>It can be reviewed as an unlinked transaction and linked later if a matching vehicle record becomes available.</p>
+                        <div class="dl-faq-topic"><span>Topic: Unlinked</span></div>
+                    </div>
+                </div>
+            </div>
+            <div class="dl-faq-item">
+                <button class="dl-faq-question" type="button" aria-expanded="false" aria-controls="dl-faq-answer-4">
+                    <span class="dl-faq-question-content">
+                        <span class="dl-faq-number">Q4</span>
+                        <span class="dl-faq-question-text">Can I record refunds or adjustments?</span>
+                    </span>
+                    <span class="dl-faq-arrow"><i class="ri-arrow-down-s-line"></i></span>
+                </button>
+                <div class="dl-faq-answer" id="dl-faq-answer-4">
+                    <div class="dl-faq-answer-content">
+                        <p>Yes. The manual form supports debit and credit transaction types.</p>
+                        <div class="dl-faq-topic"><span>Topic: Adjustments</span></div>
+                    </div>
+                </div>
+            </div>
+            <div class="dl-faq-item">
+                <button class="dl-faq-question" type="button" aria-expanded="false" aria-controls="dl-faq-answer-5">
+                    <span class="dl-faq-question-content">
+                        <span class="dl-faq-number">Q5</span>
+                        <span class="dl-faq-question-text">Can I search by FASTag account or vendor?</span>
+                    </span>
+                    <span class="dl-faq-arrow"><i class="ri-arrow-down-s-line"></i></span>
+                </button>
+                <div class="dl-faq-answer" id="dl-faq-answer-5">
+                    <div class="dl-faq-answer-content">
+                        <p>Yes. The listing includes FASTag account and vendor filters, along with other options.</p>
+                        <div class="dl-faq-topic"><span>Topic: Search</span></div>
+                    </div>
+                </div>
+            </div>
+            <div class="dl-faq-item">
+                <button class="dl-faq-question" type="button" aria-expanded="false" aria-controls="dl-faq-answer-6">
+                    <span class="dl-faq-question-content">
+                        <span class="dl-faq-number">Q6</span>
+                        <span class="dl-faq-question-text">Can I download toll records?</span>
+                    </span>
+                    <span class="dl-faq-arrow"><i class="ri-arrow-down-s-line"></i></span>
+                </button>
+                <div class="dl-faq-answer" id="dl-faq-answer-6">
+                    <div class="dl-faq-answer-content">
+                        <p>Yes. Filtered transaction details can be exported as CSV for Excel.</p>
+                        <div class="dl-faq-topic"><span>Topic: Reports</span></div>
+                    </div>
+                </div>
+            </div>
+            <div class="dl-faq-item">
+                <button class="dl-faq-question" type="button" aria-expanded="false" aria-controls="dl-faq-answer-7">
+                    <span class="dl-faq-question-content">
+                        <span class="dl-faq-number">Q7</span>
+                        <span class="dl-faq-question-text">Does this module recharge FASTag or automatically retrieve live bank transactions?</span>
+                    </span>
+                    <span class="dl-faq-arrow"><i class="ri-arrow-down-s-line"></i></span>
+                </button>
+                <div class="dl-faq-answer" id="dl-faq-answer-7">
+                    <div class="dl-faq-answer-content">
+                        <p>The supplied code supports manual entries and statement-file import. It does not establish live FASTag recharge or automatic bank synchronization.</p>
+                        <div class="dl-faq-topic"><span>Topic: Integrations</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="dl-faq-cta">
+            <div class="dl-faq-cta-content">
+                <h3>Simplify Your Toll Expense Management</h3>
+                <p>Keep toll charges and FASTag statement records organized in one system. Easily review vehicle-wise toll costs, handle unmatched transactions and export records whenever needed.</p>
+                
+            </div>
+            <button class="dl-faq-cta-button" type="button">Get Started Now</button>
+        </div>
+    </div>
+</section>
+
+<!--footer section start-->
+<footer class="footer">
+
+    <!-- Newsletter -->
+    <div class="footer-newsletter">
+        <div class="container">
+
+            <div class="newsletter-wrapper">
+
+                <div class="newsletter-content">
+                    <h2>Stay ahead of the curve</h2>
+                    <p>
+                        Fleet management insights, product updates, and industry news.
+                    </p>
+                </div>
+
+                <form class="newsletter-form">
+
+                    <input
+                        type="email"
+                        placeholder="Enter your email"
+                    >
+
+                    <button type="submit">
+                        Subscribe
+
+                       <i class="ri-arrow-right-line"></i>
+
+                    </button>
+
+                </form>
+
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Footer Main -->
+
+    <div class="footer-main">
+
+        <div class="container">
+
+            <div class="footer-grid">
+
+                <!-- Left -->
+
+                <div class="footer-about">
+
+                    <a href="index.html" class="footer-logo">
+                         <img src="Assets/images/transportdesk-logo-dark.svg" alt="footer-logo">
+                    </a>
+
+                    <p>
+                        The intelligent transportation platform that puts fleet directors
+                        in complete control of their operations.
+                    </p>
+
+                    <div class="footer-social">
+
+                        <a href="#">
+                            <i class="ri-facebook-fill"></i>
+                        </a>
+
+                        <a href="#">
+                            <i class="ri-instagram-line"></i>
+                        </a>
+
+                        <a href="#">
+                            <i class="ri-twitter-line"></i>
+                        </a>
+
+                        <a href="#">
+                            <i class="ri-linkedin-fill"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <!-- Product -->
+
+                <div class="footer-links">
+
+                    <h3>Product</h3>
+
+                    <ul>
+        <li>
+            <a href="features.html" class="footer-link">Features</a>
+        </li>
+
+        <li>
+            <a href="modules.html" class="footer-link">Modules</a>
+        </li>
+
+        <li>
+            <a href="solutions.html" class="footer-link">Solutions</a>
+        </li>
+
+        <li>
+            <a href="reports.html" class="footer-link">Reports</a>
+        </li>
+
+        <li>
+            <a href="contact.html" class="footer-link">Contact</a>
+        </li>
+    </ul>
+
+                </div>
+
+                <!-- Resources -->
+
+                <div class="footer-links">
+
+                    <h3>Resources</h3>
+
+                    <ul>
+
+                        <li><a href="documentation.html" class="footer-link">Documentation</a></li>
+
+                        <li><a href="faq.html" class="footer-link">FAQ</a></li>
+
+                        <li><a href="privacy-policy.html" class="footer-link">Privacy Policy</a></li>
+
+                    </ul>
+
+                </div>
+
+                <!-- Support -->
+
+                <div class="footer-links">
+
+                    <h3>Support</h3>
+
+                    <ul>
+
+                        <li><a href="#" class="footer-link">Help Center</a></li>
+
+                        <li><a href="#" class="footer-link">Status</a></li>
+
+                        <li><a href="#" class="footer-link">Security</a></li>
+
+                    </ul>
+
+                </div>
+
+                <!-- Contact -->
+
+                <div class="footer-contact">
+
+                    <div class="contact-item">
+
+                        <div class="icon">
+                            <i class="ri-mail-line"></i>
+                        </div>
+
+                        <div>
+
+                            <span>Email</span>
+
+                            <a href="#">
+                               jay@prismitsystems.com
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                    <div class="contact-item">
+
+                        <div class="icon">
+                            <i class="ri-phone-fill"></i>
+                        </div>
+
+                        <div>
+
+                            <span>Call</span>
+                          <div class="footer-contact-num">
+                            <a href="#">
+                                6355 258 003
+                            </a>
+
+                             <a href="#">
+                               +1 562-312-0282
+                            </a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="contact-item">
+
+                        <div class="icon">
+                            <i class="ri-map-pin-line"></i>
+                        </div>
+
+                        <div>
+
+                            <span>Location (India)</span>
+                            <div class="footer-location">
+                            <p>The Galleria Business Hub, Adajan Gam, Pal Gam, Surat, Gujarat, India 394510</p>
+                            </div>
+                        </div>
+
+                    </div>
+                     <div class="contact-item">
+
+                        <div class="icon">
+                            <i class="ri-map-pin-line"></i>
+                        </div>
+
+                        <div>
+
+                            <span>Location (USA)</span>
+                            <div class="footer-location">
+                             <p>Norwalk, California, 90650. USA</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Bottom -->
+
+    <div class="footer-bottom">
+
+        <div class="container">
+
+            <div class="bottom-wrapper">
+
+                <p>
+                    © 2026 All rights reserved.
+                </p>
+
+                <ul>
+
+                    <li><a href="#">Privacy Policy</a></li>
+
+                    <li><a href="#">Terms of Service</a></li>
+
+                    <li><a href="#">Cookie Policy</a></li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</footer>
+<!--footer section end-->
+
+<script>
+(function () {
+    if (!document.getElementById('tl-body')) return;
+    var $ = function (id) { return document.getElementById(id); };
+    function esc(s) { return String(s == null ? '' : s).replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); }
+    function money(n) { return '₹' + Number(n || 0).toLocaleString('en-IN', { minimumFractionDigits: 0, maximumFractionDigits: 2 }); }
+    function dmy(d) { return d ? d.split('-').reverse().join('-') : '—'; }
+    function show(tabs, map, view) {
+        Array.prototype.forEach.call($(tabs).querySelectorAll('.dl-view-tab'), function (x) { x.classList.toggle('dl-view-tab-active', x.getAttribute('data-view') === view); });
+        Object.keys(map).forEach(function (k) { $(map[k]).hidden = k !== view; });
+    }
+
+    var fleet = ['GJ19Y9990', 'GJ19Y0371'], seq = 2, warned = '';
+    var E = [
+        { id: 1, veh: 'GJ19Y9990', tag: '34084988', desc: 'Navapur Border Checkpost; code 536142', date: '2026-09-30', time: '23:52', dr: 218.3, cr: 0, src: 'Import', vendor: 'FASTag', linked: true },
+        { id: 2, veh: 'GJ19Y0371', tag: '34085005', desc: 'Ranasan Toll Plaza; code 536033', date: '2026-09-30', time: '23:51', dr: 210, cr: 0, src: 'Import', vendor: 'FASTag', linked: true }
+    ];
+    var map = { add: 'tl-view-add', list: 'tl-view-list', ref: 'tl-view-ref' };
+    function fmtDate(e) { return dmy(e.date) + (e.time ? ' ' + e.time : ''); }
+    function filtered() {
+        var q = $('tl-f-q').value.trim().toLowerCase(), v = $('tl-f-vendor').value, s = $('tl-f-src').value, l = $('tl-f-link').value, f = $('tl-f-from').value, t = $('tl-f-to').value;
+        return E.filter(function (e) {
+            return (!q || (e.veh + ' ' + e.tag + ' ' + e.desc).toLowerCase().indexOf(q) > -1) && (v === 'All vendors' || e.vendor === v) && (s === 'All sources' || e.src === s) &&
+                (l === 'All' || !e.linked) && (!f || e.date >= f) && (!t || e.date <= t);
+        }).sort(function (a, b) { return (b.date + b.time).localeCompare(a.date + a.time); });
+    }
+    function render() {
+        var l = filtered(), dr = 0, cr = 0;
+        l.forEach(function (e) { dr += e.dr; cr += e.cr; });
+        $('tl-body').innerHTML = l.length ? l.map(function (e) {
+            return '<tr><td><div class="dl-vehicle-name"><i class="ri-road-map-fill"></i><span>' + esc(e.veh) + '</span></div>' + (e.linked ? '' : '<div class="dl-vehicle-meta">Unlinked</div>') + '</td><td>' + esc(e.tag || '—') + '<div class="dl-vehicle-meta">' + e.src + '</div></td><td>' + esc(e.desc) + '</td><td>' + fmtDate(e) + '</td><td>DR ' + money(e.dr) + ' / CR ' + money(e.cr) + '</td><td class="dl-text-right">' + money(e.dr - e.cr) +
+                '</td><td class="dl-text-center">' + (e.src === 'Manual' ? '<button type="button" class="dl-delete-button tl-del" data-id="' + e.id + '" title="Delete"><i class="ri-delete-bin-line"></i></button>' : '—') + '</td></tr>';
+        }).join('') : '<tr><td colspan="7">No toll transactions match the selected filters.</td></tr>';
+        $('tl-s-count').textContent = l.length; $('tl-s-dr').textContent = money(dr); $('tl-s-cr').textContent = money(cr); $('tl-s-net').textContent = money(dr - cr);
+        var n = E.filter(function (e) { return !e.linked; }).length;
+        $('tl-unl-note').textContent = n ? n + ' toll entries are not linked to a vehicle' : 'All toll entries are linked to a vehicle';
+        $('tl-fleetlist').textContent = 'Fleet vehicles: ' + fleet.join(', ');
+    }
+    $('tl-save').addEventListener('click', function () {
+        var amt = parseFloat($('tl-amt').value);
+        if (!$('tl-date').value || !(amt >= 0)) { $('tl-msg').textContent = 'Date and amount are required.'; return; }
+        var dr = $('tl-type').value.indexOf('Debit') === 0;
+        var key = [$('tl-veh').value, $('tl-vendor').value, $('tl-date').value, $('tl-amt').value, $('tl-type').value, $('tl-tag').value].join('|');
+        var dup = E.some(function (e) { return e.key === key; });
+        if (dup && warned !== key) { warned = key; $('tl-msg').textContent = 'Duplicate warning: a matching transaction already exists. Click Save Toll Entry again to save anyway.'; return; }
+        warned = '';
+        E.push({ id: ++seq, key: key, veh: $('tl-veh').value, tag: $('tl-tag').value, desc: $('tl-desc').value + ($('tl-plaza').value ? '; code ' + $('tl-plaza').value : ''), date: $('tl-date').value, time: '', dr: dr ? amt : 0, cr: dr ? 0 : amt, src: 'Manual', vendor: $('tl-vendor').value, linked: true });
+        $('tl-msg').textContent = 'Toll entry saved.'; render(); show('tl-tabs', map, 'list');
+    });
+    $('tl-import').addEventListener('click', function () {
+        E.push({ id: ++seq, veh: 'GJ19Y5403', tag: '34090112', desc: 'Sample imported plaza; code 536200', date: '2026-10-02', time: '10:15', dr: 185, cr: 0, src: 'Import', vendor: 'FASTag', linked: false },
+                { id: ++seq, veh: 'GJ19Y5403', tag: '34090230', desc: 'Sample imported plaza; code 536201', date: '2026-10-02', time: '14:40', dr: 120, cr: 0, src: 'Import', vendor: 'FASTag', linked: false });
+        render();
+    });
+    $('tl-showunl').addEventListener('click', function () { $('tl-f-link').selectedIndex = 1; render(); });
+    $('tl-addfleet').addEventListener('click', function () {
+        var v = $('tl-fleet').value.trim().toUpperCase().replace(/\s+/g, '');
+        if (v && fleet.indexOf(v) < 0) { fleet.push(v); $('tl-veh').insertAdjacentHTML('beforeend', '<option>' + esc(v) + '</option>'); }
+        $('tl-fleet').value = ''; render();
+    });
+    $('tl-link').addEventListener('click', function () {
+        E.forEach(function (e) { if (!e.linked && fleet.indexOf(e.veh) > -1) e.linked = true; }); render();
+    });
+    $('tl-reset').addEventListener('click', function () {
+        ['tl-f-q', 'tl-f-from', 'tl-f-to'].forEach(function (id) { $(id).value = ''; });
+        ['tl-f-vendor', 'tl-f-src', 'tl-f-link'].forEach(function (id) { $(id).selectedIndex = 0; }); render();
+    });
+    ['tl-f-q', 'tl-f-vendor', 'tl-f-src', 'tl-f-link', 'tl-f-from', 'tl-f-to'].forEach(function (id) { $(id).addEventListener('input', render); });
+    $('tl-body').addEventListener('click', function (e) {
+        var d = e.target.closest('.tl-del'); if (d) { E = E.filter(function (x) { return x.id !== +d.getAttribute('data-id'); }); render(); }
+    });
+    $('tl-export').addEventListener('click', function () {
+        var rows = [['Vehicle', 'Vendor', 'FASTag / Activity', 'Description', 'Date', 'Debit', 'Credit', 'Net', 'Source']].concat(filtered().map(function (e) { return [e.veh, e.vendor, e.tag, e.desc, fmtDate(e), e.dr, e.cr, e.dr - e.cr, e.src]; }));
+        var csv = rows.map(function (r) { return r.map(function (x) { return '"' + String(x).replace(/"/g, '""') + '"'; }).join(','); }).join('\n');
+        var a = document.createElement('a'); a.href = URL.createObjectURL(new Blob([csv], { type: 'text/csv;charset=utf-8;' })); a.download = 'toll_transactions.csv';
+        document.body.appendChild(a); a.click(); document.body.removeChild(a);
+    });
+    $('tl-tabs').addEventListener('click', function (e) { var t = e.target.closest('.dl-view-tab'); if (t) show('tl-tabs', map, t.getAttribute('data-view')); });
+    render();
+})();
+</script>
+<script src="./Assets/js/custom.js"></script>
+</body>
+</html>

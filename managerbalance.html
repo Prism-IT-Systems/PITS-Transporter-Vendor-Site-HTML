@@ -1,0 +1,1950 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Manager Balance Management Module | TransportDesk Fleet Solutions</title>
+    <meta name="description" content="See how much money has been provided to each manager, how much has been paid out and how much remains, with a manager-wise summary and a full transaction ledger.">
+
+    <!-- Remix Icon -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" />
+
+    <!-- Swiper -->
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+
+    <!-- Lenis -->
+    <link rel="stylesheet"
+        href="https://unpkg.com/lenis@1.3.23/dist/lenis.css">
+
+    <!-- Tailwind Output CSS -->
+     <link href="./Assets/css/output.css" rel="stylesheet">
+</head>
+<body>
+
+<!--Header Section start-->
+<header class="main-header">
+    <div class="container">
+
+        <div class="header-inner">
+
+            <a href="index.html" class="header-logo">
+                <img src="Assets/images/transportdesk-logo.svg" alt="Logo">
+            </a>
+
+            <nav class="main-navigation" id="mobileMenu">
+
+                <div class="menu-circle"></div>
+
+                <ul class="navigation-links">
+                    <li><a href="index.html" class="navigation-link">Home</a></li>
+                    <li><a href="features.html" class="navigation-link">Features</a></li>
+                    <li><a href="modules.html" class="navigation-link active">Modules</a></li>
+                    <li><a href="reports.html" class="navigation-link">Resources</a></li>
+                    <li><a href="contact.html" class="navigation-link">Contact</a></li>
+                </ul>
+
+                <div class="mobile-header-right">
+                    <a href="#" class="login-btn">Login</a>
+                    <a href="#" class="demo-btn">Book Demo</a>
+                </div>
+
+            </nav>
+
+            <div class="header-right">
+                <a href="#" class="login-btn">Login</a>
+                <a href="#" class="demo-btn">Book Demo</a>
+            </div>
+
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+        </div>
+
+    </div>
+</header>
+
+<!-- Add this after header -->
+<div class="menu-overlay" id="menuOverlay"></div>
+<!--Header section End-->
+
+
+<section id="overview" class="dl-overview-section">
+    <div class="dl-overview-glow"></div>
+    <div class="dl-overview-pattern"></div>
+
+    <div class="container">
+        <div class="dl-overview-grid">
+
+            <!-- Left Content -->
+            <div class="dl-overview-content">
+
+                <div class="dl-overview-badge">
+                    <span class="dl-status-dot"></span>
+                    <span>Enterprise Fleet Management</span>
+                    <span class="dl-badge-divider">|</span>
+                    <span class="dl-badge-highlight">Manager Balance Module</span>
+                </div>
+
+                <h1 class="dl-overview-title">
+                    Simplify
+                    <span class="dl-gradient-text">Manager Fund</span>
+                    Tracking
+                </h1>
+
+                <p class="dl-overview-description">
+                    The Manager Balance Management Module helps transport and fleet businesses see how much money has been provided to each manager, how much has been paid out, and how much remains available. Instead of calculating balances manually, users can review a clear summary and transaction history in one place. The module works together with the Expense Book and Payment Management features, making it easier for accounts staff and managers to understand day-to-day fund movement.
+                </p>
+
+                <!-- Action Buttons -->
+                <div class="dl-overview-actions">
+
+                    <button type="button" class="btn-primary"
+                        onclick="document.getElementById('simulator').scrollIntoView({behavior: 'smooth'})">
+                        <span>Try the Manager Balance Example</span>
+                        <i class="ri-arrow-right-line"></i>
+                    </button>
+
+                    <button type="button" class="dl-btn-demo"
+                        onclick="document.querySelector('.dl-demo-section').scrollIntoView({behavior: 'smooth'})">
+                        <span class="dl-play-icon">
+                            <i class="ri-play-fill"></i>
+                        </span>
+                        <span>Watch Demo Video</span>
+                    </button>
+                </div>
+
+                <!-- Statistics -->
+                <div class="dl-overview-stats">
+
+                    <div class="dl-stat-item">
+                        <div class="dl-stat-number">12</div>
+                        <div class="dl-stat-label">Module Features</div>
+                    </div>
+
+                    <div class="dl-stat-item">
+                        <div class="dl-stat-number dl-stat-red">5</div>
+                        <div class="dl-stat-label">Simple Steps</div>
+                    </div>
+
+                    <div class="dl-stat-item">
+                        <div class="dl-stat-number dl-stat-green">₹1,251,800.00</div>
+                        <div class="dl-stat-label">Example Float Balance</div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Right Image -->
+            <div class="dl-overview-visual">
+
+                <div class="dl-visual-card">
+
+                    <img
+                        src="Assets/images/hero_fleet_dispatch_1792482270822.jpg"
+                        alt="Transportation fleet manager fund tracking"
+                        class="dl-visual-image"
+                    >
+
+                    <div class="dl-visual-overlay"></div>
+
+                    <div class="dl-visual-topbar">
+
+                        <div class="dl-live-label">
+                            <span class="dl-live-dot"></span>
+                            <span>Float Ledger</span>
+                        </div>
+
+                        <div class="dl-fuel-rate">
+                            ANIL KUMAR SHUKLA
+                        </div>
+
+                    </div>
+
+                    <div class="dl-fuel-slip">
+
+                        <div class="dl-slip-header">
+                            <span class="dl-slip-title">
+                                Current Float Balance · Example Screen
+                            </span>
+
+                            <span class="dl-slip-status">
+                                Overall Balance
+                            </span>
+                        </div>
+
+                        <div class="dl-slip-stats">
+
+                            <div class="dl-slip-stat">
+                                <span class="dl-slip-label">Advances Received</span>
+                                <span class="dl-slip-value">₹1,251,800.00</span>
+                            </div>
+
+                            <div class="dl-slip-stat">
+                                <span class="dl-slip-label">Payments Made</span>
+                                <span class="dl-slip-value dl-slip-red">₹0.00</span>
+                            </div>
+
+                            <div class="dl-slip-stat">
+                                <span class="dl-slip-label">Balance</span>
+                                <span class="dl-slip-value dl-slip-green">₹1,251,800.00</span>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<section class="dl-trusted-section">
+    <div class="dl-trusted-heading">
+        <span>
+            Manager Advances, Payments and Ledgers in One Place
+        </span>
+    </div>
+
+    <div class="dl-trusted-marquee">
+        <div class="dl-trusted-fade dl-trusted-fade-left"></div>
+        <div class="dl-trusted-fade dl-trusted-fade-right"></div>
+
+        <div class="dl-trusted-track">
+
+            <div class="dl-trusted-group">
+                <div class="dl-trusted-item">
+                    <span class="dl-trusted-dot"></span>
+                    <span class="dl-trusted-name">Manager-Wise Balances</span>
+                </div>
+
+                <div class="dl-trusted-item">
+                    <span class="dl-trusted-dot"></span>
+                    <span class="dl-trusted-name">Advances Received</span>
+                </div>
+
+                <div class="dl-trusted-item">
+                    <span class="dl-trusted-dot"></span>
+                    <span class="dl-trusted-name">Payments Made</span>
+                </div>
+
+                <div class="dl-trusted-item">
+                    <span class="dl-trusted-dot"></span>
+                    <span class="dl-trusted-name">Remaining Balance</span>
+                </div>
+
+                <div class="dl-trusted-item">
+                    <span class="dl-trusted-dot"></span>
+                    <span class="dl-trusted-name">Transaction Ledger</span>
+                </div>
+
+                <div class="dl-trusted-item">
+                    <span class="dl-trusted-dot"></span>
+                    <span class="dl-trusted-name">Running Balance</span>
+                </div>
+
+                <div class="dl-trusted-item">
+                    <span class="dl-trusted-dot"></span>
+                    <span class="dl-trusted-name">Credit &amp; Debit</span>
+                </div>
+
+                <div class="dl-trusted-item">
+                    <span class="dl-trusted-dot"></span>
+                    <span class="dl-trusted-name">Vendor Payments</span>
+                </div>
+
+                <div class="dl-trusted-item">
+                    <span class="dl-trusted-dot"></span>
+                    <span class="dl-trusted-name">Driver Payments</span>
+                </div>
+
+                <div class="dl-trusted-item">
+                    <span class="dl-trusted-dot"></span>
+                    <span class="dl-trusted-name">Fund Usage Warning</span>
+                </div>
+
+                <div class="dl-trusted-item">
+                    <span class="dl-trusted-dot"></span>
+                    <span class="dl-trusted-name">Expense Book Connection</span>
+                </div>
+
+                <div class="dl-trusted-item">
+                    <span class="dl-trusted-dot"></span>
+                    <span class="dl-trusted-name">Role Permissions</span>
+                </div>
+
+            </div>
+
+            <!-- Duplicate group for seamless looping -->
+            <div class="dl-trusted-group" aria-hidden="true">
+                <div class="dl-trusted-item">
+                    <span class="dl-trusted-dot"></span>
+                    <span class="dl-trusted-name">Manager-Wise Balances</span>
+                </div>
+
+                <div class="dl-trusted-item">
+                    <span class="dl-trusted-dot"></span>
+                    <span class="dl-trusted-name">Advances Received</span>
+                </div>
+
+                <div class="dl-trusted-item">
+                    <span class="dl-trusted-dot"></span>
+                    <span class="dl-trusted-name">Payments Made</span>
+                </div>
+
+                <div class="dl-trusted-item">
+                    <span class="dl-trusted-dot"></span>
+                    <span class="dl-trusted-name">Remaining Balance</span>
+                </div>
+
+                <div class="dl-trusted-item">
+                    <span class="dl-trusted-dot"></span>
+                    <span class="dl-trusted-name">Transaction Ledger</span>
+                </div>
+
+                <div class="dl-trusted-item">
+                    <span class="dl-trusted-dot"></span>
+                    <span class="dl-trusted-name">Running Balance</span>
+                </div>
+
+                <div class="dl-trusted-item">
+                    <span class="dl-trusted-dot"></span>
+                    <span class="dl-trusted-name">Credit &amp; Debit</span>
+                </div>
+
+                <div class="dl-trusted-item">
+                    <span class="dl-trusted-dot"></span>
+                    <span class="dl-trusted-name">Vendor Payments</span>
+                </div>
+
+                <div class="dl-trusted-item">
+                    <span class="dl-trusted-dot"></span>
+                    <span class="dl-trusted-name">Driver Payments</span>
+                </div>
+
+                <div class="dl-trusted-item">
+                    <span class="dl-trusted-dot"></span>
+                    <span class="dl-trusted-name">Fund Usage Warning</span>
+                </div>
+
+                <div class="dl-trusted-item">
+                    <span class="dl-trusted-dot"></span>
+                    <span class="dl-trusted-name">Expense Book Connection</span>
+                </div>
+
+                <div class="dl-trusted-item">
+                    <span class="dl-trusted-dot"></span>
+                    <span class="dl-trusted-name">Role Permissions</span>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<section class="dl-demo-section">
+    <div class="dl-demo-glow"></div>
+
+    <div class="dl-container">
+
+        <div class="heading-wrapper">
+
+            <span class="heading-tag">
+                Interactive Video Demonstration
+            </span>
+
+            <h2 class="heading-title">
+                Watch How <span>Manager Balance</span> Works
+            </h2>
+
+            <p>
+                Learn to check manager funds step by step. Watch the demonstration video to see how manager funds are recorded through the Expense Book, how payments affect the available balance, and how to view a manager's complete ledger.
+            </p>
+        </div>
+
+        <div class="dl-demo-grid">
+            <div class="dl-demo-video-column">
+
+                <div class="dl-video-card">
+
+                    <div class="dl-video-toolbar">
+                        <div class="dl-video-toolbar-left">
+                            <span class="dl-window-dot dl-dot-red"></span>
+                            <span class="dl-window-dot dl-dot-yellow"></span>
+                            <span class="dl-window-dot dl-dot-green"></span>
+
+                            <span class="dl-video-filename">
+                                Demo Video: Manager Balance Module
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="dl-video-preview">
+
+                        <img
+                            src="Assets/images/dashboard.png"
+                            alt="Manager Balance demonstration video preview"
+                            class="dl-video-thumbnail"
+                        >
+
+                        <div class="dl-video-overlay"></div>
+
+                        <button type="button" class="dl-video-play"
+                            aria-label="Play demonstration video">
+                            <i class="ri-play-fill"></i>
+                            <span class="dl-video-ping"></span>
+                        </button>
+
+                        <div class="dl-video-meta">
+                            <div class="dl-video-meta-left">
+                                <span class="dl-video-current-chapter">
+                                    [Demo Video Will Be Displayed Here]
+                                </span>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="dl-video-footer">
+                        <div class="dl-video-footer-left">
+                            <button type="button" class="dl-watch-button">
+                                <i class="ri-play-circle-line"></i>
+                                <span>Watch Full Walkthrough</span>
+                            </button>
+
+                            <span class="dl-video-footer-note">
+                                Click to launch video playback in pop-up modal
+                            </span>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+<section id="simulator" class="dl-simulator-section">
+    <div class="dl-container">
+
+        <div class="dl-simulator-header">
+            <div class="heading-wrapper heading-wrap-left">
+
+                <span class="heading-tag">
+                    Practical Example
+                </span>
+
+                <h2 class="heading-title">
+                    Manager <span>Fund Balance</span>
+                </h2>
+
+                <p>
+                    Open Manager Balances to see each manager's advances received, payments made and balance. Then click View Ledger beside ANIL KUMAR SHUKLA to open the transaction history. These are values shown on the example screen, not sample payments entered manually.
+                </p>
+            </div>
+
+            <div class="dl-view-switcher" id="mb-tabs">
+                <button type="button" class="dl-view-tab dl-view-tab-active" data-view="balances">
+                    <i class="ri-table-line"></i>
+                    Example 1: Manager Balances Overview
+                </button>
+
+                <button type="button" class="dl-view-tab" data-view="ledger">
+                    <i class="ri-book-open-line"></i>
+                    Example 2: Open View Ledger
+                </button>
+            </div>
+        </div>
+
+        <!-- Summary Statistics -->
+        <div class="dl-stats-grid">
+
+            <div class="dl-stat-card">
+                <div class="dl-stat-label">
+                    <span>Managers</span>
+                    <i class="ri-user-star-line"></i>
+                </div>
+                <div class="dl-stat-value">3 <span>Managers</span></div>
+                <p class="dl-stat-note">Listed on the example screen</p>
+            </div>
+
+            <div class="dl-stat-card">
+                <div class="dl-stat-label">
+                    <span>Advances Received</span>
+                    <i class="ri-hand-coin-line dl-green-icon"></i>
+                </div>
+                <div class="dl-stat-value dl-green-text" style="font-size:1.4rem">₹2,640,874.00</div>
+                <p class="dl-stat-note">Sum of the three managers</p>
+            </div>
+
+            <div class="dl-stat-card">
+                <div class="dl-stat-label">
+                    <span>Payments Made</span>
+                    <i class="ri-bank-card-line dl-red-icon"></i>
+                </div>
+                <div class="dl-stat-value dl-red-text">₹0.00</div>
+                <p class="dl-stat-note">No payments in this example</p>
+            </div>
+
+            <div class="dl-stat-card dl-stat-card-total">
+                <div class="dl-stat-label">
+                    <span>Remaining Balance</span>
+                    <span class="dl-status-dot"></span>
+                </div>
+                <div class="dl-stat-value dl-stat-total-value" style="font-size:1.5rem">₹2,640,874.00</div>
+                <p class="dl-stat-note dl-green-text">Advances − Payments</p>
+            </div>
+
+        </div>
+
+        <div class="dl-calculator-panel">
+
+            <!-- VIEW 1: balances -->
+            <div id="mb-view-balances">
+
+                <div class="dl-bill-master">
+                    <div class="dl-bill-master-header">
+                        <div class="dl-bill-heading">
+                            <span>Manager Balances</span>
+                        </div>
+                    </div>
+
+                    <div class="dl-bill-fields">
+                        <div class="dl-form-group">
+                            <label for="mb-manager">Manager</label>
+                            <select id="mb-manager" class="dl-form-control">
+                                <option value="">All Managers</option><option>ANIL KUMAR SHUKLA</option><option>DILIP KUMAR MISHRA</option><option>RAHUL KUMAR YADAV</option>
+                            </select>
+                        </div>
+                        <div class="dl-form-group">
+                            <label for="mb-from">From Date</label>
+                            <input id="mb-from" class="dl-form-control" type="date">
+                        </div>
+                        <div class="dl-form-group">
+                            <label for="mb-to">To Date</label>
+                            <input id="mb-to" class="dl-form-control" type="date">
+                        </div>
+                    </div>
+
+                    <div class="dl-bill-options">
+                        <span class="dl-formula-note">
+                            Date-range fields are visible on the overview screen, but the current totals should be understood as overall balances because date filtering is not applied by the existing balance calculation.
+                        </span>
+                        <button type="button" class="dl-primary-button" id="mb-search">
+                            <i class="ri-search-line"></i>
+                            Search
+                        </button>
+                    </div>
+                </div>
+
+                <div class="dl-table-wrapper">
+                    <table class="dl-vehicle-table">
+                        <thead>
+                            <tr>
+                                <th>Manager</th>
+                                <th class="dl-text-right">Advances Received</th>
+                                <th class="dl-text-right">Payments Made</th>
+                                <th class="dl-text-right">Balance</th>
+                                <th class="dl-text-center">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody id="mb-body">
+                        <tr data-manager="ANIL KUMAR SHUKLA">
+                            <td><div class="dl-vehicle-name"><i class="ri-user-star-fill"></i><span>ANIL KUMAR SHUKLA</span></div></td>
+                            <td class="dl-text-right">₹1,251,800.00</td>
+                            <td class="dl-text-right">₹0.00</td>
+                            <td class="dl-text-right dl-row-total">₹1,251,800.00</td>
+                            <td class="dl-text-center"><button type="button" class="dl-primary-button" data-open-ledger>View Ledger</button></td>
+                        </tr>
+                        <tr data-manager="DILIP KUMAR MISHRA">
+                            <td><div class="dl-vehicle-name"><i class="ri-user-star-fill"></i><span>DILIP KUMAR MISHRA</span></div></td>
+                            <td class="dl-text-right">₹379,000.00</td>
+                            <td class="dl-text-right">₹0.00</td>
+                            <td class="dl-text-right dl-row-total">₹379,000.00</td>
+                            <td class="dl-text-center"><button type="button" class="dl-action-button" disabled title="Ledger rows are shown in this example for ANIL KUMAR SHUKLA only">View Ledger</button></td>
+                        </tr>
+                        <tr data-manager="RAHUL KUMAR YADAV">
+                            <td><div class="dl-vehicle-name"><i class="ri-user-star-fill"></i><span>RAHUL KUMAR YADAV</span></div></td>
+                            <td class="dl-text-right">₹1,010,074.00</td>
+                            <td class="dl-text-right">₹0.00</td>
+                            <td class="dl-text-right dl-row-total">₹1,010,074.00</td>
+                            <td class="dl-text-center"><button type="button" class="dl-action-button" disabled title="Ledger rows are shown in this example for ANIL KUMAR SHUKLA only">View Ledger</button></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="dl-calculator-footer">
+                    <div class="dl-documentation-note">
+                        <i class="ri-information-line"></i>
+                        <span>
+                            In this example, Anil Kumar Shukla has received advances totaling ₹1,251,800.00. The list currently shows ₹0.00 under Payments Made, so the remaining balance is ₹1,251,800.00.
+                        </span>
+                    </div>
+                    <div class="dl-supported-formats">
+                        Balance = Total Advances Received − Total Recorded Payments
+                    </div>
+                </div>
+            </div>
+
+            <!-- VIEW 2: ledger -->
+            <div id="mb-view-ledger" hidden>
+
+                <div class="dl-bill-master">
+                    <div class="dl-bill-master-header">
+                        <div class="dl-bill-heading">
+                            <span>Float Ledger — ANIL KUMAR SHUKLA</span>
+                            <span class="dl-heading-separator">·</span>
+                            <span class="dl-invoice-number">Current Float Balance: ₹1,251,800.00</span>
+                        </div>
+
+                        <div class="dl-receipt-actions">
+                            <button type="button" class="dl-secondary-button" id="mb-back">
+                                <i class="ri-arrow-left-line"></i>
+                                <span>Back to Balances</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="dl-bill-options">
+                        <span class="dl-formula-note">
+                            Transaction History shows each recorded advance or payment in date order, with the latest transactions displayed first.
+                        </span>
+                    </div>
+                </div>
+
+                <div class="dl-table-wrapper">
+                    <table class="dl-vehicle-table">
+                        <thead>
+                            <tr>
+                                <th>Date</th>
+                                <th>Type</th>
+                                <th>Description</th>
+                                <th class="dl-text-right">Credit (Advance)</th>
+                                <th class="dl-text-right">Debit (Paid)</th>
+                                <th class="dl-text-right">Balance</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>06-10-2026</td>
+                            <td>Advance</td>
+                            <td>Manager advance</td>
+                            <td class="dl-text-right dl-green-text">₹24,000.00</td>
+                            <td class="dl-text-right">—</td>
+                            <td class="dl-text-right dl-row-total">₹1,251,800.00</td>
+                        </tr>
+                        <tr>
+                            <td>05-10-2026</td>
+                            <td>Advance</td>
+                            <td>Manager advance</td>
+                            <td class="dl-text-right dl-green-text">₹3,000.00</td>
+                            <td class="dl-text-right">—</td>
+                            <td class="dl-text-right dl-row-total">₹1,227,800.00</td>
+                        </tr>
+                        <tr>
+                            <td>05-10-2026</td>
+                            <td>Advance</td>
+                            <td>Manager advance</td>
+                            <td class="dl-text-right dl-green-text">₹23,000.00</td>
+                            <td class="dl-text-right">—</td>
+                            <td class="dl-text-right dl-row-total">₹1,224,800.00</td>
+                        </tr>
+                        <tr>
+                            <td>05-10-2026</td>
+                            <td>Advance</td>
+                            <td>Manager advance</td>
+                            <td class="dl-text-right dl-green-text">₹16,000.00</td>
+                            <td class="dl-text-right">—</td>
+                            <td class="dl-text-right dl-row-total">₹1,201,800.00</td>
+                        </tr>
+                        <tr>
+                            <td>05-10-2026</td>
+                            <td>Advance</td>
+                            <td>Manager advance</td>
+                            <td class="dl-text-right dl-green-text">₹15,000.00</td>
+                            <td class="dl-text-right">—</td>
+                            <td class="dl-text-right dl-row-total">₹1,185,800.00</td>
+                        </tr>
+                        <tr>
+                            <td>03-10-2026</td>
+                            <td>Advance</td>
+                            <td>Manager advance</td>
+                            <td class="dl-text-right dl-green-text">₹4,000.00</td>
+                            <td class="dl-text-right">—</td>
+                            <td class="dl-text-right dl-row-total">₹1,170,800.00</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="dl-calculator-footer">
+                    <div class="dl-documentation-note">
+                        <i class="ri-information-line"></i>
+                        <span>
+                            The table shows only a selection of the visible transaction rows. Earlier advances are already included in the running balances. For example, the 06-10-2026 advance of ₹24,000.00 increases the previous balance of ₹1,227,800.00 to ₹1,251,800.00. If a qualifying manager payment is recorded, it will appear in the Debit (Paid) column and reduce the running balance. No payment rows are visible in this example, and Payments Made is ₹0.00.
+                        </span>
+                    </div>
+                    <div class="dl-supported-formats">
+                        Credit (Advance) adds funds to the manager balance; Debit (Paid) reduces it.
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+
+<!--dl feature section start-->
+<section id="features" class="dl-features-section">
+
+    <div class="container">
+
+        <div class="heading-wrapper">
+
+            <span class="heading-tag">
+                Module Features
+            </span>
+
+            <h2 class="heading-title">
+                Manager Balance Module <span>Features</span>
+            </h2>
+
+            <p>
+                Everything the Manager Balance module offers for tracking advances, payments and remaining funds.
+            </p>
+
+            <div class="dl-features-filters">
+                <button type="button" class="dl-filter-btn is-active" data-filter="all">All Features (12)</button>
+                <button type="button" class="dl-filter-btn" data-filter="balances">Balances &amp; Totals</button>
+                <button type="button" class="dl-filter-btn" data-filter="ledger">Ledger &amp; Payments</button>
+                <button type="button" class="dl-filter-btn" data-filter="controls">Warnings &amp; Access</button>
+            </div>
+        </div>
+
+        <div class="dl-features-grid">
+
+            <!-- Feature 4.1 -->
+            <article class="dl-feature-card" data-category="balances">
+                <div class="dl-feature-card-content">
+                    <div class="dl-feature-icon">
+                        <i class="ri-user-star-line"></i>
+                    </div>
+
+                    <div class="dl-feature-card-heading">
+                        <h3>Manager-Wise Balance Overview</h3>
+                    </div>
+
+                    <p>
+                        View the summary for individual managers in one list instead of checking separate registers.
+                    </p>
+                </div>
+            </article>
+
+            <!-- Feature 4.2 -->
+            <article class="dl-feature-card" data-category="balances">
+                <div class="dl-feature-card-content">
+                    <div class="dl-feature-icon">
+                        <i class="ri-hand-coin-line"></i>
+                    </div>
+
+                    <div class="dl-feature-card-heading">
+                        <h3>Advances Received</h3>
+                    </div>
+
+                    <p>
+                        See the total funds or advances recorded for a manager.
+                    </p>
+                </div>
+            </article>
+
+            <!-- Feature 4.3 -->
+            <article class="dl-feature-card" data-category="balances">
+                <div class="dl-feature-card-content">
+                    <div class="dl-feature-icon">
+                        <i class="ri-bank-card-line"></i>
+                    </div>
+
+                    <div class="dl-feature-card-heading">
+                        <h3>Payments Made</h3>
+                    </div>
+
+                    <p>
+                        See the total system-recorded payments created by that manager.
+                    </p>
+                </div>
+            </article>
+
+            <!-- Feature 4.4 -->
+            <article class="dl-feature-card" data-category="balances">
+                <div class="dl-feature-card-content">
+                    <div class="dl-feature-icon">
+                        <i class="ri-calculator-line"></i>
+                    </div>
+
+                    <div class="dl-feature-card-heading">
+                        <h3>Automatic Remaining Balance</h3>
+                    </div>
+
+                    <p>
+                        The balance is calculated as total advances received minus total recorded payments.
+                    </p>
+                </div>
+            </article>
+
+            <!-- Feature 4.5 -->
+            <article class="dl-feature-card" data-category="ledger">
+                <div class="dl-feature-card-content">
+                    <div class="dl-feature-icon">
+                        <i class="ri-book-open-line"></i>
+                    </div>
+
+                    <div class="dl-feature-card-heading">
+                        <h3>Individual Transaction Ledger</h3>
+                    </div>
+
+                    <p>
+                        Open a manager's ledger to review individual credits, debits, and descriptions.
+                    </p>
+                </div>
+            </article>
+
+            <!-- Feature 4.6 -->
+            <article class="dl-feature-card" data-category="ledger">
+                <div class="dl-feature-card-content">
+                    <div class="dl-feature-icon">
+                        <i class="ri-line-chart-line"></i>
+                    </div>
+
+                    <div class="dl-feature-card-heading">
+                        <h3>Running Balance</h3>
+                    </div>
+
+                    <p>
+                        See how the balance changed after each advance or payment.
+                    </p>
+                </div>
+            </article>
+
+            <!-- Feature 4.7 -->
+            <article class="dl-feature-card" data-category="ledger">
+                <div class="dl-feature-card-content">
+                    <div class="dl-feature-icon">
+                        <i class="ri-store-2-line"></i>
+                    </div>
+
+                    <div class="dl-feature-card-heading">
+                        <h3>Vendor and Driver Payment References</h3>
+                    </div>
+
+                    <p>
+                        Ledger payment descriptions identify the payment type and can show the payee, company, and reference details.
+                    </p>
+                </div>
+            </article>
+
+            <!-- Feature 4.8 -->
+            <article class="dl-feature-card" data-category="ledger">
+                <div class="dl-feature-card-content">
+                    <div class="dl-feature-icon">
+                        <i class="ri-external-link-line"></i>
+                    </div>
+
+                    <div class="dl-feature-card-heading">
+                        <h3>Direct Payment Details</h3>
+                    </div>
+
+                    <p>
+                        Open a linked payment from the ledger to view its saved details.
+                    </p>
+                </div>
+            </article>
+
+            <!-- Feature 4.9 -->
+            <article class="dl-feature-card" data-category="balances">
+                <div class="dl-feature-card-content">
+                    <div class="dl-feature-icon">
+                        <i class="ri-search-line"></i>
+                    </div>
+
+                    <div class="dl-feature-card-heading">
+                        <h3>Manager Search Filter</h3>
+                    </div>
+
+                    <p>
+                        Select a particular manager to narrow the balance list.
+                    </p>
+                </div>
+            </article>
+
+            <!-- Feature 4.10 -->
+            <article class="dl-feature-card" data-category="controls">
+                <div class="dl-feature-card-content">
+                    <div class="dl-feature-icon">
+                        <i class="ri-alarm-warning-line"></i>
+                    </div>
+
+                    <div class="dl-feature-card-heading">
+                        <h3>Fund Usage Warning</h3>
+                    </div>
+
+                    <p>
+                        A payment can trigger a warning if its amount is higher than the remaining manager float.
+                    </p>
+                </div>
+            </article>
+
+            <!-- Feature 4.11 -->
+            <article class="dl-feature-card" data-category="controls">
+                <div class="dl-feature-card-content">
+                    <div class="dl-feature-icon">
+                        <i class="ri-lock-line"></i>
+                    </div>
+
+                    <div class="dl-feature-card-heading">
+                        <h3>User Access Permissions</h3>
+                    </div>
+
+                    <p>
+                        The Manager Balances page requires permission, and regular managers are restricted to their own ledger.
+                    </p>
+                </div>
+            </article>
+
+            <!-- Feature 4.12 -->
+            <article class="dl-feature-card" data-category="controls">
+                <div class="dl-feature-card-content">
+                    <div class="dl-feature-icon">
+                        <i class="ri-book-2-line"></i>
+                    </div>
+
+                    <div class="dl-feature-card-heading">
+                        <h3>Expense Book Connection</h3>
+                    </div>
+
+                    <p>
+                        Funds are now handled through the Expense Book workflow rather than a separate new-advance screen.
+                    </p>
+                </div>
+            </article>
+
+        </div>
+    </div>
+</section>
+<!--dl feature section end-->
+
+<!--workflow section start-->
+<section class="dl-workflow-section">
+    <div class="container">
+
+        <div class="heading-wrapper heading-wrap-left">
+
+            <span class="heading-tag">
+                Step-by-Step Workflow
+            </span>
+
+            <h2 class="heading-title">
+                How Does the <span>Manager Balance Module</span> Work?
+            </h2>
+
+            <p>
+                Five steps take you from recording funds to reviewing the available balance.
+            </p>
+
+        </div>
+
+        <div class="dl-workflow-grid">
+
+            <!-- Workflow Step 01 -->
+            <article class="dl-workflow-card">
+                <div class="dl-workflow-card-content">
+
+                    <div class="dl-workflow-card-top">
+                        <span class="dl-workflow-number">01</span>
+
+                        <div class="dl-workflow-icon">
+                            <i class="ri-hand-coin-line"></i>
+                        </div>
+                    </div>
+
+                    <h3 class="dl-workflow-card-title">
+                        Record Funds Provided to a Manager
+                    </h3>
+
+                    <p class="dl-workflow-card-description">
+                        When the business provides money to a manager for daily work, the relevant fund or advance entry is recorded through the Expense Book workflow.
+                    </p>
+
+                    <ul class="dl-workflow-checklist">
+                        <li>
+                            <i class="ri-check-line"></i>
+                            <span>The manager's available funds increase when an advance is recorded</span>
+                        </li>
+                        <li>
+                            <i class="ri-check-line"></i>
+                            <span>The older standalone Manager Advances screens redirect to Expense Book in the current project</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="dl-workflow-card-footer">
+                    <span>Step 1</span>
+                </div>
+            </article>
+
+            <!-- Workflow Step 02 -->
+            <article class="dl-workflow-card">
+                <div class="dl-workflow-card-content">
+
+                    <div class="dl-workflow-card-top">
+                        <span class="dl-workflow-number">02</span>
+
+                        <div class="dl-workflow-icon">
+                            <i class="ri-bank-card-line"></i>
+                        </div>
+                    </div>
+
+                    <h3 class="dl-workflow-card-title">
+                        Record Payments Made by the Manager
+                    </h3>
+
+                    <p class="dl-workflow-card-description">
+                        As the manager makes vendor or driver payments in the system, those recorded payments count toward the money used by that manager.
+                    </p>
+
+                    <ul class="dl-workflow-checklist">
+                        <li>
+                            <i class="ri-check-line"></i>
+                            <span>Each payment reduces the remaining float balance</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="dl-workflow-card-footer">
+                    <span>Step 2</span>
+                </div>
+            </article>
+
+            <!-- Workflow Step 03 -->
+            <article class="dl-workflow-card">
+                <div class="dl-workflow-card-content">
+
+                    <div class="dl-workflow-card-top">
+                        <span class="dl-workflow-number">03</span>
+
+                        <div class="dl-workflow-icon">
+                            <i class="ri-table-line"></i>
+                        </div>
+                    </div>
+
+                    <h3 class="dl-workflow-card-title">
+                        Check the Balance Summary
+                    </h3>
+
+                    <p class="dl-workflow-card-description">
+                        Open Manager Balances to see managers and their total advances received, payments made, and remaining balance.
+                    </p>
+
+                    <ul class="dl-workflow-checklist">
+                        <li>
+                            <i class="ri-check-line"></i>
+                            <span>Choose a manager using the available manager filter</span>
+                        </li>
+                        <li>
+                            <i class="ri-check-line"></i>
+                            <span>Select Search to find their row</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="dl-workflow-card-footer">
+                    <span>Step 3</span>
+                </div>
+            </article>
+
+            <!-- Workflow Step 04 -->
+            <article class="dl-workflow-card">
+                <div class="dl-workflow-card-content">
+
+                    <div class="dl-workflow-card-top">
+                        <span class="dl-workflow-number">04</span>
+
+                        <div class="dl-workflow-icon">
+                            <i class="ri-book-open-line"></i>
+                        </div>
+                    </div>
+
+                    <h3 class="dl-workflow-card-title">
+                        Open the Manager Ledger
+                    </h3>
+
+                    <p class="dl-workflow-card-description">
+                        Select View Ledger beside a manager to see the transaction history.
+                    </p>
+
+                    <ul class="dl-workflow-checklist">
+                        <li>
+                            <i class="ri-check-line"></i>
+                            <span>The ledger displays the date, transaction type and description</span>
+                        </li>
+                        <li>
+                            <i class="ri-check-line"></i>
+                            <span>It shows money received (credit), money paid (debit), and running balance after each transaction</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="dl-workflow-card-footer">
+                    <span>Step 4</span>
+                </div>
+            </article>
+
+            <!-- Workflow Step 05 -->
+            <article class="dl-workflow-card">
+                <div class="dl-workflow-card-content">
+
+                    <div class="dl-workflow-card-top">
+                        <span class="dl-workflow-number">05</span>
+
+                        <div class="dl-workflow-icon">
+                            <i class="ri-wallet-3-line"></i>
+                        </div>
+                    </div>
+
+                    <h3 class="dl-workflow-card-title">
+                        Review Available Funds
+                    </h3>
+
+                    <p class="dl-workflow-card-description">
+                        The current balance helps the accounts team know how much money is still available to a manager.
+                    </p>
+
+                    <ul class="dl-workflow-checklist">
+                        <li>
+                            <i class="ri-check-line"></i>
+                            <span>The system can also show a warning when a proposed payment would exceed the available funds</span>
+                        </li>
+                        <li>
+                            <i class="ri-check-line"></i>
+                            <span>This is a warning rather than an automatic guarantee that the payment cannot proceed</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="dl-workflow-card-footer">
+                    <span>Step 5</span>
+                </div>
+            </article>
+
+        </div>
+        </div>
+        <div class="et-container">
+        <div class="workflow-bottom">
+
+            <!-- Security Card -->
+            <div class="security-card">
+                <img src="./Assets/images/workflow-img.png" alt="workflow-img">
+
+                <div class="security-content">
+                    <h3>Enterprise-Grade Security</h3>
+
+                    <p>
+                        Protect sensitive business information with encrypted data storage, secure user authentication, and controlled system access.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Right Side -->
+            <div class="workflow-info">
+
+                <div class="stats-card">
+                    <h3>98%</h3>
+
+                    <h4>Customer Satisfaction</h4>
+
+                    <p>
+                        Provide accurate ETAs, live shipment updates, and faster response times that improve customer trust and retention.
+                    </p>
+                </div>
+
+                <div class="workflow-content">
+                    <p>
+                        Explore a powerful collection of intelligent modules built to streamline your daily transport operations. Manage vehicles, drivers, trips, and business performance seamlessly through one unified platform.
+                    </p>
+
+                    <a href="#" class="workflow-btn">
+                        Explore All Modules <i class="ri-arrow-right-line"></i>
+                    </a>
+                </div>
+
+                <div class="info-card">
+                    <div class="info-icon">
+                       <i class="ri-bar-chart-2-fill"></i>
+                    </div>
+
+                    <span>
+                        Visualize business performance instantly
+                    </span>
+                </div>
+
+                <div class="info-card">
+                    <div class="info-icon">
+                       <i class="ri-lock-unlock-line"></i>
+                    </div>
+
+                    <span>
+                        Access your business securely from anywhere
+                    </span>
+                </div>
+
+            </div>
+
+        </div>
+    
+    </div>
+</section>
+<!--workflow section end-->
+
+<!--results section start-->
+<section id="benefits" class="results-section">
+
+    <div class="container">
+
+        <div class="heading-wrapper">
+
+            <span class="heading-tag">
+                Proven Advantages
+            </span>
+
+            <h2 class="heading-title heading-light">
+                Benefits of <span>Manager Balance Management</span>
+            </h2>
+
+            <p>
+                Know where manager funds stand and how they moved.
+            </p>
+
+        </div>
+
+        <div class="results-grid">
+
+            <div class="result-card">
+
+                <div class="result-icon">
+                    <i class="ri-wallet-3-line"></i>
+                </div>
+
+                <h3>
+                    Know Funds Received and Used
+                </h3>
+
+                <p>
+                    Know how much money each manager has received and used.
+                </p>
+
+            </div>
+
+            <div class="result-card">
+
+                <div class="result-icon">
+                    <i class="ri-calculator-line"></i>
+                </div>
+
+                <h3>
+                    Reduce Manual Calculations
+                </h3>
+
+                <p>
+                    Reduce manual balance calculations and reconcile manager funds more easily.
+                </p>
+
+            </div>
+
+            <div class="result-card">
+
+                <div class="result-icon">
+                    <i class="ri-book-open-line"></i>
+                </div>
+
+                <h3>
+                    One Ledger per Manager
+                </h3>
+
+                <p>
+                    Review individual advance and payment transactions in one ledger.
+                </p>
+
+            </div>
+
+            <div class="result-card">
+
+                <div class="result-icon">
+                    <i class="ri-alarm-warning-line"></i>
+                </div>
+
+                <h3>
+                    Spot Possible Overspending
+                </h3>
+
+                <p>
+                    Identify when a proposed payment may exceed available funds.
+                </p>
+
+            </div>
+
+            <div class="result-card">
+
+                <div class="result-icon">
+                    <i class="ri-shield-check-line"></i>
+                </div>
+
+                <h3>
+                    Verify Fund Movement
+                </h3>
+
+                <p>
+                    Help accounts teams verify day-to-day fund movement.
+                </p>
+
+            </div>
+
+            <div class="result-card">
+
+                <div class="result-icon">
+                    <i class="ri-lock-line"></i>
+                </div>
+
+                <h3>
+                    Role-Based Access
+                </h3>
+
+                <p>
+                    Restrict access to manager balances using role permissions.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+</section>
+<!--results section end-->
+
+<!--transport-section start-->
+<section class="transport-section">
+    <div class="container">
+
+        <!-- Left Content -->
+    <div class="transport-container">   
+        <div class="heading-wrapper heading-wrap-left">
+                <span class="heading-tag">
+                   Transportation Management
+                </span>
+
+                <h2 class="heading-title">
+                   Manage Your Transportation <span> Operations Efficiently </span>
+                </h2>
+
+                <p>
+                    Track vehicles, manage drivers, monitor fuel usage, handle maintenance schedules, and streamline daily transportation operations from one centralized cloud platform.
+                </p>
+
+            </div>
+        <!-- Right Side -->
+        <div class="transport-image-wrapper">
+            <img src="./Assets/images/tms-img.png" alt="Transportation Dashboard" class="transport-image">
+            <!-- Decorative Shape -->
+            <div class="transport-shape"></div>
+            <!-- Floating Card -->
+            <div class="transport-card">
+                <ul class="transport-list">
+                    <li>
+                        <i class="ri-checkbox-circle-line"></i>
+                        <span>Real-time fleet and vehicle monitoring</span>
+                    </li>
+
+                    <li>
+                        <i class="ri-checkbox-circle-line"></i>
+                        <span>Driver management and attendance tracking</span>
+                    </li>
+
+                    <li>
+                        <i class="ri-checkbox-circle-line"></i>
+                        <span>Fuel logs and expense management</span>
+                    </li>
+
+                    <li>
+                        <i class="ri-checkbox-circle-line"></i>
+                        <span>Maintenance alerts and service scheduling</span>
+                    </li>
+
+                    <li>
+                        <i class="ri-checkbox-circle-line"></i>
+                        <span>Vehicle documents and compliance tracking</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+     </div>
+    </div>
+</section>
+<!--transport section end-->
+
+<!--dl-faq section start-->
+<section id="faq" class="dl-faq-section">
+    <div class="container">
+        <div class="heading-wrapper">
+
+            <span class="heading-tag">
+                Got Questions?
+            </span>
+
+            <h2 class="heading-title">
+                Frequently Asked <span>Questions</span>
+            </h2>
+
+            <p>
+                Everything you need to know about manager balances, ledgers and fund tracking.
+            </p>
+
+            <div class="dl-faq-filters">
+                <button class="dl-faq-filter active" type="button">All</button>
+                <button class="dl-faq-filter" type="button">Balance</button>
+                <button class="dl-faq-filter" type="button">Ledger</button>
+                <button class="dl-faq-filter" type="button">Access</button>
+                <button class="dl-faq-filter" type="button">Advances</button>
+                <button class="dl-faq-filter" type="button">Warnings</button>
+                <button class="dl-faq-filter" type="button">Filters</button>
+            </div>
+        </div>
+
+        <div class="dl-faq-list">
+
+            <!-- FAQ 1 -->
+            <div class="dl-faq-item active" data-category="balance">
+                <button
+                    class="dl-faq-question"
+                    type="button"
+                    aria-expanded="true"
+                    aria-controls="dl-faq-answer-1"
+                >
+                    <span class="dl-faq-question-content">
+                        <span class="dl-faq-number">Q1</span>
+                        <span class="dl-faq-question-text">
+                            How is the manager balance calculated?
+                        </span>
+                    </span>
+
+                    <span class="dl-faq-arrow">
+                        <i class="ri-arrow-down-s-line"></i>
+                    </span>
+                </button>
+
+                <div class="dl-faq-answer" id="dl-faq-answer-1">
+                    <div class="dl-faq-answer-content">
+                        <p>
+                            The system subtracts recorded payments made by the manager from the total advances recorded for that manager.
+                        </p>
+
+                        <div class="dl-faq-topic">
+                            <span>Topic: Balance</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ 2 -->
+            <div class="dl-faq-item" data-category="ledger">
+                <button
+                    class="dl-faq-question"
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="dl-faq-answer-2"
+                >
+                    <span class="dl-faq-question-content">
+                        <span class="dl-faq-number">Q2</span>
+                        <span class="dl-faq-question-text">
+                            Can I see a particular manager's transactions?
+                        </span>
+                    </span>
+
+                    <span class="dl-faq-arrow">
+                        <i class="ri-arrow-down-s-line"></i>
+                    </span>
+                </button>
+
+                <div class="dl-faq-answer" id="dl-faq-answer-2">
+                    <div class="dl-faq-answer-content">
+                        <p>
+                            Yes. Open View Ledger to review the manager's credit, debit, and running balance history.
+                        </p>
+
+                        <div class="dl-faq-topic">
+                            <span>Topic: Ledger</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ 3 -->
+            <div class="dl-faq-item" data-category="access">
+                <button
+                    class="dl-faq-question"
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="dl-faq-answer-3"
+                >
+                    <span class="dl-faq-question-content">
+                        <span class="dl-faq-number">Q3</span>
+                        <span class="dl-faq-question-text">
+                            Can managers see other managers' ledgers?
+                        </span>
+                    </span>
+
+                    <span class="dl-faq-arrow">
+                        <i class="ri-arrow-down-s-line"></i>
+                    </span>
+                </button>
+
+                <div class="dl-faq-answer" id="dl-faq-answer-3">
+                    <div class="dl-faq-answer-content">
+                        <p>
+                            Regular managers cannot open another manager's ledger. Other access depends on assigned permissions.
+                        </p>
+
+                        <div class="dl-faq-topic">
+                            <span>Topic: Access</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ 4 -->
+            <div class="dl-faq-item" data-category="advances">
+                <button
+                    class="dl-faq-question"
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="dl-faq-answer-4"
+                >
+                    <span class="dl-faq-question-content">
+                        <span class="dl-faq-number">Q4</span>
+                        <span class="dl-faq-question-text">
+                            Where can I record money provided to a manager?
+                        </span>
+                    </span>
+
+                    <span class="dl-faq-arrow">
+                        <i class="ri-arrow-down-s-line"></i>
+                    </span>
+                </button>
+
+                <div class="dl-faq-answer" id="dl-faq-answer-4">
+                    <div class="dl-faq-answer-content">
+                        <p>
+                            The current workflow directs advance-related actions to the Expense Book.
+                        </p>
+
+                        <div class="dl-faq-topic">
+                            <span>Topic: Advances</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ 5 -->
+            <div class="dl-faq-item" data-category="warnings">
+                <button
+                    class="dl-faq-question"
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="dl-faq-answer-5"
+                >
+                    <span class="dl-faq-question-content">
+                        <span class="dl-faq-number">Q5</span>
+                        <span class="dl-faq-question-text">
+                            Does the module warn about insufficient funds?
+                        </span>
+                    </span>
+
+                    <span class="dl-faq-arrow">
+                        <i class="ri-arrow-down-s-line"></i>
+                    </span>
+                </button>
+
+                <div class="dl-faq-answer" id="dl-faq-answer-5">
+                    <div class="dl-faq-answer-content">
+                        <p>
+                            The underlying balance service supports a warning when a proposed payment exceeds remaining float.
+                        </p>
+
+                        <div class="dl-faq-topic">
+                            <span>Topic: Warnings</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ 6 -->
+            <div class="dl-faq-item" data-category="filters">
+                <button
+                    class="dl-faq-question"
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="dl-faq-answer-6"
+                >
+                    <span class="dl-faq-question-content">
+                        <span class="dl-faq-number">Q6</span>
+                        <span class="dl-faq-question-text">
+                            Can I filter the manager list?
+                        </span>
+                    </span>
+
+                    <span class="dl-faq-arrow">
+                        <i class="ri-arrow-down-s-line"></i>
+                    </span>
+                </button>
+
+                <div class="dl-faq-answer" id="dl-faq-answer-6">
+                    <div class="dl-faq-answer-content">
+                        <p>
+                            Yes. The balance page includes a manager selection filter.
+                        </p>
+
+                        <div class="dl-faq-topic">
+                            <span>Topic: Filters</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ 7 -->
+            <div class="dl-faq-item" data-category="filters">
+                <button
+                    class="dl-faq-question"
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="dl-faq-answer-7"
+                >
+                    <span class="dl-faq-question-content">
+                        <span class="dl-faq-number">Q7</span>
+                        <span class="dl-faq-question-text">
+                            Are date filters available?
+                        </span>
+                    </span>
+
+                    <span class="dl-faq-arrow">
+                        <i class="ri-arrow-down-s-line"></i>
+                    </span>
+                </button>
+
+                <div class="dl-faq-answer" id="dl-faq-answer-7">
+                    <div class="dl-faq-answer-content">
+                        <p>
+                            The screen contains date fields, but the current balance-calculation service does not apply a date range to the totals. Treat the displayed totals as overall balances until that is implemented.
+                        </p>
+
+                        <div class="dl-faq-topic">
+                            <span>Topic: Filters</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="dl-faq-cta">
+            <div class="dl-faq-cta-content">
+                <h3>Simplify Manager Fund Tracking</h3>
+                <p>
+                    The Manager Balance Management Module gives businesses a clear view of manager advances, recorded payments, and remaining funds. From the balance summary to a detailed transaction ledger, the module makes routine fund tracking easier to understand and review.
+                </p>
+            </div>
+
+            <button class="dl-faq-cta-button" type="button" onclick="document.getElementById('simulator').scrollIntoView({behavior: 'smooth'})">
+                Try the Manager Balance Example
+            </button>
+        </div>
+
+    </div>
+</section>
+<!--dl-faq section end-->
+
+<!--footer section start-->
+<footer class="footer">
+
+    <!-- Newsletter -->
+    <div class="footer-newsletter">
+        <div class="container">
+
+            <div class="newsletter-wrapper">
+
+                <div class="newsletter-content">
+                    <h2>Stay ahead of the curve</h2>
+                    <p>
+                        Fleet management insights, product updates, and industry news.
+                    </p>
+                </div>
+
+                <form class="newsletter-form">
+
+                    <input
+                        type="email"
+                        placeholder="Enter your email"
+                    >
+
+                    <button type="submit">
+                        Subscribe
+
+                       <i class="ri-arrow-right-line"></i>
+
+                    </button>
+
+                </form>
+
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Footer Main -->
+
+    <div class="footer-main">
+
+        <div class="container">
+
+            <div class="footer-grid">
+
+                <!-- Left -->
+
+                <div class="footer-about">
+
+                    <a href="index.html" class="footer-logo">
+                         <img src="Assets/images/transportdesk-logo-dark.svg" alt="footer-logo">
+                    </a>
+
+                    <p>
+                        The intelligent transportation platform that puts fleet directors
+                        in complete control of their operations.
+                    </p>
+
+                    <div class="footer-social">
+
+                        <a href="#">
+                            <i class="ri-facebook-fill"></i>
+                        </a>
+
+                        <a href="#">
+                            <i class="ri-instagram-line"></i>
+                        </a>
+
+                        <a href="#">
+                            <i class="ri-twitter-line"></i>
+                        </a>
+
+                        <a href="#">
+                            <i class="ri-linkedin-fill"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <!-- Product -->
+
+                <div class="footer-links">
+
+                    <h3>Product</h3>
+
+                      <ul>
+        <li>
+            <a href="features.html" class="footer-link">Features</a>
+        </li>
+
+        <li>
+            <a href="modules.html" class="footer-link">Modules</a>
+        </li>
+
+        <li>
+            <a href="solutions.html" class="footer-link">Solutions</a>
+        </li>
+
+        <li>
+            <a href="reports.html" class="footer-link">Reports</a>
+        </li>
+
+        <li>
+            <a href="contact.html" class="footer-link">Contact</a>
+        </li>
+    </ul>
+
+                </div>
+
+                <!-- Resources -->
+
+                <div class="footer-links">
+
+                    <h3>Resources</h3>
+
+                    <ul>
+
+                        <li><a href="documentation.html" class="footer-link">Documentation</a></li>
+
+                        <li><a href="faq.html" class="footer-link">FAQ</a></li>
+
+                        <li><a href="privacy-policy.html" class="footer-link">Privacy Policy</a></li>
+
+                    </ul>
+
+                </div>
+
+                <!-- Support -->
+
+                <div class="footer-links">
+
+                    <h3>Support</h3>
+
+                    <ul>
+
+                        <li><a href="#" class="footer-link">Help Center</a></li>
+
+                        <li><a href="#" class="footer-link">Status</a></li>
+
+                        <li><a href="#" class="footer-link">Security</a></li>
+
+                    </ul>
+
+                </div>
+
+                <!-- Contact -->
+
+                <div class="footer-contact">
+
+                    <div class="contact-item">
+
+                        <div class="icon">
+                            <i class="ri-mail-line"></i>
+                        </div>
+
+                        <div>
+
+                            <span>Email</span>
+
+                            <a href="#">
+                                hello@transportdesk.net
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                    <div class="contact-item">
+
+                        <div class="icon">
+                            <i class="ri-phone-fill"></i>
+                        </div>
+
+                        <div>
+
+                            <span>Call</span>
+
+                            <a href="#">
+                                +1 (512) 555-0142
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                    <div class="contact-item">
+
+                        <div class="icon">
+                            <i class="ri-map-pin-line"></i>
+                        </div>
+
+                        <div>
+
+                            <span>Location</span>
+
+                            <p>India</p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Bottom -->
+
+    <div class="footer-bottom">
+
+        <div class="container">
+
+            <div class="bottom-wrapper">
+
+                <p>
+                    © 2026 All rights reserved.
+                </p>
+
+                <ul>
+
+                    <li><a href="#">Privacy Policy</a></li>
+
+                    <li><a href="#">Terms of Service</a></li>
+
+                    <li><a href="#">Cookie Policy</a></li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</footer>
+<!--footer section end-->
+
+<script src="./Assets/js/custom.js"></script>
+<script>
+(function () {
+    var tabs = document.getElementById('mb-tabs');
+    if (!tabs) return;
+    var views = { balances: document.getElementById('mb-view-balances'), ledger: document.getElementById('mb-view-ledger') };
+    function show(v) {
+        Object.keys(views).forEach(function (k) { views[k].hidden = k !== v; });
+        tabs.querySelectorAll('.dl-view-tab').forEach(function (b) { b.classList.toggle('dl-view-tab-active', b.dataset.view === v); });
+    }
+    tabs.addEventListener('click', function (e) { var b = e.target.closest('.dl-view-tab'); if (b) show(b.dataset.view); });
+    document.querySelector('[data-open-ledger]').addEventListener('click', function () { show('ledger'); });
+    document.getElementById('mb-back').addEventListener('click', function () { show('balances'); });
+    document.getElementById('mb-search').addEventListener('click', function () {
+        var m = document.getElementById('mb-manager').value;
+        document.querySelectorAll('#mb-body tr').forEach(function (tr) { tr.hidden = m && tr.dataset.manager !== m; });
+    });
+})();
+</script>
+</body>
+</html>

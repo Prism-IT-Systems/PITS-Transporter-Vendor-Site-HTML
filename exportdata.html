@@ -1,0 +1,1912 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Export Data Management Module | TransportDesk Fleet Solutions</title>
+    <meta name="description" content="Download diesel logs, vehicles, drivers and vendors as CSV files, apply diesel filters, and open the data in Excel for review and reporting.">
+
+    <!-- Remix Icon -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" />
+
+    <!-- Swiper -->
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+
+    <!-- Lenis -->
+    <link rel="stylesheet"
+        href="https://unpkg.com/lenis@1.3.23/dist/lenis.css">
+
+    <!-- Tailwind Output CSS -->
+     <link href="./Assets/css/output.css" rel="stylesheet">
+</head>
+<body>
+
+<!--Header Section start-->
+<header class="main-header">
+    <div class="container">
+
+        <div class="header-inner">
+
+            <a href="index.html" class="header-logo">
+                <img src="Assets/images/transportdesk-logo.svg" alt="Logo">
+            </a>
+
+            <nav class="main-navigation" id="mobileMenu">
+
+                <div class="menu-circle"></div>
+
+                <ul class="navigation-links">
+                    <li><a href="index.html" class="navigation-link">Home</a></li>
+                    <li><a href="features.html" class="navigation-link">Features</a></li>
+                    <li><a href="modules.html" class="navigation-link active">Modules</a></li>
+                    <li><a href="reports.html" class="navigation-link">Resources</a></li>
+                    <li><a href="contact.html" class="navigation-link">Contact</a></li>
+                </ul>
+
+                <div class="mobile-header-right">
+                    <a href="#" class="login-btn">Login</a>
+                    <a href="#" class="demo-btn">Book Demo</a>
+                </div>
+
+            </nav>
+
+            <div class="header-right">
+                <a href="#" class="login-btn">Login</a>
+                <a href="#" class="demo-btn">Book Demo</a>
+            </div>
+
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+        </div>
+
+    </div>
+</header>
+
+<!-- Add this after header -->
+<div class="menu-overlay" id="menuOverlay"></div>
+<!--Header section End-->
+
+
+<section id="overview" class="dl-overview-section">
+    <div class="dl-overview-glow"></div>
+    <div class="dl-overview-pattern"></div>
+
+    <div class="container">
+        <div class="dl-overview-grid">
+
+            <!-- Left Content -->
+            <div class="dl-overview-content">
+
+                <div class="dl-overview-badge">
+                    <span class="dl-status-dot"></span>
+                    <span>Enterprise Fleet Management</span>
+                    <span class="dl-badge-divider">|</span>
+                    <span class="dl-badge-highlight">Export Data Module</span>
+                </div>
+
+                <h1 class="dl-overview-title">
+                    Download Important
+                    <span class="dl-gradient-text">Business Records</span>
+                    as CSV
+                </h1>
+
+                <p class="dl-overview-description">
+                    Businesses often need to review and share information about their vehicles, drivers, vendors and diesel purchases. Instead of copying details manually, the Export Data feature makes it easier to download useful records from the system. Users with export permission can download available business information as CSV files, which can be opened in Excel for checking records, preparing reports or keeping a separate working copy.
+                </p>
+
+                <!-- Action Buttons -->
+                <div class="dl-overview-actions">
+
+                    <button type="button" class="btn-primary"
+                        onclick="document.getElementById('simulator').scrollIntoView({behavior: 'smooth'})">
+                        <span>Try the Export Example</span>
+                        <i class="ri-arrow-right-line"></i>
+                    </button>
+
+                    <button type="button" class="dl-btn-demo"
+                        onclick="document.querySelector('.dl-demo-section').scrollIntoView({behavior: 'smooth'})">
+                        <span class="dl-play-icon">
+                            <i class="ri-play-fill"></i>
+                        </span>
+                        <span>Watch Demo Video</span>
+                    </button>
+                </div>
+
+                <!-- Statistics -->
+                <div class="dl-overview-stats">
+
+                    <div class="dl-stat-item">
+                        <div class="dl-stat-number">4</div>
+                        <div class="dl-stat-label">Record Types</div>
+                    </div>
+
+                    <div class="dl-stat-item">
+                        <div class="dl-stat-number dl-stat-red">3</div>
+                        <div class="dl-stat-label">Diesel Filters</div>
+                    </div>
+
+                    <div class="dl-stat-item">
+                        <div class="dl-stat-number dl-stat-green">CSV</div>
+                        <div class="dl-stat-label">Excel-Ready Format</div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Right Image -->
+            <div class="dl-overview-visual">
+
+                <div class="dl-visual-card">
+
+                    <img
+                        src="Assets/images/hero_fleet_dispatch_1792482270822.jpg"
+                        alt="Fleet business records export to Excel"
+                        class="dl-visual-image"
+                    >
+
+                    <div class="dl-visual-overlay"></div>
+
+                    <div class="dl-visual-topbar">
+
+                        <div class="dl-live-label">
+                            <span class="dl-live-dot"></span>
+                            <span>Export Data</span>
+                        </div>
+
+                        <div class="dl-fuel-rate">
+                            diesel_logs.csv
+                        </div>
+
+                    </div>
+
+                    <div class="dl-fuel-slip">
+
+                        <div class="dl-slip-header">
+                            <span class="dl-slip-title">
+                                Download Important Business Records
+                            </span>
+
+                            <span class="dl-slip-status">
+                                CSV · Excel
+                            </span>
+                        </div>
+
+                        <div class="dl-slip-stats">
+
+                            <div class="dl-slip-stat">
+                                <span class="dl-slip-label">Records</span>
+                                <span class="dl-slip-value">4 Types</span>
+                            </div>
+
+                            <div class="dl-slip-stat">
+                                <span class="dl-slip-label">Filters</span>
+                                <span class="dl-slip-value dl-slip-red">Date · Vehicle · Vendor</span>
+                            </div>
+
+                            <div class="dl-slip-stat">
+                                <span class="dl-slip-label">Format</span>
+                                <span class="dl-slip-value dl-slip-green">CSV</span>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<section class="dl-trusted-section">
+    <div class="dl-trusted-heading">
+        <span>
+            Download Important Business Records • Use Data in Excel • Simplify Reporting
+        </span>
+    </div>
+
+    <div class="dl-trusted-marquee">
+        <div class="dl-trusted-fade dl-trusted-fade-left"></div>
+        <div class="dl-trusted-fade dl-trusted-fade-right"></div>
+
+        <div class="dl-trusted-track">
+
+            <div class="dl-trusted-group">
+                <div class="dl-trusted-item">
+                    <span class="dl-trusted-dot"></span>
+                    <span class="dl-trusted-name">Diesel Logs</span>
+                </div>
+
+                <div class="dl-trusted-item">
+                    <span class="dl-trusted-dot"></span>
+                    <span class="dl-trusted-name">Vehicles</span>
+                </div>
+
+                <div class="dl-trusted-item">
+                    <span class="dl-trusted-dot"></span>
+                    <span class="dl-trusted-name">Drivers</span>
+                </div>
+
+                <div class="dl-trusted-item">
+                    <span class="dl-trusted-dot"></span>
+                    <span class="dl-trusted-name">Vendors</span>
+                </div>
+
+                <div class="dl-trusted-item">
+                    <span class="dl-trusted-dot"></span>
+                    <span class="dl-trusted-name">CSV Format</span>
+                </div>
+
+                <div class="dl-trusted-item">
+                    <span class="dl-trusted-dot"></span>
+                    <span class="dl-trusted-name">Excel-Friendly</span>
+                </div>
+
+                <div class="dl-trusted-item">
+                    <span class="dl-trusted-dot"></span>
+                    <span class="dl-trusted-name">Date Range Filter</span>
+                </div>
+
+                <div class="dl-trusted-item">
+                    <span class="dl-trusted-dot"></span>
+                    <span class="dl-trusted-name">Vehicle-Wise Export</span>
+                </div>
+
+                <div class="dl-trusted-item">
+                    <span class="dl-trusted-dot"></span>
+                    <span class="dl-trusted-name">Vendor-Wise Export</span>
+                </div>
+
+                <div class="dl-trusted-item">
+                    <span class="dl-trusted-dot"></span>
+                    <span class="dl-trusted-name">Clear Column Headings</span>
+                </div>
+
+                <div class="dl-trusted-item">
+                    <span class="dl-trusted-dot"></span>
+                    <span class="dl-trusted-name">Export Permission Control</span>
+                </div>
+
+                <div class="dl-trusted-item">
+                    <span class="dl-trusted-dot"></span>
+                    <span class="dl-trusted-name">Ready-to-Use Filenames</span>
+                </div>
+
+            </div>
+
+            <!-- Duplicate group for seamless looping -->
+            <div class="dl-trusted-group" aria-hidden="true">
+                <div class="dl-trusted-item">
+                    <span class="dl-trusted-dot"></span>
+                    <span class="dl-trusted-name">Diesel Logs</span>
+                </div>
+
+                <div class="dl-trusted-item">
+                    <span class="dl-trusted-dot"></span>
+                    <span class="dl-trusted-name">Vehicles</span>
+                </div>
+
+                <div class="dl-trusted-item">
+                    <span class="dl-trusted-dot"></span>
+                    <span class="dl-trusted-name">Drivers</span>
+                </div>
+
+                <div class="dl-trusted-item">
+                    <span class="dl-trusted-dot"></span>
+                    <span class="dl-trusted-name">Vendors</span>
+                </div>
+
+                <div class="dl-trusted-item">
+                    <span class="dl-trusted-dot"></span>
+                    <span class="dl-trusted-name">CSV Format</span>
+                </div>
+
+                <div class="dl-trusted-item">
+                    <span class="dl-trusted-dot"></span>
+                    <span class="dl-trusted-name">Excel-Friendly</span>
+                </div>
+
+                <div class="dl-trusted-item">
+                    <span class="dl-trusted-dot"></span>
+                    <span class="dl-trusted-name">Date Range Filter</span>
+                </div>
+
+                <div class="dl-trusted-item">
+                    <span class="dl-trusted-dot"></span>
+                    <span class="dl-trusted-name">Vehicle-Wise Export</span>
+                </div>
+
+                <div class="dl-trusted-item">
+                    <span class="dl-trusted-dot"></span>
+                    <span class="dl-trusted-name">Vendor-Wise Export</span>
+                </div>
+
+                <div class="dl-trusted-item">
+                    <span class="dl-trusted-dot"></span>
+                    <span class="dl-trusted-name">Clear Column Headings</span>
+                </div>
+
+                <div class="dl-trusted-item">
+                    <span class="dl-trusted-dot"></span>
+                    <span class="dl-trusted-name">Export Permission Control</span>
+                </div>
+
+                <div class="dl-trusted-item">
+                    <span class="dl-trusted-dot"></span>
+                    <span class="dl-trusted-name">Ready-to-Use Filenames</span>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<section class="dl-demo-section">
+    <div class="dl-demo-glow"></div>
+
+    <div class="dl-container">
+
+        <div class="heading-wrapper">
+
+            <span class="heading-tag">
+                Interactive Video Demonstration
+            </span>
+
+            <h2 class="heading-title">
+                Watch How <span>Export Data</span> Works
+            </h2>
+
+            <p>
+                Watch the demo video to understand how to choose the data you need, use available filters, download a CSV file and open it in Excel.
+            </p>
+        </div>
+
+        <div class="dl-demo-grid">
+            <div class="dl-demo-video-column">
+
+                <div class="dl-video-card">
+
+                    <div class="dl-video-toolbar">
+                        <div class="dl-video-toolbar-left">
+                            <span class="dl-window-dot dl-dot-red"></span>
+                            <span class="dl-window-dot dl-dot-yellow"></span>
+                            <span class="dl-window-dot dl-dot-green"></span>
+
+                            <span class="dl-video-filename">
+                                Demo Video: Export Data Module
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="dl-video-preview">
+
+                        <img
+                            src="Assets/images/dashboard.png"
+                            alt="Export Data demonstration video preview"
+                            class="dl-video-thumbnail"
+                        >
+
+                        <div class="dl-video-overlay"></div>
+
+                        <button type="button" class="dl-video-play"
+                            aria-label="Play demonstration video">
+                            <i class="ri-play-fill"></i>
+                            <span class="dl-video-ping"></span>
+                        </button>
+
+                        <div class="dl-video-meta">
+                            <div class="dl-video-meta-left">
+                                <span class="dl-video-current-chapter">
+                                    [Demo Video Will Be Displayed Here]
+                                </span>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="dl-video-footer">
+                        <div class="dl-video-footer-left">
+                            <button type="button" class="dl-watch-button">
+                                <i class="ri-play-circle-line"></i>
+                                <span>Watch Full Walkthrough</span>
+                            </button>
+
+                            <span class="dl-video-footer-note">
+                                Click to launch video playback in pop-up modal
+                            </span>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+<section id="simulator" class="dl-simulator-section">
+    <div class="dl-container">
+
+        <div class="dl-simulator-header">
+            <div class="heading-wrapper heading-wrap-left">
+
+                <span class="heading-tag">
+                    Practical Example
+                </span>
+
+                <h2 class="heading-title">
+                    Export <span>Diesel Purchases</span>
+                </h2>
+
+                <p>
+                    Suppose an accounts team wants to check diesel expenses for one truck during October. The user selects Diesel Logs Export, chooses the required date range and vehicle, and downloads the CSV file. After opening it in Excel, the team can review purchase dates, quantities, rates and amounts for the matching entries.
+                </p>
+            </div>
+
+            <div class="dl-view-switcher" id="ed-tabs">
+                <button type="button" class="dl-view-tab dl-view-tab-active" data-export="diesel">
+                    <i class="ri-gas-station-line"></i>
+                    Diesel Logs
+                </button>
+                <button type="button" class="dl-view-tab" data-export="vehicles">
+                    <i class="ri-truck-line"></i>
+                    Vehicles
+                </button>
+                <button type="button" class="dl-view-tab" data-export="drivers">
+                    <i class="ri-steering-2-line"></i>
+                    Drivers
+                </button>
+                <button type="button" class="dl-view-tab" data-export="vendors">
+                    <i class="ri-store-2-line"></i>
+                    Vendors
+                </button>
+            </div>
+        </div>
+
+        <!-- Summary Statistics -->
+        <div class="dl-stats-grid">
+
+            <div class="dl-stat-card">
+                <div class="dl-stat-label">
+                    <span>Record Types</span>
+                    <i class="ri-database-2-line"></i>
+                </div>
+                <div class="dl-stat-value">4 <span>Types</span></div>
+                <p class="dl-stat-note">Diesel Logs, Vehicles, Drivers, Vendors</p>
+            </div>
+
+            <div class="dl-stat-card">
+                <div class="dl-stat-label">
+                    <span>Diesel Filters</span>
+                    <i class="ri-filter-3-line dl-red-icon"></i>
+                </div>
+                <div class="dl-stat-value dl-red-text">3 <span>Filters</span></div>
+                <p class="dl-stat-note">Date range, vehicle, vendor</p>
+            </div>
+
+            <div class="dl-stat-card">
+                <div class="dl-stat-label">
+                    <span>File Format</span>
+                    <i class="ri-file-excel-2-line dl-green-icon"></i>
+                </div>
+                <div class="dl-stat-value dl-green-text">CSV</div>
+                <p class="dl-stat-note">Opens in Excel</p>
+            </div>
+
+            <div class="dl-stat-card dl-stat-card-total">
+                <div class="dl-stat-label">
+                    <span>Required Permission</span>
+                    <span class="dl-status-dot"></span>
+                </div>
+                <div class="dl-stat-value dl-stat-total-value" style="font-size:1.5rem">Reports Export</div>
+                <p class="dl-stat-note dl-green-text">Only permitted users can export</p>
+            </div>
+
+        </div>
+
+        <div class="dl-calculator-panel">
+
+            <div class="dl-bill-master">
+
+                <div class="dl-bill-master-header">
+                    <div class="dl-bill-heading">
+                        <span>Step 1: Choose the Data to Export</span>
+                        <span class="dl-heading-separator">·</span>
+                        <span class="dl-invoice-number" id="ed-filename">diesel_logs.csv</span>
+                    </div>
+                </div>
+
+                <div class="dl-bill-fields" id="ed-filters">
+
+                    <div class="dl-form-group">
+                        <label for="ed-from">Start Date</label>
+                        <input id="ed-from" class="dl-form-control" type="date">
+                    </div>
+
+                    <div class="dl-form-group">
+                        <label for="ed-to">End Date</label>
+                        <input id="ed-to" class="dl-form-control" type="date">
+                    </div>
+
+                    <div class="dl-form-group">
+                        <label for="ed-vehicle">Vehicle</label>
+                        <select id="ed-vehicle" class="dl-form-control">
+                            <option>All Vehicles</option>
+                        </select>
+                    </div>
+
+                    <div class="dl-form-group">
+                        <label for="ed-vendor">Vendor</label>
+                        <select id="ed-vendor" class="dl-form-control">
+                            <option>All Vendors</option>
+                        </select>
+                    </div>
+
+                </div>
+
+                <div class="dl-bill-options">
+                    <span class="dl-formula-note" id="ed-filter-note">
+                        Step 2: For Diesel Logs, choose a date range, vehicle or vendor. The date-range filter works when both dates are provided.
+                    </span>
+                </div>
+
+            </div>
+
+            <div class="dl-table-toolbar">
+
+                <div class="dl-search-box">
+                    <span>Example CSV columns</span>
+                </div>
+
+                <div class="dl-toolbar-actions">
+                    <button type="button" class="dl-primary-button" id="ed-download">
+                        <i class="ri-file-excel-line"></i>
+                        <span id="ed-download-label">Download diesel_logs.csv</span>
+                    </button>
+                </div>
+
+            </div>
+
+            <div class="dl-table-wrapper">
+                <table class="dl-vehicle-table">
+                    <thead>
+                        <tr id="ed-head"></tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td id="ed-empty" colspan="10">Step 4: Each record appears in a separate row, with headings that identify the data.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="dl-calculator-footer">
+
+                <div class="dl-documentation-note">
+                    <i class="ri-information-line"></i>
+                    <span>
+                        <strong>Note:</strong>
+                        Exporting reads and downloads saved data; it does not change the original records. Exported driver and vendor files may contain personal or business contact information, so share them only with authorized people.
+                    </span>
+                </div>
+
+                <div class="dl-supported-formats">
+                    Step 3: Select the export option to generate a CSV file. Open it in Excel or another spreadsheet application.
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+
+<!--dl feature section start-->
+<section id="features" class="dl-features-section">
+
+    <div class="container">
+
+        <div class="heading-wrapper">
+
+            <span class="heading-tag">
+                Key Module Features
+            </span>
+
+            <h2 class="heading-title">
+                Key Module <span>Features</span>
+            </h2>
+
+            <p>
+                Everything the Export Data feature offers for downloading business records as CSV files.
+            </p>
+
+            <div class="dl-features-filters">
+                <button type="button" class="dl-filter-btn is-active" data-filter="all">All Features (12)</button>
+                <button type="button" class="dl-filter-btn" data-filter="diesel">Diesel Logs Exports</button>
+                <button type="button" class="dl-filter-btn" data-filter="master">Vehicle, Driver &amp; Vendor Exports</button>
+                <button type="button" class="dl-filter-btn" data-filter="file">File Format &amp; Access</button>
+            </div>
+        </div>
+
+        <div class="dl-features-grid">
+
+            <!-- Feature 4.1 -->
+            <article class="dl-feature-card" data-category="diesel">
+                <div class="dl-feature-card-content">
+                    <div class="dl-feature-icon">
+                        <i class="ri-gas-station-line"></i>
+                    </div>
+
+                    <div class="dl-feature-card-heading">
+                        <h3>Diesel Logs Export</h3>
+                    </div>
+
+                    <p>
+                        Download diesel purchase entries with purchase date, vehicle, vendor, company, liters, rate, amount, odometer, slip number and notes.
+                    </p>
+                </div>
+            </article>
+
+            <!-- Feature 4.2 -->
+            <article class="dl-feature-card" data-category="diesel">
+                <div class="dl-feature-card-content">
+                    <div class="dl-feature-icon">
+                        <i class="ri-calendar-event-line"></i>
+                    </div>
+
+                    <div class="dl-feature-card-heading">
+                        <h3>Diesel Date Range Filter</h3>
+                    </div>
+
+                    <p>
+                        Choose a starting and ending date to export diesel purchases for a selected period. The date-range filter works when both dates are provided.
+                    </p>
+                </div>
+            </article>
+
+            <!-- Feature 4.3 -->
+            <article class="dl-feature-card" data-category="diesel">
+                <div class="dl-feature-card-content">
+                    <div class="dl-feature-icon">
+                        <i class="ri-truck-line"></i>
+                    </div>
+
+                    <div class="dl-feature-card-heading">
+                        <h3>Vehicle-Wise Diesel Export</h3>
+                    </div>
+
+                    <p>
+                        Choose a particular vehicle to download diesel entries linked to that vehicle.
+                    </p>
+                </div>
+            </article>
+
+            <!-- Feature 4.4 -->
+            <article class="dl-feature-card" data-category="diesel">
+                <div class="dl-feature-card-content">
+                    <div class="dl-feature-icon">
+                        <i class="ri-store-2-line"></i>
+                    </div>
+
+                    <div class="dl-feature-card-heading">
+                        <h3>Vendor-Wise Diesel Export</h3>
+                    </div>
+
+                    <p>
+                        Choose a supplier to download diesel purchase records linked to that vendor.
+                    </p>
+                </div>
+            </article>
+
+            <!-- Feature 4.5 -->
+            <article class="dl-feature-card" data-category="master">
+                <div class="dl-feature-card-content">
+                    <div class="dl-feature-icon">
+                        <i class="ri-truck-fill"></i>
+                    </div>
+
+                    <div class="dl-feature-card-heading">
+                        <h3>Vehicle Data Export</h3>
+                    </div>
+
+                    <p>
+                        Download active vehicle records with vehicle number, owner, make, model, year, chassis number, engine number and notes.
+                    </p>
+                </div>
+            </article>
+
+            <!-- Feature 4.6 -->
+            <article class="dl-feature-card" data-category="master">
+                <div class="dl-feature-card-content">
+                    <div class="dl-feature-icon">
+                        <i class="ri-steering-2-line"></i>
+                    </div>
+
+                    <div class="dl-feature-card-heading">
+                        <h3>Driver Data Export</h3>
+                    </div>
+
+                    <p>
+                        Download active driver information including name, date of birth, licence number, licence issue and expiry dates, Aadhaar number, phone and address.
+                    </p>
+                </div>
+            </article>
+
+            <!-- Feature 4.7 -->
+            <article class="dl-feature-card" data-category="master">
+                <div class="dl-feature-card-content">
+                    <div class="dl-feature-icon">
+                        <i class="ri-building-line"></i>
+                    </div>
+
+                    <div class="dl-feature-card-heading">
+                        <h3>Vendor Data Export</h3>
+                    </div>
+
+                    <p>
+                        Download active vendor records with name, contact person, phone, email, address and GST number.
+                    </p>
+                </div>
+            </article>
+
+            <!-- Feature 4.8 -->
+            <article class="dl-feature-card" data-category="file">
+                <div class="dl-feature-card-content">
+                    <div class="dl-feature-icon">
+                        <i class="ri-file-excel-2-line"></i>
+                    </div>
+
+                    <div class="dl-feature-card-heading">
+                        <h3>CSV File Format</h3>
+                    </div>
+
+                    <p>
+                        Exported files use the CSV format, which can be opened in Excel or other compatible spreadsheet applications.
+                    </p>
+                </div>
+            </article>
+
+            <!-- Feature 4.9 -->
+            <article class="dl-feature-card" data-category="file">
+                <div class="dl-feature-card-content">
+                    <div class="dl-feature-icon">
+                        <i class="ri-table-line"></i>
+                    </div>
+
+                    <div class="dl-feature-card-heading">
+                        <h3>Clear Column Headings</h3>
+                    </div>
+
+                    <p>
+                        Each CSV includes headings so users can understand what information is stored in each column.
+                    </p>
+                </div>
+            </article>
+
+            <!-- Feature 4.10 -->
+            <article class="dl-feature-card" data-category="file">
+                <div class="dl-feature-card-content">
+                    <div class="dl-feature-icon">
+                        <i class="ri-lock-line"></i>
+                    </div>
+
+                    <div class="dl-feature-card-heading">
+                        <h3>Export Permission Control</h3>
+                    </div>
+
+                    <p>
+                        Only users with the Reports Export permission can use these export actions.
+                    </p>
+                </div>
+            </article>
+
+            <!-- Feature 4.11 -->
+            <article class="dl-feature-card" data-category="file">
+                <div class="dl-feature-card-content">
+                    <div class="dl-feature-icon">
+                        <i class="ri-file-download-line"></i>
+                    </div>
+
+                    <div class="dl-feature-card-heading">
+                        <h3>Ready-to-Use Filenames</h3>
+                    </div>
+
+                    <p>
+                        Downloaded files use recognizable names such as diesel_logs.csv, vehicles.csv, drivers.csv and vendors.csv.
+                    </p>
+                </div>
+            </article>
+
+            <!-- Feature 4.12 -->
+            <article class="dl-feature-card" data-category="file diesel master">
+                <div class="dl-feature-card-content">
+                    <div class="dl-feature-icon">
+                        <i class="ri-bar-chart-box-line"></i>
+                    </div>
+
+                    <div class="dl-feature-card-heading">
+                        <h3>Excel-Friendly Record Keeping</h3>
+                    </div>
+
+                    <p>
+                        Use exports for internal verification, spreadsheet analysis or preparing business reports without manually copying saved records.
+                    </p>
+                </div>
+            </article>
+
+        </div>
+    </div>
+</section>
+<!--dl feature section end-->
+
+<!--workflow section start-->
+<section class="dl-workflow-section">
+    <div class="container">
+
+        <div class="heading-wrapper heading-wrap-left">
+
+            <span class="heading-tag">
+                Step-by-Step Workflow
+            </span>
+
+            <h2 class="heading-title">
+                How Does <span>Export Data</span> Work?
+            </h2>
+
+            <p>
+                Five steps take you from choosing the data you need to using the exported records.
+            </p>
+
+        </div>
+
+        <div class="dl-workflow-grid">
+
+            <!-- Workflow Step 01 -->
+            <article class="dl-workflow-card">
+                <div class="dl-workflow-card-content">
+
+                    <div class="dl-workflow-card-top">
+                        <span class="dl-workflow-number">01</span>
+
+                        <div class="dl-workflow-icon">
+                            <i class="ri-database-2-line"></i>
+                        </div>
+                    </div>
+
+                    <h3 class="dl-workflow-card-title">
+                        Choose the Data to Export
+                    </h3>
+
+                    <p class="dl-workflow-card-description">
+                        Open the relevant export option and select the records you need.
+                    </p>
+
+                    <ul class="dl-workflow-checklist">
+                        <li>
+                            <i class="ri-check-line"></i>
+                            <span>Diesel Logs</span>
+                        </li>
+                        <li>
+                            <i class="ri-check-line"></i>
+                            <span>Vehicles</span>
+                        </li>
+                        <li>
+                            <i class="ri-check-line"></i>
+                            <span>Drivers</span>
+                        </li>
+                        <li>
+                            <i class="ri-check-line"></i>
+                            <span>Vendors</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="dl-workflow-card-footer">
+                    <span>Step 1</span>
+                </div>
+            </article>
+
+            <!-- Workflow Step 02 -->
+            <article class="dl-workflow-card">
+                <div class="dl-workflow-card-content">
+
+                    <div class="dl-workflow-card-top">
+                        <span class="dl-workflow-number">02</span>
+
+                        <div class="dl-workflow-icon">
+                            <i class="ri-filter-3-line"></i>
+                        </div>
+                    </div>
+
+                    <h3 class="dl-workflow-card-title">
+                        Apply Available Filters
+                    </h3>
+
+                    <p class="dl-workflow-card-description">
+                        For Diesel Logs, choose a date range, vehicle or vendor if you want specific records.
+                    </p>
+
+                    <ul class="dl-workflow-checklist">
+                        <li>
+                            <i class="ri-check-line"></i>
+                            <span>Other export options in this feature download active records without those diesel-specific filters</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="dl-workflow-card-footer">
+                    <span>Step 2</span>
+                </div>
+            </article>
+
+            <!-- Workflow Step 03 -->
+            <article class="dl-workflow-card">
+                <div class="dl-workflow-card-content">
+
+                    <div class="dl-workflow-card-top">
+                        <span class="dl-workflow-number">03</span>
+
+                        <div class="dl-workflow-icon">
+                            <i class="ri-download-cloud-2-line"></i>
+                        </div>
+                    </div>
+
+                    <h3 class="dl-workflow-card-title">
+                        Start the Download
+                    </h3>
+
+                    <p class="dl-workflow-card-description">
+                        Select the export option to generate a CSV file containing the available columns for that record type.
+                    </p>
+
+                    <ul class="dl-workflow-checklist">
+                        <li>
+                            <i class="ri-check-line"></i>
+                            <span>Files use recognizable names such as diesel_logs.csv, vehicles.csv, drivers.csv and vendors.csv</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="dl-workflow-card-footer">
+                    <span>Step 3</span>
+                </div>
+            </article>
+
+            <!-- Workflow Step 04 -->
+            <article class="dl-workflow-card">
+                <div class="dl-workflow-card-content">
+
+                    <div class="dl-workflow-card-top">
+                        <span class="dl-workflow-number">04</span>
+
+                        <div class="dl-workflow-icon">
+                            <i class="ri-file-excel-2-line"></i>
+                        </div>
+                    </div>
+
+                    <h3 class="dl-workflow-card-title">
+                        Open and Review the File
+                    </h3>
+
+                    <p class="dl-workflow-card-description">
+                        Open the downloaded CSV file in Excel or another spreadsheet application.
+                    </p>
+
+                    <ul class="dl-workflow-checklist">
+                        <li>
+                            <i class="ri-check-line"></i>
+                            <span>Each record appears in a separate row</span>
+                        </li>
+                        <li>
+                            <i class="ri-check-line"></i>
+                            <span>Headings identify the data in each column</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="dl-workflow-card-footer">
+                    <span>Step 4</span>
+                </div>
+            </article>
+
+            <!-- Workflow Step 05 -->
+            <article class="dl-workflow-card">
+                <div class="dl-workflow-card-content">
+
+                    <div class="dl-workflow-card-top">
+                        <span class="dl-workflow-number">05</span>
+
+                        <div class="dl-workflow-icon">
+                            <i class="ri-share-forward-line"></i>
+                        </div>
+                    </div>
+
+                    <h3 class="dl-workflow-card-title">
+                        Use the Exported Records
+                    </h3>
+
+                    <p class="dl-workflow-card-description">
+                        Put the downloaded records to work for your team.
+                    </p>
+
+                    <ul class="dl-workflow-checklist">
+                        <li>
+                            <i class="ri-check-line"></i>
+                            <span>Review diesel expenses</span>
+                        </li>
+                        <li>
+                            <i class="ri-check-line"></i>
+                            <span>Check vehicle or driver information</span>
+                        </li>
+                        <li>
+                            <i class="ri-check-line"></i>
+                            <span>Verify vendor details</span>
+                        </li>
+                        <li>
+                            <i class="ri-check-line"></i>
+                            <span>Share the file with an authorized team member</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="dl-workflow-card-footer">
+                    <span>Step 5</span>
+                </div>
+            </article>
+
+        </div>
+        </div>
+        <div class="et-container">
+        <div class="workflow-bottom">
+
+            <!-- Security Card -->
+            <div class="security-card">
+                <img src="./Assets/images/workflow-img.png" alt="workflow-img">
+
+                <div class="security-content">
+                    <h3>Enterprise-Grade Security</h3>
+
+                    <p>
+                        Protect sensitive business information with encrypted data storage, secure user authentication, and controlled system access.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Right Side -->
+            <div class="workflow-info">
+
+                <div class="stats-card">
+                    <h3>98%</h3>
+
+                    <h4>Customer Satisfaction</h4>
+
+                    <p>
+                        Provide accurate ETAs, live shipment updates, and faster response times that improve customer trust and retention.
+                    </p>
+                </div>
+
+                <div class="workflow-content">
+                    <p>
+                        Explore a powerful collection of intelligent modules built to streamline your daily transport operations. Manage vehicles, drivers, trips, and business performance seamlessly through one unified platform.
+                    </p>
+
+                    <a href="#" class="workflow-btn">
+                        Explore All Modules <i class="ri-arrow-right-line"></i>
+                    </a>
+                </div>
+
+                <div class="info-card">
+                    <div class="info-icon">
+                       <i class="ri-bar-chart-2-fill"></i>
+                    </div>
+
+                    <span>
+                        Visualize business performance instantly
+                    </span>
+                </div>
+
+                <div class="info-card">
+                    <div class="info-icon">
+                       <i class="ri-lock-unlock-line"></i>
+                    </div>
+
+                    <span>
+                        Access your business securely from anywhere
+                    </span>
+                </div>
+
+            </div>
+
+        </div>
+    
+    </div>
+</section>
+<!--workflow section end-->
+
+<!--results section start-->
+<section id="benefits" class="results-section">
+
+    <div class="container">
+
+        <div class="heading-wrapper">
+
+            <span class="heading-tag">
+                Proven Advantages
+            </span>
+
+            <h2 class="heading-title heading-light">
+                Benefits of <span>Export Data</span>
+            </h2>
+
+            <p>
+                Download, review and share your business records without manual copying.
+            </p>
+
+        </div>
+
+        <div class="results-grid">
+
+            <div class="result-card">
+
+                <div class="result-icon">
+                    <i class="ri-time-line"></i>
+                </div>
+
+                <h3>
+                    Save Time
+                </h3>
+
+                <p>
+                    Save time by downloading records instead of copying them manually.
+                </p>
+
+            </div>
+
+            <div class="result-card">
+
+                <div class="result-icon">
+                    <i class="ri-file-excel-2-line"></i>
+                </div>
+
+                <h3>
+                    Organize in Excel
+                </h3>
+
+                <p>
+                    Use Excel to review and organize diesel, vehicle, driver or vendor information.
+                </p>
+
+            </div>
+
+            <div class="result-card">
+
+                <div class="result-icon">
+                    <i class="ri-filter-3-line"></i>
+                </div>
+
+                <h3>
+                    Filtered Diesel Exports
+                </h3>
+
+                <p>
+                    Export selected diesel records using available filters.
+                </p>
+
+            </div>
+
+            <div class="result-card">
+
+                <div class="result-icon">
+                    <i class="ri-shield-check-line"></i>
+                </div>
+
+                <h3>
+                    Easier Verification
+                </h3>
+
+                <p>
+                    Help accounts and operations teams verify recorded information.
+                </p>
+
+            </div>
+
+            <div class="result-card">
+
+                <div class="result-icon">
+                    <i class="ri-file-copy-2-line"></i>
+                </div>
+
+                <h3>
+                    Keep a Working Copy
+                </h3>
+
+                <p>
+                    Keep a working copy of relevant records for authorized internal use.
+                </p>
+
+            </div>
+
+            <div class="result-card">
+
+                <div class="result-icon">
+                    <i class="ri-lock-line"></i>
+                </div>
+
+                <h3>
+                    Controlled Access
+                </h3>
+
+                <p>
+                    Limit export access to users with the appropriate permission.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+</section>
+<!--results section end-->
+
+<!--transport-section start-->
+<section class="transport-section">
+    <div class="container">
+
+        <!-- Left Content -->
+    <div class="transport-container">   
+        <div class="heading-wrapper heading-wrap-left">
+                <span class="heading-tag">
+                   Transportation Management
+                </span>
+
+                <h2 class="heading-title">
+                   Manage Your Transportation <span> Operations Efficiently </span>
+                </h2>
+
+                <p>
+                    Track vehicles, manage drivers, monitor fuel usage, handle maintenance schedules, and streamline daily transportation operations from one centralized cloud platform.
+                </p>
+
+            </div>
+        <!-- Right Side -->
+        <div class="transport-image-wrapper">
+            <img src="./Assets/images/tms-img.png" alt="Transportation Dashboard" class="transport-image">
+            <!-- Decorative Shape -->
+            <div class="transport-shape"></div>
+            <!-- Floating Card -->
+            <div class="transport-card">
+                <ul class="transport-list">
+                    <li>
+                        <i class="ri-checkbox-circle-line"></i>
+                        <span>Real-time fleet and vehicle monitoring</span>
+                    </li>
+
+                    <li>
+                        <i class="ri-checkbox-circle-line"></i>
+                        <span>Driver management and attendance tracking</span>
+                    </li>
+
+                    <li>
+                        <i class="ri-checkbox-circle-line"></i>
+                        <span>Fuel logs and expense management</span>
+                    </li>
+
+                    <li>
+                        <i class="ri-checkbox-circle-line"></i>
+                        <span>Maintenance alerts and service scheduling</span>
+                    </li>
+
+                    <li>
+                        <i class="ri-checkbox-circle-line"></i>
+                        <span>Vehicle documents and compliance tracking</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+     </div>
+    </div>
+</section>
+<!--transport section end-->
+
+<!--dl-faq section start-->
+<section id="faq" class="dl-faq-section">
+    <div class="container">
+        <div class="heading-wrapper">
+
+            <span class="heading-tag">
+                Got Questions?
+            </span>
+
+            <h2 class="heading-title">
+                Frequently Asked <span>Questions</span>
+            </h2>
+
+            <p>
+                Everything you need to know about downloading business records with the Export Data feature.
+            </p>
+
+            <div class="dl-faq-filters">
+                <button class="dl-faq-filter active" type="button">All</button>
+                <button class="dl-faq-filter" type="button">Records</button>
+                <button class="dl-faq-filter" type="button">Filters</button>
+                <button class="dl-faq-filter" type="button">Format</button>
+                <button class="dl-faq-filter" type="button">Access</button>
+                <button class="dl-faq-filter" type="button">Safety</button>
+            </div>
+        </div>
+
+        <div class="dl-faq-list">
+
+            <!-- FAQ 1 -->
+            <div class="dl-faq-item active" data-category="records">
+                <button
+                    class="dl-faq-question"
+                    type="button"
+                    aria-expanded="true"
+                    aria-controls="dl-faq-answer-1"
+                >
+                    <span class="dl-faq-question-content">
+                        <span class="dl-faq-number">Q1</span>
+                        <span class="dl-faq-question-text">
+                            Which records can I export?
+                        </span>
+                    </span>
+
+                    <span class="dl-faq-arrow">
+                        <i class="ri-arrow-down-s-line"></i>
+                    </span>
+                </button>
+
+                <div class="dl-faq-answer" id="dl-faq-answer-1">
+                    <div class="dl-faq-answer-content">
+                        <p>
+                            This export feature supports Diesel Logs, Vehicles, Drivers and Vendors.
+                        </p>
+
+                        <div class="dl-faq-topic">
+                            <span>Topic: Records</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ 2 -->
+            <div class="dl-faq-item" data-category="filters">
+                <button
+                    class="dl-faq-question"
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="dl-faq-answer-2"
+                >
+                    <span class="dl-faq-question-content">
+                        <span class="dl-faq-number">Q2</span>
+                        <span class="dl-faq-question-text">
+                            Can I export diesel entries for one vehicle?
+                        </span>
+                    </span>
+
+                    <span class="dl-faq-arrow">
+                        <i class="ri-arrow-down-s-line"></i>
+                    </span>
+                </button>
+
+                <div class="dl-faq-answer" id="dl-faq-answer-2">
+                    <div class="dl-faq-answer-content">
+                        <p>
+                            Yes. Select the vehicle filter when exporting Diesel Logs.
+                        </p>
+
+                        <div class="dl-faq-topic">
+                            <span>Topic: Filters</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ 3 -->
+            <div class="dl-faq-item" data-category="filters">
+                <button
+                    class="dl-faq-question"
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="dl-faq-answer-3"
+                >
+                    <span class="dl-faq-question-content">
+                        <span class="dl-faq-number">Q3</span>
+                        <span class="dl-faq-question-text">
+                            Can I select a date range for diesel records?
+                        </span>
+                    </span>
+
+                    <span class="dl-faq-arrow">
+                        <i class="ri-arrow-down-s-line"></i>
+                    </span>
+                </button>
+
+                <div class="dl-faq-answer" id="dl-faq-answer-3">
+                    <div class="dl-faq-answer-content">
+                        <p>
+                            Yes. Provide both start and end dates to filter the diesel export.
+                        </p>
+
+                        <div class="dl-faq-topic">
+                            <span>Topic: Filters</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ 4 -->
+            <div class="dl-faq-item" data-category="filters">
+                <button
+                    class="dl-faq-question"
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="dl-faq-answer-4"
+                >
+                    <span class="dl-faq-question-content">
+                        <span class="dl-faq-number">Q4</span>
+                        <span class="dl-faq-question-text">
+                            Are vehicle, driver and vendor exports filtered by date?
+                        </span>
+                    </span>
+
+                    <span class="dl-faq-arrow">
+                        <i class="ri-arrow-down-s-line"></i>
+                    </span>
+                </button>
+
+                <div class="dl-faq-answer" id="dl-faq-answer-4">
+                    <div class="dl-faq-answer-content">
+                        <p>
+                            No. In the reviewed export controller, these three options download active records without a date-range filter.
+                        </p>
+
+                        <div class="dl-faq-topic">
+                            <span>Topic: Filters</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ 5 -->
+            <div class="dl-faq-item" data-category="format">
+                <button
+                    class="dl-faq-question"
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="dl-faq-answer-5"
+                >
+                    <span class="dl-faq-question-content">
+                        <span class="dl-faq-number">Q5</span>
+                        <span class="dl-faq-question-text">
+                            What file format will I receive?
+                        </span>
+                    </span>
+
+                    <span class="dl-faq-arrow">
+                        <i class="ri-arrow-down-s-line"></i>
+                    </span>
+                </button>
+
+                <div class="dl-faq-answer" id="dl-faq-answer-5">
+                    <div class="dl-faq-answer-content">
+                        <p>
+                            A CSV file that can be opened in Excel or another compatible spreadsheet app.
+                        </p>
+
+                        <div class="dl-faq-topic">
+                            <span>Topic: Format</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ 6 -->
+            <div class="dl-faq-item" data-category="access">
+                <button
+                    class="dl-faq-question"
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="dl-faq-answer-6"
+                >
+                    <span class="dl-faq-question-content">
+                        <span class="dl-faq-number">Q6</span>
+                        <span class="dl-faq-question-text">
+                            Can every user download exported data?
+                        </span>
+                    </span>
+
+                    <span class="dl-faq-arrow">
+                        <i class="ri-arrow-down-s-line"></i>
+                    </span>
+                </button>
+
+                <div class="dl-faq-answer" id="dl-faq-answer-6">
+                    <div class="dl-faq-answer-content">
+                        <p>
+                            No. Export access requires the Reports Export permission.
+                        </p>
+
+                        <div class="dl-faq-topic">
+                            <span>Topic: Access</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ 7 -->
+            <div class="dl-faq-item" data-category="safety">
+                <button
+                    class="dl-faq-question"
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="dl-faq-answer-7"
+                >
+                    <span class="dl-faq-question-content">
+                        <span class="dl-faq-number">Q7</span>
+                        <span class="dl-faq-question-text">
+                            Does exporting change or delete my saved records?
+                        </span>
+                    </span>
+
+                    <span class="dl-faq-arrow">
+                        <i class="ri-arrow-down-s-line"></i>
+                    </span>
+                </button>
+
+                <div class="dl-faq-answer" id="dl-faq-answer-7">
+                    <div class="dl-faq-answer-content">
+                        <p>
+                            No. The export reads and downloads saved data; it does not change the original records.
+                        </p>
+
+                        <div class="dl-faq-topic">
+                            <span>Topic: Safety</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ 8 -->
+            <div class="dl-faq-item" data-category="safety">
+                <button
+                    class="dl-faq-question"
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="dl-faq-answer-8"
+                >
+                    <span class="dl-faq-question-content">
+                        <span class="dl-faq-number">Q8</span>
+                        <span class="dl-faq-question-text">
+                            Should I share downloaded files publicly?
+                        </span>
+                    </span>
+
+                    <span class="dl-faq-arrow">
+                        <i class="ri-arrow-down-s-line"></i>
+                    </span>
+                </button>
+
+                <div class="dl-faq-answer" id="dl-faq-answer-8">
+                    <div class="dl-faq-answer-content">
+                        <p>
+                            No. Exported driver and vendor files may contain personal or business contact information, so share them only with authorized people.
+                        </p>
+
+                        <div class="dl-faq-topic">
+                            <span>Topic: Safety</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="dl-faq-cta">
+            <div class="dl-faq-cta-content">
+                <h3>Conclusion</h3>
+                <p>
+                    The Export Data feature offers a straightforward way to download important business records for daily administration, accounting and reporting. Select the data you need, apply the available diesel filters and download a ready-to-open CSV file.
+                </p>
+                <p>
+                    Access your records quickly, review them confidently and reduce manual data entry.
+                </p>
+            </div>
+
+            <button class="dl-faq-cta-button" type="button" onclick="document.getElementById('simulator').scrollIntoView({behavior: 'smooth'})">
+                Try the Export Example
+            </button>
+        </div>
+
+    </div>
+</section>
+<!--dl-faq section end-->
+
+<!--footer section start-->
+<footer class="footer">
+
+    <!-- Newsletter -->
+    <div class="footer-newsletter">
+        <div class="container">
+
+            <div class="newsletter-wrapper">
+
+                <div class="newsletter-content">
+                    <h2>Stay ahead of the curve</h2>
+                    <p>
+                        Fleet management insights, product updates, and industry news.
+                    </p>
+                </div>
+
+                <form class="newsletter-form">
+
+                    <input
+                        type="email"
+                        placeholder="Enter your email"
+                    >
+
+                    <button type="submit">
+                        Subscribe
+
+                       <i class="ri-arrow-right-line"></i>
+
+                    </button>
+
+                </form>
+
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Footer Main -->
+
+    <div class="footer-main">
+
+        <div class="container">
+
+            <div class="footer-grid">
+
+                <!-- Left -->
+
+                <div class="footer-about">
+
+                    <a href="index.html" class="footer-logo">
+                         <img src="Assets/images/transportdesk-logo-dark.svg" alt="footer-logo">
+                    </a>
+
+                    <p>
+                        The intelligent transportation platform that puts fleet directors
+                        in complete control of their operations.
+                    </p>
+
+                    <div class="footer-social">
+
+                        <a href="#">
+                            <i class="ri-facebook-fill"></i>
+                        </a>
+
+                        <a href="#">
+                            <i class="ri-instagram-line"></i>
+                        </a>
+
+                        <a href="#">
+                            <i class="ri-twitter-line"></i>
+                        </a>
+
+                        <a href="#">
+                            <i class="ri-linkedin-fill"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <!-- Product -->
+
+                <div class="footer-links">
+
+                    <h3>Product</h3>
+
+                      <ul>
+        <li>
+            <a href="features.html" class="footer-link">Features</a>
+        </li>
+
+        <li>
+            <a href="modules.html" class="footer-link">Modules</a>
+        </li>
+
+        <li>
+            <a href="solutions.html" class="footer-link">Solutions</a>
+        </li>
+
+        <li>
+            <a href="reports.html" class="footer-link">Reports</a>
+        </li>
+
+        <li>
+            <a href="contact.html" class="footer-link">Contact</a>
+        </li>
+    </ul>
+
+                </div>
+
+                <!-- Resources -->
+
+                <div class="footer-links">
+
+                    <h3>Resources</h3>
+
+                    <ul>
+
+                        <li><a href="documentation.html" class="footer-link">Documentation</a></li>
+
+                        <li><a href="faq.html" class="footer-link">FAQ</a></li>
+
+                        <li><a href="privacy-policy.html" class="footer-link">Privacy Policy</a></li>
+
+                    </ul>
+
+                </div>
+
+                <!-- Support -->
+
+                <div class="footer-links">
+
+                    <h3>Support</h3>
+
+                    <ul>
+
+                        <li><a href="#" class="footer-link">Help Center</a></li>
+
+                        <li><a href="#" class="footer-link">Status</a></li>
+
+                        <li><a href="#" class="footer-link">Security</a></li>
+
+                    </ul>
+
+                </div>
+
+                <!-- Contact -->
+
+                <div class="footer-contact">
+
+                    <div class="contact-item">
+
+                        <div class="icon">
+                            <i class="ri-mail-line"></i>
+                        </div>
+
+                        <div>
+
+                            <span>Email</span>
+
+                            <a href="#">
+                                hello@transportdesk.net
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                    <div class="contact-item">
+
+                        <div class="icon">
+                            <i class="ri-phone-fill"></i>
+                        </div>
+
+                        <div>
+
+                            <span>Call</span>
+
+                            <a href="#">
+                                +1 (512) 555-0142
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                    <div class="contact-item">
+
+                        <div class="icon">
+                            <i class="ri-map-pin-line"></i>
+                        </div>
+
+                        <div>
+
+                            <span>Location</span>
+
+                            <p>India</p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Bottom -->
+
+    <div class="footer-bottom">
+
+        <div class="container">
+
+            <div class="bottom-wrapper">
+
+                <p>
+                    © 2026 All rights reserved.
+                </p>
+
+                <ul>
+
+                    <li><a href="#">Privacy Policy</a></li>
+
+                    <li><a href="#">Terms of Service</a></li>
+
+                    <li><a href="#">Cookie Policy</a></li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</footer>
+<!--footer section end-->
+
+<script src="./Assets/js/custom.js"></script>
+<script>
+(function () {
+    var types = {"diesel": {"file": "diesel_logs.csv", "cols": ["Date", "Vehicle Number", "Vendor", "Company", "Liters", "Rate", "Amount", "Odometer", "Slip Number", "Notes"]}, "vehicles": {"file": "vehicles.csv", "cols": ["Vehicle Number", "Owner", "Make", "Model", "Year", "Chassis Number", "Engine Number", "Notes"]}, "drivers": {"file": "drivers.csv", "cols": ["Name", "Date of Birth", "Licence Number", "Licence Issue Date", "Licence Expiry Date", "Aadhaar Number", "Phone", "Address"]}, "vendors": {"file": "vendors.csv", "cols": ["Name", "Contact Person", "Phone", "Email", "Address", "GST Number"]}};
+    var tabs = document.getElementById('ed-tabs');
+    if (!tabs) return;
+    var head = document.getElementById('ed-head'), empty = document.getElementById('ed-empty');
+    var inputs = document.querySelectorAll('#ed-filters input, #ed-filters select');
+    function show(key) {
+        var t = types[key];
+        head.innerHTML = t.cols.map(function (c) { return '<th>' + c + '</th>'; }).join('');
+        empty.colSpan = t.cols.length;
+        document.getElementById('ed-filename').textContent = t.file;
+        document.getElementById('ed-download-label').textContent = 'Download ' + t.file;
+        document.getElementById('ed-filter-note').textContent = key === 'diesel'
+            ? 'Step 2: For Diesel Logs, choose a date range, vehicle or vendor. The date-range filter works when both dates are provided.'
+            : 'Step 2: This export downloads active records without date, vehicle or vendor filters.';
+        inputs.forEach(function (i) { i.disabled = key !== 'diesel'; });
+        tabs.querySelectorAll('.dl-view-tab').forEach(function (b) {
+            b.classList.toggle('dl-view-tab-active', b.dataset.export === key);
+        });
+    }
+    tabs.addEventListener('click', function (e) {
+        var b = e.target.closest('.dl-view-tab');
+        if (b) show(b.dataset.export);
+    });
+    show('diesel');
+})();
+</script>
+</body>
+</html>

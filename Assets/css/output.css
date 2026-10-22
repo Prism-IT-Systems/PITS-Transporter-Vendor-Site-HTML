@@ -1173,6 +1173,10 @@ h2 {
      object-fit: cover;
 }
 
+.glass-line.short {
+  width: 42px;
+}
+
 /* =====================================================
        AUTOMATED REPORTS
     ====================================================== */
@@ -1324,12 +1328,60 @@ h2 {
   }
 }
 
+.visible {
+  visibility: visible;
+}
+
+.fixed {
+  position: fixed;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.relative {
+  position: relative;
+}
+
+.isolate {
+  isolation: isolate;
+}
+
+.block {
+  display: block;
+}
+
+.inline {
+  display: inline;
+}
+
+.flex {
+  display: flex;
+}
+
 .table {
   display: table;
 }
 
+.grid {
+  display: grid;
+}
+
+.hidden {
+  display: none;
+}
+
 .resize {
   resize: both;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.lowercase {
+  text-transform: lowercase;
 }
 
 .filter {
@@ -1634,8 +1686,8 @@ p {
 
 .footer-grid {
   display: grid;
-  grid-template-columns: 1.5fr 1fr 1fr 1fr 1.2fr;
-  gap: 5rem;
+  grid-template-columns: 1.5fr 1fr 1fr 1fr 2fr;
+  gap: 60px;
 }
 
 .footer-logo {
@@ -1686,6 +1738,11 @@ p {
 
 /* Links */
 
+.footer-contact-num {
+  display: flex;
+  flex-direction: column;
+}
+
 .footer-links {
   display: flex;
   flex-direction: column;
@@ -1734,6 +1791,12 @@ p {
   gap: 10px;
 }
 
+.footer-location {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
 .contact-item {
   display: flex;
   align-items: flex-start;
@@ -1744,6 +1807,7 @@ p {
   display: flex;
   height: 3rem;
   width: 3rem;
+  flex-shrink: 0;
   align-items: center;
   justify-content: center;
   border-radius: 0.5rem;
@@ -1765,8 +1829,9 @@ p {
 
 .contact-item a,
 .contact-item p {
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 500;
+  line-height: 24px;
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
 }
@@ -2209,6 +2274,8 @@ p {
       rgba(243, 242, 242, 0.8)
     ),
     url(../images/solution-hero.png);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .solution-bg {
@@ -4700,6 +4767,67 @@ Card
   }
 }
 
+/* Category Filters */
+
+.module-filters {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 32px;
+}
+
+.module-filter-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 16px;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  color: #475569;
+  background: #ffffff;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.5;
+  cursor: pointer;
+  transition:
+        color 0.25s ease,
+        background 0.25s ease,
+        border-color 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.module-filter-btn:hover {
+  border-color: #fecaca;
+  color: #0f172a;
+  background: #fffafa;
+}
+
+.module-filter-btn.is-active {
+  border-color: #0f172a;
+  color: #ffffff;
+  background: #0f172a;
+  box-shadow: 0 2px 5px rgba(15, 23, 42, 0.12);
+}
+
+.module-filter-btn.is-active:hover {
+  border-color: #1e293b;
+  background: #1e293b;
+}
+
+.module-filter-btn:focus-visible,
+.module-feature-link:focus-visible {
+  outline: 3px solid rgba(255, 75, 75, 0.4);
+  outline-offset: 3px;
+}
+
+.modules-section .heading-wrapper {
+  width: 100%;
+  max-width: 900px;
+}
+
 .modules-hero {
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('../images/Modules-page-hero.png');
 }
@@ -5678,7 +5806,7 @@ Card
 
 .contact-info {
   position: relative;
-  min-height: 498px;
+  min-height: 520px;
   overflow: hidden;
   border-radius: 10px;
 }
@@ -6084,7 +6212,7 @@ Card
   }
 
   .contact-info {
-    min-height: 520px;
+    min-height: 1000px;
   }
 
   .contact-info__content {
@@ -12443,6 +12571,26 @@ Card
   transition: background-color 0.2s ease;
 }
 
+.dl-simulator-header:not(:has(.dl-view-switcher)) {
+  justify-content: center;
+  text-align: center;
+  max-width: 800px;
+  width: 100%;
+  margin-inline: auto;
+}
+
+.dl-simulator-header:not(:has(.dl-view-switcher)) .heading-wrapper.heading-wrap-left,
+.dl-simulator-header:not(:has(.dl-view-switcher)) .heading-wrapper .heading-title,
+.dl-simulator-header:not(:has(.dl-view-switcher)) .heading-wrapper.heading-wrap-left p {
+  margin-inline: auto;
+  text-align: center;
+  align-items:center;
+}
+
+.dl-simulator-section .heading-wrapper.heading-wrap-left {
+  margin-inline: 0 !important;
+}
+
 @media (max-width: 1024px) {
   .dl-simulator-section .heading-wrapper.heading-wrap-left {
     align-items: center;
@@ -12906,7 +13054,6 @@ Card
 .dl-search-box {
   position: relative;
   flex: 1 1 250px;
-  max-width: 400px;
 }
 
 .dl-search-box > i {
@@ -13267,7 +13414,7 @@ Card
 
 .dl-documentation-note {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   gap: 8px;
   line-height: 1.6;
 }
@@ -14478,5 +14625,41 @@ Card
     .dl-trusted-name {
     transition: none;
   }
+}
+
+.solution-details-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  width: 100%;
+  margin-top: 14px;
+  padding-top: 12px;
+  border-top: 1px solid #edf0f4;
+  color: #ff5959;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.solution-details-btn:hover {
+  color: #e43f45;
+}
+
+.solution-details-btn:hover i {
+  transform: translateX(5px);
+}
+
+.solution-details-btn:focus-visible {
+  outline: 2px solid #ff5959;
+  outline-offset: 4px;
+  border-radius: 3px;
+}
+
+.solution-hero .btn-solution {
+  display: flex;
+  justify-content: center;
+  margin: 40px auto 0;
 }
 

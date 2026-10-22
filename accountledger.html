@@ -1,0 +1,2096 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Account Ledger Management Module | TransportDesk Fleet Solutions</title>
+    <meta name="description" content="Track vendor invoices, payments, and outstanding balances in one unified account ledger. Seamlessly manage Business, Reefer, and Office vendors, plus driver payout histories with TransportDesk.">
+
+    <!-- Remix Icon -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" />
+
+    <!-- Swiper -->
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+
+    <!-- Lenis -->
+    <link rel="stylesheet"
+        href="https://unpkg.com/lenis@1.3.23/dist/lenis.css">
+
+    <!-- Tailwind Output CSS -->
+    <link href="./Assets/css/output.css" rel="stylesheet">
+</head>
+<body>
+
+<!--Header Section start-->
+<header class="main-header">
+    <div class="container">
+
+        <div class="header-inner">
+
+            <a href="index.html" class="header-logo">
+                <img src="Assets/images/transportdesk-logo.svg" alt="Logo">
+            </a>
+
+            <nav class="main-navigation" id="mobileMenu">
+
+                <div class="menu-circle"></div>
+
+                <ul class="navigation-links">
+                    <li><a href="index.html" class="navigation-link">Home</a></li>
+                    <li><a href="features.html" class="navigation-link">Features</a></li>
+                    <li><a href="modules.html" class="navigation-link active">Modules</a></li>
+                    <li><a href="reports.html" class="navigation-link">Resources</a></li>
+                    <li><a href="contact.html" class="navigation-link">Contact</a></li>
+                </ul>
+
+                <div class="mobile-header-right">
+                    <a href="#" class="login-btn">Login</a>
+                    <a href="#" class="demo-btn">Book Demo</a>
+                </div>
+
+            </nav>
+
+            <div class="header-right">
+                <a href="#" class="login-btn">Login</a>
+                <a href="#" class="demo-btn">Book Demo</a>
+            </div>
+
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+        </div>
+
+    </div>
+</header>
+
+<!-- Add this after header -->
+<div class="menu-overlay" id="menuOverlay"></div>
+<!--Header section End-->
+
+<!-- Overview Hero Section Start -->
+<section id="overview" class="dl-overview-section">
+    <div class="dl-overview-glow"></div>
+    <div class="dl-overview-pattern"></div>
+
+    <div class="container">
+        <div class="dl-overview-grid">
+
+            <!-- Left Content -->
+            <div class="dl-overview-content">
+
+                <div class="dl-overview-badge">
+                    <span class="dl-status-dot"></span>
+                    <span>Enterprise Fleet Accounting</span>
+                    <span class="dl-badge-divider">|</span>
+                    <span class="dl-badge-highlight">Account Ledger Module</span>
+                </div>
+
+                <h1 class="dl-overview-title">
+                    Unified Vendor Invoices,
+                    <span class="dl-gradient-text">Payments &amp; Ledgers</span>
+                    Platform
+                </h1>
+
+                <p class="dl-overview-description">
+                    Track vendor invoices, payments and outstanding balances in one place.
+                    The Account Ledger Management Module gives businesses a clear record of
+                    amounts billed by vendors and payments made to them, alongside driver
+                    payment histories with automatic running balances.
+                </p>
+
+                <!-- Action Buttons -->
+                <div class="dl-overview-actions">
+
+                    <button type="button" class="btn-primary" onclick="document.getElementById('simulator').scrollIntoView({behavior: 'smooth'})">
+                        <span>Try Interactive Ledger</span>
+                        <i class="ri-arrow-right-line"></i>
+                    </button>
+
+                    <button type="button" class="dl-btn-demo" onclick="document.querySelector('.dl-demo-section').scrollIntoView({behavior: 'smooth'})">
+                        <span class="dl-play-icon">
+                            <i class="ri-play-fill"></i>
+                        </span>
+                        <span>Watch Demo Video (05:12)</span>
+                    </button>
+                </div>
+
+                <!-- Statistics -->
+                <div class="dl-overview-stats">
+
+                    <div class="dl-stat-item">
+                        <div class="dl-stat-number">3 Types</div>
+                        <div class="dl-stat-label">Vendor Categories</div>
+                    </div>
+
+                    <div class="dl-stat-item">
+                        <div class="dl-stat-number dl-stat-green">100%</div>
+                        <div class="dl-stat-label">Auto Running Balance</div>
+                    </div>
+
+                    <div class="dl-stat-item">
+                        <div class="dl-stat-number dl-stat-red">Zero</div>
+                        <div class="dl-stat-label">Reconciliation Gaps</div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Right Image / Ledger Dashboard Card -->
+            <div class="dl-overview-visual">
+
+                <div class="dl-visual-card">
+
+                    <img
+                        src="Assets/images/hero_fleet_dispatch_1792482270822.jpg"
+                        alt="Transportation Fleet Financial Management and Accounting"
+                        class="dl-visual-image"
+                    >
+
+                    <div class="dl-visual-overlay"></div>
+
+                    <!-- Image Top Information -->
+                    <div class="dl-visual-topbar">
+
+                        <div class="dl-live-label">
+                            <span class="dl-live-dot"></span>
+                            <span>Live Accounts Telemetry</span>
+                        </div>
+
+                        <div class="dl-fuel-rate">
+                            Active Ledger View
+                        </div>
+
+                    </div>
+
+                    <!-- Ledger Summary Floating Slip -->
+                    <div class="dl-fuel-slip">
+
+                        <div class="dl-slip-header">
+                            <span class="dl-slip-title">
+                                Vendor: AARADHYA PETROLEUM
+                            </span>
+
+                            <span class="dl-slip-status">
+                                Verified &amp; Active
+                            </span>
+                        </div>
+
+                        <div class="dl-slip-stats">
+
+                            <div class="dl-slip-stat">
+                                <span class="dl-slip-label">Total Invoices</span>
+                                <span class="dl-slip-value">₹29,18,951.73</span>
+                            </div>
+
+                            <div class="dl-slip-stat">
+                                <span class="dl-slip-label">Total Payments</span>
+                                <span class="dl-slip-value dl-slip-green">₹28,55,622.35</span>
+                            </div>
+
+                            <div class="dl-slip-stat">
+                                <span class="dl-slip-label">Closing Balance</span>
+                                <span class="dl-slip-value dl-slip-red">₹63,329.38</span>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+<!-- Overview Hero Section End -->
+
+<!-- Trusted Brands Section Start -->
+<section class="dl-trusted-section">
+    <div class="dl-trusted-heading">
+        <span>
+            Trusted by 150+ Enterprise Transportation &amp; Logistics Fleets
+        </span>
+    </div>
+
+    <div class="dl-trusted-marquee">
+        <div class="dl-trusted-fade dl-trusted-fade-left"></div>
+        <div class="dl-trusted-fade dl-trusted-fade-right"></div>
+
+        <div class="dl-trusted-track">
+
+            <div class="dl-trusted-group">
+                <div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">Apex Logistics</span></div>
+                <div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">Meridian Transport</span></div>
+                <div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">Global Freight Co</span></div>
+                <div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">NorthStar Fleet</span></div>
+                <div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">Titan Cargo</span></div>
+                <div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">Pacific Routes</span></div>
+                <div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">Atlas Distribution</span></div>
+                <div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">Summit Hauling</span></div>
+            </div>
+
+            <div class="dl-trusted-group" aria-hidden="true">
+                <div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">Apex Logistics</span></div>
+                <div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">Meridian Transport</span></div>
+                <div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">Global Freight Co</span></div>
+                <div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">NorthStar Fleet</span></div>
+                <div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">Titan Cargo</span></div>
+                <div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">Pacific Routes</span></div>
+                <div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">Atlas Distribution</span></div>
+                <div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">Summit Hauling</span></div>
+            </div>
+
+        </div>
+    </div>
+</section>
+<!-- Trusted Brands Section End -->
+
+<!-- Video Demo Section Start -->
+<section class="dl-demo-section">
+    <div class="dl-demo-glow"></div>
+
+    <div class="dl-container">
+
+        <!-- Section Heading -->
+        <div class="heading-wrapper">
+
+            <span class="heading-tag">
+                Interactive Video Demonstration
+            </span>
+
+            <h2 class="heading-title">
+                Watch How
+                <span>Account Ledger Management</span>
+                Works
+            </h2>
+
+            <p>
+                Learn how to select a vendor or driver, open the ledger, review invoices and payments,
+                and understand the running balance through our simple demonstration video.
+            </p>
+        </div>
+
+        <!-- Demo Content -->
+        <div class="dl-demo-grid">
+
+            <div class="dl-demo-video-column">
+
+                <div class="dl-video-card">
+
+                    <!-- Video Browser Header -->
+                    <div class="dl-video-toolbar">
+
+                        <div class="dl-video-toolbar-left">
+                            <span class="dl-window-dot dl-dot-red"></span>
+                            <span class="dl-window-dot dl-dot-yellow"></span>
+                            <span class="dl-window-dot dl-dot-green"></span>
+
+                            <span class="dl-video-filename">
+                                account_ledgers_laravel_demo.mp4
+                            </span>
+                        </div>
+
+                        <span class="dl-video-quality">
+                            Full HD · 05:12
+                        </span>
+
+                    </div>
+
+                    <!-- Video Thumbnail -->
+                    <div class="dl-video-preview">
+
+                        <img
+                            src="Assets/images/dashboard.png"
+                            alt="Account Ledger Management demonstration video preview"
+                            class="dl-video-thumbnail"
+                        >
+
+                        <div class="dl-video-overlay"></div>
+
+                        <button
+                            type="button"
+                            class="dl-video-play"
+                            aria-label="Play demonstration video"
+                        >
+                            <i class="ri-play-fill"></i>
+                            <span class="dl-video-ping"></span>
+                        </button>
+
+                        <!-- Video Information -->
+                        <div class="dl-video-meta">
+
+                            <div class="dl-video-meta-left">
+                                <span class="dl-video-timestamp">
+                                    Timestamp: 00:45
+                                </span>
+
+                                <span class="dl-video-current-chapter">
+                                    Selecting a Vendor &amp; Reviewing Balances
+                                </span>
+                            </div>
+
+                            <a
+                                href="#"
+                                class="dl-video-external"
+                                onclick="return false;"
+                            >
+                                <span>Official Video</span>
+                                <i class="ri-video-line"></i>
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                    <!-- Video Footer -->
+                    <div class="dl-video-footer">
+
+                        <div class="dl-video-footer-left">
+
+                            <button
+                                type="button"
+                                class="dl-watch-button"
+                            >
+                                <i class="ri-play-circle-line"></i>
+                                <span>Watch Full Walkthrough</span>
+                            </button>
+
+                            <span class="dl-video-footer-note">
+                                Covers vendor ledger selection, running balance calculation &amp; driver payouts
+                            </span>
+
+                        </div>
+
+                        <a
+                            href="#"
+                            class="dl-video-source"
+                            onclick="return false;"
+                        >
+                            <span>Accounts Section</span>
+                            <i class="ri-arrow-right-up-line"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</section>
+<!-- Video Demo Section End -->
+
+<!-- Interactive Ledger Simulator Section Start -->
+<section id="simulator" class="dl-simulator-section">
+    <div class="dl-container">
+
+        <!-- Section Heading -->
+        <div class="dl-simulator-header">
+            <div class="heading-wrapper heading-wrap-left">
+
+                <span class="heading-tag">
+                    Interactive Ledger Explorer
+                </span>
+
+                <h2 class="heading-title">
+                    Live <span>Account Ledger</span> Simulator
+                </h2>
+
+                <p>
+                    Experience the exact real-world scenario from the documentation: Inspect
+                    <strong>AARADHYA PETROLEUM's</strong> vendor ledger (showing invoices, bank debits,
+                    and a ₹63,329.38 closing balance) or switch to the <strong>Driver Payment Ledger</strong>.
+                </p>
+
+            </div>
+
+            <div class="dl-view-switcher">
+                <button type="button" id="tab-vendor-view" class="dl-view-tab dl-view-tab-active" data-view="vendor">
+                    <i class="ri-store-2-line"></i>
+                    Vendor Ledger (AARADHYA PETROLEUM)
+                </button>
+
+                <button type="button" id="tab-driver-view" class="dl-view-tab" data-view="driver">
+                    <i class="ri-steering-2-line"></i>
+                    Driver Payment Ledger (Ramesh Kumar)
+                </button>
+            </div>
+        </div>
+
+        <!-- Vendor Summary Statistics -->
+        <div id="vendor-stats-container" class="dl-stats-grid">
+
+            <div class="dl-stat-card">
+                <div class="dl-stat-label">
+                    <span>Total Invoices (Payable)</span>
+                    <i class="ri-bill-line"></i>
+                </div>
+                <div class="dl-stat-value">
+                    ₹29,18,951.73
+                </div>
+                <p class="dl-stat-note">Cumulative credit billed</p>
+            </div>
+
+            <div class="dl-stat-card">
+                <div class="dl-stat-label">
+                    <span>Total Payments (Paid)</span>
+                    <i class="ri-bank-card-line dl-green-icon"></i>
+                </div>
+                <div class="dl-stat-value dl-green-text">
+                    ₹28,55,622.35
+                </div>
+                <p class="dl-stat-note">Cumulative debit disbursements</p>
+            </div>
+
+            <div class="dl-stat-card">
+                <div class="dl-stat-label">
+                    <span>Vendor Category</span>
+                    <i class="ri-building-line dl-red-icon"></i>
+                </div>
+                <div class="dl-stat-value">
+                    Business Vendor
+                </div>
+                <p class="dl-stat-note">Fuel &amp; Fleet Consumables</p>
+            </div>
+
+            <div class="dl-stat-card dl-stat-card-total">
+                <div class="dl-stat-label">
+                    <span>Closing Outstanding Balance</span>
+                    <span class="dl-status-dot"></span>
+                </div>
+                <div class="dl-stat-value dl-stat-total-value">₹63,329.38</div>
+                <p class="dl-stat-note dl-red-text">Formula: Invoices − Payments</p>
+            </div>
+
+        </div>
+
+        <!-- Driver Summary Statistics (Hidden initially) -->
+        <div id="driver-stats-container" class="dl-stats-grid" style="display: none;">
+
+            <div class="dl-stat-card">
+                <div class="dl-stat-label">
+                    <span>Active Driver</span>
+                    <i class="ri-user-star-line"></i>
+                </div>
+                <div class="dl-stat-value">
+                    Ramesh Kumar
+                </div>
+                <p class="dl-stat-note">Driver ID: DRV-104 · Heavy Vehicle</p>
+            </div>
+
+            <div class="dl-stat-card">
+                <div class="dl-stat-label">
+                    <span>Recorded Payouts</span>
+                    <i class="ri-list-check dl-green-icon"></i>
+                </div>
+                <div class="dl-stat-value dl-green-text">
+                    2 Entries
+                </div>
+                <p class="dl-stat-note">Trip advance + trip allowance</p>
+            </div>
+
+            <div class="dl-stat-card">
+                <div class="dl-stat-label">
+                    <span>Account Behavior</span>
+                    <i class="ri-information-line dl-red-icon"></i>
+                </div>
+                <div class="dl-stat-value">
+                    Payment History
+                </div>
+                <p class="dl-stat-note">No invoice-based dues</p>
+            </div>
+
+            <div class="dl-stat-card dl-stat-card-total">
+                <div class="dl-stat-label">
+                    <span>Total Paid to Driver</span>
+                    <span class="dl-status-dot"></span>
+                </div>
+                <div class="dl-stat-value dl-stat-total-value dl-green-text">₹8,000.00</div>
+                <p class="dl-stat-note dl-green-text">Direct disbursements to date</p>
+            </div>
+
+        </div>
+
+        <!-- Ledger Calculator & Filter Master Panel -->
+        <div class="dl-calculator-panel">
+
+            <!-- Step 1 & 2 Master Information -->
+            <div class="dl-bill-master">
+
+                <div class="dl-bill-master-header">
+                    <div class="dl-bill-heading">
+                        <span>Step 1 &amp; 2: Account Ledger Selection</span>
+                        <span class="dl-heading-separator">·</span>
+                        <span id="ledger-selected-label" class="dl-invoice-number">AARADHYA PETROLEUM (Business Vendor)</span>
+                    </div>
+
+                    <div class="dl-receipt-actions">
+                        <button type="button" class="dl-secondary-button" onclick="alert('Viewing linked ledger summary statement.')">
+                            <i class="ri-file-text-line"></i>
+                            <span>View Statement Summary</span>
+                        </button>
+
+                        <button type="button" class="dl-secondary-button" onclick="location.reload()">
+                            <i class="ri-refresh-line"></i>
+                            <span>Back to Ledgers</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="dl-bill-fields">
+
+                    <div class="dl-form-group">
+                        <label for="ledger-mode-select">Account Ledger Type</label>
+                        <select id="ledger-mode-select" class="dl-form-control">
+                            <option value="vendor">Vendor Account Ledger</option>
+                            <option value="driver">Driver Payment Ledger</option>
+                        </select>
+                    </div>
+
+                    <div class="dl-form-group" id="vendor-category-group">
+                        <label for="ledger-category-select">Vendor Category</label>
+                        <select id="ledger-category-select" class="dl-form-control">
+                            <option value="business">Business Vendor</option>
+                            <option value="reefer">Reefer / Cabin Vendor</option>
+                            <option value="office">Office Vendor</option>
+                        </select>
+                    </div>
+
+                    <div class="dl-form-group" id="account-name-group">
+                        <label for="ledger-account-select">Select Vendor / Driver</label>
+                        <select id="ledger-account-select" class="dl-form-control">
+                            <option value="aaradhya">AARADHYA PETROLEUM (Fuel Supplier)</option>
+                            <option value="bharat">Bharat Petroleum Highway Hub</option>
+                            <option value="hindustan">Hindustan Petroleum Depot</option>
+                            <option value="shell">Shell Transport Point</option>
+                        </select>
+                    </div>
+
+                    <div class="dl-form-group">
+                        <label for="ledger-access-control">System Access Permission</label>
+                        <input id="ledger-access-control" class="dl-form-control"
+                               type="text" value="Payments View (Authenticated)" readonly>
+                    </div>
+
+                </div>
+
+                <div class="dl-bill-options">
+                    <label class="dl-checkbox-label">
+                        <input type="checkbox" checked disabled>
+                        <span>Automated chronological running balance calculation (Newest items shown first)</span>
+                    </label>
+                    <span class="dl-formula-note">
+                        Balance Rule: Credit (Payable Invoices) − Debit (Bank Payments) = Running Balance
+                    </span>
+                </div>
+
+            </div>
+
+            <!-- Table Toolbar -->
+            <div class="dl-table-toolbar">
+
+                <div class="dl-search-box">
+                    <i class="ri-search-line"></i>
+                    <input id="ledger-search-input" type="search"
+                           placeholder="Search date, invoice reference, payment voucher, description...">
+                </div>
+
+                <div class="dl-toolbar-actions">
+                    <button type="button" class="dl-action-button" onclick="window.print()">
+                        <i class="ri-printer-line dl-red-icon"></i>
+                        Print Ledger
+                    </button>
+
+                    <button type="button" class="dl-action-button" id="export-ledger-btn">
+                        <i class="ri-file-excel-line dl-green-icon"></i>
+                        Export CSV
+                    </button>
+
+                    <button type="button" class="dl-primary-button" onclick="alert('Ledger entries are synced with real-time payment vouchers.')">
+                        <i class="ri-check-double-line"></i>
+                        Verified Ledger
+                    </button>
+                </div>
+
+            </div>
+
+            <!-- Vendor Transaction Table -->
+            <div id="vendor-table-wrapper" class="dl-table-wrapper">
+                <table class="dl-vehicle-table">
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Type / Description</th>
+                            <th class="dl-text-right">Credit (Payable)</th>
+                            <th class="dl-text-right">Debit (Paid)</th>
+                            <th class="dl-text-right">Running Balance</th>
+                            <th class="dl-text-center">Supporting Details</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <!-- Transaction 1 -->
+                        <tr>
+                            <td>
+                                <span class="dl-date-badge">29-09-2026</span>
+                            </td>
+                            <td>
+                                <div class="dl-vehicle-name">
+                                    <i class="ri-file-list-3-fill"></i>
+                                    <span>Invoice: Diesel Bill – 6 entries</span>
+                                </div>
+                                <div class="dl-vehicle-meta">
+                                    Consolidated Fleet Refill · <span>INV-2026-SEP-99</span>
+                                </div>
+                            </td>
+                            <td class="dl-text-right">
+                                <div class="dl-row-total dl-red-text">₹1,63,168.50</div>
+                                <div class="dl-row-formula">Increases Owed</div>
+                            </td>
+                            <td class="dl-text-right">
+                                <span class="dl-empty-dash">—</span>
+                            </td>
+                            <td class="dl-text-right">
+                                <div class="dl-row-total dl-red-text">₹63,329.38</div>
+                                <div class="dl-row-formula">Net Payable</div>
+                            </td>
+                            <td class="dl-text-center">
+                                <button type="button" class="dl-action-button" onclick="alert('Viewing Invoice details: Diesel Bill (6 entries)')">
+                                    <i class="ri-external-link-line"></i>
+                                    <span>View Invoice</span>
+                                </button>
+                            </td>
+                        </tr>
+
+                        <!-- Transaction 2 -->
+                        <tr>
+                            <td>
+                                <span class="dl-date-badge">28-09-2026</span>
+                            </td>
+                            <td>
+                                <div class="dl-vehicle-name">
+                                    <i class="ri-bank-card-fill"></i>
+                                    <span>Payment #191 – Bank</span>
+                                </div>
+                                <div class="dl-vehicle-meta">
+                                    NEFT Bank Settlement · <span>Ref: UTR90481284</span>
+                                </div>
+                            </td>
+                            <td class="dl-text-right">
+                                <span class="dl-empty-dash">—</span>
+                            </td>
+                            <td class="dl-text-right">
+                                <div class="dl-row-total dl-green-text">₹36,400.00</div>
+                                <div class="dl-row-formula">Reduces Owed</div>
+                            </td>
+                            <td class="dl-text-right">
+                                <div class="dl-row-total dl-green-text">-₹99,839.12</div>
+                                <div class="dl-row-formula">Running Balance</div>
+                            </td>
+                            <td class="dl-text-center">
+                                <button type="button" class="dl-action-button" onclick="alert('Opening Linked Payment Voucher #191')">
+                                    <i class="ri-links-line dl-green-icon"></i>
+                                    <span>Payment #191</span>
+                                </button>
+                            </td>
+                        </tr>
+
+                        <!-- Transaction 3 -->
+                        <tr>
+                            <td>
+                                <span class="dl-date-badge">23-09-2026</span>
+                            </td>
+                            <td>
+                                <div class="dl-vehicle-name">
+                                    <i class="ri-bank-card-fill"></i>
+                                    <span>Payment #207 – Bank</span>
+                                </div>
+                                <div class="dl-vehicle-meta">
+                                    RTGS Disbursement · <span>Ref: UTR78301923</span>
+                                </div>
+                            </td>
+                            <td class="dl-text-right">
+                                <span class="dl-empty-dash">—</span>
+                            </td>
+                            <td class="dl-text-right">
+                                <div class="dl-row-total dl-green-text">₹50,000.00</div>
+                                <div class="dl-row-formula">Reduces Owed</div>
+                            </td>
+                            <td class="dl-text-right">
+                                <div class="dl-row-total dl-green-text">-₹63,439.12</div>
+                                <div class="dl-row-formula">Running Balance</div>
+                            </td>
+                            <td class="dl-text-center">
+                                <button type="button" class="dl-action-button" onclick="alert('Opening Linked Payment Voucher #207')">
+                                    <i class="ri-links-line dl-green-icon"></i>
+                                    <span>Payment #207</span>
+                                </button>
+                            </td>
+                        </tr>
+
+                        <!-- Transaction 4 -->
+                        <tr>
+                            <td>
+                                <span class="dl-date-badge">20-09-2026</span>
+                            </td>
+                            <td>
+                                <div class="dl-vehicle-name">
+                                    <i class="ri-file-list-3-fill"></i>
+                                    <span>Invoice: Diesel Bill – 15 entries</span>
+                                </div>
+                                <div class="dl-vehicle-meta">
+                                    Mid-Month Consolidated Refuel · <span>INV-2026-SEP-45</span>
+                                </div>
+                            </td>
+                            <td class="dl-text-right">
+                                <div class="dl-row-total dl-red-text">₹3,73,804.20</div>
+                                <div class="dl-row-formula">Increases Owed</div>
+                            </td>
+                            <td class="dl-text-right">
+                                <span class="dl-empty-dash">—</span>
+                            </td>
+                            <td class="dl-text-right">
+                                <div class="dl-row-total dl-red-text">₹36,560.88</div>
+                                <div class="dl-row-formula">Running Balance</div>
+                            </td>
+                            <td class="dl-text-center">
+                                <button type="button" class="dl-action-button" onclick="alert('Viewing Invoice details: Diesel Bill (15 entries)')">
+                                    <i class="ri-external-link-line"></i>
+                                    <span>View Invoice</span>
+                                </button>
+                            </td>
+                        </tr>
+                    </tbody>
+
+                    <tfoot>
+                        <tr>
+                            <td>
+                                <span class="dl-footer-label">
+                                    Closing Balance Summary
+                                </span>
+                            </td>
+                            <td class="dl-footer-period">4 Documented Transactions</td>
+                            <td class="dl-text-right dl-footer-liters dl-red-text">Credit: ₹5,36,972.70</td>
+                            <td class="dl-text-right dl-footer-average dl-green-text">Debit: ₹86,400.00</td>
+                            <td class="dl-text-right dl-footer-total dl-red-text">Closing: ₹63,329.38</td>
+                            <td class="dl-text-center">
+                                <span class="dl-live-label">
+                                    <span class="dl-live-dot"></span>
+                                    <span>Net Payable</span>
+                                </span>
+                            </td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+
+            <!-- Driver Transaction Table (Hidden by default) -->
+            <div id="driver-table-wrapper" class="dl-table-wrapper" style="display: none;">
+                <table class="dl-vehicle-table">
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Description</th>
+                            <th>Payment Reference</th>
+                            <th>Payment Method</th>
+                            <th class="dl-text-right">Amount Paid</th>
+                            <th class="dl-text-right">Cumulative Total Paid</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>
+                                <span class="dl-date-badge">25-09-2026</span>
+                            </td>
+                            <td>
+                                <div class="dl-vehicle-name">
+                                    <i class="ri-user-follow-line"></i>
+                                    <span>Trip Advance &amp; Allowance</span>
+                                </div>
+                                <div class="dl-vehicle-meta">
+                                    Ramesh Kumar (DRV-104) · Pune to Delhi Route
+                                </div>
+                            </td>
+                            <td>
+                                <span class="dl-invoice-number">PAY-DRV-2026-92</span>
+                            </td>
+                            <td>
+                                <span>Bank Transfer / UPI</span>
+                            </td>
+                            <td class="dl-text-right">
+                                <div class="dl-row-total dl-green-text">₹3,000.00</div>
+                            </td>
+                            <td class="dl-text-right">
+                                <div class="dl-row-total dl-green-text">₹8,000.00</div>
+                                <div class="dl-row-formula">Running Total</div>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <span class="dl-date-badge">12-09-2026</span>
+                            </td>
+                            <td>
+                                <div class="dl-vehicle-name">
+                                    <i class="ri-user-follow-line"></i>
+                                    <span>Monthly Driver Payout</span>
+                                </div>
+                                <div class="dl-vehicle-meta">
+                                    Ramesh Kumar (DRV-104) · Direct Disbursement
+                                </div>
+                            </td>
+                            <td>
+                                <span class="dl-invoice-number">PAY-DRV-2026-44</span>
+                            </td>
+                            <td>
+                                <span>Direct Bank Transfer</span>
+                            </td>
+                            <td class="dl-text-right">
+                                <div class="dl-row-total dl-green-text">₹5,000.00</div>
+                            </td>
+                            <td class="dl-text-right">
+                                <div class="dl-row-total dl-green-text">₹5,000.00</div>
+                                <div class="dl-row-formula">Initial Payment</div>
+                            </td>
+                        </tr>
+                    </tbody>
+
+                    <tfoot>
+                        <tr>
+                            <td>
+                                <span class="dl-footer-label">
+                                    Driver Payout Summary
+                                </span>
+                            </td>
+                            <td colspan="3" class="dl-footer-period">Ramesh Kumar · Payment History Only</td>
+                            <td class="dl-text-right dl-footer-liters">2 Disbursements</td>
+                            <td class="dl-text-right dl-footer-total dl-green-text">Total Paid: ₹8,000.00</td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+
+            <!-- Information Footer -->
+            <div class="dl-calculator-footer">
+
+                <div class="dl-documentation-note">
+                    <i class="ri-information-line"></i>
+                    <span>
+                        <strong>How to read this table:</strong>
+                        An Invoice appears under Credit (Payable) and increases the amount owed.
+                        A Payment appears under Debit (Paid) and reduces the amount owed.
+                        The Balance column shows the running amount after that particular transaction.
+                        The newest entries appear first.
+                    </span>
+                </div>
+
+                <div class="dl-supported-formats">
+                    Protected by Role Permission: Payments View
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</section>
+<!-- Interactive Ledger Simulator Section End -->
+
+<!-- Features Section Start -->
+<section id="features" class="dl-features-section">
+
+    <div class="container">
+
+        <!-- Section Heading -->
+        <div class="heading-wrapper">
+
+            <span class="heading-tag">
+                Complete Solution
+            </span>
+
+            <h2 class="heading-title">
+                Everything Your <span>Account Ledger Needs</span>
+            </h2>
+
+            <p>
+                A comprehensive suite of tools built to track vendor invoices, verify bank disbursements,
+                audit driver payout histories, and eliminate bookkeeping confusion.
+            </p>
+
+            <!-- Feature Filters -->
+            <div class="dl-features-filters">
+
+                <button type="button"
+                    class="dl-filter-btn is-active"
+                    data-filter="all">
+                    All Features (12)
+                </button>
+
+                <button type="button"
+                    class="dl-filter-btn"
+                    data-filter="vendors">
+                    Vendor Ledgers
+                </button>
+
+                <button type="button"
+                    class="dl-filter-btn"
+                    data-filter="drivers">
+                    Driver Accounts
+                </button>
+
+                <button type="button"
+                    class="dl-filter-btn"
+                    data-filter="audit">
+                    Audit &amp; Security
+                </button>
+
+            </div>
+        </div>
+
+        <!-- Feature Cards -->
+        <div class="dl-features-grid">
+
+            <!-- Feature 4.1 -->
+            <article class="dl-feature-card" data-category="vendors">
+                <div class="dl-feature-card-content">
+                    <div class="dl-feature-icon">
+                        <i class="ri-booklet-line"></i>
+                    </div>
+
+                    <div class="dl-feature-card-heading">
+                        <h3>Vendor-Wise Account Ledger</h3>
+                    </div>
+
+                    <p>
+                        View invoice and payment history for an individual supplier in a single ledger, helping staff understand bills received, amounts paid, and amounts still outstanding.
+                    </p>
+                </div>
+            </article>
+
+            <!-- Feature 4.2 -->
+            <article class="dl-feature-card" data-category="vendors">
+                <div class="dl-feature-card-content">
+                    <div class="dl-feature-icon">
+                        <i class="ri-building-line"></i>
+                    </div>
+
+                    <div class="dl-feature-card-heading">
+                        <h3>Multiple Vendor Categories</h3>
+                    </div>
+
+                    <p>
+                        Choose from Business Vendors, Reefer/Cabin Vendors, and Office Vendors. Each selected supplier maintains its own distinct and isolated account ledger.
+                    </p>
+                </div>
+            </article>
+
+            <!-- Feature 4.3 -->
+            <article class="dl-feature-card" data-category="drivers">
+                <div class="dl-feature-card-content">
+                    <div class="dl-feature-icon">
+                        <i class="ri-user-star-line"></i>
+                    </div>
+
+                    <div class="dl-feature-card-heading">
+                        <h3>Driver Payment Ledger</h3>
+                    </div>
+
+                    <p>
+                        Select an active driver to see recorded direct payments and the total paid over time. Drivers do not have an invoice-based payable balance in this ledger.
+                    </p>
+                </div>
+            </article>
+
+            <!-- Feature 4.4 -->
+            <article class="dl-feature-card" data-category="vendors">
+                <div class="dl-feature-card-content">
+                    <div class="dl-feature-icon">
+                        <i class="ri-file-add-line"></i>
+                    </div>
+
+                    <div class="dl-feature-card-heading">
+                        <h3>Invoice Transaction Records</h3>
+                    </div>
+
+                    <p>
+                        Vendor ledger entries show invoices and related descriptions as payable amounts under Credit. These entries increase the supplier's outstanding balance.
+                    </p>
+                </div>
+            </article>
+
+            <!-- Feature 4.5 -->
+            <article class="dl-feature-card" data-category="vendors drivers">
+                <div class="dl-feature-card-content">
+                    <div class="dl-feature-icon">
+                        <i class="ri-bank-card-line"></i>
+                    </div>
+
+                    <div class="dl-feature-card-heading">
+                        <h3>Payment Transaction Records</h3>
+                    </div>
+
+                    <p>
+                        Payments appear with useful details such as payment voucher number, company, payment method, and bank reference, reducing vendor payable balances.
+                    </p>
+                </div>
+            </article>
+
+            <!-- Feature 4.6 -->
+            <article class="dl-feature-card" data-category="vendors audit">
+                <div class="dl-feature-card-content">
+                    <div class="dl-feature-icon">
+                        <i class="ri-calculator-line"></i>
+                    </div>
+
+                    <div class="dl-feature-card-heading">
+                        <h3>Automatic Running Balance</h3>
+                    </div>
+
+                    <p>
+                        The system automatically calculates the balance after each transaction (Balance = Total Invoices − Total Payments). For drivers, it displays cumulative total paid.
+                    </p>
+                </div>
+            </article>
+
+            <!-- Feature 4.7 -->
+            <article class="dl-feature-card" data-category="vendors drivers">
+                <div class="dl-feature-card-content">
+                    <div class="dl-feature-icon">
+                        <i class="ri-pie-chart-2-line"></i>
+                    </div>
+
+                    <div class="dl-feature-card-heading">
+                        <h3>Ledger Summary</h3>
+                    </div>
+
+                    <p>
+                        Quickly review vendor invoice totals, total payments, and closing balance, or review the total amount paid to a selected fleet driver at a glance.
+                    </p>
+                </div>
+            </article>
+
+            <!-- Feature 4.8 -->
+            <article class="dl-feature-card" data-category="audit">
+                <div class="dl-feature-card-content">
+                    <div class="dl-feature-icon">
+                        <i class="ri-calendar-event-line"></i>
+                    </div>
+
+                    <div class="dl-feature-card-heading">
+                        <h3>Date-Wise Transaction History</h3>
+                    </div>
+
+                    <p>
+                        Transactions appear in a date-based ledger, with the newest items shown first. Each row includes its transaction date, type, description, and running balance.
+                    </p>
+                </div>
+            </article>
+
+            <!-- Feature 4.9 -->
+            <article class="dl-feature-card" data-category="audit vendors">
+                <div class="dl-feature-card-content">
+                    <div class="dl-feature-icon">
+                        <i class="ri-external-link-line"></i>
+                    </div>
+
+                    <div class="dl-feature-card-heading">
+                        <h3>View Payment Details</h3>
+                    </div>
+
+                    <p>
+                        Open linked payment records directly from the transaction list when a payment reference is available, providing fast access to supporting vouchers.
+                    </p>
+                </div>
+            </article>
+
+            <!-- Feature 4.10 -->
+            <article class="dl-feature-card" data-category="vendors drivers">
+                <div class="dl-feature-card-content">
+                    <div class="dl-feature-icon">
+                        <i class="ri-search-2-line"></i>
+                    </div>
+
+                    <div class="dl-feature-card-heading">
+                        <h3>Simple Account Selection</h3>
+                    </div>
+
+                    <p>
+                        Searchable selection controls help users pick a vendor or driver effortlessly without needing to memorize internal database IDs or accounting codes.
+                    </p>
+                </div>
+            </article>
+
+            <!-- Feature 4.11 -->
+            <article class="dl-feature-card" data-category="audit">
+                <div class="dl-feature-card-content">
+                    <div class="dl-feature-icon">
+                        <i class="ri-shield-keyhole-line"></i>
+                    </div>
+
+                    <div class="dl-feature-card-heading">
+                        <h3>Access Control</h3>
+                    </div>
+
+                    <p>
+                        Account ledger pages are available strictly to authenticated users with the required Payments View permission, keeping sensitive payout data secure.
+                    </p>
+                </div>
+            </article>
+
+            <!-- Feature 4.12 -->
+            <article class="dl-feature-card" data-category="audit vendors">
+                <div class="dl-feature-card-content">
+                    <div class="dl-feature-icon">
+                        <i class="ri-git-merge-line"></i>
+                    </div>
+
+                    <div class="dl-feature-card-heading">
+                        <h3>Connection with Payment Records</h3>
+                    </div>
+
+                    <p>
+                        The ledger brings together recorded vendor invoices and payments from across the accounting system, eliminating the need to manually maintain separate registers.
+                    </p>
+                </div>
+            </article>
+
+        </div>
+    </div>
+</section>
+<!-- Features Section End -->
+
+<!-- Workflow Section Start -->
+<section class="dl-workflow-section">
+    <div class="container">
+
+        <!-- Section Heading -->
+        <div class="heading-wrapper heading-wrap-left">
+
+            <span class="heading-tag">
+                Step-by-Step Workflow
+            </span>
+
+            <h2 class="heading-title">
+                How Does the <span>Account Ledger Module</span> Work?
+            </h2>
+
+            <p>
+                The module follows a simple five-step process that allows businesses to review supplier invoices,
+                monitor payments, and check running balances without complicated calculations or paperwork.
+            </p>
+
+        </div>
+
+        <!-- Workflow Grid -->
+        <div class="dl-workflow-grid">
+
+            <!-- Workflow Step 01 -->
+            <article class="dl-workflow-card">
+                <div class="dl-workflow-card-content">
+
+                    <div class="dl-workflow-card-top">
+                        <span class="dl-workflow-number">01</span>
+
+                        <div class="dl-workflow-icon">
+                            <i class="ri-folder-open-line"></i>
+                        </div>
+                    </div>
+
+                    <h3 class="dl-workflow-card-title">
+                        Open Account Ledger
+                    </h3>
+
+                    <p class="dl-workflow-card-description">
+                        Go to Account Ledgers in the Accounts section. The page lets you select either a vendor or a driver. Only one selection is needed at a time.
+                    </p>
+
+                    <ul class="dl-workflow-checklist">
+                        <li>
+                            <i class="ri-check-line"></i>
+                            <span>Navigate to Accounts &gt; Account Ledgers</span>
+                        </li>
+                        <li>
+                            <i class="ri-check-line"></i>
+                            <span>Choose between Vendor Ledger or Driver Ledger view</span>
+                        </li>
+                        <li>
+                            <i class="ri-check-line"></i>
+                            <span>Verified against user Payments View permission</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="dl-workflow-card-footer">
+                    <span>Workflow Phase 01</span>
+                </div>
+            </article>
+
+            <!-- Workflow Step 02 -->
+            <article class="dl-workflow-card">
+                <div class="dl-workflow-card-content">
+
+                    <div class="dl-workflow-card-top">
+                        <span class="dl-workflow-number">02</span>
+
+                        <div class="dl-workflow-icon">
+                            <i class="ri-user-search-line"></i>
+                        </div>
+                    </div>
+
+                    <h3 class="dl-workflow-card-title">
+                        Select a Vendor or Driver
+                    </h3>
+
+                    <p class="dl-workflow-card-description">
+                        For a vendor ledger, select a Business Vendor, Reefer/Cabin Vendor, or Office Vendor. For a driver ledger, select the required driver. Click Open Ledger.
+                    </p>
+
+                    <ul class="dl-workflow-checklist">
+                        <li>
+                            <i class="ri-check-line"></i>
+                            <span>Choose category: Business, Reefer, or Office Vendor</span>
+                        </li>
+                        <li>
+                            <i class="ri-check-line"></i>
+                            <span>Search vendor name or select active fleet driver</span>
+                        </li>
+                        <li>
+                            <i class="ri-check-line"></i>
+                            <span>Click "Open Ledger" to load the transaction ledger</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="dl-workflow-card-footer">
+                    <span>Workflow Phase 02</span>
+                </div>
+            </article>
+
+            <!-- Workflow Step 03 -->
+            <article class="dl-workflow-card">
+                <div class="dl-workflow-card-content">
+
+                    <div class="dl-workflow-card-top">
+                        <span class="dl-workflow-number">03</span>
+
+                        <div class="dl-workflow-icon">
+                            <i class="ri-dashboard-line"></i>
+                        </div>
+                    </div>
+
+                    <h3 class="dl-workflow-card-title">
+                        Review the Summary
+                    </h3>
+
+                    <p class="dl-workflow-card-description">
+                        A vendor ledger displays Total Invoices / Payable, Total Payments and Closing Balance. A driver ledger displays Total Payments and Total Paid.
+                    </p>
+
+                    <ul class="dl-workflow-checklist">
+                        <li>
+                            <i class="ri-check-line"></i>
+                            <span>Vendor view: Total Invoices, Total Payments, Closing Balance</span>
+                        </li>
+                        <li>
+                            <i class="ri-check-line"></i>
+                            <span>Driver view: Recorded payments count and cumulative amount paid</span>
+                        </li>
+                        <li>
+                            <i class="ri-check-line"></i>
+                            <span>Instantly check account status before proceeding</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="dl-workflow-card-footer">
+                    <span>Workflow Phase 03</span>
+                </div>
+            </article>
+
+            <!-- Workflow Step 04 -->
+            <article class="dl-workflow-card">
+                <div class="dl-workflow-card-content">
+
+                    <div class="dl-workflow-card-top">
+                        <span class="dl-workflow-number">04</span>
+
+                        <div class="dl-workflow-icon">
+                            <i class="ri-history-line"></i>
+                        </div>
+                    </div>
+
+                    <h3 class="dl-workflow-card-title">
+                        Check Transaction History
+                    </h3>
+
+                    <p class="dl-workflow-card-description">
+                        The ledger lists transactions with date, type and description. Invoices increase payable dues; payments reduce them. The system computes a running balance.
+                    </p>
+
+                    <ul class="dl-workflow-checklist">
+                        <li>
+                            <i class="ri-check-line"></i>
+                            <span>Invoices appear under Credit (Payable)</span>
+                        </li>
+                        <li>
+                            <i class="ri-check-line"></i>
+                            <span>Bank disbursements appear under Debit (Paid)</span>
+                        </li>
+                        <li>
+                            <i class="ri-check-line"></i>
+                            <span>Newest entries displayed first with real-time balance</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="dl-workflow-card-footer">
+                    <span>Workflow Phase 04</span>
+                </div>
+            </article>
+
+            <!-- Workflow Step 05 -->
+            <article class="dl-workflow-card">
+                <div class="dl-workflow-card-content">
+
+                    <div class="dl-workflow-card-top">
+                        <span class="dl-workflow-number">05</span>
+
+                        <div class="dl-workflow-icon">
+                            <i class="ri-links-line"></i>
+                        </div>
+                    </div>
+
+                    <h3 class="dl-workflow-card-title">
+                        Open Related Payment Details
+                    </h3>
+
+                    <p class="dl-workflow-card-description">
+                        Where a payment is listed, open its linked payment details for reference. Use "Back to Ledgers" whenever you need to select another vendor or driver.
+                    </p>
+
+                    <ul class="dl-workflow-checklist">
+                        <li>
+                            <i class="ri-check-line"></i>
+                            <span>Click linked payment number to open full voucher</span>
+                        </li>
+                        <li>
+                            <i class="ri-check-line"></i>
+                            <span>Inspect bank reference, payment method, and allocations</span>
+                        </li>
+                        <li>
+                            <i class="ri-check-line"></i>
+                            <span>Seamless navigation back to other accounts</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="dl-workflow-card-footer">
+                    <span>Workflow Phase 05</span>
+                </div>
+            </article>
+
+        </div>
+    </div>
+
+    <!-- Workflow Bottom Security Card -->
+    <div class="et-container">
+        <div class="workflow-bottom">
+
+            <div class="security-card">
+                <img src="./Assets/images/workflow-img.png" alt="Enterprise Security">
+
+                <div class="security-content">
+                    <h3>Enterprise-Grade Financial Security</h3>
+
+                    <p>
+                        Protect sensitive accounts payable and driver payment records with encrypted data storage, user role-based permissions, and controlled audit logs.
+                    </p>
+                </div>
+            </div>
+
+            <div class="workflow-info">
+
+                <div class="stats-card">
+                    <h3>100%</h3>
+
+                    <h4>Ledger Transparency</h4>
+
+                    <p>
+                        Eliminate bookkeeping confusion and balance disputes by maintaining single-source transaction histories for every vendor and driver.
+                    </p>
+                </div>
+
+                <div class="workflow-content">
+                    <p>
+                        Explore the complete TransportDesk financial suite designed to streamline daily fleet expenditures, diesel fuel invoices, trip allowances, and vendor payouts.
+                    </p>
+
+                    <a href="modules.html" class="workflow-btn">
+                        Explore All Modules <i class="ri-arrow-right-line"></i>
+                    </a>
+                </div>
+
+                <div class="info-card">
+                    <div class="info-icon">
+                       <i class="ri-bar-chart-2-fill"></i>
+                    </div>
+
+                    <span>
+                        Visualize vendor balances and settlement trends instantly
+                    </span>
+                </div>
+
+                <div class="info-card">
+                    <div class="info-icon">
+                       <i class="ri-lock-unlock-line"></i>
+                    </div>
+
+                    <span>
+                        Secured access limited to Payments View authorized personnel
+                    </span>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</section>
+<!-- Workflow Section End -->
+
+<!-- Benefits Section Start -->
+<section id="benefits" class="results-section">
+
+    <div class="container">
+
+        <!-- Heading -->
+        <div class="heading-wrapper">
+
+            <span class="heading-tag">
+                Documented Advantages
+            </span>
+
+            <h2 class="heading-title heading-light">
+                Benefits of <span>Account Ledger Management</span>
+            </h2>
+
+            <p>
+                Gain full clarity on billed amounts, verify disbursements, avoid payment disputes,
+                and review driver payouts across your entire logistics operation.
+            </p>
+
+        </div>
+
+        <!-- 6 Documented Benefits Grid -->
+        <div class="results-grid">
+
+            <!-- Benefit 1 -->
+            <div class="result-card">
+
+                <div class="result-icon">
+                   <i class="ri-money-dollar-circle-line"></i>
+                </div>
+
+                <h3>
+                    Understand Vendor Dues
+                </h3>
+
+                <p>
+                    See exactly what has been billed, paid, and remains payable to suppliers at any given moment without manual math.
+                </p>
+
+            </div>
+
+            <!-- Benefit 2 -->
+            <div class="result-card">
+
+                <div class="result-icon">
+                    <i class="ri-steering-2-line"></i>
+                </div>
+
+                <h3>
+                    Review Driver Payments
+                </h3>
+
+                <p>
+                    Check the recorded payouts and trip allowances made to each driver over time in a clear, dedicated payout record.
+                </p>
+
+            </div>
+
+            <!-- Benefit 3 -->
+            <div class="result-card">
+
+                <div class="result-icon">
+                    <i class="ri-folder-shield-2-line"></i>
+                </div>
+
+                <h3>
+                    Reduce Manual Checking
+                </h3>
+
+                <p>
+                    Review relevant supplier invoices, credit entries, and payment vouchers in one convenient, centralized screen.
+                </p>
+
+            </div>
+
+            <!-- Benefit 4 -->
+            <div class="result-card">
+
+                <div class="result-icon">
+                  <i class="ri-calculator-line"></i>
+                </div>
+
+                <h3>
+                    Improve Accuracy
+                </h3>
+
+                <p>
+                    Running totals and outstanding balances are calculated automatically from recorded invoices and payments.
+                </p>
+
+            </div>
+
+            <!-- Benefit 5 -->
+            <div class="result-card">
+
+                <div class="result-icon">
+                    <i class="ri-file-search-line"></i>
+                </div>
+
+                <h3>
+                    Find Supporting Details
+                </h3>
+
+                <p>
+                    Open connected payment vouchers and bank reference details immediately when verification is required.
+                </p>
+
+            </div>
+
+            <!-- Benefit 6 -->
+            <div class="result-card">
+
+                <div class="result-icon">
+                   <i class="ri-shield-keyhole-line"></i>
+                </div>
+
+                <h3>
+                    Control Access
+                </h3>
+
+                <p>
+                    Restrict ledger viewing and sensitive financial transaction histories to authenticated users with Payments View permission.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+</section>
+<!-- Benefits Section End -->
+
+<!-- Transportation Section Start -->
+<section class="transport-section">
+    <div class="container">
+
+        <div class="transport-container">   
+            <div class="heading-wrapper heading-wrap-left">
+                <span class="heading-tag">
+                   Transportation Financials
+                </span>
+
+                <h2 class="heading-title">
+                   Manage Your Fleet Accounts <span> Seamlessly </span>
+                </h2>
+
+                <p>
+                    Track vendor liabilities, manage driver advances, correlate diesel pump invoices, and streamline end-to-end transportation finances from one centralized cloud platform.
+                </p>
+
+            </div>
+
+            <!-- Right Side Dashboard Card -->
+            <div class="transport-image-wrapper">
+                <img src="./Assets/images/tms-img.png" alt="Transportation Accounting Dashboard" class="transport-image">
+                <div class="transport-shape"></div>
+                <div class="transport-card">
+                    <ul class="transport-list">
+                        <li>
+                            <i class="ri-checkbox-circle-line"></i>
+                            <span>Real-time vendor invoice &amp; payment tracking</span>
+                        </li>
+
+                        <li>
+                            <i class="ri-checkbox-circle-line"></i>
+                            <span>Driver payout histories &amp; advance logging</span>
+                        </li>
+
+                        <li>
+                            <i class="ri-checkbox-circle-line"></i>
+                            <span>Automatic running balance calculations</span>
+                        </li>
+
+                        <li>
+                            <i class="ri-checkbox-circle-line"></i>
+                            <span>Categorized Business, Reefer &amp; Office ledgers</span>
+                        </li>
+
+                        <li>
+                            <i class="ri-checkbox-circle-line"></i>
+                            <span>Role-based access control with Payments View permission</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Transportation Section End -->
+
+<!-- FAQ Section Start -->
+<section id="faq" class="dl-faq-section">
+    <div class="container">
+        <div class="heading-wrapper">
+
+            <span class="heading-tag">
+                Got Questions?
+            </span>
+
+            <h2 class="heading-title">
+              Frequently Asked <span>Questions</span>
+            </h2>
+
+            <p>
+              Everything you need to know about navigating, calculating, and managing
+              account ledgers in TransportDesk.
+            </p>
+
+            <!-- FAQ Filters -->
+            <div class="dl-faq-filters">
+                <button class="dl-faq-filter active" type="button">All</button>
+                <button class="dl-faq-filter" type="button">Vendor Dues</button>
+                <button class="dl-faq-filter" type="button">Categories</button>
+                <button class="dl-faq-filter" type="button">Driver Ledgers</button>
+                <button class="dl-faq-filter" type="button">Payment Details</button>
+                <button class="dl-faq-filter" type="button">Permissions</button>
+                <button class="dl-faq-filter" type="button">Export</button>
+            </div>
+        </div>
+
+        <!-- FAQ List -->
+        <div class="dl-faq-list">
+
+            <!-- FAQ 1 -->
+            <div class="dl-faq-item active" data-category="vendor dues">
+                <button
+                    class="dl-faq-question"
+                    type="button"
+                    aria-expanded="true"
+                    aria-controls="ledger-faq-answer-1"
+                >
+                    <span class="dl-faq-question-content">
+                        <span class="dl-faq-number">Q1</span>
+                        <span class="dl-faq-question-text">
+                            Can I see a vendor’s total outstanding amount?
+                        </span>
+                    </span>
+
+                    <span class="dl-faq-arrow">
+                        <i class="ri-arrow-down-s-line"></i>
+                    </span>
+                </button>
+
+                <div class="dl-faq-answer" id="ledger-faq-answer-1">
+                    <div class="dl-faq-answer-content">
+                        <p>
+                            Yes. The vendor ledger shows the closing balance calculated automatically from recorded invoices and payments (Closing Balance = Total Invoices − Total Payments).
+                        </p>
+
+                        <div class="dl-faq-topic">
+                            <span>Topic: Vendor Dues</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ 2 -->
+            <div class="dl-faq-item" data-category="categories">
+                <button
+                    class="dl-faq-question"
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="ledger-faq-answer-2"
+                >
+                    <span class="dl-faq-question-content">
+                        <span class="dl-faq-number">Q2</span>
+                        <span class="dl-faq-question-text">
+                            Are all vendor categories supported?
+                        </span>
+                    </span>
+
+                    <span class="dl-faq-arrow">
+                        <i class="ri-arrow-down-s-line"></i>
+                    </span>
+                </button>
+
+                <div class="dl-faq-answer" id="ledger-faq-answer-2">
+                    <div class="dl-faq-answer-content">
+                        <p>
+                            Yes. The selection page includes Business Vendors, Reefer/Cabin Vendors, and Office Vendors. Each selected supplier has its own independent account ledger.
+                        </p>
+                        <div class="dl-faq-topic">
+                            <span>Topic: Categories</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ 3 -->
+            <div class="dl-faq-item" data-category="driver ledgers">
+                <button
+                    class="dl-faq-question"
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="ledger-faq-answer-3"
+                >
+                    <span class="dl-faq-question-content">
+                        <span class="dl-faq-number">Q3</span>
+                        <span class="dl-faq-question-text">
+                            Can I see driver payment history?
+                        </span>
+                    </span>
+
+                    <span class="dl-faq-arrow">
+                        <i class="ri-arrow-down-s-line"></i>
+                    </span>
+                </button>
+
+                <div class="dl-faq-answer" id="ledger-faq-answer-3">
+                    <div class="dl-faq-answer-content">
+                        <p>
+                            Yes. Select an active driver to see recorded direct disbursements, individual payment vouchers, and the cumulative total amount paid over time.
+                        </p>
+                        <div class="dl-faq-topic">
+                            <span>Topic: Driver Ledgers</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ 4 -->
+            <div class="dl-faq-item" data-category="driver ledgers">
+                <button
+                    class="dl-faq-question"
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="ledger-faq-answer-4"
+                >
+                    <span class="dl-faq-question-content">
+                        <span class="dl-faq-number">Q4</span>
+                        <span class="dl-faq-question-text">
+                            Does the driver ledger show pending salary?
+                        </span>
+                    </span>
+
+                    <span class="dl-faq-arrow">
+                        <i class="ri-arrow-down-s-line"></i>
+                    </span>
+                </button>
+
+                <div class="dl-faq-answer" id="ledger-faq-answer-4">
+                    <div class="dl-faq-answer-content">
+                        <p>
+                            No. This ledger shows driver payments only, not salary invoices or outstanding salary calculations. Unlike vendors, drivers do not have an invoice-based payable balance in this ledger.
+                        </p>
+                        <div class="dl-faq-topic">
+                            <span>Topic: Driver Ledgers</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ 5 -->
+            <div class="dl-faq-item" data-category="payment details">
+                <button
+                    class="dl-faq-question"
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="ledger-faq-answer-5"
+                >
+                    <span class="dl-faq-question-content">
+                        <span class="dl-faq-number">Q5</span>
+                        <span class="dl-faq-question-text">
+                            Can I open individual payment records?
+                        </span>
+                    </span>
+
+                    <span class="dl-faq-arrow">
+                        <i class="ri-arrow-down-s-line"></i>
+                    </span>
+                </button>
+
+                <div class="dl-faq-answer" id="ledger-faq-answer-5">
+                    <div class="dl-faq-answer-content">
+                        <p>
+                            Yes. Payment entries with linked payment details can be opened directly from the transaction list when a payment reference is available.
+                        </p>
+                        <div class="dl-faq-topic">
+                            <span>Topic: Payment Details</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ 6 -->
+            <div class="dl-faq-item" data-category="permissions">
+                <button
+                    class="dl-faq-question"
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="ledger-faq-answer-6"
+                >
+                    <span class="dl-faq-question-content">
+                        <span class="dl-faq-number">Q6</span>
+                        <span class="dl-faq-question-text">
+                            Who can access Account Ledger?
+                        </span>
+                    </span>
+
+                    <span class="dl-faq-arrow">
+                        <i class="ri-arrow-down-s-line"></i>
+                    </span>
+                </button>
+
+                <div class="dl-faq-answer" id="ledger-faq-answer-6">
+                    <div class="dl-faq-answer-content">
+                        <p>
+                            Users must be signed in and possess the required Payments View permission. Access can therefore be strictly limited to authorized accounts staff.
+                        </p>
+                        <div class="dl-faq-topic">
+                            <span>Topic: Permissions</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ 7 -->
+            <div class="dl-faq-item" data-category="export">
+                <button
+                    class="dl-faq-question"
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="ledger-faq-answer-7"
+                >
+                    <span class="dl-faq-question-content">
+                        <span class="dl-faq-number">Q7</span>
+                        <span class="dl-faq-question-text">
+                            Can I export the Account Ledger to Excel?
+                        </span>
+                    </span>
+
+                    <span class="dl-faq-arrow">
+                        <i class="ri-arrow-down-s-line"></i>
+                    </span>
+                </button>
+
+                <div class="dl-faq-answer" id="ledger-faq-answer-7">
+                    <div class="dl-faq-answer-content">
+                        <p>
+                            A dedicated Excel/CSV export for the Account Ledger page was not found in the reviewed controller and views, though records can be reviewed, verified, and printed on-screen.
+                        </p>
+                        <div class="dl-faq-topic">
+                            <span>Topic: Export</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- FAQ Call to Action / Conclusion Start -->
+        <div class="dl-faq-cta">
+            <div class="dl-faq-cta-content">
+                <h3>Ready to Simplify Account Ledger Management?</h3>
+                <p>
+                    The Account Ledger Management Module helps your business quickly review supplier invoices, payments, outstanding balances and driver payment history. It keeps key account information easy to understand and accessible in one place.
+                </p>
+            </div>
+
+            <button class="dl-faq-cta-button" type="button" onclick="document.getElementById('simulator').scrollIntoView({behavior: 'smooth'})">
+                Open Ledger Simulator
+            </button>
+        </div>
+        <!-- FAQ Call to Action / Conclusion End -->
+
+    </div>
+</section>
+<!-- FAQ Section End -->
+
+<!-- Footer Section Start -->
+<footer class="footer">
+
+    <!-- Newsletter -->
+    <div class="footer-newsletter">
+        <div class="container">
+
+            <div class="newsletter-wrapper">
+
+                <div class="newsletter-content">
+                    <h2>Stay ahead of the curve</h2>
+                    <p>
+                        Fleet management insights, product updates, and industry news.
+                    </p>
+                </div>
+
+                <form class="newsletter-form">
+
+                    <input
+                        type="email"
+                        placeholder="Enter your email"
+                    >
+
+                    <button type="submit">
+                        Subscribe
+                       <i class="ri-arrow-right-line"></i>
+                    </button>
+
+                </form>
+
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Footer Main -->
+    <div class="footer-main">
+
+        <div class="container">
+
+            <div class="footer-grid">
+
+                <!-- Left -->
+                <div class="footer-about">
+
+                    <a href="index.html" class="footer-logo">
+                         <img src="Assets/images/transportdesk-logo-dark.svg" alt="footer-logo">
+                    </a>
+
+                    <p>
+                        The intelligent transportation platform that puts fleet directors
+                        in complete control of their operations.
+                    </p>
+
+                    <div class="footer-social">
+                        <a href="#"><i class="ri-facebook-fill"></i></a>
+                        <a href="#"><i class="ri-instagram-line"></i></a>
+                        <a href="#"><i class="ri-twitter-line"></i></a>
+                        <a href="#"><i class="ri-linkedin-fill"></i></a>
+                    </div>
+
+                </div>
+
+                <!-- Product -->
+                <div class="footer-links">
+                    <h3>Product</h3>
+                    <ul>
+                        <li><a href="features.html" class="footer-link">Features</a></li>
+                        <li><a href="modules.html" class="footer-link">Modules</a></li>
+                        <li><a href="solutions.html" class="footer-link">Solutions</a></li>
+                        <li><a href="reports.html" class="footer-link">Reports</a></li>
+                        <li><a href="contact.html" class="footer-link">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Resources -->
+                <div class="footer-links">
+                    <h3>Resources</h3>
+                    <ul>
+                        <li><a href="documentation.html" class="footer-link">Documentation</a></li>
+                        <li><a href="faq.html" class="footer-link">FAQ</a></li>
+                        <li><a href="privacy-policy.html" class="footer-link">Privacy Policy</a></li>
+                    </ul>
+                </div>
+
+                <!-- Support -->
+                <div class="footer-links">
+                    <h3>Support</h3>
+                    <ul>
+                        <li><a href="#" class="footer-link">Help Center</a></li>
+                        <li><a href="#" class="footer-link">Status</a></li>
+                        <li><a href="#" class="footer-link">Security</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div class="footer-contact">
+
+                    <div class="contact-item">
+                        <div class="icon">
+                            <i class="ri-mail-line"></i>
+                        </div>
+                        <div>
+                            <span>Email</span>
+                            <a href="#">hello@transportdesk.net</a>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="icon">
+                            <i class="ri-phone-fill"></i>
+                        </div>
+                        <div>
+                            <span>Call</span>
+                            <a href="#">+1 (512) 555-0142</a>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="icon">
+                            <i class="ri-map-pin-line"></i>
+                        </div>
+                        <div>
+                            <span>Location</span>
+                            <p>India</p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Bottom -->
+    <div class="footer-bottom">
+        <div class="container">
+            <div class="bottom-wrapper">
+                <p>© 2026 All rights reserved.</p>
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Cookie Policy</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</footer>
+<!-- Footer Section End -->
+
+<script src="./Assets/js/custom.js"></script>
+</body>
+</html>

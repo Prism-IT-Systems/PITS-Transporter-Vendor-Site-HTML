@@ -1,0 +1,2056 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Expense Book Management Module | TransportDesk Fleet Solutions</title>
+    <meta name="description" content="Record daily company-wise payments and expenses in one sheet: vendor payments, driver pay, vehicle expenses and manager entries, with an automatic daily total.">
+
+    <!-- Remix Icon -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" />
+
+    <!-- Swiper -->
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+
+    <!-- Lenis -->
+    <link rel="stylesheet"
+        href="https://unpkg.com/lenis@1.3.23/dist/lenis.css">
+
+    <!-- Tailwind Output CSS -->
+     <link href="./Assets/css/output.css" rel="stylesheet">
+</head>
+<body>
+
+<!--Header Section start-->
+<header class="main-header">
+    <div class="container">
+
+        <div class="header-inner">
+
+            <a href="index.html" class="header-logo">
+                <img src="Assets/images/transportdesk-logo.svg" alt="Logo">
+            </a>
+
+            <nav class="main-navigation" id="mobileMenu">
+
+                <div class="menu-circle"></div>
+
+                <ul class="navigation-links">
+                    <li><a href="index.html" class="navigation-link">Home</a></li>
+                    <li><a href="features.html" class="navigation-link">Features</a></li>
+                    <li><a href="modules.html" class="navigation-link active">Modules</a></li>
+                    <li><a href="reports.html" class="navigation-link">Resources</a></li>
+                    <li><a href="contact.html" class="navigation-link">Contact</a></li>
+                </ul>
+
+                <div class="mobile-header-right">
+                    <a href="#" class="login-btn">Login</a>
+                    <a href="#" class="demo-btn">Book Demo</a>
+                </div>
+
+            </nav>
+
+            <div class="header-right">
+                <a href="#" class="login-btn">Login</a>
+                <a href="#" class="demo-btn">Book Demo</a>
+            </div>
+
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+        </div>
+
+    </div>
+</header>
+
+<!-- Add this after header -->
+<div class="menu-overlay" id="menuOverlay"></div>
+<!--Header section End-->
+
+
+<section id="overview" class="dl-overview-section">
+    <div class="dl-overview-glow"></div>
+    <div class="dl-overview-pattern"></div>
+
+    <div class="container">
+        <div class="dl-overview-grid">
+
+            <!-- Left Content -->
+            <div class="dl-overview-content">
+
+                <div class="dl-overview-badge">
+                    <span class="dl-status-dot"></span>
+                    <span>Enterprise Fleet Management</span>
+                    <span class="dl-badge-divider">|</span>
+                    <span class="dl-badge-highlight">Expense Book Module</span>
+                </div>
+
+                <h1 class="dl-overview-title">
+                    Simplify Your Daily
+                    <span class="dl-gradient-text">Expense Book</span>
+                    Management
+                </h1>
+
+                <p class="dl-overview-description">
+                    The Expense Book Module helps transport and fleet businesses record payments and expenses made during a working day. Instead of maintaining separate registers for vendors, drivers, vehicles and managers, the office team can use one daily expense sheet for a selected company. Users can add multiple entries, identify whom money was paid to, record the amount and payment method, and see the total expenses for that day.
+                </p>
+
+                <!-- Action Buttons -->
+                <div class="dl-overview-actions">
+
+                    <button type="button" class="btn-primary"
+                        onclick="document.getElementById('simulator').scrollIntoView({behavior: 'smooth'})">
+                        <span>Try the Expense Book Example</span>
+                        <i class="ri-arrow-right-line"></i>
+                    </button>
+
+                    <button type="button" class="dl-btn-demo"
+                        onclick="document.querySelector('.dl-demo-section').scrollIntoView({behavior: 'smooth'})">
+                        <span class="dl-play-icon">
+                            <i class="ri-play-fill"></i>
+                        </span>
+                        <span>Watch Demo Video</span>
+                    </button>
+                </div>
+
+                <!-- Statistics -->
+                <div class="dl-overview-stats">
+
+                    <div class="dl-stat-item">
+                        <div class="dl-stat-number">12</div>
+                        <div class="dl-stat-label">Module Features</div>
+                    </div>
+
+                    <div class="dl-stat-item">
+                        <div class="dl-stat-number dl-stat-red">6</div>
+                        <div class="dl-stat-label">Simple Steps</div>
+                    </div>
+
+                    <div class="dl-stat-item">
+                        <div class="dl-stat-number dl-stat-green">₹12,700</div>
+                        <div class="dl-stat-label">Example Day Total</div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Right Image -->
+            <div class="dl-overview-visual">
+
+                <div class="dl-visual-card">
+
+                    <img
+                        src="Assets/images/hero_fleet_dispatch_1792482270822.jpg"
+                        alt="Transportation fleet daily expense management"
+                        class="dl-visual-image"
+                    >
+
+                    <div class="dl-visual-overlay"></div>
+
+                    <div class="dl-visual-topbar">
+
+                        <div class="dl-live-label">
+                            <span class="dl-live-dot"></span>
+                            <span>Daily Expense Book</span>
+                        </div>
+
+                        <div class="dl-fuel-rate">
+                            20-10-2026
+                        </div>
+
+                    </div>
+
+                    <div class="dl-fuel-slip">
+
+                        <div class="dl-slip-header">
+                            <span class="dl-slip-title">
+                                H AND H LOGISTICS · Example Expense Book
+                            </span>
+
+                            <span class="dl-slip-status">
+                                Example Only
+                            </span>
+                        </div>
+
+                        <div class="dl-slip-stats">
+
+                            <div class="dl-slip-stat">
+                                <span class="dl-slip-label">Payment Rows</span>
+                                <span class="dl-slip-value">4 Rows</span>
+                            </div>
+
+                            <div class="dl-slip-stat">
+                                <span class="dl-slip-label">Payee Types</span>
+                                <span class="dl-slip-value dl-slip-red">4 Types</span>
+                            </div>
+
+                            <div class="dl-slip-stat">
+                                <span class="dl-slip-label">Day Total</span>
+                                <span class="dl-slip-value dl-slip-green">₹12,700</span>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<section class="dl-trusted-section">
+    <div class="dl-trusted-heading">
+        <span>
+            One Daily Expense Sheet for Every Type of Payee
+        </span>
+    </div>
+
+    <div class="dl-trusted-marquee">
+        <div class="dl-trusted-fade dl-trusted-fade-left"></div>
+        <div class="dl-trusted-fade dl-trusted-fade-right"></div>
+
+        <div class="dl-trusted-track">
+
+            <div class="dl-trusted-group">
+                <div class="dl-trusted-item">
+                    <span class="dl-trusted-dot"></span>
+                    <span class="dl-trusted-name">Vendors</span>
+                </div>
+
+                <div class="dl-trusted-item">
+                    <span class="dl-trusted-dot"></span>
+                    <span class="dl-trusted-name">Reefer Vendors</span>
+                </div>
+
+                <div class="dl-trusted-item">
+                    <span class="dl-trusted-dot"></span>
+                    <span class="dl-trusted-name">Office Vendors</span>
+                </div>
+
+                <div class="dl-trusted-item">
+                    <span class="dl-trusted-dot"></span>
+                    <span class="dl-trusted-name">Drivers</span>
+                </div>
+
+                <div class="dl-trusted-item">
+                    <span class="dl-trusted-dot"></span>
+                    <span class="dl-trusted-name">Managers</span>
+                </div>
+
+                <div class="dl-trusted-item">
+                    <span class="dl-trusted-dot"></span>
+                    <span class="dl-trusted-name">Vehicles</span>
+                </div>
+
+                <div class="dl-trusted-item">
+                    <span class="dl-trusted-dot"></span>
+                    <span class="dl-trusted-name">Driver Pay</span>
+                </div>
+
+                <div class="dl-trusted-item">
+                    <span class="dl-trusted-dot"></span>
+                    <span class="dl-trusted-name">Vehicle Expense</span>
+                </div>
+
+                <div class="dl-trusted-item">
+                    <span class="dl-trusted-dot"></span>
+                    <span class="dl-trusted-name">Daily Expense</span>
+                </div>
+
+                <div class="dl-trusted-item">
+                    <span class="dl-trusted-dot"></span>
+                    <span class="dl-trusted-name">Salary</span>
+                </div>
+
+                <div class="dl-trusted-item">
+                    <span class="dl-trusted-dot"></span>
+                    <span class="dl-trusted-name">Company-Wise Records</span>
+                </div>
+
+                <div class="dl-trusted-item">
+                    <span class="dl-trusted-dot"></span>
+                    <span class="dl-trusted-name">Daily Totals</span>
+                </div>
+
+            </div>
+
+            <!-- Duplicate group for seamless looping -->
+            <div class="dl-trusted-group" aria-hidden="true">
+                <div class="dl-trusted-item">
+                    <span class="dl-trusted-dot"></span>
+                    <span class="dl-trusted-name">Vendors</span>
+                </div>
+
+                <div class="dl-trusted-item">
+                    <span class="dl-trusted-dot"></span>
+                    <span class="dl-trusted-name">Reefer Vendors</span>
+                </div>
+
+                <div class="dl-trusted-item">
+                    <span class="dl-trusted-dot"></span>
+                    <span class="dl-trusted-name">Office Vendors</span>
+                </div>
+
+                <div class="dl-trusted-item">
+                    <span class="dl-trusted-dot"></span>
+                    <span class="dl-trusted-name">Drivers</span>
+                </div>
+
+                <div class="dl-trusted-item">
+                    <span class="dl-trusted-dot"></span>
+                    <span class="dl-trusted-name">Managers</span>
+                </div>
+
+                <div class="dl-trusted-item">
+                    <span class="dl-trusted-dot"></span>
+                    <span class="dl-trusted-name">Vehicles</span>
+                </div>
+
+                <div class="dl-trusted-item">
+                    <span class="dl-trusted-dot"></span>
+                    <span class="dl-trusted-name">Driver Pay</span>
+                </div>
+
+                <div class="dl-trusted-item">
+                    <span class="dl-trusted-dot"></span>
+                    <span class="dl-trusted-name">Vehicle Expense</span>
+                </div>
+
+                <div class="dl-trusted-item">
+                    <span class="dl-trusted-dot"></span>
+                    <span class="dl-trusted-name">Daily Expense</span>
+                </div>
+
+                <div class="dl-trusted-item">
+                    <span class="dl-trusted-dot"></span>
+                    <span class="dl-trusted-name">Salary</span>
+                </div>
+
+                <div class="dl-trusted-item">
+                    <span class="dl-trusted-dot"></span>
+                    <span class="dl-trusted-name">Company-Wise Records</span>
+                </div>
+
+                <div class="dl-trusted-item">
+                    <span class="dl-trusted-dot"></span>
+                    <span class="dl-trusted-name">Daily Totals</span>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<section class="dl-demo-section">
+    <div class="dl-demo-glow"></div>
+
+    <div class="dl-container">
+
+        <div class="heading-wrapper">
+
+            <span class="heading-tag">
+                Interactive Video Demonstration
+            </span>
+
+            <h2 class="heading-title">
+                Watch How <span>Expense Book</span> Works
+            </h2>
+
+            <p>
+                Learn to record and manage daily expenses. Watch the demo video to learn how to select a company and date, add expense rows, enter payment details, save the expense book and review previous records.
+            </p>
+        </div>
+
+        <div class="dl-demo-grid">
+            <div class="dl-demo-video-column">
+
+                <div class="dl-video-card">
+
+                    <div class="dl-video-toolbar">
+                        <div class="dl-video-toolbar-left">
+                            <span class="dl-window-dot dl-dot-red"></span>
+                            <span class="dl-window-dot dl-dot-yellow"></span>
+                            <span class="dl-window-dot dl-dot-green"></span>
+
+                            <span class="dl-video-filename">
+                                Demo Video: Expense Book Module
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="dl-video-preview">
+
+                        <img
+                            src="Assets/images/dashboard.png"
+                            alt="Expense Book demonstration video preview"
+                            class="dl-video-thumbnail"
+                        >
+
+                        <div class="dl-video-overlay"></div>
+
+                        <button type="button" class="dl-video-play"
+                            aria-label="Play demonstration video">
+                            <i class="ri-play-fill"></i>
+                            <span class="dl-video-ping"></span>
+                        </button>
+
+                        <div class="dl-video-meta">
+                            <div class="dl-video-meta-left">
+                                <span class="dl-video-current-chapter">
+                                    [Demo Video Will Be Displayed Here]
+                                </span>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="dl-video-footer">
+                        <div class="dl-video-footer-left">
+                            <button type="button" class="dl-watch-button">
+                                <i class="ri-play-circle-line"></i>
+                                <span>Watch Full Walkthrough</span>
+                            </button>
+
+                            <span class="dl-video-footer-note">
+                                Click to launch video playback in pop-up modal
+                            </span>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+<section id="simulator" class="dl-simulator-section">
+    <div class="dl-container">
+
+        <div class="dl-simulator-header">
+            <div class="heading-wrapper heading-wrap-left">
+
+                <span class="heading-tag">
+                    Practical Example
+                </span>
+
+                <h2 class="heading-title">
+                    One Day of <span>Expenses</span>
+                </h2>
+
+                <p>
+                    Suppose H AND H LOGISTICS wants to record all company payments made on 20 October 2026. The following values are examples to demonstrate how the actual Expense Book form is completed.
+                </p>
+            </div>
+
+            <div class="dl-view-switcher">
+                <button type="button" class="dl-view-tab dl-view-tab-active">
+                    <i class="ri-book-2-line"></i>
+                    Expense Book
+                </button>
+
+                <button type="button" class="dl-view-tab">
+                    <i class="ri-list-check-2"></i>
+                    All payments
+                </button>
+
+                <button type="button" class="dl-view-tab">
+                    <i class="ri-file-list-3-line"></i>
+                    Single payment
+                </button>
+            </div>
+        </div>
+
+        <!-- Summary Statistics -->
+        <div class="dl-stats-grid">
+
+            <div class="dl-stat-card">
+                <div class="dl-stat-label">
+                    <span>Firm</span>
+                    <i class="ri-building-line"></i>
+                </div>
+                <div class="dl-stat-value" style="font-size:1.25rem">H AND H LOGISTICS</div>
+                <p class="dl-stat-note">Selected company (firm)</p>
+            </div>
+
+            <div class="dl-stat-card">
+                <div class="dl-stat-label">
+                    <span>Date</span>
+                    <i class="ri-calendar-line dl-red-icon"></i>
+                </div>
+                <div class="dl-stat-value dl-red-text">20-10-2026</div>
+                <p class="dl-stat-note">One book per company per date</p>
+            </div>
+
+            <div class="dl-stat-card">
+                <div class="dl-stat-label">
+                    <span>Expense Rows</span>
+                    <i class="ri-list-check dl-green-icon"></i>
+                </div>
+                <div class="dl-stat-value dl-green-text"><span id="ex-count">4</span> <span>Rows</span></div>
+                <p class="dl-stat-note">Vendor, driver, vehicle, manager</p>
+            </div>
+
+            <div class="dl-stat-card dl-stat-card-total">
+                <div class="dl-stat-label">
+                    <span>Day Total</span>
+                    <span class="dl-status-dot"></span>
+                </div>
+                <div class="dl-stat-value dl-stat-total-value" id="ex-day-total">₹12,700</div>
+                <p class="dl-stat-note dl-green-text">Auto: sum of all row amounts</p>
+            </div>
+
+        </div>
+
+        <!-- Panel -->
+        <div class="dl-calculator-panel">
+
+            <div class="dl-bill-master">
+
+                <div class="dl-bill-master-header">
+                    <div class="dl-bill-heading">
+                        <span>Step 1: Select Date and Firm</span>
+                    </div>
+
+                    <div class="dl-receipt-actions">
+                        <a href="#" class="dl-secondary-button" onclick="return false;">
+                            <i class="ri-arrow-left-s-line"></i>
+                            <span>Prev</span>
+                        </a>
+                        <a href="#" class="dl-secondary-button" onclick="return false;">
+                            <span>Next</span>
+                            <i class="ri-arrow-right-s-line"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="dl-bill-fields">
+
+                    <div class="dl-form-group">
+                        <label for="ex-date">Date</label>
+                        <input id="ex-date" class="dl-form-control" type="date" value="2026-10-20">
+                    </div>
+
+                    <div class="dl-form-group">
+                        <label for="ex-firm">Firm *</label>
+                        <select id="ex-firm" class="dl-form-control">
+                            <option>H AND H LOGISTICS</option>
+                        </select>
+                    </div>
+
+                    <div class="dl-form-group">
+                        <label for="ex-total-field">Day Total</label>
+                        <input id="ex-total-field" class="dl-form-control" type="text" value="₹0.00 before entering expenses" readonly>
+                    </div>
+
+                </div>
+
+                <div class="dl-bill-options">
+                    <span class="dl-formula-note">
+                        Use Prev or Next to move between dates. The selected firm and date identify the daily expense book. Previous entries for the same day can be reopened.
+                    </span>
+                </div>
+
+            </div>
+
+            <!-- Toolbar -->
+            <div class="dl-table-toolbar">
+
+                <div class="dl-search-box">
+                    <i class="ri-information-line"></i>
+                    <span>Step 2: Add Expenses / Payments</span>
+                </div>
+
+                <div class="dl-toolbar-actions">
+                    <button type="button" class="dl-action-button" id="ex-add-top">
+                        <i class="ri-add-line dl-red-icon"></i>
+                        Add Row
+                    </button>
+
+                    <button type="button" class="dl-primary-button">
+                        <i class="ri-save-3-line"></i>
+                        Save Expense Book
+                    </button>
+                </div>
+
+            </div>
+
+            <!-- Table -->
+            <div class="dl-table-wrapper">
+                <table class="dl-vehicle-table" id="ex-table">
+                    <thead>
+                        <tr>
+                            <th>SR</th>
+                            <th>Payee / Account</th>
+                            <th>Purpose</th>
+                            <th>Description</th>
+                            <th>Mode</th>
+                            <th class="dl-text-right">Amount</th>
+                            <th class="dl-text-center">Action</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="ex-body">
+                        <tr>
+                            <td class="dl-sr">1</td>
+                            <td>
+                                <div class="dl-vehicle-name">
+                                    <i class="ri-store-2-fill"></i>
+                                    <span>ABC Petroleum</span>
+                                </div>
+                                <div class="dl-vehicle-meta">Vendor</div>
+                            </td>
+                            <td><select class="dl-table-input"><option selected>Vendor Payment</option><option>Driver Pay</option><option>Vehicle Expense</option><option>Daily Expense</option><option>Salary</option></select></td>
+                            <td><input class="dl-table-input dl-notes-input" type="text" value="Diesel bill payment"></td>
+                            <td><select class="dl-table-input"><option selected>BANK</option><option>CASH</option><option>UPI</option></select></td>
+                            <td class="dl-text-right">
+                                <div class="dl-inline-rate">
+                                    <span>₹</span>
+                                    <input class="dl-table-input dl-amount-input" type="number" min="0" step="1" value="8000">
+                                </div>
+                            </td>
+                            <td class="dl-text-center">
+                                <button type="button" class="dl-delete-button dl-row-delete" title="Remove expense row">
+                                    <i class="ri-delete-bin-line"></i>
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="dl-sr">2</td>
+                            <td>
+                                <div class="dl-vehicle-name">
+                                    <i class="ri-user-3-fill"></i>
+                                    <span>Ramesh</span>
+                                </div>
+                                <div class="dl-vehicle-meta">Driver</div>
+                            </td>
+                            <td><select class="dl-table-input"><option>Vendor Payment</option><option selected>Driver Pay</option><option>Vehicle Expense</option><option>Daily Expense</option><option>Salary</option></select></td>
+                            <td><input class="dl-table-input dl-notes-input" type="text" value="Driver payment"></td>
+                            <td><select class="dl-table-input"><option>BANK</option><option selected>CASH</option><option>UPI</option></select></td>
+                            <td class="dl-text-right">
+                                <div class="dl-inline-rate">
+                                    <span>₹</span>
+                                    <input class="dl-table-input dl-amount-input" type="number" min="0" step="1" value="2500">
+                                </div>
+                            </td>
+                            <td class="dl-text-center">
+                                <button type="button" class="dl-delete-button dl-row-delete" title="Remove expense row">
+                                    <i class="ri-delete-bin-line"></i>
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="dl-sr">3</td>
+                            <td>
+                                <div class="dl-vehicle-name">
+                                    <i class="ri-truck-fill"></i>
+                                    <span>GJ 05 AB 1234</span>
+                                </div>
+                                <div class="dl-vehicle-meta">Vehicle</div>
+                            </td>
+                            <td><select class="dl-table-input"><option>Vendor Payment</option><option>Driver Pay</option><option selected>Vehicle Expense</option><option>Daily Expense</option><option>Salary</option></select></td>
+                            <td><input class="dl-table-input dl-notes-input" type="text" value="Vehicle operating expense"></td>
+                            <td><select class="dl-table-input"><option>BANK</option><option>CASH</option><option selected>UPI</option></select></td>
+                            <td class="dl-text-right">
+                                <div class="dl-inline-rate">
+                                    <span>₹</span>
+                                    <input class="dl-table-input dl-amount-input" type="number" min="0" step="1" value="1200">
+                                </div>
+                            </td>
+                            <td class="dl-text-center">
+                                <button type="button" class="dl-delete-button dl-row-delete" title="Remove expense row">
+                                    <i class="ri-delete-bin-line"></i>
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="dl-sr">4</td>
+                            <td>
+                                <div class="dl-vehicle-name">
+                                    <i class="ri-user-star-fill"></i>
+                                    <span>Office Manager</span>
+                                </div>
+                                <div class="dl-vehicle-meta">Manager</div>
+                            </td>
+                            <td><select class="dl-table-input"><option>Vendor Payment</option><option>Driver Pay</option><option>Vehicle Expense</option><option selected>Daily Expense</option><option>Salary</option></select></td>
+                            <td><input class="dl-table-input dl-notes-input" type="text" value="Office daily expenses"></td>
+                            <td><select class="dl-table-input"><option>BANK</option><option selected>CASH</option><option>UPI</option></select></td>
+                            <td class="dl-text-right">
+                                <div class="dl-inline-rate">
+                                    <span>₹</span>
+                                    <input class="dl-table-input dl-amount-input" type="number" min="0" step="1" value="1000">
+                                </div>
+                            </td>
+                            <td class="dl-text-center">
+                                <button type="button" class="dl-delete-button dl-row-delete" title="Remove expense row">
+                                    <i class="ri-delete-bin-line"></i>
+                                </button>
+                            </td>
+                        </tr>
+                    </tbody>
+
+                    <tfoot>
+                        <tr>
+                            <td colspan="5">
+                                <button type="button" class="dl-action-button" id="ex-add-bottom">
+                                    <i class="ri-add-line dl-red-icon"></i>
+                                    Add Another Row
+                                </button>
+                            </td>
+                            <td class="dl-text-right dl-footer-total" id="ex-total-foot">₹12,700</td>
+                            <td class="dl-footer-label">Total Expense</td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+
+            <!-- Day notes -->
+            <div class="dl-bill-master">
+                <div class="dl-bill-fields">
+                    <div class="dl-form-group" style="grid-column:1 / -1">
+                        <label for="ex-notes">Step 4: Day Notes (optional)</label>
+                        <textarea id="ex-notes" class="dl-form-control" rows="2">Diesel, driver, vehicle and office payments for 20 October.</textarea>
+                    </div>
+                </div>
+                <div class="dl-bill-options">
+                    <span class="dl-formula-note">
+                        Step 3: Click + Add Row at the top right or + Add Another Row below the list to add further payments. Use the delete icon if a row was added by mistake.
+                    </span>
+                </div>
+            </div>
+
+            <div class="dl-calculator-footer">
+
+                <div class="dl-documentation-note">
+                    <i class="ri-information-line"></i>
+                    <span>
+                        <strong>Note:</strong>
+                        These are sample entries, not actual transactions. For vendor payments, sufficient eligible unpaid invoices must exist. Vendor payments are applied to the oldest eligible unpaid invoices first. Driver Pay and relevant manager expenses can synchronize with their related records. If a vendor payment is more than the eligible outstanding invoices, correct the amount before saving.
+                    </span>
+                </div>
+
+                <div class="dl-supported-formats">
+                    Step 5: Return to the selected date to review or edit an existing expense book, subject to permissions.
+                </div>
+
+            </div>
+
+        </div>
+
+        <p class="dl-stat-note" style="margin-top:1rem">
+            <strong>Final result:</strong> For H AND H LOGISTICS on 20-10-2026, four example payment rows give a Day Total of ₹12,700. The company can later revisit this date to review the recorded expenses.
+        </p>
+
+    </div>
+</section>
+
+
+<!--dl feature section start-->
+<section id="features" class="dl-features-section">
+
+    <div class="container">
+
+        <div class="heading-wrapper">
+
+            <span class="heading-tag">
+                Module Features
+            </span>
+
+            <h2 class="heading-title">
+                Expense Book Module <span>Features</span>
+            </h2>
+
+            <p>
+                Everything the Expense Book offers for recording, reviewing and organizing daily company payments.
+            </p>
+
+            <div class="dl-features-filters">
+                <button type="button" class="dl-filter-btn is-active" data-filter="all">All Features (12)</button>
+                <button type="button" class="dl-filter-btn" data-filter="entries">Daily Entries &amp; Totals</button>
+                <button type="button" class="dl-filter-btn" data-filter="payees">Payees &amp; Payments</button>
+                <button type="button" class="dl-filter-btn" data-filter="controls">Notes, Controls &amp; Records</button>
+            </div>
+        </div>
+
+        <div class="dl-features-grid">
+
+            <!-- Feature 4.1 -->
+            <article class="dl-feature-card" data-category="entries controls">
+                <div class="dl-feature-card-content">
+                    <div class="dl-feature-icon">
+                        <i class="ri-book-2-line"></i>
+                    </div>
+
+                    <div class="dl-feature-card-heading">
+                        <h3>Daily Expense Book</h3>
+                    </div>
+
+                    <p>
+                        Maintain a separate expense sheet for each company and date, with the option to revisit past or upcoming dates.
+                    </p>
+                </div>
+            </article>
+
+            <!-- Feature 4.2 -->
+            <article class="dl-feature-card" data-category="entries">
+                <div class="dl-feature-card-content">
+                    <div class="dl-feature-icon">
+                        <i class="ri-list-check-2"></i>
+                    </div>
+
+                    <div class="dl-feature-card-heading">
+                        <h3>Multiple Expense Entries</h3>
+                    </div>
+
+                    <p>
+                        Record several expenses in one sheet using Add Row or Add Another Row instead of saving each payment separately.
+                    </p>
+                </div>
+            </article>
+
+            <!-- Feature 4.3 -->
+            <article class="dl-feature-card" data-category="entries">
+                <div class="dl-feature-card-content">
+                    <div class="dl-feature-icon">
+                        <i class="ri-building-line"></i>
+                    </div>
+
+                    <div class="dl-feature-card-heading">
+                        <h3>Company-Wise Records</h3>
+                    </div>
+
+                    <p>
+                        Choose the relevant firm so daily spending stays associated with the correct company.
+                    </p>
+                </div>
+            </article>
+
+            <!-- Feature 4.4 -->
+            <article class="dl-feature-card" data-category="payees">
+                <div class="dl-feature-card-content">
+                    <div class="dl-feature-icon">
+                        <i class="ri-store-2-line"></i>
+                    </div>
+
+                    <div class="dl-feature-card-heading">
+                        <h3>Vendor Payments</h3>
+                    </div>
+
+                    <p>
+                        Record payments for ordinary, reefer or office vendors. Applicable amounts are allocated to unpaid vendor invoices in oldest-first order.
+                    </p>
+                </div>
+            </article>
+
+            <!-- Feature 4.5 -->
+            <article class="dl-feature-card" data-category="payees">
+                <div class="dl-feature-card-content">
+                    <div class="dl-feature-icon">
+                        <i class="ri-user-3-line"></i>
+                    </div>
+
+                    <div class="dl-feature-card-heading">
+                        <h3>Driver Pay</h3>
+                    </div>
+
+                    <p>
+                        Select a driver and choose Driver Pay to record a payment associated with that driver.
+                    </p>
+                </div>
+            </article>
+
+            <!-- Feature 4.6 -->
+            <article class="dl-feature-card" data-category="payees">
+                <div class="dl-feature-card-content">
+                    <div class="dl-feature-icon">
+                        <i class="ri-truck-line"></i>
+                    </div>
+
+                    <div class="dl-feature-card-heading">
+                        <h3>Vehicle Expenses</h3>
+                    </div>
+
+                    <p>
+                        Record an expense against a vehicle, or select a driver for a vehicle-related cost. Where supported, the driver's linked vehicle can be identified for that day.
+                    </p>
+                </div>
+            </article>
+
+            <!-- Feature 4.7 -->
+            <article class="dl-feature-card" data-category="payees">
+                <div class="dl-feature-card-content">
+                    <div class="dl-feature-icon">
+                        <i class="ri-user-star-line"></i>
+                    </div>
+
+                    <div class="dl-feature-card-heading">
+                        <h3>Manager Daily Expenses and Salary</h3>
+                    </div>
+
+                    <p>
+                        Choose a manager and specify whether the payment is a Daily Expense or Salary. Daily Expense entries also sync with manager advance/day-book records.
+                    </p>
+                </div>
+            </article>
+
+            <!-- Feature 4.8 -->
+            <article class="dl-feature-card" data-category="payees">
+                <div class="dl-feature-card-content">
+                    <div class="dl-feature-icon">
+                        <i class="ri-bank-card-line"></i>
+                    </div>
+
+                    <div class="dl-feature-card-heading">
+                        <h3>Payment Methods and References</h3>
+                    </div>
+
+                    <p>
+                        Enter the supported payment method and an optional transaction or cheque reference for easier verification.
+                    </p>
+                </div>
+            </article>
+
+            <!-- Feature 4.9 -->
+            <article class="dl-feature-card" data-category="controls">
+                <div class="dl-feature-card-content">
+                    <div class="dl-feature-icon">
+                        <i class="ri-sticky-note-line"></i>
+                    </div>
+
+                    <div class="dl-feature-card-heading">
+                        <h3>Expense Notes</h3>
+                    </div>
+
+                    <p>
+                        Add a note to individual expense rows and separate day notes for the complete sheet.
+                    </p>
+                </div>
+            </article>
+
+            <!-- Feature 4.10 -->
+            <article class="dl-feature-card" data-category="entries">
+                <div class="dl-feature-card-content">
+                    <div class="dl-feature-icon">
+                        <i class="ri-calculator-line"></i>
+                    </div>
+
+                    <div class="dl-feature-card-heading">
+                        <h3>Automatic Daily Total</h3>
+                    </div>
+
+                    <p>
+                        Review the total expense amount calculated from the amounts entered in the daily sheet.
+                    </p>
+                </div>
+            </article>
+
+            <!-- Feature 4.11 -->
+            <article class="dl-feature-card" data-category="controls">
+                <div class="dl-feature-card-content">
+                    <div class="dl-feature-icon">
+                        <i class="ri-edit-box-line"></i>
+                    </div>
+
+                    <div class="dl-feature-card-heading">
+                        <h3>Edit and Delete Controls</h3>
+                    </div>
+
+                    <p>
+                        Staff with appropriate permissions can update existing sheets; authorized users can delete a book when needed.
+                    </p>
+                </div>
+            </article>
+
+            <!-- Feature 4.12 -->
+            <article class="dl-feature-card" data-category="payees controls">
+                <div class="dl-feature-card-content">
+                    <div class="dl-feature-icon">
+                        <i class="ri-links-line"></i>
+                    </div>
+
+                    <div class="dl-feature-card-heading">
+                        <h3>Linked Payment Records</h3>
+                    </div>
+
+                    <p>
+                        Applicable vendor and driver payment entries are connected to payment records rather than remaining only as unlinked notes.
+                    </p>
+                </div>
+            </article>
+
+        </div>
+    </div>
+</section>
+<!--dl feature section end-->
+
+<!--workflow section start-->
+<section class="dl-workflow-section">
+    <div class="container">
+
+        <div class="heading-wrapper heading-wrap-left">
+
+            <span class="heading-tag">
+                Step-by-Step Workflow
+            </span>
+
+            <h2 class="heading-title">
+                How Does the <span>Expense Book Module</span> Work?
+            </h2>
+
+            <p>
+                Six steps take you from selecting a company and date to saving and reviewing linked payments.
+            </p>
+
+        </div>
+
+        <div class="dl-workflow-grid">
+
+            <!-- Workflow Step 01 -->
+            <article class="dl-workflow-card">
+                <div class="dl-workflow-card-content">
+
+                    <div class="dl-workflow-card-top">
+                        <span class="dl-workflow-number">01</span>
+
+                        <div class="dl-workflow-icon">
+                            <i class="ri-calendar-check-line"></i>
+                        </div>
+                    </div>
+
+                    <h3 class="dl-workflow-card-title">
+                        Select Company and Date
+                    </h3>
+
+                    <p class="dl-workflow-card-description">
+                        Open Expense Book and select the company (firm) and the day for which you want to enter expenses.
+                    </p>
+
+                    <ul class="dl-workflow-checklist">
+                        <li>
+                            <i class="ri-check-line"></i>
+                            <span>Use Previous and Next to move between dates</span>
+                        </li>
+                        <li>
+                            <i class="ri-check-line"></i>
+                            <span>The system keeps one expense book per company per date</span>
+                        </li>
+                        <li>
+                            <i class="ri-check-line"></i>
+                            <span>Existing entries for that day can be reopened instead of creating a duplicate sheet</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="dl-workflow-card-footer">
+                    <span>Step 1</span>
+                </div>
+            </article>
+
+            <!-- Workflow Step 02 -->
+            <article class="dl-workflow-card">
+                <div class="dl-workflow-card-content">
+
+                    <div class="dl-workflow-card-top">
+                        <span class="dl-workflow-number">02</span>
+
+                        <div class="dl-workflow-icon">
+                            <i class="ri-add-box-line"></i>
+                        </div>
+                    </div>
+
+                    <h3 class="dl-workflow-card-title">
+                        Add an Expense Row
+                    </h3>
+
+                    <p class="dl-workflow-card-description">
+                        Click Add Row and choose the payee or relevant vehicle.
+                    </p>
+
+                    <ul class="dl-workflow-checklist">
+                        <li>
+                            <i class="ri-check-line"></i>
+                            <span>Payee can be a vendor, reefer vendor, office vendor, driver or manager</span>
+                        </li>
+                        <li>
+                            <i class="ri-check-line"></i>
+                            <span>For vehicle-only spending, select the vehicle</span>
+                        </li>
+                        <li>
+                            <i class="ri-check-line"></i>
+                            <span>Add more rows to record multiple payments in the same daily sheet</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="dl-workflow-card-footer">
+                    <span>Step 2</span>
+                </div>
+            </article>
+
+            <!-- Workflow Step 03 -->
+            <article class="dl-workflow-card">
+                <div class="dl-workflow-card-content">
+
+                    <div class="dl-workflow-card-top">
+                        <span class="dl-workflow-number">03</span>
+
+                        <div class="dl-workflow-icon">
+                            <i class="ri-bank-card-line"></i>
+                        </div>
+                    </div>
+
+                    <h3 class="dl-workflow-card-title">
+                        Enter Purpose and Payment Details
+                    </h3>
+
+                    <p class="dl-workflow-card-description">
+                        Enter the expense amount, payment method, reference and notes.
+                    </p>
+
+                    <ul class="dl-workflow-checklist">
+                        <li>
+                            <i class="ri-check-line"></i>
+                            <span>For a driver, choose Driver Pay or Vehicle Expense</span>
+                        </li>
+                        <li>
+                            <i class="ri-check-line"></i>
+                            <span>For a manager, choose Daily Expense or Salary</span>
+                        </li>
+                        <li>
+                            <i class="ri-check-line"></i>
+                            <span>Select a vehicle when required for vehicle-related expenses</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="dl-workflow-card-footer">
+                    <span>Step 3</span>
+                </div>
+            </article>
+
+            <!-- Workflow Step 04 -->
+            <article class="dl-workflow-card">
+                <div class="dl-workflow-card-content">
+
+                    <div class="dl-workflow-card-top">
+                        <span class="dl-workflow-number">04</span>
+
+                        <div class="dl-workflow-icon">
+                            <i class="ri-calculator-line"></i>
+                        </div>
+                    </div>
+
+                    <h3 class="dl-workflow-card-title">
+                        Review the Daily Total
+                    </h3>
+
+                    <p class="dl-workflow-card-description">
+                        The expense book shows the combined amount of the recorded rows.
+                    </p>
+
+                    <ul class="dl-workflow-checklist">
+                        <li>
+                            <i class="ri-check-line"></i>
+                            <span>Review every entry</span>
+                        </li>
+                        <li>
+                            <i class="ri-check-line"></i>
+                            <span>Add optional day notes to describe the day's spending</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="dl-workflow-card-footer">
+                    <span>Step 4</span>
+                </div>
+            </article>
+
+            <!-- Workflow Step 05 -->
+            <article class="dl-workflow-card">
+                <div class="dl-workflow-card-content">
+
+                    <div class="dl-workflow-card-top">
+                        <span class="dl-workflow-number">05</span>
+
+                        <div class="dl-workflow-icon">
+                            <i class="ri-save-3-line"></i>
+                        </div>
+                    </div>
+
+                    <h3 class="dl-workflow-card-title">
+                        Save or Update the Book
+                    </h3>
+
+                    <p class="dl-workflow-card-description">
+                        Click Save Expense Book. The entries are stored under the selected company and date.
+                    </p>
+
+                    <ul class="dl-workflow-checklist">
+                        <li>
+                            <i class="ri-check-line"></i>
+                            <span>Authorized users can later reopen the day, change rows or remove entries</span>
+                        </li>
+                        <li>
+                            <i class="ri-check-line"></i>
+                            <span>Existing book company and date cannot be changed</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="dl-workflow-card-footer">
+                    <span>Step 5</span>
+                </div>
+            </article>
+
+            <!-- Workflow Step 06 -->
+            <article class="dl-workflow-card">
+                <div class="dl-workflow-card-content">
+
+                    <div class="dl-workflow-card-top">
+                        <span class="dl-workflow-number">06</span>
+
+                        <div class="dl-workflow-icon">
+                            <i class="ri-links-line"></i>
+                        </div>
+                    </div>
+
+                    <h3 class="dl-workflow-card-title">
+                        Review Linked Payments
+                    </h3>
+
+                    <p class="dl-workflow-card-description">
+                        For vendor payments, the system links amounts to the oldest unpaid invoices first, where eligible invoices exist.
+                    </p>
+
+                    <ul class="dl-workflow-checklist">
+                        <li>
+                            <i class="ri-check-line"></i>
+                            <span>Driver Pay rows create or update driver payment records</span>
+                        </li>
+                        <li>
+                            <i class="ri-check-line"></i>
+                            <span>Manager Daily Expense rows are linked to manager advance/day-book records</span>
+                        </li>
+                        <li>
+                            <i class="ri-check-line"></i>
+                            <span>If a vendor payment exceeds available unpaid invoices, the system asks the user to correct it before saving</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="dl-workflow-card-footer">
+                    <span>Step 6</span>
+                </div>
+            </article>
+
+        </div>
+        </div>
+        <div class="et-container">
+        <div class="workflow-bottom">
+
+            <!-- Security Card -->
+            <div class="security-card">
+                <img src="./Assets/images/workflow-img.png" alt="workflow-img">
+
+                <div class="security-content">
+                    <h3>Enterprise-Grade Security</h3>
+
+                    <p>
+                        Protect sensitive business information with encrypted data storage, secure user authentication, and controlled system access.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Right Side -->
+            <div class="workflow-info">
+
+                <div class="stats-card">
+                    <h3>98%</h3>
+
+                    <h4>Customer Satisfaction</h4>
+
+                    <p>
+                        Provide accurate ETAs, live shipment updates, and faster response times that improve customer trust and retention.
+                    </p>
+                </div>
+
+                <div class="workflow-content">
+                    <p>
+                        Explore a powerful collection of intelligent modules built to streamline your daily transport operations. Manage vehicles, drivers, trips, and business performance seamlessly through one unified platform.
+                    </p>
+
+                    <a href="#" class="workflow-btn">
+                        Explore All Modules <i class="ri-arrow-right-line"></i>
+                    </a>
+                </div>
+
+                <div class="info-card">
+                    <div class="info-icon">
+                       <i class="ri-bar-chart-2-fill"></i>
+                    </div>
+
+                    <span>
+                        Visualize business performance instantly
+                    </span>
+                </div>
+
+                <div class="info-card">
+                    <div class="info-icon">
+                       <i class="ri-lock-unlock-line"></i>
+                    </div>
+
+                    <span>
+                        Access your business securely from anywhere
+                    </span>
+                </div>
+
+            </div>
+
+        </div>
+    
+    </div>
+</section>
+<!--workflow section end-->
+
+<!--results section start-->
+<section id="benefits" class="results-section">
+
+    <div class="container">
+
+        <div class="heading-wrapper">
+
+            <span class="heading-tag">
+                Proven Advantages
+            </span>
+
+            <h2 class="heading-title heading-light">
+                Benefits of <span>Expense Book Management</span>
+            </h2>
+
+            <p>
+                Keep company-wise daily payments organized, linked and easy to review.
+            </p>
+
+        </div>
+
+        <div class="results-grid">
+
+            <div class="result-card">
+
+                <div class="result-icon">
+                    <i class="ri-wallet-3-line"></i>
+                </div>
+
+                <h3>
+                    One Place for Daily Payments
+                </h3>
+
+                <p>
+                    Record different daily expenses in a single company-wise sheet.
+                </p>
+
+            </div>
+
+            <div class="result-card">
+
+                <div class="result-icon">
+                    <i class="ri-time-line"></i>
+                </div>
+
+                <h3>
+                    Less Manual Work
+                </h3>
+
+                <p>
+                    Add many entries together and see the daily total without a separate calculation.
+                </p>
+
+            </div>
+
+            <div class="result-card">
+
+                <div class="result-icon">
+                    <i class="ri-file-list-3-line"></i>
+                </div>
+
+                <h3>
+                    Clear Payment References
+                </h3>
+
+                <p>
+                    Keep payee, purpose, payment method, reference and notes together.
+                </p>
+
+            </div>
+
+            <div class="result-card">
+
+                <div class="result-icon">
+                    <i class="ri-folder-shield-2-line"></i>
+                </div>
+
+                <h3>
+                    Better Record Organization
+                </h3>
+
+                <p>
+                    Reopen a specific date to review or correct daily expense entries.
+                </p>
+
+            </div>
+
+            <div class="result-card">
+
+                <div class="result-icon">
+                    <i class="ri-links-line"></i>
+                </div>
+
+                <h3>
+                    Connected Accounts Records
+                </h3>
+
+                <p>
+                    Vendor and driver payments can link to their related payment records.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+</section>
+<!--results section end-->
+
+<!--transport-section start-->
+<section class="transport-section">
+    <div class="container">
+
+        <!-- Left Content -->
+    <div class="transport-container">   
+        <div class="heading-wrapper heading-wrap-left">
+                <span class="heading-tag">
+                   Transportation Management
+                </span>
+
+                <h2 class="heading-title">
+                   Manage Your Transportation <span> Operations Efficiently </span>
+                </h2>
+
+                <p>
+                    Track vehicles, manage drivers, monitor fuel usage, handle maintenance schedules, and streamline daily transportation operations from one centralized cloud platform.
+                </p>
+
+            </div>
+        <!-- Right Side -->
+        <div class="transport-image-wrapper">
+            <img src="./Assets/images/tms-img.png" alt="Transportation Dashboard" class="transport-image">
+            <!-- Decorative Shape -->
+            <div class="transport-shape"></div>
+            <!-- Floating Card -->
+            <div class="transport-card">
+                <ul class="transport-list">
+                    <li>
+                        <i class="ri-checkbox-circle-line"></i>
+                        <span>Real-time fleet and vehicle monitoring</span>
+                    </li>
+
+                    <li>
+                        <i class="ri-checkbox-circle-line"></i>
+                        <span>Driver management and attendance tracking</span>
+                    </li>
+
+                    <li>
+                        <i class="ri-checkbox-circle-line"></i>
+                        <span>Fuel logs and expense management</span>
+                    </li>
+
+                    <li>
+                        <i class="ri-checkbox-circle-line"></i>
+                        <span>Maintenance alerts and service scheduling</span>
+                    </li>
+
+                    <li>
+                        <i class="ri-checkbox-circle-line"></i>
+                        <span>Vehicle documents and compliance tracking</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+     </div>
+    </div>
+</section>
+<!--transport section end-->
+
+<!--dl-faq section start-->
+<section id="faq" class="dl-faq-section">
+    <div class="container">
+        <div class="heading-wrapper">
+
+            <span class="heading-tag">
+                Got Questions?
+            </span>
+
+            <h2 class="heading-title">
+                Frequently Asked <span>Questions</span>
+            </h2>
+
+            <p>
+                Everything you need to know about recording and managing daily expenses with the Expense Book Module.
+            </p>
+
+            <div class="dl-faq-filters">
+                <button class="dl-faq-filter active" type="button">All</button>
+                <button class="dl-faq-filter" type="button">Entries</button>
+                <button class="dl-faq-filter" type="button">Totals</button>
+                <button class="dl-faq-filter" type="button">Vendors</button>
+                <button class="dl-faq-filter" type="button">Vehicles</button>
+                <button class="dl-faq-filter" type="button">Editing</button>
+                <button class="dl-faq-filter" type="button">Access</button>
+            </div>
+        </div>
+
+        <div class="dl-faq-list">
+
+            <!-- FAQ 1 -->
+            <div class="dl-faq-item active" data-category="entries">
+                <button
+                    class="dl-faq-question"
+                    type="button"
+                    aria-expanded="true"
+                    aria-controls="dl-faq-answer-1"
+                >
+                    <span class="dl-faq-question-content">
+                        <span class="dl-faq-number">Q1</span>
+                        <span class="dl-faq-question-text">
+                            Can I enter more than one expense in a day?
+                        </span>
+                    </span>
+
+                    <span class="dl-faq-arrow">
+                        <i class="ri-arrow-down-s-line"></i>
+                    </span>
+                </button>
+
+                <div class="dl-faq-answer" id="dl-faq-answer-1">
+                    <div class="dl-faq-answer-content">
+                        <p>
+                            Yes. Add multiple expense rows under the same company and date.
+                        </p>
+
+                        <div class="dl-faq-topic">
+                            <span>Topic: Entries</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ 2 -->
+            <div class="dl-faq-item" data-category="entries">
+                <button
+                    class="dl-faq-question"
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="dl-faq-answer-2"
+                >
+                    <span class="dl-faq-question-content">
+                        <span class="dl-faq-number">Q2</span>
+                        <span class="dl-faq-question-text">
+                            Can I record vendor and driver payments together?
+                        </span>
+                    </span>
+
+                    <span class="dl-faq-arrow">
+                        <i class="ri-arrow-down-s-line"></i>
+                    </span>
+                </button>
+
+                <div class="dl-faq-answer" id="dl-faq-answer-2">
+                    <div class="dl-faq-answer-content">
+                        <p>
+                            Yes. They can be included in the same daily expense book.
+                        </p>
+
+                        <div class="dl-faq-topic">
+                            <span>Topic: Entries</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ 3 -->
+            <div class="dl-faq-item" data-category="totals">
+                <button
+                    class="dl-faq-question"
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="dl-faq-answer-3"
+                >
+                    <span class="dl-faq-question-content">
+                        <span class="dl-faq-number">Q3</span>
+                        <span class="dl-faq-question-text">
+                            Does the system calculate the total?
+                        </span>
+                    </span>
+
+                    <span class="dl-faq-arrow">
+                        <i class="ri-arrow-down-s-line"></i>
+                    </span>
+                </button>
+
+                <div class="dl-faq-answer" id="dl-faq-answer-3">
+                    <div class="dl-faq-answer-content">
+                        <p>
+                            Yes. The sheet displays the combined amount of the entered rows.
+                        </p>
+
+                        <div class="dl-faq-topic">
+                            <span>Topic: Totals</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ 4 -->
+            <div class="dl-faq-item" data-category="vehicles">
+                <button
+                    class="dl-faq-question"
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="dl-faq-answer-4"
+                >
+                    <span class="dl-faq-question-content">
+                        <span class="dl-faq-number">Q4</span>
+                        <span class="dl-faq-question-text">
+                            Can I record vehicle expenses?
+                        </span>
+                    </span>
+
+                    <span class="dl-faq-arrow">
+                        <i class="ri-arrow-down-s-line"></i>
+                    </span>
+                </button>
+
+                <div class="dl-faq-answer" id="dl-faq-answer-4">
+                    <div class="dl-faq-answer-content">
+                        <p>
+                            Yes. Select a vehicle for a vehicle-related expense or use the supported driver/vehicle workflow.
+                        </p>
+
+                        <div class="dl-faq-topic">
+                            <span>Topic: Vehicles</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ 5 -->
+            <div class="dl-faq-item" data-category="vendors">
+                <button
+                    class="dl-faq-question"
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="dl-faq-answer-5"
+                >
+                    <span class="dl-faq-question-content">
+                        <span class="dl-faq-number">Q5</span>
+                        <span class="dl-faq-question-text">
+                            How are vendor invoices handled?
+                        </span>
+                    </span>
+
+                    <span class="dl-faq-arrow">
+                        <i class="ri-arrow-down-s-line"></i>
+                    </span>
+                </button>
+
+                <div class="dl-faq-answer" id="dl-faq-answer-5">
+                    <div class="dl-faq-answer-content">
+                        <p>
+                            Vendor payment amounts are allocated to eligible unpaid invoices, starting with the oldest. An amount larger than the available unpaid invoices is rejected.
+                        </p>
+
+                        <div class="dl-faq-topic">
+                            <span>Topic: Vendors</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ 6 -->
+            <div class="dl-faq-item" data-category="editing">
+                <button
+                    class="dl-faq-question"
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="dl-faq-answer-6"
+                >
+                    <span class="dl-faq-question-content">
+                        <span class="dl-faq-number">Q6</span>
+                        <span class="dl-faq-question-text">
+                            Can I change an existing expense book?
+                        </span>
+                    </span>
+
+                    <span class="dl-faq-arrow">
+                        <i class="ri-arrow-down-s-line"></i>
+                    </span>
+                </button>
+
+                <div class="dl-faq-answer" id="dl-faq-answer-6">
+                    <div class="dl-faq-answer-content">
+                        <p>
+                            Yes, if you have edit permission. The existing sheet's date and company cannot be changed.
+                        </p>
+
+                        <div class="dl-faq-topic">
+                            <span>Topic: Editing</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ 7 -->
+            <div class="dl-faq-item" data-category="access">
+                <button
+                    class="dl-faq-question"
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="dl-faq-answer-7"
+                >
+                    <span class="dl-faq-question-content">
+                        <span class="dl-faq-number">Q7</span>
+                        <span class="dl-faq-question-text">
+                            Can managers access this admin expense book?
+                        </span>
+                    </span>
+
+                    <span class="dl-faq-arrow">
+                        <i class="ri-arrow-down-s-line"></i>
+                    </span>
+                </button>
+
+                <div class="dl-faq-answer" id="dl-faq-answer-7">
+                    <div class="dl-faq-answer-content">
+                        <p>
+                            Manager-only accounts are restricted from this admin expense book. Other access depends on payment permissions.
+                        </p>
+
+                        <div class="dl-faq-topic">
+                            <span>Topic: Access</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="dl-faq-cta">
+            <div class="dl-faq-cta-content">
+                <h3>Simplify Your Daily Expense Management</h3>
+                <p>
+                    The Expense Book Management Module brings company-wise daily payments, vendor bills, driver pay, vehicle expenses and manager-related entries together. With simple entry rows and a clear daily total, businesses can keep their expense records organized and easier to review.
+                </p>
+            </div>
+
+            <button class="dl-faq-cta-button" type="button" onclick="document.getElementById('simulator').scrollIntoView({behavior: 'smooth'})">
+                Try the Expense Book Example
+            </button>
+        </div>
+
+    </div>
+</section>
+<!--dl-faq section end-->
+
+<!--footer section start-->
+<footer class="footer">
+
+    <!-- Newsletter -->
+    <div class="footer-newsletter">
+        <div class="container">
+
+            <div class="newsletter-wrapper">
+
+                <div class="newsletter-content">
+                    <h2>Stay ahead of the curve</h2>
+                    <p>
+                        Fleet management insights, product updates, and industry news.
+                    </p>
+                </div>
+
+                <form class="newsletter-form">
+
+                    <input
+                        type="email"
+                        placeholder="Enter your email"
+                    >
+
+                    <button type="submit">
+                        Subscribe
+
+                       <i class="ri-arrow-right-line"></i>
+
+                    </button>
+
+                </form>
+
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Footer Main -->
+
+    <div class="footer-main">
+
+        <div class="container">
+
+            <div class="footer-grid">
+
+                <!-- Left -->
+
+                <div class="footer-about">
+
+                    <a href="index.html" class="footer-logo">
+                         <img src="Assets/images/transportdesk-logo-dark.svg" alt="footer-logo">
+                    </a>
+
+                    <p>
+                        The intelligent transportation platform that puts fleet directors
+                        in complete control of their operations.
+                    </p>
+
+                    <div class="footer-social">
+
+                        <a href="#">
+                            <i class="ri-facebook-fill"></i>
+                        </a>
+
+                        <a href="#">
+                            <i class="ri-instagram-line"></i>
+                        </a>
+
+                        <a href="#">
+                            <i class="ri-twitter-line"></i>
+                        </a>
+
+                        <a href="#">
+                            <i class="ri-linkedin-fill"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <!-- Product -->
+
+                <div class="footer-links">
+
+                    <h3>Product</h3>
+
+                      <ul>
+        <li>
+            <a href="features.html" class="footer-link">Features</a>
+        </li>
+
+        <li>
+            <a href="modules.html" class="footer-link">Modules</a>
+        </li>
+
+        <li>
+            <a href="solutions.html" class="footer-link">Solutions</a>
+        </li>
+
+        <li>
+            <a href="reports.html" class="footer-link">Reports</a>
+        </li>
+
+        <li>
+            <a href="contact.html" class="footer-link">Contact</a>
+        </li>
+    </ul>
+
+                </div>
+
+                <!-- Resources -->
+
+                <div class="footer-links">
+
+                    <h3>Resources</h3>
+
+                    <ul>
+
+                        <li><a href="documentation.html" class="footer-link">Documentation</a></li>
+
+                        <li><a href="faq.html" class="footer-link">FAQ</a></li>
+
+                        <li><a href="privacy-policy.html" class="footer-link">Privacy Policy</a></li>
+
+                    </ul>
+
+                </div>
+
+                <!-- Support -->
+
+                <div class="footer-links">
+
+                    <h3>Support</h3>
+
+                    <ul>
+
+                        <li><a href="#" class="footer-link">Help Center</a></li>
+
+                        <li><a href="#" class="footer-link">Status</a></li>
+
+                        <li><a href="#" class="footer-link">Security</a></li>
+
+                    </ul>
+
+                </div>
+
+                <!-- Contact -->
+
+                <div class="footer-contact">
+
+                    <div class="contact-item">
+
+                        <div class="icon">
+                            <i class="ri-mail-line"></i>
+                        </div>
+
+                        <div>
+
+                            <span>Email</span>
+
+                            <a href="#">
+                                hello@transportdesk.net
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                    <div class="contact-item">
+
+                        <div class="icon">
+                            <i class="ri-phone-fill"></i>
+                        </div>
+
+                        <div>
+
+                            <span>Call</span>
+
+                            <a href="#">
+                                +1 (512) 555-0142
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                    <div class="contact-item">
+
+                        <div class="icon">
+                            <i class="ri-map-pin-line"></i>
+                        </div>
+
+                        <div>
+
+                            <span>Location</span>
+
+                            <p>India</p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Bottom -->
+
+    <div class="footer-bottom">
+
+        <div class="container">
+
+            <div class="bottom-wrapper">
+
+                <p>
+                    © 2026 All rights reserved.
+                </p>
+
+                <ul>
+
+                    <li><a href="#">Privacy Policy</a></li>
+
+                    <li><a href="#">Terms of Service</a></li>
+
+                    <li><a href="#">Cookie Policy</a></li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</footer>
+<!--footer section end-->
+
+<script src="./Assets/js/custom.js"></script>
+<script>
+(function () {
+    var body = document.getElementById('ex-body');
+    if (!body) return;
+    function fmt(n) { return '₹' + Number(n).toLocaleString('en-IN'); }
+    function recalc() {
+        var total = 0, rows = body.querySelectorAll('tr');
+        rows.forEach(function (tr, i) {
+            tr.querySelector('.dl-sr').textContent = i + 1;
+            total += parseFloat(tr.querySelector('.dl-amount-input').value) || 0;
+        });
+        document.getElementById('ex-count').textContent = rows.length;
+        document.getElementById('ex-day-total').textContent = fmt(total);
+        document.getElementById('ex-total-foot').textContent = fmt(total);
+    }
+    function addRow() {
+        var tr = document.createElement('tr');
+        tr.innerHTML = '<td class="dl-sr"></td><td><div class="dl-vehicle-name"><i class="ri-user-line"></i><span>Select payee</span></div><div class="dl-vehicle-meta">Vendor / Driver / Vehicle / Manager</div></td>' +
+            '<td><select class="dl-table-input"><option>Vendor Payment</option><option>Driver Pay</option><option>Vehicle Expense</option><option>Daily Expense</option><option>Salary</option></select></td>' +
+            '<td><input class="dl-table-input dl-notes-input" type="text" value=""></td>' +
+            '<td><select class="dl-table-input"><option>BANK</option><option>CASH</option><option>UPI</option></select></td>' +
+            '<td class="dl-text-right"><div class="dl-inline-rate"><span>₹</span><input class="dl-table-input dl-amount-input" type="number" min="0" step="1" value="0"></div></td>' +
+            '<td class="dl-text-center"><button type="button" class="dl-delete-button dl-row-delete" title="Remove expense row"><i class="ri-delete-bin-line"></i></button></td>';
+        body.appendChild(tr);
+        recalc();
+    }
+    body.addEventListener('input', recalc);
+    body.addEventListener('click', function (e) {
+        var b = e.target.closest('.dl-row-delete');
+        if (b) { b.closest('tr').remove(); recalc(); }
+    });
+    document.getElementById('ex-add-top').addEventListener('click', addRow);
+    document.getElementById('ex-add-bottom').addEventListener('click', addRow);
+})();
+</script>
+</body>
+</html>

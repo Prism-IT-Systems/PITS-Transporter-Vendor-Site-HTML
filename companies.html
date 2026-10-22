@@ -1,0 +1,1589 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Companies Management Module | TransportDesk Fleet Solutions</title>
+    <meta name="description" content="Manage company profiles, business details, GST and PAN information and Lorry Receipt letterhead and numbering settings in one place with the TransportDesk Companies Management Module.">
+
+    <!-- Remix Icon -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" />
+
+    <!-- Swiper -->
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+
+    <!-- Lenis -->
+    <link rel="stylesheet"
+        href="https://unpkg.com/lenis@1.3.23/dist/lenis.css">
+
+    <!-- Tailwind Output CSS -->
+     <link href="./Assets/css/output.css" rel="stylesheet">
+</head>
+<body>
+
+<!--Header Section start-->
+<header class="main-header">
+    <div class="container">
+
+        <div class="header-inner">
+
+            <a href="index.html" class="header-logo">
+                <img src="Assets/images/transportdesk-logo.svg" alt="Logo">
+            </a>
+
+            <nav class="main-navigation" id="mobileMenu">
+
+                <div class="menu-circle"></div>
+
+                <ul class="navigation-links">
+                    <li><a href="index.html" class="navigation-link">Home</a></li>
+                    <li><a href="features.html" class="navigation-link">Features</a></li>
+                    <li><a href="modules.html" class="navigation-link active">Modules</a></li>
+                    <li><a href="reports.html" class="navigation-link">Resources</a></li>
+                    <li><a href="contact.html" class="navigation-link">Contact</a></li>
+                </ul>
+
+                <div class="mobile-header-right">
+                    <a href="#" class="login-btn">Login</a>
+                    <a href="#" class="demo-btn">Book Demo</a>
+                </div>
+
+            </nav>
+
+            <div class="header-right">
+                <a href="#" class="login-btn">Login</a>
+                <a href="#" class="demo-btn">Book Demo</a>
+            </div>
+
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+        </div>
+
+    </div>
+</header>
+
+<!-- Add this after header -->
+<div class="menu-overlay" id="menuOverlay"></div>
+<!--Header section End-->
+
+
+<section id="overview" class="dl-overview-section">
+    <div class="dl-overview-glow"></div>
+    <div class="dl-overview-pattern"></div>
+    <div class="container">
+        <div class="dl-overview-grid">
+
+            <div class="dl-overview-content">
+                <div class="dl-overview-badge">
+                    <span class="dl-status-dot"></span>
+                    <span>Enterprise Fleet Management</span>
+                    <span class="dl-badge-divider">|</span>
+                    <span class="dl-badge-highlight">Companies Module</span>
+                </div>
+
+                <h1 class="dl-overview-title">
+                    Smart Transportation &amp;
+                    <span class="dl-gradient-text">Companies</span>
+                    Management Platform
+                </h1>
+
+                <p class="dl-overview-description">
+                    Store and manage the details of your companies or firms in one place.
+                    Instead of repeatedly typing business information, create a company
+                    profile and keep its contact, tax and address details organized, with
+                    Lorry Receipt letterhead and numbering settings for each firm.
+                </p>
+
+                <div class="dl-overview-actions">
+                    <button type="button" class="btn-primary" onclick="document.getElementById('simulator').scrollIntoView({behavior: 'smooth'})">
+                        <span>Try Live Company Demo</span>
+                        <i class="ri-arrow-right-line"></i>
+                    </button>
+                    <button type="button" class="dl-btn-demo">
+                        <span class="dl-play-icon"><i class="ri-play-fill"></i></span>
+                        <span>Watch Demo Video</span>
+                    </button>
+                </div>
+
+                <div class="dl-overview-stats">
+                    <div class="dl-stat-item">
+                        <div class="dl-stat-number">150+</div>
+                        <div class="dl-stat-label">Enterprise Fleets</div>
+                    </div>
+                    <div class="dl-stat-item">
+                        <div class="dl-stat-number dl-stat-red">Multi-Firm</div>
+                        <div class="dl-stat-label">Separate Profiles</div>
+                    </div>
+                    <div class="dl-stat-item">
+                        <div class="dl-stat-number dl-stat-green">LR Ready</div>
+                        <div class="dl-stat-label">Letterhead &amp; Numbering</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="dl-overview-visual">
+                <div class="dl-visual-card">
+                    <img src="Assets/images/hero_fleet_dispatch_1792482270822.jpg" alt="Transportation Fleet Dispatch Logistics Center" class="dl-visual-image">
+                    <div class="dl-visual-overlay"></div>
+
+                    <div class="dl-visual-topbar">
+                        <div class="dl-live-label">
+                            <span class="dl-live-dot"></span>
+                            <span>Firm Profile</span>
+                        </div>
+                        <div class="dl-fuel-rate">Surat, Gujarat</div>
+                    </div>
+
+                    <div class="dl-fuel-slip">
+                        <div class="dl-slip-header">
+                            <span class="dl-slip-title">Recent Firm: ABC Transport Pvt. Ltd.</span>
+                            <span class="dl-slip-status">Active</span>
+                        </div>
+                        <div class="dl-slip-stats">
+                            <div class="dl-slip-stat">
+                                <span class="dl-slip-label">LR Prefix</span>
+                                <span class="dl-slip-value">LR</span>
+                            </div>
+                            <div class="dl-slip-stat">
+                                <span class="dl-slip-label">FY Start</span>
+                                <span class="dl-slip-value dl-slip-red">April</span>
+                            </div>
+                            <div class="dl-slip-stat">
+                                <span class="dl-slip-label">Next LR No.</span>
+                                <span class="dl-slip-value dl-slip-green">LR/2026-27/0001</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<section class="dl-trusted-section">
+    <div class="dl-trusted-heading">
+        <span>Trusted by 150+ Enterprise Transportation &amp; Logistics Fleets</span>
+    </div>
+    <div class="dl-trusted-marquee">
+        <div class="dl-trusted-fade dl-trusted-fade-left"></div>
+        <div class="dl-trusted-fade dl-trusted-fade-right"></div>
+        <div class="dl-trusted-track">
+            <!-- First group -->
+            <div class="dl-trusted-group">
+                <div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">Apex Logistics</span></div>
+                <div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">Meridian Transport</span></div>
+                <div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">Global Freight Co</span></div>
+                <div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">NorthStar Fleet</span></div>
+                <div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">Titan Cargo</span></div>
+                <div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">Pacific Routes</span></div>
+                <div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">Atlas Distribution</span></div>
+                <div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">Summit Hauling</span></div>
+                <div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">BlueDart Express</span></div>
+                <div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">TCI Freight Lines</span></div>
+                <div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">VRL Logistics Fleet</span></div>
+                <div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">Safexpress Network</span></div>
+            </div>
+
+            <!-- Duplicate group for seamless looping -->
+            <div class="dl-trusted-group" aria-hidden="true">
+                <div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">Apex Logistics</span></div>
+                <div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">Meridian Transport</span></div>
+                <div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">Global Freight Co</span></div>
+                <div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">NorthStar Fleet</span></div>
+                <div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">Titan Cargo</span></div>
+                <div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">Pacific Routes</span></div>
+                <div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">Atlas Distribution</span></div>
+                <div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">Summit Hauling</span></div>
+                <div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">BlueDart Express</span></div>
+                <div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">TCI Freight Lines</span></div>
+                <div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">VRL Logistics Fleet</span></div>
+                <div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">Safexpress Network</span></div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<section class="dl-demo-section">
+    <div class="dl-demo-glow"></div>
+    <div class="dl-container">
+
+        <div class="heading-wrapper">
+            <span class="heading-tag">Interactive Video Demonstration</span>
+            <h2 class="heading-title">
+                Watch How <span>Companies Management</span> Works
+            </h2>
+            <p>
+                Watch the demonstration to learn how to add a company, update contact
+                details, manage company status, and configure information used on
+                Lorry Receipts (LRs).
+            </p>
+        </div>
+
+        <div class="dl-demo-grid">
+            <div class="dl-demo-video-column">
+                <div class="dl-video-card">
+
+                    <div class="dl-video-toolbar">
+                        <div class="dl-video-toolbar-left">
+                            <span class="dl-window-dot dl-dot-red"></span>
+                            <span class="dl-window-dot dl-dot-yellow"></span>
+                            <span class="dl-window-dot dl-dot-green"></span>
+                            <span class="dl-video-filename">transportdesk_companies_module_demo.mp4</span>
+                        </div>
+                        <span class="dl-video-quality">Full HD</span>
+                    </div>
+
+                    <div class="dl-video-preview">
+                        <img src="Assets/images/dashboard.png" alt="Companies Management demonstration video preview" class="dl-video-thumbnail">
+                        <div class="dl-video-overlay"></div>
+                        <button type="button" class="dl-video-play" aria-label="Play demonstration video">
+                            <i class="ri-play-fill"></i>
+                            <span class="dl-video-ping"></span>
+                        </button>
+                        <div class="dl-video-meta">
+                            <div class="dl-video-meta-left">
+                                <span class="dl-video-timestamp">Step 2 of 6</span>
+                                <span class="dl-video-current-chapter">Adding a New Company</span>
+                            </div>
+                            <a href="#" target="_blank" rel="noopener noreferrer" class="dl-video-external">
+                                <span>External Link</span>
+                                <i class="ri-external-link-line"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="dl-video-footer">
+                        <div class="dl-video-footer-left">
+                            <button type="button" class="dl-watch-button">
+                                <i class="ri-play-circle-line"></i>
+                                <span>Watch Full Walkthrough</span>
+                            </button>
+                            <span class="dl-video-footer-note">Click to launch video playback in pop-up modal</span>
+                        </div>
+                        <a href="#" target="_blank" rel="noopener noreferrer" class="dl-video-source">
+                            <span>Direct Source</span>
+                            <i class="ri-arrow-right-up-line"></i>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section id="simulator" class="dl-simulator-section">
+    <div class="dl-container">
+
+        <div class="dl-simulator-header">
+            <div class="heading-wrapper heading-wrap-left">
+                <span class="heading-tag">Add New Firm View</span>
+                <h2 class="heading-title">
+                    Interactive <span>Companies Management</span> Demo
+                </h2>
+                <p>
+                    Try the module yourself: fill the basic firm details, set the status,
+                    configure the LR letterhead, numbering and display, then save, search,
+                    view, edit or delete firms. Everything stays in your browser, and the
+                    values shown are illustrative, not real customer details.
+                </p>
+            </div>
+
+            <div class="dl-view-switcher">
+                <button type="button" class="dl-view-tab dl-view-tab-active" data-co-view="form">
+                    <i class="ri-building-2-line"></i>
+                    Add New Firm View
+                </button>
+                <button type="button" class="dl-view-tab" data-co-view="list">
+                    <i class="ri-list-check-2"></i>
+                    Companies List View
+                </button>
+            </div>
+        </div>
+
+        <div class="dl-stats-grid">
+            <div class="dl-stat-card">
+                <div class="dl-stat-label"><span>Total Firms</span><i class="ri-building-2-line"></i></div>
+                <div class="dl-stat-value"><span id="co-s-total" style="font:inherit;color:inherit">0</span> <span>Firms</span></div>
+                <p class="dl-stat-note">Registered companies</p>
+            </div>
+            <div class="dl-stat-card">
+                <div class="dl-stat-label"><span>Active Firms</span><i class="ri-checkbox-circle-line dl-green-icon"></i></div>
+                <div class="dl-stat-value dl-green-text"><span id="co-s-act" style="font:inherit;color:inherit">0</span> <span>Active</span></div>
+                <p class="dl-stat-note">Available for selections</p>
+            </div>
+            <div class="dl-stat-card">
+                <div class="dl-stat-label"><span>Inactive Firms</span><i class="ri-pause-circle-line dl-red-icon"></i></div>
+                <div class="dl-stat-value dl-red-text"><span id="co-s-ina" style="font:inherit;color:inherit">0</span> <span>Inactive</span></div>
+                <p class="dl-stat-note">Hidden from selections</p>
+            </div>
+            <div class="dl-stat-card dl-stat-card-total">
+                <div class="dl-stat-label"><span>Next LR Number (Form)</span><span class="dl-status-dot"></span></div>
+                <div class="dl-stat-value dl-stat-total-value" id="co-s-lr" style="font-size:1.4rem">LR/2026-27/0001</div>
+                <p class="dl-stat-note dl-green-text">From prefix, format &amp; FY month</p>
+            </div>
+        </div>
+
+        <div class="dl-calculator-panel">
+
+            <!-- ===== FORM VIEW ===== -->
+            <div id="co-view-form">
+
+                <!-- Basic firm details -->
+                <div class="dl-bill-master">
+                    <div class="dl-bill-master-header">
+                        <div class="dl-bill-heading">
+                            <span>Step 1: Basic Firm Details</span>
+                            <span class="dl-heading-separator">·</span>
+                            <span class="dl-invoice-number" id="co-form-mode">Add New Firm</span>
+                        </div>
+                        <div class="dl-receipt-actions">
+                            <button type="button" class="dl-secondary-button" id="co-fill">
+                                <i class="ri-magic-line"></i><span>Fill Example</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="dl-bill-fields">
+                        <div class="dl-form-group"><label for="co-name">Firm Name *</label>
+                            <input id="co-name" class="dl-form-control" type="text" list="co-suggest" placeholder="ABC Transport Pvt. Ltd."></div>
+                        <div class="dl-form-group"><label for="co-contact">Contact Person *</label>
+                            <input id="co-contact" class="dl-form-control" type="text" placeholder="Demo Contact"></div>
+                        <div class="dl-form-group"><label for="co-phone">Phone Number *</label>
+                            <input id="co-phone" class="dl-form-control" type="tel" placeholder="9000000000"></div>
+                        <div class="dl-form-group"><label for="co-email">Email Address *</label>
+                            <input id="co-email" class="dl-form-control" type="email" placeholder="office@example.com"></div>
+                        <div class="dl-form-group"><label for="co-gst">GST Number *</label>
+                            <input id="co-gst" class="dl-form-control" type="text" maxlength="15" placeholder="Example GSTIN"></div>
+                        <div class="dl-form-group"><label for="co-status">Status</label>
+                            <select id="co-status" class="dl-form-control"><option>Active</option><option>Inactive</option></select></div>
+                        <div class="dl-form-group"><label for="co-address">Address *</label>
+                            <input id="co-address" class="dl-form-control" type="text" placeholder="Sample Office Address, Surat, Gujarat"></div>
+                    </div>
+                </div>
+
+                <!-- LR letterhead -->
+                <div class="dl-bill-master">
+                    <div class="dl-bill-master-header">
+                        <div class="dl-bill-heading">
+                            <span>Step 2: Firm Information — LR Letterhead</span>
+                        </div>
+                    </div>
+                    <div class="dl-bill-fields">
+                        <div class="dl-form-group"><label for="co-logo">Logo (image)</label>
+                            <input id="co-logo" class="dl-form-control" type="file" accept="image/*">
+                            <span class="dl-formula-note" id="co-logo-note"></span></div>
+                        <div class="dl-form-group"><label for="co-sign">Operator Signature (image)</label>
+                            <input id="co-sign" class="dl-form-control" type="file" accept="image/*">
+                            <span class="dl-formula-note" id="co-sign-note"></span></div>
+                        <div class="dl-form-group"><label for="co-pan">PAN</label>
+                            <input id="co-pan" class="dl-form-control" type="text" maxlength="10" placeholder="Example PAN"></div>
+                        <div class="dl-form-group"><label for="co-jur">Jurisdiction Text</label>
+                            <input id="co-jur" class="dl-form-control" type="text" placeholder="Subject to Surat Jurisdiction"></div>
+                        <div class="dl-form-group"><label for="co-res">Residency Address</label>
+                            <input id="co-res" class="dl-form-control" type="text" placeholder="Sample residential / correspondence address"></div>
+                        <div class="dl-form-group"><label for="co-office">Office Address (letterhead)</label>
+                            <input id="co-office" class="dl-form-control" type="text" placeholder="Leave blank to use the firm address"></div>
+                        <div class="dl-form-group"><label for="co-lp1">Letterhead Phone 1</label>
+                            <input id="co-lp1" class="dl-form-control" type="tel"></div>
+                        <div class="dl-form-group"><label for="co-lp2">Letterhead Phone 2</label>
+                            <input id="co-lp2" class="dl-form-control" type="tel" placeholder="Optional"></div>
+                        <div class="dl-form-group"><label for="co-lp3">Letterhead Phone 3</label>
+                            <input id="co-lp3" class="dl-form-control" type="tel" placeholder="Optional"></div>
+                        <div class="dl-form-group"><label for="co-le1">Letterhead Email 1</label>
+                            <input id="co-le1" class="dl-form-control" type="email"></div>
+                        <div class="dl-form-group"><label for="co-le2">Letterhead Email 2</label>
+                            <input id="co-le2" class="dl-form-control" type="email" placeholder="Optional"></div>
+                    </div>
+                </div>
+
+                <!-- LR numbering & display -->
+                <div class="dl-bill-master">
+                    <div class="dl-bill-master-header">
+                        <div class="dl-bill-heading">
+                            <span>Step 3: LR Numbering &amp; Display</span>
+                        </div>
+                    </div>
+                    <div class="dl-bill-fields">
+                        <div class="dl-form-group"><label for="co-prefix">Prefix</label>
+                            <input id="co-prefix" class="dl-form-control" type="text" maxlength="10" value="LR"></div>
+                        <div class="dl-form-group"><label for="co-format">Format</label>
+                            <input id="co-format" class="dl-form-control" type="text" value="{PREFIX}/{FY}/{SEQ:4}"></div>
+                        <div class="dl-form-group"><label for="co-seq">Next Sequence</label>
+                            <input id="co-seq" class="dl-form-control" type="number" min="1" value="1"></div>
+                        <div class="dl-form-group"><label for="co-fy">FY Start Month</label>
+                            <select id="co-fy" class="dl-form-control">
+                                <option value="1">January</option><option value="2">February</option><option value="3">March</option>
+                                <option value="4" selected>April</option><option value="5">May</option><option value="6">June</option>
+                                <option value="7">July</option><option value="8">August</option><option value="9">September</option>
+                                <option value="10">October</option><option value="11">November</option><option value="12">December</option>
+                            </select></div>
+                        <div class="dl-form-group dl-rate-group">
+                            <div class="dl-rate-label"><label for="co-font">Firm Name Font Size on LR</label><span id="co-font-val">20px</span></div>
+                            <div class="dl-rate-controls">
+                                <input id="co-font" type="range" min="12" max="36" step="1" value="20">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dl-bill-options">
+                        <label class="dl-checkbox-label"><input type="checkbox" id="co-charges" checked><span>Show Contract Charges on LR</span></label>
+                        <label class="dl-checkbox-label"><input type="checkbox" id="co-showlogo" checked><span>Show Company Logo on LR</span></label>
+                    </div>
+                    <div class="dl-bill-fields">
+                        <div class="dl-form-group" style="grid-column:1/-1"><label for="co-terms">Terms &amp; Conditions (printed on LR)</label>
+                            <textarea id="co-terms" class="dl-form-control" rows="3" placeholder="Example transport terms and conditions for LR output"></textarea></div>
+                    </div>
+
+                    <!-- LR preview -->
+                    <div class="dl-bill-options" style="display:block">
+                        <div style="border:1px dashed currentColor;border-radius:.75rem;padding:1rem;opacity:.95">
+                            <div style="display:flex;align-items:center;gap:.75rem;flex-wrap:wrap">
+                                <img id="co-prev-logo" alt="Company logo preview" style="max-height:48px;max-width:96px;display:none">
+                                <div>
+                                    <div id="co-prev-name" style="font-weight:700;font-size:20px">Firm Name</div>
+                                    <div class="dl-formula-note" id="co-prev-sub">Office address · Phone · Email</div>
+                                </div>
+                                <div style="margin-left:auto;text-align:right">
+                                    <div class="dl-formula-note">LR No.</div>
+                                    <strong id="co-prev-lr">LR/2026-27/0001</strong>
+                                </div>
+                            </div>
+                            <div class="dl-formula-note" id="co-prev-charges" style="margin-top:.5rem"></div>
+                            <div class="dl-formula-note" id="co-prev-jur"></div>
+                        </div>
+                    </div>
+
+                    <div class="dl-bill-options">
+                        <span class="dl-formula-note" id="co-msg">Fields marked * are required. The office address can be left empty to use the main firm address.</span>
+                    </div>
+
+                    <!-- Duplicate warning -->
+                    <div class="dl-documentation-note" id="co-warn" hidden style="margin:1rem 0">
+                       
+                        <span id="co-warn-text"></span>
+                        <button type="button" class="dl-secondary-button" id="co-warn-link" style="margin-left:.5rem"><i class="ri-link"></i><span>View Firm</span></button>
+                        <button type="button" class="dl-primary-button" id="co-save-anyway" style="margin-left:.5rem">Save Anyway</button>
+                    </div>
+                </div>
+
+                <div class="dl-table-toolbar">
+                    <div class="dl-search-box">
+                        <span style="padding-left:.5rem">A matching phone or GST number shows a duplicate warning with a link to the existing firm</span>
+                    </div>
+                    <div class="dl-toolbar-actions">
+                        <button type="button" class="dl-action-button" id="co-reset">
+                            <i class="ri-refresh-line dl-red-icon"></i>Reset Form
+                        </button>
+                        <button type="button" class="dl-primary-button" id="co-save">
+                            <i class="ri-save-3-line"></i><span id="co-save-label">Create Firm</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ===== LIST VIEW ===== -->
+            <div id="co-view-list" hidden>
+                <div class="dl-table-toolbar">
+                    <div class="dl-search-box">
+                        <i class="ri-search-line"></i>
+                        <input type="search" id="co-search" list="co-suggest" placeholder="Search by firm name...">
+                        <datalist id="co-suggest"></datalist>
+                    </div>
+                    <div class="dl-toolbar-actions">
+                        <button type="button" class="dl-primary-button" id="co-go-add">
+                            <i class="ri-add-line"></i>Add New Firm
+                        </button>
+                    </div>
+                </div>
+
+                <div class="dl-table-wrapper">
+                    <table class="dl-vehicle-table">
+                        <thead>
+                            <tr>
+                                <th>Firm Name</th>
+                                <th>Contact Person</th>
+                                <th>Phone</th>
+                                <th>GST Number</th>
+                                <th>Status</th>
+                                <th>Next LR No.</th>
+                                <th class="dl-text-center">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody id="co-body"></tbody>
+                        <tfoot>
+                            <tr>
+                                <td colspan="3"><span class="dl-footer-label" id="co-count">0 firms</span></td>
+                                <td colspan="4" class="dl-text-right">
+                                    <button type="button" class="dl-action-button" id="co-prev">Previous</button>
+                                    <span class="dl-footer-period" id="co-page" style="margin:0 .75rem">Page 1</span>
+                                    <button type="button" class="dl-action-button" id="co-next">Next</button>
+                                </td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+
+                <div class="dl-bill-master" id="co-detail" hidden>
+                    <div class="dl-bill-master-header">
+                        <div class="dl-bill-heading">
+                            <span>Firm Details</span>
+                            <span class="dl-heading-separator">·</span>
+                            <span class="dl-invoice-number" id="co-d-name"></span>
+                        </div>
+                    </div>
+                    <div class="dl-bill-fields" id="co-d-fields"></div>
+                </div>
+            </div>
+
+            <div class="dl-calculator-footer">
+                <div class="dl-documentation-note">
+                    
+                    <span><strong>Permission Rule:</strong> Viewing, adding, editing and deleting firms are permission-controlled. Deletion requires the appropriate company permission.</span>
+                </div>
+                <div class="dl-supported-formats">Demo data is illustrative, not real</div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!--dl feature section start-->
+<section id="features" class="dl-features-section">
+    <div class="container">
+        <div class="heading-wrapper">
+            <span class="heading-tag">Complete solution</span>
+            <h2 class="heading-title">Companies Management <span>Features</span></h2>
+            <p>
+                A set of tools to manage firm profiles, contact and tax details, addresses, status, and Lorry Receipt letterhead and numbering settings.
+            </p>
+            <div class="dl-features-filters">
+                <button type="button" class="dl-filter-btn is-active" data-filter="all">All Features (12)</button>
+                <button type="button" class="dl-filter-btn" data-filter="profiles">Profiles &amp; Contacts</button>
+                <button type="button" class="dl-filter-btn" data-filter="lr">LR Letterhead &amp; Settings</button>
+                <button type="button" class="dl-filter-btn" data-filter="access">Search &amp; Access</button>
+            </div>
+        </div>
+
+        <div class="dl-features-grid">
+
+            <!-- Feature 4.1 -->
+            <article class="dl-feature-card" data-category="profiles">
+                <div class="dl-feature-card-content">
+                    <div class="dl-feature-icon"><i class="ri-building-2-line"></i></div>
+                    <div class="dl-feature-card-heading"><h3>Company Profile Management</h3></div>
+                    <p>
+                        Create, view and update a company profile containing the firm name and business details. This keeps information for separate firms organized.
+                    </p>
+                </div>
+            </article>
+
+            <!-- Feature 4.2 -->
+            <article class="dl-feature-card" data-category="profiles">
+                <div class="dl-feature-card-content">
+                    <div class="dl-feature-icon"><i class="ri-contacts-book-line"></i></div>
+                    <div class="dl-feature-card-heading"><h3>Contact Details</h3></div>
+                    <p>
+                        Maintain a contact person, primary phone number and email address. Additional phone numbers and email addresses can be stored for firm letterhead use.
+                    </p>
+                </div>
+            </article>
+
+            <!-- Feature 4.3 -->
+            <article class="dl-feature-card" data-category="profiles">
+                <div class="dl-feature-card-content">
+                    <div class="dl-feature-icon"><i class="ri-bank-card-line"></i></div>
+                    <div class="dl-feature-card-heading"><h3>GST and PAN Information</h3></div>
+                    <p>
+                        Save GST and PAN details to keep important business identifiers with the company profile.
+                    </p>
+                </div>
+            </article>
+
+            <!-- Feature 4.4 -->
+            <article class="dl-feature-card" data-category="profiles">
+                <div class="dl-feature-card-content">
+                    <div class="dl-feature-icon"><i class="ri-map-pin-line"></i></div>
+                    <div class="dl-feature-card-heading"><h3>Company Addresses</h3></div>
+                    <p>
+                        Maintain the main address and, when needed, separate office and residential addresses.
+                    </p>
+                </div>
+            </article>
+
+            <!-- Feature 4.5 -->
+            <article class="dl-feature-card" data-category="profiles">
+                <div class="dl-feature-card-content">
+                    <div class="dl-feature-icon"><i class="ri-toggle-line"></i></div>
+                    <div class="dl-feature-card-heading"><h3>Active and Inactive Status</h3></div>
+                    <p>
+                        Mark a firm Active or Inactive to manage which company profiles are available in applicable parts of the application.
+                    </p>
+                </div>
+            </article>
+
+            <!-- Feature 4.6 -->
+            <article class="dl-feature-card" data-category="lr">
+                <div class="dl-feature-card-content">
+                    <div class="dl-feature-icon"><i class="ri-image-edit-line"></i></div>
+                    <div class="dl-feature-card-heading"><h3>Company Logo and Signature</h3></div>
+                    <p>
+                        Upload or replace a company logo and signature image for company-branded documentation. Existing images can also be removed.
+                    </p>
+                </div>
+            </article>
+
+            <!-- Feature 4.7 -->
+            <article class="dl-feature-card" data-category="lr">
+                <div class="dl-feature-card-content">
+                    <div class="dl-feature-icon"><i class="ri-file-paper-2-line"></i></div>
+                    <div class="dl-feature-card-heading"><h3>Lorry Receipt Letterhead</h3></div>
+                    <p>
+                        Configure company information used when preparing Lorry Receipts, including firm name, contact details, logo, signature, terms and jurisdiction text.
+                    </p>
+                </div>
+            </article>
+
+            <!-- Feature 4.8 -->
+            <article class="dl-feature-card" data-category="lr">
+                <div class="dl-feature-card-content">
+                    <div class="dl-feature-icon"><i class="ri-hashtag"></i></div>
+                    <div class="dl-feature-card-heading"><h3>LR Numbering Settings</h3></div>
+                    <p>
+                        Set the LR number prefix and format, next sequence number and financial-year starting month for the selected firm.
+                    </p>
+                </div>
+            </article>
+
+            <!-- Feature 4.9 -->
+            <article class="dl-feature-card" data-category="lr">
+                <div class="dl-feature-card-content">
+                    <div class="dl-feature-icon"><i class="ri-layout-4-line"></i></div>
+                    <div class="dl-feature-card-heading"><h3>LR Display Preferences</h3></div>
+                    <p>
+                        Choose whether the logo appears on an LR, adjust the firm name font size and control the contract-charges display preference.
+                    </p>
+                </div>
+            </article>
+
+            <!-- Feature 4.10 -->
+            <article class="dl-feature-card" data-category="access">
+                <div class="dl-feature-card-content">
+                    <div class="dl-feature-icon"><i class="ri-search-2-line"></i></div>
+                    <div class="dl-feature-card-heading"><h3>Search and Browse Companies</h3></div>
+                    <p>
+                        Find a saved firm by name, use name suggestions and move through the company list with pagination.
+                    </p>
+                </div>
+            </article>
+
+            <!-- Feature 4.11 -->
+            <article class="dl-feature-card" data-category="access">
+                <div class="dl-feature-card-content">
+                    <div class="dl-feature-icon"><i class="ri-file-copy-2-line"></i></div>
+                    <div class="dl-feature-card-heading"><h3>Duplicate Company Warning</h3></div>
+                    <p>
+                        When a new or updated firm appears to share a phone number or GST number with an existing record, the system can warn the user and provide a link to view that firm.
+                    </p>
+                </div>
+            </article>
+
+            <!-- Feature 4.12 -->
+            <article class="dl-feature-card" data-category="access">
+                <div class="dl-feature-card-content">
+                    <div class="dl-feature-icon"><i class="ri-lock-2-line"></i></div>
+                    <div class="dl-feature-card-heading"><h3>View, Edit and Delete Permissions</h3></div>
+                    <p>
+                        Company management actions are permission-controlled. Authorized users can view, add, edit or delete firm records.
+                    </p>
+                </div>
+            </article>
+
+        </div>
+    </div>
+</section>
+<!--dl feature section end-->
+
+<!--workflow section start-->
+<section class="dl-workflow-section">
+    <div class="container">
+        <div class="heading-wrapper heading-wrap-left">
+            <span class="heading-tag">Step-by-Step Workflow</span>
+            <h2 class="heading-title">How Does the <span>Companies Module</span> Work?</h2>
+            <p>
+                Company details can also be selected in other parts of the system, such as vehicle and diesel bill records, so you only enter them once.
+            </p>
+        </div>
+
+        <div class="dl-workflow-grid">
+
+            <!-- Workflow Step 01 -->
+            <article class="dl-workflow-card">
+                <div class="dl-workflow-card-content">
+                    <div class="dl-workflow-card-top">
+                        <span class="dl-workflow-number">01</span>
+                        <div class="dl-workflow-icon"><i class="ri-folder-open-line"></i></div>
+                    </div>
+                    <h3 class="dl-workflow-card-title">Open Companies</h3>
+                    <p class="dl-workflow-card-description">Go to Companies to see your registered firms.</p>
+                    <ul class="dl-workflow-checklist">
+                        <li>
+                            <i class="ri-check-line"></i>
+                            <span>Search by firm name</span>
+                        </li>
+                        <li>
+                            <i class="ri-check-line"></i>
+                            <span>Check for an existing company before creating a new one</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="dl-workflow-card-footer"><span>Workflow Phase 01</span></div>
+            </article>
+
+            <!-- Workflow Step 02 -->
+            <article class="dl-workflow-card">
+                <div class="dl-workflow-card-content">
+                    <div class="dl-workflow-card-top">
+                        <span class="dl-workflow-number">02</span>
+                        <div class="dl-workflow-icon"><i class="ri-add-circle-line"></i></div>
+                    </div>
+                    <h3 class="dl-workflow-card-title">Add a New Company</h3>
+                    <p class="dl-workflow-card-description">Click Add New Firm and enter the required details.</p>
+                    <ul class="dl-workflow-checklist">
+                        <li>
+                            <i class="ri-check-line"></i>
+                            <span>Firm Name, Contact Person and Phone Number</span>
+                        </li>
+                        <li>
+                            <i class="ri-check-line"></i>
+                            <span>Email Address, GST Number and Address</span>
+                        </li>
+                        <li>
+                            <i class="ri-check-line"></i>
+                            <span>Required details are marked with an asterisk</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="dl-workflow-card-footer"><span>Workflow Phase 02</span></div>
+            </article>
+
+            <!-- Workflow Step 03 -->
+            <article class="dl-workflow-card">
+                <div class="dl-workflow-card-content">
+                    <div class="dl-workflow-card-top">
+                        <span class="dl-workflow-number">03</span>
+                        <div class="dl-workflow-icon"><i class="ri-toggle-line"></i></div>
+                    </div>
+                    <h3 class="dl-workflow-card-title">Set Company Status</h3>
+                    <p class="dl-workflow-card-description">Choose whether the company is Active or Inactive.</p>
+                    <ul class="dl-workflow-checklist">
+                        <li>
+                            <i class="ri-check-line"></i>
+                            <span>Active firms are available for applicable selections within the application</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="dl-workflow-card-footer"><span>Workflow Phase 03</span></div>
+            </article>
+
+            <!-- Workflow Step 04 -->
+            <article class="dl-workflow-card">
+                <div class="dl-workflow-card-content">
+                    <div class="dl-workflow-card-top">
+                        <span class="dl-workflow-number">04</span>
+                        <div class="dl-workflow-icon"><i class="ri-building-4-line"></i></div>
+                    </div>
+                    <h3 class="dl-workflow-card-title">Configure Firm Information</h3>
+                    <p class="dl-workflow-card-description">Complete the LR Letterhead section where needed.</p>
+                    <ul class="dl-workflow-checklist">
+                        <li>
+                            <i class="ri-check-line"></i>
+                            <span>Upload Logo and Operator Signature</span>
+                        </li>
+                        <li>
+                            <i class="ri-check-line"></i>
+                            <span>Enter PAN, Jurisdiction Text, Residency Address and Office Address</span>
+                        </li>
+                        <li>
+                            <i class="ri-check-line"></i>
+                            <span>Enter Letterhead Phone 1–3 and Letterhead Email 1–2</span>
+                        </li>
+                        <li>
+                            <i class="ri-check-line"></i>
+                            <span>Leave the office address empty to use the main firm address</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="dl-workflow-card-footer"><span>Workflow Phase 04</span></div>
+            </article>
+
+            <!-- Workflow Step 05 -->
+            <article class="dl-workflow-card">
+                <div class="dl-workflow-card-content">
+                    <div class="dl-workflow-card-top">
+                        <span class="dl-workflow-number">05</span>
+                        <div class="dl-workflow-icon"><i class="ri-file-paper-2-line"></i></div>
+                    </div>
+                    <h3 class="dl-workflow-card-title">Set Up LR Letterhead</h3>
+                    <p class="dl-workflow-card-description">Configure numbering and display for Lorry Receipts.</p>
+                    <ul class="dl-workflow-checklist">
+                        <li>
+                            <i class="ri-check-line"></i>
+                            <span>In LR Numbering, select Prefix, Format, Next Sequence and FY Start Month</span>
+                        </li>
+                        <li>
+                            <i class="ri-check-line"></i>
+                            <span>Choose whether to show contract charges and the company logo on the LR</span>
+                        </li>
+                        <li>
+                            <i class="ri-check-line"></i>
+                            <span>Adjust the firm-name font size with the preview</span>
+                        </li>
+                        <li>
+                            <i class="ri-check-line"></i>
+                            <span>Enter Terms &amp; Conditions for printing on the LR</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="dl-workflow-card-footer"><span>Workflow Phase 05</span></div>
+            </article>
+
+            <!-- Workflow Step 06 -->
+            <article class="dl-workflow-card">
+                <div class="dl-workflow-card-content">
+                    <div class="dl-workflow-card-top">
+                        <span class="dl-workflow-number">06</span>
+                        <div class="dl-workflow-icon"><i class="ri-save-3-line"></i></div>
+                    </div>
+                    <h3 class="dl-workflow-card-title">Save and Manage</h3>
+                    <p class="dl-workflow-card-description">Save the profile and manage it later.</p>
+                    <ul class="dl-workflow-checklist">
+                        <li>
+                            <i class="ri-check-line"></i>
+                            <span>Open it to review information and edit details</span>
+                        </li>
+                        <li>
+                            <i class="ri-check-line"></i>
+                            <span>Search the company list</span>
+                        </li>
+                        <li>
+                            <i class="ri-check-line"></i>
+                            <span>Delete a record if you have permission</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="dl-workflow-card-footer"><span>Workflow Phase 06</span></div>
+            </article>
+
+        </div>
+    </div>
+
+    <div class="et-container">
+        <div class="workflow-bottom">
+            <div class="security-card">
+                <img src="./Assets/images/workflow-img.png" alt="workflow-img">
+                <div class="security-content">
+                    <h3>Enterprise-Grade Security</h3>
+                    <p>Protect sensitive business information with encrypted data storage, secure user authentication, and controlled system access.</p>
+                </div>
+            </div>
+            <div class="workflow-info">
+                <div class="stats-card">
+                    <h3>98%</h3>
+                    <h4>Customer Satisfaction</h4>
+                    <p>Provide accurate ETAs, live shipment updates, and faster response times that improve customer trust and retention.</p>
+                </div>
+                <div class="workflow-content">
+                    <p>Explore a powerful collection of intelligent modules built to streamline your daily transport operations. Manage vehicles, drivers, trips, and business performance seamlessly through one unified platform.</p>
+                    <a href="#" class="workflow-btn">Explore All Modules <i class="ri-arrow-right-line"></i></a>
+                </div>
+                <div class="info-card">
+                    <div class="info-icon"><i class="ri-bar-chart-2-fill"></i></div>
+                    <span>Visualize business performance instantly</span>
+                </div>
+                <div class="info-card">
+                    <div class="info-icon"><i class="ri-lock-unlock-line"></i></div>
+                    <span>Access your business securely from anywhere</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--workflow section end-->
+
+<!--practical example section start-->
+<section id="example" class="dl-simulator-section">
+    <div class="dl-container">
+        <div class="heading-wrapper">
+            <span class="heading-tag">Practical Example</span>
+            <h2 class="heading-title">Add a <span>Transport Company</span></h2>
+            <p>
+                An authorized user opens Own Firms, clicks Add New Firm and creates a sample transport company. The following example follows every visible field on the Add New Firm form. Values are illustrative, not real customer details.
+            </p>
+        </div>
+
+        <div class="dl-calculator-panel">
+            <div class="dl-table-wrapper">
+                <table class="dl-vehicle-table">
+                    <thead><tr><th>Field</th><th>Example</th></tr></thead>
+                    <tbody><tr><td colspan="2"><div class="dl-vehicle-name"><i class="ri-bookmark-3-line"></i><span><strong>BASIC FIRM DETAILS</strong></span></div></td></tr><tr><td>Firm Name *</td><td>ABC Transport Pvt. Ltd.</td></tr><tr><td>Contact Person *</td><td>Demo Contact</td></tr><tr><td>Phone Number *</td><td>9000000000</td></tr><tr><td>Email Address *</td><td>office@example.com</td></tr><tr><td>GST Number *</td><td>Example GSTIN (valid test value)</td></tr><tr><td>Status</td><td>Active</td></tr><tr><td>Address *</td><td>Sample Office Address, Surat, Gujarat</td></tr><tr><td colspan="2"><div class="dl-vehicle-name"><i class="ri-bookmark-3-line"></i><span><strong>LR LETTERHEAD</strong></span></div></td></tr><tr><td>Logo</td><td>Upload sample company logo (optional)</td></tr><tr><td>Operator Signature</td><td>Upload sample authorized signature (optional)</td></tr><tr><td>PAN</td><td>Example PAN (valid test value)</td></tr><tr><td>Jurisdiction Text</td><td>Subject to Surat Jurisdiction</td></tr><tr><td>Residency Address</td><td>Sample residential / correspondence address</td></tr><tr><td>Office Address (letterhead)</td><td>Sample branch / office address; blank uses firm address</td></tr><tr><td>Letterhead Phone 1</td><td>9000000000</td></tr><tr><td>Letterhead Phone 2</td><td>9000000001 (optional)</td></tr><tr><td>Letterhead Phone 3</td><td>9000000002 (optional)</td></tr><tr><td>Letterhead Email 1</td><td>office@example.com</td></tr><tr><td>Letterhead Email 2</td><td>accounts@example.com (optional)</td></tr><tr><td colspan="2"><div class="dl-vehicle-name"><i class="ri-bookmark-3-line"></i><span><strong>LR NUMBERING &amp; DISPLAY</strong></span></div></td></tr><tr><td>Prefix</td><td>LR</td></tr><tr><td>Format</td><td>{PREFIX}/{FY}/{SEQ:4}</td></tr><tr><td>Next Sequence</td><td>1</td></tr><tr><td>FY Start Month</td><td>April</td></tr><tr><td>Show Contract Charges on LR</td><td>Enabled (checked)</td></tr><tr><td>Show Company Logo on LR</td><td>Enabled (checked)</td></tr><tr><td>Firm Name Font Size on LR</td><td>20px (preview can be adjusted)</td></tr><tr><td>Terms &amp; Conditions (printed on LR)</td><td>Example transport terms and conditions for LR output</td></tr></tbody>
+                </table>
+            </div>
+            <div class="dl-calculator-footer">
+                <div class="dl-documentation-note">
+                    <i class="ri-information-line"></i>
+                    <span>After filling the fields, click Create Firm. The saved company can be selected in applicable workflows and its LR-specific settings are used when that firm is chosen for a Lorry Receipt. Authorized users can later open the company, update details or change the LR display settings.</span>
+                </div>
+                <div class="dl-supported-formats">Example values are illustrative.</div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--practical example section end-->
+
+<!--results section start-->
+<section id="benefits" class="results-section">
+    <div class="container">
+        <div class="heading-wrapper">
+            <span class="heading-tag">Proven Advantages</span>
+            <h2 class="heading-title heading-light">Benefits of <span>Companies Management</span></h2>
+            <p>
+                Keep company information organized, easy to update and ready to use across related business workflows.
+            </p>
+        </div>
+        <div class="results-grid">
+
+            <div class="result-card">
+                <div class="result-icon"><i class="ri-folder-shield-2-line"></i></div>
+                <h3>Keep Firm Details Organized</h3>
+                <p>Store company information in a single profile rather than scattered notes or spreadsheets.</p>
+            </div>
+
+            <div class="result-card">
+                <div class="result-icon"><i class="ri-search-eye-line"></i></div>
+                <h3>Make Information Easy to Find</h3>
+                <p>Search company names and quickly open saved business records.</p>
+            </div>
+
+            <div class="result-card">
+                <div class="result-icon"><i class="ri-building-2-line"></i></div>
+                <h3>Support Multiple Firms</h3>
+                <p>Maintain separate profiles and details when your business manages more than one company.</p>
+            </div>
+
+            <div class="result-card">
+                <div class="result-icon"><i class="ri-refresh-line"></i></div>
+                <h3>Keep Details Updated</h3>
+                <p>Change contact, address or tax information whenever company details change.</p>
+            </div>
+
+            <div class="result-card">
+                <div class="result-icon"><i class="ri-file-paper-2-line"></i></div>
+                <h3>Prepare Consistent Lorry Receipts</h3>
+                <p>Use firm-specific letterhead and numbering preferences for LR documents.</p>
+            </div>
+
+            <div class="result-card">
+                <div class="result-icon"><i class="ri-lock-2-line"></i></div>
+                <h3>Control Access</h3>
+                <p>Allow only users with suitable permissions to manage company information.</p>
+            </div>
+
+        </div>
+    </div>
+</section>
+<!--results section end-->
+
+<!--transport-section start-->
+<section class="transport-section">
+    <div class="container">
+        <div class="transport-container">
+            <div class="heading-wrapper heading-wrap-left">
+                <span class="heading-tag">Transportation Management</span>
+                <h2 class="heading-title">Manage Your Transportation <span> Operations Efficiently </span></h2>
+                <p>
+                    Track vehicles, manage drivers, monitor fuel usage, handle maintenance schedules, and keep company profiles and Lorry Receipt settings organized from one centralized cloud platform.
+                </p>
+            </div>
+            <div class="transport-image-wrapper">
+                <img src="./Assets/images/tms-img.png" alt="Transportation Dashboard" class="transport-image">
+                <div class="transport-shape"></div>
+                <div class="transport-card">
+                    <ul class="transport-list">
+                        <li><i class="ri-checkbox-circle-line"></i><span>Real-time fleet and vehicle monitoring</span></li>
+                        <li><i class="ri-checkbox-circle-line"></i><span>Driver management and attendance tracking</span></li>
+                        <li><i class="ri-checkbox-circle-line"></i><span>Company profiles and LR settings</span></li>
+                        <li><i class="ri-checkbox-circle-line"></i><span>Maintenance alerts and service scheduling</span></li>
+                        <li><i class="ri-checkbox-circle-line"></i><span>Vehicle documents and compliance tracking</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--transport section end-->
+
+<!--dl-faq section start-->
+<section id="faq" class="dl-faq-section">
+    <div class="container">
+        <div class="heading-wrapper">
+            <span class="heading-tag">Got Questions?</span>
+            <h2 class="heading-title">Frequently Asked <span>Questions</span></h2>
+            <p>
+                Everything you need to know about managing company profiles and Lorry Receipt settings in your fleet operations.
+            </p>
+            <div class="dl-faq-filters">
+                <button class="dl-faq-filter active" type="button">All</button>
+                <button class="dl-faq-filter" type="button">Profiles</button>
+                <button class="dl-faq-filter" type="button">LR Settings</button>
+                <button class="dl-faq-filter" type="button">Search</button>
+                <button class="dl-faq-filter" type="button">Access</button>
+            </div>
+        </div>
+
+        <div class="dl-faq-list">
+
+            <!-- FAQ 1 -->
+            <div class="dl-faq-item active" data-category="profiles">
+                <button class="dl-faq-question" type="button" aria-expanded="true" aria-controls="dl-faq-answer-1">
+                    <span class="dl-faq-question-content">
+                        <span class="dl-faq-number">Q1</span>
+                        <span class="dl-faq-question-text">Can I add more than one company?</span>
+                    </span>
+                    <span class="dl-faq-arrow"><i class="ri-arrow-down-s-line"></i></span>
+                </button>
+                <div class="dl-faq-answer" id="dl-faq-answer-1">
+                    <div class="dl-faq-answer-content">
+                        <p>Yes. The module supports separate company profiles.</p>
+                        <div class="dl-faq-topic"><span>Topic: Profiles</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ 2 -->
+            <div class="dl-faq-item" data-category="profiles">
+                <button class="dl-faq-question" type="button" aria-expanded="false" aria-controls="dl-faq-answer-2">
+                    <span class="dl-faq-question-content">
+                        <span class="dl-faq-number">Q2</span>
+                        <span class="dl-faq-question-text">Can I update a company after creating it?</span>
+                    </span>
+                    <span class="dl-faq-arrow"><i class="ri-arrow-down-s-line"></i></span>
+                </button>
+                <div class="dl-faq-answer" id="dl-faq-answer-2">
+                    <div class="dl-faq-answer-content">
+                        <p>Yes. Users with edit permission can update company details.</p>
+                        <div class="dl-faq-topic"><span>Topic: Profiles</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ 3 -->
+            <div class="dl-faq-item" data-category="lr">
+                <button class="dl-faq-question" type="button" aria-expanded="false" aria-controls="dl-faq-answer-3">
+                    <span class="dl-faq-question-content">
+                        <span class="dl-faq-number">Q3</span>
+                        <span class="dl-faq-question-text">Can I save a company logo and signature?</span>
+                    </span>
+                    <span class="dl-faq-arrow"><i class="ri-arrow-down-s-line"></i></span>
+                </button>
+                <div class="dl-faq-answer" id="dl-faq-answer-3">
+                    <div class="dl-faq-answer-content">
+                        <p>Yes. Image uploads are available for the company logo and signature.</p>
+                        <div class="dl-faq-topic"><span>Topic: LR Settings</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ 4 -->
+            <div class="dl-faq-item" data-category="lr">
+                <button class="dl-faq-question" type="button" aria-expanded="false" aria-controls="dl-faq-answer-4">
+                    <span class="dl-faq-question-content">
+                        <span class="dl-faq-number">Q4</span>
+                        <span class="dl-faq-question-text">Does the module support LR settings?</span>
+                    </span>
+                    <span class="dl-faq-arrow"><i class="ri-arrow-down-s-line"></i></span>
+                </button>
+                <div class="dl-faq-answer" id="dl-faq-answer-4">
+                    <div class="dl-faq-answer-content">
+                        <p>Yes. You can configure letterhead details, LR numbering and display preferences for a firm.</p>
+                        <div class="dl-faq-topic"><span>Topic: LR Settings</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ 5 -->
+            <div class="dl-faq-item" data-category="search">
+                <button class="dl-faq-question" type="button" aria-expanded="false" aria-controls="dl-faq-answer-5">
+                    <span class="dl-faq-question-content">
+                        <span class="dl-faq-number">Q5</span>
+                        <span class="dl-faq-question-text">Can I search for an existing company?</span>
+                    </span>
+                    <span class="dl-faq-arrow"><i class="ri-arrow-down-s-line"></i></span>
+                </button>
+                <div class="dl-faq-answer" id="dl-faq-answer-5">
+                    <div class="dl-faq-answer-content">
+                        <p>Yes. The Companies list supports searching by firm name.</p>
+                        <div class="dl-faq-topic"><span>Topic: Search</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ 6 -->
+            <div class="dl-faq-item" data-category="search">
+                <button class="dl-faq-question" type="button" aria-expanded="false" aria-controls="dl-faq-answer-6">
+                    <span class="dl-faq-question-content">
+                        <span class="dl-faq-number">Q6</span>
+                        <span class="dl-faq-question-text">What happens if I enter a duplicate company?</span>
+                    </span>
+                    <span class="dl-faq-arrow"><i class="ri-arrow-down-s-line"></i></span>
+                </button>
+                <div class="dl-faq-answer" id="dl-faq-answer-6">
+                    <div class="dl-faq-answer-content">
+                        <p>The system can display a duplicate warning when matching phone or GST details are found.</p>
+                        <div class="dl-faq-topic"><span>Topic: Search</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ 7 -->
+            <div class="dl-faq-item" data-category="access">
+                <button class="dl-faq-question" type="button" aria-expanded="false" aria-controls="dl-faq-answer-7">
+                    <span class="dl-faq-question-content">
+                        <span class="dl-faq-number">Q7</span>
+                        <span class="dl-faq-question-text">Can every user delete a company?</span>
+                    </span>
+                    <span class="dl-faq-arrow"><i class="ri-arrow-down-s-line"></i></span>
+                </button>
+                <div class="dl-faq-answer" id="dl-faq-answer-7">
+                    <div class="dl-faq-answer-content">
+                        <p>No. Deletion requires the appropriate company permission.</p>
+                        <div class="dl-faq-topic"><span>Topic: Access</span></div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="dl-faq-cta">
+            <div class="dl-faq-cta-content">
+                <h3>Simplify Your Company Management</h3>
+                <p>
+                    The Companies Management Module gives businesses a convenient way to manage firm profiles, contact details, tax information and Lorry Receipt preferences. Keep company information organized, easy to update and ready to use across related business workflows.
+                </p>
+            </div>
+            <button class="dl-faq-cta-button" type="button" onclick="document.getElementById('simulator').scrollIntoView({behavior: 'smooth'})">
+                Try Live Demo Now
+            </button>
+        </div>
+    </div>
+</section>
+<!--dl-faq section end-->
+
+<!--footer section start-->
+<footer class="footer">
+
+    <!-- Newsletter -->
+    <div class="footer-newsletter">
+        <div class="container">
+
+            <div class="newsletter-wrapper">
+
+                <div class="newsletter-content">
+                    <h2>Stay ahead of the curve</h2>
+                    <p>
+                        Fleet management insights, product updates, and industry news.
+                    </p>
+                </div>
+
+                <form class="newsletter-form">
+
+                    <input
+                        type="email"
+                        placeholder="Enter your email"
+                    >
+
+                    <button type="submit">
+                        Subscribe
+
+                       <i class="ri-arrow-right-line"></i>
+
+                    </button>
+
+                </form>
+
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Footer Main -->
+
+    <div class="footer-main">
+
+        <div class="container">
+
+            <div class="footer-grid">
+
+                <!-- Left -->
+
+                <div class="footer-about">
+
+                    <a href="index.html" class="footer-logo">
+                         <img src="Assets/images/transportdesk-logo-dark.svg" alt="footer-logo">
+                    </a>
+
+                    <p>
+                        The intelligent transportation platform that puts fleet directors
+                        in complete control of their operations.
+                    </p>
+
+                    <div class="footer-social">
+
+                        <a href="#">
+                            <i class="ri-facebook-fill"></i>
+                        </a>
+
+                        <a href="#">
+                            <i class="ri-instagram-line"></i>
+                        </a>
+
+                        <a href="#">
+                            <i class="ri-twitter-line"></i>
+                        </a>
+
+                        <a href="#">
+                            <i class="ri-linkedin-fill"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <!-- Product -->
+
+                <div class="footer-links">
+
+                    <h3>Product</h3>
+
+                      <ul>
+        <li>
+            <a href="features.html" class="footer-link">Features</a>
+        </li>
+
+        <li>
+            <a href="modules.html" class="footer-link">Modules</a>
+        </li>
+
+        <li>
+            <a href="solutions.html" class="footer-link">Solutions</a>
+        </li>
+
+        <li>
+            <a href="reports.html" class="footer-link">Reports</a>
+        </li>
+
+        <li>
+            <a href="contact.html" class="footer-link">Contact</a>
+        </li>
+    </ul>
+
+                </div>
+
+                <!-- Resources -->
+
+                <div class="footer-links">
+
+                    <h3>Resources</h3>
+
+                    <ul>
+
+                        <li><a href="documentation.html" class="footer-link">Documentation</a></li>
+
+                        <li><a href="faq.html" class="footer-link">FAQ</a></li>
+
+                        <li><a href="privacy-policy.html" class="footer-link">Privacy Policy</a></li>
+
+                    </ul>
+
+                </div>
+
+                <!-- Support -->
+
+                <div class="footer-links">
+
+                    <h3>Support</h3>
+
+                    <ul>
+
+                        <li><a href="#" class="footer-link">Help Center</a></li>
+
+                        <li><a href="#" class="footer-link">Status</a></li>
+
+                        <li><a href="#" class="footer-link">Security</a></li>
+
+                    </ul>
+
+                </div>
+
+                <!-- Contact -->
+
+                <div class="footer-contact">
+
+                    <div class="contact-item">
+
+                        <div class="icon">
+                            <i class="ri-mail-line"></i>
+                        </div>
+
+                        <div>
+
+                            <span>Email</span>
+
+                            <a href="#">
+                                hello@transportdesk.net
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                    <div class="contact-item">
+
+                        <div class="icon">
+                            <i class="ri-phone-fill"></i>
+                        </div>
+
+                        <div>
+
+                            <span>Call</span>
+
+                            <a href="#">
+                                +1 (512) 555-0142
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                    <div class="contact-item">
+
+                        <div class="icon">
+                            <i class="ri-map-pin-line"></i>
+                        </div>
+
+                        <div>
+
+                            <span>Location</span>
+
+                            <p>India</p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Bottom -->
+
+    <div class="footer-bottom">
+
+        <div class="container">
+
+            <div class="bottom-wrapper">
+
+                <p>
+                    © 2026 All rights reserved.
+                </p>
+
+                <ul>
+
+                    <li><a href="#">Privacy Policy</a></li>
+
+                    <li><a href="#">Terms of Service</a></li>
+
+                    <li><a href="#">Cookie Policy</a></li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</footer>
+<!--footer section end-->
+
+<script src="./Assets/js/custom.js"></script>
+<script>
+(function () {
+  var $ = function (id) { return document.getElementById(id); };
+  if (!$('co-name')) return;
+  var uid = 100, page = 1, PER = 4, editing = null, pendingDup = null, logo = null, sign = null;
+  var MONTHS = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+  function seed(id, name, contact, phone, email, gst, status, addr, prefix, seq) {
+    return { id: id, name: name, contact: contact, phone: phone, email: email, gst: gst, status: status, address: addr, pan: '', jur: '', res: '', office: '', lp1: phone, lp2: '', lp3: '', le1: email, le2: '', prefix: prefix, format: '{PREFIX}/{FY}/{SEQ:4}', seq: seq, fy: 4, font: 20, charges: true, showlogo: true, terms: '', logo: null, sign: null };
+  }
+  var firms = [
+    seed(1, 'ABC Transport Pvt. Ltd.', 'Demo Contact', '9000000000', 'office@example.com', '24AAAAA0000A1Z5', 'Active', 'Sample Office Address, Surat, Gujarat', 'LR', 1),
+    seed(2, 'Shree Logistics', 'Rajesh Shah', '9000000010', 'info@shree.example', '24BBBBB1111B1Z6', 'Active', 'Sample Address, Ahmedabad, Gujarat', 'SL', 15),
+    seed(3, 'Metro Cargo Carriers', 'Amit Desai', '9000000020', 'ops@metro.example', '24CCCCC2222C1Z7', 'Inactive', 'Sample Address, Vadodara, Gujarat', 'MC', 3),
+    seed(4, 'Apex Freight Lines', 'Neha Patel', '9000000030', 'hello@apex.example', '24DDDDD3333D1Z8', 'Active', 'Sample Address, Rajkot, Gujarat', 'AF', 7),
+    seed(5, 'Om Roadways', 'Kiran Mehta', '9000000040', 'om@roadways.example', '24EEEEE4444E1Z9', 'Active', 'Sample Address, Surat, Gujarat', 'OM', 22)
+  ];
+  var TEXT = ['name','contact','phone','email','gst','address','pan','jur','res','office','lp1','lp2','lp3','le1','le2','prefix','format','terms'];
+  var IDS = { name:'co-name', contact:'co-contact', phone:'co-phone', email:'co-email', gst:'co-gst', address:'co-address', pan:'co-pan', jur:'co-jur', res:'co-res', office:'co-office', lp1:'co-lp1', lp2:'co-lp2', lp3:'co-lp3', le1:'co-le1', le2:'co-le2', prefix:'co-prefix', format:'co-format', terms:'co-terms' };
+
+  function esc(s) { return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) { return ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'})[c]; }); }
+  function msg(t) { $('co-msg').textContent = t; }
+  function find(id) { return firms.filter(function (f) { return f.id === id; })[0]; }
+  function fyLabel(startMonth) {
+    var d = new Date(), y = d.getFullYear(), m = d.getMonth() + 1, s = m >= startMonth ? y : y - 1;
+    if (startMonth === 1) return String(s);
+    return s + '-' + String(s + 1).slice(-2);
+  }
+  function lrNo(prefix, format, seq, fy) {
+    return String(format || '{PREFIX}/{FY}/{SEQ:4}').replace(/\{PREFIX\}/g, prefix || '').replace(/\{FY\}/g, fyLabel(+fy || 4))
+      .replace(/\{SEQ(?::(\d+))?\}/g, function (_, n) { var s = String(seq || 1); n = +n || 0; while (s.length < n) s = '0' + s; return s; });
+  }
+  function updatePreview() {
+    var font = $('co-font').value; $('co-font-val').textContent = font + 'px';
+    var name = $('co-name').value.trim() || 'Firm Name', pv = $('co-prev-name');
+    pv.textContent = name; pv.style.fontSize = font + 'px';
+    var addr = $('co-office').value.trim() || $('co-address').value.trim() || 'Office address';
+    var ph = [$('co-lp1').value, $('co-lp2').value, $('co-lp3').value].filter(Boolean).join(', ') || 'Phone';
+    var em = [$('co-le1').value, $('co-le2').value].filter(Boolean).join(', ') || 'Email';
+    $('co-prev-sub').textContent = addr + ' · ' + ph + ' · ' + em;
+    var lg = $('co-prev-logo'), url = logo && logo.blob ? (logo.url || (logo.url = URL.createObjectURL(logo.blob))) : null;
+    if (url && $('co-showlogo').checked) { lg.src = url; lg.style.display = ''; } else { lg.style.display = 'none'; }
+    var no = lrNo($('co-prefix').value, $('co-format').value, $('co-seq').value, $('co-fy').value);
+    $('co-prev-lr').textContent = no; $('co-s-lr').textContent = no;
+    $('co-prev-charges').textContent = $('co-charges').checked ? 'Contract charges: shown on LR' : 'Contract charges: hidden on LR';
+    $('co-prev-jur').textContent = $('co-jur').value;
+  }
+  function fileNote() {
+    function n(x, id, label) { $(id).innerHTML = x ? esc(label + ': ' + x.name) + ' <button type="button" class="dl-action-button" data-rm="' + id + '">Remove</button>' : ''; }
+    n(logo, 'co-logo-note', 'Logo'); n(sign, 'co-sign-note', 'Signature');
+  }
+  ['co-logo-note', 'co-sign-note'].forEach(function (id) {
+    $(id).addEventListener('click', function (e) { if (!e.target.closest('[data-rm]')) return; if (id === 'co-logo-note') logo = null; else sign = null; $('co-logo').value = ''; $('co-sign').value = ''; fileNote(); updatePreview(); });
+  });
+  function pickImg(inp, setter) {
+    inp.addEventListener('change', function () {
+      var f = inp.files[0]; if (!f) return;
+      if (!/^image\//.test(f.type)) { msg('Please choose an image file.'); inp.value = ''; return; }
+      setter({ name: f.name, blob: f }); fileNote(); updatePreview();
+    });
+  }
+  pickImg($('co-logo'), function (x) { logo = x; }); pickImg($('co-sign'), function (x) { sign = x; });
+  Array.prototype.forEach.call(document.querySelectorAll('#co-view-form input, #co-view-form select, #co-view-form textarea'), function (el) { el.addEventListener('input', updatePreview); el.addEventListener('change', updatePreview); });
+
+  function renderSuggest() { $('co-suggest').innerHTML = firms.map(function (f) { return '<option value="' + esc(f.name) + '">'; }).join(''); }
+  function filtered() { var q = $('co-search').value.trim().toLowerCase(); return firms.filter(function (f) { return !q || f.name.toLowerCase().indexOf(q) > -1; }); }
+  function btn(act, id, title, ic) { return '<button type="button" class="dl-delete-button" style="margin-right:.25rem" data-act="' + act + '" data-id="' + id + '" title="' + title + '"><i class="' + ic + '"></i></button>'; }
+  function renderList() {
+    var rows = filtered(), pages = Math.max(1, Math.ceil(rows.length / PER)); if (page > pages) page = pages;
+    $('co-body').innerHTML = rows.slice((page - 1) * PER, page * PER).map(function (f) {
+      var c = f.status === 'Active' ? 'dl-green-text' : 'dl-red-text';
+      return '<tr><td><div class="dl-vehicle-name"><i class="ri-building-2-fill"></i><span>' + esc(f.name) + '</span></div></td><td>' + esc(f.contact) + '</td><td>' + esc(f.phone) + '</td><td>' + esc(f.gst) + '</td>' +
+        '<td><span class="' + c + '" style="font-weight:600">' + f.status + '</span></td><td>' + esc(lrNo(f.prefix, f.format, f.seq, f.fy)) + '</td>' +
+        '<td class="dl-text-center" style="white-space:nowrap">' + btn('view', f.id, 'View firm', 'ri-eye-line') + btn('edit', f.id, 'Edit firm', 'ri-edit-line') + btn('del', f.id, 'Delete firm (requires permission)', 'ri-delete-bin-line') + '</td></tr>';
+    }).join('') || '<tr><td colspan="7" class="dl-text-center">No firms found.</td></tr>';
+    $('co-count').textContent = rows.length + (rows.length === 1 ? ' firm' : ' firms');
+    $('co-page').textContent = 'Page ' + page + ' of ' + pages; $('co-prev').disabled = page <= 1; $('co-next').disabled = page >= pages;
+    $('co-s-total').textContent = firms.length;
+    $('co-s-act').textContent = firms.filter(function (f) { return f.status === 'Active'; }).length;
+    $('co-s-ina').textContent = firms.filter(function (f) { return f.status === 'Inactive'; }).length;
+    renderSuggest();
+  }
+  function setView(v) {
+    $('co-view-form').hidden = v !== 'form'; $('co-view-list').hidden = v !== 'list';
+    document.querySelectorAll('[data-co-view]').forEach(function (b) { b.classList.toggle('dl-view-tab-active', b.getAttribute('data-co-view') === v); });
+  }
+  function resetForm() {
+    TEXT.forEach(function (k) { $(IDS[k]).value = ''; });
+    $('co-prefix').value = 'LR'; $('co-format').value = '{PREFIX}/{FY}/{SEQ:4}'; $('co-seq').value = 1; $('co-fy').value = 4;
+    $('co-status').value = 'Active'; $('co-font').value = 20; $('co-charges').checked = true; $('co-showlogo').checked = true;
+    $('co-logo').value = ''; $('co-sign').value = ''; logo = null; sign = null; fileNote();
+    editing = null; pendingDup = null; $('co-warn').hidden = true;
+    $('co-form-mode').textContent = 'Add New Firm'; $('co-save-label').textContent = 'Create Firm'; updatePreview();
+  }
+  function readForm() {
+    var v = { status: $('co-status').value, seq: parseInt($('co-seq').value, 10) || 1, fy: +$('co-fy').value, font: +$('co-font').value, charges: $('co-charges').checked, showlogo: $('co-showlogo').checked, logo: logo, sign: sign };
+    TEXT.forEach(function (k) { v[k] = $(IDS[k]).value.trim(); });
+    return v;
+  }
+  function doSave(force) {
+    var v = readForm();
+    if (!v.name || !v.contact || !v.phone || !v.email || !v.gst || !v.address) { msg('Please fill all required fields marked *: firm name, contact person, phone, email, GST number and address.'); return; }
+    if (v.email.indexOf('@') < 1) { msg('Please enter a valid email address.'); return; }
+    if (!force) {
+      var dup = firms.filter(function (f) { return f.id !== editing && (f.phone === v.phone || f.gst.toLowerCase() === v.gst.toLowerCase()); })[0];
+      if (dup) {
+        pendingDup = dup;
+        $('co-warn-text').textContent = 'This firm appears to share a phone number or GST number with an existing record: ' + dup.name + '. Review it before deciding whether to use Save Anyway.';
+        $('co-warn').hidden = false; $('co-warn').scrollIntoView({ behavior: 'smooth', block: 'nearest' }); return;
+      }
+    }
+    if (editing) { var f = find(editing); Object.keys(v).forEach(function (k) { f[k] = v[k]; }); msg('Firm updated.'); }
+    else { v.id = ++uid; firms.unshift(v); msg('Firm created.'); }
+    resetForm(); page = 1; renderList(); setView('list');
+  }
+  $('co-save').addEventListener('click', function () { doSave(false); });
+  $('co-save-anyway').addEventListener('click', function () { doSave(true); });
+  $('co-warn-link').addEventListener('click', function () { if (pendingDup) { setView('list'); showDetail(pendingDup); } });
+  $('co-reset').addEventListener('click', function () { resetForm(); msg('Form reset.'); });
+  $('co-fill').addEventListener('click', function () {
+    var x = { name: 'ABC Transport Pvt. Ltd.', contact: 'Demo Contact', phone: '9000000000', email: 'office@example.com', gst: '24AAAAA0000A1Z5', address: 'Sample Office Address, Surat, Gujarat', pan: 'AAAAA0000A', jur: 'Subject to Surat Jurisdiction', res: 'Sample residential / correspondence address', office: '', lp1: '9000000000', lp2: '9000000001', lp3: '9000000002', le1: 'office@example.com', le2: 'accounts@example.com', terms: 'Example transport terms and conditions for LR output' };
+    Object.keys(x).forEach(function (k) { $(IDS[k]).value = x[k]; });
+    updatePreview(); msg('Example loaded. Click Create Firm. Its phone and GST match the sample firm, so you will see the duplicate warning.');
+  });
+  function showDetail(f) {
+    $('co-d-name').textContent = f.name; $('co-detail').hidden = false;
+    var items = [['Firm Name', f.name], ['Contact Person', f.contact], ['Phone', f.phone], ['Email', f.email], ['GST Number', f.gst], ['Status', f.status], ['Address', f.address], ['PAN', f.pan || '—'], ['Jurisdiction', f.jur || '—'],
+      ['Office Address (letterhead)', f.office || 'Uses firm address'], ['LR Numbering', 'Prefix ' + f.prefix + ' · FY starts ' + MONTHS[f.fy - 1] + ' · Next ' + lrNo(f.prefix, f.format, f.seq, f.fy)],
+      ['LR Display', (f.showlogo ? 'Logo shown' : 'Logo hidden') + ' · ' + (f.charges ? 'Contract charges shown' : 'Contract charges hidden') + ' · ' + f.font + 'px'], ['Logo / Signature', (f.logo ? f.logo.name : 'No logo') + ' / ' + (f.sign ? f.sign.name : 'No signature')]];
+    $('co-d-fields').innerHTML = items.map(function (i) { return '<div class="dl-form-group"><label>' + i[0] + '</label><div class="dl-form-control" style="display:flex;align-items:center">' + esc(i[1]) + '</div></div>'; }).join('');
+    $('co-detail').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  }
+  $('co-body').addEventListener('click', function (e) {
+    var b = e.target.closest('[data-act]'); if (!b) return;
+    var f = find(+b.getAttribute('data-id')), a = b.getAttribute('data-act');
+    if (a === 'view') showDetail(f);
+    else if (a === 'del') { if (confirm('Delete firm "' + f.name + '"? (Requires the appropriate company permission.)')) { firms = firms.filter(function (x) { return x !== f; }); $('co-detail').hidden = true; renderList(); } }
+    else if (a === 'edit') {
+      editing = f.id; TEXT.forEach(function (k) { $(IDS[k]).value = f[k] || ''; });
+      $('co-status').value = f.status; $('co-seq').value = f.seq; $('co-fy').value = f.fy; $('co-font').value = f.font;
+      $('co-charges').checked = f.charges; $('co-showlogo').checked = f.showlogo; logo = f.logo; sign = f.sign; fileNote(); $('co-warn').hidden = true;
+      $('co-form-mode').textContent = 'Edit Firm'; $('co-save-label').textContent = 'Update Firm'; updatePreview();
+      msg('Editing ' + f.name + '. Update details or change the LR display settings.'); setView('form');
+    }
+  });
+  $('co-search').addEventListener('input', function () { page = 1; renderList(); });
+  $('co-prev').addEventListener('click', function () { page--; renderList(); });
+  $('co-next').addEventListener('click', function () { page++; renderList(); });
+  $('co-go-add').addEventListener('click', function () { setView('form'); });
+  document.querySelectorAll('[data-co-view]').forEach(function (b) { b.addEventListener('click', function () { setView(b.getAttribute('data-co-view')); }); });
+  renderList(); updatePreview();
+})();
+</script>
+</body>
+</html>

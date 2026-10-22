@@ -1,0 +1,945 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Reefer Unit Work Management Module</title>
+
+    <!-- Remix Icon -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" />
+
+    <!-- Swiper -->
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+
+    <!-- Lenis -->
+    <link rel="stylesheet"
+        href="https://unpkg.com/lenis@1.3.23/dist/lenis.css">
+
+    <!-- Tailwind Output CSS -->
+     <link href="./Assets/css/output.css" rel="stylesheet">
+</head>
+<body>
+
+<!--Header Section start-->
+<header class="main-header">
+    <div class="container">
+
+        <div class="header-inner">
+
+            <a href="index.html" class="header-logo">
+                <img src="Assets/images/transportdesk-logo.svg" alt="Logo">
+            </a>
+
+            <nav class="main-navigation" id="mobileMenu">
+
+                <div class="menu-circle"></div>
+
+                <ul class="navigation-links">
+                    <li><a href="index.html" class="navigation-link active">Home</a></li>
+                    <li><a href="features.html" class="navigation-link">Features</a></li>
+                    <li><a href="reports.html" class="navigation-link">Resources</a></li>
+                    <li><a href="contact.html" class="navigation-link">Contact</a></li>
+                </ul>
+
+                <div class="mobile-header-right">
+                    <a href="#" class="login-btn">Login</a>
+                    <a href="#" class="demo-btn">Book Demo</a>
+                </div>
+
+            </nav>
+
+            <div class="header-right">
+                <a href="#" class="login-btn">Login</a>
+                <a href="#" class="demo-btn">Book Demo</a>
+            </div>
+
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+        </div>
+
+    </div>
+</header>
+
+<!-- Add this after header -->
+<div class="menu-overlay" id="menuOverlay"></div>
+<!--Header section End-->
+
+<section id="overview" class="dl-overview-section">
+    <div class="dl-overview-glow"></div>
+    <div class="dl-overview-pattern"></div>
+    <div class="container">
+        <div class="dl-overview-grid">
+            <div class="dl-overview-content">
+                <div class="dl-overview-badge">
+                    <span class="dl-status-dot"></span>
+                    <span>Enterprise Fleet Management</span>
+                    <span class="dl-badge-divider">|</span>
+                    <span class="dl-badge-highlight">Reefer Unit Work Management Module</span>
+                </div>
+                <h1 class="dl-overview-title"><span class="dl-gradient-text">Reefer Unit Work</span> Management Module</h1>
+                <p class="dl-overview-description">Refrigerated transport vehicles use reefer units to help maintain suitable temperatures during journeys. When servicing, maintenance or replacement work is carried out on these units, businesses need to keep track of the work performed, the service provider, related expenses and warranty information.</p><p class="dl-overview-description">The Reefer Unit Work Management Module makes it easy to record these jobs in one place. Users can link each work record to a vehicle, select the service vendor and company, save the expense, describe the work and attach invoice or warranty documents.</p><p class="dl-overview-description">The module is useful for transport and fleet businesses managing refrigerated vehicles and their associated work records.</p>
+                <div class="dl-overview-actions">
+                    <a href="#simulator" class="btn-primary">
+                        <span>Try Live Reefer Work Demo</span>
+                        <i class="ri-arrow-right-line"></i>
+                    </a>
+                    <a href="#demo" class="dl-btn-demo">
+                        <span class="dl-play-icon"><i class="ri-play-fill"></i></span>
+                        <span>Watch Demo Video</span>
+                    </a>
+                </div>
+                <div class="dl-overview-stats"><div class="dl-stat-item"><div class="dl-stat-number">16</div><div class="dl-stat-label">Key Features</div></div><div class="dl-stat-item"><div class="dl-stat-number dl-stat-red">6</div><div class="dl-stat-label">Simple Steps</div></div><div class="dl-stat-item"><div class="dl-stat-number dl-stat-green">3</div><div class="dl-stat-label">Vendor Types</div></div></div>
+            </div>
+            <div class="dl-overview-visual">
+                <div class="dl-visual-card">
+                    <img src="Assets/images/hero_fleet_dispatch_1792482270822.jpg"
+                         alt="Transportation Fleet Dispatch Logistics Center" class="dl-visual-image">
+                    <div class="dl-visual-overlay"></div>
+                    <div class="dl-visual-topbar">
+                        <div class="dl-live-label"><span class="dl-live-dot"></span><span>Reefer Work Preview</span></div>
+                        <div class="dl-fuel-rate">12-10-2026</div>
+                    </div>
+                    <div class="dl-fuel-slip">
+                        <div class="dl-slip-header">
+                            <span class="dl-slip-title">GJ 05 AB 1234 · ABC Reefer Services</span>
+                            <span class="dl-slip-status">Example Record</span>
+                        </div>
+                        <div class="dl-slip-stats"><div class="dl-slip-stat"><span class="dl-slip-label">Amount</span><span class="dl-slip-value">₹8,500</span></div><div class="dl-slip-stat"><span class="dl-slip-label">Warranty</span><span class="dl-slip-value dl-slip-red">6 Months</span></div><div class="dl-slip-stat"><span class="dl-slip-label">Documents</span><span class="dl-slip-value dl-slip-green">2 Files</span></div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="dl-trusted-section">
+    <div class="dl-trusted-heading"><span>Manage Refrigeration Unit Work, Vendor Bills, Warranty Documents &amp; Vehicle-Wise Expenses in One Place</span></div>
+    <div class="dl-trusted-marquee">
+        <div class="dl-trusted-fade dl-trusted-fade-left"></div>
+        <div class="dl-trusted-fade dl-trusted-fade-right"></div>
+        <div class="dl-trusted-track">
+            <div class="dl-trusted-group"><div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">Vehicle-Wise Reefer Work Records</span></div><div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">Reefer Service Vendor Selection</span></div><div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">Reefer Vendor Directory</span></div><div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">Vendor Type Classification</span></div><div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">Company Association</span></div><div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">Work Date and Cost</span></div><div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">Work Specification</span></div><div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">Warranty Information</span></div><div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">Invoice Upload and Access</span></div><div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">Warranty Document Upload</span></div><div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">Document Updates</span></div><div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">Search and Filters</span></div><div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">Sorting and Pagination</span></div><div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">Payment-Related Tracking</span></div><div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">Duplicate Entry Warning</span></div><div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">View, Edit and Delete</span></div></div>
+            <div class="dl-trusted-group" aria-hidden="true"><div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">Vehicle-Wise Reefer Work Records</span></div><div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">Reefer Service Vendor Selection</span></div><div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">Reefer Vendor Directory</span></div><div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">Vendor Type Classification</span></div><div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">Company Association</span></div><div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">Work Date and Cost</span></div><div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">Work Specification</span></div><div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">Warranty Information</span></div><div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">Invoice Upload and Access</span></div><div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">Warranty Document Upload</span></div><div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">Document Updates</span></div><div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">Search and Filters</span></div><div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">Sorting and Pagination</span></div><div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">Payment-Related Tracking</span></div><div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">Duplicate Entry Warning</span></div><div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">View, Edit and Delete</span></div></div>
+        </div>
+    </div>
+</section>
+
+<section id="demo" class="dl-demo-section">
+    <div class="dl-demo-glow"></div>
+    <div class="dl-container">
+        <div class="heading-wrapper">
+            <span class="heading-tag">Video Demonstration</span>
+            <h2 class="heading-title">Watch How <span>Reefer Unit Work Management</span> Works</h2>
+            <p>Watch our step-by-step demonstration to learn how to add a reefer unit work record, select a vendor, enter costs and warranty details, upload documents, and find previous work records.</p>
+        </div>
+        <div class="dl-demo-grid">
+            <div class="dl-demo-video-column">
+                <div class="dl-video-card">
+                    <div class="dl-video-toolbar">
+                        <div class="dl-video-toolbar-left">
+                            <span class="dl-window-dot dl-dot-red"></span>
+                            <span class="dl-window-dot dl-dot-yellow"></span>
+                            <span class="dl-window-dot dl-dot-green"></span>
+                            <span class="dl-video-filename">reefer_unit_work_module_demo</span>
+                        </div>
+                        <span class="dl-video-quality">Demo Video</span>
+                    </div>
+                    <div class="dl-video-preview">
+                        <img src="Assets/images/dashboard.png" alt="reefer_unit_work_module_demo preview" class="dl-video-thumbnail">
+                        <div class="dl-video-overlay"></div>
+                        <button type="button" class="dl-video-play" aria-label="Play demonstration video">
+                            <i class="ri-play-fill"></i>
+                            <span class="dl-video-ping"></span>
+                        </button>
+                        <div class="dl-video-meta">
+                            <div class="dl-video-meta-left">
+                                <span class="dl-video-current-chapter">[Demo Video Will Be Displayed Here]</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="simulator" class="dl-simulator-section">
+    <div class="dl-container">
+        <div class="dl-simulator-header">
+            <div class="heading-wrapper heading-wrap-left">
+                <span class="heading-tag">Practical Example</span>
+                <h2 class="heading-title">Refrigeration Unit <span>Repair</span></h2>
+                <p>A refrigerated truck has a cooling issue, and the business sends it to a reefer service workshop. After the repair, the office team records the details in the system. This is an illustrative example. The business can later search for the vehicle, open the work record, check the expense and view the saved invoice or warranty file.</p>
+            </div>
+            <div class="dl-view-switcher" id="rf-tabs"><button type="button" class="dl-view-tab dl-view-tab-active" data-view="add"><i class="ri-add-circle-line"></i> Add Reefer Unit Work</button><button type="button" class="dl-view-tab" data-view="list"><i class="ri-list-check-2"></i> Reefer Unit Work List</button></div>
+        </div>
+        <div class="dl-stats-grid"><div class="dl-stat-card"><div class="dl-stat-label"><span>Work Records</span><i class="ri-snowflake-line"></i></div><div class="dl-stat-value" id="rf-s-count">0</div><p class="dl-stat-note">In the work list</p></div><div class="dl-stat-card"><div class="dl-stat-label"><span>Total Amount</span><i class="ri-money-rupee-circle-line dl-red-icon"></i></div><div class="dl-stat-value dl-red-text" id="rf-s-amt">₹0</div><p class="dl-stat-note">Recorded work expenses</p></div><div class="dl-stat-card"><div class="dl-stat-label"><span>Vehicles</span><i class="ri-truck-line dl-green-icon"></i></div><div class="dl-stat-value dl-green-text" id="rf-s-veh">0</div><p class="dl-stat-note">Vehicles with reefer work</p></div><div class="dl-stat-card dl-stat-card-total"><div class="dl-stat-label"><span>Documents Attached</span><span class="dl-status-dot"></span></div><div class="dl-stat-value dl-stat-total-value" id="rf-s-doc">0</div><p class="dl-stat-note dl-green-text">Invoices and warranty files</p></div></div>
+        <div class="dl-calculator-panel" id="rf-view-add"><div class="dl-bill-master"><div class="dl-bill-master-header"><div class="dl-bill-heading"><span>Add Reefer Unit Work</span><span class="dl-heading-separator">·</span><span class="dl-invoice-number">Sample details</span></div></div>
+<div class="dl-bill-fields"><div class="dl-form-group"><label for="rf-veh">Vehicle</label><select id="rf-veh" class="dl-form-control"><option>GJ 05 AB 1234</option><option>MH-12-RN-4821</option><option>MH-14-BT-9102</option></select></div><div class="dl-form-group"><label for="rf-co">Company</label><select id="rf-co" class="dl-form-control"><option>ABC Cold Transport</option></select></div><div class="dl-form-group"><label for="rf-vendor">Reefer/Cabin Vendor (Type)</label><select id="rf-vendor" class="dl-form-control"><option>ABC Reefer Services (Reefer)</option></select></div><div class="dl-form-group"><label for="rf-date">Work Date</label><input id="rf-date" class="dl-form-control" type="date" value="2026-10-12" ></div><div class="dl-form-group"><label for="rf-amt">Amount (₹)</label><input id="rf-amt" class="dl-form-control" type="number" value="8500" min="0" step="0.01"></div><div class="dl-form-group"><label for="rf-spec">Specification</label><input id="rf-spec" class="dl-form-control" type="text" value="Cooling unit inspection and component replacement" ></div><div class="dl-form-group"><label for="rf-warr">Warranty</label><input id="rf-warr" class="dl-form-control" type="text" value="Six months on replaced component" ></div></div><div class="dl-bill-options"><label for="rf-inv" class="dl-secondary-button dl-upload-button"><i class="ri-upload-2-line"></i><span id="rf-inv-name">Repair invoice</span><input id="rf-inv" type="file" accept=".pdf,.jpg,.jpeg,.png"></label><label for="rf-wd" class="dl-secondary-button dl-upload-button"><i class="ri-shield-check-line"></i><span id="rf-wd-name">Warranty card</span><input id="rf-wd" type="file" accept=".pdf,.jpg,.jpeg,.png"></label><span class="dl-formula-note">PDF, JPG, JPEG or PNG · up to 2 MB per file</span></div></div><div class="dl-table-toolbar"><div class="dl-supported-formats" id="rf-msg">Click Save to store the work record.</div><div class="dl-toolbar-actions"><button type="button" class="dl-primary-button" id="rf-save"><i class="ri-save-3-line"></i> Save Reefer Unit Work</button></div></div><div class="dl-calculator-footer"><div class="dl-documentation-note"><i class="ri-information-line"></i><span>The vendor directory groups service providers as Reefer, Cabin, or Reefer &amp; Cabin. The system can warn about a record with the same vehicle, vendor, company and date before saving — try saving the same record twice.</span></div></div></div><div class="dl-calculator-panel" id="rf-view-list" hidden><div class="dl-table-toolbar"><div class="dl-search-box"><i class="ri-search-line"></i><input type="search" id="rf-search" placeholder="Search by vehicle number or vendor name..."></div><div class="dl-toolbar-actions"><select id="rf-sort" class="dl-form-control"><option value="date">Sort: Date</option><option value="vendor">Sort: Vendor</option></select></div></div><div class="dl-table-wrapper"><table class="dl-vehicle-table"><thead><tr><th>Vehicle</th><th>Vendor</th><th>Company</th><th>Work Date</th><th class="dl-text-right">Amount</th><th>Documents</th><th>Action</th></tr></thead><tbody id="rf-body"></tbody></table></div><div class="dl-calculator-footer"><div class="dl-documentation-note" id="rf-detail"><i class="ri-information-line"></i><span>Open a record to review the vehicle, vendor, company, amount, warranty and documents.</span></div><div class="dl-supported-formats">Demo only: nothing is stored.</div></div></div>
+    </div>
+</section>
+
+<section id="features" class="dl-features-section">
+    <div class="container">
+        <div class="heading-wrapper">
+            <span class="heading-tag">Key Module Features</span>
+            <h2 class="heading-title">Everything You Need for <span>Reefer Unit Work</span></h2>
+            <div class="dl-features-filters"><button type="button" class="dl-filter-btn is-active" data-filter="all">All Features (16)</button><button type="button" class="dl-filter-btn" data-filter="work">Work Records &amp; Costs</button><button type="button" class="dl-filter-btn" data-filter="vendors">Vendors &amp; Companies</button><button type="button" class="dl-filter-btn" data-filter="docs">Warranty &amp; Documents</button><button type="button" class="dl-filter-btn" data-filter="search">Search, Payments &amp; Controls</button></div>
+        </div>
+        <div class="dl-features-grid">
+            <article class="dl-feature-card" data-category="work">
+                <div class="dl-feature-card-content">
+                    <div class="dl-feature-icon"><i class="ri-snowflake-line"></i></div>
+                    <div class="dl-feature-card-heading">
+                        <span class="dl-feature-number">4.1</span>
+                        <h3>Vehicle-Wise Reefer Work Records</h3>
+                    </div>
+                    <p>Link each repair or service record to a specific vehicle so you can review work done on that vehicle's refrigeration unit.</p>
+                </div>
+            </article>
+            <article class="dl-feature-card" data-category="vendors">
+                <div class="dl-feature-card-content">
+                    <div class="dl-feature-icon"><i class="ri-store-2-line"></i></div>
+                    <div class="dl-feature-card-heading">
+                        <span class="dl-feature-number">4.2</span>
+                        <h3>Reefer Service Vendor Selection</h3>
+                    </div>
+                    <p>Select the Reefer/Cabin Vendor or workshop responsible for the work. Use a Reefer-type provider for refrigeration work, or a Reefer &amp; Cabin provider when the same workshop handles both services. The selection comes from the separate reefer/cabin vendor directory.</p>
+                </div>
+            </article>
+            <article class="dl-feature-card" data-category="vendors">
+                <div class="dl-feature-card-content">
+                    <div class="dl-feature-icon"><i class="ri-contacts-book-line"></i></div>
+                    <div class="dl-feature-card-heading">
+                        <span class="dl-feature-number">4.3</span>
+                        <h3>Reefer Vendor Directory</h3>
+                    </div>
+                    <p>Keep Reefer/Cabin Vendor names, contact numbers, email addresses and addresses in a shared service-provider directory, making workshop selection and follow-up easier.</p>
+                </div>
+            </article>
+            <article class="dl-feature-card" data-category="vendors">
+                <div class="dl-feature-card-content">
+                    <div class="dl-feature-icon"><i class="ri-price-tag-3-line"></i></div>
+                    <div class="dl-feature-card-heading">
+                        <span class="dl-feature-number">4.4</span>
+                        <h3>Vendor Type Classification</h3>
+                    </div>
+                    <p>The Reefer/Cabin Vendor directory supports three classifications: Reefer (refrigeration work), Cabin (cabin/body work), and Reefer &amp; Cabin (both). Select the vendor that actually completed the job.</p>
+                </div>
+            </article>
+            <article class="dl-feature-card" data-category="vendors work">
+                <div class="dl-feature-card-content">
+                    <div class="dl-feature-icon"><i class="ri-building-line"></i></div>
+                    <div class="dl-feature-card-heading">
+                        <span class="dl-feature-number">4.5</span>
+                        <h3>Company Association</h3>
+                    </div>
+                    <p>Associate the work with the relevant company when the fleet is operated across multiple companies.</p>
+                </div>
+            </article>
+            <article class="dl-feature-card" data-category="work">
+                <div class="dl-feature-card-content">
+                    <div class="dl-feature-icon"><i class="ri-money-rupee-circle-line"></i></div>
+                    <div class="dl-feature-card-heading">
+                        <span class="dl-feature-number">4.6</span>
+                        <h3>Work Date and Cost</h3>
+                    </div>
+                    <p>Record when the work was performed and the amount charged so the business can review individual reefer work expenses.</p>
+                </div>
+            </article>
+            <article class="dl-feature-card" data-category="work">
+                <div class="dl-feature-card-content">
+                    <div class="dl-feature-icon"><i class="ri-file-text-line"></i></div>
+                    <div class="dl-feature-card-heading">
+                        <span class="dl-feature-number">4.7</span>
+                        <h3>Work Specification</h3>
+                    </div>
+                    <p>Describe the actual work completed, such as checking the cooling unit, replacing a component or carrying out a repair.</p>
+                </div>
+            </article>
+            <article class="dl-feature-card" data-category="docs">
+                <div class="dl-feature-card-content">
+                    <div class="dl-feature-icon"><i class="ri-shield-check-line"></i></div>
+                    <div class="dl-feature-card-heading">
+                        <span class="dl-feature-number">4.8</span>
+                        <h3>Warranty Information</h3>
+                    </div>
+                    <p>Save the warranty details supplied for the work or replacement parts. This is a text field for warranty information, not a confirmed automatic expiry-alert system.</p>
+                </div>
+            </article>
+            <article class="dl-feature-card" data-category="docs">
+                <div class="dl-feature-card-content">
+                    <div class="dl-feature-icon"><i class="ri-file-upload-line"></i></div>
+                    <div class="dl-feature-card-heading">
+                        <span class="dl-feature-number">4.9</span>
+                        <h3>Invoice Upload and Access</h3>
+                    </div>
+                    <p>Attach a PDF or image of the vendor invoice to the work record and view or download it later.</p>
+                </div>
+            </article>
+            <article class="dl-feature-card" data-category="docs">
+                <div class="dl-feature-card-content">
+                    <div class="dl-feature-icon"><i class="ri-file-shield-2-line"></i></div>
+                    <div class="dl-feature-card-heading">
+                        <span class="dl-feature-number">4.10</span>
+                        <h3>Warranty Document Upload</h3>
+                    </div>
+                    <p>Attach and access a separate warranty card or warranty document for the recorded work.</p>
+                </div>
+            </article>
+            <article class="dl-feature-card" data-category="docs">
+                <div class="dl-feature-card-content">
+                    <div class="dl-feature-icon"><i class="ri-file-edit-line"></i></div>
+                    <div class="dl-feature-card-heading">
+                        <span class="dl-feature-number">4.11</span>
+                        <h3>Document Updates</h3>
+                    </div>
+                    <p>Authorized users can replace or remove stored invoice and warranty documents when required.</p>
+                </div>
+            </article>
+            <article class="dl-feature-card" data-category="search">
+                <div class="dl-feature-card-content">
+                    <div class="dl-feature-icon"><i class="ri-filter-3-line"></i></div>
+                    <div class="dl-feature-card-heading">
+                        <span class="dl-feature-number">4.12</span>
+                        <h3>Search and Filters</h3>
+                    </div>
+                    <p>Find work records by vehicle number or vendor name, and narrow the listing using the payment-status filter.</p>
+                </div>
+            </article>
+            <article class="dl-feature-card" data-category="search">
+                <div class="dl-feature-card-content">
+                    <div class="dl-feature-icon"><i class="ri-sort-desc"></i></div>
+                    <div class="dl-feature-card-heading">
+                        <span class="dl-feature-number">4.13</span>
+                        <h3>Sorting and Pagination</h3>
+                    </div>
+                    <p>Browse records page by page and sort the listing by date or vendor.</p>
+                </div>
+            </article>
+            <article class="dl-feature-card" data-category="search">
+                <div class="dl-feature-card-content">
+                    <div class="dl-feature-icon"><i class="ri-wallet-3-line"></i></div>
+                    <div class="dl-feature-card-heading">
+                        <span class="dl-feature-number">4.14</span>
+                        <h3>Payment-Related Tracking</h3>
+                    </div>
+                    <p>The module is connected to payment allocation functionality. Users can review available payment status information associated with work expenses, subject to the application's payment setup.</p>
+                </div>
+            </article>
+            <article class="dl-feature-card" data-category="search">
+                <div class="dl-feature-card-content">
+                    <div class="dl-feature-icon"><i class="ri-file-copy-line"></i></div>
+                    <div class="dl-feature-card-heading">
+                        <span class="dl-feature-number">4.15</span>
+                        <h3>Duplicate Entry Warning</h3>
+                    </div>
+                    <p>When the same vehicle, vendor, company and work date are entered again, the create flow can warn the user before allowing the record to be saved.</p>
+                </div>
+            </article>
+            <article class="dl-feature-card" data-category="work search">
+                <div class="dl-feature-card-content">
+                    <div class="dl-feature-icon"><i class="ri-edit-line"></i></div>
+                    <div class="dl-feature-card-heading">
+                        <span class="dl-feature-number">4.16</span>
+                        <h3>View, Edit and Delete</h3>
+                    </div>
+                    <p>Open work records to review details and, with appropriate permissions, correct or remove records.</p>
+                </div>
+            </article>
+        </div>
+    </div>
+</section>
+
+<section class="dl-workflow-section">
+    <div class="container">
+        <div class="heading-wrapper heading-wrap-left">
+            <span class="heading-tag">Step by Step</span>
+            <h2 class="heading-title">How Does the <span>Reefer Unit Work Module</span> Work?</h2>
+        </div>
+        <div class="dl-workflow-grid">
+            <article class="dl-workflow-card">
+                <div class="dl-workflow-card-content">
+                    <div class="dl-workflow-card-top">
+                        <span class="dl-workflow-number">01</span>
+                        <div class="dl-workflow-icon"><i class="ri-folder-open-line"></i></div>
+                    </div>
+                    <h3 class="dl-workflow-card-title">Step 1: Open the Reefer Unit Work Section</h3>
+                    <p class="dl-workflow-card-description">Open the Reefer Unit Work list to view existing service and maintenance records.</p>
+                    <ul class="dl-workflow-checklist"><li><i class="ri-check-line"></i><span>You can search for a vehicle or vendor and open a record to see its details.</span></li></ul>
+                </div>
+                <div class="dl-workflow-card-footer"><span>Step 01</span></div>
+            </article>
+            <article class="dl-workflow-card">
+                <div class="dl-workflow-card-content">
+                    <div class="dl-workflow-card-top">
+                        <span class="dl-workflow-number">02</span>
+                        <div class="dl-workflow-icon"><i class="ri-file-add-line"></i></div>
+                    </div>
+                    <h3 class="dl-workflow-card-title">Step 2: Add a New Work Record</h3>
+                    <p class="dl-workflow-card-description">Choose Add Reefer Unit Work.</p>
+                    <ul class="dl-workflow-checklist"><li><i class="ri-check-line"></i><span>Select the vehicle and company, then choose the Reefer/Cabin Vendor responsible for the job.</span></li><li><i class="ri-check-line"></i><span>The vendor directory groups service providers as Reefer, Cabin, or Reefer &amp; Cabin.</span></li><li><i class="ri-check-line"></i><span>Enter the date the work took place.</span></li></ul>
+                </div>
+                <div class="dl-workflow-card-footer"><span>Step 02</span></div>
+            </article>
+            <article class="dl-workflow-card">
+                <div class="dl-workflow-card-content">
+                    <div class="dl-workflow-card-top">
+                        <span class="dl-workflow-number">03</span>
+                        <div class="dl-workflow-icon"><i class="ri-money-rupee-circle-line"></i></div>
+                    </div>
+                    <h3 class="dl-workflow-card-title">Step 3: Enter Work and Expense Details</h3>
+                    <p class="dl-workflow-card-description">Enter the work amount and describe the service, repair, replacement or other work in the Specification field.</p>
+                    <ul class="dl-workflow-checklist"><li><i class="ri-check-line"></i><span>Add warranty information when applicable.</span></li></ul>
+                </div>
+                <div class="dl-workflow-card-footer"><span>Step 03</span></div>
+            </article>
+            <article class="dl-workflow-card">
+                <div class="dl-workflow-card-content">
+                    <div class="dl-workflow-card-top">
+                        <span class="dl-workflow-number">04</span>
+                        <div class="dl-workflow-icon"><i class="ri-file-upload-line"></i></div>
+                    </div>
+                    <h3 class="dl-workflow-card-title">Step 4: Upload Documents</h3>
+                    <p class="dl-workflow-card-description">Upload the related invoice and warranty document if you have them.</p>
+                    <ul class="dl-workflow-checklist"><li><i class="ri-check-line"></i><span>The form accepts PDF, JPG, JPEG and PNG files up to 2 MB per file.</span></li></ul>
+                </div>
+                <div class="dl-workflow-card-footer"><span>Step 04</span></div>
+            </article>
+            <article class="dl-workflow-card">
+                <div class="dl-workflow-card-content">
+                    <div class="dl-workflow-card-top">
+                        <span class="dl-workflow-number">05</span>
+                        <div class="dl-workflow-icon"><i class="ri-save-3-line"></i></div>
+                    </div>
+                    <h3 class="dl-workflow-card-title">Step 5: Save and Review</h3>
+                    <p class="dl-workflow-card-description">Save the record and open its detail page to review the vehicle, vendor, company, amount, warranty and documents.</p>
+                    <ul class="dl-workflow-checklist"><li><i class="ri-check-line"></i><span>The system can warn about a record with the same vehicle, vendor, company and date before saving.</span></li></ul>
+                </div>
+                <div class="dl-workflow-card-footer"><span>Step 05</span></div>
+            </article>
+            <article class="dl-workflow-card">
+                <div class="dl-workflow-card-content">
+                    <div class="dl-workflow-card-top">
+                        <span class="dl-workflow-number">06</span>
+                        <div class="dl-workflow-icon"><i class="ri-search-line"></i></div>
+                    </div>
+                    <h3 class="dl-workflow-card-title">Step 6: Find and Update Previous Work</h3>
+                    <p class="dl-workflow-card-description">Use vehicle number, vendor name and payment-status filtering to find records.</p>
+                    <ul class="dl-workflow-checklist"><li><i class="ri-check-line"></i><span>Authorized users can edit a record, replace documents or delete an entry when necessary.</span></li></ul>
+                </div>
+                <div class="dl-workflow-card-footer"><span>Step 06</span></div>
+            </article>
+        </div>
+    </div>
+</section>
+
+<section class="results-section">
+    <div class="container">
+        <div class="heading-wrapper">
+            <span class="heading-tag">Benefits</span>
+            <h2 class="heading-title heading-light">Benefits of <span>Reefer Unit Work Management</span></h2>
+        </div>
+        <div class="results-grid">
+            <div class="result-card">
+                <div class="result-icon"><i class="ri-history-line"></i></div>
+                <h3>Keep Work History Organized</h3>
+                <p>Maintain vehicle-linked reefer unit service and repair records instead of scattered bills.</p>
+            </div>
+            <div class="result-card">
+                <div class="result-icon"><i class="ri-money-rupee-circle-line"></i></div>
+                <h3>Track Repair Expenses</h3>
+                <p>View the costs recorded for servicing or replacing reefer unit components.</p>
+            </div>
+            <div class="result-card">
+                <div class="result-icon"><i class="ri-contacts-book-line"></i></div>
+                <h3>Manage Service Providers</h3>
+                <p>Keep useful contact details for reefer and cabin-related vendors.</p>
+            </div>
+            <div class="result-card">
+                <div class="result-icon"><i class="ri-file-shield-2-line"></i></div>
+                <h3>Access Important Documents</h3>
+                <p>Find the corresponding invoice and warranty file alongside each work record.</p>
+            </div>
+            <div class="result-card">
+                <div class="result-icon"><i class="ri-edit-line"></i></div>
+                <h3>Make Corrections Easily</h3>
+                <p>Update work descriptions, amounts and documents when changes are needed.</p>
+            </div>
+            <div class="result-card">
+                <div class="result-icon"><i class="ri-search-line"></i></div>
+                <h3>Find Older Records Faster</h3>
+                <p>Search by vehicle or vendor and filter payment-related records.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="faq" class="dl-faq-section">
+    <div class="container">
+        <div class="heading-wrapper">
+            <span class="heading-tag">Got Questions?</span>
+            <h2 class="heading-title">Frequently Asked <span>Questions</span></h2>
+            <div class="dl-faq-filters"><button class="dl-faq-filter active" type="button">All</button><button class="dl-faq-filter" type="button">Records</button><button class="dl-faq-filter" type="button">Vendors</button><button class="dl-faq-filter" type="button">Warranty</button><button class="dl-faq-filter" type="button">Invoices</button><button class="dl-faq-filter" type="button">Corrections</button><button class="dl-faq-filter" type="button">Search</button><button class="dl-faq-filter" type="button">Payments</button><button class="dl-faq-filter" type="button">Monitoring</button></div>
+        </div>
+        <div class="dl-faq-list">
+            <div class="dl-faq-item active">
+                <button class="dl-faq-question" type="button" aria-expanded="true" aria-controls="dl-faq-answer-1">
+                    <span class="dl-faq-question-content">
+                        <span class="dl-faq-number">Q1</span>
+                        <span class="dl-faq-question-text">What is a reefer unit work record?</span>
+                    </span>
+                    <span class="dl-faq-arrow"><i class="ri-arrow-down-s-line"></i></span>
+                </button>
+                <div class="dl-faq-answer" id="dl-faq-answer-1">
+                    <div class="dl-faq-answer-content">
+                        <p>It is a record of service, repair or related work performed on a vehicle's refrigeration unit.</p>
+                        <div class="dl-faq-topic"><span>Topic: Records</span></div>
+                    </div>
+                </div>
+            </div>
+            <div class="dl-faq-item">
+                <button class="dl-faq-question" type="button" aria-expanded="false" aria-controls="dl-faq-answer-2">
+                    <span class="dl-faq-question-content">
+                        <span class="dl-faq-number">Q2</span>
+                        <span class="dl-faq-question-text">Can I choose a specific vehicle and vendor?</span>
+                    </span>
+                    <span class="dl-faq-arrow"><i class="ri-arrow-down-s-line"></i></span>
+                </button>
+                <div class="dl-faq-answer" id="dl-faq-answer-2">
+                    <div class="dl-faq-answer-content">
+                        <p>Yes. Each record is linked to a vehicle, company and a selected service provider from the Reefer/Cabin Vendor directory.</p>
+                        <div class="dl-faq-topic"><span>Topic: Vendors</span></div>
+                    </div>
+                </div>
+            </div>
+            <div class="dl-faq-item">
+                <button class="dl-faq-question" type="button" aria-expanded="false" aria-controls="dl-faq-answer-3">
+                    <span class="dl-faq-question-content">
+                        <span class="dl-faq-number">Q3</span>
+                        <span class="dl-faq-question-text">Can I record warranty details?</span>
+                    </span>
+                    <span class="dl-faq-arrow"><i class="ri-arrow-down-s-line"></i></span>
+                </button>
+                <div class="dl-faq-answer" id="dl-faq-answer-3">
+                    <div class="dl-faq-answer-content">
+                        <p>Yes. You can enter warranty information and attach a warranty document.</p>
+                        <div class="dl-faq-topic"><span>Topic: Warranty</span></div>
+                    </div>
+                </div>
+            </div>
+            <div class="dl-faq-item">
+                <button class="dl-faq-question" type="button" aria-expanded="false" aria-controls="dl-faq-answer-4">
+                    <span class="dl-faq-question-content">
+                        <span class="dl-faq-number">Q4</span>
+                        <span class="dl-faq-question-text">Can I upload an invoice?</span>
+                    </span>
+                    <span class="dl-faq-arrow"><i class="ri-arrow-down-s-line"></i></span>
+                </button>
+                <div class="dl-faq-answer" id="dl-faq-answer-4">
+                    <div class="dl-faq-answer-content">
+                        <p>Yes. PDF and supported image files can be attached, subject to the 2 MB file limit.</p>
+                        <div class="dl-faq-topic"><span>Topic: Invoices</span></div>
+                    </div>
+                </div>
+            </div>
+            <div class="dl-faq-item">
+                <button class="dl-faq-question" type="button" aria-expanded="false" aria-controls="dl-faq-answer-5">
+                    <span class="dl-faq-question-content">
+                        <span class="dl-faq-number">Q5</span>
+                        <span class="dl-faq-question-text">Can I correct an earlier entry?</span>
+                    </span>
+                    <span class="dl-faq-arrow"><i class="ri-arrow-down-s-line"></i></span>
+                </button>
+                <div class="dl-faq-answer" id="dl-faq-answer-5">
+                    <div class="dl-faq-answer-content">
+                        <p>Yes. Authorized users can edit existing work records and replace attached documents.</p>
+                        <div class="dl-faq-topic"><span>Topic: Corrections</span></div>
+                    </div>
+                </div>
+            </div>
+            <div class="dl-faq-item">
+                <button class="dl-faq-question" type="button" aria-expanded="false" aria-controls="dl-faq-answer-6">
+                    <span class="dl-faq-question-content">
+                        <span class="dl-faq-number">Q6</span>
+                        <span class="dl-faq-question-text">Can I find work done on a particular vehicle?</span>
+                    </span>
+                    <span class="dl-faq-arrow"><i class="ri-arrow-down-s-line"></i></span>
+                </button>
+                <div class="dl-faq-answer" id="dl-faq-answer-6">
+                    <div class="dl-faq-answer-content">
+                        <p>Yes. Search by vehicle number to find matching reefer work records.</p>
+                        <div class="dl-faq-topic"><span>Topic: Search</span></div>
+                    </div>
+                </div>
+            </div>
+            <div class="dl-faq-item">
+                <button class="dl-faq-question" type="button" aria-expanded="false" aria-controls="dl-faq-answer-7">
+                    <span class="dl-faq-question-content">
+                        <span class="dl-faq-number">Q7</span>
+                        <span class="dl-faq-question-text">Can I see the payment status?</span>
+                    </span>
+                    <span class="dl-faq-arrow"><i class="ri-arrow-down-s-line"></i></span>
+                </button>
+                <div class="dl-faq-answer" id="dl-faq-answer-7">
+                    <div class="dl-faq-answer-content">
+                        <p>The work listing includes payment-status filtering, using the application's existing payment allocation functions.</p>
+                        <div class="dl-faq-topic"><span>Topic: Payments</span></div>
+                    </div>
+                </div>
+            </div>
+            <div class="dl-faq-item">
+                <button class="dl-faq-question" type="button" aria-expanded="false" aria-controls="dl-faq-answer-8">
+                    <span class="dl-faq-question-content">
+                        <span class="dl-faq-number">Q8</span>
+                        <span class="dl-faq-question-text">Does the module automatically measure reefer temperatures or send warranty-expiry alerts?</span>
+                    </span>
+                    <span class="dl-faq-arrow"><i class="ri-arrow-down-s-line"></i></span>
+                </button>
+                <div class="dl-faq-answer" id="dl-faq-answer-8">
+                    <div class="dl-faq-answer-content">
+                        <p>The reviewed code records work details and warranties, but does not establish live temperature monitoring or automatic warranty-expiry notifications.</p>
+                        <div class="dl-faq-topic"><span>Topic: Monitoring</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="dl-faq-cta">
+            <div class="dl-faq-cta-content">
+                <h3>Simplify Your Reefer Unit Work Management</h3>
+                <p>Keep your refrigerated vehicle service records, vendor details, repair costs, invoices and warranties organized in one convenient system. Find previous work quickly and maintain clearer information for your transport business.</p>
+                
+            </div>
+            <button class="dl-faq-cta-button" type="button">Get Started Now</button>
+        </div>
+    </div>
+</section>
+
+<!--footer section start-->
+<footer class="footer">
+
+    <!-- Newsletter -->
+    <div class="footer-newsletter">
+        <div class="container">
+
+            <div class="newsletter-wrapper">
+
+                <div class="newsletter-content">
+                    <h2>Stay ahead of the curve</h2>
+                    <p>
+                        Fleet management insights, product updates, and industry news.
+                    </p>
+                </div>
+
+                <form class="newsletter-form">
+
+                    <input
+                        type="email"
+                        placeholder="Enter your email"
+                    >
+
+                    <button type="submit">
+                        Subscribe
+
+                       <i class="ri-arrow-right-line"></i>
+
+                    </button>
+
+                </form>
+
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Footer Main -->
+
+    <div class="footer-main">
+
+        <div class="container">
+
+            <div class="footer-grid">
+
+                <!-- Left -->
+
+                <div class="footer-about">
+
+                    <a href="index.html" class="footer-logo">
+                         <img src="Assets/images/transportdesk-logo-dark.svg" alt="footer-logo">
+                    </a>
+
+                    <p>
+                        The intelligent transportation platform that puts fleet directors
+                        in complete control of their operations.
+                    </p>
+
+                    <div class="footer-social">
+
+                        <a href="#">
+                            <i class="ri-facebook-fill"></i>
+                        </a>
+
+                        <a href="#">
+                            <i class="ri-instagram-line"></i>
+                        </a>
+
+                        <a href="#">
+                            <i class="ri-twitter-line"></i>
+                        </a>
+
+                        <a href="#">
+                            <i class="ri-linkedin-fill"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <!-- Product -->
+
+                <div class="footer-links">
+
+                    <h3>Product</h3>
+
+                    <ul>
+        <li>
+            <a href="features.html" class="footer-link">Features</a>
+        </li>
+
+        <li>
+            <a href="modules.html" class="footer-link">Modules</a>
+        </li>
+
+        <li>
+            <a href="solutions.html" class="footer-link">Solutions</a>
+        </li>
+
+        <li>
+            <a href="reports.html" class="footer-link">Reports</a>
+        </li>
+
+        <li>
+            <a href="contact.html" class="footer-link">Contact</a>
+        </li>
+    </ul>
+
+                </div>
+
+                <!-- Resources -->
+
+                <div class="footer-links">
+
+                    <h3>Resources</h3>
+
+                    <ul>
+
+                        <li><a href="documentation.html" class="footer-link">Documentation</a></li>
+
+                        <li><a href="faq.html" class="footer-link">FAQ</a></li>
+
+                        <li><a href="privacy-policy.html" class="footer-link">Privacy Policy</a></li>
+
+                    </ul>
+
+                </div>
+
+                <!-- Support -->
+
+                <div class="footer-links">
+
+                    <h3>Support</h3>
+
+                    <ul>
+
+                        <li><a href="#" class="footer-link">Help Center</a></li>
+
+                        <li><a href="#" class="footer-link">Status</a></li>
+
+                        <li><a href="#" class="footer-link">Security</a></li>
+
+                    </ul>
+
+                </div>
+
+                <!-- Contact -->
+
+                <div class="footer-contact">
+
+                    <div class="contact-item">
+
+                        <div class="icon">
+                            <i class="ri-mail-line"></i>
+                        </div>
+
+                        <div>
+
+                            <span>Email</span>
+
+                            <a href="#">
+                               jay@prismitsystems.com
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                    <div class="contact-item">
+
+                        <div class="icon">
+                            <i class="ri-phone-fill"></i>
+                        </div>
+
+                        <div>
+
+                            <span>Call</span>
+                          <div class="footer-contact-num">
+                            <a href="#">
+                                6355 258 003
+                            </a>
+
+                             <a href="#">
+                               +1 562-312-0282
+                            </a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="contact-item">
+
+                        <div class="icon">
+                            <i class="ri-map-pin-line"></i>
+                        </div>
+
+                        <div>
+
+                            <span>Location (India)</span>
+                            <div class="footer-location">
+                            <p>The Galleria Business Hub, Adajan Gam, Pal Gam, Surat, Gujarat, India 394510</p>
+                            </div>
+                        </div>
+
+                    </div>
+                     <div class="contact-item">
+
+                        <div class="icon">
+                            <i class="ri-map-pin-line"></i>
+                        </div>
+
+                        <div>
+
+                            <span>Location (USA)</span>
+                            <div class="footer-location">
+                             <p>Norwalk, California, 90650. USA</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Bottom -->
+
+    <div class="footer-bottom">
+
+        <div class="container">
+
+            <div class="bottom-wrapper">
+
+                <p>
+                    © 2026 All rights reserved.
+                </p>
+
+                <ul>
+
+                    <li><a href="#">Privacy Policy</a></li>
+
+                    <li><a href="#">Terms of Service</a></li>
+
+                    <li><a href="#">Cookie Policy</a></li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</footer>
+<!--footer section end-->
+
+<script>
+(function () {
+    if (!document.getElementById('rf-body')) return;
+    var $ = function (id) { return document.getElementById(id); };
+    function esc(s) { return String(s == null ? '' : s).replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); }
+    function money(n) { return '₹' + Number(n || 0).toLocaleString('en-IN', { minimumFractionDigits: 0, maximumFractionDigits: 2 }); }
+    function dmy(d) { return d ? d.split('-').reverse().join('-') : '—'; }
+    function show(tabs, map, view) {
+        Array.prototype.forEach.call($(tabs).querySelectorAll('.dl-view-tab'), function (x) { x.classList.toggle('dl-view-tab-active', x.getAttribute('data-view') === view); });
+        Object.keys(map).forEach(function (k) { $(map[k]).hidden = k !== view; });
+    }
+
+    var W = [], seq = 0, warned = '';
+    var map = { add: 'rf-view-add', list: 'rf-view-list' };
+    function render() {
+        var q = $('rf-search').value.trim().toLowerCase();
+        var l = W.filter(function (w) { return !q || (w.veh + ' ' + w.vendor).toLowerCase().indexOf(q) > -1; });
+        l.sort($('rf-sort').value === 'vendor' ? function (a, b) { return a.vendor.localeCompare(b.vendor); } : function (a, b) { return (b.date || '').localeCompare(a.date || ''); });
+        $('rf-body').innerHTML = l.length ? l.map(function (w) {
+            return '<tr><td><div class="dl-vehicle-name"><i class="ri-snowflake-fill"></i><span>' + esc(w.veh) + '</span></div></td><td>' + esc(w.vendor) + '</td><td>' + esc(w.co) + '</td><td>' + dmy(w.date) + '</td><td class="dl-text-right">' + money(w.amt) + '</td><td>' + w.docs.length + ' file(s)</td>' +
+                '<td class="dl-text-center"><button type="button" class="dl-secondary-button rf-view" data-id="' + w.id + '">View</button> <button type="button" class="dl-delete-button rf-del" data-id="' + w.id + '" title="Delete"><i class="ri-delete-bin-line"></i></button></td></tr>';
+        }).join('') : '<tr><td colspan="7">' + (W.length ? 'No matching record.' : 'No work records yet. Use Add Reefer Unit Work and save.') + '</td></tr>';
+        var vs = {}; W.forEach(function (w) { vs[w.veh] = 1; });
+        $('rf-s-count').textContent = W.length;
+        $('rf-s-amt').textContent = money(W.reduce(function (s, w) { return s + w.amt; }, 0));
+        $('rf-s-veh').textContent = Object.keys(vs).length;
+        $('rf-s-doc').textContent = W.reduce(function (s, w) { return s + w.docs.length; }, 0);
+    }
+    [['rf-inv', 'rf-inv-name'], ['rf-wd', 'rf-wd-name']].forEach(function (p) {
+        $(p[0]).addEventListener('change', function () {
+            var f = this.files[0];
+            if (f && f.size > 2 * 1024 * 1024) { this.value = ''; $('rf-msg').textContent = 'Each file must be 2 MB or smaller.'; return; }
+            if (f) $(p[1]).textContent = f.name;
+        });
+    });
+    $('rf-save').addEventListener('click', function () {
+        var key = [$('rf-veh').value, $('rf-vendor').value, $('rf-co').value, $('rf-date').value].join('|');
+        var dup = W.some(function (w) { return w.key === key; });
+        if (dup && warned !== key) { warned = key; $('rf-msg').textContent = 'Duplicate warning: a record with the same vehicle, vendor, company and date exists. Click save again to save anyway.'; return; }
+        warned = '';
+        W.push({ id: ++seq, key: key, veh: $('rf-veh').value, vendor: $('rf-vendor').value, co: $('rf-co').value, date: $('rf-date').value, amt: parseFloat($('rf-amt').value) || 0, spec: $('rf-spec').value, warr: $('rf-warr').value, docs: [$('rf-inv-name').textContent, $('rf-wd-name').textContent] });
+        $('rf-msg').textContent = 'Reefer unit work saved.'; render(); show('rf-tabs', map, 'list');
+    });
+    ['rf-search', 'rf-sort'].forEach(function (id) { $(id).addEventListener('input', render); });
+    $('rf-body').addEventListener('click', function (e) {
+        var d = e.target.closest('.rf-del'), v = e.target.closest('.rf-view');
+        if (d) { W = W.filter(function (w) { return w.id !== +d.getAttribute('data-id'); }); render(); return; }
+        if (!v) return;
+        var w = W.filter(function (w) { return w.id === +v.getAttribute('data-id'); })[0];
+        $('rf-detail').innerHTML = '<i class="ri-information-line"></i><span><strong>' + esc(w.veh) + '</strong> · Vendor: ' + esc(w.vendor) + ' · Company: ' + esc(w.co) + ' · ' + dmy(w.date) + ' · ' + money(w.amt) + ' · Work: ' + esc(w.spec) + ' · Warranty: ' + esc(w.warr) + ' · Documents: ' + esc(w.docs.join(', ')) + '</span>';
+    });
+    $('rf-tabs').addEventListener('click', function (e) { var t = e.target.closest('.dl-view-tab'); if (t) show('rf-tabs', map, t.getAttribute('data-view')); });
+    render();
+})();
+</script>
+<script src="./Assets/js/custom.js"></script>
+</body>
+</html>

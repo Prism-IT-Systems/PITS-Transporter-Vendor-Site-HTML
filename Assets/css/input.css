@@ -476,7 +476,7 @@
 }
 
 .footer-grid{
-    @apply grid grid-cols-[1.5fr_1fr_1fr_1fr_1.2fr] gap-20;
+    @apply grid grid-cols-[1.5fr_1fr_1fr_1fr_2fr] gap-[60px];
 }
 
 .footer-logo{
@@ -504,6 +504,10 @@
 }
 
 /* Links */
+
+.footer-contact-num {
+    @apply flex flex-col;
+}
 
 .footer-links {
     @apply flex flex-col gap-[10px];
@@ -535,12 +539,16 @@
     @apply flex flex-col gap-[10px];
 }
 
+.footer-location {
+    @apply flex flex-col gap-[8px];
+}
+
 .contact-item{
     @apply flex gap-4 items-start;
 }
 
 .contact-item .icon{
-    @apply w-12 h-12 rounded-lg border border-white/10 bg-white/5 flex items-center justify-center text-white;
+    @apply w-12 h-12 rounded-lg border border-white/10 bg-white/5 flex items-center justify-center text-white shrink-0;
 }
 
 .contact-item span{
@@ -549,8 +557,10 @@
 
 .contact-item a,
 .contact-item p{
-    @apply text-white text-[18px] font-medium;
+    @apply text-white text-[16px] font-medium leading-[24px];
 }
+
+
 
 /* Bottom */
 
@@ -816,6 +826,8 @@
       rgba(243, 242, 242, 0.8)
     ),
     url(../images/solution-hero.png);
+    background-repeat: no-repeat;
+    background-size: cover;
 } 
 
 .solution-bg{
@@ -2437,6 +2449,67 @@ Card
     @apply w-full bg-white py-20 lg:py-24;
 }
 
+/* Category Filters */
+
+.module-filters {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 32px;
+}
+
+.module-filter-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 16px;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    color: #475569;
+    background: #ffffff;
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.5;
+    cursor: pointer;
+    transition:
+        color 0.25s ease,
+        background 0.25s ease,
+        border-color 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.module-filter-btn:hover {
+    border-color: #fecaca;
+    color: #0f172a;
+    background: #fffafa;
+}
+
+.module-filter-btn.is-active {
+    border-color: #0f172a;
+    color: #ffffff;
+    background: #0f172a;
+    box-shadow: 0 2px 5px rgba(15, 23, 42, 0.12);
+}
+
+.module-filter-btn.is-active:hover {
+    border-color: #1e293b;
+    background: #1e293b;
+}
+
+.module-filter-btn:focus-visible,
+.module-feature-link:focus-visible {
+    outline: 3px solid rgba(255, 75, 75, 0.4);
+    outline-offset: 3px;
+}
+
+
+.modules-section .heading-wrapper {
+    @apply max-w-[900px] w-full;
+}
+
 .modules-hero {
    background: linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('../images/Modules-page-hero.png');
 } 
@@ -3115,7 +3188,7 @@ Card
 ======================================== */
 
 .contact-info {
-    @apply relative min-h-[498px] rounded-[10px] overflow-hidden;
+    @apply relative min-h-[520px] rounded-[10px] overflow-hidden;
 }
 
 .contact-info__background {
@@ -3379,7 +3452,7 @@ Card
     }
 
     .contact-info {
-        @apply min-h-[520px];
+        @apply min-h-[1000px];
     }
 
     .contact-info__content {
@@ -9435,6 +9508,26 @@ Card
     transition: background-color 0.2s ease;
 }
 
+.dl-simulator-header:not(:has(.dl-view-switcher)) {
+    justify-content: center;
+    text-align: center;
+    max-width: 800px;
+    width: 100%;
+    margin-inline: auto;
+}
+
+.dl-simulator-header:not(:has(.dl-view-switcher)) .heading-wrapper.heading-wrap-left,
+.dl-simulator-header:not(:has(.dl-view-switcher)) .heading-wrapper .heading-title,
+.dl-simulator-header:not(:has(.dl-view-switcher)) .heading-wrapper.heading-wrap-left p {
+    margin-inline: auto;
+    text-align: center;
+    align-items:center;
+}
+
+.dl-simulator-section .heading-wrapper.heading-wrap-left {
+    margin-inline: 0 !important;
+}
+
 @media (max-width: 1024px) {
    .dl-simulator-section .heading-wrapper.heading-wrap-left {
         align-items: center;
@@ -9896,7 +9989,6 @@ Card
 .dl-search-box {
     position: relative;
     flex: 1 1 250px;
-    max-width: 400px;
 }
 
 .dl-search-box > i {
@@ -10253,7 +10345,7 @@ Card
 
 .dl-documentation-note {
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     gap: 8px;
     line-height: 1.6;
 }
@@ -11463,5 +11555,41 @@ Card
     .dl-trusted-name {
         transition: none;
     }
+}
+
+.solution-details-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    width: 100%;
+    margin-top: 14px;
+    padding-top: 12px;
+    border-top: 1px solid #edf0f4;
+    color: #ff5959;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.solution-details-btn:hover {
+    color: #e43f45;
+}
+
+.solution-details-btn:hover i {
+    transform: translateX(5px);
+}
+
+.solution-details-btn:focus-visible {
+    outline: 2px solid #ff5959;
+    outline-offset: 4px;
+    border-radius: 3px;
+}
+
+.solution-hero .btn-solution {
+    display: flex;
+    justify-content: center;
+    margin: 40px auto 0;
 }
 

@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Daily Ledger Management Module | TransportDesk Fleet Solutions</title>
+    <meta name="description" content="Track daily cash in, payments out and remaining balance with TransportDesk Daily Ledger Management Module. Record credits, debits, print and export CSV.">
+
+    <!-- Remix Icon -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" />
+
+    <!-- Swiper -->
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+
+    <!-- Lenis -->
+    <link rel="stylesheet"
+        href="https://unpkg.com/lenis@1.3.23/dist/lenis.css">
+
+    <!-- Tailwind Output CSS -->
+    <link href="./Assets/css/output.css" rel="stylesheet">
+</head>
+<body>
+
+<!--Header Section start-->
+<header class="main-header">
+    <div class="container">
+        <div class="header-inner">
+            <a href="index.html" class="header-logo">
+                <img src="Assets/images/transportdesk-logo.svg" alt="Logo">
+            </a>
+            <nav class="main-navigation" id="mobileMenu">
+                <div class="menu-circle"></div>
+                <ul class="navigation-links">
+                    <li><a href="index.html" class="navigation-link">Home</a></li>
+                    <li><a href="features.html" class="navigation-link">Features</a></li>
+                    <li><a href="modules.html" class="navigation-link active">Modules</a></li>
+                    <li><a href="reports.html" class="navigation-link">Resources</a></li>
+                    <li><a href="contact.html" class="navigation-link">Contact</a></li>
+                </ul>
+                <div class="mobile-header-right">
+                    <a href="#" class="login-btn">Login</a>
+                    <a href="#" class="demo-btn">Book Demo</a>
+                </div>
+            </nav>
+            <div class="header-right">
+                <a href="#" class="login-btn">Login</a>
+                <a href="#" class="demo-btn">Book Demo</a>
+            </div>
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </div>
+</header>
+
+<div class="menu-overlay" id="menuOverlay"></div>
+<!--Header section End-->
+
+<section id="overview" class="dl-overview-section">
+    <div class="dl-overview-glow"></div>
+    <div class="dl-overview-pattern"></div>
+    <div class="container">
+        <div class="dl-overview-grid">
+            <div class="dl-overview-content">
+                <div class="dl-overview-badge">
+                    <span class="dl-status-dot"></span>
+                    <span>Enterprise Fleet Management</span>
+                    <span class="dl-badge-divider">|</span>
+                    <span class="dl-badge-highlight">Daily Ledger Module</span>
+                </div>
+                <h1 class="dl-overview-title">
+                    Track Daily Cash In, Payments Out &amp;
+                    <span class="dl-gradient-text">Remaining Balance</span>
+                    in One Place
+                </h1>
+                <p class="dl-overview-description">The Daily Ledger Management Module helps a transport business maintain a clear record of money received and money spent each day. Instead of calculating cash transactions manually, record credits and debits, review the day’s activity, and check the remaining balance in one place.</p>
+                <div class="dl-overview-actions">
+                    <a href="#simulator" class="btn-primary"><span>See Daily Ledger Example</span><i class="ri-arrow-right-line"></i></a>
+                    <a href="#demo" class="dl-btn-demo"><span class="dl-play-icon"><i class="ri-play-fill"></i></span><span>Watch Demo Video</span></a>
+                </div>
+                <div class="dl-overview-stats">
+                    <div class="dl-stat-item"><div class="dl-stat-number">4</div><div class="dl-stat-label">Payment Methods</div></div>
+                    <div class="dl-stat-item"><div class="dl-stat-number dl-stat-red">12</div><div class="dl-stat-label">Key Features</div></div>
+                    <div class="dl-stat-item"><div class="dl-stat-number dl-stat-green">3</div><div class="dl-stat-label">Totals Auto-Calculated</div></div>
+                </div>
+            </div>
+            <div class="dl-overview-visual">
+                <div class="dl-visual-card">
+                    <img src="Assets/images/hero_fleet_dispatch_1792482270822.jpg" alt="Daily Ledger module" class="dl-visual-image">
+                    <div class="dl-visual-overlay"></div>
+                    <div class="dl-visual-topbar">
+                        <div class="dl-live-label"><span class="dl-live-dot"></span><span>Daily Ledger</span></div>
+                        <div class="dl-fuel-rate">20-10-2026</div>
+                    </div>
+                    <div class="dl-fuel-slip">
+                        <div class="dl-slip-header"><span class="dl-slip-title">ABC Transport · Accounts Manager</span><span class="dl-slip-status">Saved</span></div>
+                        <div class="dl-slip-stats">
+                            <div class="dl-slip-stat"><span class="dl-slip-label">Credit (In)</span><span class="dl-slip-value">₹25,000</span></div>
+                            <div class="dl-slip-stat"><span class="dl-slip-label">Debit (Out)</span><span class="dl-slip-value dl-slip-red">₹20,500</span></div>
+                            <div class="dl-slip-stat"><span class="dl-slip-label">Closing</span><span class="dl-slip-value dl-slip-green">₹9,500</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="demo" class="dl-demo-section">
+    <div class="dl-demo-glow"></div>
+    <div class="dl-container">
+        <div class="heading-wrapper">
+            <span class="heading-tag">Interactive Video Demonstration</span>
+            <h2 class="heading-title">
+                Watch How <span>Daily Ledger</span> Works
+            </h2>
+            <p>Watch our step-by-step demonstration to learn how to open a daily ledger, record money received, add payments, check balances, and print or download the daily report.</p>
+        </div>
+
+        <div class="dl-demo-grid">
+            <div class="dl-demo-video-column">
+                <div class="dl-video-card">
+                    <div class="dl-video-toolbar">
+                        <div class="dl-video-toolbar-left">
+                            <span class="dl-window-dot dl-dot-red"></span><span class="dl-window-dot dl-dot-yellow"></span><span class="dl-window-dot dl-dot-green"></span>
+                            <span class="dl-video-filename">daily_ledger_module_demo.mp4</span>
+                        </div>
+                        <span class="dl-video-quality">Full HD</span>
+                    </div>
+                    <div class="dl-video-preview">
+                        <img src="Assets/images/dashboard.png" alt="Daily Ledger demonstration video preview" class="dl-video-thumbnail">
+                        <div class="dl-video-overlay"></div>
+                        <button type="button" class="dl-video-play" aria-label="Play demonstration video"><i class="ri-play-fill"></i><span class="dl-video-ping"></span></button>
+                        <div class="dl-video-meta">
+                            <div class="dl-video-meta-left"><span class="dl-video-current-chapter">Daily Ledger Demo Video Will Be Displayed Here</span></div>
+                        </div>
+                    </div>
+                    <div class="dl-video-footer">
+                        <div class="dl-video-footer-left">
+                            <button type="button" class="dl-watch-button"><i class="ri-play-circle-line"></i><span>Watch Full Walkthrough</span></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="simulator" class="dl-simulator-section">
+    <div class="dl-container">
+        <div class="dl-simulator-header">
+        <div class="heading-wrapper heading-wrap-left">
+            <span class="heading-tag">Practical Example</span>
+            <h2 class="heading-title">
+                Recording One Day in the <span>Daily Ledger</span> 
+            </h2>
+            <p>ABC Transport records receipts and payments for 20 October 2026. Choose Firm: ABC Transport; Date: 20-10-2026; User: Accounts Manager. Use Prev, Next or the date field to switch days. Amounts and company details are illustrative.</p>
+        </div>
+        </div>
+        <div class="dl-stats-grid">
+            <div class="dl-stat-card">
+                <div class="dl-stat-label"><span>Opening Balance</span><i class="ri-list-check"></i></div>
+                <div class="dl-stat-value">₹5,000</div>
+                <p class="dl-stat-note">Carried forward into the day</p>
+            </div>
+            <div class="dl-stat-card">
+                <div class="dl-stat-label"><span>Total Credit (In)</span><i class="ri-arrow-down-circle-line dl-green-icon"></i></div>
+                <div class="dl-stat-value">₹25,000</div>
+                <p class="dl-stat-note">Money received</p>
+            </div>
+            <div class="dl-stat-card">
+                <div class="dl-stat-label"><span>Total Debit (Out)</span><i class="ri-arrow-up-circle-line dl-red-icon"></i></div>
+                <div class="dl-stat-value">₹20,500</div>
+                <p class="dl-stat-note">Payments made</p>
+            </div>
+            <div class="dl-stat-card dl-stat-card-total">
+                <div class="dl-stat-label"><span>Closing Balance</span><i class="ri-wallet-3-line"></i></div>
+                <div class="dl-stat-value dl-stat-total-value">₹9,500</div>
+                <p class="dl-stat-note">Opening + Credit − Debit</p>
+            </div>
+        </div>
+        <div class="dl-calculator-panel">
+            <div class="dl-bill-master">
+                <div class="dl-bill-master-header"><div class="dl-bill-heading"><span>Step 1: Review the Opening Balance</span></div></div>
+                <p class="dl-stat-note">Assume the opening balance carried forward into this day is ₹5,000. It appears in the Opening Balance summary card before today’s entries are calculated.</p>
+            </div>
+            <div class="dl-bill-master">
+                <div class="dl-bill-master-header"><div class="dl-bill-heading"><span>Step 2: Add Credit / Received Entries</span></div></div>
+                <p class="dl-stat-note">Under Credit / Received, enter a short description in Notes and the received Amount. Use + Add Row for each additional receipt.</p>
+<div class="dl-table-wrapper">
+<table class="dl-vehicle-table">
+<thead><tr><th>Notes</th><th class="dl-text-right">Amount</th></tr></thead>
+<tbody>
+<tr><td>Cash received from office</td><td class="dl-text-right">₹20,000</td></tr>
+<tr><td>Additional funds received</td><td class="dl-text-right">₹5,000</td></tr>
+</tbody>
+<tfoot><tr><td class="dl-footer-label">Total Credit (In)</td><td class="dl-text-right dl-footer-total">₹25,000</td></tr></tfoot>
+</table>
+</div>
+            </div>
+            <div class="dl-bill-master">
+                <div class="dl-bill-master-header"><div class="dl-bill-heading"><span>Step 3: Add Debit / Payment Entries</span></div></div>
+                <p class="dl-stat-note">Under Debit / Payment, select or enter the Payee, choose the Purpose where applicable, add Notes, select the payment Method, and enter the Amount. Use + Add Row to record multiple payments.</p>
+<div class="dl-table-wrapper">
+<table class="dl-vehicle-table">
+<thead><tr><th>Payee</th><th>Purpose</th><th>Method</th><th class="dl-text-right">Amount</th></tr></thead>
+<tbody>
+<tr><td>Driver – Ramesh</td><td>Driver payment</td><td>Cash</td><td class="dl-text-right">₹8,000</td></tr>
+<tr><td>ABC Petroleum</td><td>Diesel vendor payment</td><td>Bank</td><td class="dl-text-right">₹10,000</td></tr>
+<tr><td>Vehicle GJ 05 AB 1234</td><td>Vehicle expense</td><td>Cash</td><td class="dl-text-right">₹2,500</td></tr>
+</tbody>
+<tfoot><tr><td class="dl-footer-label">Total Debit (Out)</td><td class="dl-footer-total">—</td><td class="dl-footer-total">—</td><td class="dl-text-right dl-footer-total">₹20,500</td></tr></tfoot>
+</table>
+</div>
+            </div>
+            <div class="dl-bill-master">
+                <div class="dl-bill-master-header"><div class="dl-bill-heading"><span>Step 4: Check the Automatic Closing Balance</span></div></div>
+                <p class="dl-stat-note">The system updates the summary cards and the calculation bar using: Closing Balance = Opening Balance + Total Credit − Total Debit.</p>
+<div class="dl-table-wrapper">
+<table class="dl-vehicle-table">
+<thead><tr><th>Daily Summary</th><th class="dl-text-right">Amount</th></tr></thead>
+<tbody>
+<tr><td>Opening Balance</td><td class="dl-text-right">₹5,000</td></tr>
+<tr><td>Total Credit (In)</td><td class="dl-text-right">₹25,000</td></tr>
+<tr><td>Total Debit (Out)</td><td class="dl-text-right">₹20,500</td></tr>
+</tbody>
+<tfoot><tr><td class="dl-footer-label">Closing Balance</td><td class="dl-text-right dl-footer-total">₹9,500</td></tr></tfoot>
+</table>
+</div>
+            </div>
+            <div class="dl-bill-master">
+                <div class="dl-bill-master-header"><div class="dl-bill-heading"><span>Step 5: Add Day Notes and Save</span></div></div>
+                <p class="dl-stat-note">In Day Notes, enter an optional summary such as “Daily receipts and payments for driver, diesel vendor and vehicle expenses.” Review the entries and click Save Day Book. The save button may remain disabled when there are no unsaved changes.</p>
+            </div>
+            <div class="dl-bill-master">
+                <div class="dl-bill-master-header"><div class="dl-bill-heading"><span>Step 6: Open History or Another Day</span></div></div>
+                <p class="dl-stat-note">Use History to review previous saved ledgers. Use Prev, Next or Date to move between days. Saved records can be reviewed and, where permitted, printed or exported.</p>
+            </div>
+            <div class="dl-calculator-footer">
+                <div class="dl-documentation-note"><i class="ri-information-line"></i><span>Final result: the day begins with ₹5,000, receives ₹25,000 and records ₹20,500 in payments. The closing balance is ₹9,500.</span></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--feature section start-->
+<section id="features" class="dl-features-section">
+    <div class="container">
+        <div class="heading-wrapper">
+            <span class="heading-tag">Complete solution</span>
+            <h2 class="heading-title">
+                Key <span>Daily Ledger</span> Features
+            </h2>
+            <p>Everything you need to record money received, payments made and the balance remaining each day.</p>
+        </div>
+
+        <div class="dl-features-grid">
+            <article class="dl-feature-card">
+                <div class="dl-feature-card-content">
+                    <div class="dl-feature-icon"><i class="ri-file-list-3-line"></i></div>
+                    <div class="dl-feature-card-heading"><h3>Daily Ledger Records</h3></div>
+                    <p>Maintain a separate day-wise record of incoming and outgoing money for an individual user or manager.</p>
+                </div>
+            </article>
+            <article class="dl-feature-card">
+                <div class="dl-feature-card-content">
+                    <div class="dl-feature-icon"><i class="ri-calculator-line"></i></div>
+                    <div class="dl-feature-card-heading"><h3>Opening Balance</h3></div>
+                    <p>Start the day with an opening amount, including a suggested carry-forward from the previous available ledger.</p>
+                </div>
+            </article>
+            <article class="dl-feature-card">
+                <div class="dl-feature-card-content">
+                    <div class="dl-feature-icon"><i class="ri-bank-card-line"></i></div>
+                    <div class="dl-feature-card-heading"><h3>Credit Transactions</h3></div>
+                    <p>Record money received, including manager advances that are synchronized from the advance records.</p>
+                </div>
+            </article>
+            <article class="dl-feature-card">
+                <div class="dl-feature-card-content">
+                    <div class="dl-feature-icon"><i class="ri-truck-line"></i></div>
+                    <div class="dl-feature-card-heading"><h3>Debit Transactions</h3></div>
+                    <p>Record daily spending and payments made to the relevant party, driver, or for a vehicle-related purpose.</p>
+                </div>
+            </article>
+            <article class="dl-feature-card">
+                <div class="dl-feature-card-content">
+                    <div class="dl-feature-icon"><i class="ri-search-eye-line"></i></div>
+                    <div class="dl-feature-card-heading"><h3>Vendor and Driver Payment Details</h3></div>
+                    <p>Choose a payee where applicable, add the amount and reference, and keep payment information linked to relevant records.</p>
+                </div>
+            </article>
+            <article class="dl-feature-card">
+                <div class="dl-feature-card-content">
+                    <div class="dl-feature-icon"><i class="ri-shield-check-line"></i></div>
+                    <div class="dl-feature-card-heading"><h3>Multiple Payment Methods</h3></div>
+                    <p>Record payments made by cash, UPI, bank, or cheque.</p>
+                </div>
+            </article>
+            <article class="dl-feature-card">
+                <div class="dl-feature-card-content">
+                    <div class="dl-feature-icon"><i class="ri-file-chart-line"></i></div>
+                    <div class="dl-feature-card-heading"><h3>Vehicle Expense Details</h3></div>
+                    <p>Add a vehicle for vehicle-related expense entries, helping connect expenses with the correct vehicle.</p>
+                </div>
+            </article>
+            <article class="dl-feature-card">
+                <div class="dl-feature-card-content">
+                    <div class="dl-feature-icon"><i class="ri-edit-box-line"></i></div>
+                    <div class="dl-feature-card-heading"><h3>Automatic Totals</h3></div>
+                    <p>The system calculates total credits, total debits, and the remaining closing balance.</p>
+                </div>
+            </article>
+            <article class="dl-feature-card">
+                <div class="dl-feature-card-content">
+                    <div class="dl-feature-icon"><i class="ri-folder-shield-2-line"></i></div>
+                    <div class="dl-feature-card-heading"><h3>Ledger History and Editing</h3></div>
+                    <p>View saved ledgers and, where permitted, edit or delete them. Advance-linked credit rows are protected from ordinary row editing.</p>
+                </div>
+            </article>
+            <article class="dl-feature-card">
+                <div class="dl-feature-card-content">
+                    <div class="dl-feature-icon"><i class="ri-printer-line"></i></div>
+                    <div class="dl-feature-card-heading"><h3>Manager Access Control</h3></div>
+                    <p>Permissions determine who can create, view, edit, or delete ledgers. Non-admin managers are restricted to their own records.</p>
+                </div>
+            </article>
+            <article class="dl-feature-card">
+                <div class="dl-feature-card-content">
+                    <div class="dl-feature-icon"><i class="ri-user-settings-line"></i></div>
+                    <div class="dl-feature-card-heading"><h3>Print Daily Ledger</h3></div>
+                    <p>Open a printer-friendly daily ledger for review or physical filing.</p>
+                </div>
+            </article>
+            <article class="dl-feature-card">
+                <div class="dl-feature-card-content">
+                    <div class="dl-feature-icon"><i class="ri-download-cloud-2-line"></i></div>
+                    <div class="dl-feature-card-heading"><h3>CSV Export</h3></div>
+                    <p>Download daily ledger information as a CSV file containing totals and transaction entries for review in Excel.</p>
+                </div>
+            </article>
+        </div>
+    </div>
+</section>
+<!--feature section end-->
+
+<!--workflow section start-->
+<section class="dl-workflow-section">
+    <div class="container">
+        <div class="heading-wrapper heading-wrap-left">
+            <span class="heading-tag">Step-by-Step Workflow</span>
+            <h2 class="heading-title">
+                How Does the <span>Daily Ledger</span> Module Work?
+            </h2>
+            <p>The module follows a simple process, from choosing the date to printing or exporting the ledger.</p>
+        </div>
+
+        <div class="dl-workflow-grid">
+            <article class="dl-workflow-card">
+                <div class="dl-workflow-card-content">
+                    <div class="dl-workflow-card-top">
+                        <span class="dl-workflow-number">01</span>
+                        <div class="dl-workflow-icon"><i class="ri-truck-line"></i></div>
+                    </div>
+                    <h3 class="dl-workflow-card-title">Choose the Manager and Date</h3>
+                    <p class="dl-workflow-card-description">Select the required user and ledger date. Administrators can access eligible users’ ledgers; a manager’s access is limited to their own ledger. Select the company when applicable.</p>
+                </div>
+                <div class="dl-workflow-card-footer"><span>Workflow Phase 01</span></div>
+            </article>
+            <article class="dl-workflow-card">
+                <div class="dl-workflow-card-content">
+                    <div class="dl-workflow-card-top">
+                        <span class="dl-workflow-number">02</span>
+                        <div class="dl-workflow-icon"><i class="ri-search-eye-line"></i></div>
+                    </div>
+                    <h3 class="dl-workflow-card-title">Check the Opening Balance</h3>
+                    <p class="dl-workflow-card-description">The opening balance is money carried forward at the start of the day. The system can suggest it from the latest previous ledger’s closing balance.</p>
+                </div>
+                <div class="dl-workflow-card-footer"><span>Workflow Phase 02</span></div>
+            </article>
+            <article class="dl-workflow-card">
+                <div class="dl-workflow-card-content">
+                    <div class="dl-workflow-card-top">
+                        <span class="dl-workflow-number">03</span>
+                        <div class="dl-workflow-icon"><i class="ri-shield-check-line"></i></div>
+                    </div>
+                    <h3 class="dl-workflow-card-title">Record Money Received (Credit)</h3>
+                    <p class="dl-workflow-card-description">Add a credit entry when funds are received. Manager advances recorded in the system can also appear as credit entries.</p>
+                </div>
+                <div class="dl-workflow-card-footer"><span>Workflow Phase 03</span></div>
+            </article>
+            <article class="dl-workflow-card">
+                <div class="dl-workflow-card-content">
+                    <div class="dl-workflow-card-top">
+                        <span class="dl-workflow-number">04</span>
+                        <div class="dl-workflow-icon"><i class="ri-file-chart-line"></i></div>
+                    </div>
+                    <h3 class="dl-workflow-card-title">Record Expenses and Payments (Debit)</h3>
+                    <p class="dl-workflow-card-description">Add debit entries for money paid out: choose a vendor, driver, payment method, reference, amount and notes. Vehicle expenses may require a vehicle, and driver entries a purpose.</p>
+                </div>
+                <div class="dl-workflow-card-footer"><span>Workflow Phase 04</span></div>
+            </article>
+            <article class="dl-workflow-card">
+                <div class="dl-workflow-card-content">
+                    <div class="dl-workflow-card-top">
+                        <span class="dl-workflow-number">05</span>
+                        <div class="dl-workflow-icon"><i class="ri-edit-box-line"></i></div>
+                    </div>
+                    <h3 class="dl-workflow-card-title">Review the Balance and Save</h3>
+                    <p class="dl-workflow-card-description">The system adds all credits and debits and calculates the day’s closing balance. Review the entries and save the ledger.</p>
+                </div>
+                <div class="dl-workflow-card-footer"><span>Workflow Phase 05</span></div>
+            </article>
+            <article class="dl-workflow-card">
+                <div class="dl-workflow-card-content">
+                    <div class="dl-workflow-card-top">
+                        <span class="dl-workflow-number">06</span>
+                        <div class="dl-workflow-icon"><i class="ri-folder-shield-2-line"></i></div>
+                    </div>
+                    <h3 class="dl-workflow-card-title">View, Print or Export</h3>
+                    <p class="dl-workflow-card-description">Open a saved ledger to review transactions. Use the print view for a paper copy or export the ledger as CSV for Excel.</p>
+                </div>
+                <div class="dl-workflow-card-footer"><span>Workflow Phase 06</span></div>
+            </article>
+        </div>
+    </div>
+</section>
+<!--workflow section end-->
+
+<!--results section start-->
+<section id="benefits" class="results-section">
+    <div class="container">
+        <div class="heading-wrapper">
+            <span class="heading-tag">Proven Advantages</span>
+            <h2 class="heading-title heading-light">
+                Benefits of <span>Daily Ledger</span> 
+            </h2>
+            <p>See daily money received, spent and remaining without manual calculations.</p>
+        </div>
+
+        <div class="results-grid">
+            <div class="result-card">
+                <div class="result-icon"><i class="ri-shield-check-line"></i></div>
+                <h3>No Manual Calculations</h3>
+                <p>See daily money received, spent, and remaining without manual calculations.</p>
+            </div>
+            <div class="result-card">
+                <div class="result-icon"><i class="ri-file-chart-line"></i></div>
+                <h3>Advances and Expenses Together</h3>
+                <p>Keep manager advances and everyday expenditure in one organized record.</p>
+            </div>
+            <div class="result-card">
+                <div class="result-icon"><i class="ri-edit-box-line"></i></div>
+                <h3>Detailed Spending Review</h3>
+                <p>Review vendor, driver, and vehicle-related spending details.</p>
+            </div>
+            <div class="result-card">
+                <div class="result-icon"><i class="ri-folder-shield-2-line"></i></div>
+                <h3>Clear Transaction History</h3>
+                <p>Maintain a clear history with dates, payment methods, and references.</p>
+            </div>
+            <div class="result-card">
+                <div class="result-icon"><i class="ri-printer-line"></i></div>
+                <h3>Print or Export</h3>
+                <p>Print or export daily financial information for internal checking and accounting.</p>
+            </div>
+            <div class="result-card">
+                <div class="result-icon"><i class="ri-user-settings-line"></i></div>
+                <h3>Controlled Access</h3>
+                <p>Control ledger access through the application’s user permissions.</p>
+            </div>
+        </div>
+    </div>
+</section>
+<!--results section end-->
+
+<!--faq section start-->
+<section id="faq" class="dl-faq-section">
+    <div class="container">
+        <div class="heading-wrapper">
+            <span class="heading-tag">Got Questions?</span>
+            <h2 class="heading-title">
+                Frequently Asked <span>Questions</span> 
+            </h2>
+            <p>Everything you need to know about the Daily Ledger.</p>
+        </div>
+
+        <div class="dl-faq-list">
+            <div class="dl-faq-item active">
+                <button class="dl-faq-question" type="button" aria-expanded="true" aria-controls="dl-faq-answer-1">
+                    <span class="dl-faq-question-content"><span class="dl-faq-number">Q1</span><span class="dl-faq-question-text">What is a Daily Ledger?</span></span>
+                    <span class="dl-faq-arrow"><i class="ri-arrow-down-s-line"></i></span>
+                </button>
+                <div class="dl-faq-answer" id="dl-faq-answer-1">
+                    <div class="dl-faq-answer-content"><p>It is a day-wise record of money received, money spent, and the balance remaining.</p></div>
+                </div>
+            </div>
+            <div class="dl-faq-item">
+                <button class="dl-faq-question" type="button" aria-expanded="false" aria-controls="dl-faq-answer-2">
+                    <span class="dl-faq-question-content"><span class="dl-faq-number">Q2</span><span class="dl-faq-question-text">How is the closing balance calculated?</span></span>
+                    <span class="dl-faq-arrow"><i class="ri-arrow-down-s-line"></i></span>
+                </button>
+                <div class="dl-faq-answer" id="dl-faq-answer-2">
+                    <div class="dl-faq-answer-content"><p>Opening Balance + Total Credits − Total Debits.</p></div>
+                </div>
+            </div>
+            <div class="dl-faq-item">
+                <button class="dl-faq-question" type="button" aria-expanded="false" aria-controls="dl-faq-answer-3">
+                    <span class="dl-faq-question-content"><span class="dl-faq-number">Q3</span><span class="dl-faq-question-text">Can manager advances appear in the ledger?</span></span>
+                    <span class="dl-faq-arrow"><i class="ri-arrow-down-s-line"></i></span>
+                </button>
+                <div class="dl-faq-answer" id="dl-faq-answer-3">
+                    <div class="dl-faq-answer-content"><p>Yes. Manager advances can be synchronized into the relevant day as credit entries.</p></div>
+                </div>
+            </div>
+            <div class="dl-faq-item">
+                <button class="dl-faq-question" type="button" aria-expanded="false" aria-controls="dl-faq-answer-4">
+                    <span class="dl-faq-question-content"><span class="dl-faq-number">Q4</span><span class="dl-faq-question-text">Can I record payments to vendors and drivers?</span></span>
+                    <span class="dl-faq-arrow"><i class="ri-arrow-down-s-line"></i></span>
+                </button>
+                <div class="dl-faq-answer" id="dl-faq-answer-4">
+                    <div class="dl-faq-answer-content"><p>Yes. Supported debit entries can include vendor or driver payees and related payment details.</p></div>
+                </div>
+            </div>
+            <div class="dl-faq-item">
+                <button class="dl-faq-question" type="button" aria-expanded="false" aria-controls="dl-faq-answer-5">
+                    <span class="dl-faq-question-content"><span class="dl-faq-number">Q5</span><span class="dl-faq-question-text">Can a manager view another manager’s ledger?</span></span>
+                    <span class="dl-faq-arrow"><i class="ri-arrow-down-s-line"></i></span>
+                </button>
+                <div class="dl-faq-answer" id="dl-faq-answer-5">
+                    <div class="dl-faq-answer-content"><p>A non-admin manager is restricted to their own ledger; other access depends on role and permissions.</p></div>
+                </div>
+            </div>
+            <div class="dl-faq-item">
+                <button class="dl-faq-question" type="button" aria-expanded="false" aria-controls="dl-faq-answer-6">
+                    <span class="dl-faq-question-content"><span class="dl-faq-number">Q6</span><span class="dl-faq-question-text">Can I print or download the ledger?</span></span>
+                    <span class="dl-faq-arrow"><i class="ri-arrow-down-s-line"></i></span>
+                </button>
+                <div class="dl-faq-answer" id="dl-faq-answer-6">
+                    <div class="dl-faq-answer-content"><p>Yes. A print page and CSV export are available for an existing ledger.</p></div>
+                </div>
+            </div>
+        </div>
+        <div class="dl-faq-cta">
+            <div class="dl-faq-cta-content">
+                <h3>Simplify Your Daily Cash Tracking</h3>
+                <p>With Daily Ledger Management, your business can keep day-to-day funds, payments, and balances together in a clear, easy-to-review format. Record transactions, check remaining funds, and access daily reports whenever needed.</p>
+            </div>
+            <button class="dl-faq-cta-button" type="button" onclick="document.getElementById('simulator').scrollIntoView({behavior: 'smooth'})">See Daily Ledger Example</button>
+        </div>
+    </div>
+</section>
+<!--faq section end-->
+
+<!--footer section start-->
+<footer class="footer">
+    <div class="footer-newsletter">
+        <div class="container">
+            <div class="newsletter-wrapper">
+                <div class="newsletter-content">
+                    <h2>Stay ahead of the curve</h2>
+                    <p>Fleet management insights, product updates, and industry news.</p>
+                </div>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Enter your email">
+                    <button type="submit">Subscribe <i class="ri-arrow-right-line"></i></button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="footer-main">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <a href="index.html" class="footer-logo">
+                        <img src="Assets/images/transportdesk-logo-dark.svg" alt="footer-logo">
+                    </a>
+                    <p>The intelligent transportation platform that puts fleet directors in complete control of their operations.</p>
+                    <div class="footer-social">
+                        <a href="#"><i class="ri-facebook-fill"></i></a>
+                        <a href="#"><i class="ri-instagram-line"></i></a>
+                        <a href="#"><i class="ri-twitter-line"></i></a>
+                        <a href="#"><i class="ri-linkedin-fill"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h3>Product</h3>
+                    <ul>
+                        <li><a href="features.html" class="footer-link">Features</a></li>
+                        <li><a href="modules.html" class="footer-link">Modules</a></li>
+                        <li><a href="solutions.html" class="footer-link">Solutions</a></li>
+                        <li><a href="reports.html" class="footer-link">Reports</a></li>
+                        <li><a href="contact.html" class="footer-link">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h3>Resources</h3>
+                    <ul>
+                        <li><a href="documentation.html" class="footer-link">Documentation</a></li>
+                        <li><a href="faq.html" class="footer-link">FAQ</a></li>
+                        <li><a href="privacy-policy.html" class="footer-link">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h3>Support</h3>
+                    <ul>
+                        <li><a href="#" class="footer-link">Help Center</a></li>
+                        <li><a href="#" class="footer-link">Status</a></li>
+                        <li><a href="#" class="footer-link">Security</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <div class="contact-item"><div class="icon"><i class="ri-mail-line"></i></div>
+                        <div><span>Email</span><a href="#">hello@transportdesk.net</a></div></div>
+                    <div class="contact-item"><div class="icon"><i class="ri-phone-fill"></i></div>
+                        <div><span>Call</span><a href="#">+1 (512) 555-0142</a></div></div>
+                    <div class="contact-item"><div class="icon"><i class="ri-map-pin-line"></i></div>
+                        <div><span>Location</span><p>India</p></div></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <div class="container">
+            <div class="bottom-wrapper">
+                <p>© 2026 All rights reserved.</p>
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Cookie Policy</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+<!--footer section end-->
+
+<script src="./Assets/js/custom.js"></script>
+</body>
+</html>

@@ -1,0 +1,1022 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Global Search Module</title>
+
+    <!-- Remix Icon -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" />
+
+    <!-- Swiper -->
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+
+    <!-- Lenis -->
+    <link rel="stylesheet"
+        href="https://unpkg.com/lenis@1.3.23/dist/lenis.css">
+
+    <!-- Tailwind Output CSS -->
+     <link href="./Assets/css/output.css" rel="stylesheet">
+</head>
+<body>
+
+<!--Header Section start-->
+<header class="main-header">
+    <div class="container">
+
+        <div class="header-inner">
+
+            <a href="index.html" class="header-logo">
+                <img src="Assets/images/transportdesk-logo.svg" alt="Logo">
+            </a>
+
+            <nav class="main-navigation" id="mobileMenu">
+
+                <div class="menu-circle"></div>
+
+                <ul class="navigation-links">
+                    <li><a href="index.html" class="navigation-link active">Home</a></li>
+                    <li><a href="features.html" class="navigation-link">Features</a></li>
+                    <li><a href="reports.html" class="navigation-link">Resources</a></li>
+                    <li><a href="contact.html" class="navigation-link">Contact</a></li>
+                </ul>
+
+                <div class="mobile-header-right">
+                    <a href="#" class="login-btn">Login</a>
+                    <a href="#" class="demo-btn">Book Demo</a>
+                </div>
+
+            </nav>
+
+            <div class="header-right">
+                <a href="#" class="login-btn">Login</a>
+                <a href="#" class="demo-btn">Book Demo</a>
+            </div>
+
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+        </div>
+
+    </div>
+</header>
+
+<!-- Add this after header -->
+<div class="menu-overlay" id="menuOverlay"></div>
+<!--Header section End-->
+
+<section id="overview" class="dl-overview-section">
+    <div class="dl-overview-glow"></div>
+    <div class="dl-overview-pattern"></div>
+    <div class="container">
+        <div class="dl-overview-grid">
+            <div class="dl-overview-content">
+                <div class="dl-overview-badge">
+                    <span class="dl-status-dot"></span>
+                    <span>Enterprise Fleet Management</span>
+                    <span class="dl-badge-divider">|</span>
+                    <span class="dl-badge-highlight">Global Search Module</span>
+                </div>
+                <h1 class="dl-overview-title"><span class="dl-gradient-text">Global Search</span> Module</h1>
+                <p class="dl-overview-description">Finding a particular vehicle, vendor, diesel purchase, repair, or document can take time when business information is stored in different modules. Global Search makes it easier to find relevant records from one place. Users can enter a name, number, or keyword, apply filters, and open matching records without checking each module separately.</p><p class="dl-overview-description">The system also offers a separate quick module search to help users navigate directly to application sections such as Vehicles, Drivers, Diesel, Repairs, and Reports.</p>
+                <div class="dl-overview-actions">
+                    <a href="#simulator" class="btn-primary">
+                        <span>Try Live Global Search</span>
+                        <i class="ri-arrow-right-line"></i>
+                    </a>
+                    <a href="#demo" class="dl-btn-demo">
+                        <span class="dl-play-icon"><i class="ri-play-fill"></i></span>
+                        <span>Watch Demo Video</span>
+                    </a>
+                </div>
+                <div class="dl-overview-stats"><div class="dl-stat-item"><div class="dl-stat-number">12</div><div class="dl-stat-label">Key Features</div></div><div class="dl-stat-item"><div class="dl-stat-number dl-stat-red">6</div><div class="dl-stat-label">Simple Steps</div></div><div class="dl-stat-item"><div class="dl-stat-number dl-stat-green">5</div><div class="dl-stat-label">Component Filters</div></div></div>
+            </div>
+            <div class="dl-overview-visual">
+                <div class="dl-visual-card">
+                    <img src="Assets/images/hero_fleet_dispatch_1792482270822.jpg"
+                         alt="Transportation Fleet Dispatch Logistics Center" class="dl-visual-image">
+                    <div class="dl-visual-overlay"></div>
+                    <div class="dl-visual-topbar">
+                        <div class="dl-live-label"><span class="dl-live-dot"></span><span>Global Search Preview</span></div>
+                        <div class="dl-fuel-rate">GJ 05 AB 1234</div>
+                    </div>
+                    <div class="dl-fuel-slip">
+                        <div class="dl-slip-header">
+                            <span class="dl-slip-title">Find a Truck's Diesel Purchase</span>
+                            <span class="dl-slip-status">Example Search</span>
+                        </div>
+                        <div class="dl-slip-stats"><div class="dl-slip-stat"><span class="dl-slip-label">Component</span><span class="dl-slip-value">Diesel</span></div><div class="dl-slip-stat"><span class="dl-slip-label">Filters</span><span class="dl-slip-value dl-slip-red">Vehicle + Date</span></div><div class="dl-slip-stat"><span class="dl-slip-label">Results</span><span class="dl-slip-value dl-slip-green">Latest First</span></div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="dl-trusted-section">
+    <div class="dl-trusted-heading"><span>Find Records Faster • Search Across Modules • Open the Right Information</span></div>
+    <div class="dl-trusted-marquee">
+        <div class="dl-trusted-fade dl-trusted-fade-left"></div>
+        <div class="dl-trusted-fade dl-trusted-fade-right"></div>
+        <div class="dl-trusted-track">
+            <div class="dl-trusted-group"><div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">Search Across Business Records</span></div><div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">Name, Number and Keyword Search</span></div><div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">Vehicle Filter</span></div><div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">Vendor Filter</span></div><div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">Date Range Filter</span></div><div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">Component Filter</span></div><div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">Clear Search Results</span></div><div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">Useful Result Information</span></div><div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">Open Matching Records</span></div><div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">Latest-First Results and Pagination</span></div><div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">Quick Module Navigation</span></div><div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">Access-Based Module Links</span></div></div>
+            <div class="dl-trusted-group" aria-hidden="true"><div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">Search Across Business Records</span></div><div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">Name, Number and Keyword Search</span></div><div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">Vehicle Filter</span></div><div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">Vendor Filter</span></div><div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">Date Range Filter</span></div><div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">Component Filter</span></div><div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">Clear Search Results</span></div><div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">Useful Result Information</span></div><div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">Open Matching Records</span></div><div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">Latest-First Results and Pagination</span></div><div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">Quick Module Navigation</span></div><div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">Access-Based Module Links</span></div></div>
+        </div>
+    </div>
+</section>
+
+<section id="demo" class="dl-demo-section">
+    <div class="dl-demo-glow"></div>
+    <div class="dl-container">
+        <div class="heading-wrapper">
+            <span class="heading-tag">Video Demonstration</span>
+            <h2 class="heading-title">Watch How <span>Global Search</span> Works</h2>
+            <p>Watch our demonstration to learn how to search for a record, narrow results using filters, open the matching detail page, and quickly navigate to another module.</p>
+        </div>
+        <div class="dl-demo-grid">
+            <div class="dl-demo-video-column">
+                <div class="dl-video-card">
+                    <div class="dl-video-toolbar">
+                        <div class="dl-video-toolbar-left">
+                            <span class="dl-window-dot dl-dot-red"></span>
+                            <span class="dl-window-dot dl-dot-yellow"></span>
+                            <span class="dl-window-dot dl-dot-green"></span>
+                            <span class="dl-video-filename">global_search_module_demo</span>
+                        </div>
+                        <span class="dl-video-quality">Demo Video</span>
+                    </div>
+                    <div class="dl-video-preview">
+                        <img src="Assets/images/dashboard.png" alt="global_search_module_demo preview" class="dl-video-thumbnail">
+                        <div class="dl-video-overlay"></div>
+                        <button type="button" class="dl-video-play" aria-label="Play demonstration video">
+                            <i class="ri-play-fill"></i>
+                            <span class="dl-video-ping"></span>
+                        </button>
+                        <div class="dl-video-meta">
+                            <div class="dl-video-meta-left">
+                                <span class="dl-video-current-chapter">[Demo Video Will Be Displayed Here]</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="simulator" class="dl-simulator-section">
+    <div class="dl-container">
+        <div class="dl-simulator-header">
+            <div class="heading-wrapper heading-wrap-left">
+                <span class="heading-tag">Practical Example</span>
+                <h2 class="heading-title">Find a Truck's <span>Diesel Purchase</span></h2>
+                <p>Suppose an accounts employee needs to find fuel purchases for truck GJ 05 AB 1234. They open Global Search, select that vehicle, choose Diesel in the Component filter and enter a date range. The results show matching diesel records for the selected conditions. The employee opens the relevant result to check its available purchase details. Another example: an office employee types "Vehicles" into the quick module search box and selects the Vehicles section directly from the menu suggestions. The records below are sample data for demonstration only.</p>
+            </div>
+            <div class="dl-view-switcher" id="gs-tabs">
+                <button type="button" class="dl-view-tab dl-view-tab-active" data-view="search"><i class="ri-search-line"></i> Global Search</button>
+                <button type="button" class="dl-view-tab" data-view="module"><i class="ri-compass-3-line"></i> Quick Module Search</button>
+            </div>
+        </div>
+
+        <div class="dl-stats-grid">
+            <div class="dl-stat-card">
+                <div class="dl-stat-label"><span>Search Query</span><i class="ri-search-line"></i></div>
+                <div class="dl-stat-value" id="gs-s-query" style="font-size:1.4rem">—</div>
+                <p class="dl-stat-note">Keyword entered</p>
+            </div>
+            <div class="dl-stat-card">
+                <div class="dl-stat-label"><span>Filters Applied</span><i class="ri-filter-3-line dl-red-icon"></i></div>
+                <div class="dl-stat-value dl-red-text"><span id="gs-s-filters">0</span> <span>Filters</span></div>
+                <p class="dl-stat-note">Vehicle, vendor, dates, component</p>
+            </div>
+            <div class="dl-stat-card">
+                <div class="dl-stat-label"><span>Matching Records</span><i class="ri-file-list-3-line dl-green-icon"></i></div>
+                <div class="dl-stat-value dl-green-text"><span id="gs-s-count">0</span> <span>Results</span></div>
+                <p class="dl-stat-note">Latest records first</p>
+            </div>
+            <div class="dl-stat-card dl-stat-card-total">
+                <div class="dl-stat-label"><span>Page</span><span class="dl-status-dot"></span></div>
+                <div class="dl-stat-value dl-stat-total-value" id="gs-s-page">0 / 0</div>
+                <p class="dl-stat-note dl-green-text">Manageable pages</p>
+            </div>
+        </div>
+
+        <div class="dl-calculator-panel" id="gs-view-search">
+            <div class="dl-bill-master">
+                <div class="dl-bill-master-header">
+                    <div class="dl-bill-heading"><span>Global Search</span><span class="dl-heading-separator">·</span><span class="dl-invoice-number">Search box and optional filters</span></div>
+                </div>
+                <div class="dl-bill-fields">
+                    <div class="dl-form-group"><label for="gs-q">Search Query</label>
+                        <input id="gs-q" class="dl-form-control" type="text" placeholder="Vehicle number, vendor name, reference..."></div>
+                    <div class="dl-form-group"><label for="gs-vehicle">Vehicle</label>
+                        <select id="gs-vehicle" class="dl-form-control"><option value="">All vehicles</option><option selected>GJ 05 AB 1234</option><option>MH-12-RN-4821</option><option>MH-14-BT-9102</option></select></div>
+                    <div class="dl-form-group"><label for="gs-vendor">Vendor</label>
+                        <select id="gs-vendor" class="dl-form-control"><option value="">All vendors</option><option>Bharat Petroleum Highway Express</option><option>Indian Oil Super Fuel Hub</option><option>Shell Transport Point</option><option>Maroon Auto Tech Pvt Ltd</option></select></div>
+                    <div class="dl-form-group"><label for="gs-comp">Component</label>
+                        <select id="gs-comp" class="dl-form-control"><option value="">All components</option><option selected>Diesel</option><option>Toll</option><option>Service</option><option>Tyre</option><option>Battery</option></select></div>
+                    <div class="dl-form-group"><label for="gs-from">Date From</label>
+                        <input id="gs-from" class="dl-form-control" type="date" value="2026-10-01"></div>
+                    <div class="dl-form-group"><label for="gs-to">Date To</label>
+                        <input id="gs-to" class="dl-form-control" type="date" value="2026-10-31"></div>
+                </div>
+                <div class="dl-bill-options">
+                    <span class="dl-formula-note">You can also search using filters without entering text.</span>
+                    <div class="dl-toolbar-actions">
+                        <button type="button" class="dl-action-button" id="gs-clear"><i class="ri-close-circle-line dl-red-icon"></i> Clear</button>
+                        <button type="button" class="dl-primary-button" id="gs-search"><i class="ri-search-line"></i> Search</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="dl-table-wrapper">
+                <table class="dl-vehicle-table">
+                    <thead><tr><th>Result</th><th>Record Type</th><th>Details</th><th>Date</th><th class="dl-text-center">Action</th></tr></thead>
+                    <tbody id="gs-body"><tr><td colspan="5">Click Search to view the matching records.</td></tr></tbody>
+                </table>
+            </div>
+
+            <div class="dl-table-toolbar">
+                <div class="dl-supported-formats" id="gs-msg">Sample data for demonstration only.</div>
+                <div class="dl-toolbar-actions">
+                    <button type="button" class="dl-action-button" id="gs-prev"><i class="ri-arrow-left-s-line"></i> Previous</button>
+                    <button type="button" class="dl-action-button" id="gs-next">Next <i class="ri-arrow-right-s-line"></i></button>
+                </div>
+            </div>
+
+            <div class="dl-calculator-footer">
+                <div class="dl-documentation-note"><i class="ri-information-line"></i>
+                    <span>Date filtering applies only to record types for which date fields are configured. Some record types use separate vendor data and may not appear with the vendor filter. If no matching records are found, change the keyword or filters and search again.</span></div>
+            </div>
+        </div>
+
+        <div class="dl-calculator-panel" id="gs-view-module" hidden>
+            <div class="dl-bill-master">
+                <div class="dl-bill-master-header">
+                    <div class="dl-bill-heading"><span>Quick Module Navigation</span><span class="dl-heading-separator">·</span><span class="dl-invoice-number">Search module...</span></div>
+                </div>
+                <div class="dl-bill-fields">
+                    <div class="dl-form-group"><label for="gs-mod">Search module...</label>
+                        <input id="gs-mod" class="dl-form-control" type="text" placeholder="Try typing &quot;Vehicles&quot;"></div>
+                </div>
+            </div>
+            <div class="dl-table-wrapper">
+                <table class="dl-vehicle-table">
+                    <thead><tr><th>Application Section</th><th class="dl-text-center">Action</th></tr></thead>
+                    <tbody id="gs-mods"></tbody>
+                </table>
+            </div>
+            <div class="dl-calculator-footer">
+                <div class="dl-documentation-note"><i class="ri-information-line"></i>
+                    <span>The small "Search module..." field finds menu sections, while the full Global Search page finds saved records. Module suggestions depend on the signed-in user's accessible sections.</span></div>
+                <div class="dl-supported-formats" id="gs-modmsg">Select a section to open it.</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="features" class="dl-features-section">
+    <div class="container">
+        <div class="heading-wrapper">
+            <span class="heading-tag">Key Module Features</span>
+            <h2 class="heading-title">Everything You Need for <span>Global Search</span></h2>
+            <div class="dl-features-filters"><button type="button" class="dl-filter-btn is-active" data-filter="all">All Features (12)</button><button type="button" class="dl-filter-btn" data-filter="search">Search &amp; Filters</button><button type="button" class="dl-filter-btn" data-filter="results">Results &amp; Records</button><button type="button" class="dl-filter-btn" data-filter="nav">Quick Navigation</button></div>
+        </div>
+        <div class="dl-features-grid">
+            <article class="dl-feature-card" data-category="search">
+                <div class="dl-feature-card-content">
+                    <div class="dl-feature-icon"><i class="ri-search-eye-line"></i></div>
+                    <div class="dl-feature-card-heading">
+                        <span class="dl-feature-number">4.1</span>
+                        <h3>Search Across Business Records</h3>
+                    </div>
+                    <p>Search from one place across the record types configured for the application, including vehicle, vendor, driver, diesel, maintenance, battery, tyre, and document-related information.</p>
+                </div>
+            </article>
+            <article class="dl-feature-card" data-category="search">
+                <div class="dl-feature-card-content">
+                    <div class="dl-feature-icon"><i class="ri-text"></i></div>
+                    <div class="dl-feature-card-heading">
+                        <span class="dl-feature-number">4.2</span>
+                        <h3>Name, Number and Keyword Search</h3>
+                    </div>
+                    <p>Look for records using recognizable information such as vehicle registration numbers, vendor names, and saved description fields. Search matches depend on the fields available for each record type.</p>
+                </div>
+            </article>
+            <article class="dl-feature-card" data-category="search">
+                <div class="dl-feature-card-content">
+                    <div class="dl-feature-icon"><i class="ri-truck-line"></i></div>
+                    <div class="dl-feature-card-heading">
+                        <span class="dl-feature-number">4.3</span>
+                        <h3>Vehicle Filter</h3>
+                    </div>
+                    <p>Select a particular vehicle to narrow supported results related to that vehicle.</p>
+                </div>
+            </article>
+            <article class="dl-feature-card" data-category="search">
+                <div class="dl-feature-card-content">
+                    <div class="dl-feature-icon"><i class="ri-store-2-line"></i></div>
+                    <div class="dl-feature-card-heading">
+                        <span class="dl-feature-number">4.4</span>
+                        <h3>Vendor Filter</h3>
+                    </div>
+                    <p>Select a diesel or service vendor to narrow records linked to that supplier. Some record types use separate vendor data and may not appear with this filter.</p>
+                </div>
+            </article>
+            <article class="dl-feature-card" data-category="search">
+                <div class="dl-feature-card-content">
+                    <div class="dl-feature-icon"><i class="ri-calendar-line"></i></div>
+                    <div class="dl-feature-card-heading">
+                        <span class="dl-feature-number">4.5</span>
+                        <h3>Date Range Filter</h3>
+                    </div>
+                    <p>Use Date From and Date To to search supported records with relevant dates. Date filtering applies only to record types for which date fields are configured.</p>
+                </div>
+            </article>
+            <article class="dl-feature-card" data-category="search">
+                <div class="dl-feature-card-content">
+                    <div class="dl-feature-icon"><i class="ri-apps-2-line"></i></div>
+                    <div class="dl-feature-card-heading">
+                        <span class="dl-feature-number">4.6</span>
+                        <h3>Component Filter</h3>
+                    </div>
+                    <p>Limit results to supported groups: Diesel, Toll, Service, Tyre, or Battery.</p>
+                </div>
+            </article>
+            <article class="dl-feature-card" data-category="results">
+                <div class="dl-feature-card-content">
+                    <div class="dl-feature-icon"><i class="ri-close-circle-line"></i></div>
+                    <div class="dl-feature-card-heading">
+                        <span class="dl-feature-number">4.7</span>
+                        <h3>Clear Search Results</h3>
+                    </div>
+                    <p>Reset the entered conditions whenever you want to search for a different record.</p>
+                </div>
+            </article>
+            <article class="dl-feature-card" data-category="results">
+                <div class="dl-feature-card-content">
+                    <div class="dl-feature-icon"><i class="ri-information-line"></i></div>
+                    <div class="dl-feature-card-heading">
+                        <span class="dl-feature-number">4.8</span>
+                        <h3>Useful Result Information</h3>
+                    </div>
+                    <p>Results identify their record type and can show extra context such as a vehicle number, vendor, owner or contact person.</p>
+                </div>
+            </article>
+            <article class="dl-feature-card" data-category="results">
+                <div class="dl-feature-card-content">
+                    <div class="dl-feature-icon"><i class="ri-external-link-line"></i></div>
+                    <div class="dl-feature-card-heading">
+                        <span class="dl-feature-number">4.9</span>
+                        <h3>Open Matching Records</h3>
+                    </div>
+                    <p>Use a result link to navigate to its corresponding module page, where a linked detail route is available.</p>
+                </div>
+            </article>
+            <article class="dl-feature-card" data-category="results">
+                <div class="dl-feature-card-content">
+                    <div class="dl-feature-icon"><i class="ri-sort-desc"></i></div>
+                    <div class="dl-feature-card-heading">
+                        <span class="dl-feature-number">4.10</span>
+                        <h3>Latest-First Results and Pagination</h3>
+                    </div>
+                    <p>Matching records are arranged with recently created records first, with results shown in manageable pages.</p>
+                </div>
+            </article>
+            <article class="dl-feature-card" data-category="nav">
+                <div class="dl-feature-card-content">
+                    <div class="dl-feature-icon"><i class="ri-compass-3-line"></i></div>
+                    <div class="dl-feature-card-heading">
+                        <span class="dl-feature-number">4.11</span>
+                        <h3>Quick Module Navigation</h3>
+                    </div>
+                    <p>Use the separate "Search module..." box to find and open application sections quickly, instead of navigating through menus.</p>
+                </div>
+            </article>
+            <article class="dl-feature-card" data-category="nav">
+                <div class="dl-feature-card-content">
+                    <div class="dl-feature-icon"><i class="ri-lock-unlock-line"></i></div>
+                    <div class="dl-feature-card-heading">
+                        <span class="dl-feature-number">4.12</span>
+                        <h3>Access-Based Module Links</h3>
+                    </div>
+                    <p>Quick module search lists sections according to the signed-in user's available menu permissions.</p>
+                </div>
+            </article>
+        </div>
+    </div>
+</section>
+
+<section class="dl-workflow-section">
+    <div class="container">
+        <div class="heading-wrapper heading-wrap-left">
+            <span class="heading-tag">Step by Step</span>
+            <h2 class="heading-title">How Does <span>Global Search</span> Work?</h2>
+        </div>
+        <div class="dl-workflow-grid">
+            <article class="dl-workflow-card">
+                <div class="dl-workflow-card-content">
+                    <div class="dl-workflow-card-top">
+                        <span class="dl-workflow-number">01</span>
+                        <div class="dl-workflow-icon"><i class="ri-search-line"></i></div>
+                    </div>
+                    <h3 class="dl-workflow-card-title">Step 1: Open Global Search</h3>
+                    <p class="dl-workflow-card-description">Open Global Search from the application menu.</p>
+                    <ul class="dl-workflow-checklist"><li><i class="ri-check-line"></i><span>The page provides a search box and optional filters.</span></li></ul>
+                </div>
+                <div class="dl-workflow-card-footer"><span>Step 01</span></div>
+            </article>
+            <article class="dl-workflow-card">
+                <div class="dl-workflow-card-content">
+                    <div class="dl-workflow-card-top">
+                        <span class="dl-workflow-number">02</span>
+                        <div class="dl-workflow-icon"><i class="ri-keyboard-line"></i></div>
+                    </div>
+                    <h3 class="dl-workflow-card-title">Step 2: Enter a Search Term</h3>
+                    <p class="dl-workflow-card-description">Type a vehicle number, vendor name, reference value, or other known detail into Search Query.</p>
+                    <ul class="dl-workflow-checklist"><li><i class="ri-check-line"></i><span>You can also search using filters without entering text.</span></li></ul>
+                </div>
+                <div class="dl-workflow-card-footer"><span>Step 02</span></div>
+            </article>
+            <article class="dl-workflow-card">
+                <div class="dl-workflow-card-content">
+                    <div class="dl-workflow-card-top">
+                        <span class="dl-workflow-number">03</span>
+                        <div class="dl-workflow-icon"><i class="ri-filter-3-line"></i></div>
+                    </div>
+                    <h3 class="dl-workflow-card-title">Step 3: Narrow Your Search</h3>
+                    <p class="dl-workflow-card-description">Choose a vendor, vehicle, date range, or component such as Diesel, Toll, Service, Tyre, or Battery to focus on relevant records.</p>
+                    <ul class="dl-workflow-checklist"></ul>
+                </div>
+                <div class="dl-workflow-card-footer"><span>Step 03</span></div>
+            </article>
+            <article class="dl-workflow-card">
+                <div class="dl-workflow-card-content">
+                    <div class="dl-workflow-card-top">
+                        <span class="dl-workflow-number">04</span>
+                        <div class="dl-workflow-icon"><i class="ri-list-check-2"></i></div>
+                    </div>
+                    <h3 class="dl-workflow-card-title">Step 4: Review Results</h3>
+                    <p class="dl-workflow-card-description">Click Search to view the matching records.</p>
+                    <ul class="dl-workflow-checklist"><li><i class="ri-check-line"></i><span>Results display a title, record type and, where available, details such as related vehicle, vendor or owner.</span></li></ul>
+                </div>
+                <div class="dl-workflow-card-footer"><span>Step 04</span></div>
+            </article>
+            <article class="dl-workflow-card">
+                <div class="dl-workflow-card-content">
+                    <div class="dl-workflow-card-top">
+                        <span class="dl-workflow-number">05</span>
+                        <div class="dl-workflow-icon"><i class="ri-external-link-line"></i></div>
+                    </div>
+                    <h3 class="dl-workflow-card-title">Step 5: Open the Record</h3>
+                    <p class="dl-workflow-card-description">Select a result to open its linked module record.</p>
+                    <ul class="dl-workflow-checklist"><li><i class="ri-check-line"></i><span>If no matching records are found, change the keyword or filters and search again.</span></li></ul>
+                </div>
+                <div class="dl-workflow-card-footer"><span>Step 05</span></div>
+            </article>
+            <article class="dl-workflow-card">
+                <div class="dl-workflow-card-content">
+                    <div class="dl-workflow-card-top">
+                        <span class="dl-workflow-number">06</span>
+                        <div class="dl-workflow-icon"><i class="ri-refresh-line"></i></div>
+                    </div>
+                    <h3 class="dl-workflow-card-title">Step 6: Clear and Search Again</h3>
+                    <p class="dl-workflow-card-description">Use Clear to reset the search form and begin a new search.</p>
+                    <ul class="dl-workflow-checklist"></ul>
+                </div>
+                <div class="dl-workflow-card-footer"><span>Step 06</span></div>
+            </article>
+        </div>
+    </div>
+</section>
+
+<section class="results-section">
+    <div class="container">
+        <div class="heading-wrapper">
+            <span class="heading-tag">Benefits</span>
+            <h2 class="heading-title heading-light">Benefits of <span>Global Search</span></h2>
+        </div>
+        <div class="results-grid">
+            <div class="result-card">
+                <div class="result-icon"><i class="ri-time-line"></i></div>
+                <h3>Save time by finding records without opening modules one by one.</h3>
+                
+            </div>
+            <div class="result-card">
+                <div class="result-icon"><i class="ri-stack-line"></i></div>
+                <h3>Reduce effort when checking vehicle, vendor and maintenance information.</h3>
+                
+            </div>
+            <div class="result-card">
+                <div class="result-icon"><i class="ri-filter-3-line"></i></div>
+                <h3>Use simple filters to narrow a large set of records.</h3>
+                
+            </div>
+            <div class="result-card">
+                <div class="result-icon"><i class="ri-external-link-line"></i></div>
+                <h3>Open relevant application pages more quickly.</h3>
+                
+            </div>
+            <div class="result-card">
+                <div class="result-icon"><i class="ri-team-line"></i></div>
+                <h3>Help team members find information using familiar names and numbers.</h3>
+                
+            </div>
+            <div class="result-card">
+                <div class="result-icon"><i class="ri-folder-open-line"></i></div>
+                <h3>Keep day-to-day work organized with easy access to saved records.</h3>
+                
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="faq" class="dl-faq-section">
+    <div class="container">
+        <div class="heading-wrapper">
+            <span class="heading-tag">Got Questions?</span>
+            <h2 class="heading-title">Frequently Asked <span>Questions</span></h2>
+            <div class="dl-faq-filters"><button class="dl-faq-filter active" type="button">All</button><button class="dl-faq-filter" type="button">Search</button><button class="dl-faq-filter" type="button">Filters</button><button class="dl-faq-filter" type="button">Records</button><button class="dl-faq-filter" type="button">Navigation</button></div>
+        </div>
+        <div class="dl-faq-list">
+            <div class="dl-faq-item active">
+                <button class="dl-faq-question" type="button" aria-expanded="true" aria-controls="dl-faq-answer-1">
+                    <span class="dl-faq-question-content">
+                        <span class="dl-faq-number">Q1</span>
+                        <span class="dl-faq-question-text">Can I search using a vehicle number?</span>
+                    </span>
+                    <span class="dl-faq-arrow"><i class="ri-arrow-down-s-line"></i></span>
+                </button>
+                <div class="dl-faq-answer" id="dl-faq-answer-1">
+                    <div class="dl-faq-answer-content">
+                        <p>Yes. Use a known vehicle number as a keyword or select a vehicle filter to find supported matching records.</p>
+                        <div class="dl-faq-topic"><span>Topic: Search</span></div>
+                    </div>
+                </div>
+            </div>
+            <div class="dl-faq-item">
+                <button class="dl-faq-question" type="button" aria-expanded="false" aria-controls="dl-faq-answer-2">
+                    <span class="dl-faq-question-content">
+                        <span class="dl-faq-number">Q2</span>
+                        <span class="dl-faq-question-text">Can I search only diesel records?</span>
+                    </span>
+                    <span class="dl-faq-arrow"><i class="ri-arrow-down-s-line"></i></span>
+                </button>
+                <div class="dl-faq-answer" id="dl-faq-answer-2">
+                    <div class="dl-faq-answer-content">
+                        <p>Yes. Choose Diesel in the Component filter before searching.</p>
+                        <div class="dl-faq-topic"><span>Topic: Filters</span></div>
+                    </div>
+                </div>
+            </div>
+            <div class="dl-faq-item">
+                <button class="dl-faq-question" type="button" aria-expanded="false" aria-controls="dl-faq-answer-3">
+                    <span class="dl-faq-question-content">
+                        <span class="dl-faq-number">Q3</span>
+                        <span class="dl-faq-question-text">Can I search records for a date range?</span>
+                    </span>
+                    <span class="dl-faq-arrow"><i class="ri-arrow-down-s-line"></i></span>
+                </button>
+                <div class="dl-faq-answer" id="dl-faq-answer-3">
+                    <div class="dl-faq-answer-content">
+                        <p>Yes. Date From and Date To are available; results depend on date fields configured for each record type.</p>
+                        <div class="dl-faq-topic"><span>Topic: Filters</span></div>
+                    </div>
+                </div>
+            </div>
+            <div class="dl-faq-item">
+                <button class="dl-faq-question" type="button" aria-expanded="false" aria-controls="dl-faq-answer-4">
+                    <span class="dl-faq-question-content">
+                        <span class="dl-faq-number">Q4</span>
+                        <span class="dl-faq-question-text">Can I search without typing a keyword?</span>
+                    </span>
+                    <span class="dl-faq-arrow"><i class="ri-arrow-down-s-line"></i></span>
+                </button>
+                <div class="dl-faq-answer" id="dl-faq-answer-4">
+                    <div class="dl-faq-answer-content">
+                        <p>Yes. You can use one or more filters to request matching records.</p>
+                        <div class="dl-faq-topic"><span>Topic: Search</span></div>
+                    </div>
+                </div>
+            </div>
+            <div class="dl-faq-item">
+                <button class="dl-faq-question" type="button" aria-expanded="false" aria-controls="dl-faq-answer-5">
+                    <span class="dl-faq-question-content">
+                        <span class="dl-faq-number">Q5</span>
+                        <span class="dl-faq-question-text">Can I open a record from the search results?</span>
+                    </span>
+                    <span class="dl-faq-arrow"><i class="ri-arrow-down-s-line"></i></span>
+                </button>
+                <div class="dl-faq-answer" id="dl-faq-answer-5">
+                    <div class="dl-faq-answer-content">
+                        <p>Yes, for result types with a configured page link. Some types may not have a direct detail link.</p>
+                        <div class="dl-faq-topic"><span>Topic: Records</span></div>
+                    </div>
+                </div>
+            </div>
+            <div class="dl-faq-item">
+                <button class="dl-faq-question" type="button" aria-expanded="false" aria-controls="dl-faq-answer-6">
+                    <span class="dl-faq-question-content">
+                        <span class="dl-faq-number">Q6</span>
+                        <span class="dl-faq-question-text">Is searching for a module the same as searching records?</span>
+                    </span>
+                    <span class="dl-faq-arrow"><i class="ri-arrow-down-s-line"></i></span>
+                </button>
+                <div class="dl-faq-answer" id="dl-faq-answer-6">
+                    <div class="dl-faq-answer-content">
+                        <p>No. The small "Search module..." field finds menu sections, while the full Global Search page finds saved records.</p>
+                        <div class="dl-faq-topic"><span>Topic: Navigation</span></div>
+                    </div>
+                </div>
+            </div>
+            <div class="dl-faq-item">
+                <button class="dl-faq-question" type="button" aria-expanded="false" aria-controls="dl-faq-answer-7">
+                    <span class="dl-faq-question-content">
+                        <span class="dl-faq-number">Q7</span>
+                        <span class="dl-faq-question-text">Will all staff see the same module suggestions?</span>
+                    </span>
+                    <span class="dl-faq-arrow"><i class="ri-arrow-down-s-line"></i></span>
+                </button>
+                <div class="dl-faq-answer" id="dl-faq-answer-7">
+                    <div class="dl-faq-answer-content">
+                        <p>No. The module navigation suggestions depend on the user's accessible sections.</p>
+                        <div class="dl-faq-topic"><span>Topic: Navigation</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="dl-faq-cta">
+            <div class="dl-faq-cta-content">
+                <h3>Conclusion</h3>
+                <p>Global Search brings together a convenient way to look for stored information and locate the right application section. With keyword search, filters, clear result labels, and quick navigation, users can spend less time searching and more time managing everyday operations.</p>
+                <p><strong>Find what you need, open the right record, and continue your work with confidence.</strong></p>
+            </div>
+            <button class="dl-faq-cta-button" type="button">Get Started Now</button>
+        </div>
+    </div>
+</section>
+
+<!--footer section start-->
+<footer class="footer">
+
+    <!-- Newsletter -->
+    <div class="footer-newsletter">
+        <div class="container">
+
+            <div class="newsletter-wrapper">
+
+                <div class="newsletter-content">
+                    <h2>Stay ahead of the curve</h2>
+                    <p>
+                        Fleet management insights, product updates, and industry news.
+                    </p>
+                </div>
+
+                <form class="newsletter-form">
+
+                    <input
+                        type="email"
+                        placeholder="Enter your email"
+                    >
+
+                    <button type="submit">
+                        Subscribe
+
+                       <i class="ri-arrow-right-line"></i>
+
+                    </button>
+
+                </form>
+
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Footer Main -->
+
+    <div class="footer-main">
+
+        <div class="container">
+
+            <div class="footer-grid">
+
+                <!-- Left -->
+
+                <div class="footer-about">
+
+                    <a href="index.html" class="footer-logo">
+                         <img src="Assets/images/transportdesk-logo-dark.svg" alt="footer-logo">
+                    </a>
+
+                    <p>
+                        The intelligent transportation platform that puts fleet directors
+                        in complete control of their operations.
+                    </p>
+
+                    <div class="footer-social">
+
+                        <a href="#">
+                            <i class="ri-facebook-fill"></i>
+                        </a>
+
+                        <a href="#">
+                            <i class="ri-instagram-line"></i>
+                        </a>
+
+                        <a href="#">
+                            <i class="ri-twitter-line"></i>
+                        </a>
+
+                        <a href="#">
+                            <i class="ri-linkedin-fill"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <!-- Product -->
+
+                <div class="footer-links">
+
+                    <h3>Product</h3>
+
+                    <ul>
+        <li>
+            <a href="features.html" class="footer-link">Features</a>
+        </li>
+
+        <li>
+            <a href="modules.html" class="footer-link">Modules</a>
+        </li>
+
+        <li>
+            <a href="solutions.html" class="footer-link">Solutions</a>
+        </li>
+
+        <li>
+            <a href="reports.html" class="footer-link">Reports</a>
+        </li>
+
+        <li>
+            <a href="contact.html" class="footer-link">Contact</a>
+        </li>
+    </ul>
+
+                </div>
+
+                <!-- Resources -->
+
+                <div class="footer-links">
+
+                    <h3>Resources</h3>
+
+                    <ul>
+
+                        <li><a href="documentation.html" class="footer-link">Documentation</a></li>
+
+                        <li><a href="faq.html" class="footer-link">FAQ</a></li>
+
+                        <li><a href="privacy-policy.html" class="footer-link">Privacy Policy</a></li>
+
+                    </ul>
+
+                </div>
+
+                <!-- Support -->
+
+                <div class="footer-links">
+
+                    <h3>Support</h3>
+
+                    <ul>
+
+                        <li><a href="#" class="footer-link">Help Center</a></li>
+
+                        <li><a href="#" class="footer-link">Status</a></li>
+
+                        <li><a href="#" class="footer-link">Security</a></li>
+
+                    </ul>
+
+                </div>
+
+                <!-- Contact -->
+
+                <div class="footer-contact">
+
+                    <div class="contact-item">
+
+                        <div class="icon">
+                            <i class="ri-mail-line"></i>
+                        </div>
+
+                        <div>
+
+                            <span>Email</span>
+
+                            <a href="#">
+                               jay@prismitsystems.com
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                    <div class="contact-item">
+
+                        <div class="icon">
+                            <i class="ri-phone-fill"></i>
+                        </div>
+
+                        <div>
+
+                            <span>Call</span>
+                          <div class="footer-contact-num">
+                            <a href="#">
+                                6355 258 003
+                            </a>
+
+                             <a href="#">
+                               +1 562-312-0282
+                            </a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="contact-item">
+
+                        <div class="icon">
+                            <i class="ri-map-pin-line"></i>
+                        </div>
+
+                        <div>
+
+                            <span>Location (India)</span>
+                            <div class="footer-location">
+                            <p>The Galleria Business Hub, Adajan Gam, Pal Gam, Surat, Gujarat, India 394510</p>
+                            </div>
+                        </div>
+
+                    </div>
+                     <div class="contact-item">
+
+                        <div class="icon">
+                            <i class="ri-map-pin-line"></i>
+                        </div>
+
+                        <div>
+
+                            <span>Location (USA)</span>
+                            <div class="footer-location">
+                             <p>Norwalk, California, 90650. USA</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Bottom -->
+
+    <div class="footer-bottom">
+
+        <div class="container">
+
+            <div class="bottom-wrapper">
+
+                <p>
+                    © 2026 All rights reserved.
+                </p>
+
+                <ul>
+
+                    <li><a href="#">Privacy Policy</a></li>
+
+                    <li><a href="#">Terms of Service</a></li>
+
+                    <li><a href="#">Cookie Policy</a></li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</footer>
+<!--footer section end-->
+
+<script>
+
+(function () {
+    var body = document.getElementById('gs-body');
+    if (!body) return;
+    var $ = function (id) { return document.getElementById(id); };
+    function esc(s) { return String(s).replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); }
+    var BPCL = 'Bharat Petroleum Highway Express', IOCL = 'Indian Oil Super Fuel Hub';
+    var R = [
+        { t: 'Diesel purchase · 60 L', type: 'Diesel', comp: 'Diesel', veh: 'GJ 05 AB 1234', ven: BPCL, date: '2026-10-18', link: true },
+        { t: 'Diesel purchase · 45 L', type: 'Diesel', comp: 'Diesel', veh: 'GJ 05 AB 1234', ven: IOCL, date: '2026-10-12', link: true },
+        { t: 'Diesel purchase · 50 L', type: 'Diesel', comp: 'Diesel', veh: 'GJ 05 AB 1234', ven: BPCL, date: '2026-10-04', link: true },
+        { t: 'Diesel purchase · 55 L', type: 'Diesel', comp: 'Diesel', veh: 'GJ 05 AB 1234', ven: IOCL, date: '2026-09-22', link: true },
+        { t: 'Diesel purchase · 40 L', type: 'Diesel', comp: 'Diesel', veh: 'MH-12-RN-4821', ven: 'Shell Transport Point', date: '2026-10-18', link: true },
+        { t: 'Toll payment', type: 'Toll', comp: 'Toll', veh: 'GJ 05 AB 1234', ven: '', date: '2026-10-10', link: true },
+        { t: 'Service entry', type: 'Maintenance', comp: 'Service', veh: 'GJ 05 AB 1234', ven: 'Maroon Auto Tech Pvt Ltd', date: '2026-10-15', link: true },
+        { t: 'Tyre record', type: 'Tyre', comp: 'Tyre', veh: 'MH-14-BT-9102', ven: '', date: '2026-09-30', link: true },
+        { t: 'Battery record', type: 'Battery', comp: 'Battery', veh: 'GJ 05 AB 1234', ven: '', date: '2026-08-14', link: true },
+        { t: 'Vehicle GJ 05 AB 1234', type: 'Vehicle', comp: '', veh: 'GJ 05 AB 1234', ven: '', date: '', link: true },
+        { t: 'Driver record', type: 'Driver', comp: '', veh: 'GJ 05 AB 1234', ven: '', date: '', link: true },
+        { t: BPCL, type: 'Vendor', comp: '', veh: '', ven: BPCL, date: '', link: false }
+    ];
+    var PAGE = 3, page = 1, results = [], searched = false;
+    function filters() {
+        return { q: $('gs-q').value.trim().toLowerCase(), v: $('gs-vehicle').value, ven: $('gs-vendor').value, c: $('gs-comp').value, f: $('gs-from').value, to: $('gs-to').value };
+    }
+    function run() {
+        var f = filters();
+        results = R.filter(function (r) {
+            if (f.q && (r.t + ' ' + r.type + ' ' + r.veh + ' ' + r.ven).toLowerCase().indexOf(f.q) < 0) return false;
+            if (f.v && r.veh !== f.v) return false;
+            if (f.ven && r.ven !== f.ven) return false;
+            if (f.c && r.comp !== f.c) return false;
+            if ((f.f || f.to) && (!r.date || (f.f && r.date < f.f) || (f.to && r.date > f.to))) return false;
+            return true;
+        }).sort(function (a, b) { return (b.date || '').localeCompare(a.date || ''); });
+        page = 1; searched = true; render();
+    }
+    function render() {
+        var f = filters(), pages = Math.max(1, Math.ceil(results.length / PAGE));
+        var n = [f.v, f.ven, f.c, f.f || f.to].filter(Boolean).length;
+        $('gs-s-query').textContent = f.q ? $('gs-q').value.trim() : '—';
+        $('gs-s-filters').textContent = n;
+        $('gs-s-count').textContent = searched ? results.length : 0;
+        $('gs-s-page').textContent = searched && results.length ? page + ' / ' + pages : '0 / 0';
+        if (!searched) { body.innerHTML = '<tr><td colspan="5">Click Search to view the matching records.</td></tr>'; return; }
+        if (!results.length) { body.innerHTML = '<tr><td colspan="5">No matching records found. Change the keyword or filters and search again.</td></tr>'; return; }
+        body.innerHTML = results.slice((page - 1) * PAGE, page * PAGE).map(function (r, i) {
+            var idx = (page - 1) * PAGE + i;
+            var det = [r.veh && 'Vehicle: ' + r.veh, r.ven && 'Vendor: ' + r.ven].filter(Boolean).join(' · ') || '—';
+            return '<tr><td><div class="dl-vehicle-name"><i class="ri-file-list-3-fill"></i><span>' + esc(r.t) + '</span></div></td><td>' + esc(r.type) + '</td><td>' + esc(det) + '</td><td>' + (r.date || '—') + '</td><td class="dl-text-center">' +
+                (r.link ? '<button type="button" class="dl-secondary-button gs-open" data-i="' + idx + '">Open</button>' : '—') + '</td></tr>';
+        }).join('');
+    }
+    $('gs-search').addEventListener('click', run);
+    $('gs-q').addEventListener('keydown', function (e) { if (e.key === 'Enter') run(); });
+    $('gs-clear').addEventListener('click', function () {
+        ['gs-q', 'gs-from', 'gs-to'].forEach(function (id) { $(id).value = ''; });
+        ['gs-vehicle', 'gs-vendor', 'gs-comp'].forEach(function (id) { $(id).selectedIndex = 0; });
+        results = []; searched = false; page = 1; $('gs-msg').textContent = 'Search cleared. Begin a new search.'; render();
+    });
+    $('gs-prev').addEventListener('click', function () { if (page > 1) { page--; render(); } });
+    $('gs-next').addEventListener('click', function () { if (page < Math.ceil(results.length / PAGE)) { page++; render(); } });
+    body.addEventListener('click', function (e) {
+        var b = e.target.closest('.gs-open'); if (!b) return;
+        var r = results[+b.getAttribute('data-i')];
+        $('gs-msg').textContent = 'Demo: opens the linked ' + r.type + ' record — ' + r.t + '.';
+    });
+
+    var MODS = ['Vehicles', 'Drivers', 'Diesel', 'Repairs', 'Reports'];
+    function renderMods() {
+        var q = $('gs-mod').value.trim().toLowerCase();
+        var m = MODS.filter(function (x) { return x.toLowerCase().indexOf(q) > -1; });
+        $('gs-mods').innerHTML = m.length ? m.map(function (x) {
+            return '<tr><td><div class="dl-vehicle-name"><i class="ri-compass-3-fill"></i><span>' + x + '</span></div></td><td class="dl-text-center"><button type="button" class="dl-secondary-button gs-go" data-m="' + x + '">Open</button></td></tr>';
+        }).join('') : '<tr><td colspan="2">No matching section.</td></tr>';
+    }
+    $('gs-mod').addEventListener('input', renderMods);
+    $('gs-mods').addEventListener('click', function (e) {
+        var b = e.target.closest('.gs-go'); if (b) $('gs-modmsg').textContent = 'Demo: navigating to ' + b.getAttribute('data-m') + '.';
+    });
+    renderMods();
+
+    document.getElementById('gs-tabs').addEventListener('click', function (e) {
+        var t = e.target.closest('.dl-view-tab'); if (!t) return;
+        Array.prototype.forEach.call(this.querySelectorAll('.dl-view-tab'), function (x) { x.classList.toggle('dl-view-tab-active', x === t); });
+        var map = {search:'gs-view-search',module:'gs-view-module'};
+        Object.keys(map).forEach(function (k) { document.getElementById(map[k]).hidden = k !== t.getAttribute('data-view'); });
+    });
+})();
+
+</script>
+<script src="./Assets/js/custom.js"></script>
+</body>
+</html>

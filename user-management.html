@@ -1,0 +1,2098 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>User Management Module | TransportDesk Fleet Solutions</title>
+    <meta name="description" content="Create user accounts, assign job roles and manage staff access to your transport software in one place. Register users, set secure passwords, search, edit and manage accounts with the TransportDesk User Management Module.">
+
+    <!-- Remix Icon -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" />
+
+    <!-- Swiper -->
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+
+    <!-- Lenis -->
+    <link rel="stylesheet"
+        href="https://unpkg.com/lenis@1.3.23/dist/lenis.css">
+
+    <!-- Tailwind Output CSS -->
+     <link href="./Assets/css/output.css" rel="stylesheet">
+    <!-- Module additions (pills / status) -->
+    <style>
+        .dx-pill{display:inline-block;margin:.1rem .2rem .1rem 0;padding:.15rem .6rem;border-radius:999px;font-size:.75rem;font-weight:600;white-space:nowrap;background:#f1f5f9;color:#334155}
+        .dx-status{display:inline-block;padding:.2rem .65rem;border-radius:999px;font-size:.75rem;font-weight:600;white-space:nowrap}
+        .dx-valid{background:#dcfce7;color:#15803d}
+        .dx-soon{background:#fef3c7;color:#b45309}
+        .dx-expired{background:#fee2e2;color:#b91c1c}
+        .dx-history{background:#e5e7eb;color:#4b5563}
+        .dx-muted{font-size:.8rem;opacity:.7}
+        tr.dx-history-row{opacity:.6}
+        .dx-hidden{display:none!important}
+    </style>
+
+</head>
+<body>
+
+<!--Header Section start-->
+<header class="main-header">
+    <div class="container">
+
+        <div class="header-inner">
+
+            <a href="index.html" class="header-logo">
+                <img src="Assets/images/transportdesk-logo.svg" alt="Logo">
+            </a>
+
+            <nav class="main-navigation" id="mobileMenu">
+
+                <div class="menu-circle"></div>
+
+                <ul class="navigation-links">
+                    <li><a href="index.html" class="navigation-link">Home</a></li>
+                    <li><a href="features.html" class="navigation-link">Features</a></li>
+                    <li><a href="modules.html" class="navigation-link active">Modules</a></li>
+                    <li><a href="reports.html" class="navigation-link">Resources</a></li>
+                    <li><a href="contact.html" class="navigation-link">Contact</a></li>
+                </ul>
+
+                <div class="mobile-header-right">
+                    <a href="#" class="login-btn">Login</a>
+                    <a href="#" class="demo-btn">Book Demo</a>
+                </div>
+
+            </nav>
+
+            <div class="header-right">
+                <a href="#" class="login-btn">Login</a>
+                <a href="#" class="demo-btn">Book Demo</a>
+            </div>
+
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+        </div>
+
+    </div>
+</header>
+
+<!-- Add this after header -->
+<div class="menu-overlay" id="menuOverlay"></div>
+<!--Header section End-->
+
+<section id="overview" class="dl-overview-section">
+    <div class="dl-overview-glow"></div>
+    <div class="dl-overview-pattern"></div>
+
+    <div class="container">
+        <div class="dl-overview-grid">
+
+            <!-- Left Content -->
+            <div class="dl-overview-content">
+
+                <div class="dl-overview-badge">
+                    <span class="dl-status-dot"></span>
+                    <span>Enterprise Fleet Management</span>
+                    <span class="dl-badge-divider">|</span>
+                    <span class="dl-badge-highlight">User Management Module</span>
+                </div>
+
+                <h1 class="dl-overview-title">
+                    Smart Transportation &amp;
+                    <span class="dl-gradient-text">User Management</span>
+                    Platform
+                </h1>
+
+                <p class="dl-overview-description">
+                    The User Management Module helps transport businesses create and manage login accounts for their office and operations team. Each staff member can receive a separate account, making it easier to maintain organized user information and identify their job role. Administrators can add new users, view existing accounts and update information as staff responsibilities change.
+                </p>
+
+                <!-- Action Buttons -->
+                <div class="dl-overview-actions">
+
+                    <button type="button" class="btn-primary">
+                        <span>Try Live User Simulator</span>
+                        <i class="ri-arrow-right-line"></i>
+                    </button>
+
+                    <button type="button" class="dl-btn-demo">
+                        <span class="dl-play-icon">
+                            <i class="ri-play-fill"></i>
+                        </span>
+                        <span>Watch Demo Video</span>
+                    </button>
+                </div>
+
+                <!-- Statistics -->
+                <div class="dl-overview-stats">
+
+                    <div class="dl-stat-item">
+                        <div class="dl-stat-number">4</div>
+                        <div class="dl-stat-label">User Roles</div>
+                    </div>
+
+                    <div class="dl-stat-item">
+                        <div class="dl-stat-number dl-stat-red">8+</div>
+                        <div class="dl-stat-label">Password Characters</div>
+                    </div>
+
+                    <div class="dl-stat-item">
+                        <div class="dl-stat-number dl-stat-green">12</div>
+                        <div class="dl-stat-label">Core Features</div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Right Image / Fuel Dashboard -->
+            <div class="dl-overview-visual">
+
+                <div class="dl-visual-card">
+
+                    <img
+                        src="Assets/images/hero_fleet_dispatch_1792482270822.jpg"
+                        alt="Staff user accounts managed from one system"
+                        class="dl-visual-image"
+                    >
+
+                    <div class="dl-visual-overlay"></div>
+
+                    <!-- Image Top Information -->
+                    <div class="dl-visual-topbar">
+
+                        <div class="dl-live-label">
+                            <span class="dl-live-dot"></span>
+                            <span>User Account Overview</span>
+                        </div>
+
+                        <div class="dl-fuel-rate">
+                            Kiran Shah
+                        </div>
+
+                    </div>
+
+                    <!-- Fuel Slip Information -->
+                    <div class="dl-fuel-slip">
+
+                        <div class="dl-slip-header">
+                            <span class="dl-slip-title">
+                                Sample User Account · ABC Transport
+                            </span>
+
+                            <span class="dl-slip-status">
+                                Account Created
+                            </span>
+                        </div>
+
+                        <div class="dl-slip-stats">
+
+                            <div class="dl-slip-stat">
+                                <span class="dl-slip-label">Role</span>
+                                <span class="dl-slip-value">Accountant</span>
+                            </div>
+
+                            <div class="dl-slip-stat">
+                                <span class="dl-slip-label">Email</span>
+                                <span class="dl-slip-value dl-slip-red">Unique</span>
+                            </div>
+
+                            <div class="dl-slip-stat">
+                                <span class="dl-slip-label">Password</span>
+                                <span class="dl-slip-value dl-slip-green">Secure</span>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<section class="dl-trusted-section">
+    <div class="dl-trusted-heading">
+        <span>
+            Create User Accounts, Assign Job Roles &amp; Manage Staff Access in One Place
+        </span>
+    </div>
+
+    <div class="dl-trusted-marquee">
+        <!-- Left fade -->
+        <div class="dl-trusted-fade dl-trusted-fade-left"></div>
+
+        <!-- Right fade -->
+        <div class="dl-trusted-fade dl-trusted-fade-right"></div>
+
+        <div class="dl-trusted-track">
+
+            <!-- First group -->
+            <div class="dl-trusted-group">
+                <div class="dl-trusted-item">
+                    <span class="dl-trusted-dot"></span>
+                    <span class="dl-trusted-name">Individual Accounts</span>
+                </div>
+
+                <div class="dl-trusted-item">
+                    <span class="dl-trusted-dot"></span>
+                    <span class="dl-trusted-name">Full Name &amp; Email</span>
+                </div>
+
+                <div class="dl-trusted-item">
+                    <span class="dl-trusted-dot"></span>
+                    <span class="dl-trusted-name">Admin Role</span>
+                </div>
+
+                <div class="dl-trusted-item">
+                    <span class="dl-trusted-dot"></span>
+                    <span class="dl-trusted-name">Accountant Role</span>
+                </div>
+
+                <div class="dl-trusted-item">
+                    <span class="dl-trusted-dot"></span>
+                    <span class="dl-trusted-name">Maintenance Role</span>
+                </div>
+
+                <div class="dl-trusted-item">
+                    <span class="dl-trusted-dot"></span>
+                    <span class="dl-trusted-name">Manager Role</span>
+                </div>
+
+                <div class="dl-trusted-item">
+                    <span class="dl-trusted-dot"></span>
+                    <span class="dl-trusted-name">Secure Passwords</span>
+                </div>
+
+                <div class="dl-trusted-item">
+                    <span class="dl-trusted-dot"></span>
+                    <span class="dl-trusted-name">User List</span>
+                </div>
+
+                <div class="dl-trusted-item">
+                    <span class="dl-trusted-dot"></span>
+                    <span class="dl-trusted-name">Search &amp; Suggestions</span>
+                </div>
+
+                <div class="dl-trusted-item">
+                    <span class="dl-trusted-dot"></span>
+                    <span class="dl-trusted-name">Sorting &amp; Pagination</span>
+                </div>
+
+                <div class="dl-trusted-item">
+                    <span class="dl-trusted-dot"></span>
+                    <span class="dl-trusted-name">Edit User Details</span>
+                </div>
+
+                <div class="dl-trusted-item">
+                    <span class="dl-trusted-dot"></span>
+                    <span class="dl-trusted-name">Permission-Controlled Actions</span>
+                </div>
+            </div>
+
+            <!-- Duplicate group for seamless looping -->
+            <div class="dl-trusted-group" aria-hidden="true">
+                <div class="dl-trusted-item">
+                    <span class="dl-trusted-dot"></span>
+                    <span class="dl-trusted-name">Individual Accounts</span>
+                </div>
+
+                <div class="dl-trusted-item">
+                    <span class="dl-trusted-dot"></span>
+                    <span class="dl-trusted-name">Full Name &amp; Email</span>
+                </div>
+
+                <div class="dl-trusted-item">
+                    <span class="dl-trusted-dot"></span>
+                    <span class="dl-trusted-name">Admin Role</span>
+                </div>
+
+                <div class="dl-trusted-item">
+                    <span class="dl-trusted-dot"></span>
+                    <span class="dl-trusted-name">Accountant Role</span>
+                </div>
+
+                <div class="dl-trusted-item">
+                    <span class="dl-trusted-dot"></span>
+                    <span class="dl-trusted-name">Maintenance Role</span>
+                </div>
+
+                <div class="dl-trusted-item">
+                    <span class="dl-trusted-dot"></span>
+                    <span class="dl-trusted-name">Manager Role</span>
+                </div>
+
+                <div class="dl-trusted-item">
+                    <span class="dl-trusted-dot"></span>
+                    <span class="dl-trusted-name">Secure Passwords</span>
+                </div>
+
+                <div class="dl-trusted-item">
+                    <span class="dl-trusted-dot"></span>
+                    <span class="dl-trusted-name">User List</span>
+                </div>
+
+                <div class="dl-trusted-item">
+                    <span class="dl-trusted-dot"></span>
+                    <span class="dl-trusted-name">Search &amp; Suggestions</span>
+                </div>
+
+                <div class="dl-trusted-item">
+                    <span class="dl-trusted-dot"></span>
+                    <span class="dl-trusted-name">Sorting &amp; Pagination</span>
+                </div>
+
+                <div class="dl-trusted-item">
+                    <span class="dl-trusted-dot"></span>
+                    <span class="dl-trusted-name">Edit User Details</span>
+                </div>
+
+                <div class="dl-trusted-item">
+                    <span class="dl-trusted-dot"></span>
+                    <span class="dl-trusted-name">Permission-Controlled Actions</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<section class="dl-demo-section">
+    <div class="dl-demo-glow"></div>
+
+    <div class="dl-container">
+
+        <!-- Section Heading -->
+        <div class="heading-wrapper">
+
+            <span class="heading-tag">
+                Interactive Video Demonstration
+            </span>
+
+            <h2 class="heading-title">
+             Watch How
+                <span>User Management</span>
+                Works
+            </h2>
+
+            <p>
+                Watch our step-by-step demonstration to learn how to view the user list, register a new user, assign a role, update account details and manage existing users.
+            </p>
+        </div>
+
+        <!-- Demo Content -->
+        <div class="dl-demo-grid">
+
+            <!-- Video Preview -->
+            <div class="dl-demo-video-column">
+
+                <div class="dl-video-card">
+
+                    <!-- Video Browser Header -->
+                    <div class="dl-video-toolbar">
+
+                        <div class="dl-video-toolbar-left">
+                            <span class="dl-window-dot dl-dot-red"></span>
+                            <span class="dl-window-dot dl-dot-yellow"></span>
+                            <span class="dl-window-dot dl-dot-green"></span>
+
+                            <span class="dl-video-filename">
+                                user_management_module_demo.mp4
+                            </span>
+                        </div>
+
+                        <span class="dl-video-quality">
+                            Demo Video
+                        </span>
+
+                    </div>
+
+                    <!-- Video Thumbnail -->
+                    <div class="dl-video-preview">
+
+                        <img
+                            src="Assets/images/dashboard.png"
+                            alt="User Management demonstration video preview"
+                            class="dl-video-thumbnail"
+                        >
+
+                        <div class="dl-video-overlay"></div>
+
+                        <button
+                            type="button"
+                            class="dl-video-play"
+                            aria-label="Play demonstration video"
+                        >
+                            <i class="ri-play-fill"></i>
+                            <span class="dl-video-ping"></span>
+                        </button>
+
+                        <!-- Video Information -->
+                        <div class="dl-video-meta">
+
+                            <div class="dl-video-meta-left">
+                                <span class="dl-video-timestamp">
+                                    Timestamp: 00:00
+                                </span>
+
+                                <span class="dl-video-current-chapter">
+                                    Creating a New User
+                                </span>
+                            </div>
+
+                            <a
+                                href="#"
+                                class="dl-video-external"
+                            >
+                                <span>External Link</span>
+                                <i class="ri-external-link-line"></i>
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                    <!-- Video Footer -->
+                    <div class="dl-video-footer">
+
+                        <div class="dl-video-footer-left">
+
+                            <button
+                                type="button"
+                                class="dl-watch-button"
+                            >
+                                <i class="ri-play-circle-line"></i>
+                                <span>Watch Full Walkthrough</span>
+                            </button>
+
+                            <span class="dl-video-footer-note">
+                                Demo video will be displayed here
+                            </span>
+
+                        </div>
+
+                        <a
+                            href="#"
+                            class="dl-video-source"
+                        >
+                            <span>Direct Source</span>
+                            <i class="ri-arrow-right-up-line"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+</section>
+
+
+<section id="simulator" class="dl-simulator-section">
+    <div class="dl-container">
+
+        <!-- Section Heading -->
+        <div class="dl-simulator-header">
+             <div class="heading-wrapper heading-wrap-left">
+
+            <span class="heading-tag">
+                Practical Example
+            </span>
+
+            <h2 class="heading-title">
+              Practical Example: <span>Adding a New Office User</span>
+            </h2>
+
+            <p>
+                Suppose ABC Transport wants to create a login account for a staff member responsible for accounting. The administrator opens Users, clicks Create New User and enters the sample details below. Type a secure password to register the user, then search, edit or delete accounts in the list.
+            </p>
+        </div>
+
+            <div class="dl-view-switcher">
+                <button type="button" class="dl-view-tab dl-view-tab-active">
+                    <i class="ri-user-add-line"></i>
+                    Create User View
+                </button>
+
+                <button type="button" class="dl-view-tab">
+                    <i class="ri-group-line"></i>
+                    Users List View
+                </button>
+            </div>
+        </div>
+        <!-- Summary Statistics -->
+        <div class="dl-stats-grid">
+
+            <div class="dl-stat-card">
+                <div class="dl-stat-label"><span>Total Users</span><i class="ri-group-line"></i></div>
+                <div class="dl-stat-value"><b id="um-total" style="font:inherit">0</b> <span>Users</span></div>
+                <p class="dl-stat-note">Registered accounts</p>
+            </div>
+
+            <div class="dl-stat-card">
+                <div class="dl-stat-label"><span>Admin Accounts</span><i class="ri-admin-line dl-red-icon"></i></div>
+                <div class="dl-stat-value dl-red-text"><b id="um-admins" style="font:inherit">0</b> <span>Admins</span></div>
+                <p class="dl-stat-note">Admin role</p>
+            </div>
+
+            <div class="dl-stat-card">
+                <div class="dl-stat-label"><span>Other Staff</span><i class="ri-user-line dl-green-icon"></i></div>
+                <div class="dl-stat-value dl-green-text"><b id="um-others" style="font:inherit">0</b> <span>Staff</span></div>
+                <p class="dl-stat-note">Accountant, Maintenance, Manager</p>
+            </div>
+
+            <div class="dl-stat-card dl-stat-card-total">
+                <div class="dl-stat-label"><span>New User Preview</span><span class="dl-status-dot"></span></div>
+                <div class="dl-stat-value dl-stat-total-value" id="um-card-name">Kiran Shah</div>
+                <p class="dl-stat-note dl-green-text" id="um-card-note">Accountant · kiran.shah@example.com</p>
+            </div>
+
+        </div>
+
+        <!-- Calculator Panel -->
+        <div class="dl-calculator-panel">
+
+            <!-- Information Form -->
+            <div class="dl-bill-master" data-x="profile">
+
+                <div class="dl-bill-master-header">
+                    <div class="dl-bill-heading">
+                        <span id="um-step">Step 2: Create a New User</span>
+                        <span class="dl-heading-separator">·</span>
+                        <span class="dl-invoice-number">Each email address must be unique</span>
+                    </div>
+                </div>
+
+                <div class="dl-bill-fields">
+
+                    <div class="dl-form-group">
+                        <label for="um-name">Full Name</label>
+                        <input id="um-name" class="dl-form-control" type="text" value="Kiran Shah" placeholder="">
+                    </div>
+
+                    <div class="dl-form-group">
+                        <label for="um-email">Email Address</label>
+                        <input id="um-email" class="dl-form-control" type="email" value="kiran.shah@example.com" placeholder="">
+                    </div>
+
+                    <div class="dl-form-group">
+                        <label for="um-role">Assigned Role</label>
+                        <select id="um-role" class="dl-form-control"><option>Admin</option><option selected>Accountant</option><option>Maintenance</option><option>Manager</option></select>
+                    </div>
+
+                    <div class="dl-form-group">
+                        <label for="um-pass">Password</label>
+                        <input id="um-pass" class="dl-form-control" type="password" value="" placeholder="Create a secure password">
+                    </div>
+
+                    <div class="dl-form-group">
+                        <label for="um-pass2">Confirm Password</label>
+                        <input id="um-pass2" class="dl-form-control" type="password" value="" placeholder="Enter the same password again">
+                    </div>
+
+                </div>
+
+                <div class="dl-bill-options">
+                    <label class="dl-checkbox-label">
+                        <input id="um-show" type="checkbox">
+                        <span>Show passwords</span>
+                    </label>
+                    <span class="dl-formula-note" id="um-note">
+                        Password: at least 8 characters with uppercase and lowercase letters, a number and a symbol
+                    </span>
+                </div>
+
+            </div>
+
+            <!-- Toolbar -->
+            <div class="dl-table-toolbar">
+
+                <div class="dl-search-box">
+                    <i class="ri-search-line"></i>
+                    <input type="search" id="um-search" placeholder="Search by user name or email...">
+                </div>
+
+                <div class="dl-toolbar-actions">
+                    <button type="button" class="dl-action-button" id="um-sort">
+                        <i class="ri-sort-asc dl-red-icon"></i>
+                        <span>Sort: Name A–Z</span>
+                    </button>
+
+                    <button type="button" class="dl-primary-button" id="um-add">
+                        <i class="ri-user-add-line"></i>
+                        <span>Register User</span>
+                    </button>
+
+                </div>
+
+            </div>
+
+            <!-- Table -->
+            <div class="dl-table-wrapper">
+                <table class="dl-vehicle-table">
+                    <thead>
+                        <tr><th>User Details</th><th>Email Address</th><th>Assigned Role</th><th class="dl-text-center">Action</th></tr>
+                    </thead>
+
+                    <tbody id="um-body"></tbody>
+
+                    <tfoot>
+                        <tr>
+                            <td><span class="dl-footer-label" id="um-f-label"></span></td>
+                            <td class="dl-footer-period">Sorted by name</td>
+                            <td class="dl-text-right dl-footer-total" id="um-f-shown"></td>
+                            <td class="dl-text-right"><button type="button" class="dl-primary-button" id="um-add2">Register User</button></td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+
+            <!-- Information Footer -->
+            <div class="dl-calculator-footer">
+
+                <div class="dl-documentation-note">
+                    <i class="ri-information-line"></i>
+                    <span>
+                        <strong>Documentation Rule:</strong>
+                        Available module access is controlled through the separate User Permissions feature.
+                    </span>
+                </div>
+
+                <div class="dl-supported-formats">
+                    Roles: Admin, Accountant, Maintenance, Manager
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+
+
+<!--dl feature section start-->
+<section id="features" class="dl-features-section">
+
+    <div class="container">
+
+        <!-- Section Heading -->
+     <div class="heading-wrapper">
+
+            <span class="heading-tag">
+                Complete solution
+            </span>
+
+            <h2 class="heading-title">
+              Key Features of <span>User Management</span>
+            </h2>
+
+            <p>
+                Create user accounts, assign job roles and manage staff access to your transport software in one place.
+            </p>
+           <!-- Feature Filters -->
+            <div class="dl-features-filters">
+
+                <button type="button"
+                    class="dl-filter-btn is-active"
+                    data-filter="all">
+                    All Features (12)
+                </button>
+
+                <button type="button"
+                    class="dl-filter-btn"
+                    data-filter="accounts">
+                    Accounts &amp; Roles
+                </button>
+
+                <button type="button"
+                    class="dl-filter-btn"
+                    data-filter="security">
+                    Passwords &amp; Security
+                </button>
+
+                <button type="button"
+                    class="dl-filter-btn"
+                    data-filter="manage">
+                    Search &amp; Manage
+                </button>
+
+            </div>
+        </div>
+
+        <!-- Feature Cards -->
+        <div class="dl-features-grid">
+
+            <!-- Feature 4.1 -->
+            <article class="dl-feature-card" data-category="accounts">
+                <div class="dl-feature-card-content">
+                    <div class="dl-feature-icon">
+                        <i class="ri-user-3-line"></i>
+                    </div>
+
+                    <div class="dl-feature-card-heading">
+                        <h3>Individual User Accounts</h3>
+                    </div>
+
+                    <p>
+                        Create a separate login profile for each staff member instead of sharing one account.
+                    </p>
+                </div>
+            </article>
+
+            <!-- Feature 4.2 -->
+            <article class="dl-feature-card" data-category="accounts">
+                <div class="dl-feature-card-content">
+                    <div class="dl-feature-icon">
+                        <i class="ri-mail-line"></i>
+                    </div>
+
+                    <div class="dl-feature-card-heading">
+                        <h3>User Name and Email</h3>
+                    </div>
+
+                    <p>
+                        Save a full name and email address so each user can be identified easily.
+                    </p>
+                </div>
+            </article>
+
+            <!-- Feature 4.3 -->
+            <article class="dl-feature-card" data-category="accounts">
+                <div class="dl-feature-card-content">
+                    <div class="dl-feature-icon">
+                        <i class="ri-user-settings-line"></i>
+                    </div>
+
+                    <div class="dl-feature-card-heading">
+                        <h3>Role Assignment</h3>
+                    </div>
+
+                    <p>
+                        Choose from Admin, Accountant, Maintenance and Manager roles when adding a user.
+                    </p>
+                </div>
+            </article>
+
+            <!-- Feature 4.4 -->
+            <article class="dl-feature-card" data-category="security">
+                <div class="dl-feature-card-content">
+                    <div class="dl-feature-icon">
+                        <i class="ri-lock-password-line"></i>
+                    </div>
+
+                    <div class="dl-feature-card-heading">
+                        <h3>Secure Password Setup</h3>
+                    </div>
+
+                    <p>
+                        Require password confirmation and apply security rules while creating a user account.
+                    </p>
+                </div>
+            </article>
+
+            <!-- Feature 4.5 -->
+            <article class="dl-feature-card" data-category="manage">
+                <div class="dl-feature-card-content">
+                    <div class="dl-feature-icon">
+                        <i class="ri-list-check-2"></i>
+                    </div>
+
+                    <div class="dl-feature-card-heading">
+                        <h3>User List</h3>
+                    </div>
+
+                    <p>
+                        View saved user names, email addresses, roles and account actions in one list.
+                    </p>
+                </div>
+            </article>
+
+            <!-- Feature 4.6 -->
+            <article class="dl-feature-card" data-category="manage">
+                <div class="dl-feature-card-content">
+                    <div class="dl-feature-icon">
+                        <i class="ri-search-line"></i>
+                    </div>
+
+                    <div class="dl-feature-card-heading">
+                        <h3>Search and Suggestions</h3>
+                    </div>
+
+                    <p>
+                        Search users by name or email; matching suggestions help locate an account.
+                    </p>
+                </div>
+            </article>
+
+            <!-- Feature 4.7 -->
+            <article class="dl-feature-card" data-category="manage">
+                <div class="dl-feature-card-content">
+                    <div class="dl-feature-icon">
+                        <i class="ri-sort-asc"></i>
+                    </div>
+
+                    <div class="dl-feature-card-heading">
+                        <h3>Sorting and Pagination</h3>
+                    </div>
+
+                    <p>
+                        Sort users by name and navigate through user lists in manageable pages.
+                    </p>
+                </div>
+            </article>
+
+            <!-- Feature 4.8 -->
+            <article class="dl-feature-card" data-category="manage">
+                <div class="dl-feature-card-content">
+                    <div class="dl-feature-icon">
+                        <i class="ri-id-card-line"></i>
+                    </div>
+
+                    <div class="dl-feature-card-heading">
+                        <h3>User Detail View</h3>
+                    </div>
+
+                    <p>
+                        Open an existing user to review their account information.
+                    </p>
+                </div>
+            </article>
+
+            <!-- Feature 4.9 -->
+            <article class="dl-feature-card" data-category="accounts manage">
+                <div class="dl-feature-card-content">
+                    <div class="dl-feature-icon">
+                        <i class="ri-edit-line"></i>
+                    </div>
+
+                    <div class="dl-feature-card-heading">
+                        <h3>Edit User Details</h3>
+                    </div>
+
+                    <p>
+                        Update a user’s name, email and assigned role with the appropriate permission.
+                    </p>
+                </div>
+            </article>
+
+            <!-- Feature 4.10 -->
+            <article class="dl-feature-card" data-category="security">
+                <div class="dl-feature-card-content">
+                    <div class="dl-feature-icon">
+                        <i class="ri-key-2-line"></i>
+                    </div>
+
+                    <div class="dl-feature-card-heading">
+                        <h3>Optional Password Changes</h3>
+                    </div>
+
+                    <p>
+                        Set a new password when needed without requiring a password change every time profile details are edited.
+                    </p>
+                </div>
+            </article>
+
+            <!-- Feature 4.11 -->
+            <article class="dl-feature-card" data-category="manage">
+                <div class="dl-feature-card-content">
+                    <div class="dl-feature-icon">
+                        <i class="ri-delete-bin-line"></i>
+                    </div>
+
+                    <div class="dl-feature-card-heading">
+                        <h3>Delete User Records</h3>
+                    </div>
+
+                    <p>
+                        Allow authorized users to delete an account when it is no longer required. Check any related business records before deletion.
+                    </p>
+                </div>
+            </article>
+
+            <!-- Feature 4.12 -->
+            <article class="dl-feature-card" data-category="security">
+                <div class="dl-feature-card-content">
+                    <div class="dl-feature-icon">
+                        <i class="ri-shield-check-line"></i>
+                    </div>
+
+                    <div class="dl-feature-card-heading">
+                        <h3>Permission-Controlled Actions</h3>
+                    </div>
+
+                    <p>
+                        Separate permissions govern who can view, create, edit or delete user accounts.
+                    </p>
+                </div>
+            </article>
+
+
+        </div>
+    </div>
+</section>
+<!--dl feature section end-->
+
+
+<!--workflow section start-->
+<section class="dl-workflow-section">
+    <div class="container">
+
+        <!-- Section Heading -->
+
+        <div class="heading-wrapper heading-wrap-left">
+
+            <span class="heading-tag">
+                Step-by-Step Workflow
+            </span>
+
+            <h2 class="heading-title">
+              How Does the <span>User Management Module</span> Work?
+            </h2>
+
+            <p>
+                Follow six simple steps to open the user list, create accounts, set secure passwords and keep user information up to date.
+            </p>
+            
+        </div>
+
+        <!-- Workflow Grid -->
+        <div class="dl-workflow-grid">
+
+            <!-- Workflow Step 01 -->
+            <article class="dl-workflow-card">
+                <div class="dl-workflow-card-content">
+
+                    <div class="dl-workflow-card-top">
+                        <span class="dl-workflow-number">01</span>
+
+                        <div class="dl-workflow-icon">
+                            <i class="ri-list-check"></i>
+                        </div>
+                    </div>
+
+                    <h3 class="dl-workflow-card-title">
+                        Open the Users List
+                    </h3>
+
+                    <p class="dl-workflow-card-description">
+                        Open Users from the admin menu.
+                    </p>
+
+                    <ul class="dl-workflow-checklist">
+                        <li>
+                            <i class="ri-check-line"></i>
+                            <span>The page displays names, email addresses, assigned roles and available actions</span>
+                        </li>
+                        <li>
+                            <i class="ri-check-line"></i>
+                            <span>Search by user name or email when you need a specific account</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="dl-workflow-card-footer">
+                    <span>Workflow Phase 01</span>
+                </div>
+            </article>
+
+            <!-- Workflow Step 02 -->
+            <article class="dl-workflow-card">
+                <div class="dl-workflow-card-content">
+
+                    <div class="dl-workflow-card-top">
+                        <span class="dl-workflow-number">02</span>
+
+                        <div class="dl-workflow-icon">
+                            <i class="ri-user-add-line"></i>
+                        </div>
+                    </div>
+
+                    <h3 class="dl-workflow-card-title">
+                        Create a New User
+                    </h3>
+
+                    <p class="dl-workflow-card-description">
+                        Click Create New User (or the available add-user option).
+                    </p>
+
+                    <ul class="dl-workflow-checklist">
+                        <li>
+                            <i class="ri-check-line"></i>
+                            <span>Enter Full Name, Email Address, Assigned Role, Password and Confirm Password</span>
+                        </li>
+                        <li>
+                            <i class="ri-check-line"></i>
+                            <span>Each email address must be unique</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="dl-workflow-card-footer">
+                    <span>Workflow Phase 02</span>
+                </div>
+            </article>
+
+            <!-- Workflow Step 03 -->
+            <article class="dl-workflow-card">
+                <div class="dl-workflow-card-content">
+
+                    <div class="dl-workflow-card-top">
+                        <span class="dl-workflow-number">03</span>
+
+                        <div class="dl-workflow-icon">
+                            <i class="ri-user-settings-line"></i>
+                        </div>
+                    </div>
+
+                    <h3 class="dl-workflow-card-title">
+                        Choose a User Role
+                    </h3>
+
+                    <p class="dl-workflow-card-description">
+                        Select Admin, Accountant, Maintenance or Manager, depending on the person’s responsibilities.
+                    </p>
+
+                    <ul class="dl-workflow-checklist">
+                        <li>
+                            <i class="ri-check-line"></i>
+                            <span>A role determines which permissions the application can grant</span>
+                        </li>
+                        <li>
+                            <i class="ri-check-line"></i>
+                            <span>Detailed module-wise permission setup is handled in User Permissions</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="dl-workflow-card-footer">
+                    <span>Workflow Phase 03</span>
+                </div>
+            </article>
+
+            <!-- Workflow Step 04 -->
+            <article class="dl-workflow-card">
+                <div class="dl-workflow-card-content">
+
+                    <div class="dl-workflow-card-top">
+                        <span class="dl-workflow-number">04</span>
+
+                        <div class="dl-workflow-icon">
+                            <i class="ri-lock-password-line"></i>
+                        </div>
+                    </div>
+
+                    <h3 class="dl-workflow-card-title">
+                        Set a Secure Password
+                    </h3>
+
+                    <p class="dl-workflow-card-description">
+                        Enter a password of at least eight characters.
+                    </p>
+
+                    <ul class="dl-workflow-checklist">
+                        <li>
+                            <i class="ri-check-line"></i>
+                            <span>Include uppercase and lowercase letters, a number and a symbol</span>
+                        </li>
+                        <li>
+                            <i class="ri-check-line"></i>
+                            <span>Re-enter the same password in Confirm Password</span>
+                        </li>
+                        <li>
+                            <i class="ri-check-line"></i>
+                            <span>Select Register User</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="dl-workflow-card-footer">
+                    <span>Workflow Phase 04</span>
+                </div>
+            </article>
+
+            <!-- Workflow Step 05 -->
+            <article class="dl-workflow-card">
+                <div class="dl-workflow-card-content">
+
+                    <div class="dl-workflow-card-top">
+                        <span class="dl-workflow-number">05</span>
+
+                        <div class="dl-workflow-icon">
+                            <i class="ri-edit-box-line"></i>
+                        </div>
+                    </div>
+
+                    <h3 class="dl-workflow-card-title">
+                        View and Update a User
+                    </h3>
+
+                    <p class="dl-workflow-card-description">
+                        Open a user record to view account information.
+                    </p>
+
+                    <ul class="dl-workflow-checklist">
+                        <li>
+                            <i class="ri-check-line"></i>
+                            <span>Choose Edit to change the name, email or role</span>
+                        </li>
+                        <li>
+                            <i class="ri-check-line"></i>
+                            <span>To change the password, enter and confirm a new one; otherwise leave the password fields blank</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="dl-workflow-card-footer">
+                    <span>Workflow Phase 05</span>
+                </div>
+            </article>
+
+            <!-- Workflow Step 06 -->
+            <article class="dl-workflow-card">
+                <div class="dl-workflow-card-content">
+
+                    <div class="dl-workflow-card-top">
+                        <span class="dl-workflow-number">06</span>
+
+                        <div class="dl-workflow-icon">
+                            <i class="ri-search-line"></i>
+                        </div>
+                    </div>
+
+                    <h3 class="dl-workflow-card-title">
+                        Search and Manage Users
+                    </h3>
+
+                    <p class="dl-workflow-card-description">
+                        Use name or email search to locate accounts.
+                    </p>
+
+                    <ul class="dl-workflow-checklist">
+                        <li>
+                            <i class="ri-check-line"></i>
+                            <span>Sort the list by name and browse pages of results</span>
+                        </li>
+                        <li>
+                            <i class="ri-check-line"></i>
+                            <span>Authorized staff can view, edit or delete users using the available actions</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="dl-workflow-card-footer">
+                    <span>Workflow Phase 06</span>
+                </div>
+            </article>
+
+
+        </div>
+        </div>
+        <div class="et-container">
+        <div class="workflow-bottom">
+
+            <!-- Security Card -->
+            <div class="security-card">
+                <img src="./Assets/images/workflow-img.png" alt="workflow-img">
+
+                <div class="security-content">
+                    <h3>Secure Password Rules</h3>
+
+                    <p>
+                        Enter a password of at least eight characters with uppercase and lowercase letters, a number and a symbol. Re-enter the same password in Confirm Password.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Right Side -->
+            <div class="workflow-info">
+
+                <div class="stats-card">
+                    <h3>4 Roles</h3>
+
+                    <h4>Assignable User Roles</h4>
+
+                    <p>
+                        Select Admin, Accountant, Maintenance or Manager, depending on the person’s responsibilities.
+                    </p>
+                </div>
+
+                <div class="workflow-content">
+                    <p>
+                        Explore a powerful collection of intelligent modules built to streamline your daily transport operations. Manage vehicles, drivers, trips, and business performance seamlessly through one unified platform.
+                    </p>
+
+                    <a href="#" class="workflow-btn">
+                        Explore All Modules <i class="ri-arrow-right-line"></i>
+                    </a>
+                </div>
+
+                <div class="info-card">
+                    <div class="info-icon">
+                       <i class="ri-bar-chart-2-fill"></i>
+                    </div>
+
+                    <span>
+                        Each email address must be unique
+                    </span>
+                </div>
+
+                <div class="info-card">
+                    <div class="info-icon">
+                       <i class="ri-lock-unlock-line"></i>
+                    </div>
+
+                    <span>
+                        Find accounts by name or email
+                    </span>
+                </div>
+
+            </div>
+
+        </div>
+    
+    </div>
+</section>
+<!--workflow section end-->
+
+
+<!--results section start-->
+<section id="benefits" class="results-section">
+
+    <div class="container">
+
+        <!-- Heading -->
+       <div class="heading-wrapper">
+
+            <span class="heading-tag">
+                Proven Advantages
+            </span>
+
+            <h2 class="heading-title heading-light">
+                Benefits of <span>User Management</span>
+            </h2>
+
+            <p>
+                Create accounts quickly, identify every user by name, email and role, and keep staff access organized.
+            </p>
+
+        </div>
+
+        <!-- Cards -->
+
+        <div class="results-grid">
+
+            <div class="result-card">
+
+                <div class="result-icon">
+                    <i class="ri-group-line"></i>
+                </div>
+
+                <h3>
+                    Manage Staff Accounts in One Place
+                </h3>
+
+                <p>
+                    Manage all staff login accounts from one place.
+                </p>
+
+            </div>
+
+            <div class="result-card">
+
+                <div class="result-icon">
+                    <i class="ri-id-card-line"></i>
+                </div>
+
+                <h3>
+                    Identify Users Easily
+                </h3>
+
+                <p>
+                    Make it easy to identify users by their name, email and job role.
+                </p>
+
+            </div>
+
+            <div class="result-card">
+
+                <div class="result-icon">
+                    <i class="ri-refresh-line"></i>
+                </div>
+
+                <h3>
+                    Keep Information Up to Date
+                </h3>
+
+                <p>
+                    Create accounts quickly and keep user information up to date.
+                </p>
+
+            </div>
+
+            <div class="result-card">
+
+                <div class="result-icon">
+                    <i class="ri-shield-check-line"></i>
+                </div>
+
+                <h3>
+                    Support Account Security
+                </h3>
+
+                <p>
+                    Help maintain security with unique email addresses and strong passwords.
+                </p>
+
+            </div>
+
+            <div class="result-card">
+
+                <div class="result-icon">
+                    <i class="ri-search-eye-line"></i>
+                </div>
+
+                <h3>
+                    Find Accounts Quickly
+                </h3>
+
+                <p>
+                    Find accounts quickly using search, sorting and pagination.
+                </p>
+
+            </div>
+
+            <div class="result-card">
+
+                <div class="result-icon">
+                    <i class="ri-lock-line"></i>
+                </div>
+
+                <h3>
+                    Control Who Manages Users
+                </h3>
+
+                <p>
+                    Control which staff can manage user accounts through permissions.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+</section>
+<!--results section end-->
+
+
+
+<!--transport-section start-->
+<section class="transport-section">
+    <div class="container">
+
+        <!-- Left Content -->
+    <div class="transport-container">   
+        <div class="heading-wrapper heading-wrap-left">
+                <span class="heading-tag">
+                   Transportation Management
+                </span>
+
+                <h2 class="heading-title">
+                   Manage Your Transportation <span> Operations Efficiently </span>
+                </h2>
+
+                <p>
+                    Track vehicles, manage drivers, monitor fuel usage, handle maintenance schedules, and streamline daily transportation operations from one centralized cloud platform.
+                </p>
+
+            </div>
+        <!-- Right Side -->
+        <div class="transport-image-wrapper">
+            <img src="./Assets/images/tms-img.png" alt="Transportation Dashboard" class="transport-image">
+            <!-- Decorative Shape -->
+            <div class="transport-shape"></div>
+            <!-- Floating Card -->
+            <div class="transport-card">
+                <ul class="transport-list">
+                    <li>
+                        <i class="ri-checkbox-circle-line"></i>
+                        <span>Real-time fleet and vehicle monitoring</span>
+                    </li>
+
+                    <li>
+                        <i class="ri-checkbox-circle-line"></i>
+                        <span>Driver management and attendance tracking</span>
+                    </li>
+
+                    <li>
+                        <i class="ri-checkbox-circle-line"></i>
+                        <span>Fuel logs and expense management</span>
+                    </li>
+
+                    <li>
+                        <i class="ri-checkbox-circle-line"></i>
+                        <span>Maintenance alerts and service scheduling</span>
+                    </li>
+
+                    <li>
+                        <i class="ri-checkbox-circle-line"></i>
+                        <span>Vehicle documents and compliance tracking</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+     </div>
+    </div>
+</section>
+<!--transport section end-->
+
+
+
+<!--dl-faq section end-->
+<section id="faq" class="dl-faq-section">
+    <div class="container">
+        <div class="heading-wrapper">
+
+            <span class="heading-tag">
+                Got Questions?
+            </span>
+
+            <h2 class="heading-title">
+              Frequently Asked <span>Questions</span>
+            </h2>
+
+            <p>
+                Everything you need to know about user accounts, roles, passwords and permissions.
+            </p>
+           <!-- Feature Filters -->
+             <div class="dl-faq-filters">
+                <button class="dl-faq-filter active" type="button">All</button>
+                <button class="dl-faq-filter" type="button">Accounts</button>
+                <button class="dl-faq-filter" type="button">Roles</button>
+                <button class="dl-faq-filter" type="button">Role Changes</button>
+                <button class="dl-faq-filter" type="button">Passwords</button>
+                <button class="dl-faq-filter" type="button">Email</button>
+                <button class="dl-faq-filter" type="button">Delete Access</button>
+                <button class="dl-faq-filter" type="button">Permissions</button>
+            </div>
+        </div>
+
+        <!-- FAQ List -->
+        <div class="dl-faq-list">
+
+            <!-- FAQ 1 -->
+            <div class="dl-faq-item active" data-category="accounts">
+                <button
+                    class="dl-faq-question"
+                    type="button"
+                    aria-expanded="true"
+                    aria-controls="dl-faq-answer-1"
+                >
+                    <span class="dl-faq-question-content">
+                        <span class="dl-faq-number">Q1</span>
+                        <span class="dl-faq-question-text">
+                            Can I create accounts for several employees?
+                        </span>
+                    </span>
+
+                    <span class="dl-faq-arrow">
+                        <i class="ri-arrow-down-s-line"></i>
+                    </span>
+                </button>
+
+                <div class="dl-faq-answer" id="dl-faq-answer-1">
+                    <div class="dl-faq-answer-content">
+                        <p>
+                            Yes. Create a separate user account for each staff member.
+                        </p>
+
+                        <div class="dl-faq-topic">
+                            <span>Topic: Accounts</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ 2 -->
+            <div class="dl-faq-item" data-category="roles">
+                <button
+                    class="dl-faq-question"
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="dl-faq-answer-2"
+                >
+                    <span class="dl-faq-question-content">
+                        <span class="dl-faq-number">Q2</span>
+                        <span class="dl-faq-question-text">
+                            Which roles can I assign?
+                        </span>
+                    </span>
+
+                    <span class="dl-faq-arrow">
+                        <i class="ri-arrow-down-s-line"></i>
+                    </span>
+                </button>
+
+                <div class="dl-faq-answer" id="dl-faq-answer-2">
+                    <div class="dl-faq-answer-content">
+                        <p>
+                            The user form supports Admin, Accountant, Maintenance and Manager.
+                        </p>
+
+                        <div class="dl-faq-topic">
+                            <span>Topic: Roles</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ 3 -->
+            <div class="dl-faq-item" data-category="role changes">
+                <button
+                    class="dl-faq-question"
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="dl-faq-answer-3"
+                >
+                    <span class="dl-faq-question-content">
+                        <span class="dl-faq-number">Q3</span>
+                        <span class="dl-faq-question-text">
+                            Can I change a role later?
+                        </span>
+                    </span>
+
+                    <span class="dl-faq-arrow">
+                        <i class="ri-arrow-down-s-line"></i>
+                    </span>
+                </button>
+
+                <div class="dl-faq-answer" id="dl-faq-answer-3">
+                    <div class="dl-faq-answer-content">
+                        <p>
+                            Yes. Authorized users can update a user’s assigned role.
+                        </p>
+
+                        <div class="dl-faq-topic">
+                            <span>Topic: Role Changes</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ 4 -->
+            <div class="dl-faq-item" data-category="passwords">
+                <button
+                    class="dl-faq-question"
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="dl-faq-answer-4"
+                >
+                    <span class="dl-faq-question-content">
+                        <span class="dl-faq-number">Q4</span>
+                        <span class="dl-faq-question-text">
+                            Can I update the password without creating a new account?
+                        </span>
+                    </span>
+
+                    <span class="dl-faq-arrow">
+                        <i class="ri-arrow-down-s-line"></i>
+                    </span>
+                </button>
+
+                <div class="dl-faq-answer" id="dl-faq-answer-4">
+                    <div class="dl-faq-answer-content">
+                        <p>
+                            Yes. Enter a new password and confirmation while editing the user.
+                        </p>
+
+                        <div class="dl-faq-topic">
+                            <span>Topic: Passwords</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ 5 -->
+            <div class="dl-faq-item" data-category="email">
+                <button
+                    class="dl-faq-question"
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="dl-faq-answer-5"
+                >
+                    <span class="dl-faq-question-content">
+                        <span class="dl-faq-number">Q5</span>
+                        <span class="dl-faq-question-text">
+                            Can two users share the same email address?
+                        </span>
+                    </span>
+
+                    <span class="dl-faq-arrow">
+                        <i class="ri-arrow-down-s-line"></i>
+                    </span>
+                </button>
+
+                <div class="dl-faq-answer" id="dl-faq-answer-5">
+                    <div class="dl-faq-answer-content">
+                        <p>
+                            No. The system requires a unique email for every user.
+                        </p>
+
+                        <div class="dl-faq-topic">
+                            <span>Topic: Email</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ 6 -->
+            <div class="dl-faq-item" data-category="delete access">
+                <button
+                    class="dl-faq-question"
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="dl-faq-answer-6"
+                >
+                    <span class="dl-faq-question-content">
+                        <span class="dl-faq-number">Q6</span>
+                        <span class="dl-faq-question-text">
+                            Can every staff member delete users?
+                        </span>
+                    </span>
+
+                    <span class="dl-faq-arrow">
+                        <i class="ri-arrow-down-s-line"></i>
+                    </span>
+                </button>
+
+                <div class="dl-faq-answer" id="dl-faq-answer-6">
+                    <div class="dl-faq-answer-content">
+                        <p>
+                            No. User-management actions depend on assigned permissions.
+                        </p>
+
+                        <div class="dl-faq-topic">
+                            <span>Topic: Delete Access</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ 7 -->
+            <div class="dl-faq-item" data-category="permissions">
+                <button
+                    class="dl-faq-question"
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="dl-faq-answer-7"
+                >
+                    <span class="dl-faq-question-content">
+                        <span class="dl-faq-number">Q7</span>
+                        <span class="dl-faq-question-text">
+                            Does this replace User Permissions?
+                        </span>
+                    </span>
+
+                    <span class="dl-faq-arrow">
+                        <i class="ri-arrow-down-s-line"></i>
+                    </span>
+                </button>
+
+                <div class="dl-faq-answer" id="dl-faq-answer-7">
+                    <div class="dl-faq-answer-content">
+                        <p>
+                            No. User Management maintains accounts and roles; User Permissions handles detailed access to functions.
+                        </p>
+
+                        <div class="dl-faq-topic">
+                            <span>Topic: Permissions</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div>
+
+        <!-- FAQ Call to Action / Conclusion -->
+        <div class="dl-faq-cta">
+            <div class="dl-faq-cta-content">
+                <h3>Simplify Your User Management</h3>
+                <p>
+                        Keep employee accounts, login details and job roles organized with User Management. Create new accounts, update staff information and manage user access in one straightforward workflow.
+                    </p>
+            </div>
+
+            <button class="dl-faq-cta-button" type="button" onclick="document.getElementById('simulator').scrollIntoView({behavior: 'smooth'})">
+                Try Live User Simulator
+            </button>
+        </div>
+
+    </div>
+</section>
+<!--dl-faq section end-->
+
+<!--footer section start-->
+<footer class="footer">
+
+    <!-- Newsletter -->
+    <div class="footer-newsletter">
+        <div class="container">
+
+            <div class="newsletter-wrapper">
+
+                <div class="newsletter-content">
+                    <h2>Stay ahead of the curve</h2>
+                    <p>
+                        Fleet management insights, product updates, and industry news.
+                    </p>
+                </div>
+
+                <form class="newsletter-form">
+
+                    <input
+                        type="email"
+                        placeholder="Enter your email"
+                    >
+
+                    <button type="submit">
+                        Subscribe
+
+                       <i class="ri-arrow-right-line"></i>
+
+                    </button>
+
+                </form>
+
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Footer Main -->
+
+    <div class="footer-main">
+
+        <div class="container">
+
+            <div class="footer-grid">
+
+                <!-- Left -->
+
+                <div class="footer-about">
+
+                    <a href="index.html" class="footer-logo">
+                         <img src="Assets/images/transportdesk-logo-dark.svg" alt="footer-logo">
+                    </a>
+
+                    <p>
+                        The intelligent transportation platform that puts fleet directors
+                        in complete control of their operations.
+                    </p>
+
+                    <div class="footer-social">
+
+                        <a href="#">
+                            <i class="ri-facebook-fill"></i>
+                        </a>
+
+                        <a href="#">
+                            <i class="ri-instagram-line"></i>
+                        </a>
+
+                        <a href="#">
+                            <i class="ri-twitter-line"></i>
+                        </a>
+
+                        <a href="#">
+                            <i class="ri-linkedin-fill"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <!-- Product -->
+
+                <div class="footer-links">
+
+                    <h3>Product</h3>
+
+                      <ul>
+        <li>
+            <a href="features.html" class="footer-link">Features</a>
+        </li>
+
+        <li>
+            <a href="modules.html" class="footer-link">Modules</a>
+        </li>
+
+        <li>
+            <a href="solutions.html" class="footer-link">Solutions</a>
+        </li>
+
+        <li>
+            <a href="reports.html" class="footer-link">Reports</a>
+        </li>
+
+        <li>
+            <a href="contact.html" class="footer-link">Contact</a>
+        </li>
+    </ul>
+
+                </div>
+
+                <!-- Resources -->
+
+                <div class="footer-links">
+
+                    <h3>Resources</h3>
+
+                    <ul>
+
+                        <li><a href="documentation.html" class="footer-link">Documentation</a></li>
+
+                        <li><a href="faq.html" class="footer-link">FAQ</a></li>
+
+                        <li><a href="privacy-policy.html" class="footer-link">Privacy Policy</a></li>
+
+                    </ul>
+
+                </div>
+
+                <!-- Support -->
+
+                <div class="footer-links">
+
+                    <h3>Support</h3>
+
+                    <ul>
+
+                        <li><a href="#" class="footer-link">Help Center</a></li>
+
+                        <li><a href="#" class="footer-link">Status</a></li>
+
+                        <li><a href="#" class="footer-link">Security</a></li>
+
+                    </ul>
+
+                </div>
+
+                <!-- Contact -->
+
+                <div class="footer-contact">
+
+                    <div class="contact-item">
+
+                        <div class="icon">
+                            <i class="ri-mail-line"></i>
+                        </div>
+
+                        <div>
+
+                            <span>Email</span>
+
+                            <a href="#">
+                                hello@transportdesk.net
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                    <div class="contact-item">
+
+                        <div class="icon">
+                            <i class="ri-phone-fill"></i>
+                        </div>
+
+                        <div>
+
+                            <span>Call</span>
+
+                            <a href="#">
+                                +1 (512) 555-0142
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                    <div class="contact-item">
+
+                        <div class="icon">
+                            <i class="ri-map-pin-line"></i>
+                        </div>
+
+                        <div>
+
+                            <span>Location</span>
+
+                            <p>India</p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Bottom -->
+
+    <div class="footer-bottom">
+
+        <div class="container">
+
+            <div class="bottom-wrapper">
+
+                <p>
+                    © 2026 All rights reserved.
+                </p>
+
+                <ul>
+
+                    <li><a href="#">Privacy Policy</a></li>
+
+                    <li><a href="#">Terms of Service</a></li>
+
+                    <li><a href="#">Cookie Policy</a></li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</footer>
+<!--footer section end-->
+
+<script src="./Assets/js/custom.js"></script>
+<script>
+(function () {
+    var $ = function (s, r) { return (r || document).querySelector(s); };
+    var $$ = function (s, r) { return Array.prototype.slice.call((r || document).querySelectorAll(s)); };
+    var body = $('#um-body');
+    if (!body) return;
+    var users = [{ id: 1, name: 'Sample Admin', email: 'admin@example.com', role: 'Admin' },
+                 { id: 2, name: 'Sample Manager', email: 'manager@example.com', role: 'Manager' },
+                 { id: 3, name: 'Sample Maintenance', email: 'maintenance@example.com', role: 'Maintenance' }];
+    var next = 4, editing = null, asc = true, timer = null;
+    var DEFAULT_NOTE = $('#um-note').textContent;
+    var esc = function (s) { return String(s).replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); };
+    var val = function (s) { return $(s).value.trim(); };
+    function note(t) { clearTimeout(timer); $('#um-note').textContent = t || DEFAULT_NOTE; if (t) timer = setTimeout(function () { note(); }, 3500); }
+    function checks(p) { return [['8+ characters', p.length >= 8], ['Uppercase', /[A-Z]/.test(p)], ['Lowercase', /[a-z]/.test(p)], ['Number', /\d/.test(p)], ['Symbol', /[^A-Za-z0-9]/.test(p)]]; }
+    var strong = function (p) { return checks(p).every(function (c) { return c[1]; }); };
+
+    function render() {
+        var q = $('#um-search').value.toLowerCase().trim();
+        var list = users.filter(function (u) { return !q || u.name.toLowerCase().indexOf(q) > -1 || u.email.toLowerCase().indexOf(q) > -1; });
+        list.sort(function (a, b) { return asc ? a.name.localeCompare(b.name) : b.name.localeCompare(a.name); });
+        body.innerHTML = list.map(function (u) {
+            return '<tr data-id="' + u.id + '"><td><div class="dl-vehicle-name"><i class="ri-user-3-fill"></i><span>' + esc(u.name) + '</span></div></td><td>' + esc(u.email) +
+                '</td><td><span class="dx-pill">' + u.role + '</span></td><td class="dl-text-center">' +
+                '<button type="button" class="dl-secondary-button um-edit" title="Edit user"><i class="ri-edit-line"></i></button> ' +
+                '<button type="button" class="dl-delete-button um-del" title="Delete user"><i class="ri-delete-bin-line"></i></button></td></tr>';
+        }).join('') || '<tr><td colspan="4" class="dl-text-center">No users match your search.</td></tr>';
+        var admins = users.filter(function (u) { return u.role === 'Admin'; }).length;
+        $('#um-total').textContent = users.length;
+        $('#um-admins').textContent = admins;
+        $('#um-others').textContent = users.length - admins;
+        $('#um-f-label').textContent = 'Users List (' + users.length + ' Users)';
+        $('#um-f-shown').textContent = list.length + ' Shown';
+        card();
+    }
+    function card() {
+        $('#um-card-name').textContent = val('#um-name') || 'New User';
+        $('#um-card-note').textContent = $('#um-role').value + ' · ' + (val('#um-email') || 'no email yet');
+    }
+    function reset() {
+        editing = null;
+        $('#um-pass').value = ''; $('#um-pass2').value = '';
+        $('#um-add span').textContent = 'Register User';
+        $('#um-add2').textContent = 'Register User';
+        $('#um-step').textContent = 'Step 2: Create a New User';
+    }
+    function save() {
+        var name = val('#um-name'), email = val('#um-email'), role = $('#um-role').value, p = $('#um-pass').value, p2 = $('#um-pass2').value;
+        if (!name) return note('Full Name is required.');
+        if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) return note('Enter a valid Email Address.');
+        if (users.some(function (u) { return u.id !== editing && u.email.toLowerCase() === email.toLowerCase(); })) return note('This email address is already used. Each email address must be unique.');
+        if (editing === null || p || p2) {
+            if (!strong(p)) return note('Password needs at least 8 characters with uppercase, lowercase, a number and a symbol.');
+            if (p !== p2) return note('Password and Confirm Password must match.');
+        }
+        if (editing === null) { users.push({ id: next++, name: name, email: email, role: role }); note('User registered. The new account appears in the Users List.'); }
+        else { users = users.map(function (u) { return u.id === editing ? { id: u.id, name: name, email: email, role: role } : u; }); note('User updated.'); }
+        reset();
+        render();
+    }
+    body.addEventListener('click', function (ev) {
+        var tr = ev.target.closest('tr[data-id]');
+        if (!tr) return;
+        var id = +tr.getAttribute('data-id'), u = users.filter(function (x) { return x.id === id; })[0];
+        if (ev.target.closest('.um-del')) {
+            if (window.confirm('Delete "' + u.name + '"? Check any related business records before deletion.')) { users = users.filter(function (x) { return x.id !== id; }); if (editing === id) reset(); render(); }
+        } else if (ev.target.closest('.um-edit')) {
+            editing = id;
+            $('#um-name').value = u.name; $('#um-email').value = u.email; $('#um-role').value = u.role;
+            $('#um-pass').value = ''; $('#um-pass2').value = '';
+            $('#um-add span').textContent = 'Update User'; $('#um-add2').textContent = 'Update User';
+            $('#um-step').textContent = 'Editing: ' + u.name;
+            note('Leave the password fields blank to keep the current password.');
+            card();
+            var p = $('[data-x="profile"]');
+            if (p) { p.classList.remove('dx-hidden'); p.scrollIntoView({ behavior: 'smooth', block: 'center' }); }
+        }
+    });
+    $('#um-search').addEventListener('input', render);
+    $('#um-sort').addEventListener('click', function () { asc = !asc; $('#um-sort span').textContent = asc ? 'Sort: Name A–Z' : 'Sort: Name Z–A'; render(); });
+    $('#um-add').addEventListener('click', save);
+    $('#um-add2').addEventListener('click', save);
+    ['#um-name', '#um-email', '#um-role'].forEach(function (s) { $(s).addEventListener('input', card); $(s).addEventListener('change', card); });
+    $('#um-pass').addEventListener('input', function () {
+        var p = $('#um-pass').value;
+        if (!p) return note();
+        clearTimeout(timer);
+        $('#um-note').textContent = 'Password: ' + checks(p).map(function (c) { return c[0] + (c[1] ? ' ✓' : ' ✗'); }).join(' · ');
+    });
+    $('#um-show').addEventListener('change', function () {
+        var t = $('#um-show').checked ? 'text' : 'password';
+        $('#um-pass').type = t; $('#um-pass2').type = t;
+    });
+    var tabs = $$('.dl-view-tab'), prof = $('[data-x="profile"]');
+    tabs.forEach(function (t, i) {
+        t.addEventListener('click', function () {
+            tabs.forEach(function (x) { x.classList.remove('dl-view-tab-active'); });
+            t.classList.add('dl-view-tab-active');
+            if (prof) prof.classList.toggle('dx-hidden', i === 1);
+        });
+    });
+    render();
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Parties Management Module | TransportDesk Fleet Solutions</title>
+    <meta name="description" content="Manage consignors, consignees and Lorry Receipt party details, GSTIN, contacts and default LR charges in one place with TransportDesk Parties Management Module.">
+
+    <!-- Remix Icon -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" />
+
+    <!-- Swiper -->
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+
+    <!-- Lenis -->
+    <link rel="stylesheet"
+        href="https://unpkg.com/lenis@1.3.23/dist/lenis.css">
+
+    <!-- Tailwind Output CSS -->
+    <link href="./Assets/css/output.css" rel="stylesheet">
+</head>
+<body>
+
+<!--Header Section start-->
+<header class="main-header">
+    <div class="container">
+        <div class="header-inner">
+            <a href="index.html" class="header-logo">
+                <img src="Assets/images/transportdesk-logo.svg" alt="Logo">
+            </a>
+            <nav class="main-navigation" id="mobileMenu">
+                <div class="menu-circle"></div>
+                <ul class="navigation-links">
+                    <li><a href="index.html" class="navigation-link">Home</a></li>
+                    <li><a href="features.html" class="navigation-link">Features</a></li>
+                    <li><a href="modules.html" class="navigation-link active">Modules</a></li>
+                    <li><a href="reports.html" class="navigation-link">Resources</a></li>
+                    <li><a href="contact.html" class="navigation-link">Contact</a></li>
+                </ul>
+                <div class="mobile-header-right">
+                    <a href="#" class="login-btn">Login</a>
+                    <a href="#" class="demo-btn">Book Demo</a>
+                </div>
+            </nav>
+            <div class="header-right">
+                <a href="#" class="login-btn">Login</a>
+                <a href="#" class="demo-btn">Book Demo</a>
+            </div>
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </div>
+</header>
+
+<div class="menu-overlay" id="menuOverlay"></div>
+<!--Header section End-->
+
+<section id="overview" class="dl-overview-section">
+    <div class="dl-overview-glow"></div>
+    <div class="dl-overview-pattern"></div>
+    <div class="container">
+        <div class="dl-overview-grid">
+            <div class="dl-overview-content">
+                <div class="dl-overview-badge">
+                    <span class="dl-status-dot"></span>
+                    <span>Enterprise Fleet Management</span>
+                    <span class="dl-badge-divider">|</span>
+                    <span class="dl-badge-highlight">Parties Management Module</span>
+                </div>
+                <h1 class="dl-overview-title">
+                    Manage Consignors, Consignees &amp;
+                    <span class="dl-gradient-text">Lorry Receipt Party</span>
+                    Details in One Place
+                </h1>
+                <p class="dl-overview-description">Transport businesses work with many customers who send or receive goods. The Parties Management Module keeps names, addresses, contact details and GST information in one place. Save a party as a consignor (sender), consignee (receiver), or both, find it later, and reuse it while creating an LR.</p>
+                <div class="dl-overview-actions">
+                    <a href="#simulator" class="btn-primary"><span>See Practical Example</span><i class="ri-arrow-right-line"></i></a>
+                    <a href="#demo" class="dl-btn-demo"><span class="dl-play-icon"><i class="ri-play-fill"></i></span><span>Watch Demo Video</span></a>
+                </div>
+                <div class="dl-overview-stats">
+                    <div class="dl-stat-item"><div class="dl-stat-number">3</div><div class="dl-stat-label">Party Types</div></div>
+                    <div class="dl-stat-item"><div class="dl-stat-number dl-stat-red">14</div><div class="dl-stat-label">Key Features</div></div>
+                    <div class="dl-stat-item"><div class="dl-stat-number dl-stat-green">7</div><div class="dl-stat-label">Simple Steps</div></div>
+                </div>
+            </div>
+            <div class="dl-overview-visual">
+                <div class="dl-visual-card">
+                    <img src="Assets/images/hero_fleet_dispatch_1792482270822.jpg" alt="Parties Management module" class="dl-visual-image">
+                    <div class="dl-visual-overlay"></div>
+                    <div class="dl-visual-topbar">
+                        <div class="dl-live-label"><span class="dl-live-dot"></span><span>Party Directory</span></div>
+                        <div class="dl-fuel-rate">Active</div>
+                    </div>
+                    <div class="dl-fuel-slip">
+                        <div class="dl-slip-header"><span class="dl-slip-title">LR: Sunrise Foods → Green Valley Distributors</span><span class="dl-slip-status">Saved Parties</span></div>
+                        <div class="dl-slip-stats">
+                            <div class="dl-slip-stat"><span class="dl-slip-label">Consignor</span><span class="dl-slip-value">Sunrise Foods</span></div>
+                            <div class="dl-slip-stat"><span class="dl-slip-label">Consignee</span><span class="dl-slip-value dl-slip-red">Green Valley</span></div>
+                            <div class="dl-slip-stat"><span class="dl-slip-label">Status</span><span class="dl-slip-value dl-slip-green">Active</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="demo" class="dl-demo-section">
+    <div class="dl-demo-glow"></div>
+    <div class="dl-container">
+        <div class="heading-wrapper">
+            <span class="heading-tag">Interactive Video Demonstration</span>
+            <h2 class="heading-title">
+                Watch How <span>Parties Management</span> Works
+            </h2>
+            <p>Watch our simple demonstration to learn how to create a party, choose its type, enter contact and GST details, use it in a Lorry Receipt, search saved parties, and update records.</p>
+        </div>
+
+        <div class="dl-demo-grid">
+            <div class="dl-demo-video-column">
+                <div class="dl-video-card">
+                    <div class="dl-video-toolbar">
+                        <div class="dl-video-toolbar-left">
+                            <span class="dl-window-dot dl-dot-red"></span><span class="dl-window-dot dl-dot-yellow"></span><span class="dl-window-dot dl-dot-green"></span>
+                            <span class="dl-video-filename">parties_management_module_demo.mp4</span>
+                        </div>
+                        <span class="dl-video-quality">Full HD</span>
+                    </div>
+                    <div class="dl-video-preview">
+                        <img src="Assets/images/dashboard.png" alt="Parties Management demonstration video preview" class="dl-video-thumbnail">
+                        <div class="dl-video-overlay"></div>
+                        <button type="button" class="dl-video-play" aria-label="Play demonstration video"><i class="ri-play-fill"></i><span class="dl-video-ping"></span></button>
+                        <div class="dl-video-meta">
+                            <div class="dl-video-meta-left"><span class="dl-video-current-chapter">Demo Video Will Be Displayed Here</span></div>
+                        </div>
+                    </div>
+                    <div class="dl-video-footer">
+                        <div class="dl-video-footer-left">
+                            <button type="button" class="dl-watch-button"><i class="ri-play-circle-line"></i><span>Watch Full Walkthrough</span></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="simulator" class="dl-simulator-section">
+    <div class="dl-container">
+        <div class="dl-simulator-header">
+        <div class="heading-wrapper heading-wrap-left">
+            <span class="heading-tag">Practical Example</span>
+            <h2 class="heading-title">
+                Creating <span>Parties</span> for a Lorry Receipt
+            </h2>
+            <p>Suppose ABC Transport is preparing an LR for goods being sent from Sunrise Foods to Green Valley Distributors. First, the office team creates or selects these parties.</p>
+        </div>
+        </div>
+        <div class="dl-stats-grid">
+            <div class="dl-stat-card">
+                <div class="dl-stat-label"><span>Parties Created</span><i class="ri-list-check"></i></div>
+                <div class="dl-stat-value">2</div>
+                <p class="dl-stat-note">Sunrise Foods &amp; Green Valley</p>
+            </div>
+            <div class="dl-stat-card">
+                <div class="dl-stat-label"><span>Party 1 Type</span><i class="ri-arrow-down-circle-line dl-green-icon"></i></div>
+                <div class="dl-stat-value">Consignor</div>
+                <p class="dl-stat-note">Sender: Sunrise Foods</p>
+            </div>
+            <div class="dl-stat-card">
+                <div class="dl-stat-label"><span>Party 2 Type</span><i class="ri-arrow-up-circle-line dl-red-icon"></i></div>
+                <div class="dl-stat-value">Consignee</div>
+                <p class="dl-stat-note">Receiver: Green Valley Distributors</p>
+            </div>
+            <div class="dl-stat-card dl-stat-card-total">
+                <div class="dl-stat-label"><span>Optional Details</span><i class="ri-wallet-3-line"></i></div>
+                <div class="dl-stat-value dl-stat-total-value">Phone, Address, GSTIN</div>
+                <p class="dl-stat-note">Saved once, reused in every LR</p>
+            </div>
+        </div>
+        <div class="dl-calculator-panel">
+            <div class="dl-bill-master">
+                <div class="dl-bill-master-header"><div class="dl-bill-heading"><span>Party details used in this example</span></div></div>
+<div class="dl-table-wrapper">
+<table class="dl-vehicle-table">
+<thead><tr><th>Field</th><th>Example</th></tr></thead>
+<tbody>
+<tr><td>Party 1</td><td>Sunrise Foods</td></tr>
+<tr><td>Party 1 Type</td><td>Consignor (Sender)</td></tr>
+<tr><td>Party 2</td><td>Green Valley Distributors</td></tr>
+<tr><td>Party 2 Type</td><td>Consignee (Receiver)</td></tr>
+<tr><td>Optional Details</td><td>Phone, address, GSTIN</td></tr>
+</tbody>
+</table>
+</div>
+            </div>
+            <div class="dl-bill-master">
+                <div class="dl-bill-master-header"><div class="dl-bill-heading"><span>Using the parties in the LR</span></div></div>
+                <p class="dl-stat-note">When creating the LR, the user selects Sunrise Foods as consignor and Green Valley Distributors as consignee. Their saved information is available for the LR workflow, so it does not need to be entered from scratch every time.</p>
+                <p class="dl-stat-note">If a new customer is missing, a user with create permission can quickly add the party from the LR form.</p>
+            </div>
+            <div class="dl-calculator-footer">
+                <div class="dl-documentation-note"><i class="ri-information-line"></i><span>Saved parties are used in the LR consignor and consignee selection flow, which means less repeated data entry.</span></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--feature section start-->
+<section id="features" class="dl-features-section">
+    <div class="container">
+        <div class="heading-wrapper">
+            <span class="heading-tag">Complete solution</span>
+            <h2 class="heading-title">
+                Key <span>Parties Management</span> Features
+            </h2>
+            <p>Everything you need to keep consignor and consignee information organized and ready for Lorry Receipt preparation.</p>
+        </div>
+
+        <div class="dl-features-grid">
+            <article class="dl-feature-card">
+                <div class="dl-feature-card-content">
+                    <div class="dl-feature-icon"><i class="ri-file-list-3-line"></i></div>
+                    <div class="dl-feature-card-heading"><h3>Centralized Party Directory</h3></div>
+                    <p>Keep consignor and consignee information in a single directory instead of separate paper or spreadsheet records.</p>
+                </div>
+            </article>
+            <article class="dl-feature-card">
+                <div class="dl-feature-card-content">
+                    <div class="dl-feature-icon"><i class="ri-calculator-line"></i></div>
+                    <div class="dl-feature-card-heading"><h3>Consignor and Consignee Classification</h3></div>
+                    <p>Classify a party as a sender, a receiver or Both, depending on how the business works with them.</p>
+                </div>
+            </article>
+            <article class="dl-feature-card">
+                <div class="dl-feature-card-content">
+                    <div class="dl-feature-icon"><i class="ri-bank-card-line"></i></div>
+                    <div class="dl-feature-card-heading"><h3>Party Name and Address</h3></div>
+                    <p>Save the party’s name and complete address for easier identification and LR preparation.</p>
+                </div>
+            </article>
+            <article class="dl-feature-card">
+                <div class="dl-feature-card-content">
+                    <div class="dl-feature-icon"><i class="ri-truck-line"></i></div>
+                    <div class="dl-feature-card-heading"><h3>Contact Details</h3></div>
+                    <p>Record phone and email information so office staff can refer to a saved party’s contact details.</p>
+                </div>
+            </article>
+            <article class="dl-feature-card">
+                <div class="dl-feature-card-content">
+                    <div class="dl-feature-icon"><i class="ri-search-eye-line"></i></div>
+                    <div class="dl-feature-card-heading"><h3>GSTIN Information</h3></div>
+                    <p>Save a party’s GSTIN alongside other business details when applicable.</p>
+                </div>
+            </article>
+            <article class="dl-feature-card">
+                <div class="dl-feature-card-content">
+                    <div class="dl-feature-icon"><i class="ri-shield-check-line"></i></div>
+                    <div class="dl-feature-card-heading"><h3>Active / Inactive Status</h3></div>
+                    <p>Maintain active and inactive party records without losing stored party information.</p>
+                </div>
+            </article>
+            <article class="dl-feature-card">
+                <div class="dl-feature-card-content">
+                    <div class="dl-feature-icon"><i class="ri-file-chart-line"></i></div>
+                    <div class="dl-feature-card-heading"><h3>Party List and Detailed View</h3></div>
+                    <p>Browse the directory and open a saved party to review its stored information.</p>
+                </div>
+            </article>
+            <article class="dl-feature-card">
+                <div class="dl-feature-card-content">
+                    <div class="dl-feature-icon"><i class="ri-edit-box-line"></i></div>
+                    <div class="dl-feature-card-heading"><h3>Search and Type Filters</h3></div>
+                    <p>Find records by matching party names, or filter the list to Consignor, Consignee or Both.</p>
+                </div>
+            </article>
+            <article class="dl-feature-card">
+                <div class="dl-feature-card-content">
+                    <div class="dl-feature-icon"><i class="ri-folder-shield-2-line"></i></div>
+                    <div class="dl-feature-card-heading"><h3>Sorting and Pagination</h3></div>
+                    <p>Sort party names and browse saved records in manageable pages.</p>
+                </div>
+            </article>
+            <article class="dl-feature-card">
+                <div class="dl-feature-card-content">
+                    <div class="dl-feature-icon"><i class="ri-printer-line"></i></div>
+                    <div class="dl-feature-card-heading"><h3>Quick Party Creation from LR</h3></div>
+                    <p>With the right permission, create a new party directly from the Lorry Receipt form and use it in the current workflow.</p>
+                </div>
+            </article>
+            <article class="dl-feature-card">
+                <div class="dl-feature-card-content">
+                    <div class="dl-feature-icon"><i class="ri-user-settings-line"></i></div>
+                    <div class="dl-feature-card-heading"><h3>LR Contract Charge Defaults</h3></div>
+                    <p>Where the company enables contract-charge display, save default amounts and notes for LR charge types associated with a party.</p>
+                </div>
+            </article>
+            <article class="dl-feature-card">
+                <div class="dl-feature-card-content">
+                    <div class="dl-feature-icon"><i class="ri-download-cloud-2-line"></i></div>
+                    <div class="dl-feature-card-heading"><h3>Edit Party Information</h3></div>
+                    <p>Correct a name, address, contact detail, GSTIN, type, status or applicable default LR charges.</p>
+                </div>
+            </article>
+            <article class="dl-feature-card">
+                <div class="dl-feature-card-content">
+                    <div class="dl-feature-icon"><i class="ri-file-list-3-line"></i></div>
+                    <div class="dl-feature-card-heading"><h3>Trash and Restore</h3></div>
+                    <p>Move an unwanted party to Trash rather than permanently removing it. Authorized users can restore deleted party records.</p>
+                </div>
+            </article>
+            <article class="dl-feature-card">
+                <div class="dl-feature-card-content">
+                    <div class="dl-feature-icon"><i class="ri-calculator-line"></i></div>
+                    <div class="dl-feature-card-heading"><h3>Permission-Based Access</h3></div>
+                    <p>Separate permission checks control who may view, create, edit, delete or restore party records.</p>
+                </div>
+            </article>
+        </div>
+    </div>
+</section>
+<!--feature section end-->
+
+<!--workflow section start-->
+<section class="dl-workflow-section">
+    <div class="container">
+        <div class="heading-wrapper heading-wrap-left">
+            <span class="heading-tag">Step-by-Step Workflow</span>
+            <h2 class="heading-title">
+                How Does the <span>Parties Management</span> Module Work?
+            </h2>
+            <p>The module follows a simple process, from adding a party to using it in Lorry Receipts.</p>
+        </div>
+
+        <div class="dl-workflow-grid">
+            <article class="dl-workflow-card">
+                <div class="dl-workflow-card-content">
+                    <div class="dl-workflow-card-top">
+                        <span class="dl-workflow-number">01</span>
+                        <div class="dl-workflow-icon"><i class="ri-truck-line"></i></div>
+                    </div>
+                    <h3 class="dl-workflow-card-title">Open Parties Management</h3>
+                    <p class="dl-workflow-card-description">Open the Parties page to see the saved party list. Search by name or filter by party type to find a consignor or consignee.</p>
+                </div>
+                <div class="dl-workflow-card-footer"><span>Workflow Phase 01</span></div>
+            </article>
+            <article class="dl-workflow-card">
+                <div class="dl-workflow-card-content">
+                    <div class="dl-workflow-card-top">
+                        <span class="dl-workflow-number">02</span>
+                        <div class="dl-workflow-icon"><i class="ri-search-eye-line"></i></div>
+                    </div>
+                    <h3 class="dl-workflow-card-title">Add a New Party</h3>
+                    <p class="dl-workflow-card-description">Choose Add Party and enter the party name. Select whether the party is a Consignor, Consignee, or Both.</p>
+                </div>
+                <div class="dl-workflow-card-footer"><span>Workflow Phase 02</span></div>
+            </article>
+            <article class="dl-workflow-card">
+                <div class="dl-workflow-card-content">
+                    <div class="dl-workflow-card-top">
+                        <span class="dl-workflow-number">03</span>
+                        <div class="dl-workflow-icon"><i class="ri-shield-check-line"></i></div>
+                    </div>
+                    <h3 class="dl-workflow-card-title">Enter Contact Details</h3>
+                    <p class="dl-workflow-card-description">Add the phone number, email, GSTIN and complete address where available. These details can help identify the party when creating an LR.</p>
+                </div>
+                <div class="dl-workflow-card-footer"><span>Workflow Phase 03</span></div>
+            </article>
+            <article class="dl-workflow-card">
+                <div class="dl-workflow-card-content">
+                    <div class="dl-workflow-card-top">
+                        <span class="dl-workflow-number">04</span>
+                        <div class="dl-workflow-icon"><i class="ri-file-chart-line"></i></div>
+                    </div>
+                    <h3 class="dl-workflow-card-title">Set Party Status</h3>
+                    <p class="dl-workflow-card-description">Choose Active for a party in regular use, or Inactive when the record should remain saved but is not currently in use.</p>
+                </div>
+                <div class="dl-workflow-card-footer"><span>Workflow Phase 04</span></div>
+            </article>
+            <article class="dl-workflow-card">
+                <div class="dl-workflow-card-content">
+                    <div class="dl-workflow-card-top">
+                        <span class="dl-workflow-number">05</span>
+                        <div class="dl-workflow-icon"><i class="ri-edit-box-line"></i></div>
+                    </div>
+                    <h3 class="dl-workflow-card-title">Set Default LR Charges (When Enabled)</h3>
+                    <p class="dl-workflow-card-description">If contract charge settings are enabled in the company configuration, enter default amounts and notes for the available LR charge types.</p>
+                </div>
+                <div class="dl-workflow-card-footer"><span>Workflow Phase 05</span></div>
+            </article>
+            <article class="dl-workflow-card">
+                <div class="dl-workflow-card-content">
+                    <div class="dl-workflow-card-top">
+                        <span class="dl-workflow-number">06</span>
+                        <div class="dl-workflow-icon"><i class="ri-folder-shield-2-line"></i></div>
+                    </div>
+                    <h3 class="dl-workflow-card-title">Save and Use in Lorry Receipts</h3>
+                    <p class="dl-workflow-card-description">Save the party. During LR creation, select the saved consignor and consignee. Users with create permission can also quickly add a party from the LR form.</p>
+                </div>
+                <div class="dl-workflow-card-footer"><span>Workflow Phase 06</span></div>
+            </article>
+            <article class="dl-workflow-card">
+                <div class="dl-workflow-card-content">
+                    <div class="dl-workflow-card-top">
+                        <span class="dl-workflow-number">07</span>
+                        <div class="dl-workflow-icon"><i class="ri-printer-line"></i></div>
+                    </div>
+                    <h3 class="dl-workflow-card-title">Find and Maintain Records</h3>
+                    <p class="dl-workflow-card-description">Search by party name, filter by type, open the party profile and make corrections. Authorized users may move a party to Trash and restore it later.</p>
+                </div>
+                <div class="dl-workflow-card-footer"><span>Workflow Phase 07</span></div>
+            </article>
+        </div>
+    </div>
+</section>
+<!--workflow section end-->
+
+<!--results section start-->
+<section id="benefits" class="results-section">
+    <div class="container">
+        <div class="heading-wrapper">
+            <span class="heading-tag">Proven Advantages</span>
+            <h2 class="heading-title heading-light">
+                Benefits of <span>Parties Management</span> 
+            </h2>
+            <p>Reuse saved sender and receiver records, reduce repeated entry and keep customer details up to date.</p>
+        </div>
+
+        <div class="results-grid">
+            <div class="result-card">
+                <div class="result-icon"><i class="ri-shield-check-line"></i></div>
+                <h3>Save Time During LR Creation</h3>
+                <p>Reuse saved sender and receiver records when preparing Lorry Receipts.</p>
+            </div>
+            <div class="result-card">
+                <div class="result-icon"><i class="ri-file-chart-line"></i></div>
+                <h3>Keep Customer Details Organized</h3>
+                <p>Maintain names, addresses and contact information in one place.</p>
+            </div>
+            <div class="result-card">
+                <div class="result-icon"><i class="ri-edit-box-line"></i></div>
+                <h3>Reduce Repeated Data Entry</h3>
+                <p>Select existing parties instead of typing the same details for every new LR.</p>
+            </div>
+            <div class="result-card">
+                <div class="result-icon"><i class="ri-folder-shield-2-line"></i></div>
+                <h3>Find the Right Party Faster</h3>
+                <p>Use name search and party type filters to narrow down the directory.</p>
+            </div>
+            <div class="result-card">
+                <div class="result-icon"><i class="ri-printer-line"></i></div>
+                <h3>Maintain Updated Information</h3>
+                <p>Correct details when a contact number, business address or GSTIN changes.</p>
+            </div>
+            <div class="result-card">
+                <div class="result-icon"><i class="ri-user-settings-line"></i></div>
+                <h3>Keep Records Recoverable</h3>
+                <p>Use Trash and Restore for party records when necessary.</p>
+            </div>
+            <div class="result-card">
+                <div class="result-icon"><i class="ri-download-cloud-2-line"></i></div>
+                <h3>Support Charge Consistency</h3>
+                <p>When enabled, store LR contract charge defaults for a party.</p>
+            </div>
+        </div>
+    </div>
+</section>
+<!--results section end-->
+
+<!--faq section start-->
+<section id="faq" class="dl-faq-section">
+    <div class="container">
+        <div class="heading-wrapper">
+            <span class="heading-tag">Got Questions?</span>
+            <h2 class="heading-title">
+                Frequently Asked <span>Questions</span> 
+            </h2>
+            <p>Everything you need to know about managing parties in your transport operations.</p>
+        </div>
+
+        <div class="dl-faq-list">
+            <div class="dl-faq-item active">
+                <button class="dl-faq-question" type="button" aria-expanded="true" aria-controls="dl-faq-answer-1">
+                    <span class="dl-faq-question-content"><span class="dl-faq-number">Q1</span><span class="dl-faq-question-text">What is a party in this module?</span></span>
+                    <span class="dl-faq-arrow"><i class="ri-arrow-down-s-line"></i></span>
+                </button>
+                <div class="dl-faq-answer" id="dl-faq-answer-1">
+                    <div class="dl-faq-answer-content"><p>A party is a person or business listed as a sender (consignor), receiver (consignee), or both in the transport workflow.</p></div>
+                </div>
+            </div>
+            <div class="dl-faq-item">
+                <button class="dl-faq-question" type="button" aria-expanded="false" aria-controls="dl-faq-answer-2">
+                    <span class="dl-faq-question-content"><span class="dl-faq-number">Q2</span><span class="dl-faq-question-text">Can the same party be both sender and receiver?</span></span>
+                    <span class="dl-faq-arrow"><i class="ri-arrow-down-s-line"></i></span>
+                </button>
+                <div class="dl-faq-answer" id="dl-faq-answer-2">
+                    <div class="dl-faq-answer-content"><p>Yes. Select Both as the party type.</p></div>
+                </div>
+            </div>
+            <div class="dl-faq-item">
+                <button class="dl-faq-question" type="button" aria-expanded="false" aria-controls="dl-faq-answer-3">
+                    <span class="dl-faq-question-content"><span class="dl-faq-number">Q3</span><span class="dl-faq-question-text">Can I save GST and contact information?</span></span>
+                    <span class="dl-faq-arrow"><i class="ri-arrow-down-s-line"></i></span>
+                </button>
+                <div class="dl-faq-answer" id="dl-faq-answer-3">
+                    <div class="dl-faq-answer-content"><p>Yes. The form supports phone, email, GSTIN and address fields.</p></div>
+                </div>
+            </div>
+            <div class="dl-faq-item">
+                <button class="dl-faq-question" type="button" aria-expanded="false" aria-controls="dl-faq-answer-4">
+                    <span class="dl-faq-question-content"><span class="dl-faq-number">Q4</span><span class="dl-faq-question-text">Can I use a party when creating a Lorry Receipt?</span></span>
+                    <span class="dl-faq-arrow"><i class="ri-arrow-down-s-line"></i></span>
+                </button>
+                <div class="dl-faq-answer" id="dl-faq-answer-4">
+                    <div class="dl-faq-answer-content"><p>Yes. Saved parties are used in the LR consignor and consignee selection flow.</p></div>
+                </div>
+            </div>
+            <div class="dl-faq-item">
+                <button class="dl-faq-question" type="button" aria-expanded="false" aria-controls="dl-faq-answer-5">
+                    <span class="dl-faq-question-content"><span class="dl-faq-number">Q5</span><span class="dl-faq-question-text">Can I add a party while preparing an LR?</span></span>
+                    <span class="dl-faq-arrow"><i class="ri-arrow-down-s-line"></i></span>
+                </button>
+                <div class="dl-faq-answer" id="dl-faq-answer-5">
+                    <div class="dl-faq-answer-content"><p>Yes, if your user account has party-create permission.</p></div>
+                </div>
+            </div>
+            <div class="dl-faq-item">
+                <button class="dl-faq-question" type="button" aria-expanded="false" aria-controls="dl-faq-answer-6">
+                    <span class="dl-faq-question-content"><span class="dl-faq-number">Q6</span><span class="dl-faq-question-text">Can I search saved parties?</span></span>
+                    <span class="dl-faq-arrow"><i class="ri-arrow-down-s-line"></i></span>
+                </button>
+                <div class="dl-faq-answer" id="dl-faq-answer-6">
+                    <div class="dl-faq-answer-content"><p>Yes. You can search by name and filter by party type.</p></div>
+                </div>
+            </div>
+            <div class="dl-faq-item">
+                <button class="dl-faq-question" type="button" aria-expanded="false" aria-controls="dl-faq-answer-7">
+                    <span class="dl-faq-question-content"><span class="dl-faq-number">Q7</span><span class="dl-faq-question-text">Can I set default charges for a party?</span></span>
+                    <span class="dl-faq-arrow"><i class="ri-arrow-down-s-line"></i></span>
+                </button>
+                <div class="dl-faq-answer" id="dl-faq-answer-7">
+                    <div class="dl-faq-answer-content"><p>Yes, when LR contract charge settings are enabled for the company.</p></div>
+                </div>
+            </div>
+            <div class="dl-faq-item">
+                <button class="dl-faq-question" type="button" aria-expanded="false" aria-controls="dl-faq-answer-8">
+                    <span class="dl-faq-question-content"><span class="dl-faq-number">Q8</span><span class="dl-faq-question-text">Can I edit or restore a party?</span></span>
+                    <span class="dl-faq-arrow"><i class="ri-arrow-down-s-line"></i></span>
+                </button>
+                <div class="dl-faq-answer" id="dl-faq-answer-8">
+                    <div class="dl-faq-answer-content"><p>Yes. The required permissions allow editing, moving records to Trash, and restoring deleted records.</p></div>
+                </div>
+            </div>
+        </div>
+        <div class="dl-faq-cta">
+            <div class="dl-faq-cta-content">
+                <h3>Simplify Your Party Records</h3>
+                <p>Keep consignor and consignee information organized, prepare Lorry Receipts more easily, and maintain up-to-date customer records through one simple Parties Management Module. Spend less time entering repeated party details and more time managing your transport operations.</p>
+            </div>
+            <button class="dl-faq-cta-button" type="button" onclick="document.getElementById('simulator').scrollIntoView({behavior: 'smooth'})">See Practical Example</button>
+        </div>
+    </div>
+</section>
+<!--faq section end-->
+
+<!--footer section start-->
+<footer class="footer">
+    <div class="footer-newsletter">
+        <div class="container">
+            <div class="newsletter-wrapper">
+                <div class="newsletter-content">
+                    <h2>Stay ahead of the curve</h2>
+                    <p>Fleet management insights, product updates, and industry news.</p>
+                </div>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Enter your email">
+                    <button type="submit">Subscribe <i class="ri-arrow-right-line"></i></button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="footer-main">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <a href="index.html" class="footer-logo">
+                        <img src="Assets/images/transportdesk-logo-dark.svg" alt="footer-logo">
+                    </a>
+                    <p>The intelligent transportation platform that puts fleet directors in complete control of their operations.</p>
+                    <div class="footer-social">
+                        <a href="#"><i class="ri-facebook-fill"></i></a>
+                        <a href="#"><i class="ri-instagram-line"></i></a>
+                        <a href="#"><i class="ri-twitter-line"></i></a>
+                        <a href="#"><i class="ri-linkedin-fill"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h3>Product</h3>
+                    <ul>
+                        <li><a href="features.html" class="footer-link">Features</a></li>
+                        <li><a href="modules.html" class="footer-link">Modules</a></li>
+                        <li><a href="solutions.html" class="footer-link">Solutions</a></li>
+                        <li><a href="reports.html" class="footer-link">Reports</a></li>
+                        <li><a href="contact.html" class="footer-link">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h3>Resources</h3>
+                    <ul>
+                        <li><a href="documentation.html" class="footer-link">Documentation</a></li>
+                        <li><a href="faq.html" class="footer-link">FAQ</a></li>
+                        <li><a href="privacy-policy.html" class="footer-link">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h3>Support</h3>
+                    <ul>
+                        <li><a href="#" class="footer-link">Help Center</a></li>
+                        <li><a href="#" class="footer-link">Status</a></li>
+                        <li><a href="#" class="footer-link">Security</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <div class="contact-item"><div class="icon"><i class="ri-mail-line"></i></div>
+                        <div><span>Email</span><a href="#">hello@transportdesk.net</a></div></div>
+                    <div class="contact-item"><div class="icon"><i class="ri-phone-fill"></i></div>
+                        <div><span>Call</span><a href="#">+1 (512) 555-0142</a></div></div>
+                    <div class="contact-item"><div class="icon"><i class="ri-map-pin-line"></i></div>
+                        <div><span>Location</span><p>India</p></div></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <div class="container">
+            <div class="bottom-wrapper">
+                <p>© 2026 All rights reserved.</p>
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Cookie Policy</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+<!--footer section end-->
+
+<script src="./Assets/js/custom.js"></script>
+</body>
+</html>
