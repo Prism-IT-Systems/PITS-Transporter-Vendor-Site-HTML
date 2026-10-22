@@ -500,7 +500,7 @@
 }
 
 .footer-grid{
-    @apply grid grid-cols-[1.5fr_1fr_1fr_1fr_1.2fr] gap-20;
+    @apply grid grid-cols-[1.5fr_1fr_1fr_1fr_2fr] gap-[60px];
 }
 
 .footer-logo{
@@ -564,7 +564,7 @@
 }
 
 .contact-item .icon{
-    @apply w-12 h-12 rounded-lg border border-white/10 bg-white/5 flex items-center justify-center text-white;
+    @apply w-12 h-12 rounded-lg border border-white/10 bg-white/5 flex items-center justify-center text-white shrink-0;
 }
 
 .contact-item span{
@@ -2464,6 +2464,72 @@ Card
 .modules-hero {
    background: linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('../images/Modules-page-hero.webp');
 } 
+
+.modules-section .heading-wrapper {
+    max-width: 900px;
+    width: 100%;
+}
+
+.solution-hero .btn-solution {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.module-filters {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 32px;
+}
+
+.module-filter-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 16px;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    color: #475569;
+    background: #ffffff;
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.5;
+    cursor: pointer;
+    transition:
+        color 0.25s ease,
+        background 0.25s ease,
+        border-color 0.25s ease,
+        box-shadow 0.25s ease;
+}
+.module-filter-btn:hover {
+    border-color: #fecaca;
+    color: #0f172a;
+    background: #fffafa;
+}
+
+.module-filter-btn.is-active {
+    border-color: #0f172a;
+    color: #ffffff;
+    background: #0f172a;
+    box-shadow: 0 2px 5px rgba(15, 23, 42, 0.12);
+}
+
+.module-filter-btn.is-active:hover {
+    border-color: #1e293b;
+    background: #1e293b;
+}
+
+.module-filter-btn:focus-visible,
+.module-feature-link:focus-visible {
+    outline: 3px solid rgba(255, 75, 75, 0.4);
+    outline-offset: 3px;
+}
+
 
 /* =========================================
    SECTION HEADER
@@ -11488,4 +11554,7 @@ Card
         transition: none;
     }
 }
+
+
+
 
