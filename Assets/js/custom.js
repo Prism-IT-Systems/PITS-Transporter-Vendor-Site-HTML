@@ -590,4 +590,115 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 })();
 
+ // ================= FAQ ACCORDION + FILTER =================
+document.addEventListener('DOMContentLoaded', function () {
+  var list = document.querySelector('.dl-faq-list');
+  var faqItems = Array.prototype.slice.call(document.querySelectorAll('.dl-faq-item'));
+  var faqFilters = document.querySelectorAll('.dl-faq-filter');
 
+  if (!list || !faqItems.length) return;
+
+  function setOpen(item, open) {
+    var btn = item.querySelector('.dl-faq-question');
+    var answer = item.querySelector('.dl-faq-answer');
+    item.classList.toggle('active', open);
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    answer.style.maxHeight = open ? answer.scrollHeight + 'px' : '0px';
+  }
+
+  // Initial state: animation vagar set karo
+  faqItems.forEach(function (item) {
+    var answer = item.querySelector('.dl-faq-answer');
+    answer.style.transition = 'none';
+    setOpen(item, item.classList.contains('active'));
+    void answer.offsetHeight;          // reflow
+    answer.style.transition = '';
+  });
+
+  // Fonts / images load thaya pachi open item ni height pharithi calculate karo
+  window.addEventListener('load', function () {
+    faqItems.forEach(function (item) {
+      if (item.classList.contains('active')) {
+        var a = item.querySelector('.dl-faq-answer');
+        a.style.maxHeight = a.scrollHeight + 'px';
+      }
+    });
+  });
+
+  // ---------- Accordion click ----------
+  faqItems.forEach(function (item) {
+    item.querySelector('.dl-faq-question').addEventListener('click', function () {
+      var willOpen = !item.classList.contains('active');
+      faqItems.forEach(function (other) {
+        if (other !== item) setOpen(other, false);
+      });
+      setOpen(item, willOpen);
+    });
+  });
+
+  // Resize par open item fix
+  window.addEventListener('resize', function () {
+    faqItems.forEach(function (item) {
+      if (item.classList.contains('active')) {
+        var a = item.querySelector('.dl-faq-answer');
+        a.style.maxHeight = a.scrollHeight + 'px';
+      }
+    });
+  });
+
+  // ---------- Category filter (smooth) ----------
+  var animating = false;
+
+  function topicOf(item) {
+    var t = item.querySelector('.dl-faq-topic span');
+    return t ? t.textContent.replace('Topic:', '').trim().toLowerCase() : '';
+  }
+
+  faqFilters.forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      if (animating || btn.classList.contains('active')) return;
+      animating = true;
+
+      faqFilters.forEach(function (b) { b.classList.remove('active'); });
+      btn.classList.add('active');
+
+      var selected = btn.textContent.trim().toLowerCase();
+      var startHeight = list.offsetHeight;
+
+      // 1) Height lock karo + fade out
+      list.style.height = startHeight + 'px';
+      list.classList.add('is-filtering');
+      faqItems.forEach(function (item) { item.classList.add('is-fading'); });
+
+      setTimeout(function () {
+        // 2) Items show/hide + badha close
+        var visible = [];
+        faqItems.forEach(function (item) {
+          setOpen(item, false);
+          var show = selected === 'all' || topicOf(item) === selected;
+          item.classList.toggle('is-hidden', !show);
+          if (show) visible.push(item);
+        });
+
+        // Open nathi karta (jump na thay e mate); jo joiye to niche line unlock karo:
+        // if (visible[0]) setOpen(visible[0], true);
+
+        // 3) Navi height par animate karo
+        list.style.height = 'auto';
+        var endHeight = list.offsetHeight;
+        list.style.height = startHeight + 'px';
+        void list.offsetHeight;
+        list.style.height = endHeight + 'px';
+
+        // 4) Fade in
+        faqItems.forEach(function (item) { item.classList.remove('is-fading'); });
+
+        setTimeout(function () {
+          list.style.height = '';
+          list.classList.remove('is-filtering');
+          animating = false;
+        }, 400);
+      }, 220);
+    });
+  });
+});
