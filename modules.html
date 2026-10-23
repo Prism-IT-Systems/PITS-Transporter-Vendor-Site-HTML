@@ -702,6 +702,44 @@
           features: ['Search Everything', 'Instant Results', 'Smart Suggestions'] }
     ];
 
+    const MODULE_URLS = {
+    "Vehicles": "vehicle-management.html",
+    "Drivers": "drivermanagement.html",
+    "Vehicle Documents": "vehicle-document-management.html",
+    "Battery": "battery-module.html",
+    "Tyres": "tyremanagement.html",
+    "Diesel": "diesellog.html",
+    "Fuel Cards": "fuel-card-management.html",
+    "Repair & Maintenance": "repairmaintenance.html",
+    "Reefer Unit Work": "reeferunitwork.html",
+    "Cabin Body Work": "cabinwork.html",
+    "Driver Pay": "driverpay.html",
+    "Vendors": "vendor-management.html",
+    "Own Firms": "companies.html",
+    "Tolls": "tollmanagement.html",
+    "Challan": "challan.html",
+    "Lorry Receipts": "lorry-receipt-management.html",
+    "Parties": "parties-module.html",
+    "LR Charge Types": "lr-charge-types-management.html",
+    "Activity Logs": "activitylog.html",
+    "Office Document": "officedocument.html",
+    "Attachments": "attachment.html",
+    "Payments": "payment-module.html",
+    "Expense Book": "expensebook.html",
+    "Manager Balances": "managerbalance.html",
+    "Account Ledgers": "accountledger.html",
+    "Daily Ledger": "daily-ledger-module.html",
+    "Users": "user-management.html",
+    "User Permissions": "user-permission-management.html",
+    "Reports": "reports.html",
+    "Global Search": "globalsearch.html"
+};
+
+/* Assign URLs to existing module objects */
+MODULES.forEach(function (module) {
+    module.url = MODULE_URLS[module.title] || "#";
+});
+
     /* ---------- RENDER ---------- */
     var grid = document.getElementById('modulesGrid');
     var filterWrap = document.getElementById('moduleFilters');
@@ -728,10 +766,13 @@
                 '<p class="module-card-description">' + m.desc + '</p>' +
                 '<div class="module-divider ' + DIVIDER_TONES[tone] + '"></div>' +
                 '<ul class="module-features">' + checks + '</ul>' +
-              '<a href="' + m.url + '" class="module-view-details">' +
-        'View Details ' +
-        '<i class="ri-arrow-right-line"></i>' +
-    '</a>' +
+             '<a href="' + (m.url || '#') + '" ' +
+    'class="module-view-details" ' +
+    (m.url && m.url !== '#' ? '' : 'aria-disabled="true"') +
+    '>' +
+    'View Details ' +
+    '<i class="ri-arrow-right-line"></i>' +
+'</a>' +
             '</div>' +
         '</article>';
     }
