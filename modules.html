@@ -556,9 +556,7 @@
 </footer>
 <!--footer section end-->
 
-<!-- ============================================================
-     3) JAVASCRIPT  (</body> pehla)
-     ============================================================ -->
+
 <script>
 (function () {
     'use strict';
@@ -730,10 +728,10 @@
                 '<p class="module-card-description">' + m.desc + '</p>' +
                 '<div class="module-divider ' + DIVIDER_TONES[tone] + '"></div>' +
                 '<ul class="module-features">' + checks + '</ul>' +
-               '<a href="vehicles.html" class="module-view-details">' +
-            'View Details ' +
-            '<i class="ri-arrow-right-line"></i>' +
-        '</a>' +
+              '<a href="' + m.url + '" class="module-view-details">' +
+        'View Details ' +
+        '<i class="ri-arrow-right-line"></i>' +
+    '</a>' +
             '</div>' +
         '</article>';
     }
