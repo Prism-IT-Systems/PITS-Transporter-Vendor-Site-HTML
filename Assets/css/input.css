@@ -2466,9 +2466,105 @@ Card
 } 
 
 .modules-section .heading-wrapper {
-    max-width: 990px;
+    max-width: 1100px;
     width: 100%;
 }
+
+/* Module View Details Button */
+.module-view-details {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: fit-content;
+    margin-top: 22px;
+    padding: 10px 16px;
+    border: 1px solid #dda619;
+    border-radius: 6px;
+    background: transparent;
+    color: #0b1120;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.4;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.module-view-details i {
+    font-size: 17px;
+    transition: transform 0.3s ease;
+}
+
+.module-view-details:hover {
+    background: #dda619;
+    border-color: #dda619;
+    color: #0b1120;
+}
+
+.module-view-details:hover i {
+    transform: translateX(4px);
+}
+
+.module-view-details:focus-visible {
+    outline: 2px solid #0b1120;
+    outline-offset: 3px;
+}
+
+/* Keep buttons aligned across cards */
+.module-card {
+    display: flex;
+    flex-direction: column;
+}
+
+.module-card-content {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+}
+
+.module-features {
+    margin-bottom: 0;
+}
+
+.module-view-details {
+    margin-top: auto;
+    align-self: flex-start;
+    padding-top: 10px;
+    margin-top: 22px;
+}
+
+/* Responsive */
+@media (max-width: 767px) {
+    .module-view-details {
+        margin-top: 18px;
+        padding: 9px 14px;
+        font-size: 13px;
+    }
+}
+
+   .module-card {
+        transition: opacity .28s ease, transform .28s ease, box-shadow .28s ease;
+        will-change: opacity, transform;
+    }
+    /* fade-out state */
+    .module-card.is-leaving {
+        opacity: 0;
+        transform: translateY(14px) scale(.97);
+        pointer-events: none;
+    }
+    /* fade-in start state */
+    .module-card.is-entering {
+        opacity: 0;
+        transform: translateY(18px) scale(.97);
+        transition: none;
+    }
+    /* fully hidden (removed from grid layout) */
+    .module-card.is-hidden {
+        display: none;
+    }
+    @media (prefers-reduced-motion: reduce) {
+        .module-card { transition: none !important; }
+    }
 
 /* Hide cards that do not match the selected category */
 .module-card[hidden] {
@@ -3307,7 +3403,7 @@ Card
 }
 
 .contact-info__content {
-    @apply absolute z-10 left-[43px] right-[43px]
+    @apply static sm:absolute z-10 left-[43px] right-[43px]
     top-[41px] bottom-[131px]
     rounded-[6px] bg-[#0f172a]
     px-[25px] py-[25px] h-fit;
@@ -11645,6 +11741,45 @@ Card
     }
 }
 
+
+.dl-faq-list {
+  overflow-anchor: none;                 /* scroll jump rokva */
+}
+
+.dl-faq-list.is-filtering {
+  overflow: hidden;
+  transition: height 0.4s ease;
+}
+
+.dl-faq-item {
+  transition: opacity 0.22s ease, transform 0.22s ease;
+}
+
+.dl-faq-item.is-fading {
+  opacity: 0;
+  transform: translateY(8px);
+}
+
+.dl-faq-item.is-hidden {
+  display: none;
+}
+
+/* Accordion */
+.dl-faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+  padding-top: 0;                        /* padding .dl-faq-answer-content ma rakho */
+  padding-bottom: 0;
+}
+
+.dl-faq-arrow {
+  transition: transform 0.3s ease;
+}
+
+.dl-faq-item.active .dl-faq-arrow {
+  transform: rotate(180deg);
+}
 
 
 

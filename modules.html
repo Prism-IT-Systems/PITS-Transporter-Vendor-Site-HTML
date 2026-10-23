@@ -91,7 +91,6 @@
 <div class="menu-overlay" id="menuOverlay"></div>
 <!--Header section End-->
 
-
 <main id="main-content">
 <!--Hero section Start-->
 <section class="hero-section sub-hero modules-hero">
@@ -123,417 +122,46 @@
 </section>
 <!--Hero Section End-->
 
+<!-- ============================================================
+     1) HTML  (tamara section ni jagya e replace karo)
+     ============================================================ -->
 <section class="modules-section">
     <div class="container">
 
-        <!-- SECTION HEADER -->
-      <div class="heading-wrapper">
-
-            <span class="heading-tag">
-               Modules
-            </span>
+        <div class="heading-wrapper">
+            <span class="heading-tag">Modules</span>
 
             <h2 class="heading-title">
-              Transportation Management <span>Modules</span>
+                Transportation Management <span>Modules</span>
             </h2>
 
             <p>
-               A complete suite of powerful tools designed to optimize fleet performance, manage resources, and simplify daily transportation activities.
+                A complete suite of powerful tools designed to optimize fleet performance,
+                manage resources, and simplify daily transportation activities.
             </p>
 
-            <div class="module-filters">
-
-    <button type="button" class="module-filter-btn is-active"
-        data-filter="fleet" aria-pressed="true">
-        Fleet Management
-    </button>
-
-    <button type="button" class="module-filter-btn"
-        data-filter="maintenance" aria-pressed="true">
-        Fleet Maintenance
-    </button>
-
-    <button type="button" class="module-filter-btn"
-        data-filter="business" aria-pressed="true">
-        Business
-    </button>
-
-    <button type="button" class="module-filter-btn"
-        data-filter="lorry" aria-pressed="false">
-        Lorry Receipts
-    </button>
-
-    <button type="button" class="module-filter-btn"
-        data-filter="document" aria-pressed="false">
-        Documents
-    </button>
-
-    <button type="button" class="module-filter-btn"
-        data-filter="account" aria-pressed="false">
-        Accounts
-    </button>
-
-    <button type="button" class="module-filter-btn"
-        data-filter="admin" aria-pressed="false">
-        Admin
-    </button>
-</div>
+            <!-- FILTER TABS -->
+            <div class="module-filters" id="moduleFilters" role="group" aria-label="Filter modules">
+                <button type="button" class="module-filter-btn is-active" data-filter="all"         aria-pressed="true">All Modules</button>
+                <button type="button" class="module-filter-btn"           data-filter="fleet"       aria-pressed="false">Fleet Management</button>
+                <button type="button" class="module-filter-btn"           data-filter="maintenance" aria-pressed="false">Fleet Maintenance</button>
+                <button type="button" class="module-filter-btn"           data-filter="business"    aria-pressed="false">Business</button>
+                <button type="button" class="module-filter-btn"           data-filter="lorry"       aria-pressed="false">Lorry Receipts</button>
+                <button type="button" class="module-filter-btn"           data-filter="document"    aria-pressed="false">Documents</button>
+                <button type="button" class="module-filter-btn"           data-filter="account"     aria-pressed="false">Accounts</button>
+                <button type="button" class="module-filter-btn"           data-filter="admin"       aria-pressed="false">Admin</button>
+            </div>
         </div>
 
-        <!-- MODULES GRID -->
-        <div class="modules-grid">
+        <!-- Cards JS thi render thase -->
+        <div class="modules-grid" id="modulesGrid" aria-live="polite"></div>
 
-            <!-- CARD 01 -->
-            <article class="module-card"
-    data-category="fleet">
-                <div class="module-icon module-icon-dark">
-
-                    <!-- Car Icon -->
-                    <svg class="module-icon-svg" viewBox="0 0 24 24" fill="none"
-                        stroke="currentColor" stroke-width="2">
-                        <path d="M5 17h14l1-5-2-5H6l-2 5 1 5Z" />
-                        <path d="M5 17v2M19 17v2" />
-                        <circle cx="7.5" cy="15.5" r="1" />
-                        <circle cx="16.5" cy="15.5" r="1" />
-                    </svg>
-
-                </div>
-
-                <div class="module-card-content">
-                    <h3>Vehicle Management</h3>
-
-                    <p class="module-card-description">
-                        Centralized database for fleet tracking, vehicle health,
-                        and performance history.
-                    </p>
-
-                    <div class="module-divider module-divider-coral"></div>
-
-                    <ul class="module-features">
-                        <li>
-                            <span class="feature-check">✓</span>
-                            Digital Registration Docs
-                        </li>
-                        <li>
-                            <span class="feature-check">✓</span>
-                            Performance Metrics
-                        </li>
-                        <li>
-                            <span class="feature-check">✓</span>
-                            Lifecycle Tracking
-                        </li>
-                    </ul>
-                </div>
-            </article>
-
-
-            <!-- CARD 02 -->
-            <article class="module-card"
-    data-category="maintenance">
-                <div class="module-icon module-icon-coral">
-
-                    <!-- Users Icon -->
-                    <svg class="module-icon-svg" viewBox="0 0 24 24" fill="none"
-                        stroke="currentColor" stroke-width="2">
-                        <circle cx="9" cy="7" r="3" />
-                        <path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6" />
-                        <path d="M16 4.5a3 3 0 0 1 0 5.8" />
-                        <path d="M18 14c1.7.8 3 2.5 3 4.5" />
-                    </svg>
-
-                </div>
-
-                <div class="module-card-content">
-                    <h3>Driver Management</h3>
-
-                    <p class="module-card-description">
-                        Centralized database for fleet tracking, vehicle health,
-                        and performance history.
-                    </p>
-
-                    <div class="module-divider module-divider-navy"></div>
-
-                    <ul class="module-features">
-                        <li>
-                            <span class="feature-check">✓</span>
-                            Digital Registration Docs
-                        </li>
-                        <li>
-                            <span class="feature-check">✓</span>
-                            Performance Metrics
-                        </li>
-                        <li>
-                            <span class="feature-check">✓</span>
-                            Lifecycle Tracking
-                        </li>
-                    </ul>
-                </div>
-            </article>
-
-
-            <!-- CARD 03 -->
-            <article class="module-card"
-    data-category="fleet">
-                <div class="module-icon module-icon-dark">
-
-                    <!-- Maintenance Icon -->
-                    <svg class="module-icon-svg" viewBox="0 0 24 24" fill="none"
-                        stroke="currentColor" stroke-width="2">
-                        <path d="m14.7 6.3 3 3" />
-                        <path d="m5 19 8.5-8.5" />
-                        <path d="M15 5a4 4 0 0 0 4 4l-4 4-4-4 4-4Z" />
-                        <path d="m3 21 4-4" />
-                    </svg>
-
-                </div>
-
-                <div class="module-card-content">
-                    <h3>Maintenance</h3>
-
-                    <p class="module-card-description">
-                        Centralized database for fleet tracking, vehicle health,
-                        and performance history.
-                    </p>
-
-                    <div class="module-divider module-divider-coral"></div>
-
-                    <ul class="module-features">
-                        <li>
-                            <span class="feature-check">✓</span>
-                            Digital Registration Docs
-                        </li>
-                        <li>
-                            <span class="feature-check">✓</span>
-                            Performance Metrics
-                        </li>
-                        <li>
-                            <span class="feature-check">✓</span>
-                            Lifecycle Tracking
-                        </li>
-                    </ul>
-                </div>
-            </article>
-
-
-            <!-- CARD 04 -->
-            <article class="module-card"
-    data-category="maintenance">
-                <div class="module-icon module-icon-coral">
-
-                    <!-- Fuel Icon -->
-                    <svg class="module-icon-svg" viewBox="0 0 24 24" fill="none"
-                        stroke="currentColor" stroke-width="2">
-                        <path d="M6 20V4h9v16" />
-                        <path d="M6 8h9" />
-                        <path d="M15 7h2l3 3v6a2 2 0 0 1-4 0v-5" />
-                    </svg>
-
-                </div>
-
-                <div class="module-card-content">
-                    <h3>Diesel & Fuel</h3>
-
-                    <p class="module-card-description">
-                        Centralized database for fleet tracking, vehicle health,
-                        and performance history.
-                    </p>
-
-                    <div class="module-divider module-divider-navy"></div>
-
-                    <ul class="module-features">
-                        <li>
-                            <span class="feature-check">✓</span>
-                            Digital Registration Docs
-                        </li>
-                        <li>
-                            <span class="feature-check">✓</span>
-                            Performance Metrics
-                        </li>
-                        <li>
-                            <span class="feature-check">✓</span>
-                            Lifecycle Tracking
-                        </li>
-                    </ul>
-                </div>
-            </article>
-
-
-            <!-- CARD 05 -->
-            <article class="module-card"
-    data-category="fleet">
-                <div class="module-icon module-icon-dark">
-
-                    <!-- Documents Icon -->
-                    <svg class="module-icon-svg" viewBox="0 0 24 24" fill="none"
-                        stroke="currentColor" stroke-width="2">
-                        <rect x="4" y="5" width="13" height="14" rx="1" />
-                        <path d="M8 5V3h12v13h-3" />
-                    </svg>
-
-                </div>
-
-                <div class="module-card-content">
-                    <h3>Documentation</h3>
-
-                    <p class="module-card-description">
-                        Centralized database for fleet tracking, vehicle health,
-                        and performance history.
-                    </p>
-
-                    <div class="module-divider module-divider-coral"></div>
-
-                    <ul class="module-features">
-                        <li>
-                            <span class="feature-check">✓</span>
-                            Digital Registration Docs
-                        </li>
-                        <li>
-                            <span class="feature-check">✓</span>
-                            Performance Metrics
-                        </li>
-                        <li>
-                            <span class="feature-check">✓</span>
-                            Lifecycle Tracking
-                        </li>
-                    </ul>
-                </div>
-            </article>
-
-
-            <!-- CARD 06 -->
-            <article class="module-card"
-    data-category="fleet">
-                <div class="module-icon module-icon-coral">
-
-                    <!-- Analytics Icon -->
-                    <svg class="module-icon-svg" viewBox="0 0 24 24" fill="none"
-                        stroke="currentColor" stroke-width="2">
-                        <path d="M5 20V10" />
-                        <path d="M10 20V5" />
-                        <path d="M15 20v-8" />
-                        <path d="M20 20V3" />
-                    </svg>
-
-                </div>
-
-                <div class="module-card-content">
-                    <h3>Reports & Analytics</h3>
-
-                    <p class="module-card-description">
-                        Centralized database for fleet tracking, vehicle health,
-                        and performance history.
-                    </p>
-
-                    <div class="module-divider module-divider-navy"></div>
-
-                    <ul class="module-features">
-                        <li>
-                            <span class="feature-check">✓</span>
-                            Digital Registration Docs
-                        </li>
-                        <li>
-                            <span class="feature-check">✓</span>
-                            Performance Metrics
-                        </li>
-                        <li>
-                            <span class="feature-check">✓</span>
-                            Lifecycle Tracking
-                        </li>
-                    </ul>
-                </div>
-            </article>
-
-
-            <!-- CARD 07 -->
-            <article class="module-card module-card-short"
-    data-category="fleet">
-                <div class="module-icon module-icon-dark">
-
-                    <!-- Payment Icon -->
-                    <svg class="module-icon-svg" viewBox="0 0 24 24" fill="none"
-                        stroke="currentColor" stroke-width="2">
-                        <rect x="4" y="5" width="16" height="14" rx="1" />
-                        <path d="M7 9h10" />
-                        <path d="M7 14h5" />
-                    </svg>
-
-                </div>
-
-                <div class="module-card-content">
-                    <h3>Driver Pay</h3>
-
-                    <div class="module-divider module-divider-coral"></div>
-
-                    <p class="module-card-description">
-                        Centralized database for fleet tracking, vehicle health,
-                        and performance history.
-                    </p>
-                </div>
-            </article>
-
-
-            <!-- CARD 08 -->
-            <article class="module-card module-card-short"
-    data-category="fleet">
-                <div class="module-icon module-icon-dark">
-
-                    <!-- User Permission Icon -->
-                    <svg class="module-icon-svg" viewBox="0 0 24 24" fill="none"
-                        stroke="currentColor" stroke-width="2">
-                        <circle cx="9" cy="8" r="3" />
-                        <path d="M3 20c0-3.3 2.7-6 6-6" />
-                        <path d="M17 14v6" />
-                        <path d="M14 17h6" />
-                    </svg>
-
-                </div>
-
-                <div class="module-card-content">
-                    <h3>User Permissions</h3>
-
-                    <div class="module-divider module-divider-navy"></div>
-
-                    <p class="module-card-description">
-                        Centralized database for fleet tracking, vehicle health,
-                        and performance history.
-                    </p>
-                </div>
-            </article>
-
-
-            <!-- CARD 09 -->
-            <article class="module-card module-card-short"
-    data-category="fleet">
-                <div class="module-icon module-icon-dark">
-
-                    <!-- Battery Icon -->
-                    <svg class="module-icon-svg" viewBox="0 0 24 24" fill="none"
-                        stroke="currentColor" stroke-width="2">
-                        <rect x="5" y="5" width="14" height="15" rx="1" />
-                        <path d="M9 2h6" />
-                        <path d="M9 9h6" />
-                        <path d="M12 12v5" />
-                        <path d="M10 14.5h4" />
-                    </svg>
-
-                </div>
-
-                <div class="module-card-content">
-                    <h3>Tyre &amp; Battery</h3>
-
-                    <div class="module-divider module-divider-coral"></div>
-
-                    <p class="module-card-description">
-                        Centralized database for fleet tracking, vehicle health,
-                        and performance history.
-                    </p>
-                </div>
-            </article>
-
-        </div>
     </div>
 </section>
 
+<!-- ============================================================
+     2) CSS  (tamara existing CSS ni niche add karo)
+     ============================================================ -->
 <section class="module-hero-banner">
     <!-- Background Overlay -->
 
@@ -639,10 +267,8 @@
 
                 <div class="footer-about">
 
-
                     <a href="#" class="footer-logo">
-                         <img src="Assets/images/transportdesk-logo-dark.svg" alt="TransportDesk" width="252" height="84">
-
+                        <img src="Assets/images/transportdesk-logo-dark.svg" alt="TransportDesk" width="252" height="84">
                     </a>
 
                     <p>
@@ -734,79 +360,164 @@
 
                 <div class="footer-contact">
 
-                    <div class="contact-item">
+    <!-- India Office -->
+    <div class="footer-office">
 
-                        <div class="icon">
-                            <i class="ri-mail-line"></i>
-                        </div>
+        <h4 class="footer-office-title">
+            <span class="footer-country-flag">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="800px" height="800px" viewBox="0 0 36 36" aria-hidden="true" role="img" class="iconify iconify--twemoji" preserveAspectRatio="xMidYMid meet"><path fill="#138808" d="M0 27a4 4 0 0 0 4 4h28a4 4 0 0 0 4-4v-4H0v4z"></path><path fill="#EEE" d="M0 13h36v10H0z"></path><path fill="#F93" d="M36 13V9a4 4 0 0 0-4-4H4a4 4 0 0 0-4 4v4h36z"></path><circle fill="navy" cx="18" cy="18" r="4"></circle><circle fill="#EEE" cx="18" cy="18" r="3"></circle><path fill="#6666B3" d="M18 15l.146 2.264l1.001-2.035l-.73 2.147l1.704-1.498l-1.497 1.705l2.147-.731l-2.035 1.002L21 18l-2.264.146l2.035 1.001l-2.147-.73l1.497 1.704l-1.704-1.497l.73 2.147l-1.001-2.035L18 21l-.146-2.264l-1.002 2.035l.731-2.147l-1.705 1.497l1.498-1.704l-2.147.73l2.035-1.001L15 18l2.264-.146l-2.035-1.002l2.147.731l-1.498-1.705l1.705 1.498l-.731-2.147l1.002 2.035z"></path><circle fill="navy" cx="18" cy="18" r="1"></circle></svg>
+</span>
+            India Office
+        </h4>
 
-                        <div>
+        
 
-                            <span>Email</span>
+        <div class="contact-item">
+            <div class="icon">
+                <i class="ri-phone-fill"></i>
+            </div>
+            <div>
+                <span>Phone</span>
+                <a href="tel:+916355258003">
+                    +91 6355 258 003
+                </a>
+            </div>
+        </div>
 
-                            <a href="#">
-                               jay@prismitsystems.com
-                            </a>
+        <div class="contact-item">
+            <div class="icon">
+                <i class="ri-map-pin-line"></i>
+            </div>
+            <div>
+                <span>Address</span>
+                <p>
+                    The Galleria Business Hub, Adajan Gam,
+                    Pal Gam, Surat, Gujarat, India 394510
+                </p>
+            </div>
+        </div>
 
-                        </div>
+    <div class="contact-item">
+            <div class="icon">
+                <i class="ri-mail-line"></i>
+            </div>
+            <div>
+                <span>Email</span>
+                <a href="mailto:jay@prismitsystems.com">
+                    jay@prismitsystems.com
+                </a>
+            </div>
+        </div></div>
 
-                    </div>
+    <!-- Subtle Divider -->
+    
 
-                    <div class="contact-item">
+    <!-- USA Office -->
+    <div class="footer-office">
 
-                        <div class="icon">
-                            <i class="ri-phone-fill"></i>
-                        </div>
+        <h4 class="footer-office-title">
+            <span class="footer-country-flag"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="800px" width="800px" version="1.1" id="Layer_1" viewBox="0 0 496 496" xml:space="preserve">
+<path style="fill:#FFFFFF;" d="M496,369.6c0,27.2-21.6,48.8-48,48.8H48c-26.4,0-48-21.6-48-48.8V126.4c0-27.2,21.6-43.8,48-43.8h400  c26.4,0,48,16.6,48,43.8V369.6z"></path>
+<path style="fill:#CCE4E5;" d="M448,77.6H48l400,340.8c26.4,0,48-21.6,48-48.8V126.4C496,99.2,474.4,77.6,448,77.6z"></path>
+<path style="fill:#AED3D3;" d="M448,77.6H48l448,137.6v-88.8C496,99.2,474.4,77.6,448,77.6z"></path>
+<g>
+	<path style="fill:#B22234;" d="M4.9,391.2c7.5,15.4,22.7,26.2,40.5,27.1c0.9,0,1.7,0.1,2.6,0.1h400.3c0,0,3.5-0.3,4.6-0.7   c1.7-0.6,1.9-2,0.6-3.1l-0.4-0.4L426,391.1H4.9V391.2z"></path>
+	<polygon style="fill:#B22234;" points="120.9,131.2 0,131.2 0,157.2 151.4,157.2  "></polygon>
+	<polygon style="fill:#B22234;" points="181.9,183.2 0,183.2 0,209.2 212.5,209.2  "></polygon>
+	<polygon style="fill:#B22234;" points="242.8,235.2 0,235.2 0,261.6 273.2,261.6  "></polygon>
+	<polygon style="fill:#B22234;" points="303.6,287.2 0,287.2 0,313.6 334.8,313.6  "></polygon>
+	<polygon style="fill:#B22234;" points="373.4,346.3 365,339.2 0,339.2 0,365.6 395.6,365.6  "></polygon>
+</g>
+<path style="fill:#FFFFFF;" d="M48,418.4c-0.9,0-1.7,0-2.6-0.1C46.3,418.4,47.1,418.4,48,418.4z"></path>
+<g>
+	<polygon style="fill:#8C1126;" points="238.4,131.2 110.9,131.2 141.4,157.2 323.2,157.2  "></polygon>
+	<polygon style="fill:#8C1126;" points="202.5,209.2 488.5,209.2 403.8,183.2 171.9,183.2  "></polygon>
+	<polygon style="fill:#8C1126;" points="264,261.6 496,261.6 496,235.2 233,235.2  "></polygon>
+	<polygon style="fill:#8C1126;" points="325,313.6 496,313.6 496,287.2 294,287.2  "></polygon>
+	<polygon style="fill:#8C1126;" points="363.4,346.3 386,365.6 496,365.6 496,339.2 355.2,339.2  "></polygon>
+</g>
+<g>
+	<polygon style="fill:#5B0218;" points="222.5,131.2 286,150.7 307.2,157.2 496,157.2 496,131.2  "></polygon>
+	<polygon style="fill:#5B0218;" points="392,183.2 476.8,209.2 496,209.2 496,183.2  "></polygon>
+	<path style="fill:#5B0218;" d="M486.4,97.1c-1.4-1.9-2.9-3.6-4.5-5.3c-8.1-8.2-19.1-13.5-31.3-14.1c-0.8,0-1.7-0.1-2.5-0.1l0,0H48   c-13.1,0-25.5,5.9-34.4,14.7c-3.5,3.7-6.5,7.9-8.7,12.5h75h56.6H491C489.8,102.1,488.2,99.5,486.4,97.1z"></path>
+</g>
+<path style="fill:#8C1126;" d="M491.1,391.2h-75l31.9,27.2C466.8,418.4,483.2,407.4,491.1,391.2z"></path>
+<path style="fill:#3C3B6E;" d="M0,126.4v134.4h215.2V77.6H44.8C20,79.2,0,100,0,126.4z"></path>
+<polygon style="fill:#1E1E44;" points="215.2,220 215.2,77.6 48,77.6 "></polygon>
+<polygon points="215.2,128.8 215.2,77.6 48,77.6 "></polygon>
+<g>
+	<polygon style="fill:#FFFFFF;" points="60.8,96 64,85.6 68,96  "></polygon>
+	<polygon style="fill:#FFFFFF;" points="104,96 107.2,85.6 110.4,96  "></polygon>
+	<polygon style="fill:#FFFFFF;" points="146.4,96 150.4,85.6 153.6,96  "></polygon>
+	<polygon style="fill:#FFFFFF;" points="189.6,96 192.8,85.6 196.8,96  "></polygon>
+	<polygon style="fill:#FFFFFF;" points="39.2,114.4 43.2,104 46.4,114.4  "></polygon>
+	<polygon style="fill:#FFFFFF;" points="82.4,114.4 85.6,104 89.6,114.4  "></polygon>
+	<polygon style="fill:#FFFFFF;" points="125.6,114.4 128.8,104 132,114.4  "></polygon>
+	<polygon style="fill:#FFFFFF;" points="168,114.4 171.2,104 175.2,114.4  "></polygon>
+	<polygon style="fill:#FFFFFF;" points="18.4,132.8 21.6,122.4 24.8,132.8  "></polygon>
+	<polygon style="fill:#FFFFFF;" points="60.8,132.8 64,122.4 68,132.8  "></polygon>
+	<polygon style="fill:#FFFFFF;" points="104,132.8 107.2,122.4 110.4,132.8  "></polygon>
+	<polygon style="fill:#FFFFFF;" points="146.4,132.8 150.4,122.4 153.6,132.8  "></polygon>
+	<polygon style="fill:#FFFFFF;" points="189.6,132.8 192.8,122.4 196.8,132.8  "></polygon>
+	<polygon style="fill:#FFFFFF;" points="40,151.2 43.2,140.8 47.2,151.2  "></polygon>
+	<polygon style="fill:#FFFFFF;" points="83.2,151.2 86.4,140.8 89.6,151.2  "></polygon>
+	<polygon style="fill:#FFFFFF;" points="125.6,151.2 129.6,140.8 132.8,151.2  "></polygon>
+	<polygon style="fill:#FFFFFF;" points="168.8,151.2 172,140.8 175.2,151.2  "></polygon>
+	<polygon style="fill:#FFFFFF;" points="18.4,168.8 22.4,158.4 25.6,168.8  "></polygon>
+	<polygon style="fill:#FFFFFF;" points="61.6,168.8 64.8,158.4 68.8,168.8  "></polygon>
+	<polygon style="fill:#FFFFFF;" points="104.8,168.8 108,158.4 111.2,168.8  "></polygon>
+	<polygon style="fill:#FFFFFF;" points="147.2,168.8 151.2,158.4 154.4,168.8  "></polygon>
+	<polygon style="fill:#FFFFFF;" points="190.4,168.8 193.6,158.4 196.8,168.8  "></polygon>
+	<polygon style="fill:#FFFFFF;" points="40,187.2 43.2,176.8 47.2,187.2  "></polygon>
+	<polygon style="fill:#FFFFFF;" points="83.2,187.2 86.4,176.8 89.6,187.2  "></polygon>
+	<polygon style="fill:#FFFFFF;" points="125.6,187.2 129.6,176.8 132.8,187.2  "></polygon>
+	<polygon style="fill:#FFFFFF;" points="168.8,187.2 172,176.8 176,187.2  "></polygon>
+	<polygon style="fill:#FFFFFF;" points="19.2,205.6 22.4,195.2 25.6,205.6  "></polygon>
+	<polygon style="fill:#FFFFFF;" points="62.4,205.6 65.6,195.2 68.8,205.6  "></polygon>
+	<polygon style="fill:#FFFFFF;" points="104.8,205.6 108,195.2 112,205.6  "></polygon>
+	<polygon style="fill:#FFFFFF;" points="148,205.6 151.2,195.2 154.4,205.6  "></polygon>
+	<polygon style="fill:#FFFFFF;" points="190.4,205.6 194.4,195.2 197.6,205.6  "></polygon>
+	<polygon style="fill:#FFFFFF;" points="40,224 43.2,212.8 47.2,224  "></polygon>
+	<polygon style="fill:#FFFFFF;" points="83.2,224 86.4,212.8 89.6,224  "></polygon>
+	<polygon style="fill:#FFFFFF;" points="125.6,224 129.6,212.8 132.8,224  "></polygon>
+	<polygon style="fill:#FFFFFF;" points="168.8,224 172,212.8 175.2,224  "></polygon>
+	<polygon style="fill:#FFFFFF;" points="18.4,241.6 22.4,231.2 25.6,241.6  "></polygon>
+	<polygon style="fill:#FFFFFF;" points="61.6,241.6 64.8,231.2 68,241.6  "></polygon>
+	<polygon style="fill:#FFFFFF;" points="104,241.6 108,231.2 111.2,241.6  "></polygon>
+	<polygon style="fill:#FFFFFF;" points="147.2,241.6 150.4,231.2 154.4,241.6  "></polygon>
+	<polygon style="fill:#FFFFFF;" points="190.4,241.6 193.6,231.2 196.8,241.6  "></polygon>
+</g>
+</svg></span>
+            USA Office
+        </h4>
 
-                        <div>
+        <div class="contact-item">
+            <div class="icon">
+                <i class="ri-phone-fill"></i>
+            </div>
+            <div>
+                <span>Phone</span>
+                <a href="tel:+15623120282">
+                    +1 562-312-0282
+                </a>
+            </div>
+        </div>
 
-                            <span>Call</span>
-                          <div class="footer-contact-num">
-                            <a href="#">
-                                6355 258 003
-                            </a>
+        <div class="contact-item">
+            <div class="icon">
+                <i class="ri-map-pin-line"></i>
+            </div>
+            <div>
+                <span>Address</span>
+                <p>
+                    Norwalk, California 90650, USA
+                </p>
+            </div>
+        </div>
 
-                             <a href="#">
-                               +1 562-312-0282
-                            </a>
-                            </div>
-                        </div>
+    </div>
 
-                    </div>
-
-                    <div class="contact-item">
-
-                        <div class="icon">
-                            <i class="ri-map-pin-line"></i>
-                        </div>
-
-                        <div>
-
-                            <span>Location (India)</span>
-                            <div class="footer-location">
-                            <p>The Galleria Business Hub, Adajan Gam, Pal Gam, Surat, Gujarat, India 394510</p>
-                            </div>
-                        </div>
-
-                    </div>
-                     <div class="contact-item">
-
-                        <div class="icon">
-                            <i class="ri-map-pin-line"></i>
-                        </div>
-
-                        <div>
-
-                            <span>Location (USA)</span>
-                            <div class="footer-location">
-                             <p>Norwalk, California, 90650. USA</p>
-                            </div>
-                        </div>
-
-                    </div>
-
-
-                </div>
+</div>
 
             </div>
 
@@ -845,6 +556,266 @@
 </footer>
 <!--footer section end-->
 
+<!-- ============================================================
+     3) JAVASCRIPT  (</body> pehla)
+     ============================================================ -->
+<script>
+(function () {
+    'use strict';
+
+    /* ---------- SVG icons (24x24, stroke) ---------- */
+    var ICONS = {
+        truck:    '<path d="M3 7h11v9H3z"/><path d="M14 10h4l3 3v3h-7"/><circle cx="7" cy="18" r="1.5"/><circle cx="17" cy="18" r="1.5"/>',
+        user:     '<circle cx="12" cy="8" r="3.5"/><path d="M5 20c0-3.9 3.1-7 7-7s7 3.1 7 7"/>',
+        file:     '<path d="M7 3h7l4 4v14H7z"/><path d="M14 3v4h4M9 12h6M9 16h6"/>',
+        battery:  '<rect x="3" y="8" width="16" height="9" rx="1"/><path d="M21 11v3M7 12h4"/>',
+        tyre:     '<circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3"/>',
+        fuel:     '<path d="M6 20V4h9v16"/><path d="M6 8h9"/><path d="M15 7h2l3 3v6a2 2 0 0 1-4 0v-5"/>',
+        card:     '<rect x="3" y="6" width="18" height="12" rx="2"/><path d="M3 10h18"/>',
+        wrench:   '<path d="m14.7 6.3 3 3"/><path d="m5 19 8.5-8.5"/><path d="M15 5a4 4 0 0 0 4 4l-4 4-4-4 4-4Z"/><path d="m3 21 4-4"/>',
+        snow:     '<path d="M12 3v18M4.5 7.5l15 9M19.5 7.5l-15 9"/>',
+        cabin:    '<path d="M4 18V9l3-4h8l5 5v8z"/><path d="M4 13h16"/>',
+        pay:      '<rect x="4" y="5" width="16" height="14" rx="1"/><path d="M7 9h10"/><path d="M7 14h5"/>',
+        store:    '<path d="M4 9l1-5h14l1 5"/><path d="M5 9v11h14V9"/><path d="M10 20v-6h4v6"/>',
+        building: '<rect x="5" y="3" width="14" height="18" rx="1"/><path d="M9 7h2M13 7h2M9 11h2M13 11h2M10 21v-4h4v4"/>',
+        road:     '<path d="M8 3 4 21M16 3l4 18M12 4v3M12 11v3M12 18v3"/>',
+        challan:  '<rect x="5" y="4" width="14" height="17" rx="1"/><path d="M9 4V2h6v2M9 10h6M9 14h6"/>',
+        lr:       '<path d="M7 3h7l4 4v14H7z"/><path d="M14 3v4h4M10 13l2 2 3-4"/>',
+        parties:  '<circle cx="12" cy="7" r="3"/><circle cx="5" cy="17" r="2.5"/><circle cx="19" cy="17" r="2.5"/><path d="M8 20h8"/>',
+        tag:      '<path d="M3 12V4h8l10 10-8 8z"/><circle cx="7.5" cy="8.5" r="1"/>',
+        history:  '<path d="M3 12a9 9 0 1 0 3-6.7L3 8"/><path d="M3 3v5h5M12 7v5l3 2"/>',
+        doc:      '<rect x="4" y="5" width="13" height="14" rx="1"/><path d="M8 5V3h12v13h-3"/>',
+        clip:     '<path d="m20 11-8.5 8.5a5 5 0 0 1-7-7L13 4a3.5 3.5 0 0 1 5 5l-8.5 8.5a2 2 0 0 1-3-3L14 7"/>',
+        cash:     '<rect x="3" y="7" width="18" height="11" rx="2"/><circle cx="12" cy="12.5" r="2.5"/>',
+        book:     '<path d="M4 4h10a3 3 0 0 1 3 3v13H7a3 3 0 0 1-3-3z"/><path d="M8 9h5"/>',
+        wallet:   '<path d="M3 7h16v12H3z"/><path d="M3 7l2-3h12v3M15 13h4"/>',
+        ledger:   '<path d="M12 6c-2-1.5-5-2-8-2v14c3 0 6 .5 8 2 2-1.5 5-2 8-2V4c-3 0-6 .5-8 2zM12 6v14"/>',
+        calendar: '<rect x="4" y="5" width="16" height="15" rx="1"/><path d="M4 10h16M8 3v4M16 3v4"/>',
+        users:    '<circle cx="9" cy="7" r="3"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6"/><path d="M16 4.5a3 3 0 0 1 0 5.8"/><path d="M18 14c1.7.8 3 2.5 3 4.5"/>',
+        shield:   '<path d="M12 3l7 3v5c0 5-3 8-7 10-4-2-7-5-7-10V6z"/>',
+        chart:    '<path d="M5 20V10"/><path d="M10 20V5"/><path d="M15 20v-8"/><path d="M20 20V3"/>',
+        search:   '<circle cx="11" cy="11" r="6"/><path d="m20 20-4-4"/>'
+    };
+
+    /* ---------- MODULE DATA (sidebar mujab) ---------- */
+    var MODULES = [
+        /* FLEET MANAGEMENT */
+        { cat: 'fleet', icon: 'truck', title: 'Vehicles',
+          desc: 'Centralized database for fleet tracking, vehicle health and performance history.',
+          features: ['Digital Registration Docs', 'Performance Metrics', 'Lifecycle Tracking'] },
+        { cat: 'fleet', icon: 'user', title: 'Drivers',
+          desc: 'Maintain complete driver profiles, licences and assignment records in one place.',
+          features: ['Licence & KYC Records', 'Trip Assignments', 'Performance History'] },
+        { cat: 'fleet', icon: 'file', title: 'Vehicle Documents',
+          desc: 'Keep every vehicle paper organised with smart reminders before expiry.',
+          features: ['RC, Insurance & PUC', 'Expiry Alerts', 'Digital Storage'] },
+
+        /* FLEET MAINTENANCE */
+        { cat: 'maintenance', icon: 'battery', title: 'Batteries',
+          desc: 'Track battery purchase, warranty and replacement for each vehicle.',
+          features: ['Warranty Tracking', 'Replacement History', 'Cost Monitoring'] },
+        { cat: 'maintenance', icon: 'tyre', title: 'Tyres',
+          desc: 'Monitor tyre life, positions and running kilometres to cut costs.',
+          features: ['Position Mapping', 'Running KM Tracking', 'Retread & Change Logs'] },
+        { cat: 'maintenance', icon: 'fuel', title: 'Diesel',
+          desc: 'Record diesel fills and measure mileage across every trip.',
+          features: ['Fuel Entries', 'Mileage Analysis', 'Vendor-wise Reports'] },
+        { cat: 'maintenance', icon: 'card', title: 'Fuel Cards',
+          desc: 'Manage fuel cards, balances and transactions with full control.',
+          features: ['Card Assignment', 'Balance Tracking', 'Transaction History'] },
+        { cat: 'maintenance', icon: 'wrench', title: 'Repair & Maintenance',
+          desc: 'Schedule services and log repairs to keep vehicles on the road.',
+          features: ['Service Schedules', 'Repair Records', 'Spare Part Costs'] },
+        { cat: 'maintenance', icon: 'snow', title: 'Reefer Unit Work',
+          desc: 'Track servicing and repairs of refrigerated units separately.',
+          features: ['Unit-wise Records', 'Service Reminders', 'Expense Tracking'] },
+        { cat: 'maintenance', icon: 'cabin', title: 'Cabin Body Work',
+          desc: 'Record body building, painting and cabin repair jobs with costs.',
+          features: ['Job Cards', 'Vendor Billing', 'Before / After Records'] },
+        { cat: 'maintenance', icon: 'pay', title: 'Driver Pay',
+          desc: 'Calculate and track driver salary, advances and trip allowances.',
+          features: ['Salary & Advances', 'Trip Allowances', 'Payment History'] },
+
+        /* BUSINESS */
+        { cat: 'business', icon: 'store', title: 'Vendors',
+          desc: 'Manage suppliers, workshops and service providers in one list.',
+          features: ['Vendor Profiles', 'Payment Status', 'Purchase History'] },
+        { cat: 'business', icon: 'building', title: 'Own Firms',
+          desc: 'Handle multiple firms under one login with separate records.',
+          features: ['Multi-firm Support', 'GST & PAN Details', 'Firm-wise Reports'] },
+        { cat: 'business', icon: 'road', title: 'Tolls',
+          desc: 'Log toll expenses per trip and vehicle for accurate costing.',
+          features: ['Toll Entries', 'Trip-wise Costing', 'Monthly Summary'] },
+        { cat: 'business', icon: 'challan', title: 'Challan',
+          desc: 'Track traffic challans, due dates and settlement status.',
+          features: ['Challan Records', 'Due Date Alerts', 'Payment Tracking'] },
+
+        /* LORRY RECEIPTS */
+        { cat: 'lorry', icon: 'lr', title: 'Lorry Receipts',
+          desc: 'Create and manage LRs quickly with print-ready formats.',
+          features: ['Quick LR Creation', 'Print & Share', 'Status Tracking'] },
+        { cat: 'lorry', icon: 'parties', title: 'Parties',
+          desc: 'Store consignor and consignee details for faster booking.',
+          features: ['Party Profiles', 'Outstanding Balance', 'Booking History'] },
+        { cat: 'lorry', icon: 'tag', title: 'LR Charge Types',
+          desc: 'Define freight and extra charge heads used in every LR.',
+          features: ['Custom Charge Heads', 'Auto Calculation', 'Easy Updates'] },
+        { cat: 'lorry', icon: 'history', title: 'Activity Logs',
+          desc: 'See who changed what and when across all lorry receipts.',
+          features: ['Change History', 'User-wise Tracking', 'Date Filters'] },
+
+        /* DOCUMENTS */
+        { cat: 'document', icon: 'doc', title: 'Office Document',
+          desc: 'Keep company and compliance documents safely organised.',
+          features: ['Categorised Storage', 'Quick Search', 'Expiry Reminders'] },
+        { cat: 'document', icon: 'clip', title: 'Attachments',
+          desc: 'Attach files, photos and bills to any record in seconds.',
+          features: ['Multi-file Upload', 'Linked to Records', 'Easy Download'] },
+
+        /* ACCOUNTS */
+        { cat: 'account', icon: 'cash', title: 'Payments',
+          desc: 'Record payments received and made with complete references.',
+          features: ['Receipt & Payment', 'Mode Tracking', 'Party-wise Details'] },
+        { cat: 'account', icon: 'book', title: 'Expense Book',
+          desc: 'Log every expense and see where the money goes.',
+          features: ['Category-wise Expenses', 'Trip Expenses', 'Monthly Reports'] },
+        { cat: 'account', icon: 'wallet', title: 'Manager Balances',
+          desc: 'Keep track of cash given to and spent by managers.',
+          features: ['Cash In / Out', 'Live Balance', 'Statement View'] },
+        { cat: 'account', icon: 'ledger', title: 'Account Ledgers',
+          desc: 'Maintain accurate ledgers for every party and account head.',
+          features: ['Party Ledgers', 'Debit / Credit View', 'Export Ready'] },
+        { cat: 'account', icon: 'calendar', title: 'Daily Ledger',
+          desc: 'Get a clear day-wise summary of all financial activity.',
+          features: ['Day-wise Entries', 'Opening & Closing', 'Quick Review'] },
+
+        /* ADMIN */
+        { cat: 'admin', icon: 'users', title: 'Users',
+          desc: 'Add team members and manage their accounts with ease.',
+          features: ['Create & Disable Users', 'Role Assignment', 'Login Activity'] },
+        { cat: 'admin', icon: 'shield', title: 'User Permissions',
+          desc: 'Control exactly which modules each user can see and edit.',
+          features: ['Module-level Access', 'View / Edit Rights', 'Secure Roles'] },
+        { cat: 'admin', icon: 'chart', title: 'Reports',
+          desc: 'Insightful reports and analytics to make better decisions.',
+          features: ['Fleet & Trip Reports', 'Expense Analytics', 'Export to Excel / PDF'] },
+        { cat: 'admin', icon: 'search', title: 'Global Search',
+          desc: 'Find any vehicle, driver, LR or party from a single search box.',
+          features: ['Search Everything', 'Instant Results', 'Smart Suggestions'] }
+    ];
+
+    /* ---------- RENDER ---------- */
+    var grid = document.getElementById('modulesGrid');
+    var filterWrap = document.getElementById('moduleFilters');
+    var buttons = filterWrap.querySelectorAll('.module-filter-btn');
+
+    var ICON_TONES = ['module-icon-dark', 'module-icon-coral'];
+    var DIVIDER_TONES = ['module-divider-coral', 'module-divider-navy'];
+
+    function cardHTML(m, i) {
+        // dark icon -> coral divider, coral icon -> navy divider (tamara design mujab)
+        var tone = i % 2;
+        var checks = m.features.map(function (f) {
+            return '<li><span class="feature-check">✓</span>' + f + '</li>';
+        }).join('');
+
+        return '' +
+        '<article class="module-card" data-category="' + m.cat + '">' +
+            '<div class="module-icon ' + ICON_TONES[tone] + '">' +
+                '<svg class="module-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" ' +
+                'stroke-width="2" stroke-linecap="round" stroke-linejoin="round">' + ICONS[m.icon] + '</svg>' +
+            '</div>' +
+            '<div class="module-card-content">' +
+                '<h3>' + m.title + '</h3>' +
+                '<p class="module-card-description">' + m.desc + '</p>' +
+                '<div class="module-divider ' + DIVIDER_TONES[tone] + '"></div>' +
+                '<ul class="module-features">' + checks + '</ul>' +
+               '<a href="vehicles.html" class="module-view-details">' +
+            'View Details ' +
+            '<i class="ri-arrow-right-line"></i>' +
+        '</a>' +
+            '</div>' +
+        '</article>';
+    }
+
+    grid.innerHTML = MODULES.map(cardHTML).join('');
+    var cards = Array.prototype.slice.call(grid.querySelectorAll('.module-card'));
+
+    /* ---------- FILTER LOGIC ---------- */
+    var LEAVE_MS = 260;
+    var STAGGER_MS = 45;
+    var current = 'all';
+    var token = 0; // fast clicks ma old animation cancel karva
+
+    function matches(card, filter) {
+        return filter === 'all' || card.getAttribute('data-category') === filter;
+    }
+
+    function applyFilter(filter) {
+        if (filter === current) return;
+        current = filter;
+        var run = ++token;
+
+        // 1) tab active state
+        buttons.forEach(function (btn) {
+            var on = btn.getAttribute('data-filter') === filter;
+            btn.classList.toggle('is-active', on);
+            btn.setAttribute('aria-pressed', on ? 'true' : 'false');
+        });
+
+        var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+        // 2) je cards atyare dekhay che e fade-out
+        var visible = cards.filter(function (c) { return !c.classList.contains('is-hidden'); });
+        visible.forEach(function (c) {
+            c.style.transitionDelay = '0ms';
+            c.classList.add('is-leaving');
+        });
+
+        setTimeout(function () {
+            if (run !== token) return; // navo click aavi gayo
+
+            // 3) hide / show
+            var toShow = [];
+            cards.forEach(function (c) {
+                c.classList.remove('is-leaving');
+                if (matches(c, filter)) {
+                    c.classList.remove('is-hidden');
+                    c.classList.add('is-entering');
+                    toShow.push(c);
+                } else {
+                    c.classList.add('is-hidden');
+                    c.classList.remove('is-entering');
+                }
+            });
+
+            // 4) reflow, pachi stagger sathe fade-in
+            void grid.offsetHeight;
+            requestAnimationFrame(function () {
+                toShow.forEach(function (c, i) {
+                    c.style.transition = '';
+                    c.style.transitionDelay = reduce ? '0ms' : (i * STAGGER_MS) + 'ms';
+                    c.classList.remove('is-entering');
+                });
+                // delay clean-up
+                setTimeout(function () {
+                    if (run !== token) return;
+                    toShow.forEach(function (c) { c.style.transitionDelay = ''; });
+                }, toShow.length * STAGGER_MS + 350);
+            });
+        }, reduce ? 0 : LEAVE_MS);
+    }
+
+    filterWrap.addEventListener('click', function (e) {
+        var btn = e.target.closest('.module-filter-btn');
+        if (!btn) return;
+        applyFilter(btn.getAttribute('data-filter'));
+    });
+
+    /* ---------- INITIAL STATE: All Modules ---------- */
+    // (default 'all' j che, etle badha cards dekhase)
+})();
+</script>
 <script src="./Assets/js/custom.min.js" defer></script>
 </body>
 </html>
