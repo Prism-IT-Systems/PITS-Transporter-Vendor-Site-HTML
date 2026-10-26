@@ -1,1166 +1,1481 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
+    <head>
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Lorry Receipt (LR) Management Module | TransportDesk Fleet Solutions</title>
-    <meta name="description"
-        content="Create, manage and download transport Lorry Receipts in one system. Keep shipment, party, vehicle, goods and freight charge details together.">
+        <title>Lorry Receipt (LR) Management Module | TransportDesk Fleet
+            Solutions</title>
+        <meta name="description"
+            content="Create, manage and download transport Lorry Receipts in one system. Keep shipment, party, vehicle, goods and freight charge details together.">
 
-    <!-- Remix Icon -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" />
+        <!-- Remix Icon -->
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" />
 
-    <!-- Swiper -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+        <!-- Swiper -->
+        <link rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
 
-    <!-- Lenis -->
-    <link rel="stylesheet" href="https://unpkg.com/lenis@1.3.23/dist/lenis.css">
+        <!-- Lenis -->
+        <link rel="stylesheet"
+            href="https://unpkg.com/lenis@1.3.23/dist/lenis.css">
 
-    <!-- Tailwind Output CSS -->
-    <link href="./Assets/css/output.css" rel="stylesheet">
-</head>
+        <!-- Tailwind Output CSS -->
+        <link href="./Assets/css/output.min.css" rel="stylesheet">
+    </head>
 
-<body>
+    <body>
 
-    <!--Header Section start-->
-    <header class="main-header">
-        <div class="container">
+        <!--Header Section start-->
+        <header class="main-header">
+            <div class="container">
 
-            <div class="header-inner">
+                <div class="header-inner">
 
-                <a href="index.html" class="header-logo">
-                    <img src="Assets/images/transportdesk-logo.svg" alt="Logo">
-                </a>
+                    <a href="index.html" class="header-logo">
+                        <img src="Assets/images/transportdesk-logo.svg"
+                            alt="Logo">
+                    </a>
 
-                <nav class="main-navigation" id="mobileMenu">
+                    <nav class="main-navigation" id="mobileMenu">
 
-                    <div class="menu-circle"></div>
+                        <div class="menu-circle"></div>
 
-                    <ul class="navigation-links">
-                        <li><a href="index.html" class="navigation-link">Home</a></li>
-                        <li><a href="features.html" class="navigation-link">Features</a></li>
-                        <li><a href="modules.html" class="navigation-link active">Modules</a></li>
-                        <li><a href="reports.html" class="navigation-link">Resources</a></li>
-                        <li><a href="contact.html" class="navigation-link">Contact</a></li>
-                    </ul>
+                        <ul class="navigation-links">
+                            <li><a href="index.html"
+                                    class="navigation-link">Home</a></li>
+                            <li><a href="features.html"
+                                    class="navigation-link">Features</a></li>
+                            <li><a href="modules.html"
+                                    class="navigation-link active">Modules</a></li>
+                            <li><a href="reports.html"
+                                    class="navigation-link">Resources</a></li>
+                            <li><a href="contact.html"
+                                    class="navigation-link">Contact</a></li>
+                        </ul>
 
-                    <div class="mobile-header-right">
+                        <div class="mobile-header-right">
+                            <a href="#" class="login-btn">Login</a>
+                            <a href="#" class="demo-btn">Book Demo</a>
+                        </div>
+
+                    </nav>
+
+                    <div class="header-right">
                         <a href="#" class="login-btn">Login</a>
                         <a href="#" class="demo-btn">Book Demo</a>
                     </div>
 
-                </nav>
+                    <button class="menu-toggle" id="menuToggle"
+                        aria-label="Toggle Menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
 
-                <div class="header-right">
-                    <a href="#" class="login-btn">Login</a>
-                    <a href="#" class="demo-btn">Book Demo</a>
                 </div>
-
-                <button class="menu-toggle" id="menuToggle" aria-label="Toggle Menu">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
 
             </div>
+        </header>
 
-        </div>
-    </header>
+        <!-- Add this after header -->
+        <div class="menu-overlay" id="menuOverlay"></div>
+        <!--Header section End-->
 
-    <!-- Add this after header -->
-    <div class="menu-overlay" id="menuOverlay"></div>
-    <!--Header section End-->
-
-
-    <section id="overview" class="dl-overview-section">
-        <div class="dl-overview-glow"></div>
-        <div class="dl-overview-pattern"></div>
-        <div class="container">
-            <div class="dl-overview-grid">
-                <div class="dl-overview-content">
-                    <div class="dl-overview-badge">
-                        <span class="dl-status-dot"></span>
-                        <span>Fleet Management</span>
-                        <span class="dl-badge-divider">|</span>
-                        <span class="dl-badge-highlight">Lorry Receipt Management Module</span>
-                    </div>
-                    <h1 class="dl-overview-title">Lorry Receipt <span class="dl-gradient-text">(LR) Management</span>
-                        Module</h1>
-                    <p class="dl-overview-description">Create, manage and download transport Lorry Receipts in one
-                        convenient system. Keep shipment, party, vehicle, goods and freight charge details together for
-                        easy access.</p>
-                    <div class="dl-overview-actions">
-                        <button type="button" class="btn-primary"
-                            onclick="document.getElementById('simulator').scrollIntoView({behavior:'smooth'})">
-                            <span>See Practical Example</span><i class="ri-arrow-right-line"></i></button>
-                        <button type="button" class="dl-btn-demo"
-                            onclick="document.getElementById('demo').scrollIntoView({behavior:'smooth'})">
-                            <span class="dl-play-icon"><i class="ri-play-fill"></i></span><span>Watch Demo
-                                Video</span></button>
-                    </div>
-                    <div class="dl-overview-stats">
-                        <div class="dl-stat-item">
-                            <div class="dl-stat-number ">6</div>
-                            <div class="dl-stat-label">Simple Steps</div>
+        <section id="overview" class="dl-overview-section">
+            <div class="dl-overview-glow"></div>
+            <div class="dl-overview-pattern"></div>
+            <div class="container">
+                <div class="dl-overview-grid">
+                    <div class="dl-overview-content">
+                        <div class="dl-overview-badge">
+                            <span class="dl-status-dot"></span>
+                            <span>Fleet Management</span>
+                            <span class="dl-badge-divider">|</span>
+                            <span class="dl-badge-highlight">Lorry Receipt
+                                Management Module</span>
                         </div>
-                        <div class="dl-stat-item">
-                            <div class="dl-stat-number dl-stat-red">14</div>
-                            <div class="dl-stat-label">Key Features</div>
+                        <h1 class="dl-overview-title">Lorry Receipt <span
+                                class="dl-gradient-text">(LR) Management</span>
+                            Module</h1>
+                        <p class="dl-overview-description">Create, manage and
+                            download transport Lorry Receipts in one
+                            convenient system. Keep shipment, party, vehicle,
+                            goods and freight charge details together for
+                            easy access.</p>
+                        <div class="dl-overview-actions">
+                            <button type="button" class="btn-primary"
+                                onclick="document.getElementById('simulator').scrollIntoView({behavior:'smooth'})">
+                                <span>See Practical Example</span><i
+                                    class="ri-arrow-right-line"></i></button>
+                            <button type="button" class="dl-btn-demo"
+                                onclick="document.getElementById('demo').scrollIntoView({behavior:'smooth'})">
+                                <span class="dl-play-icon"><i
+                                        class="ri-play-fill"></i></span><span>Watch
+                                    Demo
+                                    Video</span></button>
                         </div>
-                        <div class="dl-stat-item">
-                            <div class="dl-stat-number dl-stat-green">4</div>
-                            <div class="dl-stat-label">PDF Copy Types</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="dl-overview-visual">
-                    <div class="dl-visual-card">
-                        <img src="Assets/images/hero_fleet_dispatch_1792482270822.jpg"
-                            alt="Transportation Fleet Dispatch Logistics Center" class="dl-visual-image">
-                        <div class="dl-visual-overlay"></div>
-                        <div class="dl-visual-topbar">
-                            <div class="dl-live-label"><span class="dl-live-dot"></span><span>Lorry Receipt
-                                    Example</span></div>
-                            <div class="dl-fuel-rate">Issued</div>
-                        </div>
-                        <div class="dl-fuel-slip">
-                            <div class="dl-slip-header">
-                                <span class="dl-slip-title">LR/2026-27/0004 · Surat → Ahmedabad</span>
-                                <span class="dl-slip-status">Example</span>
+                        <div class="dl-overview-stats">
+                            <div class="dl-stat-item">
+                                <div class="dl-stat-number ">6</div>
+                                <div class="dl-stat-label">Simple Steps</div>
                             </div>
-                            <div class="dl-slip-stats">
-                                <div class="dl-slip-stat"><span class="dl-slip-label">Consignor</span><span
-                                        class="dl-slip-value ">ABC Textiles</span></div>
-                                <div class="dl-slip-stat"><span class="dl-slip-label">Vehicle</span><span
-                                        class="dl-slip-value dl-slip-red">GJ 05 AB 1234</span></div>
-                                <div class="dl-slip-stat"><span class="dl-slip-label">Weight</span><span
-                                        class="dl-slip-value dl-slip-green">2,500 kg</span></div>
+                            <div class="dl-stat-item">
+                                <div class="dl-stat-number dl-stat-red">14</div>
+                                <div class="dl-stat-label">Key Features</div>
+                            </div>
+                            <div class="dl-stat-item">
+                                <div
+                                    class="dl-stat-number dl-stat-green">4</div>
+                                <div class="dl-stat-label">PDF Copy Types</div>
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="dl-trusted-section">
-        <div class="dl-trusted-heading"><span>Shipment, Party, Vehicle, Goods and Freight Charge Details in One
-                System</span></div>
-        <div class="dl-trusted-marquee">
-            <div class="dl-trusted-fade dl-trusted-fade-left"></div>
-            <div class="dl-trusted-fade dl-trusted-fade-right"></div>
-            <div class="dl-trusted-track">
-                <div class="dl-trusted-group">
-                    <div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span
-                            class="dl-trusted-name">Automatic LR Numbers</span></div>
-                    <div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span
-                            class="dl-trusted-name">Company-Based LRs</span></div>
-                    <div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span
-                            class="dl-trusted-name">Consignor &amp; Consignee</span></div>
-                    <div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span
-                            class="dl-trusted-name">Vehicle &amp; Driver Selection</span></div>
-                    <div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">From
-                            &amp; To Locations</span></div>
-                    <div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span
-                            class="dl-trusted-name">Multiple Goods Entries</span></div>
-                    <div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span
-                            class="dl-trusted-name">Freight &amp; Other Charges</span></div>
-                    <div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span
-                            class="dl-trusted-name">Draft, Issued &amp; Cancelled</span></div>
-                    <div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span
-                            class="dl-trusted-name">Search, Filter &amp; Sort</span></div>
-                    <div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">PDF
-                            Copies</span></div>
-                    <div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span
-                            class="dl-trusted-name">Deleted Record Recovery</span></div>
-                    <div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span
-                            class="dl-trusted-name">Role-Based Access</span></div>
-                </div>
-                <div class="dl-trusted-group" aria-hidden="true">
-                    <div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span
-                            class="dl-trusted-name">Automatic LR Numbers</span></div>
-                    <div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span
-                            class="dl-trusted-name">Company-Based LRs</span></div>
-                    <div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span
-                            class="dl-trusted-name">Consignor &amp; Consignee</span></div>
-                    <div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span
-                            class="dl-trusted-name">Vehicle &amp; Driver Selection</span></div>
-                    <div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">From
-                            &amp; To Locations</span></div>
-                    <div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span
-                            class="dl-trusted-name">Multiple Goods Entries</span></div>
-                    <div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span
-                            class="dl-trusted-name">Freight &amp; Other Charges</span></div>
-                    <div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span
-                            class="dl-trusted-name">Draft, Issued &amp; Cancelled</span></div>
-                    <div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span
-                            class="dl-trusted-name">Search, Filter &amp; Sort</span></div>
-                    <div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">PDF
-                            Copies</span></div>
-                    <div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span
-                            class="dl-trusted-name">Deleted Record Recovery</span></div>
-                    <div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span
-                            class="dl-trusted-name">Role-Based Access</span></div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="demo" class="dl-demo-section">
-        <div class="dl-demo-glow"></div>
-        <div class="dl-container">
-            <div class="heading-wrapper">
-                <span class="heading-tag">Interactive Video Demonstration</span>
-                <h2 class="heading-title">Watch How <span>Lorry Receipt Management</span> Works</h2>
-                <p>Watch a short demonstration showing how to create an LR, select parties and a vehicle, add goods and
-                    charges, save the receipt and download a PDF copy.</p>
-
-            </div>
-            <div class="dl-demo-grid">
-                <div class="dl-demo-video-column">
-                    <div class="dl-video-card">
-                        <div class="dl-video-toolbar">
-                            <div class="dl-video-toolbar-left">
-                                <span class="dl-window-dot dl-dot-red"></span><span
-                                    class="dl-window-dot dl-dot-yellow"></span><span
-                                    class="dl-window-dot dl-dot-green"></span>
-                                <span class="dl-video-filename">Lorry Receipt Management Module Demo</span>
+                    <div class="dl-overview-visual">
+                        <div class="dl-visual-card">
+                            <img
+                                src="Assets/images/hero_fleet_dispatch_1792482270822.jpg"
+                                alt="Transportation Fleet Dispatch Logistics Center"
+                                class="dl-visual-image">
+                            <div class="dl-visual-overlay"></div>
+                            <div class="dl-visual-topbar">
+                                <div class="dl-live-label"><span
+                                        class="dl-live-dot"></span><span>Lorry
+                                        Receipt
+                                        Example</span></div>
+                                <div class="dl-fuel-rate">Issued</div>
                             </div>
-                        </div>
-                        <div class="dl-video-preview">
-                            <img src="Assets/images/dashboard.png"
-                                alt="Lorry Receipt Management Module demonstration video preview"
-                                class="dl-video-thumbnail">
-                            <div class="dl-video-overlay"></div>
-                            <button type="button" class="dl-video-play" aria-label="Play demonstration video"><i
-                                    class="ri-play-fill"></i><span class="dl-video-ping"></span></button>
-                            <div class="dl-video-meta">
-                                <div class="dl-video-meta-left">
-                                    <span class="dl-video-current-chapter">[Place Lorry Receipt Demo Video Here]</span>
+                            <div class="dl-fuel-slip">
+                                <div class="dl-slip-header">
+                                    <span class="dl-slip-title">LR/2026-27/0004
+                                        · Surat → Ahmedabad</span>
+                                    <span class="dl-slip-status">Example</span>
+                                </div>
+                                <div class="dl-slip-stats">
+                                    <div class="dl-slip-stat"><span
+                                            class="dl-slip-label">Consignor</span><span
+                                            class="dl-slip-value ">ABC
+                                            Textiles</span></div>
+                                    <div class="dl-slip-stat"><span
+                                            class="dl-slip-label">Vehicle</span><span
+                                            class="dl-slip-value dl-slip-red">GJ
+                                            05 AB 1234</span></div>
+                                    <div class="dl-slip-stat"><span
+                                            class="dl-slip-label">Weight</span><span
+                                            class="dl-slip-value dl-slip-green">2,500
+                                            kg</span></div>
                                 </div>
                             </div>
                         </div>
-                        <div class="dl-video-footer">
-                            <div class="dl-video-footer-left">
-                                <button type="button" class="dl-watch-button"><i
-                                        class="ri-play-circle-line"></i><span>Watch Full Walkthrough</span></button>
+                    </div>
+                </div>
+            </div>
+        </section>
 
+        <section class="dl-trusted-section">
+            <div class="dl-trusted-heading"><span>Shipment, Party, Vehicle,
+                    Goods and Freight Charge Details in One
+                    System</span></div>
+            <div class="dl-trusted-marquee">
+                <div class="dl-trusted-fade dl-trusted-fade-left"></div>
+                <div class="dl-trusted-fade dl-trusted-fade-right"></div>
+                <div class="dl-trusted-track">
+                    <div class="dl-trusted-group">
+                        <div class="dl-trusted-item"><span
+                                class="dl-trusted-dot"></span><span
+                                class="dl-trusted-name">Automatic LR
+                                Numbers</span></div>
+                        <div class="dl-trusted-item"><span
+                                class="dl-trusted-dot"></span><span
+                                class="dl-trusted-name">Company-Based
+                                LRs</span></div>
+                        <div class="dl-trusted-item"><span
+                                class="dl-trusted-dot"></span><span
+                                class="dl-trusted-name">Consignor &amp;
+                                Consignee</span></div>
+                        <div class="dl-trusted-item"><span
+                                class="dl-trusted-dot"></span><span
+                                class="dl-trusted-name">Vehicle &amp; Driver
+                                Selection</span></div>
+                        <div class="dl-trusted-item"><span
+                                class="dl-trusted-dot"></span><span
+                                class="dl-trusted-name">From
+                                &amp; To Locations</span></div>
+                        <div class="dl-trusted-item"><span
+                                class="dl-trusted-dot"></span><span
+                                class="dl-trusted-name">Multiple Goods
+                                Entries</span></div>
+                        <div class="dl-trusted-item"><span
+                                class="dl-trusted-dot"></span><span
+                                class="dl-trusted-name">Freight &amp; Other
+                                Charges</span></div>
+                        <div class="dl-trusted-item"><span
+                                class="dl-trusted-dot"></span><span
+                                class="dl-trusted-name">Draft, Issued &amp;
+                                Cancelled</span></div>
+                        <div class="dl-trusted-item"><span
+                                class="dl-trusted-dot"></span><span
+                                class="dl-trusted-name">Search, Filter &amp;
+                                Sort</span></div>
+                        <div class="dl-trusted-item"><span
+                                class="dl-trusted-dot"></span><span
+                                class="dl-trusted-name">PDF
+                                Copies</span></div>
+                        <div class="dl-trusted-item"><span
+                                class="dl-trusted-dot"></span><span
+                                class="dl-trusted-name">Deleted Record
+                                Recovery</span></div>
+                        <div class="dl-trusted-item"><span
+                                class="dl-trusted-dot"></span><span
+                                class="dl-trusted-name">Role-Based
+                                Access</span></div>
+                    </div>
+                    <div class="dl-trusted-group" aria-hidden="true">
+                        <div class="dl-trusted-item"><span
+                                class="dl-trusted-dot"></span><span
+                                class="dl-trusted-name">Automatic LR
+                                Numbers</span></div>
+                        <div class="dl-trusted-item"><span
+                                class="dl-trusted-dot"></span><span
+                                class="dl-trusted-name">Company-Based
+                                LRs</span></div>
+                        <div class="dl-trusted-item"><span
+                                class="dl-trusted-dot"></span><span
+                                class="dl-trusted-name">Consignor &amp;
+                                Consignee</span></div>
+                        <div class="dl-trusted-item"><span
+                                class="dl-trusted-dot"></span><span
+                                class="dl-trusted-name">Vehicle &amp; Driver
+                                Selection</span></div>
+                        <div class="dl-trusted-item"><span
+                                class="dl-trusted-dot"></span><span
+                                class="dl-trusted-name">From
+                                &amp; To Locations</span></div>
+                        <div class="dl-trusted-item"><span
+                                class="dl-trusted-dot"></span><span
+                                class="dl-trusted-name">Multiple Goods
+                                Entries</span></div>
+                        <div class="dl-trusted-item"><span
+                                class="dl-trusted-dot"></span><span
+                                class="dl-trusted-name">Freight &amp; Other
+                                Charges</span></div>
+                        <div class="dl-trusted-item"><span
+                                class="dl-trusted-dot"></span><span
+                                class="dl-trusted-name">Draft, Issued &amp;
+                                Cancelled</span></div>
+                        <div class="dl-trusted-item"><span
+                                class="dl-trusted-dot"></span><span
+                                class="dl-trusted-name">Search, Filter &amp;
+                                Sort</span></div>
+                        <div class="dl-trusted-item"><span
+                                class="dl-trusted-dot"></span><span
+                                class="dl-trusted-name">PDF
+                                Copies</span></div>
+                        <div class="dl-trusted-item"><span
+                                class="dl-trusted-dot"></span><span
+                                class="dl-trusted-name">Deleted Record
+                                Recovery</span></div>
+                        <div class="dl-trusted-item"><span
+                                class="dl-trusted-dot"></span><span
+                                class="dl-trusted-name">Role-Based
+                                Access</span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="demo" class="dl-demo-section">
+            <div class="dl-demo-glow"></div>
+            <div class="dl-container">
+                <div class="heading-wrapper">
+                    <span class="heading-tag">Interactive Video
+                        Demonstration</span>
+                    <h2 class="heading-title">Watch How <span>Lorry Receipt
+                            Management</span> Works</h2>
+                    <p>Watch a short demonstration showing how to create an LR,
+                        select parties and a vehicle, add goods and
+                        charges, save the receipt and download a PDF copy.</p>
+
+                </div>
+                <div class="dl-demo-grid">
+                    <div class="dl-demo-video-column">
+                        <div class="dl-video-card">
+                            <div class="dl-video-toolbar">
+                                <div class="dl-video-toolbar-left">
+                                    <span
+                                        class="dl-window-dot dl-dot-red"></span><span
+                                        class="dl-window-dot dl-dot-yellow"></span><span
+                                        class="dl-window-dot dl-dot-green"></span>
+                                    <span class="dl-video-filename">Lorry
+                                        Receipt Management Module Demo</span>
+                                </div>
+                            </div>
+                            <div class="dl-video-preview">
+                                <img src="Assets/images/dashboard.png"
+                                    alt="Lorry Receipt Management Module demonstration video preview"
+                                    class="dl-video-thumbnail">
+                                <div class="dl-video-overlay"></div>
+                                <button type="button" class="dl-video-play"
+                                    aria-label="Play demonstration video"><i
+                                        class="ri-play-fill"></i><span
+                                        class="dl-video-ping"></span></button>
+                                <div class="dl-video-meta">
+                                    <div class="dl-video-meta-left">
+                                        <span
+                                            class="dl-video-current-chapter">[Place
+                                            Lorry Receipt Demo Video
+                                            Here]</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="dl-video-footer">
+                                <div class="dl-video-footer-left">
+                                    <button type="button"
+                                        class="dl-watch-button"><i
+                                            class="ri-play-circle-line"></i><span>Watch
+                                            Full Walkthrough</span></button>
+
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="simulator" class="dl-simulator-section">
-        <div class="dl-container">
-            <div class="dl-simulator-header">
+        <section id="simulator" class="dl-simulator-section">
+            <div class="dl-container">
+                <div class="dl-simulator-header">
+                    <div class="heading-wrapper heading-wrap-left">
+                        <span class="heading-tag">Practical Example</span>
+                        <h2 class="heading-title">Practical Example:
+                            <span>Creating an LR</span></h2>
+
+                    </div>
+                </div>
+                <div class="dl-calculator-panel">
+                    <div class="dl-bill-master">
+                        <div class="dl-bill-master-header">
+                            <div class="dl-bill-heading"><span>Creating an LR:
+                                    Surat to Ahmedabad</span></div>
+                        </div>
+                    </div>
+                    <div class="dl-calculator-footer">
+                        <div class="dl-documentation-note"><i
+                                class="ri-information-line"></i><span>A
+                                transport company
+                                needs to deliver fabric rolls from Surat to
+                                Ahmedabad. On the New Lorry Receipt page, the
+                                user fills the following fields. The LR number
+                                is generated automatically after saving,
+                                based on the selected firm’s numbering
+                                settings.</span></div>
+                    </div>
+                    <div class="dl-table-wrapper">
+                        <table class="dl-vehicle-table">
+                            <thead>
+                                <tr>
+                                    <th>Field</th>
+                                    <th>Example</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>LR Number</td>
+                                    <td>Auto-generated on save (e.g.,
+                                        LR/2026-27/0004)</td>
+                                </tr>
+                                <tr>
+                                    <td>Firm (Own Entity)</td>
+                                    <td>H AND H LOGISTICS</td>
+                                </tr>
+                                <tr>
+                                    <td>LR Date</td>
+                                    <td>20-10-2026</td>
+                                </tr>
+                                <tr>
+                                    <td>Status</td>
+                                    <td>Issued</td>
+                                </tr>
+                                <tr>
+                                    <td>Service Tax Payable By</td>
+                                    <td>Consignor (example selection)</td>
+                                </tr>
+                                <tr>
+                                    <td>Consignor</td>
+                                    <td>ABC Textiles</td>
+                                </tr>
+                                <tr>
+                                    <td>Consignee</td>
+                                    <td>XYZ Traders</td>
+                                </tr>
+                                <tr>
+                                    <td>Vehicle</td>
+                                    <td>GJ 05 AB 1234</td>
+                                </tr>
+                                <tr>
+                                    <td>Driver</td>
+                                    <td>Ramesh Patel (example)</td>
+                                </tr>
+                                <tr>
+                                    <td>Vendor Code</td>
+                                    <td>VEN-001 (if applicable)</td>
+                                </tr>
+                                <tr>
+                                    <td>From</td>
+                                    <td>Surat</td>
+                                </tr>
+                                <tr>
+                                    <td>To</td>
+                                    <td>Ahmedabad</td>
+                                </tr>
+                                <tr>
+                                    <td>Goods / Particulars</td>
+                                    <td>Fabric rolls</td>
+                                </tr>
+                                <tr>
+                                    <td>Quantity</td>
+                                    <td>100 packages</td>
+                                </tr>
+                                <tr>
+                                    <td>Weight</td>
+                                    <td>2,500 kg</td>
+                                </tr>
+                                <tr>
+                                    <td>Remarks</td>
+                                    <td>Deliver packages carefully; verify
+                                        quantity on receipt.</td>
+                                </tr>
+                                <tr>
+                                    <td>Sample Freight Charges</td>
+                                    <td>₹12,000 (if configured /
+                                        applicable)</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="dl-calculator-footer">
+                        <div class="dl-documentation-note"><i
+                                class="ri-information-line"></i><span>The user
+                                chooses the
+                                firm and date, selects the sender and receiver,
+                                links the vehicle and driver, enters the
+                                route and goods details, chooses the applicable
+                                tax responsibility, adds remarks, and clicks
+                                Create LR. The system assigns the LR number when
+                                saved. The saved LR can then be opened and
+                                downloaded as a PDF copy.</span></div>
+                    </div>
+                    <div class="dl-calculator-footer">
+                        <div class="dl-documentation-note"><i
+                                class="ri-information-line"></i><span>The names,
+                                charges,
+                                choices, and reference values here are examples;
+                                the available tax options and charges
+                                depend on the application settings.</span></div>
+                    </div>
+
+                </div>
+                <br>
+
+                <div class="dl-calculator-footer">
+                    <div class="dl-supported-formats">Sample values are for
+                        demonstration only.</div>
+                </div>
+            </div>
+        </section>
+
+        <section id="features" class="dl-features-section">
+            <div class="container">
+                <div class="heading-wrapper">
+                    <span class="heading-tag">Complete solution</span>
+                    <h2 class="heading-title">Key Features of <span>Lorry
+                            Receipt Management</span></h2>
+                    <p>Everything you need to create, manage, find and download
+                        Lorry Receipts.</p>
+                    <div class="dl-features-filters"><button type="button"
+                            class="dl-filter-btn is-active"
+                            data-filter="all">All Features (14)</button><button
+                            type="button" class="dl-filter-btn"
+                            data-filter="create">LR Creation &amp;
+                            Parties</button><button type="button"
+                            class="dl-filter-btn" data-filter="goods">Goods,
+                            Charges &amp; Status</button><button
+                            type="button" class="dl-filter-btn"
+                            data-filter="manage">Records, PDFs &amp;
+                            Access</button>
+                    </div>
+                </div>
+                <div class="dl-features-grid">
+                    <article class="dl-feature-card" data-category="create">
+                        <div class="dl-feature-card-content">
+                            <div class="dl-feature-icon"><i
+                                    class="ri-hashtag"></i></div>
+                            <div class="dl-feature-card-heading">
+                                <h3>Automatic LR Number Generation</h3>
+                            </div>
+                            <p>Each LR receives a unique number based on company
+                                numbering settings, helping avoid duplicate
+                                references.</p>
+                        </div>
+                    </article>
+                    <article class="dl-feature-card" data-category="create">
+                        <div class="dl-feature-card-content">
+                            <div class="dl-feature-icon"><i
+                                    class="ri-building-line"></i></div>
+                            <div class="dl-feature-card-heading">
+                                <h3>Company-Based Lorry Receipts</h3>
+                            </div>
+                            <p>Select the company issuing the LR. The PDF uses
+                                configured company letterhead information.
+                            </p>
+                        </div>
+                    </article>
+                    <article class="dl-feature-card" data-category="create">
+                        <div class="dl-feature-card-content">
+                            <div class="dl-feature-icon"><i
+                                    class="ri-user-shared-line"></i></div>
+                            <div class="dl-feature-card-heading">
+                                <h3>Consignor and Consignee Details</h3>
+                            </div>
+                            <p>Keep sender and receiver information attached to
+                                each shipment, with an option to quickly add
+                                a new party.</p>
+                        </div>
+                    </article>
+                    <article class="dl-feature-card" data-category="create">
+                        <div class="dl-feature-card-content">
+                            <div class="dl-feature-icon"><i
+                                    class="ri-truck-line"></i></div>
+                            <div class="dl-feature-card-heading">
+                                <h3>Vehicle and Driver Selection</h3>
+                            </div>
+                            <p>Link available vehicle and driver records to the
+                                transport receipt.</p>
+                        </div>
+                    </article>
+                    <article class="dl-feature-card" data-category="create">
+                        <div class="dl-feature-card-content">
+                            <div class="dl-feature-icon"><i
+                                    class="ri-map-pin-2-line"></i></div>
+                            <div class="dl-feature-card-heading">
+                                <h3>From and To Locations</h3>
+                            </div>
+                            <p>Record where the goods are collected and their
+                                intended destination.</p>
+                        </div>
+                    </article>
+                    <article class="dl-feature-card" data-category="goods">
+                        <div class="dl-feature-card-content">
+                            <div class="dl-feature-icon"><i
+                                    class="ri-stack-line"></i></div>
+                            <div class="dl-feature-card-heading">
+                                <h3>Multiple Goods Entries</h3>
+                            </div>
+                            <p>Include several goods lines on one LR with
+                                descriptions, quantities and weights.</p>
+                        </div>
+                    </article>
+                    <article class="dl-feature-card" data-category="goods">
+                        <div class="dl-feature-card-content">
+                            <div class="dl-feature-icon"><i
+                                    class="ri-money-rupee-circle-line"></i></div>
+                            <div class="dl-feature-card-heading">
+                                <h3>Freight and Other Charges</h3>
+                            </div>
+                            <p>Manage charge types and amounts, including
+                                configured contract charges, adjustments and
+                                deductions.</p>
+                        </div>
+                    </article>
+                    <article class="dl-feature-card" data-category="goods">
+                        <div class="dl-feature-card-content">
+                            <div class="dl-feature-icon"><i
+                                    class="ri-checkbox-circle-line"></i></div>
+                            <div class="dl-feature-card-heading">
+                                <h3>Receipt Status Management</h3>
+                            </div>
+                            <p>Manage receipts with Draft, Issued and Cancelled
+                                statuses.</p>
+                        </div>
+                    </article>
+                    <article class="dl-feature-card" data-category="manage">
+                        <div class="dl-feature-card-content">
+                            <div class="dl-feature-icon"><i
+                                    class="ri-edit-line"></i></div>
+                            <div class="dl-feature-card-heading">
+                                <h3>View and Edit Records</h3>
+                            </div>
+                            <p>Open and update saved LRs when changes are
+                                needed, subject to user permissions.</p>
+                        </div>
+                    </article>
+                    <article class="dl-feature-card" data-category="manage">
+                        <div class="dl-feature-card-content">
+                            <div class="dl-feature-icon"><i
+                                    class="ri-filter-3-line"></i></div>
+                            <div class="dl-feature-card-heading">
+                                <h3>Search, Filter and Sort</h3>
+                            </div>
+                            <p>Search by LR number, filter by status or LR date
+                                range, and sort the listing to find records
+                                faster.</p>
+                        </div>
+                    </article>
+                    <article class="dl-feature-card" data-category="manage">
+                        <div class="dl-feature-card-content">
+                            <div class="dl-feature-icon"><i
+                                    class="ri-file-pdf-2-line"></i></div>
+                            <div class="dl-feature-card-heading">
+                                <h3>PDF Copies for Different Uses</h3>
+                            </div>
+                            <p>Download Consignee Copy, Consignor Copy, Gate
+                                Copy and Transporter Copy versions of the LR.
+                            </p>
+                        </div>
+                    </article>
+                    <article class="dl-feature-card" data-category="manage">
+                        <div class="dl-feature-card-content">
+                            <div class="dl-feature-icon"><i
+                                    class="ri-delete-bin-line"></i></div>
+                            <div class="dl-feature-card-heading">
+                                <h3>Deleted Record Recovery</h3>
+                            </div>
+                            <p>Authorized users can access deleted receipts and
+                                restore them when needed.</p>
+                        </div>
+                    </article>
+                    <article class="dl-feature-card" data-category="manage">
+                        <div class="dl-feature-card-content">
+                            <div class="dl-feature-icon"><i
+                                    class="ri-shield-user-line"></i></div>
+                            <div class="dl-feature-card-heading">
+                                <h3>Role-Based Access</h3>
+                            </div>
+                            <p>View, create, edit, delete and PDF access are
+                                checked against the application’s permissions.
+                            </p>
+                        </div>
+                    </article>
+                    <article class="dl-feature-card" data-category="manage">
+                        <div class="dl-feature-card-content">
+                            <div class="dl-feature-icon"><i
+                                    class="ri-printer-line"></i></div>
+                            <div class="dl-feature-card-heading">
+                                <h3>Company Print Settings</h3>
+                            </div>
+                            <p>LR document presentation follows
+                                company-configured branding, letterhead and
+                                numbering
+                                information.</p>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="dl-workflow-section">
+            <div class="container">
                 <div class="heading-wrapper heading-wrap-left">
-                    <span class="heading-tag">Practical Example</span>
-                    <h2 class="heading-title">Practical Example: <span>Creating an LR</span></h2>
+                    <span class="heading-tag">Step-by-Step Workflow</span>
+                    <h2 class="heading-title">How Does the <span>Module</span>
+                        Work?</h2>
+                    <p>The LR process is designed to be straightforward, even
+                        for team members who are new to transport
+                        software.</p>
 
-
                 </div>
-            </div>
-            <div class="dl-calculator-panel">
-                <div class="dl-bill-master">
-                    <div class="dl-bill-master-header">
-                        <div class="dl-bill-heading"><span>Creating an LR: Surat to Ahmedabad</span></div>
-                    </div>
-                </div>
-                <div class="dl-calculator-footer">
-                    <div class="dl-documentation-note"><i class="ri-information-line"></i><span>A transport company
-                            needs to deliver fabric rolls from Surat to Ahmedabad. On the New Lorry Receipt page, the
-                            user fills the following fields. The LR number is generated automatically after saving,
-                            based on the selected firm’s numbering settings.</span></div>
-                </div>
-                <div class="dl-table-wrapper">
-                    <table class="dl-vehicle-table">
-                        <thead>
-                            <tr>
-                                <th>Field</th>
-                                <th>Example</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>LR Number</td>
-                                <td>Auto-generated on save (e.g., LR/2026-27/0004)</td>
-                            </tr>
-                            <tr>
-                                <td>Firm (Own Entity)</td>
-                                <td>H AND H LOGISTICS</td>
-                            </tr>
-                            <tr>
-                                <td>LR Date</td>
-                                <td>20-10-2026</td>
-                            </tr>
-                            <tr>
-                                <td>Status</td>
-                                <td>Issued</td>
-                            </tr>
-                            <tr>
-                                <td>Service Tax Payable By</td>
-                                <td>Consignor (example selection)</td>
-                            </tr>
-                            <tr>
-                                <td>Consignor</td>
-                                <td>ABC Textiles</td>
-                            </tr>
-                            <tr>
-                                <td>Consignee</td>
-                                <td>XYZ Traders</td>
-                            </tr>
-                            <tr>
-                                <td>Vehicle</td>
-                                <td>GJ 05 AB 1234</td>
-                            </tr>
-                            <tr>
-                                <td>Driver</td>
-                                <td>Ramesh Patel (example)</td>
-                            </tr>
-                            <tr>
-                                <td>Vendor Code</td>
-                                <td>VEN-001 (if applicable)</td>
-                            </tr>
-                            <tr>
-                                <td>From</td>
-                                <td>Surat</td>
-                            </tr>
-                            <tr>
-                                <td>To</td>
-                                <td>Ahmedabad</td>
-                            </tr>
-                            <tr>
-                                <td>Goods / Particulars</td>
-                                <td>Fabric rolls</td>
-                            </tr>
-                            <tr>
-                                <td>Quantity</td>
-                                <td>100 packages</td>
-                            </tr>
-                            <tr>
-                                <td>Weight</td>
-                                <td>2,500 kg</td>
-                            </tr>
-                            <tr>
-                                <td>Remarks</td>
-                                <td>Deliver packages carefully; verify quantity on receipt.</td>
-                            </tr>
-                            <tr>
-                                <td>Sample Freight Charges</td>
-                                <td>₹12,000 (if configured / applicable)</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-                <div class="dl-calculator-footer">
-                    <div class="dl-documentation-note"><i class="ri-information-line"></i><span>The user chooses the
-                            firm and date, selects the sender and receiver, links the vehicle and driver, enters the
-                            route and goods details, chooses the applicable tax responsibility, adds remarks, and clicks
-                            Create LR. The system assigns the LR number when saved. The saved LR can then be opened and
-                            downloaded as a PDF copy.</span></div>
-                </div>
-                <div class="dl-calculator-footer">
-                    <div class="dl-documentation-note"><i class="ri-information-line"></i><span>The names, charges,
-                            choices, and reference values here are examples; the available tax options and charges
-                            depend on the application settings.</span></div>
-                </div>
-
-            </div>
-            <br>
-
-            <div class="dl-calculator-footer">
-                <div class="dl-supported-formats">Sample values are for demonstration only.</div>
-            </div>
-        </div>
-    </section>
-
-    <section id="features" class="dl-features-section">
-        <div class="container">
-            <div class="heading-wrapper">
-                <span class="heading-tag">Complete solution</span>
-                <h2 class="heading-title">Key Features of <span>Lorry Receipt Management</span></h2>
-                <p>Everything you need to create, manage, find and download Lorry Receipts.</p>
-                <div class="dl-features-filters"><button type="button" class="dl-filter-btn is-active"
-                        data-filter="all">All Features (14)</button><button type="button" class="dl-filter-btn"
-                        data-filter="create">LR Creation &amp; Parties</button><button type="button"
-                        class="dl-filter-btn" data-filter="goods">Goods, Charges &amp; Status</button><button
-                        type="button" class="dl-filter-btn" data-filter="manage">Records, PDFs &amp; Access</button>
-                </div>
-            </div>
-            <div class="dl-features-grid">
-                <article class="dl-feature-card" data-category="create">
-                    <div class="dl-feature-card-content">
-                        <div class="dl-feature-icon"><i class="ri-hashtag"></i></div>
-                        <div class="dl-feature-card-heading">
-                            <h3>Automatic LR Number Generation</h3>
+                <div class="dl-workflow-grid">
+                    <article class="dl-workflow-card">
+                        <div class="dl-workflow-card-content">
+                            <div class="dl-workflow-card-top"><span
+                                    class="dl-workflow-number">01</span>
+                                <div class="dl-workflow-icon"><i
+                                        class="ri-file-add-line"></i></div>
+                            </div>
+                            <h3 class="dl-workflow-card-title">Create a New
+                                Lorry Receipt</h3>
+                            <p class="dl-workflow-card-description">Open the
+                                Lorry Receipt section and choose to create a
+                                new LR. Select the company, enter the LR date
+                                and choose the status (Draft, Issued or
+                                Cancelled). The system generates the LR number
+                                using the company’s configured numbering
+                                format.</p>
                         </div>
-                        <p>Each LR receives a unique number based on company numbering settings, helping avoid duplicate
-                            references.</p>
-                    </div>
-                </article>
-                <article class="dl-feature-card" data-category="create">
-                    <div class="dl-feature-card-content">
-                        <div class="dl-feature-icon"><i class="ri-building-line"></i></div>
-                        <div class="dl-feature-card-heading">
-                            <h3>Company-Based Lorry Receipts</h3>
+
+                    </article>
+                    <article class="dl-workflow-card">
+                        <div class="dl-workflow-card-content">
+                            <div class="dl-workflow-card-top"><span
+                                    class="dl-workflow-number">02</span>
+                                <div class="dl-workflow-icon"><i
+                                        class="ri-user-shared-line"></i></div>
+                            </div>
+                            <h3 class="dl-workflow-card-title">Select Consignor
+                                and Consignee</h3>
+                            <p class="dl-workflow-card-description">Choose the
+                                Consignor (the person or business sending the
+                                goods) and the Consignee (the person or business
+                                receiving them). If a party does not
+                                already exist, use the option to add a new
+                                consignor or consignee from the form.</p>
                         </div>
-                        <p>Select the company issuing the LR. The PDF uses configured company letterhead information.
+
+                    </article>
+                    <article class="dl-workflow-card">
+                        <div class="dl-workflow-card-content">
+                            <div class="dl-workflow-card-top"><span
+                                    class="dl-workflow-number">03</span>
+                                <div class="dl-workflow-icon"><i
+                                        class="ri-truck-line"></i></div>
+                            </div>
+                            <h3 class="dl-workflow-card-title">Add Vehicle and
+                                Route Details</h3>
+                            <p class="dl-workflow-card-description">Select the
+                                vehicle and driver where applicable. Enter
+                                the origin and destination, plus optional
+                                reference details such as vendor code. This
+                                connects the shipment with its transport
+                                information.</p>
+                        </div>
+
+                    </article>
+                    <article class="dl-workflow-card">
+                        <div class="dl-workflow-card-content">
+                            <div class="dl-workflow-card-top"><span
+                                    class="dl-workflow-number">04</span>
+                                <div class="dl-workflow-icon"><i
+                                        class="ri-stack-line"></i></div>
+                            </div>
+                            <h3 class="dl-workflow-card-title">Enter Goods and
+                                Quantity</h3>
+                            <p class="dl-workflow-card-description">Add one or
+                                more goods rows. For each row, enter the item
+                                description (particulars), quantity and weight.
+                                Use Add Item to include more goods under the
+                                same receipt.</p>
+                        </div>
+
+                    </article>
+                    <article class="dl-workflow-card">
+                        <div class="dl-workflow-card-content">
+                            <div class="dl-workflow-card-top"><span
+                                    class="dl-workflow-number">05</span>
+                                <div class="dl-workflow-icon"><i
+                                        class="ri-money-rupee-circle-line"></i></div>
+                            </div>
+                            <h3 class="dl-workflow-card-title">Review Freight
+                                Charges</h3>
+                            <p class="dl-workflow-card-description">Review the
+                                applicable charge rows. Where consignor
+                                contract charges are configured, the form can
+                                load them automatically. Amounts can be
+                                adjusted for special cases, and deductions can
+                                be included where relevant. Check the
+                                calculated charge total.</p>
+                        </div>
+
+                    </article>
+                    <article class="dl-workflow-card">
+                        <div class="dl-workflow-card-content">
+                            <div class="dl-workflow-card-top"><span
+                                    class="dl-workflow-number">06</span>
+                                <div class="dl-workflow-icon"><i
+                                        class="ri-file-pdf-2-line"></i></div>
+                            </div>
+                            <h3 class="dl-workflow-card-title">Save and Download
+                                the LR</h3>
+                            <p class="dl-workflow-card-description">Add remarks
+                                if needed and save the LR. Open the saved
+                                record to review it or download an A4 PDF copy
+                                for the consignee, consignor, gate or
+                                transporter.</p>
+                        </div>
+
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <section id="benefits" class="results-section">
+            <div class="container">
+                <div class="heading-wrapper">
+                    <span class="heading-tag">Proven Advantages</span>
+                    <h2 class="heading-title heading-light">Benefits for
+                        <span>Transport Businesses</span></h2>
+                    <p>Digital LRs keep your shipment paperwork organized,
+                        searchable and easy to share.</p>
+
+                </div>
+                <div class="results-grid">
+                    <div class="result-card">
+                        <div class="result-icon"><i
+                                class="ri-time-line"></i></div>
+                        <h3>Faster Documentation</h3>
+                        <p>Prepare transport receipts digitally instead of
+                            repeatedly writing the same information by hand.
                         </p>
                     </div>
-                </article>
-                <article class="dl-feature-card" data-category="create">
-                    <div class="dl-feature-card-content">
-                        <div class="dl-feature-icon"><i class="ri-user-shared-line"></i></div>
-                        <div class="dl-feature-card-heading">
-                            <h3>Consignor and Consignee Details</h3>
-                        </div>
-                        <p>Keep sender and receiver information attached to each shipment, with an option to quickly add
-                            a new party.</p>
+                    <div class="result-card">
+                        <div class="result-icon"><i
+                                class="ri-folder-shield-2-line"></i></div>
+                        <h3>Clear Shipment Records</h3>
+                        <p>Keep sender, receiver, goods, vehicle and route
+                            details together.</p>
                     </div>
-                </article>
-                <article class="dl-feature-card" data-category="create">
-                    <div class="dl-feature-card-content">
-                        <div class="dl-feature-icon"><i class="ri-truck-line"></i></div>
-                        <div class="dl-feature-card-heading">
-                            <h3>Vehicle and Driver Selection</h3>
-                        </div>
-                        <p>Link available vehicle and driver records to the transport receipt.</p>
+                    <div class="result-card">
+                        <div class="result-icon"><i
+                                class="ri-money-rupee-circle-line"></i></div>
+                        <h3>Flexible Freight Charges</h3>
+                        <p>Review configured charges and make permitted
+                            adjustments when required.</p>
                     </div>
-                </article>
-                <article class="dl-feature-card" data-category="create">
-                    <div class="dl-feature-card-content">
-                        <div class="dl-feature-icon"><i class="ri-map-pin-2-line"></i></div>
-                        <div class="dl-feature-card-heading">
-                            <h3>From and To Locations</h3>
-                        </div>
-                        <p>Record where the goods are collected and their intended destination.</p>
+                    <div class="result-card">
+                        <div class="result-icon"><i
+                                class="ri-search-eye-line"></i></div>
+                        <h3>Easy Record Retrieval</h3>
+                        <p>Find past LRs using number, status and date
+                            filters.</p>
                     </div>
-                </article>
-                <article class="dl-feature-card" data-category="goods">
-                    <div class="dl-feature-card-content">
-                        <div class="dl-feature-icon"><i class="ri-stack-line"></i></div>
-                        <div class="dl-feature-card-heading">
-                            <h3>Multiple Goods Entries</h3>
-                        </div>
-                        <p>Include several goods lines on one LR with descriptions, quantities and weights.</p>
+                    <div class="result-card">
+                        <div class="result-icon"><i
+                                class="ri-file-pdf-2-line"></i></div>
+                        <h3>Professional PDF Documents</h3>
+                        <p>Download formatted LR copies for different transport
+                            purposes.</p>
                     </div>
-                </article>
-                <article class="dl-feature-card" data-category="goods">
-                    <div class="dl-feature-card-content">
-                        <div class="dl-feature-icon"><i class="ri-money-rupee-circle-line"></i></div>
-                        <div class="dl-feature-card-heading">
-                            <h3>Freight and Other Charges</h3>
-                        </div>
-                        <p>Manage charge types and amounts, including configured contract charges, adjustments and
-                            deductions.</p>
+                    <div class="result-card">
+                        <div class="result-icon"><i
+                                class="ri-lock-unlock-line"></i></div>
+                        <h3>Better Access Control</h3>
+                        <p>Allow only authorized users to create, edit or delete
+                            LRs.</p>
                     </div>
-                </article>
-                <article class="dl-feature-card" data-category="goods">
-                    <div class="dl-feature-card-content">
-                        <div class="dl-feature-icon"><i class="ri-checkbox-circle-line"></i></div>
-                        <div class="dl-feature-card-heading">
-                            <h3>Receipt Status Management</h3>
-                        </div>
-                        <p>Manage receipts with Draft, Issued and Cancelled statuses.</p>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="transport-section">
+            <div class="container">
+                <div class="transport-container">
+                    <div class="heading-wrapper heading-wrap-left">
+                        <span class="heading-tag">Introduction</span>
+                        <h2 class="heading-title">What Is a <span>Lorry
+                                Receipt</span>?</h2>
+                        <p>A Lorry Receipt (LR) is an important transport
+                            document that records goods being transported, who
+                            sends them, who receives them and which vehicle is
+                            used. Managing LRs manually can lead to
+                            missing details, repeated paperwork and difficulty
+                            finding older receipts. The Lorry Receipt
+                            Management Module lets transport teams prepare LRs
+                            digitally, organize shipment information,
+                            manage freight charges and download formatted PDF
+                            copies.</p>
+
                     </div>
-                </article>
-                <article class="dl-feature-card" data-category="manage">
-                    <div class="dl-feature-card-content">
-                        <div class="dl-feature-icon"><i class="ri-edit-line"></i></div>
-                        <div class="dl-feature-card-heading">
-                            <h3>View and Edit Records</h3>
+                    <div class="transport-image-wrapper">
+                        <img src="./Assets/images/tms-img.png"
+                            alt="Transportation Dashboard"
+                            class="transport-image">
+                        <div class="transport-shape"></div>
+                        <div class="transport-card">
+                            <ul class="transport-list">
+                                <li><i
+                                        class="ri-checkbox-circle-line"></i><span>Prepare
+                                        LRs digitally</span></li>
+                                <li><i
+                                        class="ri-checkbox-circle-line"></i><span>Organize
+                                        shipment information</span></li>
+                                <li><i
+                                        class="ri-checkbox-circle-line"></i><span>Manage
+                                        freight charges</span></li>
+                                <li><i
+                                        class="ri-checkbox-circle-line"></i><span>Download
+                                        formatted PDF copies</span></li>
+                                <li><i
+                                        class="ri-checkbox-circle-line"></i><span>Generate
+                                        and download digital Lorry Receipts
+                                        (LRs)</span></li>
+                            </ul>
                         </div>
-                        <p>Open and update saved LRs when changes are needed, subject to user permissions.</p>
                     </div>
-                </article>
-                <article class="dl-feature-card" data-category="manage">
-                    <div class="dl-feature-card-content">
-                        <div class="dl-feature-icon"><i class="ri-filter-3-line"></i></div>
-                        <div class="dl-feature-card-heading">
-                            <h3>Search, Filter and Sort</h3>
+                </div>
+            </div>
+        </section>
+
+        <section id="faq" class="dl-faq-section">
+            <div class="container">
+                <div class="heading-wrapper">
+                    <span class="heading-tag">Got Questions?</span>
+                    <h2 class="heading-title">Frequently Asked
+                        <span>Questions</span></h2>
+                    <p>Common questions about creating, finding and downloading
+                        Lorry Receipts.</p>
+                    <div class="dl-faq-filters"><button
+                            class="dl-faq-filter active"
+                            type="button">All</button><button
+                            class="dl-faq-filter"
+                            type="button">Goods</button><button
+                            class="dl-faq-filter" type="button">LR
+                            Number</button><button class="dl-faq-filter"
+                            type="button">Parties</button><button
+                            class="dl-faq-filter"
+                            type="button">Editing</button><button
+                            class="dl-faq-filter"
+                            type="button">PDF Copies</button><button
+                            class="dl-faq-filter"
+                            type="button">Search</button><button
+                            class="dl-faq-filter"
+                            type="button">Restore</button></div>
+                </div>
+                <div class="dl-faq-list">
+                    <div class="dl-faq-item active" data-category="goods">
+                        <button class="dl-faq-question" type="button"
+                            aria-expanded="true"
+                            aria-controls="dl-faq-answer-1">
+                            <span class="dl-faq-question-content"><span
+                                    class="dl-faq-number">Q1</span><span
+                                    class="dl-faq-question-text">Can I add
+                                    several goods items to one LR?</span></span>
+                            <span class="dl-faq-arrow"><i
+                                    class="ri-arrow-down-s-line"></i></span>
+                        </button>
+                        <div class="dl-faq-answer" id="dl-faq-answer-1">
+                            <div class="dl-faq-answer-content">
+                                <p>Yes. Use Add Item to record multiple goods
+                                    lines, each with its own quantity and
+                                    weight.
+                                </p>
+                                <div class="dl-faq-topic"><span>Topic:
+                                        Goods</span></div>
+                            </div>
                         </div>
-                        <p>Search by LR number, filter by status or LR date range, and sort the listing to find records
-                            faster.</p>
                     </div>
-                </article>
-                <article class="dl-feature-card" data-category="manage">
-                    <div class="dl-feature-card-content">
-                        <div class="dl-feature-icon"><i class="ri-file-pdf-2-line"></i></div>
-                        <div class="dl-feature-card-heading">
-                            <h3>PDF Copies for Different Uses</h3>
+                    <div class="dl-faq-item" data-category="lr number">
+                        <button class="dl-faq-question" type="button"
+                            aria-expanded="false"
+                            aria-controls="dl-faq-answer-2">
+                            <span class="dl-faq-question-content"><span
+                                    class="dl-faq-number">Q2</span><span
+                                    class="dl-faq-question-text">Will the LR
+                                    number be generated
+                                    automatically?</span></span>
+                            <span class="dl-faq-arrow"><i
+                                    class="ri-arrow-down-s-line"></i></span>
+                        </button>
+                        <div class="dl-faq-answer" id="dl-faq-answer-2">
+                            <div class="dl-faq-answer-content">
+                                <p>Yes. The next available number follows the
+                                    selected company’s LR numbering
+                                    configuration.
+                                </p>
+                                <div class="dl-faq-topic"><span>Topic: LR
+                                        Number</span></div>
+                            </div>
                         </div>
-                        <p>Download Consignee Copy, Consignor Copy, Gate Copy and Transporter Copy versions of the LR.
+                    </div>
+                    <div class="dl-faq-item" data-category="parties">
+                        <button class="dl-faq-question" type="button"
+                            aria-expanded="false"
+                            aria-controls="dl-faq-answer-3">
+                            <span class="dl-faq-question-content"><span
+                                    class="dl-faq-number">Q3</span><span
+                                    class="dl-faq-question-text">Can I add a new
+                                    consignor or consignee while creating an
+                                    LR?</span></span>
+                            <span class="dl-faq-arrow"><i
+                                    class="ri-arrow-down-s-line"></i></span>
+                        </button>
+                        <div class="dl-faq-answer" id="dl-faq-answer-3">
+                            <div class="dl-faq-answer-content">
+                                <p>Yes. The LR form includes a quick-add option
+                                    for parties.</p>
+                                <div class="dl-faq-topic"><span>Topic:
+                                        Parties</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dl-faq-item" data-category="editing">
+                        <button class="dl-faq-question" type="button"
+                            aria-expanded="false"
+                            aria-controls="dl-faq-answer-4">
+                            <span class="dl-faq-question-content"><span
+                                    class="dl-faq-number">Q4</span><span
+                                    class="dl-faq-question-text">Can I change an
+                                    LR after saving?</span></span>
+                            <span class="dl-faq-arrow"><i
+                                    class="ri-arrow-down-s-line"></i></span>
+                        </button>
+                        <div class="dl-faq-answer" id="dl-faq-answer-4">
+                            <div class="dl-faq-answer-content">
+                                <p>Yes, if your account has edit permission.</p>
+                                <div class="dl-faq-topic"><span>Topic:
+                                        Editing</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dl-faq-item" data-category="pdf copies">
+                        <button class="dl-faq-question" type="button"
+                            aria-expanded="false"
+                            aria-controls="dl-faq-answer-5">
+                            <span class="dl-faq-question-content"><span
+                                    class="dl-faq-number">Q5</span><span
+                                    class="dl-faq-question-text">Can I download
+                                    different LR copies?</span></span>
+                            <span class="dl-faq-arrow"><i
+                                    class="ri-arrow-down-s-line"></i></span>
+                        </button>
+                        <div class="dl-faq-answer" id="dl-faq-answer-5">
+                            <div class="dl-faq-answer-content">
+                                <p>Yes. The PDF options include consignee,
+                                    consignor, gate and transporter copies.</p>
+                                <div class="dl-faq-topic"><span>Topic: PDF
+                                        Copies</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dl-faq-item" data-category="search">
+                        <button class="dl-faq-question" type="button"
+                            aria-expanded="false"
+                            aria-controls="dl-faq-answer-6">
+                            <span class="dl-faq-question-content"><span
+                                    class="dl-faq-number">Q6</span><span
+                                    class="dl-faq-question-text">Can I find
+                                    older receipts quickly?</span></span>
+                            <span class="dl-faq-arrow"><i
+                                    class="ri-arrow-down-s-line"></i></span>
+                        </button>
+                        <div class="dl-faq-answer" id="dl-faq-answer-6">
+                            <div class="dl-faq-answer-content">
+                                <p>Yes. Search by LR number, status or date
+                                    range.</p>
+                                <div class="dl-faq-topic"><span>Topic:
+                                        Search</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dl-faq-item" data-category="restore">
+                        <button class="dl-faq-question" type="button"
+                            aria-expanded="false"
+                            aria-controls="dl-faq-answer-7">
+                            <span class="dl-faq-question-content"><span
+                                    class="dl-faq-number">Q7</span><span
+                                    class="dl-faq-question-text">Can a deleted
+                                    LR be restored?</span></span>
+                            <span class="dl-faq-arrow"><i
+                                    class="ri-arrow-down-s-line"></i></span>
+                        </button>
+                        <div class="dl-faq-answer" id="dl-faq-answer-7">
+                            <div class="dl-faq-answer-content">
+                                <p>Yes. Authorized users can restore
+                                    soft-deleted LRs.</p>
+                                <div class="dl-faq-topic"><span>Topic:
+                                        Restore</span></div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="dl-faq-cta">
+                    <div class="dl-faq-cta-content">
+                        <h3>Simplify Your Transport Documentation</h3>
+                        <p>The Lorry Receipt Management Module brings shipment
+                            information, freight charges, company details
+                            and downloadable receipts into one workflow. Create
+                            clear LR records, find previous documents
+                            easily and keep your transport paperwork
+                            organized.</p>
+                    </div>
+                    <button class="dl-faq-cta-button" type="button"
+                        onclick="document.getElementById('simulator').scrollIntoView({behavior:'smooth'})">See
+                        Practical
+                        Example</button>
+                </div>
+            </div>
+        </section>
+
+        <!--footer section start-->
+        <footer class="footer">
+            <!-- Newsletter -->
+            <div class="footer-newsletter">
+                <div class="container">
+                    <div class="newsletter-wrapper">
+                        <div class="newsletter-content">
+                            <h2>Stay ahead of the curve</h2>
+                            <p>
+                                Fleet management insights, product updates, and
+                                industry news.
+                            </p>
+                        </div>
+                        <form class="newsletter-form">
+                            <input type="email" placeholder="Enter your email"
+                                aria-label="Email address for newsletter">
+                            <button type="submit">
+                                Subscribe
+                                <i class="ri-arrow-right-line"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <!-- Footer Main -->
+            <div class="footer-main">
+                <div class="container">
+                    <div class="footer-grid">
+                        <!-- Left -->
+                        <div class="footer-about">
+                            <a href="#" class="footer-logo">
+                                <img
+                                    src="Assets/images/transportdesk-logo-dark.svg"
+                                    alt="TransportDesk" width="252" height="84">
+                            </a>
+                            <p>
+                                The intelligent transportation platform that
+                                puts fleet directors
+                                in complete control of their operations.
+                            </p>
+                            <div class="footer-social">
+                                <a href="#" aria-label="Facebook"><i
+                                        class="ri-facebook-fill"></i></a>
+                                <a href="#" aria-label="Instagram"><i
+                                        class="ri-instagram-line"></i></a>
+                                <a href="#" aria-label="Twitter"><i
+                                        class="ri-twitter-line"></i></a>
+                                <a href="#" aria-label="LinkedIn"><i
+                                        class="ri-linkedin-fill"></i></a>
+                            </div>
+                        </div>
+                        <!-- Product -->
+                        <div class="footer-links">
+                            <h3>Product</h3>
+                            <ul>
+                                <li>
+                                    <a href="features.html"
+                                        class="footer-link">Features</a>
+                                </li>
+                                <li>
+                                    <a href="modules.html"
+                                        class="footer-link">Modules</a>
+                                </li>
+                                <li>
+                                    <a href="solutions.html"
+                                        class="footer-link">Solutions</a>
+                                </li>
+                                <li>
+                                    <a href="reports.html"
+                                        class="footer-link">Reports</a>
+                                </li>
+                                <li>
+                                    <a href="contact.html"
+                                        class="footer-link">Contact</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- Resources -->
+                        <div class="footer-links">
+                            <h3>Resources</h3>
+                            <ul>
+                                <li><a href="documentation.html"
+                                        class="footer-link">Documentation</a></li>
+                                <li><a href="faq.html"
+                                        class="footer-link">FAQ</a></li>
+                                <li><a href="privacy-policy.html"
+                                        class="footer-link">Privacy
+                                        Policy</a></li>
+                            </ul>
+                        </div>
+                        <!-- Support -->
+                        <div class="footer-links">
+                            <h3>Support</h3>
+                            <ul>
+                                <li><a href="#" class="footer-link">Help
+                                        Center</a></li>
+                                <li><a href="#"
+                                        class="footer-link">Status</a></li>
+                                <li><a href="#"
+                                        class="footer-link">Security</a></li>
+                            </ul>
+                        </div>
+                        <!-- Contact -->
+                        <div class="footer-contact">
+                            <!-- India Office -->
+                            <div class="footer-office">
+                                <h4 class="footer-office-title">
+                                    <span class="footer-country-flag">
+                                        <svg xmlns="http://www.w3.org/2000/svg"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink"
+                                            width="800px" height="800px"
+                                            viewBox="0 0 36 36"
+                                            aria-hidden="true" role="img"
+                                            class="iconify iconify--twemoji"
+                                            preserveAspectRatio="xMidYMid meet"><path
+                                                fill="#138808"
+                                                d="M0 27a4 4 0 0 0 4 4h28a4 4 0 0 0 4-4v-4H0v4z"></path><path
+                                                fill="#EEE"
+                                                d="M0 13h36v10H0z"></path><path
+                                                fill="#F93"
+                                                d="M36 13V9a4 4 0 0 0-4-4H4a4 4 0 0 0-4 4v4h36z"></path><circle
+                                                fill="navy" cx="18" cy="18"
+                                                r="4"></circle><circle
+                                                fill="#EEE" cx="18" cy="18"
+                                                r="3"></circle><path
+                                                fill="#6666B3"
+                                                d="M18 15l.146 2.264l1.001-2.035l-.73 2.147l1.704-1.498l-1.497 1.705l2.147-.731l-2.035 1.002L21 18l-2.264.146l2.035 1.001l-2.147-.73l1.497 1.704l-1.704-1.497l.73 2.147l-1.001-2.035L18 21l-.146-2.264l-1.002 2.035l.731-2.147l-1.705 1.497l1.498-1.704l-2.147.73l2.035-1.001L15 18l2.264-.146l-2.035-1.002l2.147.731l-1.498-1.705l1.705 1.498l-.731-2.147l1.002 2.035z"></path><circle
+                                                fill="navy" cx="18" cy="18"
+                                                r="1"></circle></svg>
+                                    </span>
+                                    India Office
+                                </h4>
+
+                                <div class="contact-item">
+                                    <div class="icon">
+                                        <i class="ri-phone-fill"></i>
+                                    </div>
+                                    <div>
+                                        <span>Phone</span>
+                                        <a href="tel:+916355258003">
+                                            +91 6355 258 003
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="contact-item">
+                                    <div class="icon">
+                                        <i class="ri-map-pin-line"></i>
+                                    </div>
+                                    <div>
+                                        <span>Address</span>
+                                        <p>
+                                            The Galleria Business Hub, Adajan
+                                            Gam,
+                                            Pal Gam, Surat, Gujarat, India
+                                            394510
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="contact-item">
+                                    <div class="icon">
+                                        <i class="ri-mail-line"></i>
+                                    </div>
+                                    <div>
+                                        <span>Email</span>
+                                        <a href="mailto:jay@prismitsystems.com">
+                                            jay@prismitsystems.com
+                                        </a>
+                                    </div>
+                                </div></div>
+                            <!-- Subtle Divider -->
+
+                            <!-- USA Office -->
+                            <div class="footer-office">
+                                <h4 class="footer-office-title">
+                                    <span class="footer-country-flag"><svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink"
+                                            height="800px" width="800px"
+                                            version="1.1" id="Layer_1"
+                                            viewBox="0 0 496 496"
+                                            xml:space="preserve">
+                                            <path style="fill:#FFFFFF;"
+                                                d="M496,369.6c0,27.2-21.6,48.8-48,48.8H48c-26.4,0-48-21.6-48-48.8V126.4c0-27.2,21.6-43.8,48-43.8h400  c26.4,0,48,16.6,48,43.8V369.6z"></path>
+                                            <path style="fill:#CCE4E5;"
+                                                d="M448,77.6H48l400,340.8c26.4,0,48-21.6,48-48.8V126.4C496,99.2,474.4,77.6,448,77.6z"></path>
+                                            <path style="fill:#AED3D3;"
+                                                d="M448,77.6H48l448,137.6v-88.8C496,99.2,474.4,77.6,448,77.6z"></path>
+                                            <g>
+                                                <path style="fill:#B22234;"
+                                                    d="M4.9,391.2c7.5,15.4,22.7,26.2,40.5,27.1c0.9,0,1.7,0.1,2.6,0.1h400.3c0,0,3.5-0.3,4.6-0.7   c1.7-0.6,1.9-2,0.6-3.1l-0.4-0.4L426,391.1H4.9V391.2z"></path>
+                                                <polygon style="fill:#B22234;"
+                                                    points="120.9,131.2 0,131.2 0,157.2 151.4,157.2  "></polygon>
+                                                <polygon style="fill:#B22234;"
+                                                    points="181.9,183.2 0,183.2 0,209.2 212.5,209.2  "></polygon>
+                                                <polygon style="fill:#B22234;"
+                                                    points="242.8,235.2 0,235.2 0,261.6 273.2,261.6  "></polygon>
+                                                <polygon style="fill:#B22234;"
+                                                    points="303.6,287.2 0,287.2 0,313.6 334.8,313.6  "></polygon>
+                                                <polygon style="fill:#B22234;"
+                                                    points="373.4,346.3 365,339.2 0,339.2 0,365.6 395.6,365.6  "></polygon>
+                                            </g>
+                                            <path style="fill:#FFFFFF;"
+                                                d="M48,418.4c-0.9,0-1.7,0-2.6-0.1C46.3,418.4,47.1,418.4,48,418.4z"></path>
+                                            <g>
+                                                <polygon style="fill:#8C1126;"
+                                                    points="238.4,131.2 110.9,131.2 141.4,157.2 323.2,157.2  "></polygon>
+                                                <polygon style="fill:#8C1126;"
+                                                    points="202.5,209.2 488.5,209.2 403.8,183.2 171.9,183.2  "></polygon>
+                                                <polygon style="fill:#8C1126;"
+                                                    points="264,261.6 496,261.6 496,235.2 233,235.2  "></polygon>
+                                                <polygon style="fill:#8C1126;"
+                                                    points="325,313.6 496,313.6 496,287.2 294,287.2  "></polygon>
+                                                <polygon style="fill:#8C1126;"
+                                                    points="363.4,346.3 386,365.6 496,365.6 496,339.2 355.2,339.2  "></polygon>
+                                            </g>
+                                            <g>
+                                                <polygon style="fill:#5B0218;"
+                                                    points="222.5,131.2 286,150.7 307.2,157.2 496,157.2 496,131.2  "></polygon>
+                                                <polygon style="fill:#5B0218;"
+                                                    points="392,183.2 476.8,209.2 496,209.2 496,183.2  "></polygon>
+                                                <path style="fill:#5B0218;"
+                                                    d="M486.4,97.1c-1.4-1.9-2.9-3.6-4.5-5.3c-8.1-8.2-19.1-13.5-31.3-14.1c-0.8,0-1.7-0.1-2.5-0.1l0,0H48   c-13.1,0-25.5,5.9-34.4,14.7c-3.5,3.7-6.5,7.9-8.7,12.5h75h56.6H491C489.8,102.1,488.2,99.5,486.4,97.1z"></path>
+                                            </g>
+                                            <path style="fill:#8C1126;"
+                                                d="M491.1,391.2h-75l31.9,27.2C466.8,418.4,483.2,407.4,491.1,391.2z"></path>
+                                            <path style="fill:#3C3B6E;"
+                                                d="M0,126.4v134.4h215.2V77.6H44.8C20,79.2,0,100,0,126.4z"></path>
+                                            <polygon style="fill:#1E1E44;"
+                                                points="215.2,220 215.2,77.6 48,77.6 "></polygon>
+                                            <polygon
+                                                points="215.2,128.8 215.2,77.6 48,77.6 "></polygon>
+                                            <g>
+                                                <polygon style="fill:#FFFFFF;"
+                                                    points="60.8,96 64,85.6 68,96  "></polygon>
+                                                <polygon style="fill:#FFFFFF;"
+                                                    points="104,96 107.2,85.6 110.4,96  "></polygon>
+                                                <polygon style="fill:#FFFFFF;"
+                                                    points="146.4,96 150.4,85.6 153.6,96  "></polygon>
+                                                <polygon style="fill:#FFFFFF;"
+                                                    points="189.6,96 192.8,85.6 196.8,96  "></polygon>
+                                                <polygon style="fill:#FFFFFF;"
+                                                    points="39.2,114.4 43.2,104 46.4,114.4  "></polygon>
+                                                <polygon style="fill:#FFFFFF;"
+                                                    points="82.4,114.4 85.6,104 89.6,114.4  "></polygon>
+                                                <polygon style="fill:#FFFFFF;"
+                                                    points="125.6,114.4 128.8,104 132,114.4  "></polygon>
+                                                <polygon style="fill:#FFFFFF;"
+                                                    points="168,114.4 171.2,104 175.2,114.4  "></polygon>
+                                                <polygon style="fill:#FFFFFF;"
+                                                    points="18.4,132.8 21.6,122.4 24.8,132.8  "></polygon>
+                                                <polygon style="fill:#FFFFFF;"
+                                                    points="60.8,132.8 64,122.4 68,132.8  "></polygon>
+                                                <polygon style="fill:#FFFFFF;"
+                                                    points="104,132.8 107.2,122.4 110.4,132.8  "></polygon>
+                                                <polygon style="fill:#FFFFFF;"
+                                                    points="146.4,132.8 150.4,122.4 153.6,132.8  "></polygon>
+                                                <polygon style="fill:#FFFFFF;"
+                                                    points="189.6,132.8 192.8,122.4 196.8,132.8  "></polygon>
+                                                <polygon style="fill:#FFFFFF;"
+                                                    points="40,151.2 43.2,140.8 47.2,151.2  "></polygon>
+                                                <polygon style="fill:#FFFFFF;"
+                                                    points="83.2,151.2 86.4,140.8 89.6,151.2  "></polygon>
+                                                <polygon style="fill:#FFFFFF;"
+                                                    points="125.6,151.2 129.6,140.8 132.8,151.2  "></polygon>
+                                                <polygon style="fill:#FFFFFF;"
+                                                    points="168.8,151.2 172,140.8 175.2,151.2  "></polygon>
+                                                <polygon style="fill:#FFFFFF;"
+                                                    points="18.4,168.8 22.4,158.4 25.6,168.8  "></polygon>
+                                                <polygon style="fill:#FFFFFF;"
+                                                    points="61.6,168.8 64.8,158.4 68.8,168.8  "></polygon>
+                                                <polygon style="fill:#FFFFFF;"
+                                                    points="104.8,168.8 108,158.4 111.2,168.8  "></polygon>
+                                                <polygon style="fill:#FFFFFF;"
+                                                    points="147.2,168.8 151.2,158.4 154.4,168.8  "></polygon>
+                                                <polygon style="fill:#FFFFFF;"
+                                                    points="190.4,168.8 193.6,158.4 196.8,168.8  "></polygon>
+                                                <polygon style="fill:#FFFFFF;"
+                                                    points="40,187.2 43.2,176.8 47.2,187.2  "></polygon>
+                                                <polygon style="fill:#FFFFFF;"
+                                                    points="83.2,187.2 86.4,176.8 89.6,187.2  "></polygon>
+                                                <polygon style="fill:#FFFFFF;"
+                                                    points="125.6,187.2 129.6,176.8 132.8,187.2  "></polygon>
+                                                <polygon style="fill:#FFFFFF;"
+                                                    points="168.8,187.2 172,176.8 176,187.2  "></polygon>
+                                                <polygon style="fill:#FFFFFF;"
+                                                    points="19.2,205.6 22.4,195.2 25.6,205.6  "></polygon>
+                                                <polygon style="fill:#FFFFFF;"
+                                                    points="62.4,205.6 65.6,195.2 68.8,205.6  "></polygon>
+                                                <polygon style="fill:#FFFFFF;"
+                                                    points="104.8,205.6 108,195.2 112,205.6  "></polygon>
+                                                <polygon style="fill:#FFFFFF;"
+                                                    points="148,205.6 151.2,195.2 154.4,205.6  "></polygon>
+                                                <polygon style="fill:#FFFFFF;"
+                                                    points="190.4,205.6 194.4,195.2 197.6,205.6  "></polygon>
+                                                <polygon style="fill:#FFFFFF;"
+                                                    points="40,224 43.2,212.8 47.2,224  "></polygon>
+                                                <polygon style="fill:#FFFFFF;"
+                                                    points="83.2,224 86.4,212.8 89.6,224  "></polygon>
+                                                <polygon style="fill:#FFFFFF;"
+                                                    points="125.6,224 129.6,212.8 132.8,224  "></polygon>
+                                                <polygon style="fill:#FFFFFF;"
+                                                    points="168.8,224 172,212.8 175.2,224  "></polygon>
+                                                <polygon style="fill:#FFFFFF;"
+                                                    points="18.4,241.6 22.4,231.2 25.6,241.6  "></polygon>
+                                                <polygon style="fill:#FFFFFF;"
+                                                    points="61.6,241.6 64.8,231.2 68,241.6  "></polygon>
+                                                <polygon style="fill:#FFFFFF;"
+                                                    points="104,241.6 108,231.2 111.2,241.6  "></polygon>
+                                                <polygon style="fill:#FFFFFF;"
+                                                    points="147.2,241.6 150.4,231.2 154.4,241.6  "></polygon>
+                                                <polygon style="fill:#FFFFFF;"
+                                                    points="190.4,241.6 193.6,231.2 196.8,241.6  "></polygon>
+                                            </g>
+                                        </svg></span>
+                                    USA Office
+                                </h4>
+                                <div class="contact-item">
+                                    <div class="icon">
+                                        <i class="ri-phone-fill"></i>
+                                    </div>
+                                    <div>
+                                        <span>Phone</span>
+                                        <a href="tel:+15623120282">
+                                            +1 562-312-0282
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="contact-item">
+                                    <div class="icon">
+                                        <i class="ri-map-pin-line"></i>
+                                    </div>
+                                    <div>
+                                        <span>Address</span>
+                                        <p>
+                                            Norwalk, California 90650, USA
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="contact-item">
+                                    <div class="icon">
+                                        <i class="ri-mail-line"></i>
+                                    </div>
+                                    <div>
+                                        <span>Email</span>
+                                        <a href="mailto:jay@prismitsystems.com">
+                                            jay@prismitsystems.com
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Bottom -->
+            <div class="footer-bottom">
+                <div class="container">
+                    <div class="bottom-wrapper">
+                        <p>
+                            ©️ 2026 All rights reserved.
                         </p>
-                    </div>
-                </article>
-                <article class="dl-feature-card" data-category="manage">
-                    <div class="dl-feature-card-content">
-                        <div class="dl-feature-icon"><i class="ri-delete-bin-line"></i></div>
-                        <div class="dl-feature-card-heading">
-                            <h3>Deleted Record Recovery</h3>
-                        </div>
-                        <p>Authorized users can access deleted receipts and restore them when needed.</p>
-                    </div>
-                </article>
-                <article class="dl-feature-card" data-category="manage">
-                    <div class="dl-feature-card-content">
-                        <div class="dl-feature-icon"><i class="ri-shield-user-line"></i></div>
-                        <div class="dl-feature-card-heading">
-                            <h3>Role-Based Access</h3>
-                        </div>
-                        <p>View, create, edit, delete and PDF access are checked against the application’s permissions.
-                        </p>
-                    </div>
-                </article>
-                <article class="dl-feature-card" data-category="manage">
-                    <div class="dl-feature-card-content">
-                        <div class="dl-feature-icon"><i class="ri-printer-line"></i></div>
-                        <div class="dl-feature-card-heading">
-                            <h3>Company Print Settings</h3>
-                        </div>
-                        <p>LR document presentation follows company-configured branding, letterhead and numbering
-                            information.</p>
-                    </div>
-                </article>
-
-            </div>
-        </div>
-    </section>
-
-    <section class="dl-workflow-section">
-        <div class="container">
-            <div class="heading-wrapper heading-wrap-left">
-                <span class="heading-tag">Step-by-Step Workflow</span>
-                <h2 class="heading-title">How Does the <span>Module</span> Work?</h2>
-                <p>The LR process is designed to be straightforward, even for team members who are new to transport
-                    software.</p>
-
-            </div>
-            <div class="dl-workflow-grid">
-                <article class="dl-workflow-card">
-                    <div class="dl-workflow-card-content">
-                        <div class="dl-workflow-card-top"><span class="dl-workflow-number">01</span>
-                            <div class="dl-workflow-icon"><i class="ri-file-add-line"></i></div>
-                        </div>
-                        <h3 class="dl-workflow-card-title">Create a New Lorry Receipt</h3>
-                        <p class="dl-workflow-card-description">Open the Lorry Receipt section and choose to create a
-                            new LR. Select the company, enter the LR date and choose the status (Draft, Issued or
-                            Cancelled). The system generates the LR number using the company’s configured numbering
-                            format.</p>
-                    </div>
-                    
-                </article>
-                <article class="dl-workflow-card">
-                    <div class="dl-workflow-card-content">
-                        <div class="dl-workflow-card-top"><span class="dl-workflow-number">02</span>
-                            <div class="dl-workflow-icon"><i class="ri-user-shared-line"></i></div>
-                        </div>
-                        <h3 class="dl-workflow-card-title">Select Consignor and Consignee</h3>
-                        <p class="dl-workflow-card-description">Choose the Consignor (the person or business sending the
-                            goods) and the Consignee (the person or business receiving them). If a party does not
-                            already exist, use the option to add a new consignor or consignee from the form.</p>
-                    </div>
-                  
-                </article>
-                <article class="dl-workflow-card">
-                    <div class="dl-workflow-card-content">
-                        <div class="dl-workflow-card-top"><span class="dl-workflow-number">03</span>
-                            <div class="dl-workflow-icon"><i class="ri-truck-line"></i></div>
-                        </div>
-                        <h3 class="dl-workflow-card-title">Add Vehicle and Route Details</h3>
-                        <p class="dl-workflow-card-description">Select the vehicle and driver where applicable. Enter
-                            the origin and destination, plus optional reference details such as vendor code. This
-                            connects the shipment with its transport information.</p>
-                    </div>
-                   
-                </article>
-                <article class="dl-workflow-card">
-                    <div class="dl-workflow-card-content">
-                        <div class="dl-workflow-card-top"><span class="dl-workflow-number">04</span>
-                            <div class="dl-workflow-icon"><i class="ri-stack-line"></i></div>
-                        </div>
-                        <h3 class="dl-workflow-card-title">Enter Goods and Quantity</h3>
-                        <p class="dl-workflow-card-description">Add one or more goods rows. For each row, enter the item
-                            description (particulars), quantity and weight. Use Add Item to include more goods under the
-                            same receipt.</p>
-                    </div>
-                  
-                </article>
-                <article class="dl-workflow-card">
-                    <div class="dl-workflow-card-content">
-                        <div class="dl-workflow-card-top"><span class="dl-workflow-number">05</span>
-                            <div class="dl-workflow-icon"><i class="ri-money-rupee-circle-line"></i></div>
-                        </div>
-                        <h3 class="dl-workflow-card-title">Review Freight Charges</h3>
-                        <p class="dl-workflow-card-description">Review the applicable charge rows. Where consignor
-                            contract charges are configured, the form can load them automatically. Amounts can be
-                            adjusted for special cases, and deductions can be included where relevant. Check the
-                            calculated charge total.</p>
-                    </div>
-                   
-                </article>
-                <article class="dl-workflow-card">
-                    <div class="dl-workflow-card-content">
-                        <div class="dl-workflow-card-top"><span class="dl-workflow-number">06</span>
-                            <div class="dl-workflow-icon"><i class="ri-file-pdf-2-line"></i></div>
-                        </div>
-                        <h3 class="dl-workflow-card-title">Save and Download the LR</h3>
-                        <p class="dl-workflow-card-description">Add remarks if needed and save the LR. Open the saved
-                            record to review it or download an A4 PDF copy for the consignee, consignor, gate or
-                            transporter.</p>
-                    </div>
-                    
-                </article>
-
-            </div>
-        </div>
-    </section>
-
-    <section id="benefits" class="results-section">
-        <div class="container">
-            <div class="heading-wrapper">
-                <span class="heading-tag">Proven Advantages</span>
-                <h2 class="heading-title heading-light">Benefits for <span>Transport Businesses</span></h2>
-                <p>Digital LRs keep your shipment paperwork organized, searchable and easy to share.</p>
-
-            </div>
-            <div class="results-grid">
-                <div class="result-card">
-                    <div class="result-icon"><i class="ri-time-line"></i></div>
-                    <h3>Faster Documentation</h3>
-                    <p>Prepare transport receipts digitally instead of repeatedly writing the same information by hand.
-                    </p>
-                </div>
-                <div class="result-card">
-                    <div class="result-icon"><i class="ri-folder-shield-2-line"></i></div>
-                    <h3>Clear Shipment Records</h3>
-                    <p>Keep sender, receiver, goods, vehicle and route details together.</p>
-                </div>
-                <div class="result-card">
-                    <div class="result-icon"><i class="ri-money-rupee-circle-line"></i></div>
-                    <h3>Flexible Freight Charges</h3>
-                    <p>Review configured charges and make permitted adjustments when required.</p>
-                </div>
-                <div class="result-card">
-                    <div class="result-icon"><i class="ri-search-eye-line"></i></div>
-                    <h3>Easy Record Retrieval</h3>
-                    <p>Find past LRs using number, status and date filters.</p>
-                </div>
-                <div class="result-card">
-                    <div class="result-icon"><i class="ri-file-pdf-2-line"></i></div>
-                    <h3>Professional PDF Documents</h3>
-                    <p>Download formatted LR copies for different transport purposes.</p>
-                </div>
-                <div class="result-card">
-                    <div class="result-icon"><i class="ri-lock-unlock-line"></i></div>
-                    <h3>Better Access Control</h3>
-                    <p>Allow only authorized users to create, edit or delete LRs.</p>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <section class="transport-section">
-        <div class="container">
-            <div class="transport-container">
-                <div class="heading-wrapper heading-wrap-left">
-                    <span class="heading-tag">Introduction</span>
-                    <h2 class="heading-title">What Is a <span>Lorry Receipt</span>?</h2>
-                    <p>A Lorry Receipt (LR) is an important transport document that records goods being transported, who
-                        sends them, who receives them and which vehicle is used. Managing LRs manually can lead to
-                        missing details, repeated paperwork and difficulty finding older receipts. The Lorry Receipt
-                        Management Module lets transport teams prepare LRs digitally, organize shipment information,
-                        manage freight charges and download formatted PDF copies.</p>
-
-                </div>
-                <div class="transport-image-wrapper">
-                    <img src="./Assets/images/tms-img.png" alt="Transportation Dashboard" class="transport-image">
-                    <div class="transport-shape"></div>
-                    <div class="transport-card">
-                        <ul class="transport-list">
-                            <li><i class="ri-checkbox-circle-line"></i><span>Prepare LRs digitally</span></li>
-                            <li><i class="ri-checkbox-circle-line"></i><span>Organize shipment information</span></li>
-                            <li><i class="ri-checkbox-circle-line"></i><span>Manage freight charges</span></li>
-                            <li><i class="ri-checkbox-circle-line"></i><span>Download formatted PDF copies</span></li>
-                            <li><i class="ri-checkbox-circle-line"></i><span>Generate and download digital Lorry Receipts (LRs)</span></li>
+                        <ul>
+                            <li><a href="privacy-policy.html">Privacy
+                                    Policy</a></li>
+                            <li><a href="#">Terms of Service</a></li>
+                            <li><a href="#">Cookie Policy</a></li>
                         </ul>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <section id="faq" class="dl-faq-section">
-        <div class="container">
-            <div class="heading-wrapper">
-                <span class="heading-tag">Got Questions?</span>
-                <h2 class="heading-title">Frequently Asked <span>Questions</span></h2>
-                <p>Common questions about creating, finding and downloading Lorry Receipts.</p>
-                <div class="dl-faq-filters"><button class="dl-faq-filter active" type="button">All</button><button
-                        class="dl-faq-filter" type="button">Goods</button><button class="dl-faq-filter" type="button">LR
-                        Number</button><button class="dl-faq-filter" type="button">Parties</button><button
-                        class="dl-faq-filter" type="button">Editing</button><button class="dl-faq-filter"
-                        type="button">PDF Copies</button><button class="dl-faq-filter"
-                        type="button">Search</button><button class="dl-faq-filter" type="button">Restore</button></div>
-            </div>
-            <div class="dl-faq-list">
-                <div class="dl-faq-item active" data-category="goods">
-                    <button class="dl-faq-question" type="button" aria-expanded="true" aria-controls="dl-faq-answer-1">
-                        <span class="dl-faq-question-content"><span class="dl-faq-number">Q1</span><span
-                                class="dl-faq-question-text">Can I add several goods items to one LR?</span></span>
-                        <span class="dl-faq-arrow"><i class="ri-arrow-down-s-line"></i></span>
-                    </button>
-                    <div class="dl-faq-answer" id="dl-faq-answer-1">
-                        <div class="dl-faq-answer-content">
-                            <p>Yes. Use Add Item to record multiple goods lines, each with its own quantity and weight.
-                            </p>
-                            <div class="dl-faq-topic"><span>Topic: Goods</span></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="dl-faq-item" data-category="lr number">
-                    <button class="dl-faq-question" type="button" aria-expanded="false" aria-controls="dl-faq-answer-2">
-                        <span class="dl-faq-question-content"><span class="dl-faq-number">Q2</span><span
-                                class="dl-faq-question-text">Will the LR number be generated
-                                automatically?</span></span>
-                        <span class="dl-faq-arrow"><i class="ri-arrow-down-s-line"></i></span>
-                    </button>
-                    <div class="dl-faq-answer" id="dl-faq-answer-2">
-                        <div class="dl-faq-answer-content">
-                            <p>Yes. The next available number follows the selected company’s LR numbering configuration.
-                            </p>
-                            <div class="dl-faq-topic"><span>Topic: LR Number</span></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="dl-faq-item" data-category="parties">
-                    <button class="dl-faq-question" type="button" aria-expanded="false" aria-controls="dl-faq-answer-3">
-                        <span class="dl-faq-question-content"><span class="dl-faq-number">Q3</span><span
-                                class="dl-faq-question-text">Can I add a new consignor or consignee while creating an
-                                LR?</span></span>
-                        <span class="dl-faq-arrow"><i class="ri-arrow-down-s-line"></i></span>
-                    </button>
-                    <div class="dl-faq-answer" id="dl-faq-answer-3">
-                        <div class="dl-faq-answer-content">
-                            <p>Yes. The LR form includes a quick-add option for parties.</p>
-                            <div class="dl-faq-topic"><span>Topic: Parties</span></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="dl-faq-item" data-category="editing">
-                    <button class="dl-faq-question" type="button" aria-expanded="false" aria-controls="dl-faq-answer-4">
-                        <span class="dl-faq-question-content"><span class="dl-faq-number">Q4</span><span
-                                class="dl-faq-question-text">Can I change an LR after saving?</span></span>
-                        <span class="dl-faq-arrow"><i class="ri-arrow-down-s-line"></i></span>
-                    </button>
-                    <div class="dl-faq-answer" id="dl-faq-answer-4">
-                        <div class="dl-faq-answer-content">
-                            <p>Yes, if your account has edit permission.</p>
-                            <div class="dl-faq-topic"><span>Topic: Editing</span></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="dl-faq-item" data-category="pdf copies">
-                    <button class="dl-faq-question" type="button" aria-expanded="false" aria-controls="dl-faq-answer-5">
-                        <span class="dl-faq-question-content"><span class="dl-faq-number">Q5</span><span
-                                class="dl-faq-question-text">Can I download different LR copies?</span></span>
-                        <span class="dl-faq-arrow"><i class="ri-arrow-down-s-line"></i></span>
-                    </button>
-                    <div class="dl-faq-answer" id="dl-faq-answer-5">
-                        <div class="dl-faq-answer-content">
-                            <p>Yes. The PDF options include consignee, consignor, gate and transporter copies.</p>
-                            <div class="dl-faq-topic"><span>Topic: PDF Copies</span></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="dl-faq-item" data-category="search">
-                    <button class="dl-faq-question" type="button" aria-expanded="false" aria-controls="dl-faq-answer-6">
-                        <span class="dl-faq-question-content"><span class="dl-faq-number">Q6</span><span
-                                class="dl-faq-question-text">Can I find older receipts quickly?</span></span>
-                        <span class="dl-faq-arrow"><i class="ri-arrow-down-s-line"></i></span>
-                    </button>
-                    <div class="dl-faq-answer" id="dl-faq-answer-6">
-                        <div class="dl-faq-answer-content">
-                            <p>Yes. Search by LR number, status or date range.</p>
-                            <div class="dl-faq-topic"><span>Topic: Search</span></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="dl-faq-item" data-category="restore">
-                    <button class="dl-faq-question" type="button" aria-expanded="false" aria-controls="dl-faq-answer-7">
-                        <span class="dl-faq-question-content"><span class="dl-faq-number">Q7</span><span
-                                class="dl-faq-question-text">Can a deleted LR be restored?</span></span>
-                        <span class="dl-faq-arrow"><i class="ri-arrow-down-s-line"></i></span>
-                    </button>
-                    <div class="dl-faq-answer" id="dl-faq-answer-7">
-                        <div class="dl-faq-answer-content">
-                            <p>Yes. Authorized users can restore soft-deleted LRs.</p>
-                            <div class="dl-faq-topic"><span>Topic: Restore</span></div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-            <div class="dl-faq-cta">
-                <div class="dl-faq-cta-content">
-                    <h3>Simplify Your Transport Documentation</h3>
-                    <p>The Lorry Receipt Management Module brings shipment information, freight charges, company details
-                        and downloadable receipts into one workflow. Create clear LR records, find previous documents
-                        easily and keep your transport paperwork organized.</p>
-                </div>
-                <button class="dl-faq-cta-button" type="button"
-                    onclick="document.getElementById('simulator').scrollIntoView({behavior:'smooth'})">See Practical
-                    Example</button>
-            </div>
-        </div>
-    </section>
-
-    <!--footer section start-->
-   <footer class="footer">
-
-    <!-- Newsletter -->
-    <div class="footer-newsletter">
-        <div class="container">
-
-            <div class="newsletter-wrapper">
-
-                <div class="newsletter-content">
-                    <h2>Stay ahead of the curve</h2>
-                    <p>
-                        Fleet management insights, product updates, and industry news.
-                    </p>
-                </div>
-
-                <form class="newsletter-form">
-
-                    <input
-                        type="email"
-                        placeholder="Enter your email" aria-label="Email address for newsletter"
-                    >
-
-                    <button type="submit">
-                        Subscribe
-
-                       <i class="ri-arrow-right-line"></i>
-
-                    </button>
-
-                </form>
-
-            </div>
-
-        </div>
-    </div>
-
-    <!-- Footer Main -->
-
-    <div class="footer-main">
-
-        <div class="container">
-
-            <div class="footer-grid">
-
-                <!-- Left -->
-
-                <div class="footer-about">
-
-                    <a href="#" class="footer-logo">
-                        <img src="Assets/images/transportdesk-logo-dark.svg" alt="TransportDesk" width="252" height="84">
-                    </a>
-
-                    <p>
-                        The intelligent transportation platform that puts fleet directors
-                        in complete control of their operations.
-                    </p>
-
-                    <div class="footer-social">
-
-                        <a href="#" aria-label="Facebook"><i class="ri-facebook-fill"></i></a>
-
-                        <a href="#" aria-label="Instagram"><i class="ri-instagram-line"></i></a>
-
-                        <a href="#" aria-label="Twitter"><i class="ri-twitter-line"></i></a>
-
-                        <a href="#" aria-label="LinkedIn"><i class="ri-linkedin-fill"></i></a>
-
-                    </div>
-
-                </div>
-
-                <!-- Product -->
-
-                <div class="footer-links">
-
-                    <h3>Product</h3>
-
-                    <ul>
-        <li>
-            <a href="features.html" class="footer-link">Features</a>
-        </li>
-
-        <li>
-            <a href="modules.html" class="footer-link">Modules</a>
-        </li>
-
-        <li>
-            <a href="solutions.html" class="footer-link">Solutions</a>
-        </li>
-
-        <li>
-            <a href="reports.html" class="footer-link">Reports</a>
-        </li>
-
-        <li>
-            <a href="contact.html" class="footer-link">Contact</a>
-        </li>
-    </ul>
-
-                </div>
-
-                <!-- Resources -->
-
-                <div class="footer-links">
-
-                    <h3>Resources</h3>
-
-                    <ul>
-
-                        <li><a href="documentation.html" class="footer-link">Documentation</a></li>
-
-                        <li><a href="faq.html" class="footer-link">FAQ</a></li>
-
-                        <li><a href="privacy-policy.html" class="footer-link">Privacy Policy</a></li>
-
-                    </ul>
-
-                </div>
-
-                <!-- Support -->
-
-                <div class="footer-links">
-
-                    <h3>Support</h3>
-
-                    <ul>
-
-                        <li><a href="#" class="footer-link">Help Center</a></li>
-
-                        <li><a href="#" class="footer-link">Status</a></li>
-
-                        <li><a href="#" class="footer-link">Security</a></li>
-
-                    </ul>
-
-                </div>
-
-                <!-- Contact -->
-
-                <div class="footer-contact">
-
-    <!-- India Office -->
-    <div class="footer-office">
-
-        <h4 class="footer-office-title">
-            <span class="footer-country-flag">
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="800px" height="800px" viewBox="0 0 36 36" aria-hidden="true" role="img" class="iconify iconify--twemoji" preserveAspectRatio="xMidYMid meet"><path fill="#138808" d="M0 27a4 4 0 0 0 4 4h28a4 4 0 0 0 4-4v-4H0v4z"></path><path fill="#EEE" d="M0 13h36v10H0z"></path><path fill="#F93" d="M36 13V9a4 4 0 0 0-4-4H4a4 4 0 0 0-4 4v4h36z"></path><circle fill="navy" cx="18" cy="18" r="4"></circle><circle fill="#EEE" cx="18" cy="18" r="3"></circle><path fill="#6666B3" d="M18 15l.146 2.264l1.001-2.035l-.73 2.147l1.704-1.498l-1.497 1.705l2.147-.731l-2.035 1.002L21 18l-2.264.146l2.035 1.001l-2.147-.73l1.497 1.704l-1.704-1.497l.73 2.147l-1.001-2.035L18 21l-.146-2.264l-1.002 2.035l.731-2.147l-1.705 1.497l1.498-1.704l-2.147.73l2.035-1.001L15 18l2.264-.146l-2.035-1.002l2.147.731l-1.498-1.705l1.705 1.498l-.731-2.147l1.002 2.035z"></path><circle fill="navy" cx="18" cy="18" r="1"></circle></svg>
-</span>
-            India Office
-        </h4>
-
-        
-
-        <div class="contact-item">
-            <div class="icon">
-                <i class="ri-phone-fill"></i>
-            </div>
-            <div>
-                <span>Phone</span>
-                <a href="tel:+916355258003">
-                    +91 6355 258 003
-                </a>
-            </div>
-        </div>
-
-        <div class="contact-item">
-            <div class="icon">
-                <i class="ri-map-pin-line"></i>
-            </div>
-            <div>
-                <span>Address</span>
-                <p>
-                    The Galleria Business Hub, Adajan Gam,
-                    Pal Gam, Surat, Gujarat, India 394510
-                </p>
-            </div>
-        </div>
-
-    <div class="contact-item">
-            <div class="icon">
-                <i class="ri-mail-line"></i>
-            </div>
-            <div>
-                <span>Email</span>
-                <a href="mailto:jay@prismitsystems.com">
-                    jay@prismitsystems.com
-                </a>
-            </div>
-        </div></div>
-
-    <!-- Subtle Divider -->
-    
-
-    <!-- USA Office -->
-    <div class="footer-office">
-
-        <h4 class="footer-office-title">
-            <span class="footer-country-flag"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="800px" width="800px" version="1.1" id="Layer_1" viewBox="0 0 496 496" xml:space="preserve">
-<path style="fill:#FFFFFF;" d="M496,369.6c0,27.2-21.6,48.8-48,48.8H48c-26.4,0-48-21.6-48-48.8V126.4c0-27.2,21.6-43.8,48-43.8h400  c26.4,0,48,16.6,48,43.8V369.6z"></path>
-<path style="fill:#CCE4E5;" d="M448,77.6H48l400,340.8c26.4,0,48-21.6,48-48.8V126.4C496,99.2,474.4,77.6,448,77.6z"></path>
-<path style="fill:#AED3D3;" d="M448,77.6H48l448,137.6v-88.8C496,99.2,474.4,77.6,448,77.6z"></path>
-<g>
-	<path style="fill:#B22234;" d="M4.9,391.2c7.5,15.4,22.7,26.2,40.5,27.1c0.9,0,1.7,0.1,2.6,0.1h400.3c0,0,3.5-0.3,4.6-0.7   c1.7-0.6,1.9-2,0.6-3.1l-0.4-0.4L426,391.1H4.9V391.2z"></path>
-	<polygon style="fill:#B22234;" points="120.9,131.2 0,131.2 0,157.2 151.4,157.2  "></polygon>
-	<polygon style="fill:#B22234;" points="181.9,183.2 0,183.2 0,209.2 212.5,209.2  "></polygon>
-	<polygon style="fill:#B22234;" points="242.8,235.2 0,235.2 0,261.6 273.2,261.6  "></polygon>
-	<polygon style="fill:#B22234;" points="303.6,287.2 0,287.2 0,313.6 334.8,313.6  "></polygon>
-	<polygon style="fill:#B22234;" points="373.4,346.3 365,339.2 0,339.2 0,365.6 395.6,365.6  "></polygon>
-</g>
-<path style="fill:#FFFFFF;" d="M48,418.4c-0.9,0-1.7,0-2.6-0.1C46.3,418.4,47.1,418.4,48,418.4z"></path>
-<g>
-	<polygon style="fill:#8C1126;" points="238.4,131.2 110.9,131.2 141.4,157.2 323.2,157.2  "></polygon>
-	<polygon style="fill:#8C1126;" points="202.5,209.2 488.5,209.2 403.8,183.2 171.9,183.2  "></polygon>
-	<polygon style="fill:#8C1126;" points="264,261.6 496,261.6 496,235.2 233,235.2  "></polygon>
-	<polygon style="fill:#8C1126;" points="325,313.6 496,313.6 496,287.2 294,287.2  "></polygon>
-	<polygon style="fill:#8C1126;" points="363.4,346.3 386,365.6 496,365.6 496,339.2 355.2,339.2  "></polygon>
-</g>
-<g>
-	<polygon style="fill:#5B0218;" points="222.5,131.2 286,150.7 307.2,157.2 496,157.2 496,131.2  "></polygon>
-	<polygon style="fill:#5B0218;" points="392,183.2 476.8,209.2 496,209.2 496,183.2  "></polygon>
-	<path style="fill:#5B0218;" d="M486.4,97.1c-1.4-1.9-2.9-3.6-4.5-5.3c-8.1-8.2-19.1-13.5-31.3-14.1c-0.8,0-1.7-0.1-2.5-0.1l0,0H48   c-13.1,0-25.5,5.9-34.4,14.7c-3.5,3.7-6.5,7.9-8.7,12.5h75h56.6H491C489.8,102.1,488.2,99.5,486.4,97.1z"></path>
-</g>
-<path style="fill:#8C1126;" d="M491.1,391.2h-75l31.9,27.2C466.8,418.4,483.2,407.4,491.1,391.2z"></path>
-<path style="fill:#3C3B6E;" d="M0,126.4v134.4h215.2V77.6H44.8C20,79.2,0,100,0,126.4z"></path>
-<polygon style="fill:#1E1E44;" points="215.2,220 215.2,77.6 48,77.6 "></polygon>
-<polygon points="215.2,128.8 215.2,77.6 48,77.6 "></polygon>
-<g>
-	<polygon style="fill:#FFFFFF;" points="60.8,96 64,85.6 68,96  "></polygon>
-	<polygon style="fill:#FFFFFF;" points="104,96 107.2,85.6 110.4,96  "></polygon>
-	<polygon style="fill:#FFFFFF;" points="146.4,96 150.4,85.6 153.6,96  "></polygon>
-	<polygon style="fill:#FFFFFF;" points="189.6,96 192.8,85.6 196.8,96  "></polygon>
-	<polygon style="fill:#FFFFFF;" points="39.2,114.4 43.2,104 46.4,114.4  "></polygon>
-	<polygon style="fill:#FFFFFF;" points="82.4,114.4 85.6,104 89.6,114.4  "></polygon>
-	<polygon style="fill:#FFFFFF;" points="125.6,114.4 128.8,104 132,114.4  "></polygon>
-	<polygon style="fill:#FFFFFF;" points="168,114.4 171.2,104 175.2,114.4  "></polygon>
-	<polygon style="fill:#FFFFFF;" points="18.4,132.8 21.6,122.4 24.8,132.8  "></polygon>
-	<polygon style="fill:#FFFFFF;" points="60.8,132.8 64,122.4 68,132.8  "></polygon>
-	<polygon style="fill:#FFFFFF;" points="104,132.8 107.2,122.4 110.4,132.8  "></polygon>
-	<polygon style="fill:#FFFFFF;" points="146.4,132.8 150.4,122.4 153.6,132.8  "></polygon>
-	<polygon style="fill:#FFFFFF;" points="189.6,132.8 192.8,122.4 196.8,132.8  "></polygon>
-	<polygon style="fill:#FFFFFF;" points="40,151.2 43.2,140.8 47.2,151.2  "></polygon>
-	<polygon style="fill:#FFFFFF;" points="83.2,151.2 86.4,140.8 89.6,151.2  "></polygon>
-	<polygon style="fill:#FFFFFF;" points="125.6,151.2 129.6,140.8 132.8,151.2  "></polygon>
-	<polygon style="fill:#FFFFFF;" points="168.8,151.2 172,140.8 175.2,151.2  "></polygon>
-	<polygon style="fill:#FFFFFF;" points="18.4,168.8 22.4,158.4 25.6,168.8  "></polygon>
-	<polygon style="fill:#FFFFFF;" points="61.6,168.8 64.8,158.4 68.8,168.8  "></polygon>
-	<polygon style="fill:#FFFFFF;" points="104.8,168.8 108,158.4 111.2,168.8  "></polygon>
-	<polygon style="fill:#FFFFFF;" points="147.2,168.8 151.2,158.4 154.4,168.8  "></polygon>
-	<polygon style="fill:#FFFFFF;" points="190.4,168.8 193.6,158.4 196.8,168.8  "></polygon>
-	<polygon style="fill:#FFFFFF;" points="40,187.2 43.2,176.8 47.2,187.2  "></polygon>
-	<polygon style="fill:#FFFFFF;" points="83.2,187.2 86.4,176.8 89.6,187.2  "></polygon>
-	<polygon style="fill:#FFFFFF;" points="125.6,187.2 129.6,176.8 132.8,187.2  "></polygon>
-	<polygon style="fill:#FFFFFF;" points="168.8,187.2 172,176.8 176,187.2  "></polygon>
-	<polygon style="fill:#FFFFFF;" points="19.2,205.6 22.4,195.2 25.6,205.6  "></polygon>
-	<polygon style="fill:#FFFFFF;" points="62.4,205.6 65.6,195.2 68.8,205.6  "></polygon>
-	<polygon style="fill:#FFFFFF;" points="104.8,205.6 108,195.2 112,205.6  "></polygon>
-	<polygon style="fill:#FFFFFF;" points="148,205.6 151.2,195.2 154.4,205.6  "></polygon>
-	<polygon style="fill:#FFFFFF;" points="190.4,205.6 194.4,195.2 197.6,205.6  "></polygon>
-	<polygon style="fill:#FFFFFF;" points="40,224 43.2,212.8 47.2,224  "></polygon>
-	<polygon style="fill:#FFFFFF;" points="83.2,224 86.4,212.8 89.6,224  "></polygon>
-	<polygon style="fill:#FFFFFF;" points="125.6,224 129.6,212.8 132.8,224  "></polygon>
-	<polygon style="fill:#FFFFFF;" points="168.8,224 172,212.8 175.2,224  "></polygon>
-	<polygon style="fill:#FFFFFF;" points="18.4,241.6 22.4,231.2 25.6,241.6  "></polygon>
-	<polygon style="fill:#FFFFFF;" points="61.6,241.6 64.8,231.2 68,241.6  "></polygon>
-	<polygon style="fill:#FFFFFF;" points="104,241.6 108,231.2 111.2,241.6  "></polygon>
-	<polygon style="fill:#FFFFFF;" points="147.2,241.6 150.4,231.2 154.4,241.6  "></polygon>
-	<polygon style="fill:#FFFFFF;" points="190.4,241.6 193.6,231.2 196.8,241.6  "></polygon>
-</g>
-</svg></span>
-            USA Office
-        </h4>
-
-        <div class="contact-item">
-            <div class="icon">
-                <i class="ri-phone-fill"></i>
-            </div>
-            <div>
-                <span>Phone</span>
-                <a href="tel:+15623120282">
-                    +1 562-312-0282
-                </a>
-            </div>
-        </div>
-
-        <div class="contact-item">
-            <div class="icon">
-                <i class="ri-map-pin-line"></i>
-            </div>
-            <div>
-                <span>Address</span>
-                <p>
-                    Norwalk, California 90650, USA
-                </p>
-            </div>
-        </div>
-
-    </div>
-
-</div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-    <!-- Bottom -->
-
-    <div class="footer-bottom">
-
-        <div class="container">
-
-            <div class="bottom-wrapper">
-
-                <p>
-                    © 2026 All rights reserved.
-                </p>
-
-                <ul>
-
-                    <li><a href="privacy-policy.html">Privacy Policy</a></li>
-
-                    <li><a href="#">Terms of Service</a></li>
-
-                    <li><a href="#">Cookie Policy</a></li>
-
-                </ul>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</footer>
-    <!--footer section end-->
-
-    <script src="./Assets/js/custom.js"></script>
-</body>
+        </footer>
+        <!--footer section end-->
+
+        <script src="./Assets/js/custom.js"></script>
+    </body>
 
 </html>

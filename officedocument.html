@@ -1,2058 +1,2265 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
+    <head>
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Office Document Management Module | TransportDesk Fleet Solutions</title>
-    <meta name="description" content="Manage office documents, track validity dates and organize document expenses in one place, with vendor links, digital attachments, search and permission-based access.">
+        <title>Office Document Management Module | TransportDesk Fleet
+            Solutions</title>
+        <meta name="description"
+            content="Manage office documents, track validity dates and organize document expenses in one place, with vendor links, digital attachments, search and permission-based access.">
 
-    <!-- Remix Icon -->
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" />
+        <!-- Remix Icon -->
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" />
 
-    <!-- Swiper -->
-    <link rel="stylesheet"
-        href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+        <!-- Swiper -->
+        <link rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
 
-    <!-- Lenis -->
-    <link rel="stylesheet"
-        href="https://unpkg.com/lenis@1.3.23/dist/lenis.css">
+        <!-- Lenis -->
+        <link rel="stylesheet"
+            href="https://unpkg.com/lenis@1.3.23/dist/lenis.css">
 
-    <!-- Tailwind Output CSS -->
-     <link href="./Assets/css/output.css" rel="stylesheet">
-</head>
-<body>
+        <!-- Tailwind Output CSS -->
+        <link href="./Assets/css/output.min.css" rel="stylesheet">
+    </head>
+    <body>
 
-<!--Header Section start-->
-<header class="main-header">
-    <div class="container">
+        <!--Header Section start-->
+        <header class="main-header">
+            <div class="container">
 
-        <div class="header-inner">
+                <div class="header-inner">
 
-            <a href="index.html" class="header-logo">
-                <img src="Assets/images/transportdesk-logo.svg" alt="Logo">
-            </a>
+                    <a href="index.html" class="header-logo">
+                        <img src="Assets/images/transportdesk-logo.svg"
+                            alt="Logo">
+                    </a>
 
-            <nav class="main-navigation" id="mobileMenu">
+                    <nav class="main-navigation" id="mobileMenu">
 
-                <div class="menu-circle"></div>
+                        <div class="menu-circle"></div>
 
-                <ul class="navigation-links">
-                    <li><a href="index.html" class="navigation-link">Home</a></li>
-                    <li><a href="features.html" class="navigation-link">Features</a></li>
-                    <li><a href="modules.html" class="navigation-link active">Modules</a></li>
-                    <li><a href="reports.html" class="navigation-link">Resources</a></li>
-                    <li><a href="contact.html" class="navigation-link">Contact</a></li>
-                </ul>
+                        <ul class="navigation-links">
+                            <li><a href="index.html"
+                                    class="navigation-link">Home</a></li>
+                            <li><a href="features.html"
+                                    class="navigation-link">Features</a></li>
+                            <li><a href="modules.html"
+                                    class="navigation-link active">Modules</a></li>
+                            <li><a href="reports.html"
+                                    class="navigation-link">Resources</a></li>
+                            <li><a href="contact.html"
+                                    class="navigation-link">Contact</a></li>
+                        </ul>
 
-                <div class="mobile-header-right">
-                    <a href="#" class="login-btn">Login</a>
-                    <a href="#" class="demo-btn">Book Demo</a>
-                </div>
+                        <div class="mobile-header-right">
+                            <a href="#" class="login-btn">Login</a>
+                            <a href="#" class="demo-btn">Book Demo</a>
+                        </div>
 
-            </nav>
+                    </nav>
 
-            <div class="header-right">
-                <a href="#" class="login-btn">Login</a>
-                <a href="#" class="demo-btn">Book Demo</a>
-            </div>
+                    <div class="header-right">
+                        <a href="#" class="login-btn">Login</a>
+                        <a href="#" class="demo-btn">Book Demo</a>
+                    </div>
 
-            <button class="menu-toggle" id="menuToggle" aria-label="Toggle Menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-
-        </div>
-
-    </div>
-</header>
-
-<!-- Add this after header -->
-<div class="menu-overlay" id="menuOverlay"></div>
-<!--Header section End-->
-
-
-<section id="overview" class="dl-overview-section">
-    <div class="dl-overview-glow"></div>
-    <div class="dl-overview-pattern"></div>
-
-    <div class="container">
-        <div class="dl-overview-grid">
-
-            <!-- Left Content -->
-            <div class="dl-overview-content">
-
-                <div class="dl-overview-badge">
-                    <span class="dl-status-dot"></span>
-                    <span>Enterprise Fleet Management</span>
-                    <span class="dl-badge-divider">|</span>
-                    <span class="dl-badge-highlight">Office Document Module</span>
-                </div>
-
-                <h1 class="dl-overview-title">
-                    Manage Office Documents,
-                    <span class="dl-gradient-text">Track Validity Dates</span>
-                    &amp; Organize Document Expenses in One Place
-                </h1>
-
-                <p class="dl-overview-description">
-                    Managing office-related documents can be difficult when certificates, agreements, bills and other records are stored in different folders. Finding an old document, checking its validity or locating a payment-related record can take time. The Office Document Management Module helps businesses save important office document details in one system. Users can enter the document type and number, maintain validity dates, link an office vendor, record an amount and upload the document file for later use.
-                </p>
-
-                <!-- Action Buttons -->
-                <div class="dl-overview-actions">
-
-                    <button type="button" class="btn-primary"
-                        onclick="document.getElementById('simulator').scrollIntoView({behavior: 'smooth'})">
-                        <span>Try the Office Document Example</span>
-                        <i class="ri-arrow-right-line"></i>
+                    <button class="menu-toggle" id="menuToggle"
+                        aria-label="Toggle Menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
                     </button>
 
-                    <button type="button" class="dl-btn-demo"
-                        onclick="document.querySelector('.dl-demo-section').scrollIntoView({behavior: 'smooth'})">
-                        <span class="dl-play-icon">
-                            <i class="ri-play-fill"></i>
-                        </span>
-                        <span>Watch Demo Video</span>
-                    </button>
-                </div>
-
-                <!-- Statistics -->
-                <div class="dl-overview-stats">
-
-                    <div class="dl-stat-item">
-                        <div class="dl-stat-number">14</div>
-                        <div class="dl-stat-label">Module Features</div>
-                    </div>
-
-                    <div class="dl-stat-item">
-                        <div class="dl-stat-number dl-stat-red">6</div>
-                        <div class="dl-stat-label">Simple Steps</div>
-                    </div>
-
-                    <div class="dl-stat-item">
-                        <div class="dl-stat-number dl-stat-green">10 MB</div>
-                        <div class="dl-stat-label">Max Attachment Size</div>
-                    </div>
-
-                </div>
-            </div>
-
-            <!-- Right Image -->
-            <div class="dl-overview-visual">
-
-                <div class="dl-visual-card">
-
-                    <img
-                        src="Assets/images/hero_fleet_dispatch_1792482270822.jpg"
-                        alt="Transportation business office document management"
-                        class="dl-visual-image"
-                    >
-
-                    <div class="dl-visual-overlay"></div>
-
-                    <div class="dl-visual-topbar">
-
-                        <div class="dl-live-label">
-                            <span class="dl-live-dot"></span>
-                            <span>Office Documents</span>
-                        </div>
-
-                        <div class="dl-fuel-rate">
-                            DOC-2026-001
-                        </div>
-
-                    </div>
-
-                    <div class="dl-fuel-slip">
-
-                        <div class="dl-slip-header">
-                            <span class="dl-slip-title">
-                                Service Agreement · Illustrative Example
-                            </span>
-
-                            <span class="dl-slip-status">
-                                Attachment Saved
-                            </span>
-                        </div>
-
-                        <div class="dl-slip-stats">
-
-                            <div class="dl-slip-stat">
-                                <span class="dl-slip-label">Vendor</span>
-                                <span class="dl-slip-value">ABC Office Services</span>
-                            </div>
-
-                            <div class="dl-slip-stat">
-                                <span class="dl-slip-label">Validity To</span>
-                                <span class="dl-slip-value dl-slip-red">30-09-2027</span>
-                            </div>
-
-                            <div class="dl-slip-stat">
-                                <span class="dl-slip-label">Amount</span>
-                                <span class="dl-slip-value dl-slip-green">₹12,000</span>
-                            </div>
-
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-
-        </div>
-    </div>
-</section>
-
-
-<section class="dl-trusted-section">
-    <div class="dl-trusted-heading">
-        <span>
-            Certificates, Agreements, Bills and Other Records in One System
-        </span>
-    </div>
-
-    <div class="dl-trusted-marquee">
-        <div class="dl-trusted-fade dl-trusted-fade-left"></div>
-        <div class="dl-trusted-fade dl-trusted-fade-right"></div>
-
-        <div class="dl-trusted-track">
-
-            <div class="dl-trusted-group">
-                <div class="dl-trusted-item">
-                    <span class="dl-trusted-dot"></span>
-                    <span class="dl-trusted-name">Document Type</span>
-                </div>
-
-                <div class="dl-trusted-item">
-                    <span class="dl-trusted-dot"></span>
-                    <span class="dl-trusted-name">Document Number</span>
-                </div>
-
-                <div class="dl-trusted-item">
-                    <span class="dl-trusted-dot"></span>
-                    <span class="dl-trusted-name">Validity From</span>
-                </div>
-
-                <div class="dl-trusted-item">
-                    <span class="dl-trusted-dot"></span>
-                    <span class="dl-trusted-name">Validity To</span>
-                </div>
-
-                <div class="dl-trusted-item">
-                    <span class="dl-trusted-dot"></span>
-                    <span class="dl-trusted-name">Office Vendor</span>
-                </div>
-
-                <div class="dl-trusted-item">
-                    <span class="dl-trusted-dot"></span>
-                    <span class="dl-trusted-name">Document Amount</span>
-                </div>
-
-                <div class="dl-trusted-item">
-                    <span class="dl-trusted-dot"></span>
-                    <span class="dl-trusted-name">PDF</span>
-                </div>
-
-                <div class="dl-trusted-item">
-                    <span class="dl-trusted-dot"></span>
-                    <span class="dl-trusted-name">JPG</span>
-                </div>
-
-                <div class="dl-trusted-item">
-                    <span class="dl-trusted-dot"></span>
-                    <span class="dl-trusted-name">JPEG</span>
-                </div>
-
-                <div class="dl-trusted-item">
-                    <span class="dl-trusted-dot"></span>
-                    <span class="dl-trusted-name">PNG</span>
-                </div>
-
-                <div class="dl-trusted-item">
-                    <span class="dl-trusted-dot"></span>
-                    <span class="dl-trusted-name">Search &amp; Filters</span>
-                </div>
-
-                <div class="dl-trusted-item">
-                    <span class="dl-trusted-dot"></span>
-                    <span class="dl-trusted-name">Role-Based Access</span>
                 </div>
 
             </div>
+        </header>
 
-            <!-- Duplicate group for seamless looping -->
-            <div class="dl-trusted-group" aria-hidden="true">
-                <div class="dl-trusted-item">
-                    <span class="dl-trusted-dot"></span>
-                    <span class="dl-trusted-name">Document Type</span>
-                </div>
+        <!-- Add this after header -->
+        <div class="menu-overlay" id="menuOverlay"></div>
+        <!--Header section End-->
 
-                <div class="dl-trusted-item">
-                    <span class="dl-trusted-dot"></span>
-                    <span class="dl-trusted-name">Document Number</span>
-                </div>
+        <section id="overview" class="dl-overview-section">
+            <div class="dl-overview-glow"></div>
+            <div class="dl-overview-pattern"></div>
 
-                <div class="dl-trusted-item">
-                    <span class="dl-trusted-dot"></span>
-                    <span class="dl-trusted-name">Validity From</span>
-                </div>
+            <div class="container">
+                <div class="dl-overview-grid">
 
-                <div class="dl-trusted-item">
-                    <span class="dl-trusted-dot"></span>
-                    <span class="dl-trusted-name">Validity To</span>
-                </div>
+                    <!-- Left Content -->
+                    <div class="dl-overview-content">
 
-                <div class="dl-trusted-item">
-                    <span class="dl-trusted-dot"></span>
-                    <span class="dl-trusted-name">Office Vendor</span>
-                </div>
-
-                <div class="dl-trusted-item">
-                    <span class="dl-trusted-dot"></span>
-                    <span class="dl-trusted-name">Document Amount</span>
-                </div>
-
-                <div class="dl-trusted-item">
-                    <span class="dl-trusted-dot"></span>
-                    <span class="dl-trusted-name">PDF</span>
-                </div>
-
-                <div class="dl-trusted-item">
-                    <span class="dl-trusted-dot"></span>
-                    <span class="dl-trusted-name">JPG</span>
-                </div>
-
-                <div class="dl-trusted-item">
-                    <span class="dl-trusted-dot"></span>
-                    <span class="dl-trusted-name">JPEG</span>
-                </div>
-
-                <div class="dl-trusted-item">
-                    <span class="dl-trusted-dot"></span>
-                    <span class="dl-trusted-name">PNG</span>
-                </div>
-
-                <div class="dl-trusted-item">
-                    <span class="dl-trusted-dot"></span>
-                    <span class="dl-trusted-name">Search &amp; Filters</span>
-                </div>
-
-                <div class="dl-trusted-item">
-                    <span class="dl-trusted-dot"></span>
-                    <span class="dl-trusted-name">Role-Based Access</span>
-                </div>
-
-            </div>
-
-        </div>
-    </div>
-</section>
-
-
-<section class="dl-demo-section">
-    <div class="dl-demo-glow"></div>
-
-    <div class="dl-container">
-
-        <div class="heading-wrapper">
-
-            <span class="heading-tag">
-                Interactive Video Demonstration
-            </span>
-
-            <h2 class="heading-title">
-                Watch How <span>Office Document Management</span> Works
-            </h2>
-
-            <p>
-                Watch our step-by-step demonstration to learn how to add an office document, upload a file, view saved details, find a previous record and update document information.
-            </p>
-        </div>
-
-        <div class="dl-demo-grid">
-            <div class="dl-demo-video-column">
-
-                <div class="dl-video-card">
-
-                    <div class="dl-video-toolbar">
-                        <div class="dl-video-toolbar-left">
-                            <span class="dl-window-dot dl-dot-red"></span>
-                            <span class="dl-window-dot dl-dot-yellow"></span>
-                            <span class="dl-window-dot dl-dot-green"></span>
-
-                            <span class="dl-video-filename">
-                                Demo Video: Office Document Module
-                            </span>
-                        </div>
-                    </div>
-
-                    <div class="dl-video-preview">
-
-                        <img
-                            src="Assets/images/dashboard.png"
-                            alt="Office Document Management demonstration video preview"
-                            class="dl-video-thumbnail"
-                        >
-
-                        <div class="dl-video-overlay"></div>
-
-                        <button type="button" class="dl-video-play"
-                            aria-label="Play demonstration video">
-                            <i class="ri-play-fill"></i>
-                            <span class="dl-video-ping"></span>
-                        </button>
-
-                        <div class="dl-video-meta">
-                            <div class="dl-video-meta-left">
-                                <span class="dl-video-current-chapter">
-                                    [Demo Video Will Be Displayed Here]
-                                </span>
-                            </div>
+                        <div class="dl-overview-badge">
+                            <span class="dl-status-dot"></span>
+                            <span>Enterprise Fleet Management</span>
+                            <span class="dl-badge-divider">|</span>
+                            <span class="dl-badge-highlight">Office Document
+                                Module</span>
                         </div>
 
-                    </div>
+                        <h1 class="dl-overview-title">
+                            Manage Office Documents,
+                            <span class="dl-gradient-text">Track Validity
+                                Dates</span>
+                            &amp; Organize Document Expenses in One Place
+                        </h1>
 
-                    <div class="dl-video-footer">
-                        <div class="dl-video-footer-left">
-                            <button type="button" class="dl-watch-button">
-                                <i class="ri-play-circle-line"></i>
-                                <span>Watch Full Walkthrough</span>
+                        <p class="dl-overview-description">
+                            Managing office-related documents can be difficult
+                            when certificates, agreements, bills and other
+                            records are stored in different folders. Finding an
+                            old document, checking its validity or locating a
+                            payment-related record can take time. The Office
+                            Document Management Module helps businesses save
+                            important office document details in one system.
+                            Users can enter the document type and number,
+                            maintain validity dates, link an office vendor,
+                            record an amount and upload the document file for
+                            later use.
+                        </p>
+
+                        <!-- Action Buttons -->
+                        <div class="dl-overview-actions">
+
+                            <button type="button" class="btn-primary"
+                                onclick="document.getElementById('simulator').scrollIntoView({behavior: 'smooth'})">
+                                <span>Try the Office Document Example</span>
+                                <i class="ri-arrow-right-line"></i>
                             </button>
 
-                            <span class="dl-video-footer-note">
-                                Click to launch video playback in pop-up modal
+                            <button type="button" class="dl-btn-demo"
+                                onclick="document.querySelector('.dl-demo-section').scrollIntoView({behavior: 'smooth'})">
+                                <span class="dl-play-icon">
+                                    <i class="ri-play-fill"></i>
+                                </span>
+                                <span>Watch Demo Video</span>
+                            </button>
+                        </div>
+
+                        <!-- Statistics -->
+                        <div class="dl-overview-stats">
+
+                            <div class="dl-stat-item">
+                                <div class="dl-stat-number">14</div>
+                                <div class="dl-stat-label">Module Features</div>
+                            </div>
+
+                            <div class="dl-stat-item">
+                                <div class="dl-stat-number dl-stat-red">6</div>
+                                <div class="dl-stat-label">Simple Steps</div>
+                            </div>
+
+                            <div class="dl-stat-item">
+                                <div class="dl-stat-number dl-stat-green">10
+                                    MB</div>
+                                <div class="dl-stat-label">Max Attachment
+                                    Size</div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Right Image -->
+                    <div class="dl-overview-visual">
+
+                        <div class="dl-visual-card">
+
+                            <img
+                                src="Assets/images/hero_fleet_dispatch_1792482270822.jpg"
+                                alt="Transportation business office document management"
+                                class="dl-visual-image">
+
+                            <div class="dl-visual-overlay"></div>
+
+                            <div class="dl-visual-topbar">
+
+                                <div class="dl-live-label">
+                                    <span class="dl-live-dot"></span>
+                                    <span>Office Documents</span>
+                                </div>
+
+                                <div class="dl-fuel-rate">
+                                    DOC-2026-001
+                                </div>
+
+                            </div>
+
+                            <div class="dl-fuel-slip">
+
+                                <div class="dl-slip-header">
+                                    <span class="dl-slip-title">
+                                        Service Agreement · Illustrative Example
+                                    </span>
+
+                                    <span class="dl-slip-status">
+                                        Attachment Saved
+                                    </span>
+                                </div>
+
+                                <div class="dl-slip-stats">
+
+                                    <div class="dl-slip-stat">
+                                        <span
+                                            class="dl-slip-label">Vendor</span>
+                                        <span class="dl-slip-value">ABC Office
+                                            Services</span>
+                                    </div>
+
+                                    <div class="dl-slip-stat">
+                                        <span class="dl-slip-label">Validity
+                                            To</span>
+                                        <span
+                                            class="dl-slip-value dl-slip-red">30-09-2027</span>
+                                    </div>
+
+                                    <div class="dl-slip-stat">
+                                        <span
+                                            class="dl-slip-label">Amount</span>
+                                        <span
+                                            class="dl-slip-value dl-slip-green">₹12,000</span>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="dl-trusted-section">
+            <div class="dl-trusted-heading">
+                <span>
+                    Certificates, Agreements, Bills and Other Records in One
+                    System
+                </span>
+            </div>
+
+            <div class="dl-trusted-marquee">
+                <div class="dl-trusted-fade dl-trusted-fade-left"></div>
+                <div class="dl-trusted-fade dl-trusted-fade-right"></div>
+
+                <div class="dl-trusted-track">
+
+                    <div class="dl-trusted-group">
+                        <div class="dl-trusted-item">
+                            <span class="dl-trusted-dot"></span>
+                            <span class="dl-trusted-name">Document Type</span>
+                        </div>
+
+                        <div class="dl-trusted-item">
+                            <span class="dl-trusted-dot"></span>
+                            <span class="dl-trusted-name">Document Number</span>
+                        </div>
+
+                        <div class="dl-trusted-item">
+                            <span class="dl-trusted-dot"></span>
+                            <span class="dl-trusted-name">Validity From</span>
+                        </div>
+
+                        <div class="dl-trusted-item">
+                            <span class="dl-trusted-dot"></span>
+                            <span class="dl-trusted-name">Validity To</span>
+                        </div>
+
+                        <div class="dl-trusted-item">
+                            <span class="dl-trusted-dot"></span>
+                            <span class="dl-trusted-name">Office Vendor</span>
+                        </div>
+
+                        <div class="dl-trusted-item">
+                            <span class="dl-trusted-dot"></span>
+                            <span class="dl-trusted-name">Document Amount</span>
+                        </div>
+
+                        <div class="dl-trusted-item">
+                            <span class="dl-trusted-dot"></span>
+                            <span class="dl-trusted-name">PDF</span>
+                        </div>
+
+                        <div class="dl-trusted-item">
+                            <span class="dl-trusted-dot"></span>
+                            <span class="dl-trusted-name">JPG</span>
+                        </div>
+
+                        <div class="dl-trusted-item">
+                            <span class="dl-trusted-dot"></span>
+                            <span class="dl-trusted-name">JPEG</span>
+                        </div>
+
+                        <div class="dl-trusted-item">
+                            <span class="dl-trusted-dot"></span>
+                            <span class="dl-trusted-name">PNG</span>
+                        </div>
+
+                        <div class="dl-trusted-item">
+                            <span class="dl-trusted-dot"></span>
+                            <span class="dl-trusted-name">Search &amp;
+                                Filters</span>
+                        </div>
+
+                        <div class="dl-trusted-item">
+                            <span class="dl-trusted-dot"></span>
+                            <span class="dl-trusted-name">Role-Based
+                                Access</span>
+                        </div>
+
+                    </div>
+
+                    <!-- Duplicate group for seamless looping -->
+                    <div class="dl-trusted-group" aria-hidden="true">
+                        <div class="dl-trusted-item">
+                            <span class="dl-trusted-dot"></span>
+                            <span class="dl-trusted-name">Document Type</span>
+                        </div>
+
+                        <div class="dl-trusted-item">
+                            <span class="dl-trusted-dot"></span>
+                            <span class="dl-trusted-name">Document Number</span>
+                        </div>
+
+                        <div class="dl-trusted-item">
+                            <span class="dl-trusted-dot"></span>
+                            <span class="dl-trusted-name">Validity From</span>
+                        </div>
+
+                        <div class="dl-trusted-item">
+                            <span class="dl-trusted-dot"></span>
+                            <span class="dl-trusted-name">Validity To</span>
+                        </div>
+
+                        <div class="dl-trusted-item">
+                            <span class="dl-trusted-dot"></span>
+                            <span class="dl-trusted-name">Office Vendor</span>
+                        </div>
+
+                        <div class="dl-trusted-item">
+                            <span class="dl-trusted-dot"></span>
+                            <span class="dl-trusted-name">Document Amount</span>
+                        </div>
+
+                        <div class="dl-trusted-item">
+                            <span class="dl-trusted-dot"></span>
+                            <span class="dl-trusted-name">PDF</span>
+                        </div>
+
+                        <div class="dl-trusted-item">
+                            <span class="dl-trusted-dot"></span>
+                            <span class="dl-trusted-name">JPG</span>
+                        </div>
+
+                        <div class="dl-trusted-item">
+                            <span class="dl-trusted-dot"></span>
+                            <span class="dl-trusted-name">JPEG</span>
+                        </div>
+
+                        <div class="dl-trusted-item">
+                            <span class="dl-trusted-dot"></span>
+                            <span class="dl-trusted-name">PNG</span>
+                        </div>
+
+                        <div class="dl-trusted-item">
+                            <span class="dl-trusted-dot"></span>
+                            <span class="dl-trusted-name">Search &amp;
+                                Filters</span>
+                        </div>
+
+                        <div class="dl-trusted-item">
+                            <span class="dl-trusted-dot"></span>
+                            <span class="dl-trusted-name">Role-Based
+                                Access</span>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="dl-demo-section">
+            <div class="dl-demo-glow"></div>
+
+            <div class="dl-container">
+
+                <div class="heading-wrapper">
+
+                    <span class="heading-tag">
+                        Interactive Video Demonstration
+                    </span>
+
+                    <h2 class="heading-title">
+                        Watch How <span>Office Document Management</span> Works
+                    </h2>
+
+                    <p>
+                        Watch our step-by-step demonstration to learn how to add
+                        an office document, upload a file, view saved details,
+                        find a previous record and update document information.
+                    </p>
+                </div>
+
+                <div class="dl-demo-grid">
+                    <div class="dl-demo-video-column">
+
+                        <div class="dl-video-card">
+
+                            <div class="dl-video-toolbar">
+                                <div class="dl-video-toolbar-left">
+                                    <span
+                                        class="dl-window-dot dl-dot-red"></span>
+                                    <span
+                                        class="dl-window-dot dl-dot-yellow"></span>
+                                    <span
+                                        class="dl-window-dot dl-dot-green"></span>
+
+                                    <span class="dl-video-filename">
+                                        Demo Video: Office Document Module
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="dl-video-preview">
+
+                                <img
+                                    src="Assets/images/dashboard.png"
+                                    alt="Office Document Management demonstration video preview"
+                                    class="dl-video-thumbnail">
+
+                                <div class="dl-video-overlay"></div>
+
+                                <button type="button" class="dl-video-play"
+                                    aria-label="Play demonstration video">
+                                    <i class="ri-play-fill"></i>
+                                    <span class="dl-video-ping"></span>
+                                </button>
+
+                                <div class="dl-video-meta">
+                                    <div class="dl-video-meta-left">
+                                        <span class="dl-video-current-chapter">
+                                            [Demo Video Will Be Displayed Here]
+                                        </span>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="dl-video-footer">
+                                <div class="dl-video-footer-left">
+                                    <button type="button"
+                                        class="dl-watch-button">
+                                        <i class="ri-play-circle-line"></i>
+                                        <span>Watch Full Walkthrough</span>
+                                    </button>
+
+                                    <span class="dl-video-footer-note">
+                                        Click to launch video playback in pop-up
+                                        modal
+                                    </span>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="simulator" class="dl-simulator-section">
+            <div class="dl-container">
+
+                <div class="dl-simulator-header">
+                    <div class="heading-wrapper heading-wrap-left">
+
+                        <span class="heading-tag">
+                            Practical Example
+                        </span>
+
+                        <h2 class="heading-title">
+                            Adding an <span>Office Agreement</span>
+                        </h2>
+
+                        <p>
+                            Suppose a business wants to store a service
+                            agreement with an office supplier. A staff member
+                            adds its type, number and validity period, chooses
+                            the vendor, enters the related amount and uploads
+                            the signed PDF. Later, the team can search for the
+                            agreement number and open the attachment.
+                        </p>
+                    </div>
+
+                    <div class="dl-view-switcher">
+                        <button type="button"
+                            class="dl-view-tab dl-view-tab-active">
+                            <i class="ri-file-add-line"></i>
+                            Add Document
+                        </button>
+
+                        <button type="button" class="dl-view-tab">
+                            <i class="ri-folder-open-line"></i>
+                            Office Documents
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Summary Statistics -->
+                <div class="dl-stats-grid">
+
+                    <div class="dl-stat-card">
+                        <div class="dl-stat-label">
+                            <span>Document Type</span>
+                            <i class="ri-price-tag-3-line"></i>
+                        </div>
+                        <div class="dl-stat-value"
+                            style="font-size:1.25rem">Service Agreement</div>
+                        <p class="dl-stat-note">No fixed list of categories</p>
+                    </div>
+
+                    <div class="dl-stat-card">
+                        <div class="dl-stat-label">
+                            <span>Document Number</span>
+                            <i class="ri-hashtag dl-red-icon"></i>
+                        </div>
+                        <div class="dl-stat-value dl-red-text"
+                            style="font-size:1.4rem">DOC-2026-001</div>
+                        <p class="dl-stat-note">Must be unique</p>
+                    </div>
+
+                    <div class="dl-stat-card">
+                        <div class="dl-stat-label">
+                            <span>Validity</span>
+                            <i class="ri-calendar-check-line dl-green-icon"></i>
+                        </div>
+                        <div class="dl-stat-value dl-green-text"
+                            style="font-size:1.1rem">01-10-2026 →
+                            30-09-2027</div>
+                        <p class="dl-stat-note">Validity From → Validity To</p>
+                    </div>
+
+                    <div class="dl-stat-card dl-stat-card-total">
+                        <div class="dl-stat-label">
+                            <span>Amount</span>
+                            <span class="dl-status-dot"></span>
+                        </div>
+                        <div
+                            class="dl-stat-value dl-stat-total-value">₹12,000</div>
+                        <p class="dl-stat-note dl-green-text">Document-related
+                            cost, fee or charge</p>
+                    </div>
+
+                </div>
+
+                <div class="dl-calculator-panel">
+
+                    <div class="dl-bill-master">
+
+                        <div class="dl-bill-master-header">
+                            <div class="dl-bill-heading">
+                                <span>Enter Document Information</span>
+                                <span class="dl-heading-separator">·</span>
+                                <span class="dl-invoice-number">Illustrative
+                                    values</span>
+                            </div>
+
+                            <div class="dl-receipt-actions">
+                                <a href="#" class="dl-secondary-button"
+                                    onclick="return false;">
+                                    <i class="ri-attachment-line"></i>
+                                    <span>View Signed agreement.pdf</span>
+                                </a>
+
+                                <label for="od-upload"
+                                    class="dl-secondary-button dl-upload-button">
+                                    <i class="ri-upload-2-line"></i>
+                                    <span id="od-upload-label">Upload
+                                        Attachment</span>
+                                    <input id="od-upload" type="file"
+                                        accept=".pdf,.jpg,.jpeg,.png">
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="dl-bill-fields">
+
+                            <div class="dl-form-group">
+                                <label for="od-type">Document Type</label>
+                                <input id="od-type" class="dl-form-control"
+                                    type="text" value="Service Agreement">
+                            </div>
+
+                            <div class="dl-form-group">
+                                <label for="od-number">Document Number</label>
+                                <input id="od-number" class="dl-form-control"
+                                    type="text" value="DOC-2026-001">
+                            </div>
+
+                            <div class="dl-form-group">
+                                <label for="od-from">Validity From</label>
+                                <input id="od-from" class="dl-form-control"
+                                    type="date" value="2026-10-01">
+                            </div>
+
+                            <div class="dl-form-group">
+                                <label for="od-to">Validity To</label>
+                                <input id="od-to" class="dl-form-control"
+                                    type="date" value="2027-09-30">
+                            </div>
+
+                            <div class="dl-form-group">
+                                <label for="od-vendor">Office Vendor</label>
+                                <select id="od-vendor" class="dl-form-control">
+                                    <option>ABC Office Services</option>
+                                </select>
+                            </div>
+
+                            <div class="dl-form-group">
+                                <label for="od-amount">Amount (₹)</label>
+                                <input id="od-amount" class="dl-form-control"
+                                    type="number" min="0" value="12000">
+                            </div>
+
+                        </div>
+
+                        <div class="dl-bill-options">
+                            <span class="dl-formula-note">
+                                Attach a PDF, JPG, JPEG or PNG file. The system
+                                accepts files up to 10 MB. Vendor and amount can
+                                be left empty when they do not apply.
+                            </span>
+                            <button type="button" class="dl-primary-button">
+                                <i class="ri-save-3-line"></i>
+                                Save Document
+                            </button>
+                        </div>
+
+                    </div>
+
+                    <div class="dl-table-toolbar">
+
+                        <div class="dl-search-box">
+                            <i class="ri-search-line"></i>
+                            <input type="search" id="od-search"
+                                placeholder="Search document type or number...">
+                        </div>
+
+                    </div>
+
+                    <div class="dl-table-wrapper">
+                        <table class="dl-vehicle-table">
+                            <thead>
+                                <tr>
+                                    <th>Document Type</th>
+                                    <th>Document Number</th>
+                                    <th>Validity From</th>
+                                    <th>Validity To</th>
+                                    <th>Office Vendor</th>
+                                    <th class="dl-text-right">Amount</th>
+                                    <th>Attachment</th>
+                                    <th class="dl-text-center">Action</th>
+                                </tr>
+                            </thead>
+
+                            <tbody id="od-body">
+                                <tr>
+                                    <td>Service Agreement</td>
+                                    <td>DOC-2026-001</td>
+                                    <td>01-10-2026</td>
+                                    <td>30-09-2027</td>
+                                    <td>ABC Office Services</td>
+                                    <td
+                                        class="dl-text-right dl-row-total">₹12,000</td>
+                                    <td>Signed agreement.pdf</td>
+                                    <td class="dl-text-center">
+                                        <button type="button"
+                                            class="dl-delete-button"
+                                            title="View"><i
+                                                class="ri-eye-line"></i></button>
+                                        <button type="button"
+                                            class="dl-delete-button"
+                                            title="Edit"><i
+                                                class="ri-edit-line"></i></button>
+                                        <button type="button"
+                                            class="dl-delete-button"
+                                            title="Delete"><i
+                                                class="ri-delete-bin-line"></i></button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="dl-calculator-footer">
+
+                        <div class="dl-documentation-note">
+                            <i class="ri-information-line"></i>
+                            <span>
+                                <strong>Note:</strong>
+                                The values above are illustrative. The type and
+                                vendor must be available or entered through the
+                                supported form workflow.
                             </span>
                         </div>
+
+                        <div class="dl-supported-formats">
+                            Supported Attachment Formats: PDF, JPG, JPEG, PNG
+                            (up to 10 MB)
+                        </div>
+
                     </div>
 
                 </div>
 
             </div>
-        </div>
+        </section>
 
-    </div>
-</section>
+        <!--dl feature section start-->
+        <section id="features" class="dl-features-section">
 
+            <div class="container">
 
-<section id="simulator" class="dl-simulator-section">
-    <div class="dl-container">
+                <div class="heading-wrapper">
 
-        <div class="dl-simulator-header">
-            <div class="heading-wrapper heading-wrap-left">
-
-                <span class="heading-tag">
-                    Practical Example
-                </span>
-
-                <h2 class="heading-title">
-                    Adding an <span>Office Agreement</span>
-                </h2>
-
-                <p>
-                    Suppose a business wants to store a service agreement with an office supplier. A staff member adds its type, number and validity period, chooses the vendor, enters the related amount and uploads the signed PDF. Later, the team can search for the agreement number and open the attachment.
-                </p>
-            </div>
-
-            <div class="dl-view-switcher">
-                <button type="button" class="dl-view-tab dl-view-tab-active">
-                    <i class="ri-file-add-line"></i>
-                    Add Document
-                </button>
-
-                <button type="button" class="dl-view-tab">
-                    <i class="ri-folder-open-line"></i>
-                    Office Documents
-                </button>
-            </div>
-        </div>
-
-        <!-- Summary Statistics -->
-        <div class="dl-stats-grid">
-
-            <div class="dl-stat-card">
-                <div class="dl-stat-label">
-                    <span>Document Type</span>
-                    <i class="ri-price-tag-3-line"></i>
-                </div>
-                <div class="dl-stat-value" style="font-size:1.25rem">Service Agreement</div>
-                <p class="dl-stat-note">No fixed list of categories</p>
-            </div>
-
-            <div class="dl-stat-card">
-                <div class="dl-stat-label">
-                    <span>Document Number</span>
-                    <i class="ri-hashtag dl-red-icon"></i>
-                </div>
-                <div class="dl-stat-value dl-red-text" style="font-size:1.4rem">DOC-2026-001</div>
-                <p class="dl-stat-note">Must be unique</p>
-            </div>
-
-            <div class="dl-stat-card">
-                <div class="dl-stat-label">
-                    <span>Validity</span>
-                    <i class="ri-calendar-check-line dl-green-icon"></i>
-                </div>
-                <div class="dl-stat-value dl-green-text" style="font-size:1.1rem">01-10-2026 → 30-09-2027</div>
-                <p class="dl-stat-note">Validity From → Validity To</p>
-            </div>
-
-            <div class="dl-stat-card dl-stat-card-total">
-                <div class="dl-stat-label">
-                    <span>Amount</span>
-                    <span class="dl-status-dot"></span>
-                </div>
-                <div class="dl-stat-value dl-stat-total-value">₹12,000</div>
-                <p class="dl-stat-note dl-green-text">Document-related cost, fee or charge</p>
-            </div>
-
-        </div>
-
-        <div class="dl-calculator-panel">
-
-            <div class="dl-bill-master">
-
-                <div class="dl-bill-master-header">
-                    <div class="dl-bill-heading">
-                        <span>Enter Document Information</span>
-                        <span class="dl-heading-separator">·</span>
-                        <span class="dl-invoice-number">Illustrative values</span>
-                    </div>
-
-                    <div class="dl-receipt-actions">
-                        <a href="#" class="dl-secondary-button" onclick="return false;">
-                            <i class="ri-attachment-line"></i>
-                            <span>View Signed agreement.pdf</span>
-                        </a>
-
-                        <label for="od-upload" class="dl-secondary-button dl-upload-button">
-                            <i class="ri-upload-2-line"></i>
-                            <span id="od-upload-label">Upload Attachment</span>
-                            <input id="od-upload" type="file" accept=".pdf,.jpg,.jpeg,.png">
-                        </label>
-                    </div>
-                </div>
-
-                <div class="dl-bill-fields">
-
-                    <div class="dl-form-group">
-                        <label for="od-type">Document Type</label>
-                        <input id="od-type" class="dl-form-control" type="text" value="Service Agreement">
-                    </div>
-
-                    <div class="dl-form-group">
-                        <label for="od-number">Document Number</label>
-                        <input id="od-number" class="dl-form-control" type="text" value="DOC-2026-001">
-                    </div>
-
-                    <div class="dl-form-group">
-                        <label for="od-from">Validity From</label>
-                        <input id="od-from" class="dl-form-control" type="date" value="2026-10-01">
-                    </div>
-
-                    <div class="dl-form-group">
-                        <label for="od-to">Validity To</label>
-                        <input id="od-to" class="dl-form-control" type="date" value="2027-09-30">
-                    </div>
-
-                    <div class="dl-form-group">
-                        <label for="od-vendor">Office Vendor</label>
-                        <select id="od-vendor" class="dl-form-control">
-                            <option>ABC Office Services</option>
-                        </select>
-                    </div>
-
-                    <div class="dl-form-group">
-                        <label for="od-amount">Amount (₹)</label>
-                        <input id="od-amount" class="dl-form-control" type="number" min="0" value="12000">
-                    </div>
-
-                </div>
-
-                <div class="dl-bill-options">
-                    <span class="dl-formula-note">
-                        Attach a PDF, JPG, JPEG or PNG file. The system accepts files up to 10 MB. Vendor and amount can be left empty when they do not apply.
+                    <span class="heading-tag">
+                        Module Features
                     </span>
-                    <button type="button" class="dl-primary-button">
-                        <i class="ri-save-3-line"></i>
-                        Save Document
+
+                    <h2 class="heading-title">
+                        Office Document Module <span>Features</span>
+                    </h2>
+
+                    <p>
+                        Everything the Office Document module offers for
+                        storing, finding and managing office records.
+                    </p>
+
+                    <div class="dl-features-filters">
+                        <button type="button" class="dl-filter-btn is-active"
+                            data-filter="all">All Features (14)</button>
+                        <button type="button" class="dl-filter-btn"
+                            data-filter="records">Document Records</button>
+                        <button type="button" class="dl-filter-btn"
+                            data-filter="vendors">Vendors, Amounts &amp;
+                            Payments</button>
+                        <button type="button" class="dl-filter-btn"
+                            data-filter="files">Digital Files</button>
+                        <button type="button" class="dl-filter-btn"
+                            data-filter="access">Search &amp; Access</button>
+                    </div>
+                </div>
+
+                <div class="dl-features-grid">
+
+                    <!-- Feature 4.1 -->
+                    <article class="dl-feature-card" data-category="records">
+                        <div class="dl-feature-card-content">
+                            <div class="dl-feature-icon">
+                                <i class="ri-folder-2-line"></i>
+                            </div>
+
+                            <div class="dl-feature-card-heading">
+                                <h3>Centralized Office Document Records</h3>
+                            </div>
+
+                            <p>
+                                Keep important office document information
+                                together instead of storing details in separate
+                                files or registers.
+                            </p>
+                        </div>
+                    </article>
+
+                    <!-- Feature 4.2 -->
+                    <article class="dl-feature-card" data-category="records">
+                        <div class="dl-feature-card-content">
+                            <div class="dl-feature-icon">
+                                <i class="ri-price-tag-3-line"></i>
+                            </div>
+
+                            <div class="dl-feature-card-heading">
+                                <h3>Flexible Document Types</h3>
+                            </div>
+
+                            <p>
+                                Organize records by document type. Users can
+                                select an existing type or provide a type name
+                                according to the form's available options; the
+                                system does not impose a fixed list of office
+                                document categories.
+                            </p>
+                        </div>
+                    </article>
+
+                    <!-- Feature 4.3 -->
+                    <article class="dl-feature-card" data-category="records">
+                        <div class="dl-feature-card-content">
+                            <div class="dl-feature-icon">
+                                <i class="ri-hashtag"></i>
+                            </div>
+
+                            <div class="dl-feature-card-heading">
+                                <h3>Document Number Management</h3>
+                            </div>
+
+                            <p>
+                                Record a document reference number to make
+                                identification easier. The system checks that
+                                the same document number is not already assigned
+                                to another office document.
+                            </p>
+                        </div>
+                    </article>
+
+                    <!-- Feature 4.4 -->
+                    <article class="dl-feature-card" data-category="records">
+                        <div class="dl-feature-card-content">
+                            <div class="dl-feature-icon">
+                                <i class="ri-calendar-check-line"></i>
+                            </div>
+
+                            <div class="dl-feature-card-heading">
+                                <h3>Validity Date Records</h3>
+                            </div>
+
+                            <p>
+                                Maintain Validity From and Validity To dates for
+                                documents that have a defined validity period.
+                                These dates make it easier to review when a
+                                document is valid.
+                            </p>
+                        </div>
+                    </article>
+
+                    <!-- Feature 4.5 -->
+                    <article class="dl-feature-card" data-category="vendors">
+                        <div class="dl-feature-card-content">
+                            <div class="dl-feature-icon">
+                                <i class="ri-store-2-line"></i>
+                            </div>
+
+                            <div class="dl-feature-card-heading">
+                                <h3>Office Vendor Association</h3>
+                            </div>
+
+                            <p>
+                                Link an office document to an available active
+                                office vendor when the document relates to a
+                                supplier or service provider.
+                            </p>
+                        </div>
+                    </article>
+
+                    <!-- Feature 4.6 -->
+                    <article class="dl-feature-card" data-category="vendors">
+                        <div class="dl-feature-card-content">
+                            <div class="dl-feature-icon">
+                                <i class="ri-money-rupee-circle-line"></i>
+                            </div>
+
+                            <div class="dl-feature-card-heading">
+                                <h3>Document Amount Recording</h3>
+                            </div>
+
+                            <p>
+                                Add an amount to record a document-related cost,
+                                fee or charge when applicable.
+                            </p>
+                        </div>
+                    </article>
+
+                    <!-- Feature 4.7 -->
+                    <article class="dl-feature-card" data-category="files">
+                        <div class="dl-feature-card-content">
+                            <div class="dl-feature-icon">
+                                <i class="ri-file-upload-line"></i>
+                            </div>
+
+                            <div class="dl-feature-card-heading">
+                                <h3>Digital File Upload</h3>
+                            </div>
+
+                            <p>
+                                Store PDF or image attachments with a saved
+                                document, helping users access a digital copy
+                                instead of searching paper files.
+                            </p>
+                        </div>
+                    </article>
+
+                    <!-- Feature 4.8 -->
+                    <article class="dl-feature-card"
+                        data-category="files access">
+                        <div class="dl-feature-card-content">
+                            <div class="dl-feature-icon">
+                                <i class="ri-eye-line"></i>
+                            </div>
+
+                            <div class="dl-feature-card-heading">
+                                <h3>Secure File View and Download</h3>
+                            </div>
+
+                            <p>
+                                Authorized users can preview attached files in
+                                the browser or download them. Document links use
+                                time-limited access tokens.
+                            </p>
+                        </div>
+                    </article>
+
+                    <!-- Feature 4.9 -->
+                    <article class="dl-feature-card" data-category="access">
+                        <div class="dl-feature-card-content">
+                            <div class="dl-feature-icon">
+                                <i class="ri-search-line"></i>
+                            </div>
+
+                            <div class="dl-feature-card-heading">
+                                <h3>Search and Document Filters</h3>
+                            </div>
+
+                            <p>
+                                Find entries using their document type or
+                                document number. The listing also supports
+                                payment-status filtering and vendor-name
+                                sorting.
+                            </p>
+                        </div>
+                    </article>
+
+                    <!-- Feature 4.10 -->
+                    <article class="dl-feature-card" data-category="records">
+                        <div class="dl-feature-card-content">
+                            <div class="dl-feature-icon">
+                                <i class="ri-file-info-line"></i>
+                            </div>
+
+                            <div class="dl-feature-card-heading">
+                                <h3>Document Detail View</h3>
+                            </div>
+
+                            <p>
+                                Open a record to review its document type,
+                                number, validity dates, linked vendor, amount
+                                and available attachment.
+                            </p>
+                        </div>
+                    </article>
+
+                    <!-- Feature 4.11 -->
+                    <article class="dl-feature-card" data-category="files">
+                        <div class="dl-feature-card-content">
+                            <div class="dl-feature-icon">
+                                <i class="ri-edit-line"></i>
+                            </div>
+
+                            <div class="dl-feature-card-heading">
+                                <h3>Edit and Replace Attachments</h3>
+                            </div>
+
+                            <p>
+                                Authorized users can update document details and
+                                upload a replacement document file when
+                                information changes.
+                            </p>
+                        </div>
+                    </article>
+
+                    <!-- Feature 4.12 -->
+                    <article class="dl-feature-card" data-category="access">
+                        <div class="dl-feature-card-content">
+                            <div class="dl-feature-icon">
+                                <i class="ri-delete-bin-line"></i>
+                            </div>
+
+                            <div class="dl-feature-card-heading">
+                                <h3>Delete Document Records</h3>
+                            </div>
+
+                            <p>
+                                Users with delete permission can remove office
+                                document records, including their stored
+                                attachment.
+                            </p>
+                        </div>
+                    </article>
+
+                    <!-- Feature 4.13 -->
+                    <article class="dl-feature-card" data-category="vendors">
+                        <div class="dl-feature-card-content">
+                            <div class="dl-feature-icon">
+                                <i class="ri-wallet-3-line"></i>
+                            </div>
+
+                            <div class="dl-feature-card-heading">
+                                <h3>Payment-Related Tracking</h3>
+                            </div>
+
+                            <p>
+                                Office document records support payment
+                                allocations and the listing can be filtered by
+                                payment status. Actual payment entry actions
+                                depend on the separate payment workflow.
+                            </p>
+                        </div>
+                    </article>
+
+                    <!-- Feature 4.14 -->
+                    <article class="dl-feature-card" data-category="access">
+                        <div class="dl-feature-card-content">
+                            <div class="dl-feature-icon">
+                                <i class="ri-shield-user-line"></i>
+                            </div>
+
+                            <div class="dl-feature-card-heading">
+                                <h3>Role-Based Access</h3>
+                            </div>
+
+                            <p>
+                                Viewing, creating, editing and deleting office
+                                document records are controlled by user
+                                permissions.
+                            </p>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+        <!--dl feature section end-->
+
+        <!--workflow section start-->
+        <section class="dl-workflow-section">
+            <div class="container">
+
+                <div class="heading-wrapper heading-wrap-left">
+
+                    <span class="heading-tag">
+                        Step-by-Step Workflow
+                    </span>
+
+                    <h2 class="heading-title">
+                        How Does the <span>Office Document Module</span> Work?
+                    </h2>
+
+                    <p>
+                        Six steps take you from opening Office Documents to
+                        searching and updating saved records.
+                    </p>
+
+                </div>
+
+                <div class="dl-workflow-grid">
+
+                    <!-- Workflow Step 01 -->
+                    <article class="dl-workflow-card">
+                        <div class="dl-workflow-card-content">
+
+                            <div class="dl-workflow-card-top">
+                                <span class="dl-workflow-number">01</span>
+
+                                <div class="dl-workflow-icon">
+                                    <i class="ri-folder-open-line"></i>
+                                </div>
+                            </div>
+
+                            <h3 class="dl-workflow-card-title">
+                                Open Office Documents
+                            </h3>
+
+                            <p class="dl-workflow-card-description">
+                                Open the Office Documents section to see
+                                previously saved records.
+                            </p>
+
+                            <ul class="dl-workflow-checklist">
+                                <li>
+                                    <i class="ri-check-line"></i>
+                                    <span>You can review the listing</span>
+                                </li>
+                                <li>
+                                    <i class="ri-check-line"></i>
+                                    <span>Or choose to add a new document</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                    </article>
+
+                    <!-- Workflow Step 02 -->
+                    <article class="dl-workflow-card">
+                        <div class="dl-workflow-card-content">
+
+                            <div class="dl-workflow-card-top">
+                                <span class="dl-workflow-number">02</span>
+
+                                <div class="dl-workflow-icon">
+                                    <i class="ri-file-edit-line"></i>
+                                </div>
+                            </div>
+
+                            <h3 class="dl-workflow-card-title">
+                                Enter Document Information
+                            </h3>
+
+                            <p class="dl-workflow-card-description">
+                                Select or enter the document type, add a
+                                document number if available, and enter Validity
+                                From and Validity To dates where relevant.
+                            </p>
+
+                            <ul class="dl-workflow-checklist">
+                                <li>
+                                    <i class="ri-check-line"></i>
+                                    <span>Document type can be selected or
+                                        entered</span>
+                                </li>
+                                <li>
+                                    <i class="ri-check-line"></i>
+                                    <span>Document number is optional</span>
+                                </li>
+                                <li>
+                                    <i class="ri-check-line"></i>
+                                    <span>Validity dates are entered where
+                                        relevant</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                    </article>
+
+                    <!-- Workflow Step 03 -->
+                    <article class="dl-workflow-card">
+                        <div class="dl-workflow-card-content">
+
+                            <div class="dl-workflow-card-top">
+                                <span class="dl-workflow-number">03</span>
+
+                                <div class="dl-workflow-icon">
+                                    <i class="ri-store-2-line"></i>
+                                </div>
+                            </div>
+
+                            <h3 class="dl-workflow-card-title">
+                                Link a Vendor and Amount
+                            </h3>
+
+                            <p class="dl-workflow-card-description">
+                                Choose the related office vendor and enter the
+                                document-related amount if applicable.
+                            </p>
+
+                            <ul class="dl-workflow-checklist">
+                                <li>
+                                    <i class="ri-check-line"></i>
+                                    <span>These fields can be left empty when
+                                        they do not apply</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                    </article>
+
+                    <!-- Workflow Step 04 -->
+                    <article class="dl-workflow-card">
+                        <div class="dl-workflow-card-content">
+
+                            <div class="dl-workflow-card-top">
+                                <span class="dl-workflow-number">04</span>
+
+                                <div class="dl-workflow-icon">
+                                    <i class="ri-file-upload-line"></i>
+                                </div>
+                            </div>
+
+                            <h3 class="dl-workflow-card-title">
+                                Upload a Digital Copy
+                            </h3>
+
+                            <p class="dl-workflow-card-description">
+                                Attach a PDF, JPG, JPEG or PNG file to the
+                                document record.
+                            </p>
+
+                            <ul class="dl-workflow-checklist">
+                                <li>
+                                    <i class="ri-check-line"></i>
+                                    <span>The system accepts files up to 10
+                                        MB</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                    </article>
+
+                    <!-- Workflow Step 05 -->
+                    <article class="dl-workflow-card">
+                        <div class="dl-workflow-card-content">
+
+                            <div class="dl-workflow-card-top">
+                                <span class="dl-workflow-number">05</span>
+
+                                <div class="dl-workflow-icon">
+                                    <i class="ri-save-3-line"></i>
+                                </div>
+                            </div>
+
+                            <h3 class="dl-workflow-card-title">
+                                Save and View
+                            </h3>
+
+                            <p class="dl-workflow-card-description">
+                                Save the document.
+                            </p>
+
+                            <ul class="dl-workflow-checklist">
+                                <li>
+                                    <i class="ri-check-line"></i>
+                                    <span>Open the saved record to view its
+                                        details</span>
+                                </li>
+                                <li>
+                                    <i class="ri-check-line"></i>
+                                    <span>Preview the attachment or download the
+                                        file</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                    </article>
+
+                    <!-- Workflow Step 06 -->
+                    <article class="dl-workflow-card">
+                        <div class="dl-workflow-card-content">
+
+                            <div class="dl-workflow-card-top">
+                                <span class="dl-workflow-number">06</span>
+
+                                <div class="dl-workflow-icon">
+                                    <i class="ri-search-eye-line"></i>
+                                </div>
+                            </div>
+
+                            <h3 class="dl-workflow-card-title">
+                                Search, Filter and Update
+                            </h3>
+
+                            <p class="dl-workflow-card-description">
+                                Find saved records using document type or
+                                number, and use available payment-status
+                                filters.
+                            </p>
+
+                            <ul class="dl-workflow-checklist">
+                                <li>
+                                    <i class="ri-check-line"></i>
+                                    <span>Authorized users can edit document
+                                        details</span>
+                                </li>
+                                <li>
+                                    <i class="ri-check-line"></i>
+                                    <span>Replace attachments or delete
+                                        records</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                    </article>
+
+                </div>
+            </div>
+            <div class="et-container">
+                <div class="workflow-bottom">
+
+                    <!-- Security Card -->
+                    <div class="security-card">
+                        <img src="./Assets/images/workflow-img.png"
+                            alt="workflow-img">
+
+                        <div class="security-content">
+                            <h3>Enterprise-Grade Security</h3>
+
+                            <p>
+                                Protect sensitive business information with
+                                encrypted data storage, secure user
+                                authentication, and controlled system access.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Right Side -->
+                    <div class="workflow-info">
+
+                        <div class="stats-card">
+                            <h3>98%</h3>
+
+                            <h4>Customer Satisfaction</h4>
+
+                            <p>
+                                Provide accurate ETAs, live shipment updates,
+                                and faster response times that improve customer
+                                trust and retention.
+                            </p>
+                        </div>
+
+                        <div class="workflow-content">
+                            <p>
+                                Explore a powerful collection of intelligent
+                                modules built to streamline your daily transport
+                                operations. Manage vehicles, drivers, trips, and
+                                business performance seamlessly through one
+                                unified platform.
+                            </p>
+
+                            <a href="#" class="workflow-btn">
+                                Explore All Modules <i
+                                    class="ri-arrow-right-line"></i>
+                            </a>
+                        </div>
+
+                        <div class="info-card">
+                            <div class="info-icon">
+                                <i class="ri-bar-chart-2-fill"></i>
+                            </div>
+
+                            <span>
+                                Visualize business performance instantly
+                            </span>
+                        </div>
+
+                        <div class="info-card">
+                            <div class="info-icon">
+                                <i class="ri-lock-unlock-line"></i>
+                            </div>
+
+                            <span>
+                                Access your business securely from anywhere
+                            </span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+        <!--workflow section end-->
+
+        <!--results section start-->
+        <section id="benefits" class="results-section">
+
+            <div class="container">
+
+                <div class="heading-wrapper">
+
+                    <span class="heading-tag">
+                        Proven Advantages
+                    </span>
+
+                    <h2 class="heading-title heading-light">
+                        Benefits of <span>Office Document Management</span>
+                    </h2>
+
+                    <p>
+                        Keep office documents, dates, vendors and attachments
+                        organized and easy to reach.
+                    </p>
+
+                </div>
+
+                <div class="results-grid">
+
+                    <div class="result-card">
+
+                        <div class="result-icon">
+                            <i class="ri-time-line"></i>
+                        </div>
+
+                        <h3>
+                            Save Time
+                        </h3>
+
+                        <p>
+                            Find saved office documents without searching
+                            multiple paper folders.
+                        </p>
+
+                    </div>
+
+                    <div class="result-card">
+
+                        <div class="result-icon">
+                            <i class="ri-folder-shield-2-line"></i>
+                        </div>
+
+                        <h3>
+                            Keep Records Organized
+                        </h3>
+
+                        <p>
+                            Maintain document numbers, categories, dates,
+                            vendors and attachments in one place.
+                        </p>
+
+                    </div>
+
+                    <div class="result-card">
+
+                        <div class="result-icon">
+                            <i class="ri-eye-line"></i>
+                        </div>
+
+                        <h3>
+                            Improve Document Access
+                        </h3>
+
+                        <p>
+                            Preview or download documents whenever an authorized
+                            user needs them.
+                        </p>
+
+                    </div>
+
+                    <div class="result-card">
+
+                        <div class="result-icon">
+                            <i class="ri-money-rupee-circle-line"></i>
+                        </div>
+
+                        <h3>
+                            Track Related Costs
+                        </h3>
+
+                        <p>
+                            Keep relevant document charges and payment-related
+                            information associated with the record.
+                        </p>
+
+                    </div>
+
+                    <div class="result-card">
+
+                        <div class="result-icon">
+                            <i class="ri-edit-line"></i>
+                        </div>
+
+                        <h3>
+                            Make Corrections Easily
+                        </h3>
+
+                        <p>
+                            Update document details or replace an attachment
+                            when the information changes.
+                        </p>
+
+                    </div>
+
+                    <div class="result-card">
+
+                        <div class="result-icon">
+                            <i class="ri-lock-line"></i>
+                        </div>
+
+                        <h3>
+                            Control Access
+                        </h3>
+
+                        <p>
+                            Use user permissions to limit who can view or modify
+                            office records.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+        <!--results section end-->
+
+        <!--transport-section start-->
+        <section class="transport-section">
+            <div class="container">
+
+                <!-- Left Content -->
+                <div class="transport-container">
+                    <div class="heading-wrapper heading-wrap-left">
+                        <span class="heading-tag">
+                            Transportation Management
+                        </span>
+
+                        <h2 class="heading-title">
+                            Manage Your Transportation <span> Operations
+                                Efficiently </span>
+                        </h2>
+
+                        <p>
+                            Track vehicles, manage drivers, monitor fuel usage,
+                            handle maintenance schedules, and streamline daily
+                            transportation operations from one centralized cloud
+                            platform.
+                        </p>
+
+                    </div>
+                    <!-- Right Side -->
+                    <div class="transport-image-wrapper">
+                        <img src="./Assets/images/tms-img.png"
+                            alt="Transportation Dashboard"
+                            class="transport-image">
+                        <!-- Decorative Shape -->
+                        <div class="transport-shape"></div>
+                        <!-- Floating Card -->
+                        <div class="transport-card">
+                            <ul class="transport-list">
+                                <li>
+                                    <i class="ri-checkbox-circle-line"></i>
+                                    <span>Real-time fleet and vehicle
+                                        monitoring</span>
+                                </li>
+
+                                <li>
+                                    <i class="ri-checkbox-circle-line"></i>
+                                    <span>Driver management and attendance
+                                        tracking</span>
+                                </li>
+
+                                <li>
+                                    <i class="ri-checkbox-circle-line"></i>
+                                    <span>Fuel logs and expense
+                                        management</span>
+                                </li>
+
+                                <li>
+                                    <i class="ri-checkbox-circle-line"></i>
+                                    <span>Maintenance alerts and service
+                                        scheduling</span>
+                                </li>
+
+                                <li>
+                                    <i class="ri-checkbox-circle-line"></i>
+                                    <span>Vehicle documents and compliance
+                                        tracking</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--transport section end-->
+
+        <!--dl-faq section start-->
+        <section id="faq" class="dl-faq-section">
+            <div class="container">
+                <div class="heading-wrapper">
+
+                    <span class="heading-tag">
+                        Got Questions?
+                    </span>
+
+                    <h2 class="heading-title">
+                        Frequently Asked <span>Questions</span>
+                    </h2>
+
+                    <p>
+                        Everything you need to know about storing and managing
+                        office documents.
+                    </p>
+
+                    <div class="dl-faq-filters">
+                        <button class="dl-faq-filter active"
+                            type="button">All</button>
+                        <button class="dl-faq-filter"
+                            type="button">Files</button>
+                        <button class="dl-faq-filter"
+                            type="button">Validity</button>
+                        <button class="dl-faq-filter"
+                            type="button">Vendors</button>
+                        <button class="dl-faq-filter"
+                            type="button">Search</button>
+                        <button class="dl-faq-filter"
+                            type="button">Editing</button>
+                        <button class="dl-faq-filter"
+                            type="button">Payments</button>
+                    </div>
+                </div>
+
+                <div class="dl-faq-list">
+
+                    <!-- FAQ 1 -->
+                    <div class="dl-faq-item active" data-category="files">
+                        <button
+                            class="dl-faq-question"
+                            type="button"
+                            aria-expanded="true"
+                            aria-controls="dl-faq-answer-1">
+                            <span class="dl-faq-question-content">
+                                <span class="dl-faq-number">Q1</span>
+                                <span class="dl-faq-question-text">
+                                    Can I upload PDF and image files?
+                                </span>
+                            </span>
+
+                            <span class="dl-faq-arrow">
+                                <i class="ri-arrow-down-s-line"></i>
+                            </span>
+                        </button>
+
+                        <div class="dl-faq-answer" id="dl-faq-answer-1">
+                            <div class="dl-faq-answer-content">
+                                <p>
+                                    Yes. PDF, JPG, JPEG and PNG files up to 10
+                                    MB are supported.
+                                </p>
+
+                                <div class="dl-faq-topic">
+                                    <span>Topic: Files</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- FAQ 2 -->
+                    <div class="dl-faq-item" data-category="validity">
+                        <button
+                            class="dl-faq-question"
+                            type="button"
+                            aria-expanded="false"
+                            aria-controls="dl-faq-answer-2">
+                            <span class="dl-faq-question-content">
+                                <span class="dl-faq-number">Q2</span>
+                                <span class="dl-faq-question-text">
+                                    Can I record validity dates?
+                                </span>
+                            </span>
+
+                            <span class="dl-faq-arrow">
+                                <i class="ri-arrow-down-s-line"></i>
+                            </span>
+                        </button>
+
+                        <div class="dl-faq-answer" id="dl-faq-answer-2">
+                            <div class="dl-faq-answer-content">
+                                <p>
+                                    Yes. You can enter Validity From and
+                                    Validity To dates when applicable.
+                                </p>
+
+                                <div class="dl-faq-topic">
+                                    <span>Topic: Validity</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- FAQ 3 -->
+                    <div class="dl-faq-item" data-category="vendors">
+                        <button
+                            class="dl-faq-question"
+                            type="button"
+                            aria-expanded="false"
+                            aria-controls="dl-faq-answer-3">
+                            <span class="dl-faq-question-content">
+                                <span class="dl-faq-number">Q3</span>
+                                <span class="dl-faq-question-text">
+                                    Do I need to add a vendor for every
+                                    document?
+                                </span>
+                            </span>
+
+                            <span class="dl-faq-arrow">
+                                <i class="ri-arrow-down-s-line"></i>
+                            </span>
+                        </button>
+
+                        <div class="dl-faq-answer" id="dl-faq-answer-3">
+                            <div class="dl-faq-answer-content">
+                                <p>
+                                    No. A vendor can be linked when relevant;
+                                    the vendor field is optional.
+                                </p>
+
+                                <div class="dl-faq-topic">
+                                    <span>Topic: Vendors</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- FAQ 4 -->
+                    <div class="dl-faq-item" data-category="search">
+                        <button
+                            class="dl-faq-question"
+                            type="button"
+                            aria-expanded="false"
+                            aria-controls="dl-faq-answer-4">
+                            <span class="dl-faq-question-content">
+                                <span class="dl-faq-number">Q4</span>
+                                <span class="dl-faq-question-text">
+                                    Can I find a document by its number?
+                                </span>
+                            </span>
+
+                            <span class="dl-faq-arrow">
+                                <i class="ri-arrow-down-s-line"></i>
+                            </span>
+                        </button>
+
+                        <div class="dl-faq-answer" id="dl-faq-answer-4">
+                            <div class="dl-faq-answer-content">
+                                <p>
+                                    Yes. Search and suggestions are available
+                                    for document numbers.
+                                </p>
+
+                                <div class="dl-faq-topic">
+                                    <span>Topic: Search</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- FAQ 5 -->
+                    <div class="dl-faq-item" data-category="editing">
+                        <button
+                            class="dl-faq-question"
+                            type="button"
+                            aria-expanded="false"
+                            aria-controls="dl-faq-answer-5">
+                            <span class="dl-faq-question-content">
+                                <span class="dl-faq-number">Q5</span>
+                                <span class="dl-faq-question-text">
+                                    Can I edit an uploaded document?
+                                </span>
+                            </span>
+
+                            <span class="dl-faq-arrow">
+                                <i class="ri-arrow-down-s-line"></i>
+                            </span>
+                        </button>
+
+                        <div class="dl-faq-answer" id="dl-faq-answer-5">
+                            <div class="dl-faq-answer-content">
+                                <p>
+                                    Authorized users can edit the record and
+                                    upload a replacement attachment.
+                                </p>
+
+                                <div class="dl-faq-topic">
+                                    <span>Topic: Editing</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- FAQ 6 -->
+                    <div class="dl-faq-item" data-category="files">
+                        <button
+                            class="dl-faq-question"
+                            type="button"
+                            aria-expanded="false"
+                            aria-controls="dl-faq-answer-6">
+                            <span class="dl-faq-question-content">
+                                <span class="dl-faq-number">Q6</span>
+                                <span class="dl-faq-question-text">
+                                    Can I download the saved attachment?
+                                </span>
+                            </span>
+
+                            <span class="dl-faq-arrow">
+                                <i class="ri-arrow-down-s-line"></i>
+                            </span>
+                        </button>
+
+                        <div class="dl-faq-answer" id="dl-faq-answer-6">
+                            <div class="dl-faq-answer-content">
+                                <p>
+                                    Yes. Authorized users can view and download
+                                    available documents.
+                                </p>
+
+                                <div class="dl-faq-topic">
+                                    <span>Topic: Files</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- FAQ 7 -->
+                    <div class="dl-faq-item" data-category="validity">
+                        <button
+                            class="dl-faq-question"
+                            type="button"
+                            aria-expanded="false"
+                            aria-controls="dl-faq-answer-7">
+                            <span class="dl-faq-question-content">
+                                <span class="dl-faq-number">Q7</span>
+                                <span class="dl-faq-question-text">
+                                    Does the module automatically renew or
+                                    notify me before expiry?
+                                </span>
+                            </span>
+
+                            <span class="dl-faq-arrow">
+                                <i class="ri-arrow-down-s-line"></i>
+                            </span>
+                        </button>
+
+                        <div class="dl-faq-answer" id="dl-faq-answer-7">
+                            <div class="dl-faq-answer-content">
+                                <p>
+                                    The supplied Office Documents code stores
+                                    validity dates, but it does not establish
+                                    automatic renewal or expiry notifications.
+                                </p>
+
+                                <div class="dl-faq-topic">
+                                    <span>Topic: Validity</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- FAQ 8 -->
+                    <div class="dl-faq-item" data-category="payments">
+                        <button
+                            class="dl-faq-question"
+                            type="button"
+                            aria-expanded="false"
+                            aria-controls="dl-faq-answer-8">
+                            <span class="dl-faq-question-content">
+                                <span class="dl-faq-number">Q8</span>
+                                <span class="dl-faq-question-text">
+                                    Can I check payment status?
+                                </span>
+                            </span>
+
+                            <span class="dl-faq-arrow">
+                                <i class="ri-arrow-down-s-line"></i>
+                            </span>
+                        </button>
+
+                        <div class="dl-faq-answer" id="dl-faq-answer-8">
+                            <div class="dl-faq-answer-content">
+                                <p>
+                                    The listing supports payment-status
+                                    filtering, and document records support
+                                    payment allocations.
+                                </p>
+
+                                <div class="dl-faq-topic">
+                                    <span>Topic: Payments</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="dl-faq-cta">
+                    <div class="dl-faq-cta-content">
+                        <h3>Simplify Your Office Document Management</h3>
+                        <p>
+                            Keep office documents, validity details, vendor
+                            information and related amounts organized in one
+                            place. With digital attachments, easy searching and
+                            permission-based access, everyday office document
+                            administration becomes more convenient.
+                        </p>
+                    </div>
+
+                    <button class="dl-faq-cta-button" type="button"
+                        onclick="document.getElementById('simulator').scrollIntoView({behavior: 'smooth'})">
+                        Try the Office Document Example
                     </button>
                 </div>
 
             </div>
+        </section>
+        <!--dl-faq section end-->
 
-            <div class="dl-table-toolbar">
-
-                <div class="dl-search-box">
-                    <i class="ri-search-line"></i>
-                    <input type="search" id="od-search" placeholder="Search document type or number...">
+        <!--footer section start-->
+        <footer class="footer">
+            <!-- Newsletter -->
+            <div class="footer-newsletter">
+                <div class="container">
+                    <div class="newsletter-wrapper">
+                        <div class="newsletter-content">
+                            <h2>Stay ahead of the curve</h2>
+                            <p>
+                                Fleet management insights, product updates, and
+                                industry news.
+                            </p>
+                        </div>
+                        <form class="newsletter-form">
+                            <input type="email" placeholder="Enter your email"
+                                aria-label="Email address for newsletter">
+                            <button type="submit">
+                                Subscribe
+                                <i class="ri-arrow-right-line"></i>
+                            </button>
+                        </form>
+                    </div>
                 </div>
-
             </div>
-
-            <div class="dl-table-wrapper">
-                <table class="dl-vehicle-table">
-                    <thead>
-                        <tr>
-                            <th>Document Type</th>
-                            <th>Document Number</th>
-                            <th>Validity From</th>
-                            <th>Validity To</th>
-                            <th>Office Vendor</th>
-                            <th class="dl-text-right">Amount</th>
-                            <th>Attachment</th>
-                            <th class="dl-text-center">Action</th>
-                        </tr>
-                    </thead>
-
-                    <tbody id="od-body">
-                        <tr>
-                            <td>Service Agreement</td>
-                            <td>DOC-2026-001</td>
-                            <td>01-10-2026</td>
-                            <td>30-09-2027</td>
-                            <td>ABC Office Services</td>
-                            <td class="dl-text-right dl-row-total">₹12,000</td>
-                            <td>Signed agreement.pdf</td>
-                            <td class="dl-text-center">
-                                <button type="button" class="dl-delete-button" title="View"><i class="ri-eye-line"></i></button>
-                                <button type="button" class="dl-delete-button" title="Edit"><i class="ri-edit-line"></i></button>
-                                <button type="button" class="dl-delete-button" title="Delete"><i class="ri-delete-bin-line"></i></button>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-
-            <div class="dl-calculator-footer">
-
-                <div class="dl-documentation-note">
-                    <i class="ri-information-line"></i>
-                    <span>
-                        <strong>Note:</strong>
-                        The values above are illustrative. The type and vendor must be available or entered through the supported form workflow.
-                    </span>
-                </div>
-
-                <div class="dl-supported-formats">
-                    Supported Attachment Formats: PDF, JPG, JPEG, PNG (up to 10 MB)
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-</section>
-
-
-<!--dl feature section start-->
-<section id="features" class="dl-features-section">
-
-    <div class="container">
-
-        <div class="heading-wrapper">
-
-            <span class="heading-tag">
-                Module Features
-            </span>
-
-            <h2 class="heading-title">
-                Office Document Module <span>Features</span>
-            </h2>
-
-            <p>
-                Everything the Office Document module offers for storing, finding and managing office records.
-            </p>
-
-            <div class="dl-features-filters">
-                <button type="button" class="dl-filter-btn is-active" data-filter="all">All Features (14)</button>
-                <button type="button" class="dl-filter-btn" data-filter="records">Document Records</button>
-                <button type="button" class="dl-filter-btn" data-filter="vendors">Vendors, Amounts &amp; Payments</button>
-                <button type="button" class="dl-filter-btn" data-filter="files">Digital Files</button>
-                <button type="button" class="dl-filter-btn" data-filter="access">Search &amp; Access</button>
-            </div>
-        </div>
-
-        <div class="dl-features-grid">
-
-            <!-- Feature 4.1 -->
-            <article class="dl-feature-card" data-category="records">
-                <div class="dl-feature-card-content">
-                    <div class="dl-feature-icon">
-                        <i class="ri-folder-2-line"></i>
-                    </div>
-
-                    <div class="dl-feature-card-heading">
-                        <h3>Centralized Office Document Records</h3>
-                    </div>
-
-                    <p>
-                        Keep important office document information together instead of storing details in separate files or registers.
-                    </p>
-                </div>
-            </article>
-
-            <!-- Feature 4.2 -->
-            <article class="dl-feature-card" data-category="records">
-                <div class="dl-feature-card-content">
-                    <div class="dl-feature-icon">
-                        <i class="ri-price-tag-3-line"></i>
-                    </div>
-
-                    <div class="dl-feature-card-heading">
-                        <h3>Flexible Document Types</h3>
-                    </div>
-
-                    <p>
-                        Organize records by document type. Users can select an existing type or provide a type name according to the form's available options; the system does not impose a fixed list of office document categories.
-                    </p>
-                </div>
-            </article>
-
-            <!-- Feature 4.3 -->
-            <article class="dl-feature-card" data-category="records">
-                <div class="dl-feature-card-content">
-                    <div class="dl-feature-icon">
-                        <i class="ri-hashtag"></i>
-                    </div>
-
-                    <div class="dl-feature-card-heading">
-                        <h3>Document Number Management</h3>
-                    </div>
-
-                    <p>
-                        Record a document reference number to make identification easier. The system checks that the same document number is not already assigned to another office document.
-                    </p>
-                </div>
-            </article>
-
-            <!-- Feature 4.4 -->
-            <article class="dl-feature-card" data-category="records">
-                <div class="dl-feature-card-content">
-                    <div class="dl-feature-icon">
-                        <i class="ri-calendar-check-line"></i>
-                    </div>
-
-                    <div class="dl-feature-card-heading">
-                        <h3>Validity Date Records</h3>
-                    </div>
-
-                    <p>
-                        Maintain Validity From and Validity To dates for documents that have a defined validity period. These dates make it easier to review when a document is valid.
-                    </p>
-                </div>
-            </article>
-
-            <!-- Feature 4.5 -->
-            <article class="dl-feature-card" data-category="vendors">
-                <div class="dl-feature-card-content">
-                    <div class="dl-feature-icon">
-                        <i class="ri-store-2-line"></i>
-                    </div>
-
-                    <div class="dl-feature-card-heading">
-                        <h3>Office Vendor Association</h3>
-                    </div>
-
-                    <p>
-                        Link an office document to an available active office vendor when the document relates to a supplier or service provider.
-                    </p>
-                </div>
-            </article>
-
-            <!-- Feature 4.6 -->
-            <article class="dl-feature-card" data-category="vendors">
-                <div class="dl-feature-card-content">
-                    <div class="dl-feature-icon">
-                        <i class="ri-money-rupee-circle-line"></i>
-                    </div>
-
-                    <div class="dl-feature-card-heading">
-                        <h3>Document Amount Recording</h3>
-                    </div>
-
-                    <p>
-                        Add an amount to record a document-related cost, fee or charge when applicable.
-                    </p>
-                </div>
-            </article>
-
-            <!-- Feature 4.7 -->
-            <article class="dl-feature-card" data-category="files">
-                <div class="dl-feature-card-content">
-                    <div class="dl-feature-icon">
-                        <i class="ri-file-upload-line"></i>
-                    </div>
-
-                    <div class="dl-feature-card-heading">
-                        <h3>Digital File Upload</h3>
-                    </div>
-
-                    <p>
-                        Store PDF or image attachments with a saved document, helping users access a digital copy instead of searching paper files.
-                    </p>
-                </div>
-            </article>
-
-            <!-- Feature 4.8 -->
-            <article class="dl-feature-card" data-category="files access">
-                <div class="dl-feature-card-content">
-                    <div class="dl-feature-icon">
-                        <i class="ri-eye-line"></i>
-                    </div>
-
-                    <div class="dl-feature-card-heading">
-                        <h3>Secure File View and Download</h3>
-                    </div>
-
-                    <p>
-                        Authorized users can preview attached files in the browser or download them. Document links use time-limited access tokens.
-                    </p>
-                </div>
-            </article>
-
-            <!-- Feature 4.9 -->
-            <article class="dl-feature-card" data-category="access">
-                <div class="dl-feature-card-content">
-                    <div class="dl-feature-icon">
-                        <i class="ri-search-line"></i>
-                    </div>
-
-                    <div class="dl-feature-card-heading">
-                        <h3>Search and Document Filters</h3>
-                    </div>
-
-                    <p>
-                        Find entries using their document type or document number. The listing also supports payment-status filtering and vendor-name sorting.
-                    </p>
-                </div>
-            </article>
-
-            <!-- Feature 4.10 -->
-            <article class="dl-feature-card" data-category="records">
-                <div class="dl-feature-card-content">
-                    <div class="dl-feature-icon">
-                        <i class="ri-file-info-line"></i>
-                    </div>
-
-                    <div class="dl-feature-card-heading">
-                        <h3>Document Detail View</h3>
-                    </div>
-
-                    <p>
-                        Open a record to review its document type, number, validity dates, linked vendor, amount and available attachment.
-                    </p>
-                </div>
-            </article>
-
-            <!-- Feature 4.11 -->
-            <article class="dl-feature-card" data-category="files">
-                <div class="dl-feature-card-content">
-                    <div class="dl-feature-icon">
-                        <i class="ri-edit-line"></i>
-                    </div>
-
-                    <div class="dl-feature-card-heading">
-                        <h3>Edit and Replace Attachments</h3>
-                    </div>
-
-                    <p>
-                        Authorized users can update document details and upload a replacement document file when information changes.
-                    </p>
-                </div>
-            </article>
-
-            <!-- Feature 4.12 -->
-            <article class="dl-feature-card" data-category="access">
-                <div class="dl-feature-card-content">
-                    <div class="dl-feature-icon">
-                        <i class="ri-delete-bin-line"></i>
-                    </div>
-
-                    <div class="dl-feature-card-heading">
-                        <h3>Delete Document Records</h3>
-                    </div>
-
-                    <p>
-                        Users with delete permission can remove office document records, including their stored attachment.
-                    </p>
-                </div>
-            </article>
-
-            <!-- Feature 4.13 -->
-            <article class="dl-feature-card" data-category="vendors">
-                <div class="dl-feature-card-content">
-                    <div class="dl-feature-icon">
-                        <i class="ri-wallet-3-line"></i>
-                    </div>
-
-                    <div class="dl-feature-card-heading">
-                        <h3>Payment-Related Tracking</h3>
-                    </div>
-
-                    <p>
-                        Office document records support payment allocations and the listing can be filtered by payment status. Actual payment entry actions depend on the separate payment workflow.
-                    </p>
-                </div>
-            </article>
-
-            <!-- Feature 4.14 -->
-            <article class="dl-feature-card" data-category="access">
-                <div class="dl-feature-card-content">
-                    <div class="dl-feature-icon">
-                        <i class="ri-shield-user-line"></i>
-                    </div>
-
-                    <div class="dl-feature-card-heading">
-                        <h3>Role-Based Access</h3>
-                    </div>
-
-                    <p>
-                        Viewing, creating, editing and deleting office document records are controlled by user permissions.
-                    </p>
-                </div>
-            </article>
-
-        </div>
-    </div>
-</section>
-<!--dl feature section end-->
-
-<!--workflow section start-->
-<section class="dl-workflow-section">
-    <div class="container">
-
-        <div class="heading-wrapper heading-wrap-left">
-
-            <span class="heading-tag">
-                Step-by-Step Workflow
-            </span>
-
-            <h2 class="heading-title">
-                How Does the <span>Office Document Module</span> Work?
-            </h2>
-
-            <p>
-                Six steps take you from opening Office Documents to searching and updating saved records.
-            </p>
-
-        </div>
-
-        <div class="dl-workflow-grid">
-
-            <!-- Workflow Step 01 -->
-            <article class="dl-workflow-card">
-                <div class="dl-workflow-card-content">
-
-                    <div class="dl-workflow-card-top">
-                        <span class="dl-workflow-number">01</span>
-
-                        <div class="dl-workflow-icon">
-                            <i class="ri-folder-open-line"></i>
+            <!-- Footer Main -->
+            <div class="footer-main">
+                <div class="container">
+                    <div class="footer-grid">
+                        <!-- Left -->
+                        <div class="footer-about">
+                            <a href="#" class="footer-logo">
+                                <img
+                                    src="Assets/images/transportdesk-logo-dark.svg"
+                                    alt="TransportDesk" width="252" height="84">
+                            </a>
+                            <p>
+                                The intelligent transportation platform that
+                                puts fleet directors
+                                in complete control of their operations.
+                            </p>
+                            <div class="footer-social">
+                                <a href="#" aria-label="Facebook"><i
+                                        class="ri-facebook-fill"></i></a>
+                                <a href="#" aria-label="Instagram"><i
+                                        class="ri-instagram-line"></i></a>
+                                <a href="#" aria-label="Twitter"><i
+                                        class="ri-twitter-line"></i></a>
+                                <a href="#" aria-label="LinkedIn"><i
+                                        class="ri-linkedin-fill"></i></a>
+                            </div>
+                        </div>
+                        <!-- Product -->
+                        <div class="footer-links">
+                            <h3>Product</h3>
+                            <ul>
+                                <li>
+                                    <a href="features.html"
+                                        class="footer-link">Features</a>
+                                </li>
+                                <li>
+                                    <a href="modules.html"
+                                        class="footer-link">Modules</a>
+                                </li>
+                                <li>
+                                    <a href="solutions.html"
+                                        class="footer-link">Solutions</a>
+                                </li>
+                                <li>
+                                    <a href="reports.html"
+                                        class="footer-link">Reports</a>
+                                </li>
+                                <li>
+                                    <a href="contact.html"
+                                        class="footer-link">Contact</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- Resources -->
+                        <div class="footer-links">
+                            <h3>Resources</h3>
+                            <ul>
+                                <li><a href="documentation.html"
+                                        class="footer-link">Documentation</a></li>
+                                <li><a href="faq.html"
+                                        class="footer-link">FAQ</a></li>
+                                <li><a href="privacy-policy.html"
+                                        class="footer-link">Privacy
+                                        Policy</a></li>
+                            </ul>
+                        </div>
+                        <!-- Support -->
+                        <div class="footer-links">
+                            <h3>Support</h3>
+                            <ul>
+                                <li><a href="#" class="footer-link">Help
+                                        Center</a></li>
+                                <li><a href="#"
+                                        class="footer-link">Status</a></li>
+                                <li><a href="#"
+                                        class="footer-link">Security</a></li>
+                            </ul>
+                        </div>
+                        <!-- Contact -->
+                        <div class="footer-contact">
+                            <!-- India Office -->
+                            <div class="footer-office">
+                                <h4 class="footer-office-title">
+                                    <span class="footer-country-flag">
+                                        <svg xmlns="http://www.w3.org/2000/svg"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink"
+                                            width="800px" height="800px"
+                                            viewBox="0 0 36 36"
+                                            aria-hidden="true" role="img"
+                                            class="iconify iconify--twemoji"
+                                            preserveAspectRatio="xMidYMid meet"><path
+                                                fill="#138808"
+                                                d="M0 27a4 4 0 0 0 4 4h28a4 4 0 0 0 4-4v-4H0v4z"></path><path
+                                                fill="#EEE"
+                                                d="M0 13h36v10H0z"></path><path
+                                                fill="#F93"
+                                                d="M36 13V9a4 4 0 0 0-4-4H4a4 4 0 0 0-4 4v4h36z"></path><circle
+                                                fill="navy" cx="18" cy="18"
+                                                r="4"></circle><circle
+                                                fill="#EEE" cx="18" cy="18"
+                                                r="3"></circle><path
+                                                fill="#6666B3"
+                                                d="M18 15l.146 2.264l1.001-2.035l-.73 2.147l1.704-1.498l-1.497 1.705l2.147-.731l-2.035 1.002L21 18l-2.264.146l2.035 1.001l-2.147-.73l1.497 1.704l-1.704-1.497l.73 2.147l-1.001-2.035L18 21l-.146-2.264l-1.002 2.035l.731-2.147l-1.705 1.497l1.498-1.704l-2.147.73l2.035-1.001L15 18l2.264-.146l-2.035-1.002l2.147.731l-1.498-1.705l1.705 1.498l-.731-2.147l1.002 2.035z"></path><circle
+                                                fill="navy" cx="18" cy="18"
+                                                r="1"></circle></svg>
+                                    </span>
+                                    India Office
+                                </h4>
+
+                                <div class="contact-item">
+                                    <div class="icon">
+                                        <i class="ri-phone-fill"></i>
+                                    </div>
+                                    <div>
+                                        <span>Phone</span>
+                                        <a href="tel:+916355258003">
+                                            +91 6355 258 003
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="contact-item">
+                                    <div class="icon">
+                                        <i class="ri-map-pin-line"></i>
+                                    </div>
+                                    <div>
+                                        <span>Address</span>
+                                        <p>
+                                            The Galleria Business Hub, Adajan
+                                            Gam,
+                                            Pal Gam, Surat, Gujarat, India
+                                            394510
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="contact-item">
+                                    <div class="icon">
+                                        <i class="ri-mail-line"></i>
+                                    </div>
+                                    <div>
+                                        <span>Email</span>
+                                        <a href="mailto:jay@prismitsystems.com">
+                                            jay@prismitsystems.com
+                                        </a>
+                                    </div>
+                                </div></div>
+                            <!-- Subtle Divider -->
+
+                            <!-- USA Office -->
+                            <div class="footer-office">
+                                <h4 class="footer-office-title">
+                                    <span class="footer-country-flag"><svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink"
+                                            height="800px" width="800px"
+                                            version="1.1" id="Layer_1"
+                                            viewBox="0 0 496 496"
+                                            xml:space="preserve">
+                                            <path style="fill:#FFFFFF;"
+                                                d="M496,369.6c0,27.2-21.6,48.8-48,48.8H48c-26.4,0-48-21.6-48-48.8V126.4c0-27.2,21.6-43.8,48-43.8h400  c26.4,0,48,16.6,48,43.8V369.6z"></path>
+                                            <path style="fill:#CCE4E5;"
+                                                d="M448,77.6H48l400,340.8c26.4,0,48-21.6,48-48.8V126.4C496,99.2,474.4,77.6,448,77.6z"></path>
+                                            <path style="fill:#AED3D3;"
+                                                d="M448,77.6H48l448,137.6v-88.8C496,99.2,474.4,77.6,448,77.6z"></path>
+                                            <g>
+                                                <path style="fill:#B22234;"
+                                                    d="M4.9,391.2c7.5,15.4,22.7,26.2,40.5,27.1c0.9,0,1.7,0.1,2.6,0.1h400.3c0,0,3.5-0.3,4.6-0.7   c1.7-0.6,1.9-2,0.6-3.1l-0.4-0.4L426,391.1H4.9V391.2z"></path>
+                                                <polygon style="fill:#B22234;"
+                                                    points="120.9,131.2 0,131.2 0,157.2 151.4,157.2  "></polygon>
+                                                <polygon style="fill:#B22234;"
+                                                    points="181.9,183.2 0,183.2 0,209.2 212.5,209.2  "></polygon>
+                                                <polygon style="fill:#B22234;"
+                                                    points="242.8,235.2 0,235.2 0,261.6 273.2,261.6  "></polygon>
+                                                <polygon style="fill:#B22234;"
+                                                    points="303.6,287.2 0,287.2 0,313.6 334.8,313.6  "></polygon>
+                                                <polygon style="fill:#B22234;"
+                                                    points="373.4,346.3 365,339.2 0,339.2 0,365.6 395.6,365.6  "></polygon>
+                                            </g>
+                                            <path style="fill:#FFFFFF;"
+                                                d="M48,418.4c-0.9,0-1.7,0-2.6-0.1C46.3,418.4,47.1,418.4,48,418.4z"></path>
+                                            <g>
+                                                <polygon style="fill:#8C1126;"
+                                                    points="238.4,131.2 110.9,131.2 141.4,157.2 323.2,157.2  "></polygon>
+                                                <polygon style="fill:#8C1126;"
+                                                    points="202.5,209.2 488.5,209.2 403.8,183.2 171.9,183.2  "></polygon>
+                                                <polygon style="fill:#8C1126;"
+                                                    points="264,261.6 496,261.6 496,235.2 233,235.2  "></polygon>
+                                                <polygon style="fill:#8C1126;"
+                                                    points="325,313.6 496,313.6 496,287.2 294,287.2  "></polygon>
+                                                <polygon style="fill:#8C1126;"
+                                                    points="363.4,346.3 386,365.6 496,365.6 496,339.2 355.2,339.2  "></polygon>
+                                            </g>
+                                            <g>
+                                                <polygon style="fill:#5B0218;"
+                                                    points="222.5,131.2 286,150.7 307.2,157.2 496,157.2 496,131.2  "></polygon>
+                                                <polygon style="fill:#5B0218;"
+                                                    points="392,183.2 476.8,209.2 496,209.2 496,183.2  "></polygon>
+                                                <path style="fill:#5B0218;"
+                                                    d="M486.4,97.1c-1.4-1.9-2.9-3.6-4.5-5.3c-8.1-8.2-19.1-13.5-31.3-14.1c-0.8,0-1.7-0.1-2.5-0.1l0,0H48   c-13.1,0-25.5,5.9-34.4,14.7c-3.5,3.7-6.5,7.9-8.7,12.5h75h56.6H491C489.8,102.1,488.2,99.5,486.4,97.1z"></path>
+                                            </g>
+                                            <path style="fill:#8C1126;"
+                                                d="M491.1,391.2h-75l31.9,27.2C466.8,418.4,483.2,407.4,491.1,391.2z"></path>
+                                            <path style="fill:#3C3B6E;"
+                                                d="M0,126.4v134.4h215.2V77.6H44.8C20,79.2,0,100,0,126.4z"></path>
+                                            <polygon style="fill:#1E1E44;"
+                                                points="215.2,220 215.2,77.6 48,77.6 "></polygon>
+                                            <polygon
+                                                points="215.2,128.8 215.2,77.6 48,77.6 "></polygon>
+                                            <g>
+                                                <polygon style="fill:#FFFFFF;"
+                                                    points="60.8,96 64,85.6 68,96  "></polygon>
+                                                <polygon style="fill:#FFFFFF;"
+                                                    points="104,96 107.2,85.6 110.4,96  "></polygon>
+                                                <polygon style="fill:#FFFFFF;"
+                                                    points="146.4,96 150.4,85.6 153.6,96  "></polygon>
+                                                <polygon style="fill:#FFFFFF;"
+                                                    points="189.6,96 192.8,85.6 196.8,96  "></polygon>
+                                                <polygon style="fill:#FFFFFF;"
+                                                    points="39.2,114.4 43.2,104 46.4,114.4  "></polygon>
+                                                <polygon style="fill:#FFFFFF;"
+                                                    points="82.4,114.4 85.6,104 89.6,114.4  "></polygon>
+                                                <polygon style="fill:#FFFFFF;"
+                                                    points="125.6,114.4 128.8,104 132,114.4  "></polygon>
+                                                <polygon style="fill:#FFFFFF;"
+                                                    points="168,114.4 171.2,104 175.2,114.4  "></polygon>
+                                                <polygon style="fill:#FFFFFF;"
+                                                    points="18.4,132.8 21.6,122.4 24.8,132.8  "></polygon>
+                                                <polygon style="fill:#FFFFFF;"
+                                                    points="60.8,132.8 64,122.4 68,132.8  "></polygon>
+                                                <polygon style="fill:#FFFFFF;"
+                                                    points="104,132.8 107.2,122.4 110.4,132.8  "></polygon>
+                                                <polygon style="fill:#FFFFFF;"
+                                                    points="146.4,132.8 150.4,122.4 153.6,132.8  "></polygon>
+                                                <polygon style="fill:#FFFFFF;"
+                                                    points="189.6,132.8 192.8,122.4 196.8,132.8  "></polygon>
+                                                <polygon style="fill:#FFFFFF;"
+                                                    points="40,151.2 43.2,140.8 47.2,151.2  "></polygon>
+                                                <polygon style="fill:#FFFFFF;"
+                                                    points="83.2,151.2 86.4,140.8 89.6,151.2  "></polygon>
+                                                <polygon style="fill:#FFFFFF;"
+                                                    points="125.6,151.2 129.6,140.8 132.8,151.2  "></polygon>
+                                                <polygon style="fill:#FFFFFF;"
+                                                    points="168.8,151.2 172,140.8 175.2,151.2  "></polygon>
+                                                <polygon style="fill:#FFFFFF;"
+                                                    points="18.4,168.8 22.4,158.4 25.6,168.8  "></polygon>
+                                                <polygon style="fill:#FFFFFF;"
+                                                    points="61.6,168.8 64.8,158.4 68.8,168.8  "></polygon>
+                                                <polygon style="fill:#FFFFFF;"
+                                                    points="104.8,168.8 108,158.4 111.2,168.8  "></polygon>
+                                                <polygon style="fill:#FFFFFF;"
+                                                    points="147.2,168.8 151.2,158.4 154.4,168.8  "></polygon>
+                                                <polygon style="fill:#FFFFFF;"
+                                                    points="190.4,168.8 193.6,158.4 196.8,168.8  "></polygon>
+                                                <polygon style="fill:#FFFFFF;"
+                                                    points="40,187.2 43.2,176.8 47.2,187.2  "></polygon>
+                                                <polygon style="fill:#FFFFFF;"
+                                                    points="83.2,187.2 86.4,176.8 89.6,187.2  "></polygon>
+                                                <polygon style="fill:#FFFFFF;"
+                                                    points="125.6,187.2 129.6,176.8 132.8,187.2  "></polygon>
+                                                <polygon style="fill:#FFFFFF;"
+                                                    points="168.8,187.2 172,176.8 176,187.2  "></polygon>
+                                                <polygon style="fill:#FFFFFF;"
+                                                    points="19.2,205.6 22.4,195.2 25.6,205.6  "></polygon>
+                                                <polygon style="fill:#FFFFFF;"
+                                                    points="62.4,205.6 65.6,195.2 68.8,205.6  "></polygon>
+                                                <polygon style="fill:#FFFFFF;"
+                                                    points="104.8,205.6 108,195.2 112,205.6  "></polygon>
+                                                <polygon style="fill:#FFFFFF;"
+                                                    points="148,205.6 151.2,195.2 154.4,205.6  "></polygon>
+                                                <polygon style="fill:#FFFFFF;"
+                                                    points="190.4,205.6 194.4,195.2 197.6,205.6  "></polygon>
+                                                <polygon style="fill:#FFFFFF;"
+                                                    points="40,224 43.2,212.8 47.2,224  "></polygon>
+                                                <polygon style="fill:#FFFFFF;"
+                                                    points="83.2,224 86.4,212.8 89.6,224  "></polygon>
+                                                <polygon style="fill:#FFFFFF;"
+                                                    points="125.6,224 129.6,212.8 132.8,224  "></polygon>
+                                                <polygon style="fill:#FFFFFF;"
+                                                    points="168.8,224 172,212.8 175.2,224  "></polygon>
+                                                <polygon style="fill:#FFFFFF;"
+                                                    points="18.4,241.6 22.4,231.2 25.6,241.6  "></polygon>
+                                                <polygon style="fill:#FFFFFF;"
+                                                    points="61.6,241.6 64.8,231.2 68,241.6  "></polygon>
+                                                <polygon style="fill:#FFFFFF;"
+                                                    points="104,241.6 108,231.2 111.2,241.6  "></polygon>
+                                                <polygon style="fill:#FFFFFF;"
+                                                    points="147.2,241.6 150.4,231.2 154.4,241.6  "></polygon>
+                                                <polygon style="fill:#FFFFFF;"
+                                                    points="190.4,241.6 193.6,231.2 196.8,241.6  "></polygon>
+                                            </g>
+                                        </svg></span>
+                                    USA Office
+                                </h4>
+                                <div class="contact-item">
+                                    <div class="icon">
+                                        <i class="ri-phone-fill"></i>
+                                    </div>
+                                    <div>
+                                        <span>Phone</span>
+                                        <a href="tel:+15623120282">
+                                            +1 562-312-0282
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="contact-item">
+                                    <div class="icon">
+                                        <i class="ri-map-pin-line"></i>
+                                    </div>
+                                    <div>
+                                        <span>Address</span>
+                                        <p>
+                                            Norwalk, California 90650, USA
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="contact-item">
+                                    <div class="icon">
+                                        <i class="ri-mail-line"></i>
+                                    </div>
+                                    <div>
+                                        <span>Email</span>
+                                        <a href="mailto:jay@prismitsystems.com">
+                                            jay@prismitsystems.com
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-
-                    <h3 class="dl-workflow-card-title">
-                        Open Office Documents
-                    </h3>
-
-                    <p class="dl-workflow-card-description">
-                        Open the Office Documents section to see previously saved records.
-                    </p>
-
-                    <ul class="dl-workflow-checklist">
-                        <li>
-                            <i class="ri-check-line"></i>
-                            <span>You can review the listing</span>
-                        </li>
-                        <li>
-                            <i class="ri-check-line"></i>
-                            <span>Or choose to add a new document</span>
-                        </li>
-                    </ul>
-                </div>
-
-               
-            </article>
-
-            <!-- Workflow Step 02 -->
-            <article class="dl-workflow-card">
-                <div class="dl-workflow-card-content">
-
-                    <div class="dl-workflow-card-top">
-                        <span class="dl-workflow-number">02</span>
-
-                        <div class="dl-workflow-icon">
-                            <i class="ri-file-edit-line"></i>
-                        </div>
-                    </div>
-
-                    <h3 class="dl-workflow-card-title">
-                        Enter Document Information
-                    </h3>
-
-                    <p class="dl-workflow-card-description">
-                        Select or enter the document type, add a document number if available, and enter Validity From and Validity To dates where relevant.
-                    </p>
-
-                    <ul class="dl-workflow-checklist">
-                        <li>
-                            <i class="ri-check-line"></i>
-                            <span>Document type can be selected or entered</span>
-                        </li>
-                        <li>
-                            <i class="ri-check-line"></i>
-                            <span>Document number is optional</span>
-                        </li>
-                        <li>
-                            <i class="ri-check-line"></i>
-                            <span>Validity dates are entered where relevant</span>
-                        </li>
-                    </ul>
-                </div>
-
-              
-            </article>
-
-            <!-- Workflow Step 03 -->
-            <article class="dl-workflow-card">
-                <div class="dl-workflow-card-content">
-
-                    <div class="dl-workflow-card-top">
-                        <span class="dl-workflow-number">03</span>
-
-                        <div class="dl-workflow-icon">
-                            <i class="ri-store-2-line"></i>
-                        </div>
-                    </div>
-
-                    <h3 class="dl-workflow-card-title">
-                        Link a Vendor and Amount
-                    </h3>
-
-                    <p class="dl-workflow-card-description">
-                        Choose the related office vendor and enter the document-related amount if applicable.
-                    </p>
-
-                    <ul class="dl-workflow-checklist">
-                        <li>
-                            <i class="ri-check-line"></i>
-                            <span>These fields can be left empty when they do not apply</span>
-                        </li>
-                    </ul>
-                </div>
-
-            </article>
-
-            <!-- Workflow Step 04 -->
-            <article class="dl-workflow-card">
-                <div class="dl-workflow-card-content">
-
-                    <div class="dl-workflow-card-top">
-                        <span class="dl-workflow-number">04</span>
-
-                        <div class="dl-workflow-icon">
-                            <i class="ri-file-upload-line"></i>
-                        </div>
-                    </div>
-
-                    <h3 class="dl-workflow-card-title">
-                        Upload a Digital Copy
-                    </h3>
-
-                    <p class="dl-workflow-card-description">
-                        Attach a PDF, JPG, JPEG or PNG file to the document record.
-                    </p>
-
-                    <ul class="dl-workflow-checklist">
-                        <li>
-                            <i class="ri-check-line"></i>
-                            <span>The system accepts files up to 10 MB</span>
-                        </li>
-                    </ul>
-                </div>
-
-            </article>
-
-            <!-- Workflow Step 05 -->
-            <article class="dl-workflow-card">
-                <div class="dl-workflow-card-content">
-
-                    <div class="dl-workflow-card-top">
-                        <span class="dl-workflow-number">05</span>
-
-                        <div class="dl-workflow-icon">
-                            <i class="ri-save-3-line"></i>
-                        </div>
-                    </div>
-
-                    <h3 class="dl-workflow-card-title">
-                        Save and View
-                    </h3>
-
-                    <p class="dl-workflow-card-description">
-                        Save the document.
-                    </p>
-
-                    <ul class="dl-workflow-checklist">
-                        <li>
-                            <i class="ri-check-line"></i>
-                            <span>Open the saved record to view its details</span>
-                        </li>
-                        <li>
-                            <i class="ri-check-line"></i>
-                            <span>Preview the attachment or download the file</span>
-                        </li>
-                    </ul>
-                </div>
-
-            </article>
-
-            <!-- Workflow Step 06 -->
-            <article class="dl-workflow-card">
-                <div class="dl-workflow-card-content">
-
-                    <div class="dl-workflow-card-top">
-                        <span class="dl-workflow-number">06</span>
-
-                        <div class="dl-workflow-icon">
-                            <i class="ri-search-eye-line"></i>
-                        </div>
-                    </div>
-
-                    <h3 class="dl-workflow-card-title">
-                        Search, Filter and Update
-                    </h3>
-
-                    <p class="dl-workflow-card-description">
-                        Find saved records using document type or number, and use available payment-status filters.
-                    </p>
-
-                    <ul class="dl-workflow-checklist">
-                        <li>
-                            <i class="ri-check-line"></i>
-                            <span>Authorized users can edit document details</span>
-                        </li>
-                        <li>
-                            <i class="ri-check-line"></i>
-                            <span>Replace attachments or delete records</span>
-                        </li>
-                    </ul>
-                </div>
-
-            </article>
-
-        </div>
-        </div>
-        <div class="et-container">
-        <div class="workflow-bottom">
-
-            <!-- Security Card -->
-            <div class="security-card">
-                <img src="./Assets/images/workflow-img.png" alt="workflow-img">
-
-                <div class="security-content">
-                    <h3>Enterprise-Grade Security</h3>
-
-                    <p>
-                        Protect sensitive business information with encrypted data storage, secure user authentication, and controlled system access.
-                    </p>
                 </div>
             </div>
-
-            <!-- Right Side -->
-            <div class="workflow-info">
-
-                <div class="stats-card">
-                    <h3>98%</h3>
-
-                    <h4>Customer Satisfaction</h4>
-
-                    <p>
-                        Provide accurate ETAs, live shipment updates, and faster response times that improve customer trust and retention.
-                    </p>
-                </div>
-
-                <div class="workflow-content">
-                    <p>
-                        Explore a powerful collection of intelligent modules built to streamline your daily transport operations. Manage vehicles, drivers, trips, and business performance seamlessly through one unified platform.
-                    </p>
-
-                    <a href="#" class="workflow-btn">
-                        Explore All Modules <i class="ri-arrow-right-line"></i>
-                    </a>
-                </div>
-
-                <div class="info-card">
-                    <div class="info-icon">
-                       <i class="ri-bar-chart-2-fill"></i>
-                    </div>
-
-                    <span>
-                        Visualize business performance instantly
-                    </span>
-                </div>
-
-                <div class="info-card">
-                    <div class="info-icon">
-                       <i class="ri-lock-unlock-line"></i>
-                    </div>
-
-                    <span>
-                        Access your business securely from anywhere
-                    </span>
-                </div>
-
-            </div>
-
-        </div>
-    
-    </div>
-</section>
-<!--workflow section end-->
-
-<!--results section start-->
-<section id="benefits" class="results-section">
-
-    <div class="container">
-
-        <div class="heading-wrapper">
-
-            <span class="heading-tag">
-                Proven Advantages
-            </span>
-
-            <h2 class="heading-title heading-light">
-                Benefits of <span>Office Document Management</span>
-            </h2>
-
-            <p>
-                Keep office documents, dates, vendors and attachments organized and easy to reach.
-            </p>
-
-        </div>
-
-        <div class="results-grid">
-
-            <div class="result-card">
-
-                <div class="result-icon">
-                    <i class="ri-time-line"></i>
-                </div>
-
-                <h3>
-                    Save Time
-                </h3>
-
-                <p>
-                    Find saved office documents without searching multiple paper folders.
-                </p>
-
-            </div>
-
-            <div class="result-card">
-
-                <div class="result-icon">
-                    <i class="ri-folder-shield-2-line"></i>
-                </div>
-
-                <h3>
-                    Keep Records Organized
-                </h3>
-
-                <p>
-                    Maintain document numbers, categories, dates, vendors and attachments in one place.
-                </p>
-
-            </div>
-
-            <div class="result-card">
-
-                <div class="result-icon">
-                    <i class="ri-eye-line"></i>
-                </div>
-
-                <h3>
-                    Improve Document Access
-                </h3>
-
-                <p>
-                    Preview or download documents whenever an authorized user needs them.
-                </p>
-
-            </div>
-
-            <div class="result-card">
-
-                <div class="result-icon">
-                    <i class="ri-money-rupee-circle-line"></i>
-                </div>
-
-                <h3>
-                    Track Related Costs
-                </h3>
-
-                <p>
-                    Keep relevant document charges and payment-related information associated with the record.
-                </p>
-
-            </div>
-
-            <div class="result-card">
-
-                <div class="result-icon">
-                    <i class="ri-edit-line"></i>
-                </div>
-
-                <h3>
-                    Make Corrections Easily
-                </h3>
-
-                <p>
-                    Update document details or replace an attachment when the information changes.
-                </p>
-
-            </div>
-
-            <div class="result-card">
-
-                <div class="result-icon">
-                    <i class="ri-lock-line"></i>
-                </div>
-
-                <h3>
-                    Control Access
-                </h3>
-
-                <p>
-                    Use user permissions to limit who can view or modify office records.
-                </p>
-
-            </div>
-
-        </div>
-
-    </div>
-</section>
-<!--results section end-->
-
-<!--transport-section start-->
-<section class="transport-section">
-    <div class="container">
-
-        <!-- Left Content -->
-    <div class="transport-container">   
-        <div class="heading-wrapper heading-wrap-left">
-                <span class="heading-tag">
-                   Transportation Management
-                </span>
-
-                <h2 class="heading-title">
-                   Manage Your Transportation <span> Operations Efficiently </span>
-                </h2>
-
-                <p>
-                    Track vehicles, manage drivers, monitor fuel usage, handle maintenance schedules, and streamline daily transportation operations from one centralized cloud platform.
-                </p>
-
-            </div>
-        <!-- Right Side -->
-        <div class="transport-image-wrapper">
-            <img src="./Assets/images/tms-img.png" alt="Transportation Dashboard" class="transport-image">
-            <!-- Decorative Shape -->
-            <div class="transport-shape"></div>
-            <!-- Floating Card -->
-            <div class="transport-card">
-                <ul class="transport-list">
-                    <li>
-                        <i class="ri-checkbox-circle-line"></i>
-                        <span>Real-time fleet and vehicle monitoring</span>
-                    </li>
-
-                    <li>
-                        <i class="ri-checkbox-circle-line"></i>
-                        <span>Driver management and attendance tracking</span>
-                    </li>
-
-                    <li>
-                        <i class="ri-checkbox-circle-line"></i>
-                        <span>Fuel logs and expense management</span>
-                    </li>
-
-                    <li>
-                        <i class="ri-checkbox-circle-line"></i>
-                        <span>Maintenance alerts and service scheduling</span>
-                    </li>
-
-                    <li>
-                        <i class="ri-checkbox-circle-line"></i>
-                        <span>Vehicle documents and compliance tracking</span>
-                    </li>
-                </ul>
-            </div>
-        </div>
-     </div>
-    </div>
-</section>
-<!--transport section end-->
-
-<!--dl-faq section start-->
-<section id="faq" class="dl-faq-section">
-    <div class="container">
-        <div class="heading-wrapper">
-
-            <span class="heading-tag">
-                Got Questions?
-            </span>
-
-            <h2 class="heading-title">
-                Frequently Asked <span>Questions</span>
-            </h2>
-
-            <p>
-                Everything you need to know about storing and managing office documents.
-            </p>
-
-            <div class="dl-faq-filters">
-                <button class="dl-faq-filter active" type="button">All</button>
-                <button class="dl-faq-filter" type="button">Files</button>
-                <button class="dl-faq-filter" type="button">Validity</button>
-                <button class="dl-faq-filter" type="button">Vendors</button>
-                <button class="dl-faq-filter" type="button">Search</button>
-                <button class="dl-faq-filter" type="button">Editing</button>
-                <button class="dl-faq-filter" type="button">Payments</button>
-            </div>
-        </div>
-
-        <div class="dl-faq-list">
-
-            <!-- FAQ 1 -->
-            <div class="dl-faq-item active" data-category="files">
-                <button
-                    class="dl-faq-question"
-                    type="button"
-                    aria-expanded="true"
-                    aria-controls="dl-faq-answer-1"
-                >
-                    <span class="dl-faq-question-content">
-                        <span class="dl-faq-number">Q1</span>
-                        <span class="dl-faq-question-text">
-                            Can I upload PDF and image files?
-                        </span>
-                    </span>
-
-                    <span class="dl-faq-arrow">
-                        <i class="ri-arrow-down-s-line"></i>
-                    </span>
-                </button>
-
-                <div class="dl-faq-answer" id="dl-faq-answer-1">
-                    <div class="dl-faq-answer-content">
+            <!-- Bottom -->
+            <div class="footer-bottom">
+                <div class="container">
+                    <div class="bottom-wrapper">
                         <p>
-                            Yes. PDF, JPG, JPEG and PNG files up to 10 MB are supported.
+                            ©️ 2026 All rights reserved.
                         </p>
-
-                        <div class="dl-faq-topic">
-                            <span>Topic: Files</span>
-                        </div>
+                        <ul>
+                            <li><a href="privacy-policy.html">Privacy
+                                    Policy</a></li>
+                            <li><a href="#">Terms of Service</a></li>
+                            <li><a href="#">Cookie Policy</a></li>
+                        </ul>
                     </div>
                 </div>
             </div>
-
-            <!-- FAQ 2 -->
-            <div class="dl-faq-item" data-category="validity">
-                <button
-                    class="dl-faq-question"
-                    type="button"
-                    aria-expanded="false"
-                    aria-controls="dl-faq-answer-2"
-                >
-                    <span class="dl-faq-question-content">
-                        <span class="dl-faq-number">Q2</span>
-                        <span class="dl-faq-question-text">
-                            Can I record validity dates?
-                        </span>
-                    </span>
-
-                    <span class="dl-faq-arrow">
-                        <i class="ri-arrow-down-s-line"></i>
-                    </span>
-                </button>
-
-                <div class="dl-faq-answer" id="dl-faq-answer-2">
-                    <div class="dl-faq-answer-content">
-                        <p>
-                            Yes. You can enter Validity From and Validity To dates when applicable.
-                        </p>
-
-                        <div class="dl-faq-topic">
-                            <span>Topic: Validity</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- FAQ 3 -->
-            <div class="dl-faq-item" data-category="vendors">
-                <button
-                    class="dl-faq-question"
-                    type="button"
-                    aria-expanded="false"
-                    aria-controls="dl-faq-answer-3"
-                >
-                    <span class="dl-faq-question-content">
-                        <span class="dl-faq-number">Q3</span>
-                        <span class="dl-faq-question-text">
-                            Do I need to add a vendor for every document?
-                        </span>
-                    </span>
-
-                    <span class="dl-faq-arrow">
-                        <i class="ri-arrow-down-s-line"></i>
-                    </span>
-                </button>
-
-                <div class="dl-faq-answer" id="dl-faq-answer-3">
-                    <div class="dl-faq-answer-content">
-                        <p>
-                            No. A vendor can be linked when relevant; the vendor field is optional.
-                        </p>
-
-                        <div class="dl-faq-topic">
-                            <span>Topic: Vendors</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- FAQ 4 -->
-            <div class="dl-faq-item" data-category="search">
-                <button
-                    class="dl-faq-question"
-                    type="button"
-                    aria-expanded="false"
-                    aria-controls="dl-faq-answer-4"
-                >
-                    <span class="dl-faq-question-content">
-                        <span class="dl-faq-number">Q4</span>
-                        <span class="dl-faq-question-text">
-                            Can I find a document by its number?
-                        </span>
-                    </span>
-
-                    <span class="dl-faq-arrow">
-                        <i class="ri-arrow-down-s-line"></i>
-                    </span>
-                </button>
-
-                <div class="dl-faq-answer" id="dl-faq-answer-4">
-                    <div class="dl-faq-answer-content">
-                        <p>
-                            Yes. Search and suggestions are available for document numbers.
-                        </p>
-
-                        <div class="dl-faq-topic">
-                            <span>Topic: Search</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- FAQ 5 -->
-            <div class="dl-faq-item" data-category="editing">
-                <button
-                    class="dl-faq-question"
-                    type="button"
-                    aria-expanded="false"
-                    aria-controls="dl-faq-answer-5"
-                >
-                    <span class="dl-faq-question-content">
-                        <span class="dl-faq-number">Q5</span>
-                        <span class="dl-faq-question-text">
-                            Can I edit an uploaded document?
-                        </span>
-                    </span>
-
-                    <span class="dl-faq-arrow">
-                        <i class="ri-arrow-down-s-line"></i>
-                    </span>
-                </button>
-
-                <div class="dl-faq-answer" id="dl-faq-answer-5">
-                    <div class="dl-faq-answer-content">
-                        <p>
-                            Authorized users can edit the record and upload a replacement attachment.
-                        </p>
-
-                        <div class="dl-faq-topic">
-                            <span>Topic: Editing</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- FAQ 6 -->
-            <div class="dl-faq-item" data-category="files">
-                <button
-                    class="dl-faq-question"
-                    type="button"
-                    aria-expanded="false"
-                    aria-controls="dl-faq-answer-6"
-                >
-                    <span class="dl-faq-question-content">
-                        <span class="dl-faq-number">Q6</span>
-                        <span class="dl-faq-question-text">
-                            Can I download the saved attachment?
-                        </span>
-                    </span>
-
-                    <span class="dl-faq-arrow">
-                        <i class="ri-arrow-down-s-line"></i>
-                    </span>
-                </button>
-
-                <div class="dl-faq-answer" id="dl-faq-answer-6">
-                    <div class="dl-faq-answer-content">
-                        <p>
-                            Yes. Authorized users can view and download available documents.
-                        </p>
-
-                        <div class="dl-faq-topic">
-                            <span>Topic: Files</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- FAQ 7 -->
-            <div class="dl-faq-item" data-category="validity">
-                <button
-                    class="dl-faq-question"
-                    type="button"
-                    aria-expanded="false"
-                    aria-controls="dl-faq-answer-7"
-                >
-                    <span class="dl-faq-question-content">
-                        <span class="dl-faq-number">Q7</span>
-                        <span class="dl-faq-question-text">
-                            Does the module automatically renew or notify me before expiry?
-                        </span>
-                    </span>
-
-                    <span class="dl-faq-arrow">
-                        <i class="ri-arrow-down-s-line"></i>
-                    </span>
-                </button>
-
-                <div class="dl-faq-answer" id="dl-faq-answer-7">
-                    <div class="dl-faq-answer-content">
-                        <p>
-                            The supplied Office Documents code stores validity dates, but it does not establish automatic renewal or expiry notifications.
-                        </p>
-
-                        <div class="dl-faq-topic">
-                            <span>Topic: Validity</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- FAQ 8 -->
-            <div class="dl-faq-item" data-category="payments">
-                <button
-                    class="dl-faq-question"
-                    type="button"
-                    aria-expanded="false"
-                    aria-controls="dl-faq-answer-8"
-                >
-                    <span class="dl-faq-question-content">
-                        <span class="dl-faq-number">Q8</span>
-                        <span class="dl-faq-question-text">
-                            Can I check payment status?
-                        </span>
-                    </span>
-
-                    <span class="dl-faq-arrow">
-                        <i class="ri-arrow-down-s-line"></i>
-                    </span>
-                </button>
-
-                <div class="dl-faq-answer" id="dl-faq-answer-8">
-                    <div class="dl-faq-answer-content">
-                        <p>
-                            The listing supports payment-status filtering, and document records support payment allocations.
-                        </p>
-
-                        <div class="dl-faq-topic">
-                            <span>Topic: Payments</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-
-        <div class="dl-faq-cta">
-            <div class="dl-faq-cta-content">
-                <h3>Simplify Your Office Document Management</h3>
-                <p>
-                    Keep office documents, validity details, vendor information and related amounts organized in one place. With digital attachments, easy searching and permission-based access, everyday office document administration becomes more convenient.
-                </p>
-            </div>
-
-            <button class="dl-faq-cta-button" type="button" onclick="document.getElementById('simulator').scrollIntoView({behavior: 'smooth'})">
-                Try the Office Document Example
-            </button>
-        </div>
-
-    </div>
-</section>
-<!--dl-faq section end-->
-
-<!--footer section start-->
-<footer class="footer">
-
-    <!-- Newsletter -->
-    <div class="footer-newsletter">
-        <div class="container">
-
-            <div class="newsletter-wrapper">
-
-                <div class="newsletter-content">
-                    <h2>Stay ahead of the curve</h2>
-                    <p>
-                        Fleet management insights, product updates, and industry news.
-                    </p>
-                </div>
-
-                <form class="newsletter-form">
-
-                    <input
-                        type="email"
-                        placeholder="Enter your email" aria-label="Email address for newsletter"
-                    >
-
-                    <button type="submit">
-                        Subscribe
-
-                       <i class="ri-arrow-right-line"></i>
-
-                    </button>
-
-                </form>
-
-            </div>
-
-        </div>
-    </div>
-
-    <!-- Footer Main -->
-
-    <div class="footer-main">
-
-        <div class="container">
-
-            <div class="footer-grid">
-
-                <!-- Left -->
-
-                <div class="footer-about">
-
-                    <a href="#" class="footer-logo">
-                        <img src="Assets/images/transportdesk-logo-dark.svg" alt="TransportDesk" width="252" height="84">
-                    </a>
-
-                    <p>
-                        The intelligent transportation platform that puts fleet directors
-                        in complete control of their operations.
-                    </p>
-
-                    <div class="footer-social">
-
-                        <a href="#" aria-label="Facebook"><i class="ri-facebook-fill"></i></a>
-
-                        <a href="#" aria-label="Instagram"><i class="ri-instagram-line"></i></a>
-
-                        <a href="#" aria-label="Twitter"><i class="ri-twitter-line"></i></a>
-
-                        <a href="#" aria-label="LinkedIn"><i class="ri-linkedin-fill"></i></a>
-
-                    </div>
-
-                </div>
-
-                <!-- Product -->
-
-                <div class="footer-links">
-
-                    <h3>Product</h3>
-
-                    <ul>
-        <li>
-            <a href="features.html" class="footer-link">Features</a>
-        </li>
-
-        <li>
-            <a href="modules.html" class="footer-link">Modules</a>
-        </li>
-
-        <li>
-            <a href="solutions.html" class="footer-link">Solutions</a>
-        </li>
-
-        <li>
-            <a href="reports.html" class="footer-link">Reports</a>
-        </li>
-
-        <li>
-            <a href="contact.html" class="footer-link">Contact</a>
-        </li>
-    </ul>
-
-                </div>
-
-                <!-- Resources -->
-
-                <div class="footer-links">
-
-                    <h3>Resources</h3>
-
-                    <ul>
-
-                        <li><a href="documentation.html" class="footer-link">Documentation</a></li>
-
-                        <li><a href="faq.html" class="footer-link">FAQ</a></li>
-
-                        <li><a href="privacy-policy.html" class="footer-link">Privacy Policy</a></li>
-
-                    </ul>
-
-                </div>
-
-                <!-- Support -->
-
-                <div class="footer-links">
-
-                    <h3>Support</h3>
-
-                    <ul>
-
-                        <li><a href="#" class="footer-link">Help Center</a></li>
-
-                        <li><a href="#" class="footer-link">Status</a></li>
-
-                        <li><a href="#" class="footer-link">Security</a></li>
-
-                    </ul>
-
-                </div>
-
-                <!-- Contact -->
-
-                <div class="footer-contact">
-
-    <!-- India Office -->
-    <div class="footer-office">
-
-        <h4 class="footer-office-title">
-            <span class="footer-country-flag">
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="800px" height="800px" viewBox="0 0 36 36" aria-hidden="true" role="img" class="iconify iconify--twemoji" preserveAspectRatio="xMidYMid meet"><path fill="#138808" d="M0 27a4 4 0 0 0 4 4h28a4 4 0 0 0 4-4v-4H0v4z"></path><path fill="#EEE" d="M0 13h36v10H0z"></path><path fill="#F93" d="M36 13V9a4 4 0 0 0-4-4H4a4 4 0 0 0-4 4v4h36z"></path><circle fill="navy" cx="18" cy="18" r="4"></circle><circle fill="#EEE" cx="18" cy="18" r="3"></circle><path fill="#6666B3" d="M18 15l.146 2.264l1.001-2.035l-.73 2.147l1.704-1.498l-1.497 1.705l2.147-.731l-2.035 1.002L21 18l-2.264.146l2.035 1.001l-2.147-.73l1.497 1.704l-1.704-1.497l.73 2.147l-1.001-2.035L18 21l-.146-2.264l-1.002 2.035l.731-2.147l-1.705 1.497l1.498-1.704l-2.147.73l2.035-1.001L15 18l2.264-.146l-2.035-1.002l2.147.731l-1.498-1.705l1.705 1.498l-.731-2.147l1.002 2.035z"></path><circle fill="navy" cx="18" cy="18" r="1"></circle></svg>
-</span>
-            India Office
-        </h4>
-
-        
-
-        <div class="contact-item">
-            <div class="icon">
-                <i class="ri-phone-fill"></i>
-            </div>
-            <div>
-                <span>Phone</span>
-                <a href="tel:+916355258003">
-                    +91 6355 258 003
-                </a>
-            </div>
-        </div>
-
-        <div class="contact-item">
-            <div class="icon">
-                <i class="ri-map-pin-line"></i>
-            </div>
-            <div>
-                <span>Address</span>
-                <p>
-                    The Galleria Business Hub, Adajan Gam,
-                    Pal Gam, Surat, Gujarat, India 394510
-                </p>
-            </div>
-        </div>
-
-    <div class="contact-item">
-            <div class="icon">
-                <i class="ri-mail-line"></i>
-            </div>
-            <div>
-                <span>Email</span>
-                <a href="mailto:jay@prismitsystems.com">
-                    jay@prismitsystems.com
-                </a>
-            </div>
-        </div></div>
-
-    <!-- Subtle Divider -->
-    
-
-    <!-- USA Office -->
-    <div class="footer-office">
-
-        <h4 class="footer-office-title">
-            <span class="footer-country-flag"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="800px" width="800px" version="1.1" id="Layer_1" viewBox="0 0 496 496" xml:space="preserve">
-<path style="fill:#FFFFFF;" d="M496,369.6c0,27.2-21.6,48.8-48,48.8H48c-26.4,0-48-21.6-48-48.8V126.4c0-27.2,21.6-43.8,48-43.8h400  c26.4,0,48,16.6,48,43.8V369.6z"></path>
-<path style="fill:#CCE4E5;" d="M448,77.6H48l400,340.8c26.4,0,48-21.6,48-48.8V126.4C496,99.2,474.4,77.6,448,77.6z"></path>
-<path style="fill:#AED3D3;" d="M448,77.6H48l448,137.6v-88.8C496,99.2,474.4,77.6,448,77.6z"></path>
-<g>
-	<path style="fill:#B22234;" d="M4.9,391.2c7.5,15.4,22.7,26.2,40.5,27.1c0.9,0,1.7,0.1,2.6,0.1h400.3c0,0,3.5-0.3,4.6-0.7   c1.7-0.6,1.9-2,0.6-3.1l-0.4-0.4L426,391.1H4.9V391.2z"></path>
-	<polygon style="fill:#B22234;" points="120.9,131.2 0,131.2 0,157.2 151.4,157.2  "></polygon>
-	<polygon style="fill:#B22234;" points="181.9,183.2 0,183.2 0,209.2 212.5,209.2  "></polygon>
-	<polygon style="fill:#B22234;" points="242.8,235.2 0,235.2 0,261.6 273.2,261.6  "></polygon>
-	<polygon style="fill:#B22234;" points="303.6,287.2 0,287.2 0,313.6 334.8,313.6  "></polygon>
-	<polygon style="fill:#B22234;" points="373.4,346.3 365,339.2 0,339.2 0,365.6 395.6,365.6  "></polygon>
-</g>
-<path style="fill:#FFFFFF;" d="M48,418.4c-0.9,0-1.7,0-2.6-0.1C46.3,418.4,47.1,418.4,48,418.4z"></path>
-<g>
-	<polygon style="fill:#8C1126;" points="238.4,131.2 110.9,131.2 141.4,157.2 323.2,157.2  "></polygon>
-	<polygon style="fill:#8C1126;" points="202.5,209.2 488.5,209.2 403.8,183.2 171.9,183.2  "></polygon>
-	<polygon style="fill:#8C1126;" points="264,261.6 496,261.6 496,235.2 233,235.2  "></polygon>
-	<polygon style="fill:#8C1126;" points="325,313.6 496,313.6 496,287.2 294,287.2  "></polygon>
-	<polygon style="fill:#8C1126;" points="363.4,346.3 386,365.6 496,365.6 496,339.2 355.2,339.2  "></polygon>
-</g>
-<g>
-	<polygon style="fill:#5B0218;" points="222.5,131.2 286,150.7 307.2,157.2 496,157.2 496,131.2  "></polygon>
-	<polygon style="fill:#5B0218;" points="392,183.2 476.8,209.2 496,209.2 496,183.2  "></polygon>
-	<path style="fill:#5B0218;" d="M486.4,97.1c-1.4-1.9-2.9-3.6-4.5-5.3c-8.1-8.2-19.1-13.5-31.3-14.1c-0.8,0-1.7-0.1-2.5-0.1l0,0H48   c-13.1,0-25.5,5.9-34.4,14.7c-3.5,3.7-6.5,7.9-8.7,12.5h75h56.6H491C489.8,102.1,488.2,99.5,486.4,97.1z"></path>
-</g>
-<path style="fill:#8C1126;" d="M491.1,391.2h-75l31.9,27.2C466.8,418.4,483.2,407.4,491.1,391.2z"></path>
-<path style="fill:#3C3B6E;" d="M0,126.4v134.4h215.2V77.6H44.8C20,79.2,0,100,0,126.4z"></path>
-<polygon style="fill:#1E1E44;" points="215.2,220 215.2,77.6 48,77.6 "></polygon>
-<polygon points="215.2,128.8 215.2,77.6 48,77.6 "></polygon>
-<g>
-	<polygon style="fill:#FFFFFF;" points="60.8,96 64,85.6 68,96  "></polygon>
-	<polygon style="fill:#FFFFFF;" points="104,96 107.2,85.6 110.4,96  "></polygon>
-	<polygon style="fill:#FFFFFF;" points="146.4,96 150.4,85.6 153.6,96  "></polygon>
-	<polygon style="fill:#FFFFFF;" points="189.6,96 192.8,85.6 196.8,96  "></polygon>
-	<polygon style="fill:#FFFFFF;" points="39.2,114.4 43.2,104 46.4,114.4  "></polygon>
-	<polygon style="fill:#FFFFFF;" points="82.4,114.4 85.6,104 89.6,114.4  "></polygon>
-	<polygon style="fill:#FFFFFF;" points="125.6,114.4 128.8,104 132,114.4  "></polygon>
-	<polygon style="fill:#FFFFFF;" points="168,114.4 171.2,104 175.2,114.4  "></polygon>
-	<polygon style="fill:#FFFFFF;" points="18.4,132.8 21.6,122.4 24.8,132.8  "></polygon>
-	<polygon style="fill:#FFFFFF;" points="60.8,132.8 64,122.4 68,132.8  "></polygon>
-	<polygon style="fill:#FFFFFF;" points="104,132.8 107.2,122.4 110.4,132.8  "></polygon>
-	<polygon style="fill:#FFFFFF;" points="146.4,132.8 150.4,122.4 153.6,132.8  "></polygon>
-	<polygon style="fill:#FFFFFF;" points="189.6,132.8 192.8,122.4 196.8,132.8  "></polygon>
-	<polygon style="fill:#FFFFFF;" points="40,151.2 43.2,140.8 47.2,151.2  "></polygon>
-	<polygon style="fill:#FFFFFF;" points="83.2,151.2 86.4,140.8 89.6,151.2  "></polygon>
-	<polygon style="fill:#FFFFFF;" points="125.6,151.2 129.6,140.8 132.8,151.2  "></polygon>
-	<polygon style="fill:#FFFFFF;" points="168.8,151.2 172,140.8 175.2,151.2  "></polygon>
-	<polygon style="fill:#FFFFFF;" points="18.4,168.8 22.4,158.4 25.6,168.8  "></polygon>
-	<polygon style="fill:#FFFFFF;" points="61.6,168.8 64.8,158.4 68.8,168.8  "></polygon>
-	<polygon style="fill:#FFFFFF;" points="104.8,168.8 108,158.4 111.2,168.8  "></polygon>
-	<polygon style="fill:#FFFFFF;" points="147.2,168.8 151.2,158.4 154.4,168.8  "></polygon>
-	<polygon style="fill:#FFFFFF;" points="190.4,168.8 193.6,158.4 196.8,168.8  "></polygon>
-	<polygon style="fill:#FFFFFF;" points="40,187.2 43.2,176.8 47.2,187.2  "></polygon>
-	<polygon style="fill:#FFFFFF;" points="83.2,187.2 86.4,176.8 89.6,187.2  "></polygon>
-	<polygon style="fill:#FFFFFF;" points="125.6,187.2 129.6,176.8 132.8,187.2  "></polygon>
-	<polygon style="fill:#FFFFFF;" points="168.8,187.2 172,176.8 176,187.2  "></polygon>
-	<polygon style="fill:#FFFFFF;" points="19.2,205.6 22.4,195.2 25.6,205.6  "></polygon>
-	<polygon style="fill:#FFFFFF;" points="62.4,205.6 65.6,195.2 68.8,205.6  "></polygon>
-	<polygon style="fill:#FFFFFF;" points="104.8,205.6 108,195.2 112,205.6  "></polygon>
-	<polygon style="fill:#FFFFFF;" points="148,205.6 151.2,195.2 154.4,205.6  "></polygon>
-	<polygon style="fill:#FFFFFF;" points="190.4,205.6 194.4,195.2 197.6,205.6  "></polygon>
-	<polygon style="fill:#FFFFFF;" points="40,224 43.2,212.8 47.2,224  "></polygon>
-	<polygon style="fill:#FFFFFF;" points="83.2,224 86.4,212.8 89.6,224  "></polygon>
-	<polygon style="fill:#FFFFFF;" points="125.6,224 129.6,212.8 132.8,224  "></polygon>
-	<polygon style="fill:#FFFFFF;" points="168.8,224 172,212.8 175.2,224  "></polygon>
-	<polygon style="fill:#FFFFFF;" points="18.4,241.6 22.4,231.2 25.6,241.6  "></polygon>
-	<polygon style="fill:#FFFFFF;" points="61.6,241.6 64.8,231.2 68,241.6  "></polygon>
-	<polygon style="fill:#FFFFFF;" points="104,241.6 108,231.2 111.2,241.6  "></polygon>
-	<polygon style="fill:#FFFFFF;" points="147.2,241.6 150.4,231.2 154.4,241.6  "></polygon>
-	<polygon style="fill:#FFFFFF;" points="190.4,241.6 193.6,231.2 196.8,241.6  "></polygon>
-</g>
-</svg></span>
-            USA Office
-        </h4>
-
-        <div class="contact-item">
-            <div class="icon">
-                <i class="ri-phone-fill"></i>
-            </div>
-            <div>
-                <span>Phone</span>
-                <a href="tel:+15623120282">
-                    +1 562-312-0282
-                </a>
-            </div>
-        </div>
-
-        <div class="contact-item">
-            <div class="icon">
-                <i class="ri-map-pin-line"></i>
-            </div>
-            <div>
-                <span>Address</span>
-                <p>
-                    Norwalk, California 90650, USA
-                </p>
-            </div>
-        </div>
-
-    </div>
-
-</div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-    <!-- Bottom -->
-
-    <div class="footer-bottom">
-
-        <div class="container">
-
-            <div class="bottom-wrapper">
-
-                <p>
-                    © 2026 All rights reserved.
-                </p>
-
-                <ul>
-
-                    <li><a href="privacy-policy.html">Privacy Policy</a></li>
-
-                    <li><a href="#">Terms of Service</a></li>
-
-                    <li><a href="#">Cookie Policy</a></li>
-
-                </ul>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</footer>
-<!--footer section end-->
-
-<script src="./Assets/js/custom.js"></script>
-<script>
+        </footer>
+        <!--footer section end-->
+
+        <script src="./Assets/js/custom.js"></script>
+        <script>
 (function () {
     var up = document.getElementById('od-upload');
     if (!up) return;
@@ -2071,5 +2278,5 @@
     });
 })();
 </script>
-</body>
+    </body>
 </html>

@@ -1,1008 +1,1464 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
+    <head>
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Global Search Module</title>
+        <title>Global Search Module</title>
 
-    <!-- Remix Icon -->
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" />
+        <!-- Remix Icon -->
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" />
 
-    <!-- Swiper -->
-    <link rel="stylesheet"
-        href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+        <!-- Swiper -->
+        <link rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
 
-    <!-- Lenis -->
-    <link rel="stylesheet"
-        href="https://unpkg.com/lenis@1.3.23/dist/lenis.css">
+        <!-- Lenis -->
+        <link rel="stylesheet"
+            href="https://unpkg.com/lenis@1.3.23/dist/lenis.css">
 
-    <!-- Tailwind Output CSS -->
-     <link href="./Assets/css/output.css" rel="stylesheet">
-</head>
-<body>
+        <!-- Tailwind Output CSS -->
+        <link href="./Assets/css/output.min.css" rel="stylesheet">
+    </head>
+    <body>
 
-<!--Header Section start-->
-<header class="main-header">
-    <div class="container">
+        <!--Header Section start-->
+        <header class="main-header">
+            <div class="container">
 
-        <div class="header-inner">
+                <div class="header-inner">
 
-            <a href="index.html" class="header-logo">
-                <img src="Assets/images/transportdesk-logo.svg" alt="Logo">
-            </a>
-
-            <nav class="main-navigation" id="mobileMenu">
-
-                <div class="menu-circle"></div>
-
-                <ul class="navigation-links">
-                    <li><a href="index.html" class="navigation-link active">Home</a></li>
-                    <li><a href="features.html" class="navigation-link">Features</a></li>
-                    <li><a href="reports.html" class="navigation-link">Resources</a></li>
-                    <li><a href="contact.html" class="navigation-link">Contact</a></li>
-                </ul>
-
-                <div class="mobile-header-right">
-                    <a href="#" class="login-btn">Login</a>
-                    <a href="#" class="demo-btn">Book Demo</a>
-                </div>
-
-            </nav>
-
-            <div class="header-right">
-                <a href="#" class="login-btn">Login</a>
-                <a href="#" class="demo-btn">Book Demo</a>
-            </div>
-
-            <button class="menu-toggle" id="menuToggle" aria-label="Toggle Menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-
-        </div>
-
-    </div>
-</header>
-
-<!-- Add this after header -->
-<div class="menu-overlay" id="menuOverlay"></div>
-<!--Header section End-->
-
-<section id="overview" class="dl-overview-section">
-    <div class="dl-overview-glow"></div>
-    <div class="dl-overview-pattern"></div>
-    <div class="container">
-        <div class="dl-overview-grid">
-            <div class="dl-overview-content">
-                <div class="dl-overview-badge">
-                    <span class="dl-status-dot"></span>
-                    <span>Enterprise Fleet Management</span>
-                    <span class="dl-badge-divider">|</span>
-                    <span class="dl-badge-highlight">Global Search Module</span>
-                </div>
-                <h1 class="dl-overview-title"><span class="dl-gradient-text">Global Search</span> Module</h1>
-                <p class="dl-overview-description">Finding a particular vehicle, vendor, diesel purchase, repair, or document can take time when business information is stored in different modules. Global Search makes it easier to find relevant records from one place. Users can enter a name, number, or keyword, apply filters, and open matching records without checking each module separately.</p><p class="dl-overview-description">The system also offers a separate quick module search to help users navigate directly to application sections such as Vehicles, Drivers, Diesel, Repairs, and Reports.</p>
-                <div class="dl-overview-actions">
-                    <a href="#simulator" class="btn-primary">
-                        <span>Try Live Global Search</span>
-                        <i class="ri-arrow-right-line"></i>
+                    <a href="index.html" class="header-logo">
+                        <img src="Assets/images/transportdesk-logo.svg"
+                            alt="Logo">
                     </a>
-                    <a href="#demo" class="dl-btn-demo">
-                        <span class="dl-play-icon"><i class="ri-play-fill"></i></span>
-                        <span>Watch Demo Video</span>
-                    </a>
-                </div>
-                <div class="dl-overview-stats"><div class="dl-stat-item"><div class="dl-stat-number">12</div><div class="dl-stat-label">Key Features</div></div><div class="dl-stat-item"><div class="dl-stat-number dl-stat-red">6</div><div class="dl-stat-label">Simple Steps</div></div><div class="dl-stat-item"><div class="dl-stat-number dl-stat-green">5</div><div class="dl-stat-label">Component Filters</div></div></div>
-            </div>
-            <div class="dl-overview-visual">
-                <div class="dl-visual-card">
-                    <img src="Assets/images/hero_fleet_dispatch_1792482270822.jpg"
-                         alt="Transportation Fleet Dispatch Logistics Center" class="dl-visual-image">
-                    <div class="dl-visual-overlay"></div>
-                    <div class="dl-visual-topbar">
-                        <div class="dl-live-label"><span class="dl-live-dot"></span><span>Global Search Preview</span></div>
-                        <div class="dl-fuel-rate">GJ 05 AB 1234</div>
-                    </div>
-                    <div class="dl-fuel-slip">
-                        <div class="dl-slip-header">
-                            <span class="dl-slip-title">Find a Truck's Diesel Purchase</span>
-                            <span class="dl-slip-status">Example Search</span>
-                        </div>
-                        <div class="dl-slip-stats"><div class="dl-slip-stat"><span class="dl-slip-label">Component</span><span class="dl-slip-value">Diesel</span></div><div class="dl-slip-stat"><span class="dl-slip-label">Filters</span><span class="dl-slip-value dl-slip-red">Vehicle + Date</span></div><div class="dl-slip-stat"><span class="dl-slip-label">Results</span><span class="dl-slip-value dl-slip-green">Latest First</span></div></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
 
-<section class="dl-trusted-section">
-    <div class="dl-trusted-heading"><span>Find Records Faster • Search Across Modules • Open the Right Information</span></div>
-    <div class="dl-trusted-marquee">
-        <div class="dl-trusted-fade dl-trusted-fade-left"></div>
-        <div class="dl-trusted-fade dl-trusted-fade-right"></div>
-        <div class="dl-trusted-track">
-            <div class="dl-trusted-group"><div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">Search Across Business Records</span></div><div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">Name, Number and Keyword Search</span></div><div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">Vehicle Filter</span></div><div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">Vendor Filter</span></div><div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">Date Range Filter</span></div><div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">Component Filter</span></div><div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">Clear Search Results</span></div><div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">Useful Result Information</span></div><div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">Open Matching Records</span></div><div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">Latest-First Results and Pagination</span></div><div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">Quick Module Navigation</span></div><div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">Access-Based Module Links</span></div></div>
-            <div class="dl-trusted-group" aria-hidden="true"><div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">Search Across Business Records</span></div><div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">Name, Number and Keyword Search</span></div><div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">Vehicle Filter</span></div><div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">Vendor Filter</span></div><div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">Date Range Filter</span></div><div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">Component Filter</span></div><div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">Clear Search Results</span></div><div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">Useful Result Information</span></div><div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">Open Matching Records</span></div><div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">Latest-First Results and Pagination</span></div><div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">Quick Module Navigation</span></div><div class="dl-trusted-item"><span class="dl-trusted-dot"></span><span class="dl-trusted-name">Access-Based Module Links</span></div></div>
-        </div>
-    </div>
-</section>
+                    <nav class="main-navigation" id="mobileMenu">
 
-<section id="demo" class="dl-demo-section">
-    <div class="dl-demo-glow"></div>
-    <div class="dl-container">
-        <div class="heading-wrapper">
-            <span class="heading-tag">Video Demonstration</span>
-            <h2 class="heading-title">Watch How <span>Global Search</span> Works</h2>
-            <p>Watch our demonstration to learn how to search for a record, narrow results using filters, open the matching detail page, and quickly navigate to another module.</p>
-        </div>
-        <div class="dl-demo-grid">
-            <div class="dl-demo-video-column">
-                <div class="dl-video-card">
-                    <div class="dl-video-toolbar">
-                        <div class="dl-video-toolbar-left">
-                            <span class="dl-window-dot dl-dot-red"></span>
-                            <span class="dl-window-dot dl-dot-yellow"></span>
-                            <span class="dl-window-dot dl-dot-green"></span>
-                            <span class="dl-video-filename">global_search_module_demo</span>
+                        <div class="menu-circle"></div>
+
+                        <ul class="navigation-links">
+                            <li><a href="index.html"
+                                    class="navigation-link active">Home</a></li>
+                            <li><a href="features.html"
+                                    class="navigation-link">Features</a></li>
+                            <li><a href="reports.html"
+                                    class="navigation-link">Resources</a></li>
+                            <li><a href="contact.html"
+                                    class="navigation-link">Contact</a></li>
+                        </ul>
+
+                        <div class="mobile-header-right">
+                            <a href="#" class="login-btn">Login</a>
+                            <a href="#" class="demo-btn">Book Demo</a>
                         </div>
-                        <span class="dl-video-quality">Demo Video</span>
+
+                    </nav>
+
+                    <div class="header-right">
+                        <a href="#" class="login-btn">Login</a>
+                        <a href="#" class="demo-btn">Book Demo</a>
                     </div>
-                    <div class="dl-video-preview">
-                        <img src="Assets/images/dashboard.png" alt="global_search_module_demo preview" class="dl-video-thumbnail">
-                        <div class="dl-video-overlay"></div>
-                        <button type="button" class="dl-video-play" aria-label="Play demonstration video">
-                            <i class="ri-play-fill"></i>
-                            <span class="dl-video-ping"></span>
-                        </button>
-                        <div class="dl-video-meta">
-                            <div class="dl-video-meta-left">
-                                <span class="dl-video-current-chapter">[Demo Video Will Be Displayed Here]</span>
+
+                    <button class="menu-toggle" id="menuToggle"
+                        aria-label="Toggle Menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+
+                </div>
+
+            </div>
+        </header>
+
+        <!-- Add this after header -->
+        <div class="menu-overlay" id="menuOverlay"></div>
+        <!--Header section End-->
+
+        <section id="overview" class="dl-overview-section">
+            <div class="dl-overview-glow"></div>
+            <div class="dl-overview-pattern"></div>
+            <div class="container">
+                <div class="dl-overview-grid">
+                    <div class="dl-overview-content">
+                        <div class="dl-overview-badge">
+                            <span class="dl-status-dot"></span>
+                            <span>Enterprise Fleet Management</span>
+                            <span class="dl-badge-divider">|</span>
+                            <span class="dl-badge-highlight">Global Search
+                                Module</span>
+                        </div>
+                        <h1 class="dl-overview-title"><span
+                                class="dl-gradient-text">Global Search</span>
+                            Module</h1>
+                        <p class="dl-overview-description">Finding a particular
+                            vehicle, vendor, diesel purchase, repair, or
+                            document can take time when business information is
+                            stored in different modules. Global Search makes it
+                            easier to find relevant records from one place.
+                            Users can enter a name, number, or keyword, apply
+                            filters, and open matching records without checking
+                            each module separately.</p><p
+                            class="dl-overview-description">The system also
+                            offers a separate quick module search to help users
+                            navigate directly to application sections such as
+                            Vehicles, Drivers, Diesel, Repairs, and Reports.</p>
+                        <div class="dl-overview-actions">
+                            <a href="#simulator" class="btn-primary">
+                                <span>Try Live Global Search</span>
+                                <i class="ri-arrow-right-line"></i>
+                            </a>
+                            <a href="#demo" class="dl-btn-demo">
+                                <span class="dl-play-icon"><i
+                                        class="ri-play-fill"></i></span>
+                                <span>Watch Demo Video</span>
+                            </a>
+                        </div>
+                        <div class="dl-overview-stats"><div
+                                class="dl-stat-item"><div
+                                    class="dl-stat-number">12</div><div
+                                    class="dl-stat-label">Key
+                                    Features</div></div><div
+                                class="dl-stat-item"><div
+                                    class="dl-stat-number dl-stat-red">6</div><div
+                                    class="dl-stat-label">Simple
+                                    Steps</div></div><div
+                                class="dl-stat-item"><div
+                                    class="dl-stat-number dl-stat-green">5</div><div
+                                    class="dl-stat-label">Component
+                                    Filters</div></div></div>
+                    </div>
+                    <div class="dl-overview-visual">
+                        <div class="dl-visual-card">
+                            <img
+                                src="Assets/images/hero_fleet_dispatch_1792482270822.jpg"
+                                alt="Transportation Fleet Dispatch Logistics Center"
+                                class="dl-visual-image">
+                            <div class="dl-visual-overlay"></div>
+                            <div class="dl-visual-topbar">
+                                <div class="dl-live-label"><span
+                                        class="dl-live-dot"></span><span>Global
+                                        Search Preview</span></div>
+                                <div class="dl-fuel-rate">GJ 05 AB 1234</div>
+                            </div>
+                            <div class="dl-fuel-slip">
+                                <div class="dl-slip-header">
+                                    <span class="dl-slip-title">Find a Truck's
+                                        Diesel Purchase</span>
+                                    <span class="dl-slip-status">Example
+                                        Search</span>
+                                </div>
+                                <div class="dl-slip-stats"><div
+                                        class="dl-slip-stat"><span
+                                            class="dl-slip-label">Component</span><span
+                                            class="dl-slip-value">Diesel</span></div><div
+                                        class="dl-slip-stat"><span
+                                            class="dl-slip-label">Filters</span><span
+                                            class="dl-slip-value dl-slip-red">Vehicle
+                                            + Date</span></div><div
+                                        class="dl-slip-stat"><span
+                                            class="dl-slip-label">Results</span><span
+                                            class="dl-slip-value dl-slip-green">Latest
+                                            First</span></div></div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
-</section>
+        </section>
 
-<section id="simulator" class="dl-simulator-section">
-    <div class="dl-container">
-        <div class="dl-simulator-header">
-            <div class="heading-wrapper heading-wrap-left">
-                <span class="heading-tag">Practical Example</span>
-                <h2 class="heading-title">Find a Truck's <span>Diesel Purchase</span></h2>
-                <p>Suppose an accounts employee needs to find fuel purchases for truck GJ 05 AB 1234. They open Global Search, select that vehicle, choose Diesel in the Component filter and enter a date range. The results show matching diesel records for the selected conditions. The employee opens the relevant result to check its available purchase details. Another example: an office employee types "Vehicles" into the quick module search box and selects the Vehicles section directly from the menu suggestions. The records below are sample data for demonstration only.</p>
-            </div>
-            <div class="dl-view-switcher" id="gs-tabs">
-                <button type="button" class="dl-view-tab dl-view-tab-active" data-view="search"><i class="ri-search-line"></i> Global Search</button>
-                <button type="button" class="dl-view-tab" data-view="module"><i class="ri-compass-3-line"></i> Quick Module Search</button>
-            </div>
-        </div>
-
-        <div class="dl-stats-grid">
-            <div class="dl-stat-card">
-                <div class="dl-stat-label"><span>Search Query</span><i class="ri-search-line"></i></div>
-                <div class="dl-stat-value" id="gs-s-query" style="font-size:1.4rem">—</div>
-                <p class="dl-stat-note">Keyword entered</p>
-            </div>
-            <div class="dl-stat-card">
-                <div class="dl-stat-label"><span>Filters Applied</span><i class="ri-filter-3-line dl-red-icon"></i></div>
-                <div class="dl-stat-value dl-red-text"><span id="gs-s-filters">0</span> <span>Filters</span></div>
-                <p class="dl-stat-note">Vehicle, vendor, dates, component</p>
-            </div>
-            <div class="dl-stat-card">
-                <div class="dl-stat-label"><span>Matching Records</span><i class="ri-file-list-3-line dl-green-icon"></i></div>
-                <div class="dl-stat-value dl-green-text"><span id="gs-s-count">0</span> <span>Results</span></div>
-                <p class="dl-stat-note">Latest records first</p>
-            </div>
-            <div class="dl-stat-card dl-stat-card-total">
-                <div class="dl-stat-label"><span>Page</span><span class="dl-status-dot"></span></div>
-                <div class="dl-stat-value dl-stat-total-value" id="gs-s-page">0 / 0</div>
-                <p class="dl-stat-note dl-green-text">Manageable pages</p>
-            </div>
-        </div>
-
-        <div class="dl-calculator-panel" id="gs-view-search">
-            <div class="dl-bill-master">
-                <div class="dl-bill-master-header">
-                    <div class="dl-bill-heading"><span>Global Search</span><span class="dl-heading-separator">·</span><span class="dl-invoice-number">Search box and optional filters</span></div>
+        <section class="dl-trusted-section">
+            <div class="dl-trusted-heading"><span>Find Records Faster • Search
+                    Across Modules • Open the Right Information</span></div>
+            <div class="dl-trusted-marquee">
+                <div class="dl-trusted-fade dl-trusted-fade-left"></div>
+                <div class="dl-trusted-fade dl-trusted-fade-right"></div>
+                <div class="dl-trusted-track">
+                    <div class="dl-trusted-group"><div
+                            class="dl-trusted-item"><span
+                                class="dl-trusted-dot"></span><span
+                                class="dl-trusted-name">Search Across Business
+                                Records</span></div><div
+                            class="dl-trusted-item"><span
+                                class="dl-trusted-dot"></span><span
+                                class="dl-trusted-name">Name, Number and Keyword
+                                Search</span></div><div
+                            class="dl-trusted-item"><span
+                                class="dl-trusted-dot"></span><span
+                                class="dl-trusted-name">Vehicle
+                                Filter</span></div><div
+                            class="dl-trusted-item"><span
+                                class="dl-trusted-dot"></span><span
+                                class="dl-trusted-name">Vendor
+                                Filter</span></div><div
+                            class="dl-trusted-item"><span
+                                class="dl-trusted-dot"></span><span
+                                class="dl-trusted-name">Date Range
+                                Filter</span></div><div
+                            class="dl-trusted-item"><span
+                                class="dl-trusted-dot"></span><span
+                                class="dl-trusted-name">Component
+                                Filter</span></div><div
+                            class="dl-trusted-item"><span
+                                class="dl-trusted-dot"></span><span
+                                class="dl-trusted-name">Clear Search
+                                Results</span></div><div
+                            class="dl-trusted-item"><span
+                                class="dl-trusted-dot"></span><span
+                                class="dl-trusted-name">Useful Result
+                                Information</span></div><div
+                            class="dl-trusted-item"><span
+                                class="dl-trusted-dot"></span><span
+                                class="dl-trusted-name">Open Matching
+                                Records</span></div><div
+                            class="dl-trusted-item"><span
+                                class="dl-trusted-dot"></span><span
+                                class="dl-trusted-name">Latest-First Results and
+                                Pagination</span></div><div
+                            class="dl-trusted-item"><span
+                                class="dl-trusted-dot"></span><span
+                                class="dl-trusted-name">Quick Module
+                                Navigation</span></div><div
+                            class="dl-trusted-item"><span
+                                class="dl-trusted-dot"></span><span
+                                class="dl-trusted-name">Access-Based Module
+                                Links</span></div></div>
+                    <div class="dl-trusted-group" aria-hidden="true"><div
+                            class="dl-trusted-item"><span
+                                class="dl-trusted-dot"></span><span
+                                class="dl-trusted-name">Search Across Business
+                                Records</span></div><div
+                            class="dl-trusted-item"><span
+                                class="dl-trusted-dot"></span><span
+                                class="dl-trusted-name">Name, Number and Keyword
+                                Search</span></div><div
+                            class="dl-trusted-item"><span
+                                class="dl-trusted-dot"></span><span
+                                class="dl-trusted-name">Vehicle
+                                Filter</span></div><div
+                            class="dl-trusted-item"><span
+                                class="dl-trusted-dot"></span><span
+                                class="dl-trusted-name">Vendor
+                                Filter</span></div><div
+                            class="dl-trusted-item"><span
+                                class="dl-trusted-dot"></span><span
+                                class="dl-trusted-name">Date Range
+                                Filter</span></div><div
+                            class="dl-trusted-item"><span
+                                class="dl-trusted-dot"></span><span
+                                class="dl-trusted-name">Component
+                                Filter</span></div><div
+                            class="dl-trusted-item"><span
+                                class="dl-trusted-dot"></span><span
+                                class="dl-trusted-name">Clear Search
+                                Results</span></div><div
+                            class="dl-trusted-item"><span
+                                class="dl-trusted-dot"></span><span
+                                class="dl-trusted-name">Useful Result
+                                Information</span></div><div
+                            class="dl-trusted-item"><span
+                                class="dl-trusted-dot"></span><span
+                                class="dl-trusted-name">Open Matching
+                                Records</span></div><div
+                            class="dl-trusted-item"><span
+                                class="dl-trusted-dot"></span><span
+                                class="dl-trusted-name">Latest-First Results and
+                                Pagination</span></div><div
+                            class="dl-trusted-item"><span
+                                class="dl-trusted-dot"></span><span
+                                class="dl-trusted-name">Quick Module
+                                Navigation</span></div><div
+                            class="dl-trusted-item"><span
+                                class="dl-trusted-dot"></span><span
+                                class="dl-trusted-name">Access-Based Module
+                                Links</span></div></div>
                 </div>
-                <div class="dl-bill-fields">
-                    <div class="dl-form-group"><label for="gs-q">Search Query</label>
-                        <input id="gs-q" class="dl-form-control" type="text" placeholder="Vehicle number, vendor name, reference..."></div>
-                    <div class="dl-form-group"><label for="gs-vehicle">Vehicle</label>
-                        <select id="gs-vehicle" class="dl-form-control"><option value="">All vehicles</option><option selected>GJ 05 AB 1234</option><option>MH-12-RN-4821</option><option>MH-14-BT-9102</option></select></div>
-                    <div class="dl-form-group"><label for="gs-vendor">Vendor</label>
-                        <select id="gs-vendor" class="dl-form-control"><option value="">All vendors</option><option>Bharat Petroleum Highway Express</option><option>Indian Oil Super Fuel Hub</option><option>Shell Transport Point</option><option>Maroon Auto Tech Pvt Ltd</option></select></div>
-                    <div class="dl-form-group"><label for="gs-comp">Component</label>
-                        <select id="gs-comp" class="dl-form-control"><option value="">All components</option><option selected>Diesel</option><option>Toll</option><option>Service</option><option>Tyre</option><option>Battery</option></select></div>
-                    <div class="dl-form-group"><label for="gs-from">Date From</label>
-                        <input id="gs-from" class="dl-form-control" type="date" value="2026-10-01"></div>
-                    <div class="dl-form-group"><label for="gs-to">Date To</label>
-                        <input id="gs-to" class="dl-form-control" type="date" value="2026-10-31"></div>
+            </div>
+        </section>
+
+        <section id="demo" class="dl-demo-section">
+            <div class="dl-demo-glow"></div>
+            <div class="dl-container">
+                <div class="heading-wrapper">
+                    <span class="heading-tag">Video Demonstration</span>
+                    <h2 class="heading-title">Watch How <span>Global
+                            Search</span> Works</h2>
+                    <p>Watch our demonstration to learn how to search for a
+                        record, narrow results using filters, open the matching
+                        detail page, and quickly navigate to another module.</p>
                 </div>
-                <div class="dl-bill-options">
-                    <span class="dl-formula-note">You can also search using filters without entering text.</span>
-                    <div class="dl-toolbar-actions">
-                        <button type="button" class="dl-action-button" id="gs-clear"><i class="ri-close-circle-line dl-red-icon"></i> Clear</button>
-                        <button type="button" class="dl-primary-button" id="gs-search"><i class="ri-search-line"></i> Search</button>
+                <div class="dl-demo-grid">
+                    <div class="dl-demo-video-column">
+                        <div class="dl-video-card">
+                            <div class="dl-video-toolbar">
+                                <div class="dl-video-toolbar-left">
+                                    <span
+                                        class="dl-window-dot dl-dot-red"></span>
+                                    <span
+                                        class="dl-window-dot dl-dot-yellow"></span>
+                                    <span
+                                        class="dl-window-dot dl-dot-green"></span>
+                                    <span
+                                        class="dl-video-filename">global_search_module_demo</span>
+                                </div>
+                                <span class="dl-video-quality">Demo Video</span>
+                            </div>
+                            <div class="dl-video-preview">
+                                <img src="Assets/images/dashboard.png"
+                                    alt="global_search_module_demo preview"
+                                    class="dl-video-thumbnail">
+                                <div class="dl-video-overlay"></div>
+                                <button type="button" class="dl-video-play"
+                                    aria-label="Play demonstration video">
+                                    <i class="ri-play-fill"></i>
+                                    <span class="dl-video-ping"></span>
+                                </button>
+                                <div class="dl-video-meta">
+                                    <div class="dl-video-meta-left">
+                                        <span
+                                            class="dl-video-current-chapter">[Demo
+                                            Video Will Be Displayed Here]</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
+        </section>
 
-            <div class="dl-table-wrapper">
-                <table class="dl-vehicle-table">
-                    <thead><tr><th>Result</th><th>Record Type</th><th>Details</th><th>Date</th><th class="dl-text-center">Action</th></tr></thead>
-                    <tbody id="gs-body"><tr><td colspan="5">Click Search to view the matching records.</td></tr></tbody>
-                </table>
-            </div>
+        <section id="simulator" class="dl-simulator-section">
+            <div class="dl-container">
+                <div class="dl-simulator-header">
+                    <div class="heading-wrapper heading-wrap-left">
+                        <span class="heading-tag">Practical Example</span>
+                        <h2 class="heading-title">Find a Truck's <span>Diesel
+                                Purchase</span></h2>
+                        <p>Suppose an accounts employee needs to find fuel
+                            purchases for truck GJ 05 AB 1234. They open Global
+                            Search, select that vehicle, choose Diesel in the
+                            Component filter and enter a date range. The results
+                            show matching diesel records for the selected
+                            conditions. The employee opens the relevant result
+                            to check its available purchase details. Another
+                            example: an office employee types "Vehicles" into
+                            the quick module search box and selects the Vehicles
+                            section directly from the menu suggestions. The
+                            records below are sample data for demonstration
+                            only.</p>
+                    </div>
+                    <div class="dl-view-switcher" id="gs-tabs">
+                        <button type="button"
+                            class="dl-view-tab dl-view-tab-active"
+                            data-view="search"><i class="ri-search-line"></i>
+                            Global Search</button>
+                        <button type="button" class="dl-view-tab"
+                            data-view="module"><i class="ri-compass-3-line"></i>
+                            Quick Module Search</button>
+                    </div>
+                </div>
 
-            <div class="dl-table-toolbar">
-                <div class="dl-supported-formats" id="gs-msg">Sample data for demonstration only.</div>
-                <div class="dl-toolbar-actions">
-                    <button type="button" class="dl-action-button" id="gs-prev"><i class="ri-arrow-left-s-line"></i> Previous</button>
-                    <button type="button" class="dl-action-button" id="gs-next">Next <i class="ri-arrow-right-s-line"></i></button>
+                <div class="dl-stats-grid">
+                    <div class="dl-stat-card">
+                        <div class="dl-stat-label"><span>Search Query</span><i
+                                class="ri-search-line"></i></div>
+                        <div class="dl-stat-value" id="gs-s-query"
+                            style="font-size:1.4rem">—</div>
+                        <p class="dl-stat-note">Keyword entered</p>
+                    </div>
+                    <div class="dl-stat-card">
+                        <div class="dl-stat-label"><span>Filters
+                                Applied</span><i
+                                class="ri-filter-3-line dl-red-icon"></i></div>
+                        <div class="dl-stat-value dl-red-text"><span
+                                id="gs-s-filters">0</span>
+                            <span>Filters</span></div>
+                        <p class="dl-stat-note">Vehicle, vendor, dates,
+                            component</p>
+                    </div>
+                    <div class="dl-stat-card">
+                        <div class="dl-stat-label"><span>Matching
+                                Records</span><i
+                                class="ri-file-list-3-line dl-green-icon"></i></div>
+                        <div class="dl-stat-value dl-green-text"><span
+                                id="gs-s-count">0</span>
+                            <span>Results</span></div>
+                        <p class="dl-stat-note">Latest records first</p>
+                    </div>
+                    <div class="dl-stat-card dl-stat-card-total">
+                        <div class="dl-stat-label"><span>Page</span><span
+                                class="dl-status-dot"></span></div>
+                        <div class="dl-stat-value dl-stat-total-value"
+                            id="gs-s-page">0 / 0</div>
+                        <p class="dl-stat-note dl-green-text">Manageable
+                            pages</p>
+                    </div>
                 </div>
-            </div>
 
-            <div class="dl-calculator-footer">
-                <div class="dl-documentation-note"><i class="ri-information-line"></i>
-                    <span>Date filtering applies only to record types for which date fields are configured. Some record types use separate vendor data and may not appear with the vendor filter. If no matching records are found, change the keyword or filters and search again.</span></div>
-            </div>
-        </div>
+                <div class="dl-calculator-panel" id="gs-view-search">
+                    <div class="dl-bill-master">
+                        <div class="dl-bill-master-header">
+                            <div class="dl-bill-heading"><span>Global
+                                    Search</span><span
+                                    class="dl-heading-separator">·</span><span
+                                    class="dl-invoice-number">Search box and
+                                    optional filters</span></div>
+                        </div>
+                        <div class="dl-bill-fields">
+                            <div class="dl-form-group"><label for="gs-q">Search
+                                    Query</label>
+                                <input id="gs-q" class="dl-form-control"
+                                    type="text"
+                                    placeholder="Vehicle number, vendor name, reference..."></div>
+                            <div class="dl-form-group"><label
+                                    for="gs-vehicle">Vehicle</label>
+                                <select id="gs-vehicle"
+                                    class="dl-form-control"><option value>All
+                                        vehicles</option><option selected>GJ 05
+                                        AB
+                                        1234</option><option>MH-12-RN-4821</option><option>MH-14-BT-9102</option></select></div>
+                            <div class="dl-form-group"><label
+                                    for="gs-vendor">Vendor</label>
+                                <select id="gs-vendor"
+                                    class="dl-form-control"><option value>All
+                                        vendors</option><option>Bharat Petroleum
+                                        Highway Express</option><option>Indian
+                                        Oil Super Fuel Hub</option><option>Shell
+                                        Transport Point</option><option>Maroon
+                                        Auto Tech Pvt
+                                        Ltd</option></select></div>
+                            <div class="dl-form-group"><label
+                                    for="gs-comp">Component</label>
+                                <select id="gs-comp"
+                                    class="dl-form-control"><option value>All
+                                        components</option><option
+                                        selected>Diesel</option><option>Toll</option><option>Service</option><option>Tyre</option><option>Battery</option></select></div>
+                            <div class="dl-form-group"><label for="gs-from">Date
+                                    From</label>
+                                <input id="gs-from" class="dl-form-control"
+                                    type="date" value="2026-10-01"></div>
+                            <div class="dl-form-group"><label for="gs-to">Date
+                                    To</label>
+                                <input id="gs-to" class="dl-form-control"
+                                    type="date" value="2026-10-31"></div>
+                        </div>
+                        <div class="dl-bill-options">
+                            <span class="dl-formula-note">You can also search
+                                using filters without entering text.</span>
+                            <div class="dl-toolbar-actions">
+                                <button type="button" class="dl-action-button"
+                                    id="gs-clear"><i
+                                        class="ri-close-circle-line dl-red-icon"></i>
+                                    Clear</button>
+                                <button type="button" class="dl-primary-button"
+                                    id="gs-search"><i
+                                        class="ri-search-line"></i>
+                                    Search</button>
+                            </div>
+                        </div>
+                    </div>
 
-        <div class="dl-calculator-panel" id="gs-view-module" hidden>
-            <div class="dl-bill-master">
-                <div class="dl-bill-master-header">
-                    <div class="dl-bill-heading"><span>Quick Module Navigation</span><span class="dl-heading-separator">·</span><span class="dl-invoice-number">Search module...</span></div>
-                </div>
-                <div class="dl-bill-fields">
-                    <div class="dl-form-group"><label for="gs-mod">Search module...</label>
-                        <input id="gs-mod" class="dl-form-control" type="text" placeholder="Try typing &quot;Vehicles&quot;"></div>
-                </div>
-            </div>
-            <div class="dl-table-wrapper">
-                <table class="dl-vehicle-table">
-                    <thead><tr><th>Application Section</th><th class="dl-text-center">Action</th></tr></thead>
-                    <tbody id="gs-mods"></tbody>
-                </table>
-            </div>
-            <div class="dl-calculator-footer">
-                <div class="dl-documentation-note"><i class="ri-information-line"></i>
-                    <span>The small "Search module..." field finds menu sections, while the full Global Search page finds saved records. Module suggestions depend on the signed-in user's accessible sections.</span></div>
-                <div class="dl-supported-formats" id="gs-modmsg">Select a section to open it.</div>
-            </div>
-        </div>
-    </div>
-</section>
+                    <div class="dl-table-wrapper">
+                        <table class="dl-vehicle-table">
+                            <thead><tr><th>Result</th><th>Record
+                                        Type</th><th>Details</th><th>Date</th><th
+                                        class="dl-text-center">Action</th></tr></thead>
+                            <tbody id="gs-body"><tr><td colspan="5">Click Search
+                                        to view the matching
+                                        records.</td></tr></tbody>
+                        </table>
+                    </div>
 
-<section id="features" class="dl-features-section">
-    <div class="container">
-        <div class="heading-wrapper">
-            <span class="heading-tag">Key Module Features</span>
-            <h2 class="heading-title">Everything You Need for <span>Global Search</span></h2>
-            <div class="dl-features-filters"><button type="button" class="dl-filter-btn is-active" data-filter="all">All Features (12)</button><button type="button" class="dl-filter-btn" data-filter="search">Search &amp; Filters</button><button type="button" class="dl-filter-btn" data-filter="results">Results &amp; Records</button><button type="button" class="dl-filter-btn" data-filter="nav">Quick Navigation</button></div>
-        </div>
-        <div class="dl-features-grid">
-            <article class="dl-feature-card" data-category="search">
-                <div class="dl-feature-card-content">
-                    <div class="dl-feature-icon"><i class="ri-search-eye-line"></i></div>
-                    <div class="dl-feature-card-heading">
-                        <span class="dl-feature-number">4.1</span>
-                        <h3>Search Across Business Records</h3>
+                    <div class="dl-table-toolbar">
+                        <div class="dl-supported-formats" id="gs-msg">Sample
+                            data for demonstration only.</div>
+                        <div class="dl-toolbar-actions">
+                            <button type="button" class="dl-action-button"
+                                id="gs-prev"><i
+                                    class="ri-arrow-left-s-line"></i>
+                                Previous</button>
+                            <button type="button" class="dl-action-button"
+                                id="gs-next">Next <i
+                                    class="ri-arrow-right-s-line"></i></button>
+                        </div>
                     </div>
-                    <p>Search from one place across the record types configured for the application, including vehicle, vendor, driver, diesel, maintenance, battery, tyre, and document-related information.</p>
-                </div>
-            </article>
-            <article class="dl-feature-card" data-category="search">
-                <div class="dl-feature-card-content">
-                    <div class="dl-feature-icon"><i class="ri-text"></i></div>
-                    <div class="dl-feature-card-heading">
-                        <span class="dl-feature-number">4.2</span>
-                        <h3>Name, Number and Keyword Search</h3>
-                    </div>
-                    <p>Look for records using recognizable information such as vehicle registration numbers, vendor names, and saved description fields. Search matches depend on the fields available for each record type.</p>
-                </div>
-            </article>
-            <article class="dl-feature-card" data-category="search">
-                <div class="dl-feature-card-content">
-                    <div class="dl-feature-icon"><i class="ri-truck-line"></i></div>
-                    <div class="dl-feature-card-heading">
-                        <span class="dl-feature-number">4.3</span>
-                        <h3>Vehicle Filter</h3>
-                    </div>
-                    <p>Select a particular vehicle to narrow supported results related to that vehicle.</p>
-                </div>
-            </article>
-            <article class="dl-feature-card" data-category="search">
-                <div class="dl-feature-card-content">
-                    <div class="dl-feature-icon"><i class="ri-store-2-line"></i></div>
-                    <div class="dl-feature-card-heading">
-                        <span class="dl-feature-number">4.4</span>
-                        <h3>Vendor Filter</h3>
-                    </div>
-                    <p>Select a diesel or service vendor to narrow records linked to that supplier. Some record types use separate vendor data and may not appear with this filter.</p>
-                </div>
-            </article>
-            <article class="dl-feature-card" data-category="search">
-                <div class="dl-feature-card-content">
-                    <div class="dl-feature-icon"><i class="ri-calendar-line"></i></div>
-                    <div class="dl-feature-card-heading">
-                        <span class="dl-feature-number">4.5</span>
-                        <h3>Date Range Filter</h3>
-                    </div>
-                    <p>Use Date From and Date To to search supported records with relevant dates. Date filtering applies only to record types for which date fields are configured.</p>
-                </div>
-            </article>
-            <article class="dl-feature-card" data-category="search">
-                <div class="dl-feature-card-content">
-                    <div class="dl-feature-icon"><i class="ri-apps-2-line"></i></div>
-                    <div class="dl-feature-card-heading">
-                        <span class="dl-feature-number">4.6</span>
-                        <h3>Component Filter</h3>
-                    </div>
-                    <p>Limit results to supported groups: Diesel, Toll, Service, Tyre, or Battery.</p>
-                </div>
-            </article>
-            <article class="dl-feature-card" data-category="results">
-                <div class="dl-feature-card-content">
-                    <div class="dl-feature-icon"><i class="ri-close-circle-line"></i></div>
-                    <div class="dl-feature-card-heading">
-                        <span class="dl-feature-number">4.7</span>
-                        <h3>Clear Search Results</h3>
-                    </div>
-                    <p>Reset the entered conditions whenever you want to search for a different record.</p>
-                </div>
-            </article>
-            <article class="dl-feature-card" data-category="results">
-                <div class="dl-feature-card-content">
-                    <div class="dl-feature-icon"><i class="ri-information-line"></i></div>
-                    <div class="dl-feature-card-heading">
-                        <span class="dl-feature-number">4.8</span>
-                        <h3>Useful Result Information</h3>
-                    </div>
-                    <p>Results identify their record type and can show extra context such as a vehicle number, vendor, owner or contact person.</p>
-                </div>
-            </article>
-            <article class="dl-feature-card" data-category="results">
-                <div class="dl-feature-card-content">
-                    <div class="dl-feature-icon"><i class="ri-external-link-line"></i></div>
-                    <div class="dl-feature-card-heading">
-                        <span class="dl-feature-number">4.9</span>
-                        <h3>Open Matching Records</h3>
-                    </div>
-                    <p>Use a result link to navigate to its corresponding module page, where a linked detail route is available.</p>
-                </div>
-            </article>
-            <article class="dl-feature-card" data-category="results">
-                <div class="dl-feature-card-content">
-                    <div class="dl-feature-icon"><i class="ri-sort-desc"></i></div>
-                    <div class="dl-feature-card-heading">
-                        <span class="dl-feature-number">4.10</span>
-                        <h3>Latest-First Results and Pagination</h3>
-                    </div>
-                    <p>Matching records are arranged with recently created records first, with results shown in manageable pages.</p>
-                </div>
-            </article>
-            <article class="dl-feature-card" data-category="nav">
-                <div class="dl-feature-card-content">
-                    <div class="dl-feature-icon"><i class="ri-compass-3-line"></i></div>
-                    <div class="dl-feature-card-heading">
-                        <span class="dl-feature-number">4.11</span>
-                        <h3>Quick Module Navigation</h3>
-                    </div>
-                    <p>Use the separate "Search module..." box to find and open application sections quickly, instead of navigating through menus.</p>
-                </div>
-            </article>
-            <article class="dl-feature-card" data-category="nav">
-                <div class="dl-feature-card-content">
-                    <div class="dl-feature-icon"><i class="ri-lock-unlock-line"></i></div>
-                    <div class="dl-feature-card-heading">
-                        <span class="dl-feature-number">4.12</span>
-                        <h3>Access-Based Module Links</h3>
-                    </div>
-                    <p>Quick module search lists sections according to the signed-in user's available menu permissions.</p>
-                </div>
-            </article>
-        </div>
-    </div>
-</section>
 
-<section class="dl-workflow-section">
-    <div class="container">
-        <div class="heading-wrapper heading-wrap-left">
-            <span class="heading-tag">Step by Step</span>
-            <h2 class="heading-title">How Does <span>Global Search</span> Work?</h2>
-        </div>
-        <div class="dl-workflow-grid">
-            <article class="dl-workflow-card">
-                <div class="dl-workflow-card-content">
-                    <div class="dl-workflow-card-top">
-                        <span class="dl-workflow-number">01</span>
-                        <div class="dl-workflow-icon"><i class="ri-search-line"></i></div>
+                    <div class="dl-calculator-footer">
+                        <div class="dl-documentation-note"><i
+                                class="ri-information-line"></i>
+                            <span>Date filtering applies only to record types
+                                for which date fields are configured. Some
+                                record types use separate vendor data and may
+                                not appear with the vendor filter. If no
+                                matching records are found, change the keyword
+                                or filters and search again.</span></div>
                     </div>
-                    <h3 class="dl-workflow-card-title">Step 1: Open Global Search</h3>
-                    <p class="dl-workflow-card-description">Open Global Search from the application menu.</p>
-                    <ul class="dl-workflow-checklist"><li><i class="ri-check-line"></i><span>The page provides a search box and optional filters.</span></li></ul>
                 </div>
-               
-            </article>
-            <article class="dl-workflow-card">
-                <div class="dl-workflow-card-content">
-                    <div class="dl-workflow-card-top">
-                        <span class="dl-workflow-number">02</span>
-                        <div class="dl-workflow-icon"><i class="ri-keyboard-line"></i></div>
-                    </div>
-                    <h3 class="dl-workflow-card-title">Step 2: Enter a Search Term</h3>
-                    <p class="dl-workflow-card-description">Type a vehicle number, vendor name, reference value, or other known detail into Search Query.</p>
-                    <ul class="dl-workflow-checklist"><li><i class="ri-check-line"></i><span>You can also search using filters without entering text.</span></li></ul>
-                </div>
-              
-            </article>
-            <article class="dl-workflow-card">
-                <div class="dl-workflow-card-content">
-                    <div class="dl-workflow-card-top">
-                        <span class="dl-workflow-number">03</span>
-                        <div class="dl-workflow-icon"><i class="ri-filter-3-line"></i></div>
-                    </div>
-                    <h3 class="dl-workflow-card-title">Step 3: Narrow Your Search</h3>
-                    <p class="dl-workflow-card-description">Choose a vendor, vehicle, date range, or component such as Diesel, Toll, Service, Tyre, or Battery to focus on relevant records.</p>
-                    <ul class="dl-workflow-checklist"></ul>
-                </div>
-             
-            </article>
-            <article class="dl-workflow-card">
-                <div class="dl-workflow-card-content">
-                    <div class="dl-workflow-card-top">
-                        <span class="dl-workflow-number">04</span>
-                        <div class="dl-workflow-icon"><i class="ri-list-check-2"></i></div>
-                    </div>
-                    <h3 class="dl-workflow-card-title">Step 4: Review Results</h3>
-                    <p class="dl-workflow-card-description">Click Search to view the matching records.</p>
-                    <ul class="dl-workflow-checklist"><li><i class="ri-check-line"></i><span>Results display a title, record type and, where available, details such as related vehicle, vendor or owner.</span></li></ul>
-                </div>
-              
-            </article>
-            <article class="dl-workflow-card">
-                <div class="dl-workflow-card-content">
-                    <div class="dl-workflow-card-top">
-                        <span class="dl-workflow-number">05</span>
-                        <div class="dl-workflow-icon"><i class="ri-external-link-line"></i></div>
-                    </div>
-                    <h3 class="dl-workflow-card-title">Step 5: Open the Record</h3>
-                    <p class="dl-workflow-card-description">Select a result to open its linked module record.</p>
-                    <ul class="dl-workflow-checklist"><li><i class="ri-check-line"></i><span>If no matching records are found, change the keyword or filters and search again.</span></li></ul>
-                </div>
-              
-            </article>
-            <article class="dl-workflow-card">
-                <div class="dl-workflow-card-content">
-                    <div class="dl-workflow-card-top">
-                        <span class="dl-workflow-number">06</span>
-                        <div class="dl-workflow-icon"><i class="ri-refresh-line"></i></div>
-                    </div>
-                    <h3 class="dl-workflow-card-title">Step 6: Clear and Search Again</h3>
-                    <p class="dl-workflow-card-description">Use Clear to reset the search form and begin a new search.</p>
-                    <ul class="dl-workflow-checklist"></ul>
-                </div>
-                
-            </article>
-        </div>
-    </div>
-</section>
 
-<section class="results-section">
-    <div class="container">
-        <div class="heading-wrapper">
-            <span class="heading-tag">Benefits</span>
-            <h2 class="heading-title heading-light">Benefits of <span>Global Search</span></h2>
-        </div>
-        <div class="results-grid">
-            <div class="result-card">
-                <div class="result-icon"><i class="ri-time-line"></i></div>
-                <h3>Save time by finding records without opening modules one by one.</h3>
-                
-            </div>
-            <div class="result-card">
-                <div class="result-icon"><i class="ri-stack-line"></i></div>
-                <h3>Reduce effort when checking vehicle, vendor and maintenance information.</h3>
-                
-            </div>
-            <div class="result-card">
-                <div class="result-icon"><i class="ri-filter-3-line"></i></div>
-                <h3>Use simple filters to narrow a large set of records.</h3>
-                
-            </div>
-            <div class="result-card">
-                <div class="result-icon"><i class="ri-external-link-line"></i></div>
-                <h3>Open relevant application pages more quickly.</h3>
-                
-            </div>
-            <div class="result-card">
-                <div class="result-icon"><i class="ri-team-line"></i></div>
-                <h3>Help team members find information using familiar names and numbers.</h3>
-                
-            </div>
-            <div class="result-card">
-                <div class="result-icon"><i class="ri-folder-open-line"></i></div>
-                <h3>Keep day-to-day work organized with easy access to saved records.</h3>
-                
-            </div>
-        </div>
-    </div>
-</section>
-
-<section id="faq" class="dl-faq-section">
-    <div class="container">
-        <div class="heading-wrapper">
-            <span class="heading-tag">Got Questions?</span>
-            <h2 class="heading-title">Frequently Asked <span>Questions</span></h2>
-            <div class="dl-faq-filters"><button class="dl-faq-filter active" type="button">All</button><button class="dl-faq-filter" type="button">Search</button><button class="dl-faq-filter" type="button">Filters</button><button class="dl-faq-filter" type="button">Records</button><button class="dl-faq-filter" type="button">Navigation</button></div>
-        </div>
-        <div class="dl-faq-list">
-            <div class="dl-faq-item active">
-                <button class="dl-faq-question" type="button" aria-expanded="true" aria-controls="dl-faq-answer-1">
-                    <span class="dl-faq-question-content">
-                        <span class="dl-faq-number">Q1</span>
-                        <span class="dl-faq-question-text">Can I search using a vehicle number?</span>
-                    </span>
-                    <span class="dl-faq-arrow"><i class="ri-arrow-down-s-line"></i></span>
-                </button>
-                <div class="dl-faq-answer" id="dl-faq-answer-1">
-                    <div class="dl-faq-answer-content">
-                        <p>Yes. Use a known vehicle number as a keyword or select a vehicle filter to find supported matching records.</p>
-                        <div class="dl-faq-topic"><span>Topic: Search</span></div>
+                <div class="dl-calculator-panel" id="gs-view-module" hidden>
+                    <div class="dl-bill-master">
+                        <div class="dl-bill-master-header">
+                            <div class="dl-bill-heading"><span>Quick Module
+                                    Navigation</span><span
+                                    class="dl-heading-separator">·</span><span
+                                    class="dl-invoice-number">Search
+                                    module...</span></div>
+                        </div>
+                        <div class="dl-bill-fields">
+                            <div class="dl-form-group"><label
+                                    for="gs-mod">Search module...</label>
+                                <input id="gs-mod" class="dl-form-control"
+                                    type="text"
+                                    placeholder="Try typing &quot;Vehicles&quot;"></div>
+                        </div>
+                    </div>
+                    <div class="dl-table-wrapper">
+                        <table class="dl-vehicle-table">
+                            <thead><tr><th>Application Section</th><th
+                                        class="dl-text-center">Action</th></tr></thead>
+                            <tbody id="gs-mods"></tbody>
+                        </table>
+                    </div>
+                    <div class="dl-calculator-footer">
+                        <div class="dl-documentation-note"><i
+                                class="ri-information-line"></i>
+                            <span>The small "Search module..." field finds menu
+                                sections, while the full Global Search page
+                                finds saved records. Module suggestions depend
+                                on the signed-in user's accessible
+                                sections.</span></div>
+                        <div class="dl-supported-formats" id="gs-modmsg">Select
+                            a section to open it.</div>
                     </div>
                 </div>
             </div>
-            <div class="dl-faq-item">
-                <button class="dl-faq-question" type="button" aria-expanded="false" aria-controls="dl-faq-answer-2">
-                    <span class="dl-faq-question-content">
-                        <span class="dl-faq-number">Q2</span>
-                        <span class="dl-faq-question-text">Can I search only diesel records?</span>
-                    </span>
-                    <span class="dl-faq-arrow"><i class="ri-arrow-down-s-line"></i></span>
-                </button>
-                <div class="dl-faq-answer" id="dl-faq-answer-2">
-                    <div class="dl-faq-answer-content">
-                        <p>Yes. Choose Diesel in the Component filter before searching.</p>
-                        <div class="dl-faq-topic"><span>Topic: Filters</span></div>
+        </section>
+
+        <section id="features" class="dl-features-section">
+            <div class="container">
+                <div class="heading-wrapper">
+                    <span class="heading-tag">Key Module Features</span>
+                    <h2 class="heading-title">Everything You Need for
+                        <span>Global Search</span></h2>
+                    <div class="dl-features-filters"><button type="button"
+                            class="dl-filter-btn is-active"
+                            data-filter="all">All Features (12)</button><button
+                            type="button" class="dl-filter-btn"
+                            data-filter="search">Search &amp;
+                            Filters</button><button type="button"
+                            class="dl-filter-btn" data-filter="results">Results
+                            &amp; Records</button><button type="button"
+                            class="dl-filter-btn" data-filter="nav">Quick
+                            Navigation</button></div>
+                </div>
+                <div class="dl-features-grid">
+                    <article class="dl-feature-card" data-category="search">
+                        <div class="dl-feature-card-content">
+                            <div class="dl-feature-icon"><i
+                                    class="ri-search-eye-line"></i></div>
+                            <div class="dl-feature-card-heading">
+                              
+                                <h3>Search Across Business Records</h3>
+                            </div>
+                            <p>Search from one place across the record types
+                                configured for the application, including
+                                vehicle, vendor, driver, diesel, maintenance,
+                                battery, tyre, and document-related
+                                information.</p>
+                        </div>
+                    </article>
+                    <article class="dl-feature-card" data-category="search">
+                        <div class="dl-feature-card-content">
+                            <div class="dl-feature-icon"><i
+                                    class="ri-text"></i></div>
+                            <div class="dl-feature-card-heading">
+                              
+                                <h3>Name, Number and Keyword Search</h3>
+                            </div>
+                            <p>Look for records using recognizable information
+                                such as vehicle registration numbers, vendor
+                                names, and saved description fields. Search
+                                matches depend on the fields available for each
+                                record type.</p>
+                        </div>
+                    </article>
+                    <article class="dl-feature-card" data-category="search">
+                        <div class="dl-feature-card-content">
+                            <div class="dl-feature-icon"><i
+                                    class="ri-truck-line"></i></div>
+                            <div class="dl-feature-card-heading">
+                              
+                                <h3>Vehicle Filter</h3>
+                            </div>
+                            <p>Select a particular vehicle to narrow supported
+                                results related to that vehicle.</p>
+                        </div>
+                    </article>
+                    <article class="dl-feature-card" data-category="search">
+                        <div class="dl-feature-card-content">
+                            <div class="dl-feature-icon"><i
+                                    class="ri-store-2-line"></i></div>
+                            <div class="dl-feature-card-heading">
+                               
+                                <h3>Vendor Filter</h3>
+                            </div>
+                            <p>Select a diesel or service vendor to narrow
+                                records linked to that supplier. Some record
+                                types use separate vendor data and may not
+                                appear with this filter.</p>
+                        </div>
+                    </article>
+                    <article class="dl-feature-card" data-category="search">
+                        <div class="dl-feature-card-content">
+                            <div class="dl-feature-icon"><i
+                                    class="ri-calendar-line"></i></div>
+                            <div class="dl-feature-card-heading">
+                               
+                                <h3>Date Range Filter</h3>
+                            </div>
+                            <p>Use Date From and Date To to search supported
+                                records with relevant dates. Date filtering
+                                applies only to record types for which date
+                                fields are configured.</p>
+                        </div>
+                    </article>
+                    <article class="dl-feature-card" data-category="search">
+                        <div class="dl-feature-card-content">
+                            <div class="dl-feature-icon"><i
+                                    class="ri-apps-2-line"></i></div>
+                            <div class="dl-feature-card-heading">
+                              
+                                <h3>Component Filter</h3>
+                            </div>
+                            <p>Limit results to supported groups: Diesel, Toll,
+                                Service, Tyre, or Battery.</p>
+                        </div>
+                    </article>
+                    <article class="dl-feature-card" data-category="results">
+                        <div class="dl-feature-card-content">
+                            <div class="dl-feature-icon"><i
+                                    class="ri-close-circle-line"></i></div>
+                            <div class="dl-feature-card-heading">
+                               
+                                <h3>Clear Search Results</h3>
+                            </div>
+                            <p>Reset the entered conditions whenever you want to
+                                search for a different record.</p>
+                        </div>
+                    </article>
+                    <article class="dl-feature-card" data-category="results">
+                        <div class="dl-feature-card-content">
+                            <div class="dl-feature-icon"><i
+                                    class="ri-information-line"></i></div>
+                            <div class="dl-feature-card-heading">
+                              
+                                <h3>Useful Result Information</h3>
+                            </div>
+                            <p>Results identify their record type and can show
+                                extra context such as a vehicle number, vendor,
+                                owner or contact person.</p>
+                        </div>
+                    </article>
+                    <article class="dl-feature-card" data-category="results">
+                        <div class="dl-feature-card-content">
+                            <div class="dl-feature-icon"><i
+                                    class="ri-external-link-line"></i></div>
+                            <div class="dl-feature-card-heading">
+                               
+                                <h3>Open Matching Records</h3>
+                            </div>
+                            <p>Use a result link to navigate to its
+                                corresponding module page, where a linked detail
+                                route is available.</p>
+                        </div>
+                    </article>
+                    <article class="dl-feature-card" data-category="results">
+                        <div class="dl-feature-card-content">
+                            <div class="dl-feature-icon"><i
+                                    class="ri-sort-desc"></i></div>
+                            <div class="dl-feature-card-heading">
+                               
+                                <h3>Latest-First Results and Pagination</h3>
+                            </div>
+                            <p>Matching records are arranged with recently
+                                created records first, with results shown in
+                                manageable pages.</p>
+                        </div>
+                    </article>
+                    <article class="dl-feature-card" data-category="nav">
+                        <div class="dl-feature-card-content">
+                            <div class="dl-feature-icon"><i
+                                    class="ri-compass-3-line"></i></div>
+                            <div class="dl-feature-card-heading">
+                              
+                                <h3>Quick Module Navigation</h3>
+                            </div>
+                            <p>Use the separate "Search module..." box to find
+                                and open application sections quickly, instead
+                                of navigating through menus.</p>
+                        </div>
+                    </article>
+                    <article class="dl-feature-card" data-category="nav">
+                        <div class="dl-feature-card-content">
+                            <div class="dl-feature-icon"><i
+                                    class="ri-lock-unlock-line"></i></div>
+                            <div class="dl-feature-card-heading">
+                              
+                                <h3>Access-Based Module Links</h3>
+                            </div>
+                            <p>Quick module search lists sections according to
+                                the signed-in user's available menu
+                                permissions.</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="dl-workflow-section">
+            <div class="container">
+                <div class="heading-wrapper heading-wrap-left">
+                    <span class="heading-tag">Step by Step</span>
+                    <h2 class="heading-title">How Does <span>Global
+                            Search</span> Work?</h2>
+                </div>
+                <div class="dl-workflow-grid">
+                    <article class="dl-workflow-card">
+                        <div class="dl-workflow-card-content">
+                            <div class="dl-workflow-card-top">
+                                <span class="dl-workflow-number">01</span>
+                                <div class="dl-workflow-icon"><i
+                                        class="ri-search-line"></i></div>
+                            </div>
+                            <h3 class="dl-workflow-card-title">Step 1: Open
+                                Global Search</h3>
+                            <p class="dl-workflow-card-description">Open Global
+                                Search from the application menu.</p>
+                            <ul class="dl-workflow-checklist"><li><i
+                                        class="ri-check-line"></i><span>The page
+                                        provides a search box and optional
+                                        filters.</span></li></ul>
+                        </div>
+
+                    </article>
+                    <article class="dl-workflow-card">
+                        <div class="dl-workflow-card-content">
+                            <div class="dl-workflow-card-top">
+                                <span class="dl-workflow-number">02</span>
+                                <div class="dl-workflow-icon"><i
+                                        class="ri-keyboard-line"></i></div>
+                            </div>
+                            <h3 class="dl-workflow-card-title">Step 2: Enter a
+                                Search Term</h3>
+                            <p class="dl-workflow-card-description">Type a
+                                vehicle number, vendor name, reference value, or
+                                other known detail into Search Query.</p>
+                            <ul class="dl-workflow-checklist"><li><i
+                                        class="ri-check-line"></i><span>You can
+                                        also search using filters without
+                                        entering text.</span></li></ul>
+                        </div>
+
+                    </article>
+                    <article class="dl-workflow-card">
+                        <div class="dl-workflow-card-content">
+                            <div class="dl-workflow-card-top">
+                                <span class="dl-workflow-number">03</span>
+                                <div class="dl-workflow-icon"><i
+                                        class="ri-filter-3-line"></i></div>
+                            </div>
+                            <h3 class="dl-workflow-card-title">Step 3: Narrow
+                                Your Search</h3>
+                            <p class="dl-workflow-card-description">Choose a
+                                vendor, vehicle, date range, or component such
+                                as Diesel, Toll, Service, Tyre, or Battery to
+                                focus on relevant records.</p>
+                            <ul class="dl-workflow-checklist"></ul>
+                        </div>
+
+                    </article>
+                    <article class="dl-workflow-card">
+                        <div class="dl-workflow-card-content">
+                            <div class="dl-workflow-card-top">
+                                <span class="dl-workflow-number">04</span>
+                                <div class="dl-workflow-icon"><i
+                                        class="ri-list-check-2"></i></div>
+                            </div>
+                            <h3 class="dl-workflow-card-title">Step 4: Review
+                                Results</h3>
+                            <p class="dl-workflow-card-description">Click Search
+                                to view the matching records.</p>
+                            <ul class="dl-workflow-checklist"><li><i
+                                        class="ri-check-line"></i><span>Results
+                                        display a title, record type and, where
+                                        available, details such as related
+                                        vehicle, vendor or
+                                        owner.</span></li></ul>
+                        </div>
+
+                    </article>
+                    <article class="dl-workflow-card">
+                        <div class="dl-workflow-card-content">
+                            <div class="dl-workflow-card-top">
+                                <span class="dl-workflow-number">05</span>
+                                <div class="dl-workflow-icon"><i
+                                        class="ri-external-link-line"></i></div>
+                            </div>
+                            <h3 class="dl-workflow-card-title">Step 5: Open the
+                                Record</h3>
+                            <p class="dl-workflow-card-description">Select a
+                                result to open its linked module record.</p>
+                            <ul class="dl-workflow-checklist"><li><i
+                                        class="ri-check-line"></i><span>If no
+                                        matching records are found, change the
+                                        keyword or filters and search
+                                        again.</span></li></ul>
+                        </div>
+
+                    </article>
+                    <article class="dl-workflow-card">
+                        <div class="dl-workflow-card-content">
+                            <div class="dl-workflow-card-top">
+                                <span class="dl-workflow-number">06</span>
+                                <div class="dl-workflow-icon"><i
+                                        class="ri-refresh-line"></i></div>
+                            </div>
+                            <h3 class="dl-workflow-card-title">Step 6: Clear and
+                                Search Again</h3>
+                            <p class="dl-workflow-card-description">Use Clear to
+                                reset the search form and begin a new
+                                search.</p>
+                            <ul class="dl-workflow-checklist"></ul>
+                        </div>
+
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="results-section">
+            <div class="container">
+                <div class="heading-wrapper">
+                    <span class="heading-tag">Benefits</span>
+                    <h2 class="heading-title heading-light">Benefits of
+                        <span>Global Search</span></h2>
+                </div>
+                <div class="results-grid">
+                    <div class="result-card">
+                        <div class="result-icon"><i
+                                class="ri-time-line"></i></div>
+                        <h3>Save time by finding records without opening modules
+                            one by one.</h3>
+
+                    </div>
+                    <div class="result-card">
+                        <div class="result-icon"><i
+                                class="ri-stack-line"></i></div>
+                        <h3>Reduce effort when checking vehicle, vendor and
+                            maintenance information.</h3>
+
+                    </div>
+                    <div class="result-card">
+                        <div class="result-icon"><i
+                                class="ri-filter-3-line"></i></div>
+                        <h3>Use simple filters to narrow a large set of
+                            records.</h3>
+
+                    </div>
+                    <div class="result-card">
+                        <div class="result-icon"><i
+                                class="ri-external-link-line"></i></div>
+                        <h3>Open relevant application pages more quickly.</h3>
+
+                    </div>
+                    <div class="result-card">
+                        <div class="result-icon"><i
+                                class="ri-team-line"></i></div>
+                        <h3>Help team members find information using familiar
+                            names and numbers.</h3>
+
+                    </div>
+                    <div class="result-card">
+                        <div class="result-icon"><i
+                                class="ri-folder-open-line"></i></div>
+                        <h3>Keep day-to-day work organized with easy access to
+                            saved records.</h3>
+
                     </div>
                 </div>
             </div>
-            <div class="dl-faq-item">
-                <button class="dl-faq-question" type="button" aria-expanded="false" aria-controls="dl-faq-answer-3">
-                    <span class="dl-faq-question-content">
-                        <span class="dl-faq-number">Q3</span>
-                        <span class="dl-faq-question-text">Can I search records for a date range?</span>
-                    </span>
-                    <span class="dl-faq-arrow"><i class="ri-arrow-down-s-line"></i></span>
-                </button>
-                <div class="dl-faq-answer" id="dl-faq-answer-3">
-                    <div class="dl-faq-answer-content">
-                        <p>Yes. Date From and Date To are available; results depend on date fields configured for each record type.</p>
-                        <div class="dl-faq-topic"><span>Topic: Filters</span></div>
+        </section>
+
+        <section id="faq" class="dl-faq-section">
+            <div class="container">
+                <div class="heading-wrapper">
+                    <span class="heading-tag">Got Questions?</span>
+                    <h2 class="heading-title">Frequently Asked
+                        <span>Questions</span></h2>
+                    <div class="dl-faq-filters"><button
+                            class="dl-faq-filter active"
+                            type="button">All</button><button
+                            class="dl-faq-filter"
+                            type="button">Search</button><button
+                            class="dl-faq-filter"
+                            type="button">Filters</button><button
+                            class="dl-faq-filter"
+                            type="button">Records</button><button
+                            class="dl-faq-filter"
+                            type="button">Navigation</button></div>
+                </div>
+                <div class="dl-faq-list">
+                    <div class="dl-faq-item active">
+                        <button class="dl-faq-question" type="button"
+                            aria-expanded="true"
+                            aria-controls="dl-faq-answer-1">
+                            <span class="dl-faq-question-content">
+                                <span class="dl-faq-number">Q1</span>
+                                <span class="dl-faq-question-text">Can I search
+                                    using a vehicle number?</span>
+                            </span>
+                            <span class="dl-faq-arrow"><i
+                                    class="ri-arrow-down-s-line"></i></span>
+                        </button>
+                        <div class="dl-faq-answer" id="dl-faq-answer-1">
+                            <div class="dl-faq-answer-content">
+                                <p>Yes. Use a known vehicle number as a keyword
+                                    or select a vehicle filter to find supported
+                                    matching records.</p>
+                                <div class="dl-faq-topic"><span>Topic:
+                                        Search</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dl-faq-item">
+                        <button class="dl-faq-question" type="button"
+                            aria-expanded="false"
+                            aria-controls="dl-faq-answer-2">
+                            <span class="dl-faq-question-content">
+                                <span class="dl-faq-number">Q2</span>
+                                <span class="dl-faq-question-text">Can I search
+                                    only diesel records?</span>
+                            </span>
+                            <span class="dl-faq-arrow"><i
+                                    class="ri-arrow-down-s-line"></i></span>
+                        </button>
+                        <div class="dl-faq-answer" id="dl-faq-answer-2">
+                            <div class="dl-faq-answer-content">
+                                <p>Yes. Choose Diesel in the Component filter
+                                    before searching.</p>
+                                <div class="dl-faq-topic"><span>Topic:
+                                        Filters</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dl-faq-item">
+                        <button class="dl-faq-question" type="button"
+                            aria-expanded="false"
+                            aria-controls="dl-faq-answer-3">
+                            <span class="dl-faq-question-content">
+                                <span class="dl-faq-number">Q3</span>
+                                <span class="dl-faq-question-text">Can I search
+                                    records for a date range?</span>
+                            </span>
+                            <span class="dl-faq-arrow"><i
+                                    class="ri-arrow-down-s-line"></i></span>
+                        </button>
+                        <div class="dl-faq-answer" id="dl-faq-answer-3">
+                            <div class="dl-faq-answer-content">
+                                <p>Yes. Date From and Date To are available;
+                                    results depend on date fields configured for
+                                    each record type.</p>
+                                <div class="dl-faq-topic"><span>Topic:
+                                        Filters</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dl-faq-item">
+                        <button class="dl-faq-question" type="button"
+                            aria-expanded="false"
+                            aria-controls="dl-faq-answer-4">
+                            <span class="dl-faq-question-content">
+                                <span class="dl-faq-number">Q4</span>
+                                <span class="dl-faq-question-text">Can I search
+                                    without typing a keyword?</span>
+                            </span>
+                            <span class="dl-faq-arrow"><i
+                                    class="ri-arrow-down-s-line"></i></span>
+                        </button>
+                        <div class="dl-faq-answer" id="dl-faq-answer-4">
+                            <div class="dl-faq-answer-content">
+                                <p>Yes. You can use one or more filters to
+                                    request matching records.</p>
+                                <div class="dl-faq-topic"><span>Topic:
+                                        Search</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dl-faq-item">
+                        <button class="dl-faq-question" type="button"
+                            aria-expanded="false"
+                            aria-controls="dl-faq-answer-5">
+                            <span class="dl-faq-question-content">
+                                <span class="dl-faq-number">Q5</span>
+                                <span class="dl-faq-question-text">Can I open a
+                                    record from the search results?</span>
+                            </span>
+                            <span class="dl-faq-arrow"><i
+                                    class="ri-arrow-down-s-line"></i></span>
+                        </button>
+                        <div class="dl-faq-answer" id="dl-faq-answer-5">
+                            <div class="dl-faq-answer-content">
+                                <p>Yes, for result types with a configured page
+                                    link. Some types may not have a direct
+                                    detail link.</p>
+                                <div class="dl-faq-topic"><span>Topic:
+                                        Records</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dl-faq-item">
+                        <button class="dl-faq-question" type="button"
+                            aria-expanded="false"
+                            aria-controls="dl-faq-answer-6">
+                            <span class="dl-faq-question-content">
+                                <span class="dl-faq-number">Q6</span>
+                                <span class="dl-faq-question-text">Is searching
+                                    for a module the same as searching
+                                    records?</span>
+                            </span>
+                            <span class="dl-faq-arrow"><i
+                                    class="ri-arrow-down-s-line"></i></span>
+                        </button>
+                        <div class="dl-faq-answer" id="dl-faq-answer-6">
+                            <div class="dl-faq-answer-content">
+                                <p>No. The small "Search module..." field finds
+                                    menu sections, while the full Global Search
+                                    page finds saved records.</p>
+                                <div class="dl-faq-topic"><span>Topic:
+                                        Navigation</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dl-faq-item">
+                        <button class="dl-faq-question" type="button"
+                            aria-expanded="false"
+                            aria-controls="dl-faq-answer-7">
+                            <span class="dl-faq-question-content">
+                                <span class="dl-faq-number">Q7</span>
+                                <span class="dl-faq-question-text">Will all
+                                    staff see the same module
+                                    suggestions?</span>
+                            </span>
+                            <span class="dl-faq-arrow"><i
+                                    class="ri-arrow-down-s-line"></i></span>
+                        </button>
+                        <div class="dl-faq-answer" id="dl-faq-answer-7">
+                            <div class="dl-faq-answer-content">
+                                <p>No. The module navigation suggestions depend
+                                    on the user's accessible sections.</p>
+                                <div class="dl-faq-topic"><span>Topic:
+                                        Navigation</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="dl-faq-cta">
+                    <div class="dl-faq-cta-content">
+                        <h3>Conclusion</h3>
+                        <p>Global Search brings together a convenient way to
+                            look for stored information and locate the right
+                            application section. With keyword search, filters,
+                            clear result labels, and quick navigation, users can
+                            spend less time searching and more time managing
+                            everyday operations.</p>
+                        <p><strong>Find what you need, open the right record,
+                                and continue your work with
+                                confidence.</strong></p>
+                    </div>
+                    <button class="dl-faq-cta-button" type="button">Get Started
+                        Now</button>
+                </div>
+            </div>
+        </section>
+
+        <!--footer section start-->
+        <footer class="footer">
+            <!-- Newsletter -->
+            <div class="footer-newsletter">
+                <div class="container">
+                    <div class="newsletter-wrapper">
+                        <div class="newsletter-content">
+                            <h2>Stay ahead of the curve</h2>
+                            <p>
+                                Fleet management insights, product updates, and
+                                industry news.
+                            </p>
+                        </div>
+                        <form class="newsletter-form">
+                            <input type="email" placeholder="Enter your email"
+                                aria-label="Email address for newsletter">
+                            <button type="submit">
+                                Subscribe
+                                <i class="ri-arrow-right-line"></i>
+                            </button>
+                        </form>
                     </div>
                 </div>
             </div>
-            <div class="dl-faq-item">
-                <button class="dl-faq-question" type="button" aria-expanded="false" aria-controls="dl-faq-answer-4">
-                    <span class="dl-faq-question-content">
-                        <span class="dl-faq-number">Q4</span>
-                        <span class="dl-faq-question-text">Can I search without typing a keyword?</span>
-                    </span>
-                    <span class="dl-faq-arrow"><i class="ri-arrow-down-s-line"></i></span>
-                </button>
-                <div class="dl-faq-answer" id="dl-faq-answer-4">
-                    <div class="dl-faq-answer-content">
-                        <p>Yes. You can use one or more filters to request matching records.</p>
-                        <div class="dl-faq-topic"><span>Topic: Search</span></div>
+            <!-- Footer Main -->
+            <div class="footer-main">
+                <div class="container">
+                    <div class="footer-grid">
+                        <!-- Left -->
+                        <div class="footer-about">
+                            <a href="#" class="footer-logo">
+                                <img
+                                    src="Assets/images/transportdesk-logo-dark.svg"
+                                    alt="TransportDesk" width="252" height="84">
+                            </a>
+                            <p>
+                                The intelligent transportation platform that
+                                puts fleet directors
+                                in complete control of their operations.
+                            </p>
+                            <div class="footer-social">
+                                <a href="#" aria-label="Facebook"><i
+                                        class="ri-facebook-fill"></i></a>
+                                <a href="#" aria-label="Instagram"><i
+                                        class="ri-instagram-line"></i></a>
+                                <a href="#" aria-label="Twitter"><i
+                                        class="ri-twitter-line"></i></a>
+                                <a href="#" aria-label="LinkedIn"><i
+                                        class="ri-linkedin-fill"></i></a>
+                            </div>
+                        </div>
+                        <!-- Product -->
+                        <div class="footer-links">
+                            <h3>Product</h3>
+                            <ul>
+                                <li>
+                                    <a href="features.html"
+                                        class="footer-link">Features</a>
+                                </li>
+                                <li>
+                                    <a href="modules.html"
+                                        class="footer-link">Modules</a>
+                                </li>
+                                <li>
+                                    <a href="solutions.html"
+                                        class="footer-link">Solutions</a>
+                                </li>
+                                <li>
+                                    <a href="reports.html"
+                                        class="footer-link">Reports</a>
+                                </li>
+                                <li>
+                                    <a href="contact.html"
+                                        class="footer-link">Contact</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- Resources -->
+                        <div class="footer-links">
+                            <h3>Resources</h3>
+                            <ul>
+                                <li><a href="documentation.html"
+                                        class="footer-link">Documentation</a></li>
+                                <li><a href="faq.html"
+                                        class="footer-link">FAQ</a></li>
+                                <li><a href="privacy-policy.html"
+                                        class="footer-link">Privacy
+                                        Policy</a></li>
+                            </ul>
+                        </div>
+                        <!-- Support -->
+                        <div class="footer-links">
+                            <h3>Support</h3>
+                            <ul>
+                                <li><a href="#" class="footer-link">Help
+                                        Center</a></li>
+                                <li><a href="#"
+                                        class="footer-link">Status</a></li>
+                                <li><a href="#"
+                                        class="footer-link">Security</a></li>
+                            </ul>
+                        </div>
+                        <!-- Contact -->
+                        <div class="footer-contact">
+                            <!-- India Office -->
+                            <div class="footer-office">
+                                <h4 class="footer-office-title">
+                                    <span class="footer-country-flag">
+                                        <svg xmlns="http://www.w3.org/2000/svg"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink"
+                                            width="800px" height="800px"
+                                            viewBox="0 0 36 36"
+                                            aria-hidden="true" role="img"
+                                            class="iconify iconify--twemoji"
+                                            preserveAspectRatio="xMidYMid meet"><path
+                                                fill="#138808"
+                                                d="M0 27a4 4 0 0 0 4 4h28a4 4 0 0 0 4-4v-4H0v4z"></path><path
+                                                fill="#EEE"
+                                                d="M0 13h36v10H0z"></path><path
+                                                fill="#F93"
+                                                d="M36 13V9a4 4 0 0 0-4-4H4a4 4 0 0 0-4 4v4h36z"></path><circle
+                                                fill="navy" cx="18" cy="18"
+                                                r="4"></circle><circle
+                                                fill="#EEE" cx="18" cy="18"
+                                                r="3"></circle><path
+                                                fill="#6666B3"
+                                                d="M18 15l.146 2.264l1.001-2.035l-.73 2.147l1.704-1.498l-1.497 1.705l2.147-.731l-2.035 1.002L21 18l-2.264.146l2.035 1.001l-2.147-.73l1.497 1.704l-1.704-1.497l.73 2.147l-1.001-2.035L18 21l-.146-2.264l-1.002 2.035l.731-2.147l-1.705 1.497l1.498-1.704l-2.147.73l2.035-1.001L15 18l2.264-.146l-2.035-1.002l2.147.731l-1.498-1.705l1.705 1.498l-.731-2.147l1.002 2.035z"></path><circle
+                                                fill="navy" cx="18" cy="18"
+                                                r="1"></circle></svg>
+                                    </span>
+                                    India Office
+                                </h4>
+
+                                <div class="contact-item">
+                                    <div class="icon">
+                                        <i class="ri-phone-fill"></i>
+                                    </div>
+                                    <div>
+                                        <span>Phone</span>
+                                        <a href="tel:+916355258003">
+                                            +91 6355 258 003
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="contact-item">
+                                    <div class="icon">
+                                        <i class="ri-map-pin-line"></i>
+                                    </div>
+                                    <div>
+                                        <span>Address</span>
+                                        <p>
+                                            The Galleria Business Hub, Adajan
+                                            Gam,
+                                            Pal Gam, Surat, Gujarat, India
+                                            394510
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="contact-item">
+                                    <div class="icon">
+                                        <i class="ri-mail-line"></i>
+                                    </div>
+                                    <div>
+                                        <span>Email</span>
+                                        <a href="mailto:jay@prismitsystems.com">
+                                            jay@prismitsystems.com
+                                        </a>
+                                    </div>
+                                </div></div>
+                            <!-- Subtle Divider -->
+
+                            <!-- USA Office -->
+                            <div class="footer-office">
+                                <h4 class="footer-office-title">
+                                    <span class="footer-country-flag"><svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink"
+                                            height="800px" width="800px"
+                                            version="1.1" id="Layer_1"
+                                            viewBox="0 0 496 496"
+                                            xml:space="preserve">
+                                            <path style="fill:#FFFFFF;"
+                                                d="M496,369.6c0,27.2-21.6,48.8-48,48.8H48c-26.4,0-48-21.6-48-48.8V126.4c0-27.2,21.6-43.8,48-43.8h400  c26.4,0,48,16.6,48,43.8V369.6z"></path>
+                                            <path style="fill:#CCE4E5;"
+                                                d="M448,77.6H48l400,340.8c26.4,0,48-21.6,48-48.8V126.4C496,99.2,474.4,77.6,448,77.6z"></path>
+                                            <path style="fill:#AED3D3;"
+                                                d="M448,77.6H48l448,137.6v-88.8C496,99.2,474.4,77.6,448,77.6z"></path>
+                                            <g>
+                                                <path style="fill:#B22234;"
+                                                    d="M4.9,391.2c7.5,15.4,22.7,26.2,40.5,27.1c0.9,0,1.7,0.1,2.6,0.1h400.3c0,0,3.5-0.3,4.6-0.7   c1.7-0.6,1.9-2,0.6-3.1l-0.4-0.4L426,391.1H4.9V391.2z"></path>
+                                                <polygon style="fill:#B22234;"
+                                                    points="120.9,131.2 0,131.2 0,157.2 151.4,157.2  "></polygon>
+                                                <polygon style="fill:#B22234;"
+                                                    points="181.9,183.2 0,183.2 0,209.2 212.5,209.2  "></polygon>
+                                                <polygon style="fill:#B22234;"
+                                                    points="242.8,235.2 0,235.2 0,261.6 273.2,261.6  "></polygon>
+                                                <polygon style="fill:#B22234;"
+                                                    points="303.6,287.2 0,287.2 0,313.6 334.8,313.6  "></polygon>
+                                                <polygon style="fill:#B22234;"
+                                                    points="373.4,346.3 365,339.2 0,339.2 0,365.6 395.6,365.6  "></polygon>
+                                            </g>
+                                            <path style="fill:#FFFFFF;"
+                                                d="M48,418.4c-0.9,0-1.7,0-2.6-0.1C46.3,418.4,47.1,418.4,48,418.4z"></path>
+                                            <g>
+                                                <polygon style="fill:#8C1126;"
+                                                    points="238.4,131.2 110.9,131.2 141.4,157.2 323.2,157.2  "></polygon>
+                                                <polygon style="fill:#8C1126;"
+                                                    points="202.5,209.2 488.5,209.2 403.8,183.2 171.9,183.2  "></polygon>
+                                                <polygon style="fill:#8C1126;"
+                                                    points="264,261.6 496,261.6 496,235.2 233,235.2  "></polygon>
+                                                <polygon style="fill:#8C1126;"
+                                                    points="325,313.6 496,313.6 496,287.2 294,287.2  "></polygon>
+                                                <polygon style="fill:#8C1126;"
+                                                    points="363.4,346.3 386,365.6 496,365.6 496,339.2 355.2,339.2  "></polygon>
+                                            </g>
+                                            <g>
+                                                <polygon style="fill:#5B0218;"
+                                                    points="222.5,131.2 286,150.7 307.2,157.2 496,157.2 496,131.2  "></polygon>
+                                                <polygon style="fill:#5B0218;"
+                                                    points="392,183.2 476.8,209.2 496,209.2 496,183.2  "></polygon>
+                                                <path style="fill:#5B0218;"
+                                                    d="M486.4,97.1c-1.4-1.9-2.9-3.6-4.5-5.3c-8.1-8.2-19.1-13.5-31.3-14.1c-0.8,0-1.7-0.1-2.5-0.1l0,0H48   c-13.1,0-25.5,5.9-34.4,14.7c-3.5,3.7-6.5,7.9-8.7,12.5h75h56.6H491C489.8,102.1,488.2,99.5,486.4,97.1z"></path>
+                                            </g>
+                                            <path style="fill:#8C1126;"
+                                                d="M491.1,391.2h-75l31.9,27.2C466.8,418.4,483.2,407.4,491.1,391.2z"></path>
+                                            <path style="fill:#3C3B6E;"
+                                                d="M0,126.4v134.4h215.2V77.6H44.8C20,79.2,0,100,0,126.4z"></path>
+                                            <polygon style="fill:#1E1E44;"
+                                                points="215.2,220 215.2,77.6 48,77.6 "></polygon>
+                                            <polygon
+                                                points="215.2,128.8 215.2,77.6 48,77.6 "></polygon>
+                                            <g>
+                                                <polygon style="fill:#FFFFFF;"
+                                                    points="60.8,96 64,85.6 68,96  "></polygon>
+                                                <polygon style="fill:#FFFFFF;"
+                                                    points="104,96 107.2,85.6 110.4,96  "></polygon>
+                                                <polygon style="fill:#FFFFFF;"
+                                                    points="146.4,96 150.4,85.6 153.6,96  "></polygon>
+                                                <polygon style="fill:#FFFFFF;"
+                                                    points="189.6,96 192.8,85.6 196.8,96  "></polygon>
+                                                <polygon style="fill:#FFFFFF;"
+                                                    points="39.2,114.4 43.2,104 46.4,114.4  "></polygon>
+                                                <polygon style="fill:#FFFFFF;"
+                                                    points="82.4,114.4 85.6,104 89.6,114.4  "></polygon>
+                                                <polygon style="fill:#FFFFFF;"
+                                                    points="125.6,114.4 128.8,104 132,114.4  "></polygon>
+                                                <polygon style="fill:#FFFFFF;"
+                                                    points="168,114.4 171.2,104 175.2,114.4  "></polygon>
+                                                <polygon style="fill:#FFFFFF;"
+                                                    points="18.4,132.8 21.6,122.4 24.8,132.8  "></polygon>
+                                                <polygon style="fill:#FFFFFF;"
+                                                    points="60.8,132.8 64,122.4 68,132.8  "></polygon>
+                                                <polygon style="fill:#FFFFFF;"
+                                                    points="104,132.8 107.2,122.4 110.4,132.8  "></polygon>
+                                                <polygon style="fill:#FFFFFF;"
+                                                    points="146.4,132.8 150.4,122.4 153.6,132.8  "></polygon>
+                                                <polygon style="fill:#FFFFFF;"
+                                                    points="189.6,132.8 192.8,122.4 196.8,132.8  "></polygon>
+                                                <polygon style="fill:#FFFFFF;"
+                                                    points="40,151.2 43.2,140.8 47.2,151.2  "></polygon>
+                                                <polygon style="fill:#FFFFFF;"
+                                                    points="83.2,151.2 86.4,140.8 89.6,151.2  "></polygon>
+                                                <polygon style="fill:#FFFFFF;"
+                                                    points="125.6,151.2 129.6,140.8 132.8,151.2  "></polygon>
+                                                <polygon style="fill:#FFFFFF;"
+                                                    points="168.8,151.2 172,140.8 175.2,151.2  "></polygon>
+                                                <polygon style="fill:#FFFFFF;"
+                                                    points="18.4,168.8 22.4,158.4 25.6,168.8  "></polygon>
+                                                <polygon style="fill:#FFFFFF;"
+                                                    points="61.6,168.8 64.8,158.4 68.8,168.8  "></polygon>
+                                                <polygon style="fill:#FFFFFF;"
+                                                    points="104.8,168.8 108,158.4 111.2,168.8  "></polygon>
+                                                <polygon style="fill:#FFFFFF;"
+                                                    points="147.2,168.8 151.2,158.4 154.4,168.8  "></polygon>
+                                                <polygon style="fill:#FFFFFF;"
+                                                    points="190.4,168.8 193.6,158.4 196.8,168.8  "></polygon>
+                                                <polygon style="fill:#FFFFFF;"
+                                                    points="40,187.2 43.2,176.8 47.2,187.2  "></polygon>
+                                                <polygon style="fill:#FFFFFF;"
+                                                    points="83.2,187.2 86.4,176.8 89.6,187.2  "></polygon>
+                                                <polygon style="fill:#FFFFFF;"
+                                                    points="125.6,187.2 129.6,176.8 132.8,187.2  "></polygon>
+                                                <polygon style="fill:#FFFFFF;"
+                                                    points="168.8,187.2 172,176.8 176,187.2  "></polygon>
+                                                <polygon style="fill:#FFFFFF;"
+                                                    points="19.2,205.6 22.4,195.2 25.6,205.6  "></polygon>
+                                                <polygon style="fill:#FFFFFF;"
+                                                    points="62.4,205.6 65.6,195.2 68.8,205.6  "></polygon>
+                                                <polygon style="fill:#FFFFFF;"
+                                                    points="104.8,205.6 108,195.2 112,205.6  "></polygon>
+                                                <polygon style="fill:#FFFFFF;"
+                                                    points="148,205.6 151.2,195.2 154.4,205.6  "></polygon>
+                                                <polygon style="fill:#FFFFFF;"
+                                                    points="190.4,205.6 194.4,195.2 197.6,205.6  "></polygon>
+                                                <polygon style="fill:#FFFFFF;"
+                                                    points="40,224 43.2,212.8 47.2,224  "></polygon>
+                                                <polygon style="fill:#FFFFFF;"
+                                                    points="83.2,224 86.4,212.8 89.6,224  "></polygon>
+                                                <polygon style="fill:#FFFFFF;"
+                                                    points="125.6,224 129.6,212.8 132.8,224  "></polygon>
+                                                <polygon style="fill:#FFFFFF;"
+                                                    points="168.8,224 172,212.8 175.2,224  "></polygon>
+                                                <polygon style="fill:#FFFFFF;"
+                                                    points="18.4,241.6 22.4,231.2 25.6,241.6  "></polygon>
+                                                <polygon style="fill:#FFFFFF;"
+                                                    points="61.6,241.6 64.8,231.2 68,241.6  "></polygon>
+                                                <polygon style="fill:#FFFFFF;"
+                                                    points="104,241.6 108,231.2 111.2,241.6  "></polygon>
+                                                <polygon style="fill:#FFFFFF;"
+                                                    points="147.2,241.6 150.4,231.2 154.4,241.6  "></polygon>
+                                                <polygon style="fill:#FFFFFF;"
+                                                    points="190.4,241.6 193.6,231.2 196.8,241.6  "></polygon>
+                                            </g>
+                                        </svg></span>
+                                    USA Office
+                                </h4>
+                                <div class="contact-item">
+                                    <div class="icon">
+                                        <i class="ri-phone-fill"></i>
+                                    </div>
+                                    <div>
+                                        <span>Phone</span>
+                                        <a href="tel:+15623120282">
+                                            +1 562-312-0282
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="contact-item">
+                                    <div class="icon">
+                                        <i class="ri-map-pin-line"></i>
+                                    </div>
+                                    <div>
+                                        <span>Address</span>
+                                        <p>
+                                            Norwalk, California 90650, USA
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="contact-item">
+                                    <div class="icon">
+                                        <i class="ri-mail-line"></i>
+                                    </div>
+                                    <div>
+                                        <span>Email</span>
+                                        <a href="mailto:jay@prismitsystems.com">
+                                            jay@prismitsystems.com
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="dl-faq-item">
-                <button class="dl-faq-question" type="button" aria-expanded="false" aria-controls="dl-faq-answer-5">
-                    <span class="dl-faq-question-content">
-                        <span class="dl-faq-number">Q5</span>
-                        <span class="dl-faq-question-text">Can I open a record from the search results?</span>
-                    </span>
-                    <span class="dl-faq-arrow"><i class="ri-arrow-down-s-line"></i></span>
-                </button>
-                <div class="dl-faq-answer" id="dl-faq-answer-5">
-                    <div class="dl-faq-answer-content">
-                        <p>Yes, for result types with a configured page link. Some types may not have a direct detail link.</p>
-                        <div class="dl-faq-topic"><span>Topic: Records</span></div>
+            <!-- Bottom -->
+            <div class="footer-bottom">
+                <div class="container">
+                    <div class="bottom-wrapper">
+                        <p>
+                            ©️ 2026 All rights reserved.
+                        </p>
+                        <ul>
+                            <li><a href="privacy-policy.html">Privacy
+                                    Policy</a></li>
+                            <li><a href="#">Terms of Service</a></li>
+                            <li><a href="#">Cookie Policy</a></li>
+                        </ul>
                     </div>
                 </div>
             </div>
-            <div class="dl-faq-item">
-                <button class="dl-faq-question" type="button" aria-expanded="false" aria-controls="dl-faq-answer-6">
-                    <span class="dl-faq-question-content">
-                        <span class="dl-faq-number">Q6</span>
-                        <span class="dl-faq-question-text">Is searching for a module the same as searching records?</span>
-                    </span>
-                    <span class="dl-faq-arrow"><i class="ri-arrow-down-s-line"></i></span>
-                </button>
-                <div class="dl-faq-answer" id="dl-faq-answer-6">
-                    <div class="dl-faq-answer-content">
-                        <p>No. The small "Search module..." field finds menu sections, while the full Global Search page finds saved records.</p>
-                        <div class="dl-faq-topic"><span>Topic: Navigation</span></div>
-                    </div>
-                </div>
-            </div>
-            <div class="dl-faq-item">
-                <button class="dl-faq-question" type="button" aria-expanded="false" aria-controls="dl-faq-answer-7">
-                    <span class="dl-faq-question-content">
-                        <span class="dl-faq-number">Q7</span>
-                        <span class="dl-faq-question-text">Will all staff see the same module suggestions?</span>
-                    </span>
-                    <span class="dl-faq-arrow"><i class="ri-arrow-down-s-line"></i></span>
-                </button>
-                <div class="dl-faq-answer" id="dl-faq-answer-7">
-                    <div class="dl-faq-answer-content">
-                        <p>No. The module navigation suggestions depend on the user's accessible sections.</p>
-                        <div class="dl-faq-topic"><span>Topic: Navigation</span></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="dl-faq-cta">
-            <div class="dl-faq-cta-content">
-                <h3>Conclusion</h3>
-                <p>Global Search brings together a convenient way to look for stored information and locate the right application section. With keyword search, filters, clear result labels, and quick navigation, users can spend less time searching and more time managing everyday operations.</p>
-                <p><strong>Find what you need, open the right record, and continue your work with confidence.</strong></p>
-            </div>
-            <button class="dl-faq-cta-button" type="button">Get Started Now</button>
-        </div>
-    </div>
-</section>
+        </footer>
+        <!--footer section end-->
 
-<!--footer section start-->
-<footer class="footer">
-
-    <!-- Newsletter -->
-    <div class="footer-newsletter">
-        <div class="container">
-
-            <div class="newsletter-wrapper">
-
-                <div class="newsletter-content">
-                    <h2>Stay ahead of the curve</h2>
-                    <p>
-                        Fleet management insights, product updates, and industry news.
-                    </p>
-                </div>
-
-                <form class="newsletter-form">
-
-                    <input
-                        type="email"
-                        placeholder="Enter your email" aria-label="Email address for newsletter"
-                    >
-
-                    <button type="submit">
-                        Subscribe
-
-                       <i class="ri-arrow-right-line"></i>
-
-                    </button>
-
-                </form>
-
-            </div>
-
-        </div>
-    </div>
-
-    <!-- Footer Main -->
-
-    <div class="footer-main">
-
-        <div class="container">
-
-            <div class="footer-grid">
-
-                <!-- Left -->
-
-                <div class="footer-about">
-
-                    <a href="#" class="footer-logo">
-                        <img src="Assets/images/transportdesk-logo-dark.svg" alt="TransportDesk" width="252" height="84">
-                    </a>
-
-                    <p>
-                        The intelligent transportation platform that puts fleet directors
-                        in complete control of their operations.
-                    </p>
-
-                    <div class="footer-social">
-
-                        <a href="#" aria-label="Facebook"><i class="ri-facebook-fill"></i></a>
-
-                        <a href="#" aria-label="Instagram"><i class="ri-instagram-line"></i></a>
-
-                        <a href="#" aria-label="Twitter"><i class="ri-twitter-line"></i></a>
-
-                        <a href="#" aria-label="LinkedIn"><i class="ri-linkedin-fill"></i></a>
-
-                    </div>
-
-                </div>
-
-                <!-- Product -->
-
-                <div class="footer-links">
-
-                    <h3>Product</h3>
-
-                    <ul>
-        <li>
-            <a href="features.html" class="footer-link">Features</a>
-        </li>
-
-        <li>
-            <a href="modules.html" class="footer-link">Modules</a>
-        </li>
-
-        <li>
-            <a href="solutions.html" class="footer-link">Solutions</a>
-        </li>
-
-        <li>
-            <a href="reports.html" class="footer-link">Reports</a>
-        </li>
-
-        <li>
-            <a href="contact.html" class="footer-link">Contact</a>
-        </li>
-    </ul>
-
-                </div>
-
-                <!-- Resources -->
-
-                <div class="footer-links">
-
-                    <h3>Resources</h3>
-
-                    <ul>
-
-                        <li><a href="documentation.html" class="footer-link">Documentation</a></li>
-
-                        <li><a href="faq.html" class="footer-link">FAQ</a></li>
-
-                        <li><a href="privacy-policy.html" class="footer-link">Privacy Policy</a></li>
-
-                    </ul>
-
-                </div>
-
-                <!-- Support -->
-
-                <div class="footer-links">
-
-                    <h3>Support</h3>
-
-                    <ul>
-
-                        <li><a href="#" class="footer-link">Help Center</a></li>
-
-                        <li><a href="#" class="footer-link">Status</a></li>
-
-                        <li><a href="#" class="footer-link">Security</a></li>
-
-                    </ul>
-
-                </div>
-
-                <!-- Contact -->
-
-                <div class="footer-contact">
-
-    <!-- India Office -->
-    <div class="footer-office">
-
-        <h4 class="footer-office-title">
-            <span class="footer-country-flag">
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="800px" height="800px" viewBox="0 0 36 36" aria-hidden="true" role="img" class="iconify iconify--twemoji" preserveAspectRatio="xMidYMid meet"><path fill="#138808" d="M0 27a4 4 0 0 0 4 4h28a4 4 0 0 0 4-4v-4H0v4z"></path><path fill="#EEE" d="M0 13h36v10H0z"></path><path fill="#F93" d="M36 13V9a4 4 0 0 0-4-4H4a4 4 0 0 0-4 4v4h36z"></path><circle fill="navy" cx="18" cy="18" r="4"></circle><circle fill="#EEE" cx="18" cy="18" r="3"></circle><path fill="#6666B3" d="M18 15l.146 2.264l1.001-2.035l-.73 2.147l1.704-1.498l-1.497 1.705l2.147-.731l-2.035 1.002L21 18l-2.264.146l2.035 1.001l-2.147-.73l1.497 1.704l-1.704-1.497l.73 2.147l-1.001-2.035L18 21l-.146-2.264l-1.002 2.035l.731-2.147l-1.705 1.497l1.498-1.704l-2.147.73l2.035-1.001L15 18l2.264-.146l-2.035-1.002l2.147.731l-1.498-1.705l1.705 1.498l-.731-2.147l1.002 2.035z"></path><circle fill="navy" cx="18" cy="18" r="1"></circle></svg>
-</span>
-            India Office
-        </h4>
-
-        
-
-        <div class="contact-item">
-            <div class="icon">
-                <i class="ri-phone-fill"></i>
-            </div>
-            <div>
-                <span>Phone</span>
-                <a href="tel:+916355258003">
-                    +91 6355 258 003
-                </a>
-            </div>
-        </div>
-
-        <div class="contact-item">
-            <div class="icon">
-                <i class="ri-map-pin-line"></i>
-            </div>
-            <div>
-                <span>Address</span>
-                <p>
-                    The Galleria Business Hub, Adajan Gam,
-                    Pal Gam, Surat, Gujarat, India 394510
-                </p>
-            </div>
-        </div>
-
-    <div class="contact-item">
-            <div class="icon">
-                <i class="ri-mail-line"></i>
-            </div>
-            <div>
-                <span>Email</span>
-                <a href="mailto:jay@prismitsystems.com">
-                    jay@prismitsystems.com
-                </a>
-            </div>
-        </div></div>
-
-    <!-- Subtle Divider -->
-    
-
-    <!-- USA Office -->
-    <div class="footer-office">
-
-        <h4 class="footer-office-title">
-            <span class="footer-country-flag"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="800px" width="800px" version="1.1" id="Layer_1" viewBox="0 0 496 496" xml:space="preserve">
-<path style="fill:#FFFFFF;" d="M496,369.6c0,27.2-21.6,48.8-48,48.8H48c-26.4,0-48-21.6-48-48.8V126.4c0-27.2,21.6-43.8,48-43.8h400  c26.4,0,48,16.6,48,43.8V369.6z"></path>
-<path style="fill:#CCE4E5;" d="M448,77.6H48l400,340.8c26.4,0,48-21.6,48-48.8V126.4C496,99.2,474.4,77.6,448,77.6z"></path>
-<path style="fill:#AED3D3;" d="M448,77.6H48l448,137.6v-88.8C496,99.2,474.4,77.6,448,77.6z"></path>
-<g>
-	<path style="fill:#B22234;" d="M4.9,391.2c7.5,15.4,22.7,26.2,40.5,27.1c0.9,0,1.7,0.1,2.6,0.1h400.3c0,0,3.5-0.3,4.6-0.7   c1.7-0.6,1.9-2,0.6-3.1l-0.4-0.4L426,391.1H4.9V391.2z"></path>
-	<polygon style="fill:#B22234;" points="120.9,131.2 0,131.2 0,157.2 151.4,157.2  "></polygon>
-	<polygon style="fill:#B22234;" points="181.9,183.2 0,183.2 0,209.2 212.5,209.2  "></polygon>
-	<polygon style="fill:#B22234;" points="242.8,235.2 0,235.2 0,261.6 273.2,261.6  "></polygon>
-	<polygon style="fill:#B22234;" points="303.6,287.2 0,287.2 0,313.6 334.8,313.6  "></polygon>
-	<polygon style="fill:#B22234;" points="373.4,346.3 365,339.2 0,339.2 0,365.6 395.6,365.6  "></polygon>
-</g>
-<path style="fill:#FFFFFF;" d="M48,418.4c-0.9,0-1.7,0-2.6-0.1C46.3,418.4,47.1,418.4,48,418.4z"></path>
-<g>
-	<polygon style="fill:#8C1126;" points="238.4,131.2 110.9,131.2 141.4,157.2 323.2,157.2  "></polygon>
-	<polygon style="fill:#8C1126;" points="202.5,209.2 488.5,209.2 403.8,183.2 171.9,183.2  "></polygon>
-	<polygon style="fill:#8C1126;" points="264,261.6 496,261.6 496,235.2 233,235.2  "></polygon>
-	<polygon style="fill:#8C1126;" points="325,313.6 496,313.6 496,287.2 294,287.2  "></polygon>
-	<polygon style="fill:#8C1126;" points="363.4,346.3 386,365.6 496,365.6 496,339.2 355.2,339.2  "></polygon>
-</g>
-<g>
-	<polygon style="fill:#5B0218;" points="222.5,131.2 286,150.7 307.2,157.2 496,157.2 496,131.2  "></polygon>
-	<polygon style="fill:#5B0218;" points="392,183.2 476.8,209.2 496,209.2 496,183.2  "></polygon>
-	<path style="fill:#5B0218;" d="M486.4,97.1c-1.4-1.9-2.9-3.6-4.5-5.3c-8.1-8.2-19.1-13.5-31.3-14.1c-0.8,0-1.7-0.1-2.5-0.1l0,0H48   c-13.1,0-25.5,5.9-34.4,14.7c-3.5,3.7-6.5,7.9-8.7,12.5h75h56.6H491C489.8,102.1,488.2,99.5,486.4,97.1z"></path>
-</g>
-<path style="fill:#8C1126;" d="M491.1,391.2h-75l31.9,27.2C466.8,418.4,483.2,407.4,491.1,391.2z"></path>
-<path style="fill:#3C3B6E;" d="M0,126.4v134.4h215.2V77.6H44.8C20,79.2,0,100,0,126.4z"></path>
-<polygon style="fill:#1E1E44;" points="215.2,220 215.2,77.6 48,77.6 "></polygon>
-<polygon points="215.2,128.8 215.2,77.6 48,77.6 "></polygon>
-<g>
-	<polygon style="fill:#FFFFFF;" points="60.8,96 64,85.6 68,96  "></polygon>
-	<polygon style="fill:#FFFFFF;" points="104,96 107.2,85.6 110.4,96  "></polygon>
-	<polygon style="fill:#FFFFFF;" points="146.4,96 150.4,85.6 153.6,96  "></polygon>
-	<polygon style="fill:#FFFFFF;" points="189.6,96 192.8,85.6 196.8,96  "></polygon>
-	<polygon style="fill:#FFFFFF;" points="39.2,114.4 43.2,104 46.4,114.4  "></polygon>
-	<polygon style="fill:#FFFFFF;" points="82.4,114.4 85.6,104 89.6,114.4  "></polygon>
-	<polygon style="fill:#FFFFFF;" points="125.6,114.4 128.8,104 132,114.4  "></polygon>
-	<polygon style="fill:#FFFFFF;" points="168,114.4 171.2,104 175.2,114.4  "></polygon>
-	<polygon style="fill:#FFFFFF;" points="18.4,132.8 21.6,122.4 24.8,132.8  "></polygon>
-	<polygon style="fill:#FFFFFF;" points="60.8,132.8 64,122.4 68,132.8  "></polygon>
-	<polygon style="fill:#FFFFFF;" points="104,132.8 107.2,122.4 110.4,132.8  "></polygon>
-	<polygon style="fill:#FFFFFF;" points="146.4,132.8 150.4,122.4 153.6,132.8  "></polygon>
-	<polygon style="fill:#FFFFFF;" points="189.6,132.8 192.8,122.4 196.8,132.8  "></polygon>
-	<polygon style="fill:#FFFFFF;" points="40,151.2 43.2,140.8 47.2,151.2  "></polygon>
-	<polygon style="fill:#FFFFFF;" points="83.2,151.2 86.4,140.8 89.6,151.2  "></polygon>
-	<polygon style="fill:#FFFFFF;" points="125.6,151.2 129.6,140.8 132.8,151.2  "></polygon>
-	<polygon style="fill:#FFFFFF;" points="168.8,151.2 172,140.8 175.2,151.2  "></polygon>
-	<polygon style="fill:#FFFFFF;" points="18.4,168.8 22.4,158.4 25.6,168.8  "></polygon>
-	<polygon style="fill:#FFFFFF;" points="61.6,168.8 64.8,158.4 68.8,168.8  "></polygon>
-	<polygon style="fill:#FFFFFF;" points="104.8,168.8 108,158.4 111.2,168.8  "></polygon>
-	<polygon style="fill:#FFFFFF;" points="147.2,168.8 151.2,158.4 154.4,168.8  "></polygon>
-	<polygon style="fill:#FFFFFF;" points="190.4,168.8 193.6,158.4 196.8,168.8  "></polygon>
-	<polygon style="fill:#FFFFFF;" points="40,187.2 43.2,176.8 47.2,187.2  "></polygon>
-	<polygon style="fill:#FFFFFF;" points="83.2,187.2 86.4,176.8 89.6,187.2  "></polygon>
-	<polygon style="fill:#FFFFFF;" points="125.6,187.2 129.6,176.8 132.8,187.2  "></polygon>
-	<polygon style="fill:#FFFFFF;" points="168.8,187.2 172,176.8 176,187.2  "></polygon>
-	<polygon style="fill:#FFFFFF;" points="19.2,205.6 22.4,195.2 25.6,205.6  "></polygon>
-	<polygon style="fill:#FFFFFF;" points="62.4,205.6 65.6,195.2 68.8,205.6  "></polygon>
-	<polygon style="fill:#FFFFFF;" points="104.8,205.6 108,195.2 112,205.6  "></polygon>
-	<polygon style="fill:#FFFFFF;" points="148,205.6 151.2,195.2 154.4,205.6  "></polygon>
-	<polygon style="fill:#FFFFFF;" points="190.4,205.6 194.4,195.2 197.6,205.6  "></polygon>
-	<polygon style="fill:#FFFFFF;" points="40,224 43.2,212.8 47.2,224  "></polygon>
-	<polygon style="fill:#FFFFFF;" points="83.2,224 86.4,212.8 89.6,224  "></polygon>
-	<polygon style="fill:#FFFFFF;" points="125.6,224 129.6,212.8 132.8,224  "></polygon>
-	<polygon style="fill:#FFFFFF;" points="168.8,224 172,212.8 175.2,224  "></polygon>
-	<polygon style="fill:#FFFFFF;" points="18.4,241.6 22.4,231.2 25.6,241.6  "></polygon>
-	<polygon style="fill:#FFFFFF;" points="61.6,241.6 64.8,231.2 68,241.6  "></polygon>
-	<polygon style="fill:#FFFFFF;" points="104,241.6 108,231.2 111.2,241.6  "></polygon>
-	<polygon style="fill:#FFFFFF;" points="147.2,241.6 150.4,231.2 154.4,241.6  "></polygon>
-	<polygon style="fill:#FFFFFF;" points="190.4,241.6 193.6,231.2 196.8,241.6  "></polygon>
-</g>
-</svg></span>
-            USA Office
-        </h4>
-
-        <div class="contact-item">
-            <div class="icon">
-                <i class="ri-phone-fill"></i>
-            </div>
-            <div>
-                <span>Phone</span>
-                <a href="tel:+15623120282">
-                    +1 562-312-0282
-                </a>
-            </div>
-        </div>
-
-        <div class="contact-item">
-            <div class="icon">
-                <i class="ri-map-pin-line"></i>
-            </div>
-            <div>
-                <span>Address</span>
-                <p>
-                    Norwalk, California 90650, USA
-                </p>
-            </div>
-        </div>
-
-    </div>
-
-</div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-    <!-- Bottom -->
-
-    <div class="footer-bottom">
-
-        <div class="container">
-
-            <div class="bottom-wrapper">
-
-                <p>
-                    © 2026 All rights reserved.
-                </p>
-
-                <ul>
-
-                    <li><a href="privacy-policy.html">Privacy Policy</a></li>
-
-                    <li><a href="#">Terms of Service</a></li>
-
-                    <li><a href="#">Cookie Policy</a></li>
-
-                </ul>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</footer>
-<!--footer section end-->
-
-<script>
+        <script>
 
 (function () {
     var body = document.getElementById('gs-body');
@@ -1094,6 +1550,6 @@
 })();
 
 </script>
-<script src="./Assets/js/custom.js"></script>
-</body>
+        <script src="./Assets/js/custom.js"></script>
+    </body>
 </html>

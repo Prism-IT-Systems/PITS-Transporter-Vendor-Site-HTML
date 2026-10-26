@@ -1430,7 +1430,7 @@ p {
 }
 
 .footer-office .contact-item a:hover {
-    color: #DDA619;
+    color: #c62828;
 }
 
 /* Address */
@@ -1637,6 +1637,16 @@ p {
 .bottom-wrapper a:hover {
     --tw-text-opacity: 1;
     color: rgb(255 255 255/var(--tw-text-opacity, 1))
+}
+
+@media (max-width: 1199px) {
+    .footer-grid {
+            grid-template-columns: 1fr 1fr;
+    }
+
+    .footer-contact {
+        grid-column: 3 / 1;
+    }
 }
 
 @media (max-width:991px) {
@@ -1896,13 +1906,9 @@ p {
     clip-path: polygon(0 0, 100% 0, 0 100%)
 }
 
-@media (max-width:1290px) {
+@media (max-width:1535px) {
     .hero-vector-img {
         display: none
-    }
-
-    .bg-dark {
-        width: 700px
     }
 }
 
