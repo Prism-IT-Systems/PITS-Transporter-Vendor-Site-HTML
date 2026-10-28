@@ -14168,3 +14168,17 @@ p {
     flex-direction: column;
   }
 }
+
+
+.featured-guides .heading-wrapper.heading-wrap-left {
+    margin-left: 0 !important;
+    margin-bottom: 40px;
+}
+
+.help-main-section .cta-content {
+    max-width: 960px;
+}
+
+.help-contact-hero .help-banner {
+    background-image: url(../images/help-main-hero.webp);
+}
