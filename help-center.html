@@ -137,7 +137,34 @@
                         </div>
 
                     </div>
+                    <!-- Popular Search Filters -->
+<div class="popular-search-filters">
+    <span class="popular-label">Popular:</span>
 
+    <button onclick="setSearchFilter('Vehicles')" class="popular-filter-btn">
+        Vehicles
+    </button>
+
+    <button onclick="setSearchFilter('Drivers')" class="popular-filter-btn">
+        Drivers
+    </button>
+
+    <button onclick="setSearchFilter('Fuel')" class="popular-filter-btn">
+        Fuel Logs
+    </button>
+
+    <button onclick="setSearchFilter('Maintenance')" class="popular-filter-btn">
+        Maintenance
+    </button>
+
+    <button onclick="setSearchFilter('Reports')" class="popular-filter-btn">
+        Reports
+    </button>
+
+    <button onclick="setSearchFilter('Documents')" class="popular-filter-btn">
+        Documents
+    </button>
+</div>
                 </div>
             </section>
             <!--Hero Section End-->
@@ -1112,301 +1139,195 @@
             </div>
         </footer>
         <!--footer section end-->
+
 <script>
-    // Initialize Lucide Icons
-    document.addEventListener("DOMContentLoaded", function() {
-      lucide.createIcons();
-      renderCategories();
-      renderSteps();
-      renderArticles();
-      renderFaqs();
+document.addEventListener("DOMContentLoaded", function () {
+    const section = document.querySelector("#getting-started");
+    if (!section) {
+        console.error("Simple Workflow section #getting-started not found.");
+        return;
+    }
+
+    const steps = [
+        {
+            number: "01",
+            title: "Set Up Your Company",
+            description: "Register your company identity, tax credentials, branch offices, operational hubs, and team user roles.",
+            link: "#company-documentation",
+            checklist: [
+                "Enter company name, logo, and registered address",
+                "Add regional hubs and loading docks",
+                "Invite fleet managers and dispatchers"
+            ]
+        },
+        {
+            number: "02",
+            title: "Add Vehicles",
+            description: "Add trucks, trailers, and commercial vehicles with registration details, carrying capacity, and odometer readings.",
+            link: "#vehicle-documentation",
+            checklist: [
+                "Enter registration number and carrying capacity",
+                "Upload RC, fitness certificates, and insurance",
+                "Link FASTag cards and GPS trackers"
+            ]
+        },
+        {
+            number: "03",
+            title: "Add Drivers",
+            description: "Register drivers with driving licence details, emergency contacts, medical records, and salary or bhatta rules.",
+            link: "#driver-documentation",
+            checklist: [
+                "Enter driving licence details and expiry date",
+                "Set daily bhatta or per-kilometre rates",
+                "Assign drivers to vehicles"
+            ]
+        },
+        {
+            number: "04",
+            title: "Configure Vendors",
+            description: "Add fuel stations, workshops, tyre dealers, and suppliers with payment terms and business details.",
+            link: "#vendor-documentation",
+            checklist: [
+                "Register fuel stations and suppliers",
+                "Configure payment terms",
+                "Connect vendors with expense records"
+            ]
+        },
+        {
+            number: "05",
+            title: "Start Tracking Operations",
+            description: "Manage trip dispatches, fuel entries, toll receipts, and vehicle operations from one place.",
+            link: "#operations-documentation",
+            checklist: [
+                "Create trip dispatch orders",
+                "Record driver advances and fuel entries",
+                "Track vehicle trips and milestones"
+            ]
+        },
+        {
+            number: "06",
+            title: "Explore Reports",
+            description: "Review fleet performance, fuel consumption, operating costs, and maintenance information.",
+            link: "#reports-documentation",
+            checklist: [
+                "Review vehicle cost reports",
+                "Download fuel and revenue reports",
+                "Share reports with management"
+            ]
+        }
+    ];
+
+    let currentStep = 0;
+
+    const stepButtons = section.querySelectorAll(".gs-step");
+    const numberElement = section.querySelector(".gs-details-number");
+    const titleElement = section.querySelector(".gs-details-title h3");
+    const descriptionElement = section.querySelector(".gs-description");
+    const checklistElement = section.querySelector(".gs-checklist");
+    const documentationLink = section.querySelector(".gs-doc-link");
+    const previousButton = section.querySelector(".gs-btn-prev");
+    const nextButton = section.querySelector(".gs-btn-next");
+
+    if (
+        stepButtons.length !== steps.length ||
+        !numberElement ||
+        !titleElement ||
+        !descriptionElement ||
+        !checklistElement ||
+        !documentationLink ||
+        !previousButton ||
+        !nextButton
+    ) {
+        console.error(
+            "Simple Workflow: Check that the HTML contains six .gs-step buttons and all required details/navigation elements."
+        );
+        return;
+    }
+
+    function showStep(index) {
+        if (index < 0 || index >= steps.length) return;
+
+        currentStep = index;
+        const step = steps[currentStep];
+
+        // Update active step button.
+        stepButtons.forEach(function (button, buttonIndex) {
+            const isActive = buttonIndex === currentStep;
+
+            button.classList.toggle("is-active", isActive);
+            button.classList.toggle("active", isActive);
+            button.setAttribute("aria-pressed", String(isActive));
+
+            button.style.borderColor = isActive ? "#f43f5e" : "";
+            button.style.boxShadow = isActive
+                ? "0 0 0 2px #f43f5e"
+                : "";
+        });
+
+        // Update the details panel.
+        numberElement.textContent = step.number;
+        titleElement.textContent = step.title;
+        descriptionElement.textContent = step.description;
+        documentationLink.href = step.link;
+
+        // Update checklist.
+        checklistElement.replaceChildren();
+
+        step.checklist.forEach(function (text) {
+            const item = document.createElement("div");
+            item.className = "gs-check-item";
+
+            item.innerHTML = `
+                <svg viewBox="0 0 24 24"
+                     fill="none"
+                     stroke="currentColor"
+                     stroke-width="2"
+                     stroke-linecap="round"
+                     stroke-linejoin="round"
+                     aria-hidden="true">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <path d="m9 12 2 2 4-4"></path>
+                </svg>
+            `;
+
+            const label = document.createElement("span");
+            label.textContent = text;
+
+            item.appendChild(label);
+            checklistElement.appendChild(item);
+        });
+
+        // Enable/disable navigation.
+        previousButton.disabled = currentStep === 0;
+        nextButton.disabled = currentStep === steps.length - 1;
+    }
+
+    // Make this function available to existing inline onclick attributes.
+    window.selectStep = function (index) {
+        showStep(Number(index));
+    };
+
+    // Previous and Next buttons.
+    previousButton.addEventListener("click", function () {
+        showStep(currentStep - 1);
     });
 
-    // Mobile Menu Toggle
-    function toggleMobileMenu() {
-      const menu = document.getElementById('mobileMenu');
-      menu.classList.toggle('hidden');
-    }
+    nextButton.addEventListener("click", function () {
+        showStep(currentStep + 1);
+    });
 
-    // Modal Helpers
-    function openModal(id) {
-      document.getElementById(id).classList.remove('hidden');
-    }
-    function closeModal(id) {
-      document.getElementById(id).classList.add('hidden');
-    }
+    // Step buttons.
+    stepButtons.forEach(function (button, index) {
+        button.addEventListener("click", function () {
+            showStep(index);
+        });
+    });
 
-    // 16 Categories Data
-    const categoriesData = [
-      { name: 'Vehicle Management', desc: 'Manage vehicles, vehicle information, status, documents and related records.', count: 16, group: 'core', icon: 'truck' },
-      { name: 'Driver Management', desc: 'Learn how to add, manage and monitor drivers.', count: 14, group: 'core', icon: 'user-check' },
-      { name: 'Company Management', desc: 'Manage companies, customers and organizational information.', count: 9, group: 'core', icon: 'building-2' },
-      { name: 'Vendor Management', desc: 'Manage vendors and vendor-related information.', count: 11, group: 'core', icon: 'briefcase' },
-      { name: 'Fuel & Diesel Management', desc: 'Track fuel usage, diesel logs and fuel-related expenses.', count: 18, group: 'operations', icon: 'fuel' },
-      { name: 'Daily Ledger Management', desc: 'Manage daily operational financial records and transactions.', count: 13, group: 'finance', icon: 'book-open' },
-      { name: 'Expense Management', desc: 'Track and manage transportation-related expenses.', count: 12, group: 'finance', icon: 'receipt' },
-      { name: 'Vehicle Document Management', desc: 'Manage registration, insurance, permits and other vehicle documents.', count: 15, group: 'compliance', icon: 'file-text' },
-      { name: 'Repair & Maintenance', desc: 'Track repairs, maintenance schedules and vehicle service history.', count: 20, group: 'operations', icon: 'wrench' },
-      { name: 'Battery Management', desc: 'Manage battery records, replacements and maintenance information.', count: 8, group: 'operations', icon: 'battery-charging' },
-      { name: 'Tyre Management', desc: 'Track tyre details, replacement history and tyre-related records.', count: 17, group: 'operations', icon: 'disc' },
-      { name: 'Toll Management', desc: 'Manage toll expenses and transportation toll records.', count: 10, group: 'operations', icon: 'credit-card' },
-      { name: 'Loan/Receipt Management', desc: 'Manage relevant financial and receipt records.', count: 9, group: 'finance', icon: 'landmark' },
-      { name: 'Accident Management', desc: 'Record and manage accident-related information.', count: 8, group: 'compliance', icon: 'shield-alert' },
-      { name: 'Challan Management', desc: 'Manage challans and related transportation records.', count: 11, group: 'compliance', icon: 'alert-octagon' },
-      { name: 'Reports & Analytics', desc: 'Understand operational data through reports and analytics.', count: 22, group: 'finance', icon: 'bar-chart-3' }
-    ];
+    // Start on the first step.
+    showStep(0);
+});
+</script>
 
-    function renderCategories(filter = 'all') {
-      const container = document.getElementById('categoriesGrid');
-      const filtered = filter === 'all' ? categoriesData : categoriesData.filter(c => c.group === filter);
-      
-      container.innerHTML = filtered.map(c => `
-        <div onclick="openCategoryGuide('${c.name}')" class="group bg-white hover:bg-slate-50 border border-slate-200/90 hover:border-rose-400 rounded-xl p-5 shadow-xs hover:shadow-md transition-all cursor-pointer flex flex-col justify-between">
-          <div>
-            <div class="flex items-center justify-between mb-3.5">
-              <div class="flex items-center gap-2.5">
-                <div class="w-9 h-9 rounded-lg bg-slate-100 group-hover:bg-rose-50 border border-slate-200 group-hover:border-rose-200 flex items-center justify-center text-slate-700 group-hover:text-rose-600">
-                  <i data-lucide="${c.icon}" class="w-4 h-4"></i>
-                </div>
-                <div class="w-1 h-4 bg-rose-500 rounded-full"></div>
-              </div>
-              <span class="text-[11px] font-semibold text-slate-400 group-hover:text-rose-600">${c.count} articles</span>
-            </div>
-            <h3 class="text-sm font-bold text-slate-900 group-hover:text-rose-600 mb-1.5">${c.name}</h3>
-            <p class="text-xs text-slate-500 line-clamp-2">${c.desc}</p>
-          </div>
-          <div class="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between text-xs font-semibold text-slate-600 group-hover:text-rose-600">
-            <span>View guides</span>
-            <i data-lucide="arrow-right" class="w-3.5 h-3.5 transition-transform group-hover:translate-x-1"></i>
-          </div>
-        </div>
-      `).join('');
-      lucide.createIcons();
-    }
-
-    function filterCategories(group) {
-      ['all', 'core', 'operations', 'compliance', 'finance'].forEach(g => {
-        const btn = document.getElementById(`btn-cat-${g}`);
-        if (g === group) {
-          btn.className = "px-3 py-1.5 text-xs font-bold rounded-md bg-white text-slate-900 shadow-sm";
-        } else {
-          btn.className = "px-3 py-1.5 text-xs font-semibold rounded-md text-slate-600 hover:text-slate-900";
-        }
-      });
-      renderCategories(group);
-    }
-
-    // 01-06 Steps Data
-    const stepsData = [
-      { num: '01', title: 'Set Up Your Company', sub: 'Organization profile & master branches', desc: 'Register your company identity, tax credentials, legal branch offices, operational hubs, and team user roles.', time: '5 mins', list: ['Enter legal company name, logo and registered address', 'Add regional hubs and loading docks', 'Invite fleet managers and dispatchers with custom roles'] },
-      { num: '02', title: 'Add Vehicles', sub: 'Fleet roster & specifications', desc: 'Add trucks, trailers, and light commercial vehicles with registration numbers, tonnage, and starting odometers.', time: '8 mins', list: ['Enter registration plate number and tonnage capacity', 'Upload vehicle RC, fitness certificates, and insurance', 'Link FASTag RFID toll cards and IoT GPS trackers'] },
-      { num: '03', title: 'Add Drivers', sub: 'Heavy vehicle licensing & KYC', desc: 'Onboard commercial drivers with driving license numbers, emergency contacts, and daily allowance/bhatta rules.', time: '6 mins', list: ['Input driving license numbers with expiry verification', 'Set daily bhatta, overtime, or per-kilometer rate', 'Assign drivers to active vehicles or standby pools'] },
-      { num: '04', title: 'Configure Vendors', sub: 'Fuel pumps, workshops & suppliers', desc: 'Connect fuel stations, workshops, tyre dealers, and subcontractors with pre-agreed credit limits and bank info.', time: '5 mins', list: ['Register approved fuel pumps along frequent routes', 'Configure payment cycles (Net 15, Net 30, or Cash)', 'Map vendors to ledger expense codes for auto-reconciliation'] },
-      { num: '05', title: 'Start Tracking Operations', sub: 'Dispatches, fuel logs & tolls', desc: 'Create trip manifests, record daily fuel fill-ups, log toll receipts, and track live vehicle transit status.', time: '10 mins', list: ['Generate trip dispatch order with loading point & destination', 'Issue driver cash advance voucher and record starting fuel', 'Monitor live GPS transit timeline and en-route milestone alerts'] },
-      { num: '06', title: 'Explore Reports', sub: 'Fleet profitability & KPI audits', desc: 'Analyze operational metrics, diesel economy (km/l), cost-per-ton-kilometer, and maintenance forecasts.', time: '3 mins', list: ['Review vehicle cost of ownership (TCO) analytics', 'Download monthly fuel vs revenue variance report', 'Schedule automated email digests to management stakeholders'] }
-    ];
-
-    let currentStepIdx = 0;
-
-    function renderSteps() {
-      const nodeContainer = document.getElementById('stepperNodes');
-      nodeContainer.innerHTML = stepsData.map((s, idx) => `
-        <button onclick="selectStep(${idx})" class="flex flex-col items-center text-center p-3 rounded-xl transition-all cursor-pointer ${currentStepIdx === idx ? 'bg-white shadow-md ring-2 ring-rose-500' : 'hover:bg-white/60'}">
-          <span class="text-2xl font-black mb-2 ${currentStepIdx === idx ? 'text-rose-600' : 'text-slate-400'}">${s.num}</span>
-          <div class="w-12 h-12 rounded-full flex items-center justify-center border-2 mb-3 ${currentStepIdx === idx ? 'bg-rose-600 border-rose-600 text-white' : 'bg-white border-rose-200 text-rose-600'}">
-            <i data-lucide="check-circle" class="w-5 h-5"></i>
-          </div>
-          <h3 class="text-xs font-bold text-slate-900 line-clamp-1">${s.title}</h3>
-        </button>
-      `).join('');
-
-      const s = stepsData[currentStepIdx];
-      const detail = document.getElementById('stepDetailCard');
-      detail.innerHTML = `
-        <div class="flex items-center justify-between pb-6 border-b border-slate-100">
-          <div class="flex items-center gap-3">
-            <span class="text-3xl font-black text-rose-600 font-mono">${s.num}</span>
-            <div>
-              <h3 class="text-xl font-extrabold text-slate-900">${s.title}</h3>
-              <p class="text-xs text-slate-500">Estimated time: <strong class="text-slate-700">${s.time}</strong></p>
-            </div>
-          </div>
-        </div>
-        <div class="py-6">
-          <p class="text-sm text-slate-600 mb-6 leading-relaxed">${s.desc}</p>
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6">
-            ${s.list.map(item => `
-              <div class="flex items-start gap-2.5 p-3 rounded-lg bg-slate-50 border border-slate-200">
-                <i data-lucide="check-circle-2" class="w-4 h-4 text-rose-600 shrink-0 mt-0.5"></i>
-                <span class="text-xs font-medium text-slate-700">${item}</span>
-              </div>
-            `).join('')}
-          </div>
-        </div>
-        <div class="pt-4 border-t border-slate-100 flex justify-between items-center">
-          <span class="text-xs text-slate-500">Step ${currentStepIdx + 1} of 6 in complete workspace onboarding</span>
-          <div class="flex gap-2">
-            ${currentStepIdx > 0 ? `<button onclick="selectStep(${currentStepIdx - 1})" class="px-4 py-2 text-xs font-semibold text-slate-600 bg-slate-100 rounded-lg">Previous</button>` : ''}
-            ${currentStepIdx < 5 ? `<button onclick="selectStep(${currentStepIdx + 1})" class="px-4 py-2 text-xs font-semibold text-white bg-rose-600 rounded-lg">Next Step</button>` : `<button onclick="openModal('demoModal')" class="px-4 py-2 text-xs font-semibold text-white bg-slate-900 rounded-lg">Request Walkthrough</button>`}
-          </div>
-        </div>
-      `;
-      lucide.createIcons();
-    }
-
-    function selectStep(idx) {
-      currentStepIdx = idx;
-      renderSteps();
-    }
-
-    // Popular Articles Data
-    const popularArticles = [
-      { id: 'p1', title: 'How to Add a New Vehicle', cat: 'Vehicle Management', desc: 'Step-by-step instructions to register a truck, trailer, or commercial vehicle with registration plate and odometer baseline.', time: '3 min read', steps: ['Go to Vehicles > Add Vehicle', 'Input registration plate number and tonnage specifications', 'Upload digital copies of RC, insurance, and national permits', 'Save and assign to depot'] },
-      { id: 'p2', title: 'How to Add and Manage Drivers', cat: 'Driver Management', desc: 'Onboard commercial drivers, record heavy vehicle licenses, setup daily bhatta, and assign them to vehicles.', time: '4 min read', steps: ['Navigate to Driver Management > Add Driver', 'Enter full name, phone number, and HMV license number', 'Configure payment terms (Daily bhatta or per-km)', 'Upload KYC identity proof and save'] },
-      { id: 'p3', title: 'How to Create a Fuel Entry', cat: 'Fuel & Diesel Management', desc: 'Log diesel fill-ups, track fuel receipts, calculate kilometers-per-liter (km/l), and flag abnormal consumption.', time: '3 min read', steps: ['Open Fuel Management > New Fuel Log', 'Select vehicle number and active driver', 'Input current odometer reading and quantity in liters', 'Attach photo of fuel pump slip and submit'] },
-      { id: 'p4', title: 'How to Record Vehicle Maintenance', cat: 'Repair & Maintenance', desc: 'Log scheduled servicing, workshop job cards, spare parts consumption, and emergency roadside breakdown repairs.', time: '5 min read', steps: ['Go to Maintenance > Job Cards > Create', 'Choose vehicle and service workshop partner', 'Add spare part items (filters, oil, brake pads) and labor fees', 'Close job card to record expenses to vehicle ledger'] },
-      { id: 'p5', title: 'How to Manage Vehicle Documents', cat: 'Vehicle Document Management', desc: 'Upload, verify, and monitor expiry dates for RC, Fitness, National Permit, Insurance, and PUC certificates.', time: '4 min read', steps: ['Open Document Vault in Compliance menu', 'Select vehicle and document category', 'Input policy number and expiry dates', 'Enable automated 30-day SMS/WhatsApp expiry alerts'] },
-      { id: 'p6', title: 'How to Generate Reports', cat: 'Reports & Analytics', desc: 'Export operational summaries, diesel consumption logs, driver overtime, and profit/loss statements.', time: '3 min read', steps: ['Go to Analytics > Reports Center', 'Select date range and vehicle fleet branch', 'Preview interactive charts and tabular breakdown', 'Export directly to Excel (.xlsx), CSV or PDF'] },
-      { id: 'p7', title: 'How to Add a Vendor', cat: 'Vendor Management', desc: 'Manage fuel pumps, spare parts distributors, tyre suppliers, workshop partners, and external haulage subcontractors.', time: '3 min read', steps: ['Open Master Data > Vendors > New Vendor', 'Enter vendor company name, GSTIN, and credit terms', 'Assign vendor to specific highway fuel routes', 'Save vendor record'] },
-      { id: 'p8', title: 'How to Manage Tolls', cat: 'Toll Management', desc: 'Automate FASTag deductions, track national highway toll plazas, audit monthly toll expenses, and prevent double charges.', time: '4 min read', steps: ['Open Toll Operations > FASTag Manager', 'View live automated plaza toll deduction statements', 'Audit transactions against vehicle GPS route timestamps', 'Dispute overcharges directly through NHAI portal integration'] }
-    ];
-
-    function renderArticles() {
-      const container = document.getElementById('articlesGrid');
-      container.innerHTML = popularArticles.map(a => `
-        <div onclick="openArticleModal('${a.id}')" class="group bg-white hover:bg-slate-50 border border-slate-200 hover:border-rose-400 rounded-xl p-5 shadow-xs hover:shadow-md transition-all cursor-pointer flex flex-col justify-between">
-          <div>
-            <span class="text-[11px] font-bold text-rose-600 uppercase tracking-wider block mb-2">${a.cat}</span>
-            <h3 class="text-base font-bold text-slate-900 group-hover:text-rose-600 transition-colors mb-2">${a.title}</h3>
-            <p class="text-xs text-slate-500 line-clamp-3 leading-relaxed">${a.desc}</p>
-          </div>
-          <div class="mt-5 pt-3 border-t border-slate-100 flex items-center justify-between text-xs text-slate-500 group-hover:text-rose-600">
-            <span>${a.time}</span>
-            <span class="font-bold flex items-center gap-1">Read Guide <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i></span>
-          </div>
-        </div>
-      `).join('');
-      lucide.createIcons();
-    }
-
-    // FAQs Data
-    const faqData = [
-      { q: 'How do I get started with TransportDesk?', a: 'Getting started is simple. After signing up, access your Admin Workspace and follow the 6-step setup flow: 1) Configure company hubs, 2) Add or bulk-import your vehicle roster, 3) Add commercial drivers with license details, 4) Connect fuel pump and maintenance vendors, 5) Dispatch your first trip, and 6) Access real-time profitability analytics.' },
-      { q: 'How do I add a vehicle?', a: 'Navigate to "Vehicles" in the left navigation and click the red "+ Add Vehicle" button. Provide the registration plate, make/model, carrying capacity, fuel type, and current odometer reading. Once saved, you can immediately upload RC, fitness, insurance, and national permits.' },
-      { q: 'How do I add a driver?', a: 'Head to "Driver Management" > "Add Driver". Enter the driver’s full name, phone number, HMV driving license number, license expiry date, and emergency contact. You can also define daily bhatta rates and upload KYC documents.' },
-      { q: 'Can I manage vehicle documents?', a: 'Yes! TransportDesk includes a dedicated Document Vault. You can upload digital copies of RC, Fitness Certificates, National Highway Permits, Insurance Policies, and PUC certificates. The system automatically monitors expiry dates and triggers alerts at 60, 30, and 7 days.' },
-      { q: 'How can I track fuel and diesel expenses?', a: 'Open "Fuel Management" and click "New Fuel Entry". Select the vehicle, input the odometer reading, diesel quantity in liters, price per liter, and payment source. TransportDesk automatically calculates KM per liter (km/l) and benchmarks it against the vehicle average.' },
-      { q: 'How do I manage repair and maintenance records?', a: 'Under "Maintenance", create a Job Card whenever a vehicle enters your depot workshop or third-party service center. Log labor costs, itemized spare parts, and service dates. Reminders can be set based on kilometer intervals or calendar intervals.' },
-      { q: 'How do I generate reports?', a: 'Visit the "Reports & Analytics" section. Choose from over 28 standard reports including Fleet Utilization, Monthly Diesel Consumption, Driver Performance, Profit & Loss per Vehicle, and Compliance Audits. Export cleanly to Excel, CSV, or formatted PDF.' },
-      { q: 'How can I contact TransportDesk support?', a: 'Our dedicated enterprise support team is available 24/7. Submit a support ticket directly through this Help Center, send an email to jay@prismitsystems.com, or call our direct phone hotlines: India Office (+91 6355 258 003) or USA Office (+1 562-312-0282).' }
-    ];
-
-    let openFaqIdx = 0;
-
-    function renderFaqs() {
-      const container = document.getElementById('faqAccordion');
-      container.innerHTML = faqData.map((f, idx) => `
-        <div class="rounded-xl border ${openFaqIdx === idx ? 'border-rose-200 bg-rose-50/20 shadow-xs' : 'border-slate-200 bg-white'} transition-all">
-          <button onclick="toggleFaq(${idx})" class="w-full text-left px-5 py-4 flex items-center justify-between gap-4 cursor-pointer">
-            <span class="text-sm sm:text-base font-bold ${openFaqIdx === idx ? 'text-rose-700' : 'text-slate-900'}">${f.q}</span>
-            <i data-lucide="chevron-down" class="w-4 h-4 text-slate-400 transition-transform ${openFaqIdx === idx ? 'rotate-180 text-rose-600' : ''}"></i>
-          </button>
-          ${openFaqIdx === idx ? `<div class="px-5 pb-5 pt-1 text-xs sm:text-sm text-slate-600 border-t border-rose-100/60 leading-relaxed">${f.a}</div>` : ''}
-        </div>
-      `).join('');
-      lucide.createIcons();
-    }
-
-    function toggleFaq(idx) {
-      openFaqIdx = openFaqIdx === idx ? -1 : idx;
-      renderFaqs();
-    }
-
-    // Search Logic
-    function handleSearch(q) {
-      const dropdown = document.getElementById('searchResultsDropdown');
-      if (!q.trim()) {
-        dropdown.classList.add('hidden');
-        return;
-      }
-      const match = popularArticles.filter(a => a.title.toLowerCase().includes(q.toLowerCase()) || a.desc.toLowerCase().includes(q.toLowerCase()) || a.cat.toLowerCase().includes(q.toLowerCase()));
-      dropdown.classList.remove('hidden');
-      if (match.length === 0) {
-        dropdown.innerHTML = `<div class="p-6 text-center text-xs text-slate-500">No articles found matching "${q}". Try searching "driver", "vehicle", or "fuel".</div>`;
-      } else {
-        dropdown.innerHTML = match.map(m => `
-          <div onclick="openArticleModal('${m.id}')" class="p-4 hover:bg-rose-50/50 cursor-pointer border-b border-slate-100 last:border-0">
-            <span class="text-[10px] font-bold text-rose-600 uppercase tracking-wider">${m.cat}</span>
-            <h4 class="text-sm font-bold text-slate-900">${m.title}</h4>
-            <p class="text-xs text-slate-500 line-clamp-1">${m.desc}</p>
-          </div>
-        `).join('');
-      }
-    }
-
-    function setSearchFilter(term) {
-      const input = document.getElementById('searchInput');
-      input.value = term;
-      handleSearch(term);
-    }
-
-    function triggerSearchAction() {
-      const val = document.getElementById('searchInput').value;
-      if (val) handleSearch(val);
-    }
-
-    // Modal Details Opener
-    function openArticleModal(id) {
-      const art = popularArticles.find(a => a.id === id) || {
-        title: id === 'guide-1' ? 'Complete Fleet Management Guide' : id === 'guide-2' ? 'Getting Started with TransportDesk' : 'Transportation Operations Best Practices',
-        cat: 'Master Guide',
-        desc: 'Comprehensive operational manual and implementation steps for commercial fleets.',
-        steps: ['Audit Fleet Baseline Metrics', 'Setup Vehicle & Driver Registries', 'Deploy automated FASTag & Fuel reconciling', 'Export monthly operational audit summaries']
-      };
-      document.getElementById('modalCategory').innerText = art.cat;
-      document.getElementById('modalTitle').innerText = art.title;
-      document.getElementById('modalOverview').innerText = art.desc;
-      document.getElementById('modalSteps').innerHTML = art.steps.map((s, i) => `
-        <div class="flex items-start gap-2.5 p-3 rounded-lg bg-slate-50 border border-slate-100">
-          <span class="w-5 h-5 rounded-full bg-rose-50 text-rose-600 text-xs font-bold flex items-center justify-center shrink-0">${i + 1}</span>
-          <p>${s}</p>
-        </div>
-      `).join('');
-      openModal('articleModal');
-    }
-
-    function openCategoryGuide(name) {
-      document.getElementById('modalCategory').innerText = name;
-      document.getElementById('modalTitle').innerText = `${name} Documentation`;
-      document.getElementById('modalOverview').innerText = `Official procedures and best practice workflows for ${name}.`;
-      document.getElementById('modalSteps').innerHTML = [
-        `Navigate to ${name} in the TransportDesk left navigation sidebar.`,
-        `Click "+ New Entry" or import records via standardized CSV.`,
-        `Fill in required registration, rate, or schedule parameters.`,
-        `Save and review real-time KPI impacts in your executive dashboard.`
-      ].map((s, i) => `
-        <div class="flex items-start gap-2.5 p-3 rounded-lg bg-slate-50 border border-slate-100">
-          <span class="w-5 h-5 rounded-full bg-rose-50 text-rose-600 text-xs font-bold flex items-center justify-center shrink-0">${i + 1}</span>
-          <p>${s}</p>
-        </div>
-      `).join('');
-      openModal('articleModal');
-    }
-
-    // Forms
-    function handleSupportSubmit(e) {
-      e.preventDefault();
-      const ticketId = 'TD-' + Math.floor(10000 + Math.random() * 90000);
-      alert(`Support ticket #${ticketId} created successfully! Our tier-1 fleet response engineers will contact you within 15 minutes.`);
-      closeModal('contactModal');
-    }
-
-    function handleDemoSubmit(e) {
-      e.preventDefault();
-      alert(`Demo scheduled successfully! A calendar invitation has been dispatched to your work email.`);
-      closeModal('demoModal');
-    }
-  </script>
         <script src="./Assets/js/custom.min.js" defer></script>
     </body>
 </html>
