@@ -15991,3 +15991,177 @@ p {
         font-size: 13px !important;
     }
 }
+
+
+ :root {
+      --navy-950: #070D18;
+      --navy-900: #0B1428;
+      --navy-850: #101B33;
+      --navy-800: #162444;
+      --navy-700: #1E3056;
+      --coral-500: #EF4444;
+      --coral-600: #DC2626;
+      --coral-50: #FEF2F2;
+      
+      --status-green: #10B981;
+      --status-green-bg: #ECFDF5;
+      --status-green-border: #A7F3D0;
+      
+      --status-amber: #F59E0B;
+      --status-amber-bg: #FFFBEB;
+      --status-amber-border: #FDE68A;
+      
+      --status-red: #EF4444;
+      --status-red-bg: #FEF2F2;
+      --status-red-border: #FECACA;
+
+      --bg-body: #FFFFFF;
+      --bg-alt: #F8FAFC;
+      --bg-card: #FFFFFF;
+      --border-subtle: #E2E8F0;
+      --border-hover: #CBD5E1;
+      
+      --text-main: #0B1428;
+      --text-muted: #64748B;
+      --text-subtle: #94A3B8;
+
+      --radius-sm: 6px;
+      --radius-md: 10px;
+      --radius-lg: 14px;
+      --radius-pill: 9999px;
+      
+      --shadow-sm: 0 1px 2px 0 rgba(11, 20, 40, 0.05);
+      --shadow-md: 0 4px 6px -1px rgba(11, 20, 40, 0.07), 0 2px 4px -2px rgba(11, 20, 40, 0.04);
+      --shadow-lg: 0 12px 24px -4px rgba(11, 20, 40, 0.08);
+
+      --font-heading: 'Plus Jakarta Sans', sans-serif;
+      --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    }
+
+  /* ==========================================================================
+       SECTION HEADINGS
+       ========================================================================== */
+    .section-wrap {
+      padding: 56px 0;
+    }
+
+    .section-wrap.alt-bg {
+      background-color: var(--bg-alt);
+    }
+
+    .section-header {
+      margin-bottom: 28px;
+    }
+
+    .section-label {
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--coral-500);
+      margin-bottom: 6px;
+      display: block;
+    }
+
+    .section-title {
+      font-family: var(--font-heading);
+      font-size: 24px;
+      font-weight: 800;
+      color: var(--navy-900);
+      letter-spacing: -0.02em;
+    }
+
+    .section-subtext {
+      color: var(--text-muted);
+      font-size: 14.5px;
+      margin-top: 4px;
+    }
+
+    .section-subtitle {
+        text-align: center;
+    }
+    /* ==========================================================================
+       SERVICES AVAILABILITY GRID
+       ========================================================================== */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+      gap: 16px;
+    }
+
+    .service-card {
+      background: #FFFFFF;
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 18px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      transition: all 0.2s ease;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .service-card:hover {
+      border-color: var(--border-hover);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .service-info {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .service-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: var(--radius-sm);
+      background: var(--coral-50);
+      color: var(--coral-500);
+      display: grid;
+      place-items: center;
+      font-size: 18px;
+      flex-shrink: 0;
+    }
+
+    .service-meta h3 {
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--navy-900);
+      margin-bottom: 2px;
+    }
+
+    .service-meta p {
+      font-size: 12.5px;
+      color: var(--text-muted);
+    }
+
+    .badge-status {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 4px 10px;
+      border-radius: var(--radius-pill);
+      font-size: 12px;
+      font-weight: 600;
+      white-space: nowrap;
+    }
+
+    .badge-status.operational {
+      background-color: var(--status-green-bg);
+      color: var(--status-green);
+      border: 1px solid var(--status-green-border);
+    }
+
+    .badge-status.degraded {
+      background-color: var(--status-amber-bg);
+      color: var(--status-amber);
+      border: 1px solid var(--status-amber-border);
+    }
+
+    .badge-status.outage {
+      background-color: var(--status-red-bg);
+      color: var(--status-red);
+      border: 1px solid var(--status-red-border);
+    }

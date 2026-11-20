@@ -1100,256 +1100,188 @@
     </div>
   </section>
 
-  <!-- ==========================================================================
-       RELIABILITY SNAPSHOT: METRICS STRIP
-       ========================================================================== -->
-  <section class="metrics-bar">
-    <div class="container">
-      <div class="metrics-grid">
-        <div class="metric-cell">
-          <div class="metric-val">99.98% <small>▲</small></div>
-          <div class="metric-label">Rolling 30-Day Uptime</div>
-          <div class="metric-sub">Exceeds 99.9% SLA commitments</div>
-        </div>
-        <div class="metric-cell">
-          <div class="metric-val">13 / 13</div>
-          <div class="metric-label">Active Core Services</div>
-          <div class="metric-sub">100% operational capacity</div>
-        </div>
-        <div class="metric-cell">
-          <div class="metric-val">0</div>
-          <div class="metric-label">Incidents This Month</div>
-          <div class="metric-sub">0 hours cumulative downtime</div>
-        </div>
-        <div class="metric-cell">
-          <div class="metric-val">120ms</div>
-          <div class="metric-label">Average API Response</div>
-          <div class="metric-sub">p95 roundtrip query latency</div>
-        </div>
-      </div>
-    </div>
-  </section>
 
   <!-- ==========================================================================
        COMPONENT HEALTH: COMPACT MONITORING TABLE
        ========================================================================== -->
-  <section class="monitoring-section">
-    <div class="container">
-      <div class="section-header-compact">
-        <div>
-          <h2 class="section-title">Component Health</h2>
-          <p class="section-subtitle">Real-time status breakdown of modules and microservices powering transport logistics.</p>
-        </div>
-        <div class="table-filter-tabs">
-          <button class="filter-btn active" onclick="filterServices('all', this)">All (13)</button>
-          <button class="filter-btn" onclick="filterServices('operational', this)">Operational (13)</button>
-          <button class="filter-btn" onclick="filterServices('degraded', this)">Degraded (0)</button>
-          <button class="filter-btn" onclick="filterServices('outage', this)">Outage (0)</button>
-        </div>
-      </div>
+ 
+<section class="section-wrap">
+  <div class="container">
+    <div class="heading-wrapper">
+      <span class="heading-tag">Core Infrastructure</span>
 
-      <div class="health-table-card">
-        <table class="health-table">
-          <thead>
-            <tr>
-              <th>Component Name</th>
-              <th>Category</th>
-              <th>Current Status</th>
-              <th>30-Day Uptime</th>
-              <th>Latency / Probe</th>
-            </tr>
-          </thead>
-          <tbody>
-            <!-- Category: Core Platform -->
-            <tr class="table-category-row"><td colspan="5">Core Infrastructure</td></tr>
-            <tr data-status="operational">
-              <td class="component-name">
-                Main Application Portal (Web App)
-              </td>
-              <td>Core Platform</td>
-              <td>
-                <span class="badge-status operational">
-                  <span class="badge-dot"></span> Operational
-                </span>
-              </td>
-              <td class="uptime-bar-cell">
-                <span class="micro-uptime-pct">100.0%</span>
-              </td>
-              <td class="timestamp-mono">82ms · 12s ago</td>
-            </tr>
-            <tr data-status="operational">
-              <td class="component-name">
-                Authentication & SSO Service (OAuth2)
-              </td>
-              <td>Core Platform</td>
-              <td>
-                <span class="badge-status operational">
-                  <span class="badge-dot"></span> Operational
-                </span>
-              </td>
-              <td class="uptime-bar-cell">
-                <span class="micro-uptime-pct">99.99%</span>
-              </td>
-              <td class="timestamp-mono">45ms · 14s ago</td>
-            </tr>
-            <tr data-status="operational">
-              <td class="component-name">
-                Database Cluster (PostgreSQL Primary/Replicas)
-              </td>
-              <td>Core Platform</td>
-              <td>
-                <span class="badge-status operational">
-                  <span class="badge-dot"></span> Operational
-                </span>
-              </td>
-              <td class="uptime-bar-cell">
-                <span class="micro-uptime-pct">99.98%</span>
-              </td>
-              <td class="timestamp-mono">18ms · 8s ago</td>
-            </tr>
-            <tr data-status="operational">
-              <td class="component-name">
-                Public REST & GraphQL Endpoints
-              </td>
-              <td>Core Platform</td>
-              <td>
-                <span class="badge-status operational">
-                  <span class="badge-dot"></span> Operational
-                </span>
-              </td>
-              <td class="uptime-bar-cell">
-                <span class="micro-uptime-pct">99.97%</span>
-              </td>
-              <td class="timestamp-mono">112ms · 5s ago</td>
-            </tr>
+      <h2 class="heading-title">
+        <span>Service</span> Availability
+      </h2>
 
-            <!-- Category: Transport Operations -->
-            <tr class="table-category-row"><td colspan="5">Transport Operations</td></tr>
-            <tr data-status="operational">
-              <td class="component-name">Fleet Management Engine</td>
-              <td>Operations</td>
-              <td>
-                <span class="badge-status operational">
-                  <span class="badge-dot"></span> Operational
-                </span>
-              </td>
-              <td class="uptime-bar-cell">
-                <span class="micro-uptime-pct">100.0%</span>
-              </td>
-              <td class="timestamp-mono">94ms · 15s ago</td>
-            </tr>
-            <tr data-status="operational">
-              <td class="component-name">Driver Companion App Gateway</td>
-              <td>Operations</td>
-              <td>
-                <span class="badge-status operational">
-                  <span class="badge-dot"></span> Operational
-                </span>
-              </td>
-              <td class="uptime-bar-cell">
-                <span class="micro-uptime-pct">99.96%</span>
-              </td>
-              <td class="timestamp-mono">130ms · 9s ago</td>
-            </tr>
-            <tr data-status="operational">
-              <td class="component-name">Vehicle Telemetry & GPS Ingestion</td>
-              <td>Operations</td>
-              <td>
-                <span class="badge-status operational">
-                  <span class="badge-dot"></span> Operational
-                </span>
-              </td>
-              <td class="uptime-bar-cell">
-                <span class="micro-uptime-pct">99.99%</span>
-              </td>
-              <td class="timestamp-mono">38ms · 2s ago</td>
-            </tr>
-            <tr data-status="operational">
-              <td class="component-name">Trip Dispatch & Route Optimizer</td>
-              <td>Operations</td>
-              <td>
-                <span class="badge-status operational">
-                  <span class="badge-dot"></span> Operational
-                </span>
-              </td>
-              <td class="uptime-bar-cell">
-                <span class="micro-uptime-pct">99.95%</span>
-              </td>
-              <td class="timestamp-mono">180ms · 11s ago</td>
-            </tr>
-
-            <!-- Category: Business Services -->
-            <tr class="table-category-row"><td colspan="5">Business Services & Integration</td></tr>
-            <tr data-status="operational">
-              <td class="component-name">Vendor & Carrier Settlements</td>
-              <td>Business</td>
-              <td>
-                <span class="badge-status operational">
-                  <span class="badge-dot"></span> Operational
-                </span>
-              </td>
-              <td class="uptime-bar-cell">
-                <span class="micro-uptime-pct">100.0%</span>
-              </td>
-              <td class="timestamp-mono">60ms · 45s ago</td>
-            </tr>
-            <tr data-status="operational">
-              <td class="component-name">Payment Gateway & Invoicing</td>
-              <td>Business</td>
-              <td>
-                <span class="badge-status operational">
-                  <span class="badge-dot"></span> Operational
-                </span>
-              </td>
-              <td class="uptime-bar-cell">
-                <span class="micro-uptime-pct">100.0%</span>
-              </td>
-              <td class="timestamp-mono">140ms · 30s ago</td>
-            </tr>
-            <tr data-status="operational">
-              <td class="component-name">Document Storage (E-Way Bills / PODs)</td>
-              <td>Business</td>
-              <td>
-                <span class="badge-status operational">
-                  <span class="badge-dot"></span> Operational
-                </span>
-              </td>
-              <td class="uptime-bar-cell">
-                <span class="micro-uptime-pct">99.99%</span>
-              </td>
-              <td class="timestamp-mono">88ms · 20s ago</td>
-            </tr>
-            <tr data-status="operational">
-              <td class="component-name">Reporting & Analytics Warehouse</td>
-              <td>Business</td>
-              <td>
-                <span class="badge-status operational">
-                  <span class="badge-dot"></span> Operational
-                </span>
-              </td>
-              <td class="uptime-bar-cell">
-                <span class="micro-uptime-pct">99.94%</span>
-              </td>
-              <td class="timestamp-mono">210ms · 40s ago</td>
-            </tr>
-            <tr data-status="operational">
-              <td class="component-name">SMS, WhatsApp & Email Alerts</td>
-              <td>Business</td>
-              <td>
-                <span class="badge-status operational">
-                  <span class="badge-dot"></span> Operational
-                </span>
-              </td>
-              <td class="uptime-bar-cell">
-                <span class="micro-uptime-pct">99.98%</span>
-              </td>
-              <td class="timestamp-mono">110ms · 6s ago</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
+      <p>
+        Monitor the individual operational health of TransportDesk platform services.
+      </p>
     </div>
-  </section>
+
+    <div class="services-grid">
+
+      <!-- 1. Main Application -->
+      <div class="service-card">
+        <div class="service-info">
+          <div class="service-icon"><i class="ri-computer-line"></i></div>
+          <div class="service-meta">
+            <h3>Main Application &amp; Web App</h3>
+            <p>Customer portal &amp; operator dashboard</p>
+          </div>
+        </div>
+        <span class="badge-status operational"><i class="ri-checkbox-circle-fill"></i> Operational</span>
+      </div>
+
+      <!-- 2. Authentication -->
+      <div class="service-card">
+        <div class="service-info">
+          <div class="service-icon"><i class="ri-shield-keyhole-line"></i></div>
+          <div class="service-meta">
+            <h3>User Authentication &amp; SSO</h3>
+            <p>OAuth2, MFA, &amp; enterprise directory syncing</p>
+          </div>
+        </div>
+        <span class="badge-status operational"><i class="ri-checkbox-circle-fill"></i> Operational</span>
+      </div>
+
+      <!-- 3. Fleet Management -->
+      <div class="service-card">
+        <div class="service-info">
+          <div class="service-icon"><i class="ri-truck-line"></i></div>
+          <div class="service-meta">
+            <h3>Fleet Management Engine</h3>
+            <p>Fleet allocation &amp; status telemetry</p>
+          </div>
+        </div>
+        <span class="badge-status operational"><i class="ri-checkbox-circle-fill"></i> Operational</span>
+      </div>
+
+      <!-- 4. Vehicle Management -->
+      <div class="service-card">
+        <div class="service-info">
+          <div class="service-icon"><i class="ri-car-line"></i></div>
+          <div class="service-meta">
+            <h3>Vehicle Management</h3>
+            <p>Asset profiles, fitness &amp; odometer tracking</p>
+          </div>
+        </div>
+        <span class="badge-status operational"><i class="ri-checkbox-circle-fill"></i> Operational</span>
+      </div>
+
+      <!-- 5. Driver Management -->
+      <div class="service-card">
+        <div class="service-info">
+          <div class="service-icon"><i class="ri-id-card-line"></i></div>
+          <div class="service-meta">
+            <h3>Driver Management</h3>
+            <p>Driver roster, license compliance &amp; shifts</p>
+          </div>
+        </div>
+        <span class="badge-status operational"><i class="ri-checkbox-circle-fill"></i> Operational</span>
+      </div>
+
+      <!-- 6. Trip & Route Management -->
+      <div class="service-card">
+        <div class="service-info">
+          <div class="service-icon"><i class="ri-route-line"></i></div>
+          <div class="service-meta">
+            <h3>Trip &amp; Route Management</h3>
+            <p>Route planning, toll calculation &amp; manifests</p>
+          </div>
+        </div>
+        <span class="badge-status operational"><i class="ri-checkbox-circle-fill"></i> Operational</span>
+      </div>
+
+      <!-- 7. Fuel Management -->
+      <div class="service-card">
+        <div class="service-info">
+          <div class="service-icon"><i class="ri-gas-station-line"></i></div>
+          <div class="service-meta">
+            <h3>Fuel &amp; Diesel Management</h3>
+            <p>Fuel logs, card reconciliation &amp; mileage</p>
+          </div>
+        </div>
+        <span class="badge-status operational"><i class="ri-checkbox-circle-fill"></i> Operational</span>
+      </div>
+
+      <!-- 8. Vendor Management -->
+      <div class="service-card">
+        <div class="service-info">
+          <div class="service-icon"><i class="ri-shake-hands-line"></i></div>
+          <div class="service-meta">
+            <h3>Vendor Management</h3>
+            <p>3PL supplier contracts, rates &amp; invoicing</p>
+          </div>
+        </div>
+        <span class="badge-status operational"><i class="ri-checkbox-circle-fill"></i> Operational</span>
+      </div>
+
+      <!-- 9. Reports & Analytics -->
+      <div class="service-card">
+        <div class="service-info">
+          <div class="service-icon"><i class="ri-bar-chart-box-line"></i></div>
+          <div class="service-meta">
+            <h3>Reports &amp; Analytics Engine</h3>
+            <p>Real-time OLAP data cubes &amp; BI exports</p>
+          </div>
+        </div>
+        <span class="badge-status operational"><i class="ri-checkbox-circle-fill"></i> Operational</span>
+      </div>
+
+      <!-- 10. Document Management -->
+      <div class="service-card">
+        <div class="service-info">
+          <div class="service-icon"><i class="ri-file-text-line"></i></div>
+          <div class="service-meta">
+            <h3>Document &amp; e-Waybill Hub</h3>
+            <p>LR/GR uploads, POD indexing &amp; cloud storage</p>
+          </div>
+        </div>
+        <span class="badge-status operational"><i class="ri-checkbox-circle-fill"></i> Operational</span>
+      </div>
+
+      <!-- 11. Payment Management -->
+      <div class="service-card">
+        <div class="service-info">
+          <div class="service-icon"><i class="ri-bank-card-line"></i></div>
+          <div class="service-meta">
+            <h3>Payment &amp; Billing Gateway</h3>
+            <p>Automated freight settlements &amp; payouts</p>
+          </div>
+        </div>
+        <span class="badge-status operational"><i class="ri-checkbox-circle-fill"></i> Operational</span>
+      </div>
+
+      <!-- 12. API & Integrations -->
+      <div class="service-card">
+        <div class="service-info">
+          <div class="service-icon"><i class="ri-code-s-slash-line"></i></div>
+          <div class="service-meta">
+            <h3>REST API &amp; Webhooks</h3>
+            <p>ERP bridges (SAP, Oracle) &amp; FASTag/GPS sync</p>
+          </div>
+        </div>
+        <span class="badge-status operational"><i class="ri-checkbox-circle-fill"></i> Operational</span>
+      </div>
+
+      <!-- 13. Notifications & Alerts -->
+      <div class="service-card">
+        <div class="service-info">
+          <div class="service-icon"><i class="ri-notification-3-line"></i></div>
+          <div class="service-meta">
+            <h3>Notifications &amp; Alerts</h3>
+            <p>Push, SMS, and WhatsApp delivery dispatch</p>
+          </div>
+        </div>
+        <span class="badge-status operational"><i class="ri-checkbox-circle-fill"></i> Operational</span>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
 
   <!-- ==========================================================================
        NETWORK PERFORMANCE: VISUAL ANALYTICS
@@ -1538,13 +1470,20 @@
   <div class="container">
     <section class="maintenance-banner">
       <div class="maint-grid">
-        <div>
-          <div class="maint-badge">Infrastructure Roadmap</div>
-          <h2 class="maint-heading">Planned Maintenance.<br>Better Performance.</h2>
-          <p class="maint-desc">
-            We continuously upgrade TransportDesk's high-concurrency architecture to guarantee enterprise uptime across continuous fleet movements.
-          </p>
-        </div>
+            <div class="heading-wrapper heading-wrap-left heading-wrap-dark">
+                                <span class="heading-tag">
+                                   Infrastructure Roadmap
+                                </span>
+
+                                <h2 class="heading-title">
+                                   Planned Maintenance. <span>Better Performance.</span>
+                                </h2>
+
+                                <p>
+                                    We continuously upgrade TransportDesk's high-concurrency architecture to guarantee enterprise uptime across continuous fleet movements.
+                                </p>
+
+                            </div> 
         <div>
           <div class="maint-card-preview">
             <div class="maint-row">
